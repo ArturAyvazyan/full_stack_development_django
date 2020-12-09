@@ -26,18 +26,20 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^golova/', views.golova, name='golova'),
     url(r'^eye/', views.golova, name='eye'),
-    url(r'^guy/', views.guy, name='guy'),    
+    url(r'^guy/', views.guy, name='guy'),
     url(r'^matrix/', views.matrix, name='matrix'),
     url(r'^persik/', views.persik, name='persik'),
     url(r'^tarelka/', views.tarelka, name='tarelka'),
 ]
 
 
-#Добавляем страницу аутентикации
+# Добавляем страницу аутентикации
 urlpatterns += [
     path('accounts/', include('django.contrib.auth.urls')),
 ]
 
 if settings.DEBUG:  # Специальное вью из джанго.конф для генерации ссылок на медиа-файлы
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL,
+                          document_root=settings.STATIC_ROOT)
