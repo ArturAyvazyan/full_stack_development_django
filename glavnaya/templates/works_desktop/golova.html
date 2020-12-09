@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load static %}
+
 
 <html>
 
@@ -174,7 +174,7 @@
 
         ;
     </style>
-
+    {% load static %}
     {% for Work in Workas %}
     {% if Work.id == 1 %}
     <h1>{{ Work.name }}</h1>
@@ -183,32 +183,32 @@
     <div class="container-3d">
         <div id="carousel">
             <figure class='one'>
-                <img class=scaled src="/media/backs/carousel/03.jpg">
+                <img class=scaled src="{% static '/works/golova/03.jpg' %}">
 
             </figure>
             <figure class='two'>
-                <img class=scaled src="{%STATIC '/media/backs/carousel/03.jpg' %}">
+                <img class=scaled src="{% static '/works/golova/03.jpg' %}">
             </figure>
             <figure class='three'>
-                <img class=scaled src="/media/backs/carousel/03.jpg">
+                <img class=scaled src="{% static '/works/golova/03.jpg' %}">
             </figure>
             <figure class='four'>
-                <img class=scaled src="/media/backs/carousel/03.jpg">
+                <img class=scaled src=" {% static '/works/golova/03.jpg' %}">
             </figure>
             <figure class='five'>
-                <img class=scaled src="/media/backs/carousel/03.jpg" size='200x200'>
+                <img class=scaled src="{% static '/works/golova/03.jpg' %}" size='200x200'>
             </figure>
             <figure class='six'>
-                <img class=scaled src="/media/backs/carousel/03.jpg">
+                <img class=scaled src=" {% static '/works/golova/03.jpg' %}">
             </figure>
             <figure class='seven'>
-                <img class=scaled src="/media/backs/carousel/03.jpg">
+                <img class=scaled src="{% static '/works/golova/03.jpg' %}">
             </figure>
             <figure class='eight'>
-                <img class=scaled src="/media/backs/carousel/03.jpg">
+                <img class=scaled src=" {% static '/works/golova/03.jpg' %}">
             </figure>
             <figure class='nine'>
-                <img class=scaled src="/media/backs/carousel/03.jpg">
+                <img class=scaled src="{% static '/works/golova/03.jpg' %}">
             </figure>
         </div>
     </div>
@@ -219,9 +219,9 @@
     <hr>
     <a>{{ Work.videos }}</a>
     <!--     
-    <button><a href="http://www.ntik.ru/">Домой</a></button>
-    <input type='text' placeholder='Будет плюсом' />
-    <input type='submit' value='Поиск' /> -->
+    <button><a href=" http://www.ntik.ru/">Домой</a></button>
+                <input type='text' placeholder='Будет плюсом' />
+                <input type='submit' value='Поиск' /> -->
 
     <hr>
     {% endif %}
