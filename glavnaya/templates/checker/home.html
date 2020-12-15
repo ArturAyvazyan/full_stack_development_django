@@ -4,34 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-
+    <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
     <style>
-        /* body {
-            background-color: white;
-        } */
-
-
         body {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 10s ease infinite;
-        }
-
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
+            background-color: white;
         }
 
         div.scrollmenu {
@@ -44,20 +23,8 @@
             font-size: 50px;
             margin-bottom: 10px;
             background-color: white;
-            overflow-y: scroll;
+            overflow: auto;
             white-space: nowrap;
-        }
-
-        div.scrollmenu::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Hide scrollbar for IE, Edge and Firefox */
-        div.scrollmenu {
-            -ms-overflow-style: none;
-            /* IE and Edge */
-            scrollbar-width: none;
-            /* Firefox */
         }
 
         .square {
@@ -115,15 +82,15 @@
         <h1>Margaritka $.O.G.</h1>
         <div class="scrollmenu">
             <!-- <div class="square blue"></div> -->
-            <img src=" {% static '/works/golova/rr.jpg' %}">
-            <a href='https://www.youtube.com/watch?v=xNV4MAuwzn4'> <img src=" {% static '/works/golova/rr.jpg' %}"></a>
+            <img src=" {% static '/works/golova/bb.jpg' %}">
+            <a href='https://www.youtube.com/watch?v=xNV4MAuwzn4'> <img src=" {% static '/works/golova/bb.jpg' %}"></a>
 
-            <img src=" {% static '/works/golova/rr.jpg' %}">
+            <img src=" {% static '/works/golova/bb.jpg' %}">
             <!-- <div class="square green"></div> -->
             <!-- <div class="square red"></div> -->
-            <img src=" {% static '/works/golova/lol.jpg' %}">
-            <img src=" {% static '/works/golova/lol.jpg' %}">
-            <img src=" {% static '/works/golova/lol.jpg' %}">
+            <img src=" {% static '/works/golova/hh.jpg' %}">
+            <img src=" {% static '/works/golova/hh.jpg' %}">
+            <img src=" {% static '/works/golova/hh.jpg' %}">
             <!-- <a href="#home">Первый объект</a> -->
             <!--  <a href="#news">Второй объект</a>
             <a href="#contact">Третий объект</a> -->

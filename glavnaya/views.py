@@ -19,6 +19,25 @@ from glavnaya.models import Work
 def home(request):
     return render(request, 'home.html')
 
+def who(request):
+    return render(request, 'checker/who.html')
+
+def check_check(request):
+    return render(request, 'checker/checka_icons.html')
+
+def demo(request):
+    return render(request, 'checker/demo.html')
+
+def demo2(request):
+    return render(request, 'checker/demo2.html')
+
+def demo3(request):
+    return render(request, 'checker/demo3.html')
+
+def demo4(request):
+    return render(request, 'checker/demo4.html')
+
+
 def golova(request):
     Workas = Work.objects.all()
     return render(request, 'works_desktop/golova.html', {

@@ -24,6 +24,14 @@ from glavnaya import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
+    url(r'^who', views.who, name='who'),
+
+    url(r'^check', views.check_check, name='check_check'),
+    url(r'^demo', views.demo, name='demo'),
+    url(r'^deema', views.demo2, name='demo2'),
+    url(r'^demmon', views.demo3, name='demo3'),
+    url(r'^leeemo', views.demo4, name='demo4'),
+
     url(r'^golova/', views.golova, name='golova'),
     url(r'^eye/', views.golova, name='eye'),
     url(r'^guy/', views.guy, name='guy'),

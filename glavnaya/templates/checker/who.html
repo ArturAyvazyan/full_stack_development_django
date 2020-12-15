@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .wrapper {
+            /* margin-top: 100px;
+            border-radius: .5em; */
+            /* background-color: black; */
+            /* opacity: 1; */
+            display: grid;
+            margin-left: 75px;
+            grid-template-columns: 500px 500px 500px;
+            grid-row-gap: 1em;
+        }
+
+        /* #section1 { */
+        /* background-color: pink; */
+        }
+
+        /* #section2 { */
+
+        /* background-color: yellow; */
+        }
+
+        /* div.scrollmenu {
+            padding: 10px;
+            text-align: center;
+
+            background: #2b2927; 
+
+        color: black;
+        font-size: 50px;
+        margin-bottom: 10px;
+        background-color: white;
+        overflow: auto;
+        white-space: nowrap;
+        }  */
+
+
+        h1 {
+            text-align: center;
+            font-family: "Lucida Console";
+            font-size: 50px;
+        }
+
+        /* .blue {
+            background: blue;
+        }
+
+        .green {
+            background: green;
+        }
+
+        .red {
+            background: blue;
+        } */
+
+        /* div.scrollmenu a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+        div.scrollmenu a:hover {
+            background-color: rgb(37, 92, 105);
+        } */
+    </style>
+    </head>
+
+    <body>
+        <div class="header" id="myHeader">
+            <h2>Margaritka $.O.G.</h2>
+        </div>
+
+        <a href="#section2">YO</a>
+        <div class="wrapper" id="section1">
+            <!-- <div class="square blue"></div> -->
+            <img src=" {% static '/works/golova/lol.jpg' %}">
+            <a href='https://www.youtube.com/watch?v=xNV4MAuwzn4'> <img src=" {% static '/works/golova/lol.jpg' %}"></a>
+
+            <img src=" {% static '/works/golova/lol.jpg' %}">
+            <!-- <div class="square green"></div> -->
+            <!-- <div class="square red"></div> -->
+            <img src=" {% static '/works/golova/lol.jpg' %}">
+            <img src=" {% static '/works/golova/lol.jpg' %}">
+            <img src=" {% static '/works/golova/lol.jpg' %}">
+            <!-- <a href="#home">Первый объект</a> -->
+            <!--  <a href="#news">Второй объект</a>
+            <a href="#contact">Третий объект</a> -->
+        </div>
+
+        <a href="#section1">YO</a>
+        <div class="wrapper" id="section2">
+
+            <!-- <div class="square blue"></div> -->
+            <img src=" {% static '/works/golova/lol.jpg' %}">
+            <a href='https://www.youtube.com/watch?v=xNV4MAuwzn4'> <img src=" {% static '/works/golova/lol.jpg' %}"></a>
+
+            <img src=" {% static '/works/golova/lol.jpg' %}">
+            <!-- <div class="square green"></div> -->
+            <!-- <div class="square red"></div> -->
+            <img src=" {% static '/works/golova/lol.jpg' %}">
+            <img src=" {% static '/works/golova/lol.jpg' %}">
+            <img src=" {% static '/works/golova/lol.jpg' %}">
+            <!-- <a href="#home">Первый объект</a> -->
+            <!--  <a href="#news">Второй объект</a>
+            <a href="#contact">Третий объект</a> -->
+        </div>
+    </body>
+
+</html>
