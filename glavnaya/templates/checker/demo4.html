@@ -34,6 +34,7 @@
             /* padding: 30px 0px 30px 0px !important; */
         }
 
+        /* 
         #first {
             background: url("{% static '/stonehenge/background/sky.jpg' %}");
             background-size: cover;
@@ -42,7 +43,7 @@
         #second_slide1 {
             background: url("{% static '/stonehenge/background/sky.jpg' %}");
             background-size: cover;
-        }
+        } */
 
         .ohmygod1 {
             margin-top: 100px;
@@ -115,7 +116,7 @@
                     <img class='pidoras' src=" {% static '/stonehenge/stones/kama.png' %}">
                     <!--  Можно сменить классы cверху и снизу -->
                     <img class='pidoras' src=" {% static '/stonehenge/stones/kama.png' %}">
-                    Секция 1
+                    <!-- тут текст -->
                 </div>
             </div>
             <div class="section" id='second'>
@@ -124,7 +125,7 @@
 
             </div>
             <div class="section" id='third'>Секция 3</div>
-            <div class="section">Секция 4</div>
+            <!-- <div class="section">Секция 4</div> -->
         </div>
         <div class='basement'>Hui</div>
     </body>
@@ -137,7 +138,7 @@
 
     <script>
         $('#fullpage').fullpage({
-            sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6'],
+            sectionsColor: ['#ADD8E6', 'black', '#C0C0C0', '#ADD8E6'],
         });
 
         var motionPath = anime({
