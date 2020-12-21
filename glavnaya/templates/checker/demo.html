@@ -4,162 +4,128 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>BITCH DITCH</title>
-  <link rel='stylesheet' href="{% static 'fullpage.min.css' %}">
+  <title>MATRIX GLITCH SLIDE</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 </head>
-{% load static %}
+
 
 <body>
   <style>
-    .section {
-      display: inline-block;
-      text-align: center;
-      font-size: 3em;
-      z-index: 1;
+    html,
+    body {
+      position: relative;
+      height: 100%;
     }
 
-    .basement {
-      z-index: 20;
-      margin-top: -1050px;
-    }
-
-    img {
-      z-index: 1;
-      margin-top: -365px;
-    }
-
-    .ayo {
-      margin-top: 200px;
-      /* padding: 30px 0px 30px 0px !important; */
-    }
-
-
-    #first {
-      /* background: url("{% static '/stonehenge/background/crack.png' %}"); */
-      background-size: cover;
-    }
-
-    #second_slide1 {
-      background: url("{% static '/stonehenge/stones/89.jpg' %}");
-      background-size: cover;
-    }
-
-    .pidoras {
-      margin-left: 300px;
-      position: fixed;
-    }
-
-    /* GLITCH */
-
-    * {
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
       margin: 0;
       padding: 0;
     }
 
-    #container {
-      position: absolute;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      /* background: url("{% static '/stonehenge/background/crack.png' %}"); */
-      /* background-attachment: fixed; */
-      z-index: 1;
-    }
-
     .box {
       position: absolute;
-      /* background: url("{% static '/stonehenge/background/crack.png' %}"); */
-      /* background-attachment: fixed; */
-      z-index: 1;
+      background: url("{% static '/stonehenge/background/fuck.png' %}");
+      background-attachment: fixed;
     }
 
+    #kama {
+      background: url("{% static '/stonehenge/background/fuck.png' %}");
+      background-size: cover;
+    }
 
+    #bow {
+      background: url("{% static '/stonehenge/background/fuck.png' %}");
+      background-size: cover;
+    }
 
-    /* img {
-      position: fixed;
-    } */
+    #grof {
+      background: url("{% static '/stonehenge/background/fuck.png' %}");
+      background-size: cover;
+    }
 
-    /* .kuklus {
-      position: fixed;
-    } */
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+    }
   </style>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper" id='swg'>
+      <div class="swiper-slide" id='kama'><img class='pidoras' src=" {% static '/stonehenge/stones/cone.png' %}">
+        <div id='container'></div>
+      </div>
 
+      <div class="swiper-slide" id='bow'><img class='pidoras' src=" {% static '/stonehenge/stones/cone2.png' %}">
+        <div id='container'></div>
+      </div>
 
+      <div class="swiper-slide" id='grof'><img class='pidoras' src=" {% static '/stonehenge/stones/cone3.png' %}">
+        <div id='container'></div>
+      </div>
 
-  <!--  <div class="content"> -->
+      <div class="swiper-slide"><img class='pidoras' src=" {% static '/stonehenge/stones/cone.png' %}">
+        <div id='container'></div>
+      </div>
 
-  <div id="fullpage">
-    <div class="section" id='first'>
-      <div class='ayo'>
+      <div class="swiper-slide"><img class='pidoras' src=" {% static '/stonehenge/stones/cone2.png' %}">
+        <div id='container'></div>
       </div>
     </div>
-    <div class="section" id='second'>
-      <div class="slide" id='second_slide1' data-anchor="slide1">Слайд 2.1</div>
-      <div class="slide" id='second_slide2' data-anchor="slide2">Слайд 2.2</div>
-
-    </div>
-    <div class="section" id='third'>Секция 3</div>
-    <!-- <div class="section">Секция 4</div> -->
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-white"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
   </div>
 
-  <div id='container'><img class='pidoras' id='dron' src=" {% static '/stonehenge/stones/89.jpg' %}"></div>
-
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.7/pixi.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="{% static 'scrolloverflow.js' %}"></script>
-  <script src="{% static 'fullpage.js' %}"></script>
-
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <script>
-
-    $('#fullpage').fullpage({
-      sectionsColor: ['black', 'black', 'black', 'black'],
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      effect: 'fade',
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+      // pagination: {
+      //   el: '.swiper-pagination',
+      //   clickable: true,
+      // },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
 
 
-
-    // var slideIndex = 1;
-    // showSlides(slideIndex);
-
-    // // Next/previous controls
-    // function plusSlides(n) {
-    //   showSlides(slideIndex += n);
-    // }
-
-    // // Thumbnail image controls
-    // function currentSlide(n) {
-    //   showSlides(slideIndex = n);
-    // }
-
-    // function showSlides(n) {
-    //   var i;
-    //   var slides = document.getElementsByClassName("mySlides");
-    //   var dots = document.getElementsByClassName("dot");
-    //   if (n > slides.length) { slideIndex = 1 }
-    //   if (n < 1) { slideIndex = slides.length }
-    //   for (i = 0; i < slides.length; i++) {
-    //     slides[i].style.display = "none";
-    //   }
-    //   for (i = 0; i < dots.length; i++) {
-    //     dots[i].className = dots[i].className.replace(" active", "");
-    //   }
-    //   slides[slideIndex - 1].style.display = "block";
-    //   dots[slideIndex - 1].className += " active";
-    // }
-    //
-
-    let bg = document.getElementById('dron');
+    let bg = document.getElementById('swg');
     let count = 20;
     for (let i = 0; i < count; i++) {
       let glitchBox = document.createElement('div')
-      glitchBox.className = 'pidoras';
+      glitchBox.className = 'box';
       bg.appendChild(glitchBox)
     }
     setInterval(function () {
-      let glitch = document.getElementsByClassName('pidoras');
+      let glitch = document.getElementsByClassName('box');
       for (let i = 0; i < glitch.length; i++) {
         glitch[i].style.left = Math.floor(Math.random() * 100) + 'vw';
         glitch[i].style.top = Math.floor(Math.random() * 100) + 'vh';
