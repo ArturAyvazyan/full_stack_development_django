@@ -22,16 +22,41 @@
             overflow: hidden;
             background: url("{% static '/stonehenge/background/matrix_f.png' %}");
             background-attachment: fixed;
+            background-size: cover;
         }
 
+
         .box {
+            margin-left: 110px;
+            margin-top: 350px;
             position: absolute;
-            background: url("{% static '/stonehenge/background/matrix_f.png' %}");
+            background: url("{% static '/stonehenge/stones/stone2.png' %}");
             background-attachment: fixed;
+        }
+
+        .kos {
+            margin-left: 110px;
+            margin-top: 350px;
+            position: absolute;
+            background: url("{% static '/stonehenge/stones/stone2.png' %}");
+            background-attachment: fixed;
+        }
+
+        .alpha {
+            margin-left: 110px;
+            margin-top: 275px;
+            display: grid;
+            grid-template-columns: 750px 750px;
         }
     </style>
 
-    <div id='container'></div>
+    <div id='container'>
+        <div class='alpha'>
+            <img class='hant' id='udacha' src=" {% static '/stonehenge/stones/stone1.png' %}">
+            <img class='komi' id='fart' src=" {% static '/stonehenge/stones/stone2.png' %}">
+            <!--  Можно сменить классы cверху и снизу -->
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.7/pixi.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
@@ -47,14 +72,33 @@
         setInterval(function () {
             let glitch = document.getElementsByClassName('box');
             for (let i = 0; i < glitch.length; i++) {
-                glitch[i].style.left = Math.floor(Math.random() * 100) + 'vw';
-                glitch[i].style.top = Math.floor(Math.random() * 100) + 'vh';
-                glitch[i].style.width = Math.floor(Math.random() * 400) + 'px';
-                glitch[i].style.height = Math.floor(Math.random() * 100) + 'px';
-                glitch[i].style.backgroundPosition = Math.floor(Math.random() * 50) + 'px';
+                glitch[i].style.left = Math.floor(Math.random() * 10) + 'vw';
+                glitch[i].style.top = Math.floor(Math.random() * 20) + 'vh';
+                glitch[i].style.width = Math.floor(Math.random() * 150) + 'px';
+                glitch[i].style.height = Math.floor(Math.random() * 10) + 'px';
+                glitch[i].style.backgroundPosition = Math.floor(Math.random() * 100) + 'px';
             }
         }, 200)
 
+
+
+        let og = document.getElementById('container');
+        let bud = 20;
+        for (let i = 0; i < bud; i++) {
+            let bitbox = document.createElement('div')
+            bitbox.className = 'kos';
+            og.appendChild(bitbox)
+        }
+        setInterval(function () {
+            let git = document.getElementsByClassName('kos');
+            for (let i = 0; i < git.length; i++) {
+                git[i].style.left = Math.floor(Math.random() * 10) + 'vw';
+                git[i].style.top = Math.floor(Math.random() * 20) + 'vh';
+                git[i].style.width = Math.floor(Math.random() * 150) + 'px';
+                git[i].style.height = Math.floor(Math.random() * 10) + 'px';
+                git[i].style.backgroundPosition = Math.floor(Math.random() * 100) + 'px';
+            }
+        }, 200)
     </script>
 </body>
 

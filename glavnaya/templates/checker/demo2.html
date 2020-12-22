@@ -1,206 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MATRIX</title>
+
+</head>
 {% load static %}
 
-<style>
-    body {
-        background: url("{% static '/stonehenge/background/sky.jpg' %}");
-        background-size: cover;
-    }
-
-    .triple {
-        display: grid;
-        margin-top: -175px;
-        grid-template-columns: 250px 250px 250px;
-
-    }
-
-    .stone1 {
-        margin-top: 25px;
-        filter: drop-shadow(0rem 2rem 1rem rgb(121, 133, 151));
-        z-index: 1;
-    }
-
-    .stone2 {
-        margin-top: 100px;
-        margin-left: 100px;
-        z-index: 1;
-        filter: drop-shadow(0rem 2rem 1rem rgb(121, 133, 151));
-    }
-
-    .stone3 {
-        margin-top: 150px;
-        margin-left: 180px;
-        z-index: 1;
-        filter: drop-shadow(0rem 2rem 1rem rgb(121, 133, 151));
-    }
-
-    .wrapper {
-        margin-left: 50px;
-    }
-
-    .drawdaline {
-        display: grid;
-        grid-template-columns: 250px 250px 250px;
-    }
-
-    .ohmygod1 {
-        margin-top: -600px;
-        margin-left: 700px;
-        z-index: 4;
-
-    }
-
-    .ohmygod2 {
-        margin-top: -700px;
-        margin-left: 100px;
-        z-index: 14;
-    }
-
-    .ohmygod3 {
-        margin-top: -575px;
-        margin-left: 550px;
-        z-index: 14;
-    }
-
-    .pieces {
-        z-index: 20;
-        margin-top: -1100px;
-    }
-</style>
-
-
 <body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-    <div id="motionPath">
-        <div class="motion-path">
-            <div class='triple'>
-                <div class='stone1 levitate'>
-                    <img src=" {% static '/stonehenge/stones/ess.png' %}">
-                </div>
-                <div class='stone2 levitate'>
-                    <img class='bomba' src=" {% static '/stonehenge/stones/ess.png' %}">
-                </div>
-                <div class='stone3 levitate'>
-                    <img src=" {% static '/stonehenge/stones/ess.png' %}">
-                </div>
-            </div>
+        #container {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: url("{% static '/stonehenge/background/matrix_f.png' %}");
+            background-attachment: fixed;
+            background-size: cover;
+        }
 
-            <svg width="256" height="112" viewBox="0 0 256 112">
-                <path stroke="black" stroke-width="3px" d="M 25 ,250, 50, 150 L 75, 200 L 100, 150 H125 V250 ">
-                </path>
-                <!-- <path stroke="black" stroke-width="3px" d="M 25 ,250, 50, 150 L 75, 200 L 100, 150 H125 V250 "> -->
-            </svg>
+
+        .box {
+            margin-left: 110px;
+            margin-top: 350px;
+            position: absolute;
+            background: url("{% static '/stonehenge/stones/stone2.png' %}");
+            background-attachment: fixed;
+        }
+
+
+
+        .alpha {
+            margin-left: 110px;
+            margin-top: 275px;
+            display: grid;
+            grid-template-columns: 750px 750px;
+        }
+    </style>
+
+    <div id='container'>
+        <div class='alpha'>
+            <img class='hant' id='udacha' src=" {% static '/stonehenge/stones/stone1.png' %}">
+            <img class='komi' id='fart' src=" {% static '/stonehenge/stones/stone2.png' %}">
+            <!--  Можно сменить классы cверху и снизу -->
         </div>
     </div>
 
-    <div class='drawdaline' id="lineDrawing">
-
-        <div class='ohmygod1 loki'>
-            <!-- <svg viewBox="0 0 280 100"> ТУТ МЕНЯТЬ МАСШТАБ -->
-            <svg viewBox="280 100">
-                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
-                    <path
-                        d="m39.39003,9.08941c-16.48941,0 -29.5,15.499 -29.5,15.499s13.01059,15.501 29.5,15.501c12.6107,0 29.5,-15.501 29.5,-15.501s-16.8893,-15.499 -29.5,-15.499zm0,25.15724c-5.78856,0 -10.50419,-4.33385 -10.50419,-9.65824s4.71563,-9.65824 10.50419,-9.65824s10.50419,4.33586 10.50419,9.65824s-4.71563,9.65824 -10.50419,9.65824zm0,-15.29607c-3.38485,0 -6.13163,2.52356 -6.13163,5.63782c0,3.11427 2.74459,5.63782 6.13163,5.63782c3.38704,0 6.13163,-2.52356 6.13163,-5.63782c0,-3.11226 -2.74459,-5.63782 -6.13163,-5.63782z"
-                        stroke-dasharray="316.85528564453125" style="stroke-dashoffset: 316.855px;">
-                    </path>
-                </g>
-            </svg>
-        </div>
-
-        <div class='ohmygod2 loki'>
-            <svg viewBox="480 300">
-                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
-                    <path
-                        d="m66.84882,59.56284c0,0 -5.82878,-0.18215 -5.82878,-0.3643c0,0.18215 15.1184,-36.97632 15.1184,-37.15847c0,0.18215 1.4572,0.3643 1.4572,0.3643c0,0 14.0255,37.34062 14.0255,37.15847c0,0.18215 -5.46448,0 -5.46448,-0.18215c0,0.18215 -2.73224,-7.10383 -2.73224,-7.28597c0,0.18215 -13.84335,0 -13.84335,-0.18215c0,0.18215 -2.73224,7.65027 -2.73224,7.65027z"
-                        stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
-
-                    <path
-                        d="m75.40984,37.70492c0,0 -4.91803,9.28962 -4.91803,9.10747c0,0.18215 8.92532,0.18215 8.92532,0c0,0.18215 -4.00728,-9.10747 -4.00728,-9.10747z"
-                        stroke-dasharray="441.1739501953125" style="stroke-dashoffset: 441.174px;"></path>
-                </g>
-            </svg>
-        </div>
-
-        <div class='ohmygod3 loki'>
-            <svg viewBox="380 200">
-                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
-                    <path
-                        d="m29.14861,59.57379c0,0 -4.46804,0 -4.46804,0c0,0 7.23396,-37.02086 7.23396,-37.23362c0,0.21276 1.70211,0.21276 1.70211,0c0,0.21276 8.93607,27.87202 8.93607,27.87202c0,0 8.29778,-27.65926 8.29778,-27.87202c0,0.21276 2.12764,-0.00001 2.12764,-0.21276c0,0.21276 7.23396,38.29744 7.23396,37.65915c0,-0.63829 -3.82974,0.21276 -4.04251,-0.21276c-0.21276,-0.42553 -4.6808,-22.97847 -4.6808,-23.19122c0,0.21276 -8.29778,24.04228 -8.29778,24.04228c0,0 -1.27658,0.21276 -1.27658,0.21276c0,0 -8.08502,-24.89334 -8.08502,-25.1061c0,0.21276 -4.6808,24.04228 -4.6808,24.04228z"
-                        stroke-dasharray="441.1739501953125" style="stroke-dashoffset: 441.174px;"></path>
-                </g>
-            </svg>
+    <div id='bgo'>
+        <div class='alpha'>
+            <img class='hant' id='udacha' src=" {% static '/stonehenge/stones/stone1.png' %}">
+            <img class='komi' id='fart' src=" {% static '/stonehenge/stones/stone2.png' %}">
+            <!--  Можно сменить классы cверху и снизу -->
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.7/pixi.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
-    <div id='ayvazyan'>
-        <div class='pieces'>
-            <div class="kusochek kusok"><img src=" {% static '/stonehenge/pieces/piece1.png' %}"> </div>
-            <div class="kusochek kusok"><img src=" {% static '/stonehenge/pieces/piece2.png' %}"> </div>
-            <div class="kusochek kusok"><img src=" {% static '/stonehenge/pieces/piece3.png' %}"> </div>
-            <div class="kusochek kusok"><img src=" {% static '/stonehenge/pieces/piece4.png' %}"> </div>
-            <div class="kusochek kusok"><img src=" {% static '/stonehenge/pieces/piece5.png' %}"> </div>
-            <div class="kusochek kusok"><img src=" {% static '/stonehenge/pieces/piece6.png' %}"> </div>
-            <div class="kusochek kusok"><img src=" {% static '/stonehenge/pieces/piece7.png' %}"> </div>
-            <div class="kusochek kusok"><img src=" {% static '/stonehenge/pieces/piece8.png' %}"> </div>
-            <div class="kusochek kusok"><img src=" {% static '/stonehenge/pieces/piece9.png' %}"> </div>
-        </div>
-    </div>
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script>
-        // var path = anime.path('#CreationPath path');
-
-        // var CreationPath = anime({
-        //     targets: '#CreationPath .el',
-        //     translateX: path('x'),
-        //     translateY: path('y'),
-        //     rotate: path('angle'),
-        //     easing: 'linear',
-        //     duration: 4000,
-        //     loop: true,
-        //     // scale: 2
-        //     autoplay: false,
-        //     play: 'click'
-        // });
-        // document.querySelector('div .hmury').onclick = CreationPath.play;
-
-
-
-        var motionPath = anime({
-            targets: '#ayvazyan .kusok',
-            translateY: -200,
-            easing: 'linear',
-            duration: 20000,
-            loop: true
-        });
-
-        var lineDrawing = anime({
-            targets: '#lineDrawing .lines path',
-            strokeDashoffset: [anime.setDashoffset, 0],
-            easing: 'easeInOutSine',
-            duration: 3000,
-            delay: function (el, i) { return i * 250 },
-            direction: 'alternate',
-            loop: true
-        });
-
-
-
-        var CSStransforms = anime({
-            targets: '#motionPath .levitate, #lineDrawing .loki',
-            translateY: {
-                value: 10,
-                easing: 'easeInOutCubic',
-            },
-            direction: 'alternate',
-            loop: true,
-        });
+        let bg = document.getElementById('container');
+        let count = 20;
+        for (let i = 0; i < count; i++) {
+            let glitchBox = document.createElement('div')
+            glitchBox.className = 'box';
+            bg.appendChild(glitchBox)
+        }
+        setInterval(function () {
+            let glitch = document.getElementsByClassName('box');
+            for (let i = 0; i < glitch.length; i++) {
+                glitch[i].style.left = Math.floor(Math.random() * 10) + 'vw';
+                glitch[i].style.top = Math.floor(Math.random() * 20) + 'vh';
+                glitch[i].style.width = Math.floor(Math.random() * 150) + 'px';
+                glitch[i].style.height = Math.floor(Math.random() * 10) + 'px';
+                glitch[i].style.backgroundPosition = Math.floor(Math.random() * 100) + 'px';
+            }
+        }, 200)
     </script>
-
 </body>
+
+</html>
 
 </html>
