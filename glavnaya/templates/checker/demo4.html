@@ -25,7 +25,7 @@
         }
 
         img {
-            z-index: 1;
+            /* z-index: 1; */
             margin-top: -365px;
         }
 
@@ -41,28 +41,57 @@
         }
 
         #second_slide1 {
-            background: url("{% static '/stonehenge/background/crack.png' %}");
+            background: url("{% static '/stonehenge/background/eye_f.png' %}");
             background-size: cover;
+        }
+
+        .drawdaline {
+            position: relative;
+            z-index: 9;
+
         }
 
         .ohmygod1 {
             margin-top: 100px;
             /* margin-left: 700px; */
-            z-index: 40;
+            z-index: 9;
+
         }
 
         .ohmygod2 {
             margin-top: -100px;
             /* margin-top: -700px; */
             /* margin-left: 100px; */
-            z-index: 40;
+            z-index: 9;
         }
 
         .ohmygod3 {
             margin-top: -100px;
             /* margin-top: -575px; */
             /* margin-left: 550px; */
-            z-index: 40;
+            z-index: 9;
+        }
+
+        .alpha {
+            margin-left: 400px;
+            display: grid;
+            grid-template-columns: 300px 300px 300px;
+        }
+
+
+        .hant {
+            z-index: 1;
+            filter: drop-shadow(0px 40px 25px rgb(152, 136, 224))
+        }
+
+        .girya {
+            z-index: 5;
+            filter: drop-shadow(0px 40px 25px rgb(152, 136, 224))
+        }
+
+        .komi {
+            z-index: 1;
+            filter: drop-shadow(0px 40px 25px rgb(152, 136, 224))
         }
     </style>
 
@@ -111,11 +140,13 @@
                             </svg>
                         </div>
                     </div>
-                    <img class='pidoras' src=" {% static '/stonehenge/stones/cone.png' %}">
-                    <img class='pidoras' src=" {% static '/stonehenge/stones/cone2.png' %}">
-                    <!--  Можно сменить классы cверху и снизу -->
-                    <img class='pidoras' src=" {% static '/stonehenge/stones/cone3.png' %}">
-                    <!-- тут текст -->
+                    <div class='alpha'>
+                        <img class='hant' id='udacha' src=" {% static '/stonehenge/stones/stone1.png' %}">
+                        <img class='girya' id='fart' src=" {% static '/stonehenge/stones/stone2.png' %}">
+                        <!--  Можно сменить классы cверху и снизу -->
+                        <img class='komi' id='poputka' src=" {% static '/stonehenge/stones/stone3.png' %}">
+                        <!-- тут текст -->
+                    </div>
                 </div>
             </div>
             <div class="section" id='second'>
@@ -141,13 +172,60 @@
         });
 
         var motionPath = anime({
-            targets: '#fullpage .pidoras',
+            targets: '.hant',
             translateY: {
                 value: 100,
                 easing: 'easeInOutCubic',
+                duration: 15000,
             },
-            duration: 15000,
-            loop: true
+            rotate: {
+                value: 5,
+                duration: 13000,
+                direction: 'alternate',
+                easing: 'easeInOutSine',
+            },
+            scale: {
+                value: 1.2,
+                duration: 1,
+            },
+            direction: 'alternate',
+            loop: true,
+        });
+
+        var motionPath = anime({
+            targets: '.girya',
+            translateY: {
+                value: 100,
+                easing: 'easeInOutCubic',
+                duration: 15000,
+            },
+            scale: {
+                value: 1.4,
+                duration: 1,
+            },
+            direction: 'alternate',
+            loop: true,
+        });
+
+        var motionPath = anime({
+            targets: '.komi',
+            translateY: {
+                value: 100,
+                easing: 'easeInOutCubic',
+                duration: 15000,
+            },
+            rotate: {
+                value: -5,
+                duration: 12000,
+                direction: 'alternate',
+                easing: 'easeInOutSine',
+            },
+            scale: {
+                value: 1.25,
+                duration: 1,
+            },
+            direction: 'alternate',
+            loop: true,
         });
 
         var lineDrawing = anime({
@@ -159,7 +237,6 @@
             direction: 'alternate',
             loop: true
         });
-
 
 
         var CSStransforms = anime({
