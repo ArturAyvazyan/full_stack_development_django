@@ -78,18 +78,23 @@
             grid-template-columns: 300px 300px 300px;
         }
 
+        .stoner1 {
+            z-index: 15;
+            margin-left: 25px;
 
-        .hant {
+        }
+
+        .stone2 {
             z-index: 1;
             filter: drop-shadow(0px 40px 25px rgb(152, 136, 224))
         }
 
-        .girya {
-            z-index: 5;
+        .stone1 {
+            z-index: 4;
             filter: drop-shadow(0px 40px 25px rgb(152, 136, 224))
         }
 
-        .komi {
+        .stone3 {
             z-index: 1;
             filter: drop-shadow(0px 40px 25px rgb(152, 136, 224))
         }
@@ -141,12 +146,20 @@
                         </div>
                     </div>
                     <div class='alpha'>
-                        <img class='hant' id='udacha' src=" {% static '/stonehenge/stones/stone1.png' %}">
-                        <img class='girya' id='fart' src=" {% static '/stonehenge/stones/stone2.png' %}">
-                        <!--  Можно сменить классы cверху и снизу -->
-                        <img class='komi' id='poputka' src=" {% static '/stonehenge/stones/stone3.png' %}">
-                        <!-- тут текст -->
+                        <!-- <img class='stone2' id='udacha' src=" {% static '/stonehenge/stones/stone1.png' %}"> -->
+                        <img class='stone1' id='fart' src=" {% static '/stonehenge/stones/stone2.png' %}">
+                        <!-- <img class='stone3' id='poputka' src=" {% static '/stonehenge/stones/stone3.png' %}"> -->
                     </div>
+
+                    <div class='oskolki'>
+                        <div class='beta'>
+                            <img class='stoner1' src=" {% static '/stonehenge/stones/deer.png' %}">
+                            <img class='stoner2' src=" {% static '/stonehenge/stones/deer.png' %}">
+                            <img class='stoner3' src=" {% static '/stonehenge/stones/deer.png' %}">
+                            <img class='stoner4' src=" {% static '/stonehenge/stones/deer.png' %}">
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="section" id='second'>
@@ -158,97 +171,182 @@
             <!-- <div class="section">Секция 4</div> -->
         </div>
         <div class='basement'>Hui</div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="{% static 'scrolloverflow.js' %}"></script>
+        <script src="{% static 'fullpage.js' %}"></script>
+
+
+        <script>
+            $('#fullpage').fullpage({
+                sectionsColor: ['#ADD8E6', 'black', '#C0C0C0', '#ADD8E6'],
+            });
+
+            function setBigStone() {
+                var stone1_set = anime.set(
+                    '.stone1', {
+                    translateX: 250,
+                })
+            }
+            setBigStone()
+
+            function setStones() {
+                var stoner_set = anime.set('.stoner1', {
+                    translateX: -125,
+                    translateY: -450,
+                    opacity: [0],
+                });
+                var stoner2_set = anime.set('.stoner2', {
+                    translateX: 190,
+                    translateY: -450,
+                    opacity: [0],
+                });
+                var stoner3_set = anime.set('.stoner3', {
+                    translateX: -290,
+                    opacity: [0],
+                });
+                var stoner4_set = anime.set('.stoner4', {
+                    translateX: 25,
+                    opacity: [0],
+                });
+            }
+            setStones()
+
+
+            var stoner_opacity = anime({
+                targets: '.stoner1',
+                opacity: [0, 1],
+                easing: 'linear',
+                duration: '5000',
+                autoplay: false,
+            })
+            var stoner2_opacity = anime({
+                targets: '.stoner2',
+                opacity: [0, 1],
+                easing: 'linear',
+                duration: '5000',
+                autoplay: false,
+            })
+
+            var stoner3_opacity = anime({
+                targets: '.stoner3',
+                opacity: [0, 1],
+                easing: 'linear',
+                duration: '5000',
+                autoplay: false,
+            })
+
+            var stoner4_opacity = anime({
+                targets: '.stoner4',
+                opacity: [0, 1],
+                easing: 'linear',
+                duration: '5000',
+                autoplay: false,
+            })
+
+            function animateAll() {
+                stoner_opacity.play();
+                stoner2_opacity.play();
+                stoner3_opacity.play();
+                stoner4_opacity.play();
+            };
+            document.querySelector('.alpha').onclick = animateAll;
+
+            // var stoner1_step = anime({
+            //     targets: '.stoner1',
+            //     keyframes: [
+            //         { translateY: -40 },
+            //         { translateX: 250 },
+            //         { translateY: 40 },
+            //         { translateX: 0 },
+            //         { translateY: 0 }
+            //     ],
+            //     duration: 40000,
+            //     easing: 'easeOutElastic(1, .8)',
+            //     loop: true
+            // })
+
+            var motionPath = anime({
+                targets: '.stone2',
+                translateY: {
+                    value: 100,
+                    easing: 'easeInOutCubic',
+                    duration: 15000,
+                },
+                rotate: {
+                    value: 5,
+                    duration: 13000,
+                    direction: 'alternate',
+                    easing: 'easeInOutSine',
+                },
+                scale: {
+                    value: 1.2,
+                    duration: 1,
+                },
+                direction: 'alternate',
+                loop: true,
+            });
+
+            var motionPath = anime({
+                targets: '.stone1',
+                translateY: {
+                    value: 100,
+                    easing: 'easeInOutCubic',
+                    duration: 15000,
+                },
+                scale: {
+                    value: 1.4,
+                    duration: 1,
+                },
+                direction: 'alternate',
+                loop: true,
+            });
+
+            var motionPath = anime({
+                targets: '.stone3',
+                translateY: {
+                    value: 100,
+                    easing: 'easeInOutCubic',
+                    duration: 15000,
+                },
+                rotate: {
+                    value: -5,
+                    duration: 12000,
+                    direction: 'alternate',
+                    easing: 'easeInOutSine',
+                },
+                scale: {
+                    value: 1.25,
+                    duration: 1,
+                },
+                direction: 'alternate',
+                loop: true,
+            });
+
+            var lineDrawing = anime({
+                targets: '#lineDrawing .lines path',
+                strokeDashoffset: [anime.setDashoffset, 0],
+                easing: 'easeInOutSine',
+                duration: 3000,
+                delay: function (el, i) { return i * 250 },
+                direction: 'alternate',
+                loop: true
+            });
+
+
+            var CSStransforms = anime({
+                targets: '#motionPath .levitate, #lineDrawing .loki',
+                translateY: {
+                    value: 10,
+                    easing: 'easeInOutCubic',
+                },
+                direction: 'alternate',
+                loop: true,
+            });
+
+        </script>
     </body>
-
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="{% static 'scrolloverflow.js' %}"></script>
-    <script src="{% static 'fullpage.js' %}"></script>
-
-
-    <script>
-        $('#fullpage').fullpage({
-            sectionsColor: ['#ADD8E6', 'black', '#C0C0C0', '#ADD8E6'],
-        });
-
-        var motionPath = anime({
-            targets: '.hant',
-            translateY: {
-                value: 100,
-                easing: 'easeInOutCubic',
-                duration: 15000,
-            },
-            rotate: {
-                value: 5,
-                duration: 13000,
-                direction: 'alternate',
-                easing: 'easeInOutSine',
-            },
-            scale: {
-                value: 1.2,
-                duration: 1,
-            },
-            direction: 'alternate',
-            loop: true,
-        });
-
-        var motionPath = anime({
-            targets: '.girya',
-            translateY: {
-                value: 100,
-                easing: 'easeInOutCubic',
-                duration: 15000,
-            },
-            scale: {
-                value: 1.4,
-                duration: 1,
-            },
-            direction: 'alternate',
-            loop: true,
-        });
-
-        var motionPath = anime({
-            targets: '.komi',
-            translateY: {
-                value: 100,
-                easing: 'easeInOutCubic',
-                duration: 15000,
-            },
-            rotate: {
-                value: -5,
-                duration: 12000,
-                direction: 'alternate',
-                easing: 'easeInOutSine',
-            },
-            scale: {
-                value: 1.25,
-                duration: 1,
-            },
-            direction: 'alternate',
-            loop: true,
-        });
-
-        var lineDrawing = anime({
-            targets: '#lineDrawing .lines path',
-            strokeDashoffset: [anime.setDashoffset, 0],
-            easing: 'easeInOutSine',
-            duration: 3000,
-            delay: function (el, i) { return i * 250 },
-            direction: 'alternate',
-            loop: true
-        });
-
-
-        var CSStransforms = anime({
-            targets: '#motionPath .levitate, #lineDrawing .loki',
-            translateY: {
-                value: 10,
-                easing: 'easeInOutCubic',
-            },
-            direction: 'alternate',
-            loop: true,
-        });
-
-    </script>
 
 </html>
