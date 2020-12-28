@@ -45,6 +45,11 @@
             background-size: cover;
         }
 
+        #second_slide2 {
+            background: url("{% static '/stonehenge/background/eye_f.png' %}");
+            background-size: cover;
+        }
+
         .drawdaline {
             position: relative;
             z-index: 9;
@@ -146,25 +151,23 @@
                         </div>
                     </div>
                     <div class='alpha'>
-                        <!-- <img class='stone2' id='udacha' src=" {% static '/stonehenge/stones/stone1.png' %}"> -->
-                        <img class='stone1' id='fart' src=" {% static '/stonehenge/stones/stone2.png' %}">
-                        <!-- <img class='stone3' id='poputka' src=" {% static '/stonehenge/stones/stone3.png' %}"> -->
+                        <img class='stone1' id='fart' src=" {% static '/stonehenge/stones/derevo.png' %}">
                     </div>
-
-                    <div class='oskolki'>
-                        <div class='beta'>
-                            <img class='stoner1' src=" {% static '/stonehenge/stones/deer.png' %}">
-                            <img class='stoner2' src=" {% static '/stonehenge/stones/deer.png' %}">
-                            <img class='stoner3' src=" {% static '/stonehenge/stones/deer.png' %}">
-                            <img class='stoner4' src=" {% static '/stonehenge/stones/deer.png' %}">
-                        </div>
-                    </div>
-
                 </div>
             </div>
             <div class="section" id='second'>
-                <div class="slide" id='second_slide1' data-anchor="slide1">Слайд 2.1</div>
-                <div class="slide" id='second_slide2' data-anchor="slide2">Слайд 2.2</div>
+                <div class="slide" id='second_slide1' data-anchor="slide1"><img
+                        src=" {% static '/stonehenge/stones/eye1_wb.png' %}">
+                    <img src=" {% static '/stonehenge/stones/eye2_wb.png' %}">
+                    <img src=" {% static '/stonehenge/stones/eye3_wb.png' %}">
+                    Слайд 2.1
+                </div>
+
+                <div class="slide" id='second_slide2' data-anchor="slide2">
+                    <img src=" {% static '/stonehenge/stones/eye4_wb.png' %}">
+                    <img src=" {% static '/stonehenge/stones/eye5_wb.png' %}">
+                    <img src=" {% static '/stonehenge/stones/eye6_wb.png' %}">Слайд 2.2
+                </div>
 
             </div>
             <div class="section" id='third'>Секция 3</div>
@@ -187,138 +190,23 @@
             function setBigStone() {
                 var stone1_set = anime.set(
                     '.stone1', {
-                    translateX: 250,
+                    translateY: -100,
+                    // translateX: 250,
                 })
             }
             setBigStone()
 
-            function setStones() {
-                var stoner_set = anime.set('.stoner1', {
-                    translateX: -125,
-                    translateY: -450,
-                    opacity: [0],
-                });
-                var stoner2_set = anime.set('.stoner2', {
-                    translateX: 190,
-                    translateY: -450,
-                    opacity: [0],
-                });
-                var stoner3_set = anime.set('.stoner3', {
-                    translateX: -290,
-                    opacity: [0],
-                });
-                var stoner4_set = anime.set('.stoner4', {
-                    translateX: 25,
-                    opacity: [0],
-                });
-            }
-            setStones()
 
-
-            var stoner_opacity = anime({
-                targets: '.stoner1',
-                opacity: [0, 1],
-                easing: 'linear',
-                duration: '5000',
-                autoplay: false,
-            })
-            var stoner2_opacity = anime({
-                targets: '.stoner2',
-                opacity: [0, 1],
-                easing: 'linear',
-                duration: '5000',
-                autoplay: false,
-            })
-
-            var stoner3_opacity = anime({
-                targets: '.stoner3',
-                opacity: [0, 1],
-                easing: 'linear',
-                duration: '5000',
-                autoplay: false,
-            })
-
-            var stoner4_opacity = anime({
-                targets: '.stoner4',
-                opacity: [0, 1],
-                easing: 'linear',
-                duration: '5000',
-                autoplay: false,
-            })
-
-            function animateAll() {
-                stoner_opacity.play();
-                stoner2_opacity.play();
-                stoner3_opacity.play();
-                stoner4_opacity.play();
-            };
-            document.querySelector('.alpha').onclick = animateAll;
-
-            // var stoner1_step = anime({
-            //     targets: '.stoner1',
-            //     keyframes: [
-            //         { translateY: -40 },
-            //         { translateX: 250 },
-            //         { translateY: 40 },
-            //         { translateX: 0 },
-            //         { translateY: 0 }
-            //     ],
-            //     duration: 40000,
-            //     easing: 'easeOutElastic(1, .8)',
-            //     loop: true
-            // })
-
-            var motionPath = anime({
-                targets: '.stone2',
-                translateY: {
-                    value: 100,
-                    easing: 'easeInOutCubic',
-                    duration: 15000,
-                },
-                rotate: {
-                    value: 5,
-                    duration: 13000,
-                    direction: 'alternate',
-                    easing: 'easeInOutSine',
-                },
-                scale: {
-                    value: 1.2,
-                    duration: 1,
-                },
-                direction: 'alternate',
-                loop: true,
-            });
 
             var motionPath = anime({
                 targets: '.stone1',
                 translateY: {
-                    value: 100,
+                    value: 4,
                     easing: 'easeInOutCubic',
                     duration: 15000,
                 },
                 scale: {
-                    value: 1.4,
-                    duration: 1,
-                },
-                direction: 'alternate',
-                loop: true,
-            });
-
-            var motionPath = anime({
-                targets: '.stone3',
-                translateY: {
-                    value: 100,
-                    easing: 'easeInOutCubic',
-                    duration: 15000,
-                },
-                rotate: {
-                    value: -5,
-                    duration: 12000,
-                    direction: 'alternate',
-                    easing: 'easeInOutSine',
-                },
-                scale: {
-                    value: 1.25,
+                    value: 1.3,
                     duration: 1,
                 },
                 direction: 'alternate',
@@ -332,14 +220,15 @@
                 duration: 3000,
                 delay: function (el, i) { return i * 250 },
                 direction: 'alternate',
-                loop: true
+                loop: true,
+                autoplay: false,
             });
 
 
             var CSStransforms = anime({
                 targets: '#motionPath .levitate, #lineDrawing .loki',
                 translateY: {
-                    value: 10,
+                    value: 4,
                     easing: 'easeInOutCubic',
                 },
                 direction: 'alternate',
