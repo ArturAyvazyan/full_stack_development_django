@@ -26,7 +26,6 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^who', views.who, name='who'),
 
-    url(r'^check', views.check_check, name='check_check'),
     url(r'^demo', views.demo, name='demo'),
     url(r'^deema', views.demo2, name='demo2'),
     url(r'^demmon', views.demo3, name='demo3'),

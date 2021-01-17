@@ -3,83 +3,22 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>MATRIX</title>
+    <titless></title>
 
 </head>
 {% load static %}
 
 <body>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        #container {
-            position: absolute;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            background: url("{% static '/stonehenge/background/matrix_f.png' %}");
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-
-        .box {
-            margin-left: 110px;
-            margin-top: 350px;
-            position: absolute;
-            background: url("{% static '/stonehenge/stones/stone2.png' %}");
-            background-attachment: fixed;
-        }
-
-
-
-        .alpha {
-            margin-left: 110px;
-            margin-top: 275px;
-            display: grid;
-            grid-template-columns: 750px 750px;
-        }
+ 
     </style>
 
-    <div id='container'>
-        <div class='alpha'>
-            <img class='hant' id='udacha' src=" {% static '/stonehenge/stones/stone1.png' %}">
-            <img class='komi' id='fart' src=" {% static '/stonehenge/stones/stone2.png' %}">
-            <!--  Можно сменить классы cверху и снизу -->
-        </div>
-    </div>
-
-    <div id='bgo'>
-        <div class='alpha'>
-            <img class='hant' id='udacha' src=" {% static '/stonehenge/stones/stone1.png' %}">
-            <img class='komi' id='fart' src=" {% static '/stonehenge/stones/stone2.png' %}">
-            <!--  Можно сменить классы cверху и снизу -->
-        </div>
-    </div>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.7/pixi.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
     <script>
-        let bg = document.getElementById('container');
-        let count = 20;
-        for (let i = 0; i < count; i++) {
-            let glitchBox = document.createElement('div')
-            glitchBox.className = 'box';
-            bg.appendChild(glitchBox)
-        }
-        setInterval(function () {
-            let glitch = document.getElementsByClassName('box');
-            for (let i = 0; i < glitch.length; i++) {
-                glitch[i].style.left = Math.floor(Math.random() * 10) + 'vw';
-                glitch[i].style.top = Math.floor(Math.random() * 20) + 'vh';
-                glitch[i].style.width = Math.floor(Math.random() * 150) + 'px';
-                glitch[i].style.height = Math.floor(Math.random() * 10) + 'px';
-                glitch[i].style.backgroundPosition = Math.floor(Math.random() * 100) + 'px';
-            }
-        }, 200)
+     
     </script>
 </body>
 

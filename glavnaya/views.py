@@ -22,9 +22,6 @@ def home(request):
 def who(request):
     return render(request, 'checker/who.html')
 
-def check_check(request):
-    return render(request, 'checker/checka_icons.html')
-
 def demo(request):
     return render(request, 'checker/demo.html')
 
