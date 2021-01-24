@@ -32,7 +32,7 @@ urlpatterns = [
     url(r'^leeemo', views.demo4, name='demo4'),
 
     url(r'^golova/', views.golova, name='golova'),
-    url(r'^eye/', views.golova, name='eye'),
+    url(r'^eye/', views.eye, name='eye'),
     url(r'^guy/', views.guy, name='guy'),
     url(r'^matrix/', views.matrix, name='matrix'),
     url(r'^persik/', views.persik, name='persik'),
