@@ -141,13 +141,118 @@
 
         <script>
 
-            // var slideShow = anime({
-            //     targets: ['.first_image', '.second_image', '.third_image', '.fourth_image', '.fifth_image'],
-            //     opacity: {
-            //         value: [0, 100],
-            //         duration: 15000,
-            //     },
-            // });
+            var positioning = anime({
+                targets: ['#second_image', '#third_image', '#fourth_image', '#fifth_image'],
+                opacity: {
+                    value: 0,
+                    duration: 0.001,
+                },
+            })
+
+            var first_image_opacity = document.getElementById("first_image");
+            var first_io = window.getComputedStyle(first_image_opacity).getPropertyValue("opacity");
+
+            var second_image_opacity = document.getElementById("second_image");
+            var second_io = window.getComputedStyle(second_image_opacity).getPropertyValue("opacity");
+
+            var third_image_opacity = document.getElementById("third_image");
+            var third_io = window.getComputedStyle(third_image_opacity).getPropertyValue("opacity");
+
+            var fourth_image_opacity = document.getElementById("fourth_image");
+            var fourth_io = window.getComputedStyle(fourth_image_opacity).getPropertyValue("opacity");
+
+            var fifth_image_opacity = document.getElementById("fifth_image");
+            var fifth_io = window.getComputedStyle(fifth_image_opacity).getPropertyValue("opacity");
+
+
+
+            function nexta() {
+                var stoner_falling = anime ({
+                    targets: ['#first_image'],
+                    opacity: {
+                        value: 0,
+                        duration: 0.001,
+                    },
+                    autoplay:false,
+                }).play()
+                
+                if (first_io = 1) {
+                    var first_image_nexta = anime({
+                    targets: ['#second_image'],
+                    opacity: {
+                        value: 1,
+                        duration: 10000,
+                    },
+                    autoplay:false,
+                }).play()
+
+                    var change_arrow = anime({
+                    targets: ['.arrow_right'],
+                    opacity: {
+                        value: 1,
+                        duration: 10000,
+                    },
+                    autoplay:false,
+                }).play()
+                }
+
+                else if (second_io = 1) {
+                    var stoner2_falling = anime ({
+                    targets: ['#second_image'],
+                    opacity: {
+                        value: 0,
+                        duration: 0.001,
+                    },
+                    autoplay:false,
+                    }).play()
+
+                    var second_image_nexta = anime({
+                    targets: ['#third_image'],
+                    opacity: {
+                        value: 1,
+                        duration: 10000,
+                    },
+                    autoplay:false,
+                }).play()
+                }
+
+                else if (third_io = 1) {
+                    var third_image_nexta = anime({
+                    targets: ['#fourth_image'],
+                    opacity: {
+                        value: 1,
+                        duration: 10000,
+                    },
+                    autoplay:false,
+                }).play()
+                }
+
+                else if (fourth_io = 1) {
+                    var fourth_image_nexta = anime({
+                    targets: ['#fifth_image'],
+                    opacity: {
+                        value: 1,
+                        duration: 10000,
+                    },
+                    autoplay:false,
+                }).play()
+                }
+
+                else if (fifth_io = 1) {
+                    var fifth_image_nexta = anime({
+                    targets: ['#first_image'],
+                    opacity: {
+                        value: 1,
+                        duration: 10000,
+                    },
+                    autoplay:false,
+                }).play()
+                }
+            }
+
+
+            document.querySelector('.arrow_right').onclick = nexta;
+
         </script>
     </body>
 
