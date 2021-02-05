@@ -64,6 +64,7 @@
         }
 
         .second_half {
+            
            display:grid;
            grid-template-columns: 5fr 5fr 80fr 5fr 5fr;
            grid-template-rows: 4fr 89fr 4fr;
@@ -96,18 +97,18 @@
                     <img src = "{% static '/works/eye/gorod.png' %}"  style = 'max-height: 5vh ;min-width: 100%; overflow:hidden;'>
                 </div>
                 
-                <div class = 'arrow_left'>
-                    <img src = "{% static '/works/eye/arirow.png' %}" >
+                <div class = 'arrow_left' style = 'position:relative; justify-content: center;'>
+                    <img src = "{% static '/works/eye/arirow.png' %}" style = 'position:absolute; '  onclick="prev()">
                 </div>
                 
                 <div class = 'image_slider' style = 'position:relative; max-height: 90vh; min-width: 100%; overflow:hidden;justify-content: center;' >
                     
                     <div class = 'first_image' > 
-                        <img src = "{% static '/works/eye/gora.png' %}" id='first_image' style = 'max-height: 89vh; min-width: 100%; overflow:hidden; margin:center;'>
+                        <img src = "{% static '/works/eye/gora.png' %}" id='first_image' alt="" class = 'slider-img' style = 'max-height: 89vh; min-width: 100%; overflow:hidden; margin:center;'>
                     </div>
 
                     <div class = 'second_image' style = 'position: absolute; top:0;max-height: 89vh; min-width: 100%; overflow:hidden;'> 
-                        <img src = "{% static '/works/eye/gora.png' %}" id='second_image' style = 'max-height: 89vh; min-width: 100%; overflow:hidden;'>
+                        <img src = "{% static '/works/eye/1.jpg' %}" id='second_image' style = 'max-height: 89vh; min-width: 100%; overflow:hidden;'>
                     </div>
 
                     <div class = 'third_image' style = 'position: absolute; top:0;max-height: 89vh; min-width: 100%; overflow:hidden;'> 
@@ -124,8 +125,8 @@
                     
                 </div>
 
-                <div class = 'arrow_right'>
-                    <img src = "{% static '/works/eye/arrow--rig.png' %}" >
+                <div class = 'arrow_right' style = 'position:relative; justify-content: center;'>
+                    <img src = "{% static '/works/eye/arrow--rig.png' %}" id='arrow_first' style = 'position:absolute' onclick="next()">
                 </div>
 
                 <div class = 'border_right'>
@@ -135,6 +136,7 @@
                 <div class = 'border_bottom'>
                     <img src = "{% static '/works/eye/gorod.png' %}" style = 'max-height: 5vh; min-width: 100%; overflow:hidden;'>
                 </div>
+                
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
@@ -147,36 +149,63 @@
                     value: 0,
                     duration: 0.001,
                 },
+                zIndex: {
+                    value:0,
+                    duration:0.001,
+                },
             })
 
-            var first_image_opacity = document.getElementById("first_image");
-            var first_io = window.getComputedStyle(first_image_opacity).getPropertyValue("opacity");
 
-            var second_image_opacity = document.getElementById("second_image");
-            var second_io = window.getComputedStyle(second_image_opacity).getPropertyValue("opacity");
+            var slider_img = document.querySelector('.slider-img');
+            var images = [ '1.jpg', 'arirow.png', 'boroda.png', 'gora.png'];
+            var i =0; //Current image
 
-            var third_image_opacity = document.getElementById("third_image");
-            var third_io = window.getComputedStyle(third_image_opacity).getPropertyValue("opacity");
 
-            var fourth_image_opacity = document.getElementById("fourth_image");
-            var fourth_io = window.getComputedStyle(fourth_image_opacity).getPropertyValue("opacity");
+            function prev() {
+                if (i<=0) i = images.length;
+                i--;
+                return setImg();
+            }
 
-            var fifth_image_opacity = document.getElementById("fifth_image");
-            var fifth_io = window.getComputedStyle(fifth_image_opacity).getPropertyValue("opacity");
+            function next() {
+                if (i >= images.length - 1) i = -1;
+                i++;
+                return setImg();
+            }
+
+            function setImg(){
+                return slider_img.setAttribute('src', "{% static '/works/eye/' %}" + images[i]);
+            }
+
+
+            // var first_image_opacity = document.getElementById("first_image");
+            // var first_io = window.getComputedStyle(first_image_opacity).getPropertyValue("opacity");
+
+            // var second_image_opacity = document.getElementById("second_image");
+            // var second_io = window.getComputedStyle(second_image_opacity).getPropertyValue("opacity");
+
+            // var third_image_opacity = document.getElementById("third_image");
+            // var third_io = window.getComputedStyle(third_image_opacity).getPropertyValue("opacity");
+
+            // var fourth_image_opacity = document.getElementById("fourth_image");
+            // var fourth_io = window.getComputedStyle(fourth_image_opacity).getPropertyValue("opacity");
+
+            // var fifth_image_opacity = document.getElementById("fifth_image");
+            // var fifth_io = window.getComputedStyle(fifth_image_opacity).getPropertyValue("opacity");
 
 
 
             function nexta() {
-                var stoner_falling = anime ({
-                    targets: ['#first_image'],
-                    opacity: {
-                        value: 0,
-                        duration: 0.001,
-                    },
-                    autoplay:false,
-                }).play()
-                
                 if (first_io = 1) {
+                    var stoner_falling = anime ({
+                        targets: ['#first_image'],
+                        opacity: {
+                            value: 0,
+                            duration: 0.001,
+                        },
+                        autoplay:false,
+                    }).play()
+                    
                     var first_image_nexta = anime({
                     targets: ['#second_image'],
                     opacity: {
@@ -184,74 +213,13 @@
                         duration: 10000,
                     },
                     autoplay:false,
-                }).play()
-
-                    var change_arrow = anime({
-                    targets: ['.arrow_right'],
-                    opacity: {
-                        value: 1,
-                        duration: 10000,
-                    },
-                    autoplay:false,
-                }).play()
-                }
-
-                else if (second_io = 1) {
-                    var stoner2_falling = anime ({
-                    targets: ['#second_image'],
-                    opacity: {
-                        value: 0,
-                        duration: 0.001,
-                    },
-                    autoplay:false,
                     }).play()
 
-                    var second_image_nexta = anime({
-                    targets: ['#third_image'],
-                    opacity: {
-                        value: 1,
-                        duration: 10000,
-                    },
-                    autoplay:false,
-                }).play()
-                }
-
-                else if (third_io = 1) {
-                    var third_image_nexta = anime({
-                    targets: ['#fourth_image'],
-                    opacity: {
-                        value: 1,
-                        duration: 10000,
-                    },
-                    autoplay:false,
-                }).play()
-                }
-
-                else if (fourth_io = 1) {
-                    var fourth_image_nexta = anime({
-                    targets: ['#fifth_image'],
-                    opacity: {
-                        value: 1,
-                        duration: 10000,
-                    },
-                    autoplay:false,
-                }).play()
-                }
-
-                else if (fifth_io = 1) {
-                    var fifth_image_nexta = anime({
-                    targets: ['#first_image'],
-                    opacity: {
-                        value: 1,
-                        duration: 10000,
-                    },
-                    autoplay:false,
-                }).play()
                 }
             }
-
-
-            document.querySelector('.arrow_right').onclick = nexta;
+            
+            // СТРЕЛКИ В ОБРАТНОМ ПОРЯДКЕ
+            document.querySelector('#arrow_fifth').onclick = nexta;
 
         </script>
     </body>

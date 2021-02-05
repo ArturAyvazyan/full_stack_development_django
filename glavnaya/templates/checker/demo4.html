@@ -5,23 +5,54 @@
 <head>
     <meta charset="utf-8">
     <title>demo4</title>
-    <link rel='stylesheet' href="{% static 'fullpage.min.css' %}">
+    <link rel='stylesheet'>
 </head>
 
 
 <body>
     <style>
+        .slider {
+            margin:50px auto;
+            width: 50%;
+        }
 
     </style>
 
     <body>
+        <div class="slider">
+            <div class="img-box">
+                <img src="{% static '/works/eye/gora.png' %}" alt="" class = 'slider-img'>
+            </div> 
+            <button class="btn" onclick='prev()'>Prev</button>
+            <button class="btn" onclick='next()'>Next</button>
+        </div>
+
+
 
         <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-        <script src="{% static 'scrolloverflow.js' %}"></script>
-        <script src="{% static 'fullpage.js' %}"></script>
 
         <script>
+
+            var slider_img = document.querySelector('.slider-img');
+            var images = [ '1.jpg', 'arirow.png', 'boroda.png', 'gora.png'];
+            var i =0; //Current image
+
+            function prev() {
+                if (i<=0) i = images.length;
+                i--;
+                return setImg();
+            }
+
+            function next() {
+                if (i >= images.length - 1) i = -1;
+                i++;
+                return setImg();
+            }
+
+            function setImg(){
+                return slider_img.setAttribute('src', "{% static '/works/eye/' %}" + images[i]);
+            }
 
         </script>
     </body>
