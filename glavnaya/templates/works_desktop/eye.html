@@ -17,9 +17,7 @@
             position:static;
             width: 100%;
             height: 100%;
-            /* margin = 0 - убирает скролл */
-            margin: 0px; 
-            /* padding: 0px; */
+            margin: 0px; /* убирает скролл */
             overflow-x: hidden;
             background: url("{% static '/stonehenge/background/eye_f.png' %}");
             background-size: cover;
@@ -89,44 +87,32 @@
 
             <div class = 'second_half'>
                 
+                
                 <div class = 'border_left'>
                     <img src = "{% static '/works/eye/boroda.png' %}" style = 'max-height: 90vh; min-width: 100%; overflow:hidden;'>
                 </div>
 
+
                 <div class = 'border_up'>
                     <img src = "{% static '/works/eye/gorod.png' %}"  style = 'max-height: 5vh ;min-width: 100%; overflow:hidden;'>
                 </div>
+
                 
                 <div class = 'arrow_left' style = 'position:relative; justify-content: center;'>
-                    <img src = "{% static '/works/eye/arirow.png' %}" style = 'position:absolute; '  onclick="prev()">
+                    <img src = "{% static '/works/eye/arirow.png' %}" style = 'position:absolute; '  onclick="prev();gadina()">
                 </div>
                 
+
                 <div class = 'image_slider' style = 'position:relative; max-height: 90vh; min-width: 100%; overflow:hidden;justify-content: center;' >
                     
                     <div class = 'first_image' > 
                         <img src = "{% static '/works/eye/gora.png' %}" id='first_image' alt="" class = 'slider-img' style = 'max-height: 89vh; min-width: 100%; overflow:hidden; margin:center;'>
                     </div>
 
-                    <div class = 'second_image' style = 'position: absolute; top:0;max-height: 89vh; min-width: 100%; overflow:hidden;'> 
-                        <img src = "{% static '/works/eye/1.jpg' %}" id='second_image' style = 'max-height: 89vh; min-width: 100%; overflow:hidden;'>
-                    </div>
-
-                    <div class = 'third_image' style = 'position: absolute; top:0;max-height: 89vh; min-width: 100%; overflow:hidden;'> 
-                        <img src = "{% static '/works/eye/gora.png' %}" id='third_image' style = 'max-height: 89vh; min-width: 100%; overflow:hidden;'>
-                    </div>
-
-                    <div class = 'fourth_image' style = 'position: absolute; top:0;max-height: 89vh; min-width: 100%; overflow:hidden;'> 
-                        <img src = "{% static '/works/eye/gora.png' %}" id='fourth_image' style = 'max-height: 89vh; min-width: 100%; overflow:hidden;'>
-                    </div>
-
-                    <div class = 'fifth_image' style = 'position: absolute; top:0;max-height: 89vh; min-width: 100%; overflow:hidden;'> 
-                        <img src = "{% static '/works/eye/gora.png' %}" id='fifth_image' style = 'max-height: 89vh; min-width: 100%; overflow:hidden;'>
-                    </div>
-                    
                 </div>
 
                 <div class = 'arrow_right' style = 'position:relative; justify-content: center;'>
-                    <img src = "{% static '/works/eye/arrow--rig.png' %}" id='arrow_first' style = 'position:absolute' onclick="next()">
+                    <img src = "{% static '/works/eye/arrow--rig.png' %}" id='arrow_first' style = 'position:absolute' onclick="next();gadina()">
                 </div>
 
                 <div class = 'border_right'>
@@ -143,83 +129,49 @@
 
         <script>
 
-            var positioning = anime({
-                targets: ['#second_image', '#third_image', '#fourth_image', '#fifth_image'],
-                opacity: {
-                    value: 0,
-                    duration: 0.001,
-                },
-                zIndex: {
-                    value:0,
-                    duration:0.001,
-                },
-            })
-
-
             var slider_img = document.querySelector('.slider-img');
-            var images = [ '1.jpg', 'arirow.png', 'boroda.png', 'gora.png'];
+            var images = ['boroda.png','1.jpg', 'arirow.png', 'gora.png'];
             var i =0; //Current image
-
 
             function prev() {
                 if (i<=0) i = images.length;
+                b=i
                 i--;
                 return setImg();
             }
 
             function next() {
                 if (i >= images.length - 1) i = -1;
+                b = i
                 i++;
                 return setImg();
             }
 
             function setImg(){
-                return slider_img.setAttribute('src', "{% static '/works/eye/' %}" + images[i]);
+                return slider_img.setAttribute('src', "{% static '/works/eye/' %}" + images[i])
             }
 
-
-            // var first_image_opacity = document.getElementById("first_image");
-            // var first_io = window.getComputedStyle(first_image_opacity).getPropertyValue("opacity");
-
-            // var second_image_opacity = document.getElementById("second_image");
-            // var second_io = window.getComputedStyle(second_image_opacity).getPropertyValue("opacity");
-
-            // var third_image_opacity = document.getElementById("third_image");
-            // var third_io = window.getComputedStyle(third_image_opacity).getPropertyValue("opacity");
-
-            // var fourth_image_opacity = document.getElementById("fourth_image");
-            // var fourth_io = window.getComputedStyle(fourth_image_opacity).getPropertyValue("opacity");
-
-            // var fifth_image_opacity = document.getElementById("fifth_image");
-            // var fifth_io = window.getComputedStyle(fifth_image_opacity).getPropertyValue("opacity");
-
-
-
-            function nexta() {
-                if (first_io = 1) {
-                    var stoner_falling = anime ({
-                        targets: ['#first_image'],
+            function gadina(){
+                
+                    var brawl = anime({
+                        targets: '.image_slider',
                         opacity: {
-                            value: 0,
-                            duration: 0.001,
+                            value:[0,1],
+                            duration:90000,
                         },
+                        // translateX: {
+                        //     value: [25,-25],
+                        //     duration:1500,
+                        // },
                         autoplay:false,
                     }).play()
-                    
-                    var first_image_nexta = anime({
-                    targets: ['#second_image'],
-                    opacity: {
-                        value: 1,
-                        duration: 10000,
-                    },
-                    autoplay:false,
-                    }).play()
-
                 }
-            }
+
+
+                
+                // return slider_img.setAttribute('onclick', brawl)
+                
             
-            // СТРЕЛКИ В ОБРАТНОМ ПОРЯДКЕ
-            document.querySelector('#arrow_fifth').onclick = nexta;
 
         </script>
     </body>
