@@ -5,23 +5,37 @@
 <head>
   <meta charset="UTF-8" />
   <title>demo</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 </head>
 
 
 <body>
-  <style>
   
-  </style>
+  <style>
 
+
+  </style>
+  
+  <svg id = 'demo-svg' width="1000" height="500">
+    <path stroke = 'red' fill = 'none' d = 'M18,380.59q-2.88-35.41-4.3-70.94t-1.34-71.31q0-20,.56-40c.05-1.93-2.95-1.93-3,0q-.9,35.53-.34,71.08t2.64,71.27q1.15,20,2.78,39.91c.16,1.92,3.16,1.93,3,0Z'></path>
+    
+  </svg>
+
+  
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.7/pixi.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+
 
   <script>
-   
+   var war =  anime({
+      targets: '#demo-svg path',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInOutSine',
+      duration: 1500,
+      delay: function(el, i) { return i * 250 },
+      direction: 'alternate',
+      loop: true
+    });
   </script>
 </body>
 
