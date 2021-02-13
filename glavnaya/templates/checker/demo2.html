@@ -9,16 +9,136 @@
 {% load static %}
 
 <body>
-    <style>
- 
-    </style>
+    <style> 
+        html,
+        body {
+            position:static;
+            width: 100%;
+            height: 100%;
+            margin: 0px; /* убирает скролл */
+            overflow-x: hidden;
+            background: url("{% static '/stonehenge/background/eye_f.png' %}");
+            background-size: cover;
+        }
+        
+        .container {
+            
+            display:grid;
+            grid-template-columns: 35fr 65fr;
+            grid-template-rows:100;
+            width: 100vw;
+            height: 100vh;
+        }
 
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.7/pixi.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+        .second_class {
+            
+            display: grid;
+            grid-template-columns: repeat(25, 4fr);
+            grid-template-rows: repeat(10, 10fr);
+            overflow: hidden;
+        }
+
+        .box1 {
+            grid-column-start: 1;
+            grid-column-end: 26;
+            grid-row-start: 1;
+            grid-row-end: 11;
+            overflow: hidden;
+        }
+
+        .box2 {
+            grid-column-start: 4;
+            grid-column-end: 23;
+            grid-row-start: 2;
+            grid-row-end: 9;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box3 { 
+            grid-column-start: 1;
+            grid-column-end:3;
+            grid-row-start:6;
+            grid-row-end:7;
+        }
+
+        .box4 { 
+            grid-column-start: 24;
+            grid-column-end:26;
+            grid-row-start:6;
+            grid-row-end:7;
+        }
+    </style>
+    <div class="container">
+
+        <div class="first_class">
+            
+        </div>
+
+        <div class="second_class">
+
+                <div class="box box1" >
+                   
+                    <svg id = 'demo-svg' viewBox="0 0 667.58 580"><path stroke = 'rgb(103, 21, 141)' stroke-width="5" fill = 'none' d="M11.2,9.88,13.62,246,16,482.21l.61,59.36c0,4.63,0,9.26.14,13.89.07,3.39.43,6.76,3.15,9.09,2.27,1.94,5.35,2.57,8.22,2.93,4.72.59,9.49.91,14.23,1.35l58.21,5.43c19.24,1.79,38.55,3.72,57.9,3.16,19-.54,37.59-4.31,56.34-7.06a309.49,309.49,0,0,1,58.36-2.62c38.14,1.64,75.93,7.69,114.14,8.26,75.4,1.12,150.93-12.74,226.19-3.27q14.15,1.78,28.11,4.77a1.53,1.53,0,0,0,1.9-1.45c2.09-19.86.32-39.78-2.06-59.54-2.32-19.17-4.71-38.3-6.08-57.57-2.69-38.14-2.67-76.42-1.55-114.63,2.27-77,9.08-153.88,7.49-230.95-.39-19.08-1.3-38.15-2.92-57.17q-1.24-14.58-3.08-29.1C635,24,634.65,20.7,632.92,18c-1.87-2.88-5-3.95-8.29-4.41-18.88-2.7-38.29-3.34-57.33-3.81-19.36-.48-38.73-.24-58.07.47-78.18,2.86-155.91,13.27-234.16,14.84C195.92,26.7,116.93,19.68,38.26,11.75Q23.88,10.31,9.51,8.83c-1.92-.2-1.9,2.8,0,3,77.85,8,155.86,15.93,234.19,16.48C321.14,28.85,398,19.61,475.21,15c38.45-2.33,77.05-3.4,115.54-1.2Q605,14.56,619.11,16c4,.41,9.51.21,11.67,4.33s1.93,9.62,2.45,14c2.2,19,3.61,38,4.43,57.08,3.26,76.2-2.9,152.33-5.95,228.42-1.51,37.82-2.27,75.7-.72,113.52.77,18.89,2.12,37.75,4.23,56.53,2.16,19.19,5.21,38.31,6.06,57.63a191.12,191.12,0,0,1-.74,28.51l1.9-1.44c-73.34-15.67-148.33-4.27-222.35-1.94-19,.59-38.08.57-57.08-.59s-37.75-3.26-56.62-5-37.64-3.05-56.52-2.68c-18.62.37-36.81,3.18-55.15,6.12a278.86,278.86,0,0,1-58.64,3.56c-19.17-1-38.28-3.1-57.39-4.88L49.9,566.53l-13.77-1.28c-4.11-.38-9.24-.14-13-2.16-4.38-2.35-3.34-8.47-3.38-12.68l-.16-15.16-.3-29.05L16.89,272.57,14.5,38.93l-.3-29a1.5,1.5,0,0,0-3,0Z"/>
+                        </svg>
+                </div>
+
+                <div class="box box2" >
+                    
+                        <img src = "{% static '/works/eye/eye_1.png' %}"  class = 'slider-img' style = 'max-height: 100vh; max-width: 100vw;' >
+                </div>
+
+                <div class="box box3" style = 'position:relative; justify-content: center;'>
+                        <img src = "{% static '/works/eye/arirow.png' %}" style = 'position:absolute;top:0;' onclick="prev();">
+                </div>
+
+                <div class="box box4" style = 'position:relative; justify-content: center;'>
+                    <img src = "{% static '/works/eye/arrow--rig.png' %}" id='arrow_first' style = 'position:absolute' onclick="next();">
+                </div>
+
+            </div>
+
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 
     <script>
-     
+    
+    var slider_img = document.querySelector('.slider-img');
+    var images = ['eye_1.png','eye_2.png', 'eye_3.png', 'eye_4.png', 'eye_5.png'];
+    var i =0; //Current image
+
+    function prev() {
+        if (i<=0) i = images.length;
+        b=i
+        i--;
+        return setImg();
+    }
+
+    function next() {
+        if (i >= images.length - 1) i = -1;
+        b = i
+        i++;
+        return setImg();
+    }
+
+    function setImg(){
+        return slider_img.setAttribute('src', "{% static '/works/eye/' %}" + images[i])
+    }
+
+    var war =  anime({
+        targets: '#demo-svg path',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 10500,
+        delay: function(el, i) { return i * 250 },
+        direction: 'alternate',
+        loop: true
+    });
+
     </script>
 </body>
 

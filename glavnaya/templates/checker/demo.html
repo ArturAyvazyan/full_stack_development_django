@@ -12,30 +12,71 @@
 <body>
   
   <style>
+        .border_right {
+            grid-area: right_border;
+        }
 
+        .arrow_left {
+            grid-area: arrow_left;
+        }
+
+        .arrow_right {
+            grid-area: right_arrow;
+            align-items: center;
+        }
+
+        .arrow_left {
+            grid-area: left_arrow;
+        }
+
+        .image_slider {
+            grid-area: image_slider;
+            align-items:center;
+        }
+
+        .second_half {
+           display:grid;
+           grid-template-columns: 5fr 5fr 80fr 5fr 5fr;
+           /* grid-template-rows: 5fr 55fr 5fr; */
+           grid-template-areas:
+           "right_border right_border right_border right_border right_border"
+           "right_border left_arrow image_slider right_arrow right_border"
+           "right_border right_border right_border right_border right_border ";
+           align-items: center;
+        }
 
   </style>
-  
-  <svg id = 'demo-svg' width="1000" height="500">
-    <path stroke = 'red' fill = 'none' d = 'M18,380.59q-2.88-35.41-4.3-70.94t-1.34-71.31q0-20,.56-40c.05-1.93-2.95-1.93-3,0q-.9,35.53-.34,71.08t2.64,71.27q1.15,20,2.78,39.91c.16,1.92,3.16,1.93,3,0Z'></path>
-    
-  </svg>
 
+  <div class = 'second_half'>
+
+      <div class = 'border_right' style = 'margin-top:-5px; overflow:hidden;'>
+        <img src = "{% static '/works/eye/arirow.png' %}" style = 'position:absolute;top:0;'>
+      </div>
+
+      <div class = 'arrow_left' style = 'position:relative; justify-content: center;'>
+        <img src = "{% static '/works/eye/arirow.png' %}" style = 'position:absolute;top:0; '  onclick="prev();gadina()">
+      </div>
+
+      <div class = 'image_slider' style = 'position:relative; max-height: 90vh; min-width: 100%; overflow:hidden;justify-content: center;' >
+                      
+        <div class = 'first_image' > 
+            <img src = "{% static '/works/eye/eye_1.png' %}" id='first_image' alt="" class = 'slider-img' style = 'max-height: 89vh; min-width: 100%; overflow:hidden; margin:center;'>
+        </div>
+      </div>
+
+      <div class = 'arrow_right' style = 'position:relative; justify-content: center;'>
+        <img src = "{% static '/works/eye/arrow--rig.png' %}" id='arrow_first' style = 'position:absolute' onclick="next();gadina()">
+      </div>
+
+
+  </div>
   
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 
 
   <script>
-   var war =  anime({
-      targets: '#demo-svg path',
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: 'easeInOutSine',
-      duration: 1500,
-      delay: function(el, i) { return i * 250 },
-      direction: 'alternate',
-      loop: true
-    });
+
   </script>
 </body>
 
