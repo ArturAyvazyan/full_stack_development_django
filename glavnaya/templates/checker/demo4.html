@@ -1,60 +1,160 @@
 <!DOCTYPE html>
-{% load static %}
-<html>
+<html lang="en" class="no-js">
 
 <head>
-    <meta charset="utf-8">
-    <title>demo4</title>
-    <link rel='stylesheet'>
-</head>
+    <meta charset="UTF-8" />
+    <title1>SUPER BORDER</title>
 
+</head>
+{% load static %}
 
 <body>
-    <style>
-        .slider {
-            margin:50px auto;
-            width: 50%;
+    <style> 
+        html,
+        body {
+            position:static;
+            width: 100%;
+            height: 100%;
+            margin: 0px; /* убирает скролл */
+            overflow-x: hidden;
+            background: url("{% static '/stonehenge/background/eye_f.png' %}");
+            background-size: cover;
+        }
+        
+        .container {
+            
+            display:grid;
+            grid-template-columns: 35fr 65fr;
+            grid-template-rows:100;
+            width: 100vw;
+            height: 100vh;
         }
 
-    </style>
+        .second_class {
+            
+            display: grid;
+            grid-template-columns: repeat(25, 4fr);
+            grid-template-rows: repeat(10, 10fr);
+            overflow: hidden;
+        }
 
-    <body>
-        <div class="slider">
-            <div class="img-box">
-                <img src="{% static '/works/eye/gora.png' %}" alt="" class = 'slider-img'>
-            </div> 
-            <button class="btn" onclick='prev()'>Prev</button>
-            <button class="btn" onclick='next()'>Next</button>
+        .box1 {
+            grid-column-start: 1;
+            grid-column-end: 26;
+            grid-row-start: 1;
+            grid-row-end: 11;
+            overflow: hidden;
+        }
+
+        .box2 {
+            grid-column-start: 4;
+            grid-column-end: 23;
+            grid-row-start: 2;
+            grid-row-end: 9;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box3 { 
+            grid-column-start: 2;
+            grid-column-end:4;
+            grid-row-start:6;
+            grid-row-end:7;
+        }
+
+        .box4 { 
+            grid-column-start: 23;
+            grid-column-end:25;
+            grid-row-start:6;
+            grid-row-end:7;
+        }
+    </style>
+    <div class="container">
+
+        <div class="first_class">
+            
         </div>
 
+        <div class="second_class">
 
+                <div class="box box1" style = 'margin-bottom:20px;'>
+                   
+                    <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 667.58 600">
+                        <!-- <path stroke = 'rgb(103, 21, 141)' stroke-width="0.5" fill = 'none' d="M.74,1.12q329,.07,658,.32l.72-.5q-.51,242.27-.44,484.55l.2-.59q-329-.09-658-.37L.5,485Q1,242.77,1,.49"/>   -->
+                        <!-- <path stroke = 'rgb(103, 21, 141)' stroke-width="0.5" fill = 'none' d="M655.26,481.86q-325-.06-650-.31L4.5,482Q5,242.77,4.94,3.49l-.2.57q325,.11,650.05.37l.71-.5Q655,243.21,655,482.49"/> -->
+                        <path stroke = 'rgb(103, 21, 141)' stroke-dasharray = "143" stroke-width="0.5" fill = 'none' d="M8.19,477.1q.26-234.66.73-469.31l-.66-.51q322.19.57,644.39.73l-.77-.14q-.28,234.66-.8,469.31l.67.51q-322.19-.58-644.4-.78"/> 
+                        <!-- <path stroke = 'rgb(103, 21, 141)' stroke-width="0.5" fill = 'none' d="M661.39,18.34q-.1,235.16-.44,470.31l.68.51Q331,488.8.25,488.85l.8.14q.12-235.15.5-470.31l-.68-.52q330.67.39,661.38.36"/>  -->
+                        
 
-        <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+                        <!-- M7.88,484.1Q7.21,254.44,6.75,24.77l-.67-.5q325.19-.75,650.39-1.91l-.79-.13q.66,229.67,1.07,459.33l.67.5Q332.24,482.78,7,483.91 -->
+                    </svg>
+                    
+                    
+                </div>
 
-        <script>
+                <div class="box box2" >
+                    
+                        <img src = "{% static '/works/eye/eye_1.png' %}"  class = 'slider-img' style = 'position:relative; max-height: 90vh; min-width: 100%; overflow:hidden;justify-content: center;' >
+                </div>
 
-            var slider_img = document.querySelector('.slider-img');
-            var images = [ '1.jpg', 'arirow.png', 'boroda.png', 'gora.png'];
-            var i =0; //Current image
+                <div class="box box3" style = 'position:relative; justify-content: center;'>
+                        <img src = "{% static '/works/eye/arirow.png' %}" style = 'position:absolute;top:0;' onclick="prev();">
+                </div>
 
-            function prev() {
-                if (i<=0) i = images.length;
-                i--;
-                return setImg();
-            }
+                <div class="box box4" style = 'position:relative; justify-content: center;'>
+                    <img src = "{% static '/works/eye/arrow--rig.png' %}" id='arrow_first' style = 'position:absolute' onclick="next();">
+                </div>
 
-            function next() {
-                if (i >= images.length - 1) i = -1;
-                i++;
-                return setImg();
-            }
+            </div>
 
-            function setImg(){
-                return slider_img.setAttribute('src', "{% static '/works/eye/' %}" + images[i]);
-            }
+    </div>
+    
 
-        </script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+
+    <script>
+    
+    var slider_img = document.querySelector('.slider-img');
+    var images = ['eye_1.png','eye_2.png', 'eye_3.png', 'eye_4.png', 'eye_5.png'];
+    var i =0; //Current image
+
+    function prev() {
+        if (i<=0) i = images.length;
+        b=i
+        i--;
+        return setImg();
+    }
+
+    function next() {
+        if (i >= images.length - 1) i = -1;
+        b = i
+        i++;
+        return setImg();
+    }
+
+    function setImg(){
+        return slider_img.setAttribute('src', "{% static '/works/eye/' %}" + images[i])
+    }
+
+    var war =  anime({
+        targets: '#demo-svg path',
+        strokeDashoffset: [150],
+        easing: 'easeInOutSine',
+        duration: 12500,
+        opacity:{
+            value:[0,1],
+            duration:2500,
+        },
+        delay: function(el, i) { return i * 250 },
+        direction: 'alternate',
+        loop: true
+    });
+
+    </script>
+</body>
+
+</html>
 
 </html>
