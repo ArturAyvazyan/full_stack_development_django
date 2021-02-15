@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title1>SUPER BORDER</title>
+    <titless></title>
 
 </head>
 {% load static %}
@@ -74,7 +74,20 @@
     <div class="container">
 
         <div class="first_class">
-            
+            <table>
+                <tr>
+                    <td>РАЗМЕР:</td>
+                    <td>25</td> 
+                </tr>
+                <tr>
+                    <th>МАТЕРИАЛ: </th>
+                    <th>ФАРФОР</th>
+                </tr>
+                <tr>
+                    <td> ЧЕТО</td>
+                    <td>НУЖНО  НАПИСАТЬ </td>
+                </tr>
+            </table>
         </div>
 
         <div class="second_class">
@@ -82,13 +95,16 @@
                 <div class="box box1" style = 'margin-bottom:20px;'>
                    
                     <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 667.58 600">
-                        <!-- <path stroke = 'rgb(103, 21, 141)' stroke-width="0.5" fill = 'none' d="M.74,1.12q329,.07,658,.32l.72-.5q-.51,242.27-.44,484.55l.2-.59q-329-.09-658-.37L.5,485Q1,242.77,1,.49"/>   -->
-                        <!-- <path stroke = 'rgb(103, 21, 141)' stroke-width="0.5" fill = 'none' d="M655.26,481.86q-325-.06-650-.31L4.5,482Q5,242.77,4.94,3.49l-.2.57q325,.11,650.05.37l.71-.5Q655,243.21,655,482.49"/> -->
-                        <path stroke = 'rgb(103, 21, 141)' stroke-dasharray = "143" stroke-width="0.5" fill = 'none' d="M8.19,477.1q.26-234.66.73-469.31l-.66-.51q322.19.57,644.39.73l-.77-.14q-.28,234.66-.8,469.31l.67.51q-322.19-.58-644.4-.78"/> 
-                        <!-- <path stroke = 'rgb(103, 21, 141)' stroke-width="0.5" fill = 'none' d="M661.39,18.34q-.1,235.16-.44,470.31l.68.51Q331,488.8.25,488.85l.8.14q.12-235.15.5-470.31l-.68-.52q330.67.39,661.38.36"/>  -->
+                        <path stroke = 'black' stroke-width="0.5" fill = 'none' d="M15.74,10.54q319.53.08,639.06.31l.7-.48q-.5,233.27-.43,466.56l.2-.56Q335.73,476.28,16.2,476l-.7.48Q16,243.22,16,9.93"/>  
+                        <path stroke = 'white' stroke-width="0.5" fill = 'none' d="M654.27,475.33Q335.73,475.26,17.2,475l-.7.48q.49-232.28.43-464.57l-.19.56q318.54.09,637.06.35l.7-.47Q654,243.65,654,475.93"/>
+                        <path stroke = 'gold'  stroke-width="0.5" fill = 'none' d="M652.67,13.1q-.09,230.18-.41,460.33l.65.5q-317.68-.35-635.41-.3l.77.13q.12-230.16.48-460.32l-.66-.51q317.7.39,635.41.36"/> 
+                        <path stroke = 'blue' viewBox="0 0 634.77 458" stroke-width="0.5" fill = 'none' d="M20.33,471.76q.09-228.17.41-456.33l-.65-.5q316.2.36,632.41.31l-.76-.14q-.12,228.17-.48,456.33l.65.5q-316.18-.37-632.41-.35"/> 
+                        <path stroke = 'red'  stroke-width="0.5" fill = 'none' d="M655.26,477.32q-320-.06-640.06-.3l-.7.48q.5-233.78.43-467.57l-.19.57q320,.09,640.06.35l.7-.48Q655,244.15,655,477.93"/>
+                        <path stroke = 'black'  stroke-width="0.5" fill = 'none' d="M656.66,9.11q-.09,234.66-.42,469.31l.66.51q-322.18-.36-644.4-.31l.78.14q.12-234.66.48-469.31l-.66-.52q322.19.39,644.4.37"/>
+                        <path stroke = 'blue'  stroke-width="0.5" fill = 'none' d="M12.35,479.76q.09-235.65.42-471.31l-.67-.52q323.19.38,646.4.32l-.78-.14q-.12,235.65-.48,471.31l.66.51q-323.19-.37-646.4-.36"/>
                         
+                         
 
-                        <!-- M7.88,484.1Q7.21,254.44,6.75,24.77l-.67-.5q325.19-.75,650.39-1.91l-.79-.13q.66,229.67,1.07,459.33l.67.5Q332.24,482.78,7,483.91 -->
                     </svg>
                     
                     
@@ -140,10 +156,10 @@
 
     var war =  anime({
         targets: '#demo-svg path',
-        strokeDashoffset: [150],
+        strokeDashoffset: [anime.setDashoffset,0],
         easing: 'easeInOutSine',
         duration: 12500,
-        opacity:{
+        oapcity:{
             value:[0,1],
             duration:2500,
         },
