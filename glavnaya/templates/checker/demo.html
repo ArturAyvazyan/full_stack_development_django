@@ -8,67 +8,21 @@
 
 </head>
 
-
 <body>
   
   <style>
-        .border_right {
-            grid-area: right_border;
-        }
+  * {
+      margin: 0;
+      padding: 0;
+      background: url("{% static '/stonehenge/background/martra.png' %}");
+      background-size: cover;
+    }
 
-        .arrow_left {
-            grid-area: arrow_left;
-        }
 
-        .arrow_right {
-            grid-area: right_arrow;
-            align-items: center;
-        }
-
-        .arrow_left {
-            grid-area: left_arrow;
-        }
-
-        .image_slider {
-            grid-area: image_slider;
-            align-items:center;
-        }
-
-        .second_half {
-           display:grid;
-           grid-template-columns: 5fr 5fr 80fr 5fr 5fr;
-           /* grid-template-rows: 5fr 55fr 5fr; */
-           grid-template-areas:
-           "right_border right_border right_border right_border right_border"
-           "right_border left_arrow image_slider right_arrow right_border"
-           "right_border right_border right_border right_border right_border ";
-           align-items: center;
-        }
 
   </style>
-
-  <div class = 'second_half'>
-
-      <div class = 'border_right' style = 'margin-top:-5px; overflow:hidden;'>
-        <img src = "{% static '/works/eye/arirow.png' %}" style = 'position:absolute;top:0;'>
-      </div>
-
-      <div class = 'arrow_left' style = 'position:relative; justify-content: center;'>
-        <img src = "{% static '/works/eye/arirow.png' %}" style = 'position:absolute;top:0; '  onclick="prev();gadina()">
-      </div>
-
-      <div class = 'image_slider' style = 'position:relative; max-height: 90vh; min-width: 100%; overflow:hidden;justify-content: center;' >
-                      
-        <div class = 'first_image' > 
-            <img src = "{% static '/works/eye/eye_1.png' %}" id='first_image' alt="" class = 'slider-img' style = 'max-height: 89vh; min-width: 100%; overflow:hidden; margin:center;'>
-        </div>
-      </div>
-
-      <div class = 'arrow_right' style = 'position:relative; justify-content: center;'>
-        <img src = "{% static '/works/eye/arrow--rig.png' %}" id='arrow_first' style = 'position:absolute' onclick="next();gadina()">
-      </div>
-
-
+  <div>
+    <img src = "{% static '/stonehenge/background/matrix.png' %}" style = 'position:absolute;top:0;'>
   </div>
   
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
