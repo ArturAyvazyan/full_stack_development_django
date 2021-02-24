@@ -11,7 +11,12 @@
 <body>
   
   <style>
-  * {
+  html,
+  body {
+      position:static;
+      width: 100%;
+      height: 100%;
+      margin: 0px; /* убирает скролл */
       margin: 0;
       padding: 0;
       background: url("{% static '/stonehenge/background/martra.png' %}");
@@ -22,7 +27,7 @@
 
   </style>
   <div>
-    <img src = "{% static '/stonehenge/background/matrix.png' %}" style = 'position:absolute;top:0;'>
+    <img src = "{% static '/stonehenge/background/kap.png' %}" style = 'position:absolute;top:0;'>
   </div>
   
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>

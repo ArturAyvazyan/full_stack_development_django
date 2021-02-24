@@ -29,10 +29,10 @@
             margin-top: -365px;
         }
 
-        .ayo {
+        /* .ayo {
             margin-top: 200px;
-            /* padding: 30px 0px 30px 0px !important; */
-        }
+           
+        } */
 
 
         #first {
@@ -77,11 +77,11 @@
             z-index: 9;
         }
 
-        .alpha {
+        /* .alpha {
             margin-left: 400px;
             display: grid;
             grid-template-columns: 300px 300px 300px;
-        }
+        } */
 
         .stoner1 {
             z-index: 15;
@@ -110,49 +110,11 @@
         <div id="fullpage">
             <div class="section" id='first'>
                 <div class='ayo'>
-                    <div class='drawdaline' id="lineDrawing">
-
-                        <div class='ohmygod1 loki'>
-                            <!-- <svg viewBox="0 0 280 100"> ТУТ МЕНЯТЬ МАСШТАБ -->
-                            <svg viewBox="280 100">
-                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
-                                    <path
-                                        d="m39.39003,9.08941c-16.48941,0 -29.5,15.499 -29.5,15.499s13.01059,15.501 29.5,15.501c12.6107,0 29.5,-15.501 29.5,-15.501s-16.8893,-15.499 -29.5,-15.499zm0,25.15724c-5.78856,0 -10.50419,-4.33385 -10.50419,-9.65824s4.71563,-9.65824 10.50419,-9.65824s10.50419,4.33586 10.50419,9.65824s-4.71563,9.65824 -10.50419,9.65824zm0,-15.29607c-3.38485,0 -6.13163,2.52356 -6.13163,5.63782c0,3.11427 2.74459,5.63782 6.13163,5.63782c3.38704,0 6.13163,-2.52356 6.13163,-5.63782c0,-3.11226 -2.74459,-5.63782 -6.13163,-5.63782z"
-                                        stroke-dasharray="316.85528564453125" style="stroke-dashoffset: 316.855px;">
-                                    </path>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class='ohmygod2 loki'>
-                            <svg viewBox="480 300">
-                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
-                                    <path
-                                        d="m66.84882,59.56284c0,0 -5.82878,-0.18215 -5.82878,-0.3643c0,0.18215 15.1184,-36.97632 15.1184,-37.15847c0,0.18215 1.4572,0.3643 1.4572,0.3643c0,0 14.0255,37.34062 14.0255,37.15847c0,0.18215 -5.46448,0 -5.46448,-0.18215c0,0.18215 -2.73224,-7.10383 -2.73224,-7.28597c0,0.18215 -13.84335,0 -13.84335,-0.18215c0,0.18215 -2.73224,7.65027 -2.73224,7.65027z"
-                                        stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
-
-                                    <path
-                                        d="m75.40984,37.70492c0,0 -4.91803,9.28962 -4.91803,9.10747c0,0.18215 8.92532,0.18215 8.92532,0c0,0.18215 -4.00728,-9.10747 -4.00728,-9.10747z"
-                                        stroke-dasharray="441.1739501953125" style="stroke-dashoffset: 441.174px;">
-                                    </path>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class='ohmygod3 loki'>
-                            <svg viewBox="380 200">
-                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
-                                    <path
-                                        d="m29.14861,59.57379c0,0 -4.46804,0 -4.46804,0c0,0 7.23396,-37.02086 7.23396,-37.23362c0,0.21276 1.70211,0.21276 1.70211,0c0,0.21276 8.93607,27.87202 8.93607,27.87202c0,0 8.29778,-27.65926 8.29778,-27.87202c0,0.21276 2.12764,-0.00001 2.12764,-0.21276c0,0.21276 7.23396,38.29744 7.23396,37.65915c0,-0.63829 -3.82974,0.21276 -4.04251,-0.21276c-0.21276,-0.42553 -4.6808,-22.97847 -4.6808,-23.19122c0,0.21276 -8.29778,24.04228 -8.29778,24.04228c0,0 -1.27658,0.21276 -1.27658,0.21276c0,0 -8.08502,-24.89334 -8.08502,-25.1061c0,0.21276 -4.6808,24.04228 -4.6808,24.04228z"
-                                        stroke-dasharray="441.1739501953125" style="stroke-dashoffset: 441.174px;">
-                                    </path>
-                                </g>
-                            </svg>
-                        </div>
-                    </div>
+                    
                     <div class='alpha'>
-                        <img class='stone1' id='fart' src=" {% static '/stonehenge/stones/356.png' %}">
+                        <img class='stone1' id='fart' src=" {% static '/stonehenge/stones/90.png' %}">
                     </div>
+
                 </div>
             </div>
             <div class="section" id='second'>
@@ -187,17 +149,6 @@
                 sectionsColor: ['#ADD8E6', 'black', '#C0C0C0', '#ADD8E6'],
             });
 
-            function setBigStone() {
-                var stone1_set = anime.set(
-                    '.stone1', {
-                    translateY: -100,
-                    // translateX: 250,
-                })
-            }
-            setBigStone()
-
-
-
             var motionPath = anime({
                 targets: '.stone1',
                 translateY: {
@@ -211,17 +162,6 @@
                 },
                 direction: 'alternate',
                 loop: true,
-            });
-
-            var lineDrawing = anime({
-                targets: '#lineDrawing .lines path',
-                strokeDashoffset: [anime.setDashoffset, 0],
-                easing: 'easeInOutSine',
-                duration: 3000,
-                delay: function (el, i) { return i * 250 },
-                direction: 'alternate',
-                loop: true,
-                autoplay: false,
             });
 
 

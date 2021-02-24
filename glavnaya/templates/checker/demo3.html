@@ -6,347 +6,303 @@
     <meta charset="utf-8">
     <title>yo</title>
     <link rel='stylesheet' href="{% static 'fullpage.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> 
     <!-- <link rel='stylesheet' href="{% static 'jquery.pagepiling.css' %}"> -->
 </head>
 
 
 <body>
+
     <style>
-        .section {
-            display: inline-block;
-            text-align: center;
-            font-size: 3em;
-            z-index: 1;
-        }
+      .morphing-btn-wrap {
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      }
 
-        .basement {
-            z-index: 20;
-            margin-top: -1050px;
-        }
+      .morphing-btn {
+      -webkit-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
+      -moz-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
+      -o-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
+      transition: color 0.3s 0.2s, width 0.2s 0s;
+      white-space: nowrap;
+      box-sizing: border-box;
+      }
 
-        img {
-            /* z-index: 1; */
-            margin-top: -365px;
-        }
+      .morphing-btn_circle {
+      color: transparent !important;
+      padding-left: 0;
+      padding-right: 0;
+      width: 35.6px !important;
 
-        .ayo {
-            margin-top: 200px;
-            /* padding: 30px 0px 30px 0px !important; */
-        }
+      /* Override inline style rule */
+      -webkit-transition: color 0.2s 0s, width .3s 0.2s;
+      -moz-transition: color 0.2s 0s, width .3s 0.2s;
+      -o-transition: color 0.2s 0s, width .3s 0.2s;
+      transition: color 0.2s 0s, width .3s 0.2s;
+      }
 
+      .morphing-btn-clone {
+      position: fixed;
+      background: #FF6666;
+      border-radius: 50%;
+      z-index: 3;
+      -webkit-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+      -moz-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+      -o-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+      transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      }
 
-        #first {
-            background: url("{% static '/stonehenge/background/fuck.png' %}");
-            background-size: cover;
-        }
+      .morphing-btn-clone_visible {
+      display: block;
+      -webkit-transform: scale(1) !important;
+      -moz-transform: scale(1) !important;
+      -ms-transform: scale(1) !important;
+      -o-transform: scale(1) !important;
+      transform: scale(1) !important;
+      }
 
-        #second_slide1 {
-            background: url("{% static '/stonehenge/background/eye_f.png' %}");
-            background-size: cover;
-        }
+      .fancybox-morphing .fancybox-bg {
+      background: #FF6666;
+      opacity: 1;
+      }
 
-        .drawdaline {
-            position: relative;
-            z-index: 9;
+      .fancybox-morphing .fancybox-toolbar {
+      top: 20px;
+      right: 40px;
+      }
 
-        }
+      .fancybox-morphing .fancybox-button--close {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+      color: #fff;
+      }
 
-        .ohmygod1 {
-            margin-top: 100px;
-            /* margin-left: 700px; */
-            z-index: 9;
+      .fancybox-morphing .fancybox-button--close::after, 
+      .fancybox-morphing .fancybox-button--close::before {
+         height: 1.55px;
+         width: 22px;
+         left: calc(50% - 11px);
+      }
 
-        }
+      .fancybox-morphing .fancybox-button--close:hover {
+      background: rgba(0, 0, 0, 0.25);
+      }
 
-        .ohmygod2 {
-            margin-top: -100px;
-            /* margin-top: -700px; */
-            /* margin-left: 100px; */
-            z-index: 9;
-        }
+      /* Styling for element used in example */
 
-        .ohmygod3 {
-            margin-top: -100px;
-            /* margin-top: -575px; */
-            /* margin-left: 550px; */
-            z-index: 9;
-        }
+      #morphing-content {
+      margin: 0;
+      position: relative;
+      background: transparent;
+      color: #fff;
+      padding: 6em 10vw;
+      line-height: 2;
+      z-index: 3;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      }
 
-        .alpha {
-            margin-left: 400px;
-            display: grid;
-            grid-template-columns: 300px 300px 300px;
-        }
-
-        .stoner1 {
-            z-index: 15;
-            margin-left: 25px;
-
-        }
-
-        .stone2 {
-            z-index: 1;
-            filter: drop-shadow(0px 40px 25px rgb(152, 136, 224))
-        }
-
-        .stone1 {
-            display: inline-block;
-            position:fixed;
-            text-align: center;
-            /* top: 50%; */
-            /* left: 50%; */
-            z-index: 4;
-            filter: drop-shadow(0px 40px 25px rgb(152, 136, 224))
-        }
-
-        .stone3 {
-            z-index: 1;
-            filter: drop-shadow(0px 40px 25px rgb(152, 136, 224))
-        }
+      #morphing-content a {
+      color: #fff;
+      }
     </style>
 
     <body>
+      
+      <h2>fancyBox v3.2 - Morphing modal overlay</h2>
 
-        <div id="fullpage">
-            <div class="section" id='first'>
-                <div class='ayo'>
-                    <div class='drawdaline' id="lineDrawing">
+      <p>
+      Combination of jQuery, CSS transitions to spice up the way modal window opens. 
+      </p>
 
-                        <div class='ohmygod1 loki'>
-                            <!-- <svg viewBox="0 0 280 100"> ТУТ МЕНЯТЬ МАСШТАБ -->
-                            <svg viewBox="280 100">
-                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
-                                    <path
-                                        d="m39.39003,9.08941c-16.48941,0 -29.5,15.499 -29.5,15.499s13.01059,15.501 29.5,15.501c12.6107,0 29.5,-15.501 29.5,-15.501s-16.8893,-15.499 -29.5,-15.499zm0,25.15724c-5.78856,0 -10.50419,-4.33385 -10.50419,-9.65824s4.71563,-9.65824 10.50419,-9.65824s10.50419,4.33586 10.50419,9.65824s-4.71563,9.65824 -10.50419,9.65824zm0,-15.29607c-3.38485,0 -6.13163,2.52356 -6.13163,5.63782c0,3.11427 2.74459,5.63782 6.13163,5.63782c3.38704,0 6.13163,-2.52356 6.13163,-5.63782c0,-3.11226 -2.74459,-5.63782 -6.13163,-5.63782z"
-                                        stroke-dasharray="316.85528564453125" style="stroke-dashoffset: 316.855px;">
-                                    </path>
-                                </g>
-                            </svg>
-                        </div>
+      <p>
+      <a data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+         Open demo
+      </a>
+      </p>
 
-                        <div class='ohmygod2 loki'>
-                            <svg viewBox="480 300">
-                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
-                                    <path
-                                        d="m66.84882,59.56284c0,0 -5.82878,-0.18215 -5.82878,-0.3643c0,0.18215 15.1184,-36.97632 15.1184,-37.15847c0,0.18215 1.4572,0.3643 1.4572,0.3643c0,0 14.0255,37.34062 14.0255,37.15847c0,0.18215 -5.46448,0 -5.46448,-0.18215c0,0.18215 -2.73224,-7.10383 -2.73224,-7.28597c0,0.18215 -13.84335,0 -13.84335,-0.18215c0,0.18215 -2.73224,7.65027 -2.73224,7.65027z"
-                                        stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
-
-                                    <path
-                                        d="m75.40984,37.70492c0,0 -4.91803,9.28962 -4.91803,9.10747c0,0.18215 8.92532,0.18215 8.92532,0c0,0.18215 -4.00728,-9.10747 -4.00728,-9.10747z"
-                                        stroke-dasharray="441.1739501953125" style="stroke-dashoffset: 441.174px;">
-                                    </path>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class='ohmygod3 loki'>
-                            <svg viewBox="380 200">
-                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
-                                    <path
-                                        d="m29.14861,59.57379c0,0 -4.46804,0 -4.46804,0c0,0 7.23396,-37.02086 7.23396,-37.23362c0,0.21276 1.70211,0.21276 1.70211,0c0,0.21276 8.93607,27.87202 8.93607,27.87202c0,0 8.29778,-27.65926 8.29778,-27.87202c0,0.21276 2.12764,-0.00001 2.12764,-0.21276c0,0.21276 7.23396,38.29744 7.23396,37.65915c0,-0.63829 -3.82974,0.21276 -4.04251,-0.21276c-0.21276,-0.42553 -4.6808,-22.97847 -4.6808,-23.19122c0,0.21276 -8.29778,24.04228 -8.29778,24.04228c0,0 -1.27658,0.21276 -1.27658,0.21276c0,0 -8.08502,-24.89334 -8.08502,-25.1061c0,0.21276 -4.6808,24.04228 -4.6808,24.04228z"
-                                        stroke-dasharray="441.1739501953125" style="stroke-dashoffset: 441.174px;">
-                                    </path>
-                                </g>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class='alpha'>
-                        <!-- <img class='stone2' id='udacha' src=" {% static '/stonehenge/stones/stone1.png' %}"> -->
-                        <img class='stone1' id='fart' src=" {% static '/stonehenge/stones/derevo.png' %}">
-                        <!-- <img class='stone3' id='poputka' src=" {% static '/stonehenge/stones/stone3.png' %}"> -->
-                    </div>
-
-                    <div class='oskolki'>
-                        <div class='beta'>
-                            <img class='stoner1' src=" {% static '/stonehenge/stones/gon.png' %}">
-                            <img class='stoner2' src=" {% static '/stonehenge/stones/gon.png' %}">
-                            <img class='stoner3' src=" {% static '/stonehenge/stones/gon.png' %}">
-                            <img class='stoner4' src=" {% static '/stonehenge/stones/gon.png' %}">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="section" id='second'>
-                <div class="slide" id='second_slide1' data-anchor="slide1"><img
-                        src=" {% static '/stonehenge/stones/ai.png' %}">Слайд 2.1</div>
-                <div class="slide" id='second_slide2' data-anchor="slide2">Слайд 2.2</div>
-
-            </div>
-            <div class="section" id='third'>Секция 3</div>
-            <!-- <div class="section">Секция 4</div> -->
-        </div>
-        <div class='basement'>Hui</div>
-
-
+      <div id="morphing-content" class="hidden">
+      <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor nibh eu nibh scelerisque malesuada. Morbi mollis eleifend turpis. Mauris consequat convallis volutpat. Integer quis erat vehicula, molestie nulla vel, sagittis odio. Quisque hendrerit eleifend magna, sit amet dictum odio condimentum a. Proin et ipsum venenatis, elementum sem convallis, pellentesque elit. Mauris congue velit porttitor dui condimentum porttitor. Aenean pretium suscipit ante in imperdiet.
+      </p>
+      <p>
+         Nam vitae suscipit metus, eget volutpat quam. Ut et sem nunc. Vivamus erat leo, auctor in neque non, malesuada consectetur neque. Ut ac purus est. Quisque molestie pharetra sem sit amet ornare. Nam eu felis in nisl lacinia iaculis. Pellentesque ut lobortis lacus. Etiam ut eros non dui ultrices imperdiet.
+      </p>
+      <p>
+         Ut pulvinar sem gravida porta ullamcorper. Pellentesque laoreet tellus eu egestas tempor. Ut nec lobortis nulla. Aenean tincidunt eu eros eget tincidunt. Vivamus ac lacinia mi, ut varius justo. Praesent eu ante vel velit iaculis aliquam sit amet vestibulum purus. Fusce molestie enim eros. Pellentesque justo sem, pharetra vel ligula non, euismod elementum tortor. Morbi dui ligula, rhoncus nec dignissim a, malesuada feugiat massa.
+      </p>
+      <p>
+         Cras non lobortis mauris. Maecenas id placerat est, ac lobortis nisi. Aenean dapibus arcu commodo magna tristique, et facilisis diam aliquam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce a vestibulum erat, nec ornare libero. Proin aliquam, neque vel mattis euismod, tortor lacus tempus turpis, ac vulputate augue nisl eget sem. Integer in porttitor mauris.
+      </p>
+      </div>
+          
         <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-        <script src="{% static 'scrolloverflow.js' %}"></script>
-        <script src="{% static 'fullpage.js' %}"></script>
-
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> 
 
         <script>
-            $('#fullpage').fullpage({
-                sectionsColor: ['#ADD8E6', 'black', '#C0C0C0', '#ADD8E6'],
+            // Step 1: Create jQuery plugin
+            // ============================
+
+            $.fn.fancyMorph = function( opts ) {
+
+            var Morphing = function( $btn, opts ) {
+            var self = this;
+
+            self.opts = $.extend({
+               animationEffect : false,
+               infobar    : false,
+               buttons    : ['close'],
+               smallBtn   : false,
+               touch      : false,
+               baseClass  : 'fancybox-morphing',
+               afterClose : function() {
+                  self.close();
+               }
+            }, opts);
+
+            self.init( $btn );
+            };
+
+            Morphing.prototype.init = function( $btn ) {
+            var self = this;
+
+            self.$btn = $btn.addClass('morphing-btn');
+
+            self.$clone = $('<div class="morphing-btn-clone" />')
+               .hide()
+               .insertAfter( $btn );
+
+            // Add wrapping element and set initial width used for positioning
+            $btn.wrap( '<span class="morphing-btn-wrap"></span>' ).on('click', function(e) {
+               e.preventDefault();
+
+               self.start();
             });
 
-            function setBigStone() {
-                var stone1_set = anime.set(
-                    '.stone1', {
-                    translateX: 250,
-                })
+            };
+
+            Morphing.prototype.start = function() {
+            var self = this;
+
+            if ( self.$btn.hasClass('morphing-btn_circle') ) {
+               return;
             }
-            // setBigStone()
 
-            function setStones() {
-                var stoner_set = anime.set('.stoner1', {
-                    translateX: -125,
-                    translateY: -450,
-                    opacity: [0],
-                });
-                var stoner2_set = anime.set('.stoner2', {
-                    translateX: 190,
-                    translateY: -450,
-                    opacity: [0],
-                });
-                var stoner3_set = anime.set('.stoner3', {
-                    translateX: -290,
-                    opacity: [0],
-                });
-                var stoner4_set = anime.set('.stoner4', {
-                    translateX: 25,
-                    opacity: [0],
-                });
+            // Set initial width, because it is not possible to start CSS transition from "auto"
+            self.$btn.width( self.$btn.width() ).parent().width( self.$btn.outerWidth() );
+
+            self.$btn.off('.fm').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
+
+               if ( e.originalEvent.propertyName === 'width' ) {
+                  self.$btn.off('.fm');
+
+                  self.animateBg();
+               }
+
+            }).addClass('morphing-btn_circle');
+
+            };
+
+            Morphing.prototype.animateBg = function() {
+            var self = this;
+
+            self.scaleBg();
+
+            self.$clone.show();
+
+            // Trigger repaint
+            self.$clone[0].offsetHeight;
+
+            self.$clone.off('.fm').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
+               self.$clone.off('.fm');
+
+               self.complete();
+
+            }).addClass('morphing-btn-clone_visible');
+            };
+
+            Morphing.prototype.scaleBg = function() {
+            var self = this;
+
+            var $clone = self.$clone;
+            var scale  = self.getScale();
+            var $btn   = self.$btn;
+            var pos    = $btn.offset();
+
+            $clone.css({
+               top       : pos.top  + $btn.outerHeight() * 0.5 - ( $btn.outerHeight() * scale * 0.5 ) - $(window).scrollTop(),
+               left      : pos.left + $btn.outerWidth()  * 0.5 - ( $btn.outerWidth()  * scale * 0.5 ) - $(window).scrollLeft(),
+               width     : $btn.outerWidth()  * scale,
+               height    : $btn.outerHeight() * scale,
+               transform : 'scale(' + ( 1 / scale ) + ')'
+            });
+            };
+
+            Morphing.prototype.getScale = function() {
+            var $btn    = this.$btn,
+                  radius  = $btn.outerWidth() * 0.5,
+                  left    = $btn.offset().left + radius - $(window).scrollLeft(),
+                  top     = $btn.offset().top  + radius - $(window).scrollTop(),
+                  windowW = $(window).width(),
+                  windowH = $(window).height();
+
+            var maxDistHor  = ( left > windowW / 2 ) ? left : ( windowW - left ),
+                  maxDistVert = ( top > windowH / 2 )  ? top  : ( windowH - top );
+
+            return Math.ceil(Math.sqrt( Math.pow( maxDistHor, 2 ) + Math.pow( maxDistVert, 2 ) ) / radius );
+            };
+
+            Morphing.prototype.complete = function() {
+            var self = this;
+            var $btn = self.$btn;
+
+            $.fancybox.open({ src : $btn.data('src') || $btn.attr('href') }, self.opts);
+
+            $(window).on('resize.fm', function() {
+               //self.scaleBg();
+            });
+            };
+
+            Morphing.prototype.close = function() {
+            var self   = this;
+            var $clone = self.$clone;
+
+            self.scaleBg();
+
+            $clone.one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
+               $clone.hide();
+
+               self.$btn.removeClass('morphing-btn_circle');
+            });
+
+            $clone.removeClass('morphing-btn-clone_visible');
+
+            $(window).off('resize.fm');
+            };
+
+            // Init
+            this.each(function() {
+            var $this = $(this);
+
+            if ( !$this.data("morphing") ) {
+               $this.data( "morphing", new Morphing( $this, opts ) );
             }
-            setStones()
 
-
-            function organ() {
-                var stoner_opacity = anime({
-                    targets: '.stoner1',
-                    opacity: [0, 1],
-                    easing: 'linear',
-                    duration: '5000',
-                    autoplay: false,
-                }).play()
-                var stoner2_opacity = anime({
-                    targets: '.stoner2',
-                    opacity: [0, 1],
-                    easing: 'linear',
-                    duration: '5000',
-                    autoplay: false,
-                }).play()
-
-                var stoner3_opacity = anime({
-                    targets: '.stoner3',
-                    opacity: [0, 1],
-                    easing: 'linear',
-                    duration: '5000',
-                    autoplay: false,
-                }).play()
-
-                var stoner4_opacity = anime({
-                    targets: '.stoner4',
-                    opacity: [0, 1],
-                    easing: 'linear',
-                    duration: '5000',
-                    autoplay: false,
-                }).play()
-            }
-            document.querySelector('.alpha').onclick = organ;
-
-            document.querySelector('.stone1').onclick = anime({
-                targets: '.stoner1',
-                keyframes: [
-                    { translateY: -5 },
-                    { translateY: 5 },
-                    { translateX: 5 },
-                    { translateX: -5 },
-
-                ],
-                duration: 40000,
-                autoplay: false,
-                easing: 'easeOutElastic(1, .8)',
-                loop: true
-            }).play()
-
-            var motionPath = anime({
-                targets: '.stone2',
-                translateY: {
-                    value: 100,
-                    easing: 'easeInOutCubic',
-                    duration: 15000,
-                },
-                rotate: {
-                    value: 5,
-                    duration: 13000,
-                    direction: 'alternate',
-                    easing: 'easeInOutSine',
-                },
-                scale: {
-                    value: 1.2,
-                    duration: 1,
-                },
-                direction: 'alternate',
-                loop: true,
             });
 
-            var motionPath = anime({
-                targets: '.stone1',
-                translateY: {
-                    value: 100,
-                    easing: 'easeInOutCubic',
-                    duration: 15000,
-                },
-                scale: {
-                    value: 1.4,
-                    duration: 1,
-                },
-                direction: 'alternate',
-                loop: true,
-            });
-
-            var motionPath = anime({
-                targets: '.stone3',
-                translateY: {
-                    value: 100,
-                    easing: 'easeInOutCubic',
-                    duration: 15000,
-                },
-                rotate: {
-                    value: -5,
-                    duration: 12000,
-                    direction: 'alternate',
-                    easing: 'easeInOutSine',
-                },
-                scale: {
-                    value: 1.25,
-                    duration: 1,
-                },
-                direction: 'alternate',
-                loop: true,
-            });
-
-            var lineDrawing = anime({
-                targets: '#lineDrawing .lines path',
-                strokeDashoffset: [anime.setDashoffset, 0],
-                easing: 'easeInOutSine',
-                duration: 3000,
-                delay: function (el, i) { return i * 250 },
-                direction: 'alternate',
-                loop: true,
-                autoplay: false,
-            });
+            return this;
+            };
 
 
-            var CSStransforms = anime({
-                targets: '#motionPath .levitate, #lineDrawing .loki',
-                translateY: {
-                    value: 10,
-                    easing: 'easeInOutCubic',
-                },
-                direction: 'alternate',
-                loop: true,
+            // Step 2: Start using it!
+            // =======================
+
+            $("[data-morphing]").fancyMorph({
+            hash : 'morphing'
             });
 
         </script>
