@@ -27,7 +27,7 @@ urlpatterns = [
     url(r'^who', views.who, name='who'),
 
     url(r'^demo', views.demo, name='demo'),
-    url(r'^deema', views.demo2, name='demo2'),
+    url(r'^limb', views.demo2, name='demo2'),
     url(r'^demmon', views.demo3, name='demo3'),
     url(r'^leeemo', views.demo4, name='demo4'),
 

@@ -25,7 +25,7 @@
         .container {
             
             display:grid;
-            grid-template-columns: 67fr 33fr;
+            grid-template-columns: 65fr 35fr;
             grid-template-rows:100;
             width: 100vw;
             height: 100vh;
@@ -40,9 +40,9 @@
 
         .borders {
             grid-column-start: 1;
-            grid-column-end: 90;
+            grid-column-end: 100;
             grid-row-start: 5;
-            grid-row-end: 90;
+            grid-row-end: 95;
             overflow: hidden;
         }
 
@@ -58,24 +58,25 @@
         }
 
         .arrow_left { 
-            grid-column-start:8;
-            grid-column-end:14;
-            grid-row-start:32;
-            grid-row-end:43;
+            grid-column-start: 6;
+            grid-column-end: 11;
+            grid-row-start: 45;
+            grid-row-end: 53;
         }
 
         .arrow_right { 
-            grid-column-start: 81;
-            grid-column-end: 87;
-            grid-row-start:32;
-            grid-row-end:43;
+            grid-column-start: 92;
+            grid-column-end: 97;
+            grid-row-start: 45;
+            grid-row-end: 53;
         }
 
         .logotip {
+            margin-top:2%;
             grid-column-start: 5;
             grid-column-end: 15;
-            grid-row-start: 88;
-            grid-row-end:99;
+            grid-row-start: 90;
+            grid-row-end: 100;
         }
 
 /*  */
@@ -90,64 +91,80 @@
         }
 
         .nazvanie {
-            grid-column-start: 75;
+            grid-column-start: 45;
             grid-column-end: 95;
-            grid-row-start: 4;
-            grid-row-end: 20;
+            grid-row-start: 7;
+            grid-row-end: 17;
             overflow: hidden;
         }
 
         .razmer-image {
-            grid-column-start: 8;
-            grid-column-end: 40;
-            grid-row-start: 10;
-            grid-row-end: 16;
+            grid-column-start: 5;
+            grid-column-end: 35;
+            grid-row-start: 20;
+            grid-row-end: 26;
             overflow: hidden;
         }
 
         .cifri-image{
-            grid-column-start: 18;
-            grid-column-end: 40;
-            grid-row-start: 16;
-            grid-row-end: 22;
+            grid-column-start: 15;
+            grid-column-end: 44;
+            grid-row-start: 26;
+            grid-row-end: 31;
             overflow: hidden;
         }
 
         .material-image {
-            grid-column-start: 8;
-            grid-column-end: 52;
-            grid-row-start: 30;
-            grid-row-end: 36;
+            grid-column-start: 5;
+            grid-column-end: 46;
+            grid-row-start: 31;
+            grid-row-end: 38;
             overflow: hidden;
         }
 
         .farfor-image {
-            grid-column-start: 12;
-            grid-column-end: 34;
-            grid-row-start: 38;
-            grid-row-end: 42;
+            grid-column-start: 15;
+            grid-column-end: 75;
+            grid-row-start: 39;
+            grid-row-end: 44;
             overflow: hidden;
         }
 
         .akril-image {
-            grid-column-start: 12;
-            grid-column-end: 66;
-            grid-row-start: 44;
-            grid-row-end: 58;
+            grid-column-start: 15;
+            grid-column-end: 71;
+            grid-row-start: 45;
+            grid-row-end: 50;
+            overflow: hidden;
+        }
+
+        .cena-image {
+            grid-column-start: 5;
+            grid-column-end: 36;
+            grid-row-start: 51;
+            grid-row-end: 57;
+            overflow: hidden;
+        }
+    
+        .price-image {
+            grid-column-start: 15;
+            grid-column-end: 42;
+            grid-row-start: 58;
+            grid-row-end: 64;
             overflow: hidden;
         }
 
         .button-image {
-            grid-column-start: 40;
-            grid-column-end: 60;
-            grid-row-start: 82;
-            grid-row-end: 98;
+            grid-column-start: 27;
+            grid-column-end: 83;
+            grid-row-start: 75;
+            grid-row-end: 95;
             overflow: hidden;
         }
         .text-buy-image {
-            grid-column-start: 40;
-            grid-column-end: 60;
-            grid-row-start: 85;
+            grid-column-start: 38;
+            grid-column-end: 73;
+            grid-row-start: 82;
             grid-row-end: 90;
             overflow: hidden;
         }
@@ -156,15 +173,15 @@
             grid-column-start: 26;
             grid-column-end: 84;
             grid-row-start: 70;
-            grid-row-end: 96;
+            grid-row-end: 95;
             overflow: hidden;
         }
 
         .second-buy-border {
-            grid-column-start: 28;
-            grid-column-end: 86;
-            grid-row-start: 68;
-            grid-row-end: 94;
+            grid-column-start: 23;
+            grid-column-end: 81;
+            grid-row-start: 73;
+            grid-row-end: 97;
             overflow: hidden;
         }
         
@@ -172,7 +189,7 @@
             grid-column-start: 32;
             grid-column-end: 90;
             grid-row-start: 74;
-            grid-row-end: 100;
+            grid-row-end: 98;
             overflow: hidden;
         }
 
@@ -199,47 +216,51 @@
                     <path  stroke = 'rgb(147, 248, 223)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M1111.87,727.38q-534.57-.12-1069.13-.55l-1.17.75q.87-362.83.83-725.71,534.5.12,1069,.49l1.17-.75Q1111.78,364.48,1111.87,727.38Z"/>
                     <path  stroke = 'rgb(243, 172, 227)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M41.48.55q535.54.38,1071.09,1l1.17-.75q-1,363.86-1.17,727.74-535.47-.36-1071-1l-1.17.75Q41.41,364.47,41.48.55Z"/> 
                  
-                    </svg>
+                </svg>
                 
             </div>
 
             <div class="image_slider">
                 
-                <a href = "{% static '/works/golova/first_part/big_slideshow/1-01-01.png' %}"
+                <a href = "{% static '/works/golova/first_part/big_slideshow/1.png' %}"
  
                 data-fancybox="images-preview" 
-                data-width="2100" data-height="900"
-                data-thumbs='{"autoStart":true}'>
+                data-width="1200" data-height="1200"
+                data-thumb= "{% static '/works/golova/first_part/big_slideshow/minis/01-01.png' %}" >
 
-                    <img src = "{% static '/works/golova/first_part/main_slideshow/pics/00golova.png' %}"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
+                    <img src = "{% static '/works/golova/first_part/main_slideshow/pics/00.png' %}"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
                 </a>
 
                 <div style="display: none;">
                     <a href="{% static '/works/golova/first_part/big_slideshow/2.png' %}" data-fancybox="images-preview" 
-                       data-width="1600" data-height="900" style = 'background-color: black;'
-                       data-thumb="{% static '/works/golova/first_part/big_slideshow/2.png' %}"></a>
+                       data-width="1200" data-height="1200" style = 'background-color: black;'
+                       data-thumb="{% static '/works/golova/first_part/big_slideshow/minis/02-01.png' %}"></a>
                   
                     <a href="{% static '/works/golova/first_part/big_slideshow/3.png' %}" data-fancybox="images-preview" 
-                       data-width="1600" data-height="900"
-                       data-thumb="{% static '/works/golova/first_part/big_slideshow/3.png' %}"></a>
+                       data-width="1200" data-height="1200"
+                       data-thumb="{% static '/works/golova/first_part/big_slideshow/minis/03-01.png' %}"></a>
                   
-                    <a href="{% static '/works/golova/first_part/big_slideshow/4-01.png' %}" data-fancybox="images-preview" 
-                       data-width="900" data-height="900"
-                       data-thumb="{% static '/works/golova/first_part/big_slideshow/4.png' %}"></a>
+                    <a href="{% static '/works/golova/first_part/big_slideshow/4.png' %}" data-fancybox="images-preview" 
+                       data-width="1200" data-height="1200"
+                       data-thumb="{% static '/works/golova/first_part/big_slideshow/minis/04-01.png' %}"></a>
                   
                     <a href="{% static '/works/golova/first_part/big_slideshow/5.png' %}" data-fancybox="images-preview" 
-                       data-width="1600" data-height="900"
-                       data-thumb="{% static '/works/golova/first_part/big_slideshow/5.png' %}"></a>
+                       data-width="1200" data-height="1200"
+                       data-thumb="{% static '/works/golova/first_part/big_slideshow/minis/05-01.png' %}"></a>
+                    
+                    <a href="{% static '/works/golova/first_part/big_slideshow/6.png' %}" data-fancybox="images-preview" 
+                       data-width="1200" data-height="1200"
+                       data-thumb="{% static '/works/golova/first_part/big_slideshow/minis/06-01.png' %}"></a>
 
                   </div> 
             </div>
             
             <div class="arrow_left" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/golova/first_part/main_slideshow/elements/arrow_left.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(),transitions.play()">
+                <img src = "{% static '/works/golova/first_part/main_slideshow/elements/arrow_left.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
             </div>
 
             <div class="arrow_right" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/golova/first_part/main_slideshow/elements/arrow_right.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next();">
+                <img src = "{% static '/works/golova/first_part/main_slideshow/elements/arrow_right.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
             </div>
             
             <div class="logotip" style = 'position:relative; justify-content: center;'>
@@ -251,7 +272,7 @@
         <div class="second_class">
 
             <div class="nazvanie">
-                <img src = "{% static '/works/golova/second_part/glaz_logo.png' %}" style = 'max-width:100%;max-height:100%;'>
+                <img src = "{% static '/works/golova/second_part/golova_logo.png' %}" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;'>
             </div>
                 
             <div class="razmer-image">
@@ -259,11 +280,11 @@
             </div>
             
             <div class="cifri-image">
-                <img src = "{% static '/works/golova/second_part/text/25.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/cifri.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="material-image">
-                <img src = "{% static '/works/golova/second_part/text/material.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/material.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-image">
@@ -271,16 +292,24 @@
             </div>
 
             <div class="akril-image">
-                <img src = "{% static '/works/golova/second_part/text/668.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/breal.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>       
             
+            <div class="cena-image">
+                <img src = "{% static '/works/golova/second_part/text/cena.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="price-image">
+                <img src = "{% static '/works/golova/second_part/text/price.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
             <div class="button-image">
                 <img src = "{% static '/works/golova/second_part/buy_but/golova-btn.png' %}"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
     
-            <!-- <div class="text-buy-image">
-                <img src = "{% static '/works/golova/second_part/buy_but/butbuttton.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
-            </div> -->
+            <div class="text-buy-image">
+                <img src = "{% static '/works/golova/second_part/buy_but/buy_but.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
     
                 
             <div class="first-buy-border" >
@@ -308,7 +337,7 @@
     <script>
 
     var slider_img = document.querySelector('.slider-img');
-    var images = ['00golova.png','01golova.png','02golova.png', '03golova.png', '04golova.png', '05golova.png','06golova.png'];
+    var images = ['00.png', '11.png', '22.png','33.png', '44.png', '55.png',];
     var i =0; 
 
     function prev() {
@@ -354,6 +383,22 @@
             loop: true,
         });
     } borderMove()
+
+    var arrow_left = anime({
+        targets:'.arrow_left',
+        scale:1.1,
+        duration:450,
+        autoplay:false,
+        loop:false,
+    })
+
+    var arrow_right = anime({
+        targets:'.arrow_right',
+        scale:1.1,
+        duration:450,
+        autoplay:false,
+        loop:false,
+    })
 
     var motion_of_name =  anime({
         targets: '.nazvanie',

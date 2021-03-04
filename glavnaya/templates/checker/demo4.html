@@ -2,8 +2,9 @@
 <html lang="en" class="no-js">
 
 <head>
-    <meta charset="UTF-8" />
-    <titless></title>
+    <meta charset="UTF-8" content="width=device-width, user-scalable=no"/>
+    <title>НУ ЧТО ПОЛЕТЕЛИ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> 
 
 </head>
 {% load static %}
@@ -17,124 +18,356 @@
             height: 100%;
             margin: 0px; /* убирает скролл */
             overflow-x: hidden;
-            background: url("{% static '/stonehenge/background/eye_f.png' %}");
+            background: url("{% static '/works/zakis/background.png' %}");
             background-size: cover;
         }
         
         .container {
-            
             display:grid;
-            grid-template-columns: 35fr 65fr;
+            grid-template-columns: 60fr 40fr;
             grid-template-rows:100;
             width: 100vw;
             height: 100vh;
         }
-
-        .second_class {
-            
+        
+        .first_class {
             display: grid;
-            grid-template-columns: repeat(25, 4fr);
-            grid-template-rows: repeat(10, 10fr);
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
             overflow: hidden;
         }
 
-        .box1 {
+        .borders {
+            margin-left:-5%;
             grid-column-start: 1;
-            grid-column-end: 26;
-            grid-row-start: 1;
-            grid-row-end: 11;
+            grid-column-end: 100;
+            grid-row-start: 3;
+            grid-row-end: 80;
+            min-height:100%;
+            min-width:100%;
             overflow: hidden;
         }
 
-        .box2 {
-            grid-column-start: 4;
-            grid-column-end: 23;
-            grid-row-start: 2;
-            grid-row-end: 9;
+        .image_slider {
+            grid-column-start: 10;
+            grid-column-end: 88;
+            grid-row-start: 10;
+            grid-row-end: 70;
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .box3 { 
-            grid-column-start: 2;
-            grid-column-end:4;
-            grid-row-start:6;
-            grid-row-end:7;
+        .arrow_left { 
+            grid-column-start:8;
+            grid-column-end:11;
+            grid-row-start:32;
+            grid-row-end:38;
         }
 
-        .box4 { 
-            grid-column-start: 23;
-            grid-column-end:25;
-            grid-row-start:6;
-            grid-row-end:7;
+        .arrow_right { 
+            grid-column-start: 88;
+            grid-column-end: 91;
+            grid-row-start:32;
+            grid-row-end:38;
+        }
+
+        .razmer-image {
+            grid-column-start: 2;
+            grid-column-end: 17;
+            grid-row-start: 77;
+            grid-row-end: 82;
+            overflow: hidden;
+        }
+
+        .cifri-image {
+            grid-column-start: 18;
+            grid-column-end: 50;
+            grid-row-start: 77;
+            grid-row-end: 81;
+            overflow: hidden;
+        }
+
+        .cena-image {
+            grid-column-start: 2;
+            grid-column-end: 12;
+            grid-row-start: 83;
+            grid-row-end: 88;
+            overflow: hidden;
+        }
+
+        .price-image {
+            grid-column-start: 13;
+            grid-column-end: 23;
+            grid-row-start: 83;
+            grid-row-end: 88;
+            overflow: hidden;
+        }
+
+        .material-image {
+            grid-column-start: 2;
+            grid-column-end: 30;
+            grid-row-start: 89;
+            grid-row-end: 94;
+            overflow: hidden;
+        }
+
+        .farfor-image {
+            grid-column-start: 31;
+            grid-column-end: 46;
+            grid-row-start: 89;
+            grid-row-end: 93;
+            overflow: hidden;
+        }
+
+        .aluminium-image {
+            grid-column-start: 47;
+            grid-column-end: 81;
+            grid-row-start: 88;
+            grid-row-end: 95;
+            overflow: hidden;
+        }
+
+        .wood-image {
+            grid-column-start: 2;
+            grid-column-end: 30;
+            grid-row-start: 94;
+            grid-row-end: 100;
+            overflow: hidden;
+        }
+
+        .akril-image {
+            grid-column-start: 31;
+            grid-column-end: 66;
+            grid-row-start: 94;
+            grid-row-end: 100;
+            overflow: hidden;
+        }
+
+/*  */
+/*  */
+/*  */
+
+        .second_class {
+            display: grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
+            overflow: hidden;
+        }
+
+        .nazvanie {
+            /* margin-left: -10%; */
+            grid-column-start: 1;
+            grid-column-end: 30;
+            grid-row-start: 20;
+            grid-row-end: 30;
+            overflow: hidden;
+        }
+
+        .button-image {
+            grid-column-start: 28;
+            grid-column-end: 82;
+            grid-row-start: 41;
+            grid-row-end: 64;
+            overflow: hidden;
+        }
+
+        .text-buy-image {
+            grid-column-start: 43;
+            grid-column-end: 70;
+            grid-row-start: 49;
+            grid-row-end: 56;
+            overflow: hidden;
+        }
+
+        .first-buy-border {
+            grid-column-start: 28;
+            grid-column-end: 82;
+            grid-row-start: 41;
+            grid-row-end: 64;
+            overflow: hidden;
+        }
+
+        .second-buy-border {
+            grid-column-start: 26;
+            grid-column-end: 77;
+            grid-row-start: 47;
+            grid-row-end: 70;
+            overflow: hidden;
+        }
+        
+        .third-buy-border {
+            grid-column-start: 25;
+            grid-column-end: 75;
+            grid-row-start: 43;
+            grid-row-end: 66;
+            overflow: hidden;
+        }
+
+        .fourth-buy-border {
+            grid-column-start: 22;
+            grid-column-end: 72;
+            grid-row-start: 40;
+            grid-row-end: 63;
+            overflow: hidden;
+        }
+
+        .logotip {
+            grid-column-start: 85;
+            grid-column-end: 99;
+            grid-row-start: 90;
+            grid-row-end:100;
         }
     </style>
+
     <div class="container">
-
         <div class="first_class">
-            <table>
-                <tr>
-                    <td>РАЗМЕР:</td>
-                    <td>25</td> 
-                </tr>
-                <tr>
-                    <th>МАТЕРИАЛ: </th>
-                    <th>ФАРФОР</th>
-                </tr>
-                <tr>
-                    <td> ЧЕТО</td>
-                    <td>НУЖНО  НАПИСАТЬ </td>
-                </tr>
-            </table>
-        </div>
 
+            <div class="borders">
+                   
+                <svg style = ' min-width:100%; min-height:100% ;max-width:100%; max-height:100%;' id = 'demo-svg' viewBox="0 0 1114.3 763.79">
+
+                    <path stroke = 'rgb(247, 166, 200)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1098.3,13.06q-.18,351.32-.78,702.64l1.07.76q-521.07-.57-1042.18-.54.17-351.27.69-702.57L56,12.59Q577.15,13.11,1098.3,13.06Z"/> 
+                    <path  stroke = 'rgb(183, 184, 248)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M54.31,717.11q.19-352.44.79-704.88L54,11.46Q577.1,12,1100.21,12q-.17,352.4-.7,704.81l1.08.77Q577.48,717.05,54.31,717.11Z"/>
+                    <path  stroke = 'rgb(196, 248, 241)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1100.89,719q-523.58-.12-1047.16-.53l-1.14.73q.85-354.18.82-708.38,523.5.11,1047,.47l1.14-.73Q1100.8,364.8,1100.89,719Z"/> 
+                    <path  stroke = 'rgb(253, 170, 253)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M1103.88,720.39q-526.56-.14-1053.14-.54l-1.15.74q.87-355.53.82-711.1,526.5.12,1053,.47l1.15-.73Q1103.8,364.79,1103.88,720.39Z"/>
+                    <path  stroke = 'rgb(161, 253, 253)' id = 'forward-svg'  stroke-width="1" fill = 'none' d="M1105.62,9q-.19,355.91-.8,711.8l1.09.78Q577.47,721,49,721q.17-355.84.7-711.72l-1.09-.78Q577.09,9.07,1105.62,9Z"/> 
+                    <path  stroke = 'rgb(200, 178, 252)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M47.21,721.11q.18-355.91.8-711.8l-1.1-.78Q577,9.12,1107.2,9.08q-.17,355.86-.7,711.73l1.09.78Q577.43,721.05,47.21,721.11Z"/>
+                    <path  stroke = 'rgb(150, 240, 247)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1107.88,722.39q-530.21-.14-1060.42-.54l-1.16.74Q47.17,365,47.13,7.43q530.15.12,1060.3.48l1.16-.74Q1107.8,364.77,1107.88,722.39Z"/>
+                    <path  stroke = '#ffc2d9'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M46,5.78q531.21.13,1062.41.55l1.16-.74q-.87,359.15-.83,718.32-531.13-.12-1062.3-.48l-1.16.74Q46.11,365,46,5.78Z"/>
+                    <path  stroke = 'rgb(159, 243, 230)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M43.89,725.1q.18-360,.8-720l-1.1-.79q533.79.6,1067.61.56-.17,360-.71,719.94l1.1.79Q577.77,725,43.89,725.1Z"/>
+                    <path  stroke = 'rgb(170, 178, 247)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M1110.3,4.79q-.19,360-.81,720l1.1.79Q577.31,725,44,725q.17-360,.71-719.94l-1.1-.79Q576.92,4.86,1110.3,4.79Z"/>  
+                    <path  stroke = 'rgb(147, 248, 223)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M1111.87,727.38q-534.57-.12-1069.13-.55l-1.17.75q.87-362.83.83-725.71,534.5.12,1069,.49l1.17-.75Q1111.78,364.48,1111.87,727.38Z"/>
+                    <path  stroke = 'rgb(243, 172, 227)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M41.48.55q535.54.38,1071.09,1l1.17-.75q-1,363.86-1.17,727.74-535.47-.36-1071-1l-1.17.75Q41.41,364.47,41.48.55Z"/> 
+                 
+                </svg>
+                
+            </div>
+
+            <div class="image_slider">
+                
+                <a href = "{% static '/works/zakis/first_part/big_slideshow/01.png' %}"
+ 
+                data-fancybox="images-preview" 
+                data-width="1200" data-height="1200"
+                data-thumb="{% static '/works/zakis/first_part/big_slideshow/minis/01.png' %}">
+
+                    <img src = "{% static '/works/zakis/first_part/main_slideshow/pics/01.png' %}"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
+                </a>
+
+                <div style="display: none;">
+                    <a href="{% static '/works/zakis/first_part/big_slideshow/02.png' %}" data-fancybox="images-preview" 
+                       data-width="900" data-height="900" style = 'background-color: black;'
+                       data-thumb="{% static '/works/zakis/first_part/big_slideshow/minis/02.png' %}"></a>
+                  
+                    <a href="{% static '/works/zakis/first_part/big_slideshow/03.png' %}" data-fancybox="images-preview" 
+                       data-width="1200" data-height="1200"
+                       data-thumb="{% static '/works/zakis/first_part/big_slideshow/minis/03.png' %}"></a>
+                  
+                    <a href="{% static '/works/zakis/first_part/big_slideshow/04.png' %}" data-fancybox="images-preview" 
+                       data-width="1200" data-height="1200"
+                       data-thumb="{% static '/works/zakis/first_part/big_slideshow/minis/04.png' %}"></a>
+
+                  </div> 
+            </div>
+            
+            <div class="arrow_left" style = 'position:relative; justify-content: center;'>
+                <img src = "{% static '/works/zakis/first_part/main_slideshow/elements/arrow_left.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
+            </div>
+
+            <div class="arrow_right" style = 'position:relative; justify-content: center;'>
+                <img src = "{% static '/works/zakis/first_part/main_slideshow/elements/arrow_right.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
+            </div>
+
+            <div class="razmer-image">
+                <img src = "{% static '/works/zakis/first_part/text/razmer.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            </div>
+            
+            <div class="cifri-image">
+                <img src = "{% static '/works/zakis/first_part/text/cifri.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="cena-image">
+                <img src = "{% static '/works/zakis/first_part/text/gena.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="price-image">
+                <img src = "{% static '/works/zakis/first_part/text/price.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="material-image">
+                <img src = "{% static '/works/zakis/first_part/text/materials.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="farfor-image">
+                <img src = "{% static '/works/zakis/first_part/text/farfor.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="aluminium-image">
+                <img src = "{% static '/works/zakis/first_part/text/aluminium.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="wood-image">
+                <img src = "{% static '/works/zakis/first_part/text/wood.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="akril-image">
+                <img src = "{% static '/works/zakis/first_part/text/akreal.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>    
+            
+        </div>
+        
         <div class="second_class">
 
-                <div class="box box1" style = 'margin-bottom:20px;'>
-                   
-                    <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 667.58 600">
-                        <path stroke = 'black' stroke-width="0.5" fill = 'none' d="M15.74,10.54q319.53.08,639.06.31l.7-.48q-.5,233.27-.43,466.56l.2-.56Q335.73,476.28,16.2,476l-.7.48Q16,243.22,16,9.93"/>  
-                        <path stroke = 'white' stroke-width="0.5" fill = 'none' d="M654.27,475.33Q335.73,475.26,17.2,475l-.7.48q.49-232.28.43-464.57l-.19.56q318.54.09,637.06.35l.7-.47Q654,243.65,654,475.93"/>
-                        <path stroke = 'gold'  stroke-width="0.5" fill = 'none' d="M652.67,13.1q-.09,230.18-.41,460.33l.65.5q-317.68-.35-635.41-.3l.77.13q.12-230.16.48-460.32l-.66-.51q317.7.39,635.41.36"/> 
-                        <path stroke = 'blue' viewBox="0 0 634.77 458" stroke-width="0.5" fill = 'none' d="M20.33,471.76q.09-228.17.41-456.33l-.65-.5q316.2.36,632.41.31l-.76-.14q-.12,228.17-.48,456.33l.65.5q-316.18-.37-632.41-.35"/> 
-                        <path stroke = 'red'  stroke-width="0.5" fill = 'none' d="M655.26,477.32q-320-.06-640.06-.3l-.7.48q.5-233.78.43-467.57l-.19.57q320,.09,640.06.35l.7-.48Q655,244.15,655,477.93"/>
-                        <path stroke = 'black'  stroke-width="0.5" fill = 'none' d="M656.66,9.11q-.09,234.66-.42,469.31l.66.51q-322.18-.36-644.4-.31l.78.14q.12-234.66.48-469.31l-.66-.52q322.19.39,644.4.37"/>
-                        <path stroke = 'blue'  stroke-width="0.5" fill = 'none' d="M12.35,479.76q.09-235.65.42-471.31l-.67-.52q323.19.38,646.4.32l-.78-.14q-.12,235.65-.48,471.31l.66.51q-323.19-.37-646.4-.36"/>
-                        
-                         
-
-                    </svg>
-                    
-                    
-                </div>
-
-                <div class="box box2" >
-                    
-                        <img src = "{% static '/works/eye/eye_1.png' %}"  class = 'slider-img' style = 'position:relative; max-height: 90vh; min-width: 100%; overflow:hidden;justify-content: center;' >
-                </div>
-
-                <div class="box box3" style = 'position:relative; justify-content: center;'>
-                        <img src = "{% static '/works/eye/arirow.png' %}" style = 'position:absolute;top:0;' onclick="prev();">
-                </div>
-
-                <div class="box box4" style = 'position:relative; justify-content: center;'>
-                    <img src = "{% static '/works/eye/arrow--rig.png' %}" id='arrow_first' style = 'position:absolute' onclick="next();">
-                </div>
-
+            <div class="nazvanie">
+                <img src = "{% static '/works/zakis/second_part/zakis_logo.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%;max-height:100%;'>
+            </div>   
+            
+            <div class="button-image">
+                <img src = "{% static '/works/zakis/second_part/buy_but/zakis-btn.png' %}"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
+    
+            <div class="text-buy-image">
+                <img src = "{% static '/works/zakis/second_part/buy_but/buy_but.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+    
+                
+            <div class="first-buy-border" >
+                <img src = "{% static '/works/zakis/second_part/buy_but/border_grey.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+    
+            <div class="second-buy-border">
+                <img src = "{% static '/works/zakis/second_part/buy_but/border_black.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+                
+            <div class="third-buy-border">
+                <img src = "{% static '/works/zakis/second_part/buy_but/border_green.png' %}" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div> 
+
+            <div class="fourth-buy-border">
+                <img src = "{% static '/works/zakis/second_part/buy_but/border_green.png' %}" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="logotip" style = 'position:relative; justify-content: center;'>
+                <img src = "{% static '/works/zakis/second_part/logotip.png' %}" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+            </div> 
+
+        </div>
 
     </div>
     
 
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
 
     <script>
-    
+
     var slider_img = document.querySelector('.slider-img');
-    var images = ['eye_1.png','eye_2.png', 'eye_3.png', 'eye_4.png', 'eye_5.png'];
-    var i =0; //Current image
+    var images = ['01.png','02.png','03.png', '04.png'];
+    var i =0; 
 
     function prev() {
         if (i<=0) i = images.length;
@@ -151,23 +384,63 @@
     }
 
     function setImg(){
-        return slider_img.setAttribute('src', "{% static '/works/eye/' %}" + images[i])
+        return slider_img.setAttribute('src', "{% static '/works/zakis/first_part/main_slideshow/pics/' %}" + images[i])
     }
 
-    var war =  anime({
-        targets: '#demo-svg path',
-        strokeDashoffset: [anime.setDashoffset,0],
-        easing: 'easeInOutSine',
-        duration: 12500,
-        oapcity:{
-            value:[0,1],
-            duration:2500,
+    function borderMove(){
+        var border_forward_animation =  anime({
+            targets: '#forward-svg',
+            strokeDashoffset: [anime.setDashoffset,0],
+            easing: 'easeInOutSine',
+            duration: 25000,
+        
+            direction:'alternate',
+            delay: function(el, i) { return i * 250 },
+            
+            loop: true,
+        });
+
+        var border_backward_animation =  anime({
+            targets: '#backward-svg',
+            strokeDashoffset: [0, anime.setDashoffset],
+            easing: 'easeInOutSine',
+            duration: 25000,
+        
+            direction:'alternate',
+            delay: function(el, i) { return i * 250 },
+            
+            loop: true,
+        });
+    } borderMove()
+
+    var arrow_left = anime({
+        targets:'.arrow_left',
+        scale:1.1,
+        duration:450,
+        autoplay:false,
+        loop:false,
+    })
+
+    var arrow_right = anime({
+        targets:'.arrow_right',
+        scale:1.1,
+        duration:450,
+        autoplay:false,
+        loop:false,
+    })
+
+    var motion_of_name =  anime({
+        targets: '.nazvanie',
+        translateY: {
+            value:15,
+            duration: 7500,
         },
-        delay: function(el, i) { return i * 250 },
         direction: 'alternate',
-        loop: true
+        easing: 'easeInOutSine',
+        loop: true,
     });
 
+   
     </script>
 </body>
 
