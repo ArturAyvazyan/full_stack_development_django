@@ -34,6 +34,8 @@ def demo3(request):
 def demo4(request):
     return render(request, 'checker/demo4.html')
 
+def demo5(request):
+    return render(request, 'checker/demo5.html')
 
 def golova(request):
     Workas = Work.objects.all()

@@ -18,7 +18,7 @@
             height: 100%;
             margin: 0px; /* убирает скролл */
             overflow-x: hidden;
-            background: url("{% static '/works/golova/kek.png' %}");
+            background: url("{% static '/works/golova/background.png' %}");
             background-size: cover;
         }
         
@@ -58,17 +58,17 @@
         }
 
         .arrow_left { 
-            grid-column-start: 6;
-            grid-column-end: 11;
+            grid-column-start: 8;
+            grid-column-end: 12;
             grid-row-start: 45;
-            grid-row-end: 53;
+            grid-row-end: 51;
         }
 
         .arrow_right { 
             grid-column-start: 92;
-            grid-column-end: 97;
+            grid-column-end: 96;
             grid-row-start: 45;
-            grid-row-end: 53;
+            grid-row-end: 51;
         }
 
         .logotip {
@@ -102,55 +102,55 @@
             grid-column-start: 5;
             grid-column-end: 35;
             grid-row-start: 20;
-            grid-row-end: 26;
+            grid-row-end: 24;
             overflow: hidden;
         }
 
         .cifri-image{
             grid-column-start: 15;
-            grid-column-end: 44;
-            grid-row-start: 26;
-            grid-row-end: 31;
+            grid-column-end: 43;
+            grid-row-start: 25;
+            grid-row-end: 28;
             overflow: hidden;
         }
 
         .material-image {
             grid-column-start: 5;
             grid-column-end: 46;
-            grid-row-start: 31;
+            grid-row-start: 34;
             grid-row-end: 38;
             overflow: hidden;
         }
 
         .farfor-image {
             grid-column-start: 15;
-            grid-column-end: 75;
-            grid-row-start: 39;
-            grid-row-end: 44;
+            grid-column-end: 70;
+            grid-row-start: 40;
+            grid-row-end: 43;
             overflow: hidden;
         }
 
         .akril-image {
             grid-column-start: 15;
-            grid-column-end: 71;
+            grid-column-end: 60;
             grid-row-start: 45;
-            grid-row-end: 50;
+            grid-row-end: 48;
             overflow: hidden;
         }
 
         .cena-image {
             grid-column-start: 5;
-            grid-column-end: 36;
-            grid-row-start: 51;
+            grid-column-end: 28;
+            grid-row-start: 52;
             grid-row-end: 57;
             overflow: hidden;
         }
     
         .price-image {
             grid-column-start: 15;
-            grid-column-end: 42;
+            grid-column-end: 35;
             grid-row-start: 58;
-            grid-row-end: 64;
+            grid-row-end: 61;
             overflow: hidden;
         }
 
@@ -256,11 +256,11 @@
             </div>
             
             <div class="arrow_left" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/golova/first_part/main_slideshow/elements/arrow_left.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
+                <img src = "{% static '/works/golova/first_part/main_slideshow/elements/01arrow_left.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
             </div>
 
             <div class="arrow_right" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/golova/first_part/main_slideshow/elements/arrow_right.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
+                <img src = "{% static '/works/golova/first_part/main_slideshow/elements/01arrow_right.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
             </div>
             
             <div class="logotip" style = 'position:relative; justify-content: center;'>
@@ -276,35 +276,35 @@
             </div>
                 
             <div class="razmer-image">
-                <img src = "{% static '/works/golova/second_part/text/razmer.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/razmer.png' %}" onmouseover = razmer.play()  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
             
             <div class="cifri-image">
-                <img src = "{% static '/works/golova/second_part/text/cifri.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/cifri.png' %}" onmouseover = cifri.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="material-image">
-                <img src = "{% static '/works/golova/second_part/text/material.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/material.png' %}" onmouseover = material.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-image">
-                <img src = "{% static '/works/golova/second_part/text/farfor.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/farfor.png' %}" onmouseover = farfor.play() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="akril-image">
-                <img src = "{% static '/works/golova/second_part/text/breal.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/akril.png' %}" onmouseover = akril.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>       
             
             <div class="cena-image">
-                <img src = "{% static '/works/golova/second_part/text/cena.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/cena.png' %}" onmouseover = cena.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="price-image">
-                <img src = "{% static '/works/golova/second_part/text/price.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/price.png' %}" onmouseover = price.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="button-image">
-                <img src = "{% static '/works/golova/second_part/buy_but/golova-btn.png' %}"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/buy_but/golova-btn.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
     
             <div class="text-buy-image">
@@ -383,6 +383,64 @@
             loop: true,
         });
     } borderMove()
+
+    var razmer = anime({
+        targets:'.razmer-image',
+        scale: [1.1, 1.0],
+        duration: 1000,
+        autoplay:false,
+        loop:false,
+    })
+
+    var cifri = anime({
+        targets:'.cifri-image',
+        scale: [1.1, 1.0],
+        duration:1000,
+        autoplay:false,
+        loop:false,
+    })
+
+    var material = anime({
+        targets:'.material-image',
+        scale: [1.1, 1.0],
+        duration:1000,
+        autoplay:false,
+        loop:false,
+    })
+
+    var farfor = anime({
+        targets:'.farfor-image',
+        scale: [1.1, 1.0],
+        duration:1000,
+        autoplay:false,
+        loop:false,
+    })
+
+    var akril = anime({
+        targets:'.akril-image',
+        scale: [1.1, 1.0],
+        duration: 1000,
+        autoplay:false,
+        loop:false,
+    })
+
+    var cena = anime({
+        targets:'.cena-image',
+        scale: [1.1, 1.0],
+        duration: 1000,
+        autoplay:false,
+        loop:false,
+    })
+
+    var price = anime({
+        targets:'.price-image',
+        scale: [1.1, 1.0],
+        duration: 1000,
+        autoplay:false,
+        loop:false,
+    })
+
+
 
     var arrow_left = anime({
         targets:'.arrow_left',

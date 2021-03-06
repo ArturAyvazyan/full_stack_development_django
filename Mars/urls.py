@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^limb', views.demo2, name='demo2'),
     url(r'^demmon', views.demo3, name='demo3'),
     url(r'^leeemo', views.demo4, name='demo4'),
+    url(r'^qet', views.demo5, name='demo5'),
 
     url(r'^golova/', views.golova, name='golova'),
     url(r'^eye/', views.eye, name='eye'),
