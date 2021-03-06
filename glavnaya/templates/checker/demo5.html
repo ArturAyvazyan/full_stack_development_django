@@ -180,7 +180,7 @@
                 data-width="1200" data-height="2100"
                 data-thumb= "{% static '/works/kosmos/first_part/big_slideshow/minis/1.png' %}" >
 
-                    <img src = "{% static '/works/kosmos/first_part/main_slideshow/pics/1.png' %}"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
+                    <img src = "{% static '/works/kosmos/first_part/main_slideshow/pics/11-01.png' %}"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
                 </a>
 
                 <div style="display: none;">
@@ -242,7 +242,7 @@
             </div>
 
             <div class="glazur-image">
-                <img src = "{% static '/works/kosmos/second_part/text/glazur.png' %}" onmouseover = akril.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/kosmos/second_part/text/glazur.png' %}" onmouseover = glazur.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="akril-image">
@@ -266,7 +266,7 @@
     <script>
 
     var slider_img = document.querySelector('.slider-img');
-    var images = ['1.png', '2.png', '3.png','4.png', '5.png', '6.png',];
+    var images = ['11-01.png', '2.png', '3.png','4.png', '5.png', '6.png',];
     var i =0; 
 
     function prev() {
@@ -333,6 +333,14 @@
         targets:'.farfor-image',
         scale: [1.1, 1.0],
         duration:1000,
+        autoplay:false,
+        loop:false,
+    })
+
+    var glazur = anime({
+        targets:'.glazur-image',
+        scale: [1.1, 1.0],
+        duration: 1000,
         autoplay:false,
         loop:false,
     })
