@@ -40,9 +40,9 @@
 
         .nazvanie {
             grid-column-start: 10;
-            grid-column-end: 31;
+            grid-column-end: 40;
             grid-row-start: 5;
-            grid-row-end: 12;
+            grid-row-end: 15;
             overflow: hidden;
         }
 
@@ -82,8 +82,8 @@
         .logotip {
             margin-top:5%;
             grid-column-start: 3;
-            grid-column-end: 18;
-            grid-row-start: 90;
+            grid-column-end: 11;
+            grid-row-start: 92;
             grid-row-end: 100;
         }
 
@@ -131,7 +131,7 @@
         }
 
         .cena-image {
-            grid-column-start: 66;
+            grid-column-start: 68;
             grid-column-end: 90;
             grid-row-start: 46;
             grid-row-end: 52;
@@ -212,7 +212,7 @@
 
             <div class="image_slider">
                 
-                <a href = "{% static '/works/maski/first_part/big_slideshow/1.png' %}"
+                <a href = "{% static '/works/maski/first_part/big_slideshow/11.png' %}"
  
                 data-fancybox="images-preview" 
                 data-width="700" data-height="700"
@@ -254,7 +254,7 @@
             </div>
 
           <div class="logotip" style = 'position:relative; justify-content: center;'>
-              <img src = "{% static '/works/maski/first_part/logotip.png' %}" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+              <img src = "{% static '/works/maski/first_part/logotip.png' %}" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
           </div> 
 
             
@@ -276,7 +276,7 @@
           </div>
 
           <div class="cena-image">
-            <img src = "{% static '/works/maski/second_part/text/pena-01.png' %}" onmouseover = cena.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <img src = "{% static '/works/maski/second_part/text/getto-01.png' %}" onmouseover = cena.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
           </div>
 
           <div class="price-image">
@@ -323,7 +323,7 @@
     <script>
 
     var slider_img = document.querySelector('.slider-img');
-    var images = ['1.png', '2.png', '3.png','04-01.png', '5.png'];
+    var images = ['1.png', '2.png', '3.png','4.png', '505-01.png'];
     var i =0; 
 
     function prev() {
@@ -370,53 +370,53 @@
         });
     } borderMove()
 
-    var razmer = anime({
-        targets:'.razmer-image',
-        scale: [1.1, 1.0],
-        duration: 1000,
-        autoplay:false,
-        loop:false,
-    })
+    // var razmer = anime({
+    //     targets:'.razmer-image',
+    //     scale: [1.1, 1.0],
+    //     duration: 1000,
+    //     autoplay:false,
+    //     loop:false,
+    // })
 
-    var cifri = anime({
-        targets:'.cifri-image',
-        scale: [1.1, 1.0],
-        duration:1000,
-        autoplay:false,
-        loop:false,
-    })
+    // var cifri = anime({
+    //     targets:'.cifri-image',
+    //     scale: [1.1, 1.0],
+    //     duration:1000,
+    //     autoplay:false,
+    //     loop:false,
+    // })
 
-    var material = anime({
-        targets:'.material-image',
-        scale: [1.1, 1.0],
-        duration:1000,
-        autoplay:false,
-        loop:false,
-    })
+    // var material = anime({
+    //     targets:'.material-image',
+    //     scale: [1.1, 1.0],
+    //     duration:1000,
+    //     autoplay:false,
+    //     loop:false,
+    // })
 
-    var farfor = anime({
-        targets:'.farfor-image',
-        scale: [1.1, 1.0],
-        duration:1000,
-        autoplay:false,
-        loop:false,
-    })
+    // var farfor = anime({
+    //     targets:'.farfor-image',
+    //     scale: [1.1, 1.0],
+    //     duration:1000,
+    //     autoplay:false,
+    //     loop:false,
+    // })
 
-    var cena = anime({
-        targets:'.cena-image',
-        scale: [1.1, 1.0],
-        duration: 1000,
-        autoplay:false,
-        loop:false,
-    })
+    // var cena = anime({
+    //     targets:'.cena-image',
+    //     scale: [1.1, 1.0],
+    //     duration: 1000,
+    //     autoplay:false,
+    //     loop:false,
+    // })
 
-    var price = anime({
-        targets:'.price-image',
-        scale: [1.1, 1.0],
-        duration: 1000,
-        autoplay:false,
-        loop:false,
-    })
+    // var price = anime({
+    //     targets:'.price-image',
+    //     scale: [1.1, 1.0],
+    //     duration: 1000,
+    //     autoplay:false,
+    //     loop:false,
+    // })
 
     var arrow_left = anime({
         targets:'.arrow_left',

@@ -225,7 +225,7 @@
 
         .morphing-btn-clone {
             position: fixed;
-            background: white;
+            background: hsla(0, 39%, 54%, 0.356);;
             border-radius: 50%;
             z-index: 3;
             -webkit-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
@@ -251,7 +251,9 @@
             height: 100%;
             margin: 0px; /* убирает скролл */
             overflow-x: hidden;
-            background: url("{% static '/works/eye/background.png' %}");
+            /* background: url("{% static '/works/eye/background.png' %}"); */
+            background-color: hsla(0, 39%, 54%, 0.356);
+            opacity: 5;
             background-size: cover;
             opacity: 1;
         }
@@ -263,7 +265,7 @@
         }
 
         .fancybox-morphing .fancybox-button--close {
-            background: rgba(0, 0, 0, 0.2);
+            /* background: rgba(0, 0, 0, 0.2); */
             border-radius: 50%;
             color: #fff;
         }
