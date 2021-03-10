@@ -53,6 +53,15 @@
             overflow: hidden;
         }
 
+        .razmer-english-image {
+            grid-column-start: 8;
+            grid-column-end: 30;
+            grid-row-start: 84;
+            grid-row-end: 88;
+            overflow: hidden;
+            opacity:0;
+        }
+
         .cifri-image{
             grid-column-start: 39;
             grid-column-end: 60;
@@ -61,14 +70,33 @@
             overflow: hidden;
         }
 
+        .cifri-english-image{
+            grid-column-start: 31;
+            grid-column-end: 52;
+            grid-row-start: 85;
+            grid-row-end: 88;
+            overflow: hidden;
+            opacity:0;
+        }
+
         .materials-image {
             grid-column-start: 8;
             grid-column-end: 52;
             grid-row-start:92;
             grid-row-end: 96;
             overflow: hidden;
+            z-index:2
         }
 
+        .materials-english-image {
+            grid-column-start: 8;
+            grid-column-end: 52;
+            grid-row-start:92;
+            grid-row-end: 96;
+            overflow: hidden;
+            z-index:1;
+        }
+        
         .akril-image {
             grid-column-start: 54;
             grid-column-end: 100;
@@ -147,23 +175,35 @@
         <div class="first_class">
 
             <div class="nazvanie">
-                <img src = "{% static '/works/boy/first_part/dev.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%;max-height:100%;'>
+                <img src = "{% static '/works/boy/first_part/vibe_logo.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%;max-height:100%;'>
             </div>
 
             <div class="razmer-image">
-                <img src = "{% static '/works/boy/first_part/text/0razmer.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "{% static '/works/boy/first_part/text/razmer.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
             
+            <div class="razmer-english-image">
+                <img src = "{% static '/works/boy/first_part/text/razmer-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            </div>
+
             <div class="cifri-image">
-                <img src = "{% static '/works/boy/first_part/text/1cifri.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/boy/first_part/text/cifri.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="cifri-english-image">
+                <img src = "{% static '/works/boy/first_part/text/cifri.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="materials-image">
-                <img src = "{% static '/works/boy/first_part/text/0materials.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/boy/first_part/text/materials.png' %}" onmouseenter = lsd_materials() onmouseleave = anti_materials() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="materials-english-image">
+                <img src = "{% static '/works/boy/first_part/text/materials-english.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="akril-image">
-                <img src = "{% static '/works/boy/first_part/text/0akril.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/boy/first_part/text/akril.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
 
@@ -215,19 +255,19 @@
                 </div>
 
                 <div class="arrow_left" style = 'position:relative; justify-content: center;'>
-                    <img src = "{% static '/works/boy/second_part/main_slideshow/elements/left.png' %}" style = 'max-width:100%;max-height:100%;min-width:100%;min-height:100%;'  onclick="prev(), arrow_left.play()">
+                    <img src = "{% static '/works/boy/second_part/main_slideshow/elements/arrow_left.png' %}" style = 'max-width:100%;max-height:100%;min-width:100%;min-height:100%;'  onclick="prev(), arrow_left.play()">
                 </div>
 
                 <div class="arrow_right" style = 'position:relative; justify-content: center;'>
-                    <img src = "{% static '/works/boy/second_part/main_slideshow/elements/right.png' %}" style = 'max-width:100%;max-height:100%;min-width:100%;min-height:100%;' onclick="next(),arrow_right.play()">
+                    <img src = "{% static '/works/boy/second_part/main_slideshow/elements/arrow_right.png' %}" style = 'max-width:100%;max-height:100%;min-width:100%;min-height:100%;' onclick="next(),arrow_right.play()">
                 </div>
 
                 <div class="farfor-image">
-                    <img src = "{% static '/works/boy/first_part/text/0farfor.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                    <img src = "{% static '/works/boy/first_part/text/farfor.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
                 </div>
 
                 <div class="logotip" style = 'position:relative; justify-content: center;'>
-                    <img src = "{% static '/works/boy/second_part/logopok.png' %}" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+                    <img src = "{% static '/works/boy/second_part/logotip.png' %}" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
                 </div> 
 
                
@@ -315,10 +355,44 @@
         direction: 'alternate',
         easing: 'easeInOutSine',
         loop: true,
-    });
-      
+    })
+    
+    var english_setter = anime.set('.materials-english-image', {
+        opacity: function () {return 0}
+    })
 
- 
+    function lsd_materials() {
+        var english_materials_appears = anime({
+            targets:'.materials-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_materials = anime({
+            targets:'.materials-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function anti_materials() {
+        var disappear_english_materials = anime({
+            targets:'.materials-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var materials_appears = anime({
+            targets:'.materials-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
 
     </script>
 </body>
