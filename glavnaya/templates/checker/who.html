@@ -51,6 +51,7 @@
             grid-row-start: 84;
             grid-row-end: 88;
             overflow: hidden;
+            z-index:2;
         }
 
         .razmer-english-image {
@@ -60,6 +61,7 @@
             grid-row-end: 88;
             overflow: hidden;
             opacity:0;
+            z-index:1;
         }
 
         .cifri-image{
@@ -68,6 +70,7 @@
             grid-row-start: 85;
             grid-row-end: 88;
             overflow: hidden;
+            z-index:2;
         }
 
         .cifri-english-image{
@@ -77,6 +80,7 @@
             grid-row-end: 88;
             overflow: hidden;
             opacity:0;
+            z-index:1;
         }
 
         .materials-image {
@@ -102,8 +106,17 @@
             grid-column-end: 100;
             grid-row-start: 93;
             grid-row-end: 96;
+            z-index:2;
         }  
 
+        .akril-english-image {
+            grid-column-start: 54;
+            grid-column-end: 100;
+            grid-row-start: 93;
+            grid-row-end: 96;
+            opacity:0;
+            z-index:1;
+        }
 /*  */
 /*  */
 /*  */
@@ -166,8 +179,18 @@
             grid-row-start: 93;
             grid-row-end: 96;
             overflow: hidden;
+            z-index:2;
         } 
-    
+        
+        .farfor-english-image {
+            grid-column-start: 1;
+            grid-column-end: 11;
+            grid-row-start: 93;
+            grid-row-end: 96;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
+        }
 
     </style>
 
@@ -179,33 +202,36 @@
             </div>
 
             <div class="razmer-image">
-                <img src = "{% static '/works/boy/first_part/text/razmer.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "{% static '/works/boy/first_part/text/razmer.png' %}" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
             
             <div class="razmer-english-image">
-                <img src = "{% static '/works/boy/first_part/text/razmer-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "{% static '/works/boy/first_part/text/english/razmer-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
 
             <div class="cifri-image">
-                <img src = "{% static '/works/boy/first_part/text/cifri.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/boy/first_part/text/cifri.png' %}" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cifri-english-image">
-                <img src = "{% static '/works/boy/first_part/text/cifri.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/boy/first_part/text/english/cifri-english.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="materials-image">
-                <img src = "{% static '/works/boy/first_part/text/materials.png' %}" onmouseenter = lsd_materials() onmouseleave = anti_materials() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/boy/first_part/text/materials.png' %}" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="materials-english-image">
-                <img src = "{% static '/works/boy/first_part/text/materials-english.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/boy/first_part/text/english/materials-english.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="akril-image">
-                <img src = "{% static '/works/boy/first_part/text/akril.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/boy/first_part/text/akril.png' %}" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
+            <div class="akril-english-image">
+                <img src = "{% static '/works/boy/first_part/text/english/akril-english.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
 
         </div>
         
@@ -263,7 +289,11 @@
                 </div>
 
                 <div class="farfor-image">
-                    <img src = "{% static '/works/boy/first_part/text/farfor.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                    <img src = "{% static '/works/boy/first_part/text/farfor.png' %}" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                </div>
+
+                <div class="farfor-english-image">
+                    <img src = "{% static '/works/boy/first_part/text/english/farfor-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
                 </div>
 
                 <div class="logotip" style = 'position:relative; justify-content: center;'>
@@ -361,7 +391,7 @@
         opacity: function () {return 0}
     })
 
-    function lsd_materials() {
+    function materialsSwitchToEnglish() {
         var english_materials_appears = anime({
             targets:'.materials-english-image',
             opacity: 1,
@@ -377,7 +407,71 @@
         })
     }
 
-    function anti_materials() {
+    function razmerSwitchToEnglish() {
+        var english_razmer_appears = anime({
+            targets:'.razmer-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_razmer = anime({
+            targets:'.razmer-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var english_cifri_appears = anime({
+            targets:'.cifri-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_cifri = anime({
+            targets:'.cifri-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+    }
+
+    function razmerBackToRussian() {
+        var disappear_english_razmer = anime({
+            targets:'.razmer-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var razmer_appears = anime({
+            targets:'.razmer-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    
+        var disappear_english_cifri = anime({
+            targets:'.cifri-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var cifri_appears = anime({
+            targets:'.cifri-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+
+    }
+    
+    function materialsBackToRussian() {
         var disappear_english_materials = anime({
             targets:'.materials-english-image',
             opacity: 0,
@@ -388,6 +482,72 @@
 
         var materials_appears = anime({
             targets:'.materials-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilSwitchToEnglish() {
+        var english_akril_appears = anime({
+            targets:'.akril-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_akril = anime({
+            targets:'.akril-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilBackToRussian() {
+        var disappear_english_akril = anime({
+            targets:'.akril-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var akril_appears = anime({
+            targets:'.akril-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforSwitchToEnglish() {
+        var english_farfor_appears = anime({
+            targets:'.farfor-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_farfor = anime({
+            targets:'.farfor-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforBackToRussian() {
+        var disappear_english_farfor = anime({
+            targets:'.farfor-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var farfor_appears = anime({
+            targets:'.farfor-image',
             opacity: 1,
             duration:9000,
             autoplay:true,
