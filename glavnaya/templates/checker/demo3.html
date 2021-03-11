@@ -91,7 +91,7 @@
         }
 
         .nazvanie {
-            grid-column-start: 50;
+            grid-column-start: 49;
             grid-column-end: 89;
             grid-row-start: 7;
             grid-row-end: 15;
@@ -104,6 +104,17 @@
             grid-row-start: 20;
             grid-row-end: 24;
             overflow: hidden;
+            z-index: 2;
+        }
+
+        .razmer-english-image {
+            grid-column-start: 5;
+            grid-column-end: 28;
+            grid-row-start: 20;
+            grid-row-end: 24;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
         }
 
         .cifri-image{
@@ -114,12 +125,23 @@
             overflow: hidden;
         }
 
-        .material-image {
+        .materials-image {
             grid-column-start: 5;
             grid-column-end: 46;
             grid-row-start: 34;
             grid-row-end: 38;
             overflow: hidden;
+            z-index:2;
+        }
+
+        .materials-english-image {
+            grid-column-start: 5;
+            grid-column-end: 46;
+            grid-row-start: 34;
+            grid-row-end: 38;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
         }
 
         .farfor-image {
@@ -128,6 +150,17 @@
             grid-row-start: 40;
             grid-row-end: 43;
             overflow: hidden;
+            z-index:2;
+        }
+
+        .farfor-english-image {
+            grid-column-start: 15;
+            grid-column-end: 75;
+            grid-row-start: 40;
+            grid-row-end: 43;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
         }
 
         .akril-image {
@@ -136,6 +169,17 @@
             grid-row-start: 45;
             grid-row-end: 48;
             overflow: hidden;
+            z-index: 2;
+        }
+
+        .akril-english-image {
+            grid-column-start: 15;
+            grid-column-end: 55;
+            grid-row-start: 45;
+            grid-row-end: 48;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
         }
 
         .cena-image {
@@ -144,8 +188,19 @@
             grid-row-start: 52;
             grid-row-end: 57;
             overflow: hidden;
+            z-index: 2;
         }
-    
+        
+        .cena-english-image {
+            grid-column-start: 5;
+            grid-column-end: 28;
+            grid-row-start: 52;
+            grid-row-end: 57;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
         .price-image {
             grid-column-start: 15;
             grid-column-end: 35;
@@ -276,31 +331,51 @@
             </div>
                 
             <div class="razmer-image">
-                <img src = "{% static '/works/golova/second_part/text/razmer.png' %}" onmouseover = razmer.play()  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/razmer.png' %}" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
             
-            <div class="cifri-image">
-                <img src = "{% static '/works/golova/second_part/text/cifri.png' %}" onmouseover = cifri.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="razmer-english-image">
+                <img src = "{% static '/works/golova/second_part/text/english/razmer-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
 
-            <div class="material-image">
-                <img src = "{% static '/works/golova/second_part/text/material.png' %}" onmouseover = material.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="cifri-image">
+                <img src = "{% static '/works/golova/second_part/text/cifri.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="materials-image">
+                <img src = "{% static '/works/golova/second_part/text/materials.png' %}" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="materials-english-image">
+                <img src = "{% static '/works/golova/second_part/text/english/materials-english.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-image">
-                <img src = "{% static '/works/golova/second_part/text/farfor.png' %}" onmouseover = farfor.play() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/farfor.png' %}" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="farfor-english-image">
+                <img src = "{% static '/works/golova/second_part/text/english/farfor-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="akril-image">
-                <img src = "{% static '/works/golova/second_part/text/akril.png' %}" onmouseover = akril.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/akril.png' %}" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>       
             
+            <div class="akril-english-image">
+                <img src = "{% static '/works/golova/second_part/text/english/akril-english.png' %}"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
             <div class="cena-image">
-                <img src = "{% static '/works/golova/second_part/text/cena.png' %}" onmouseover = cena.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/cena.png' %}" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="cena-english-image">
+                <img src = "{% static '/works/golova/second_part/text/english/cena-english.png' %}"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="price-image">
-                <img src = "{% static '/works/golova/second_part/text/price.png' %}" onmouseover = price.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/text/price.png' %}"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="button-image">
@@ -384,63 +459,6 @@
         });
     } borderMove()
 
-    // var razmer = anime({
-    //     targets:'.razmer-image',
-    //     scale: [1.1, 1.0],
-    //     duration: 1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
-
-    // var cifri = anime({
-    //     targets:'.cifri-image',
-    //     scale: [1.1, 1.0],
-    //     duration:1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
-
-    // var material = anime({
-    //     targets:'.material-image',
-    //     scale: [1.1, 1.0],
-    //     duration:1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
-
-    // var farfor = anime({
-    //     targets:'.farfor-image',
-    //     scale: [1.1, 1.0],
-    //     duration:1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
-
-    // var akril = anime({
-    //     targets:'.akril-image',
-    //     scale: [1.1, 1.0],
-    //     duration: 1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
-
-    // var cena = anime({
-    //     targets:'.cena-image',
-    //     scale: [1.1, 1.0],
-    //     duration: 1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
-
-    // var price = anime({
-    //     targets:'.price-image',
-    //     scale: [1.1, 1.0],
-    //     duration: 1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
-
-
 
     var arrow_left = anime({
         targets:'.arrow_left',
@@ -469,6 +487,171 @@
         loop: true,
     });
 
+    function razmerSwitchToEnglish() {
+        var english_razmer_appears = anime({
+            targets:'.razmer-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_razmer = anime({
+            targets:'.razmer-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+    }
+
+    function razmerBackToRussian() {
+        var disappear_english_razmer = anime({
+            targets:'.razmer-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var razmer_appears = anime({
+            targets:'.razmer-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+
+    }
+
+    function materialsSwitchToEnglish() {
+        var english_materials_appears = anime({
+            targets:'.materials-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_materials = anime({
+            targets:'.materials-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function materialsBackToRussian() {
+        var disappear_english_materials = anime({
+            targets:'.materials-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var materials_appears = anime({
+            targets:'.materials-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforSwitchToEnglish() {
+        var english_farfor_appears = anime({
+            targets:'.farfor-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_farfor = anime({
+            targets:'.farfor-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforBackToRussian() {
+        var disappear_english_farfor = anime({
+            targets:'.farfor-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var farfor_appears = anime({
+            targets:'.farfor-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilSwitchToEnglish() {
+        var english_akril_appears = anime({
+            targets:'.akril-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_akril = anime({
+            targets:'.akril-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilBackToRussian() {
+        var disappear_english_akril = anime({
+            targets:'.akril-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var akril_appears = anime({
+            targets:'.akril-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function cenaSwitchToEnglish() {
+        var english_cena_appears = anime({
+            targets:'.cena-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_cena = anime({
+            targets:'.cena-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function cenaBackToRussian() {
+        var disappear_english_cena = anime({
+            targets:'.cena-english-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var cena_appears = anime({
+            targets:'.cena-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
    
     </script>
 </body>

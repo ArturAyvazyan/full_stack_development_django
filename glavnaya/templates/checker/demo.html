@@ -98,12 +98,23 @@
             overflow: hidden;
         }
 
-        .material-image {
+        .materials-image {
             grid-column-start: 50;
             grid-column-end: 90;
             grid-row-start: 15;
             grid-row-end: 19;
             overflow: hidden;
+            z-index:2;
+        }
+
+        .materials-english-image {
+            grid-column-start: 50;
+            grid-column-end: 90;
+            grid-row-start: 15;
+            grid-row-end: 19;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
         }
 
         .farfor-image {
@@ -112,6 +123,17 @@
             grid-row-start: 21;
             grid-row-end: 24;
             overflow: hidden;
+            z-index:2;
+        }
+        
+        .farfor-english-image {
+            grid-column-start: 68;
+            grid-column-end: 90;
+            grid-row-start: 21;
+            grid-row-end: 24;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
         }
         
         .razmer-image {
@@ -120,6 +142,17 @@
             grid-row-start: 30;
             grid-row-end: 34;
             overflow: hidden;
+            z-index:2;
+        }
+
+        .razmer-english-image {
+            grid-column-start: 65;
+            grid-column-end: 90;
+            grid-row-start: 30;
+            grid-row-end: 34;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
         }
 
         .cifri-image{
@@ -136,6 +169,17 @@
             grid-row-start: 46;
             grid-row-end: 52;
             overflow: hidden;
+            z-index:2;
+        }
+        
+        .cena-english-image {
+            grid-column-start: 68;
+            grid-column-end: 90;
+            grid-row-start: 46;
+            grid-row-end: 52;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
         }
 
         .price-image {
@@ -212,11 +256,11 @@
 
             <div class="image_slider">
                 
-                <a href = "{% static '/works/maski/first_part/big_slideshow/11.png' %}"
+                <a href = "{% static '/works/maski/first_part/big_slideshow/1.png' %}"
  
                 data-fancybox="images-preview" 
                 data-width="700" data-height="700"
-                data-thumb= "{% static '/works/maski/first_part/big_slideshow/minis/1-01.png' %}" >
+                data-thumb= "{% static '/works/maski/first_part/big_slideshow/minis/1.png' %}" >
 
                     <img src = "{% static '/works/maski/first_part/main_slideshow/pics/1.png' %}"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
                 </a>
@@ -224,19 +268,19 @@
                 <div style="display: none;">
                     <a href="{% static '/works/maski/first_part/big_slideshow/2.png' %}" data-fancybox="images-preview" 
                        data-width="800" data-height="700" style = 'background-color: black;'
-                       data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/2-01.png' %}"></a>
+                       data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/2.png' %}"></a>
                   
                     <a href="{% static '/works/maski/first_part/big_slideshow/3.png' %}" data-fancybox="images-preview" 
                        data-width="800" data-height="700"
-                       data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/3-01.png' %}"></a>
+                       data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/3.png' %}"></a>
                   
                     <a href="{% static '/works/maski/first_part/big_slideshow/4.png' %}" data-fancybox="images-preview" 
                        data-width="700" data-height="700"
-                       data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/4-01.png' %}"></a>
+                       data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/4.png' %}"></a>
                   
                     <a href="{% static '/works/maski/first_part/big_slideshow/5.png' %}" data-fancybox="images-preview" 
                        data-width="650" data-height="700"
-                       data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/5-01.png' %}"></a>
+                       data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/5.png' %}"></a>
 
                   </div> 
             </div>
@@ -263,52 +307,66 @@
         
         <div class="second_class">
           
-          <div class="material-image">
-              <img src = "{% static '/works/maski/second_part/text/materials.png' %}" onmouseover = material.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
-          </div>
+            <div class="materials-image">
+                <img src = "{% static '/works/maski/second_part/text/materials.png' %}" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
 
-          <div class="farfor-image">
-              <img src = "{% static '/works/maski/second_part/text/farfor.png' %}" onmouseover = farfor.play() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
-          </div>
+            <div class="materials-english-image">
+                <img src = "{% static '/works/maski/second_part/text/english/materials-english.png' %}"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
 
-          <div class="razmer-image">
-            <img src = "{% static '/works/maski/second_part/text/razmer.png' %}" onmouseover = razmer.play()  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
-          </div>
+            <div class="farfor-image">
+                 <img src = "{% static '/works/maski/second_part/text/farfor.png' %}" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
 
-          <div class="cena-image">
-            <img src = "{% static '/works/maski/second_part/text/getto-01.png' %}" onmouseover = cena.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
-          </div>
+            <div class="farfor-english-image">
+                <img src = "{% static '/works/maski/second_part/text/english/farfor-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+           </div>
 
-          <div class="price-image">
-            <img src = "{% static '/works/maski/second_part/text/price.png' %}" onmouseover = price.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
-          </div>
+            <div class="razmer-image">
+                <img src = "{% static '/works/maski/second_part/text/razmer.png' %}" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            </div>
+
+            <div class="razmer-english-image">
+                <img src = "{% static '/works/maski/second_part/text/english/razmer-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            </div>
+
+            <div class="cifri-image">
+                <img src = "{% static '/works/maski/second_part/text/cifri.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="cena-image">
+                <img src = "{% static '/works/maski/second_part/text/cena.png' %}" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="cena-english-image">
+                <img src = "{% static '/works/maski/second_part/text/english/alpha.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="price-image">
+                <img src = "{% static '/works/maski/second_part/text/price.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="button-image">
+                <img src = "{% static '/works/maski/second_part/buy_but/maski-btn.png' %}"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="text-buy-image" >
+                <img src = "{% static '/works/maski/second_part/buy_but/buy_btn.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
           
-          <div class="cifri-image">
-              <img src = "{% static '/works/maski/second_part/text/cifri.png' %}" onmouseover = cifri.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
-          </div> 
+            <div class="first-buy-border" >
+                <img src = "{% static '/works/maski/second_part/buy_but/white_border.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
 
-            
-
-          <div class="button-image">
-            <img src = "{% static '/works/maski/second_part/buy_but/maski-btn.png' %}"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
-          </div>
-
-          <div class="text-buy-image" >
-            <img src = "{% static '/works/maski/second_part/buy_but/buy_btn.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
-          </div>
-
+            <div class="second-buy-border">
+                <img src = "{% static '/works/maski/second_part/buy_but/white_border.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
           
-          <div class="first-buy-border" >
-              <img src = "{% static '/works/maski/second_part/buy_but/white_border.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
-          </div>
-
-          <div class="second-buy-border">
-              <img src = "{% static '/works/maski/second_part/buy_but/white_border.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
-          </div>
-          
-          <div class="third-buy-border">
-              <img src = "{% static '/works/maski/second_part/buy_but/viol_border.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
-          </div>
+            <div class="third-buy-border">
+                <img src = "{% static '/works/maski/second_part/buy_but/viol_border.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
 
         </div>
 
@@ -322,130 +380,217 @@
 
     <script>
 
-    var slider_img = document.querySelector('.slider-img');
-    var images = ['1.png', '2.png', '3.png','4.png', '505-01.png'];
-    var i =0; 
+        var slider_img = document.querySelector('.slider-img');
+        var images = ['1.png', '2.png', '3.png','4.png', '5.png'];
+        var i =0; 
 
-    function prev() {
-        if (i<=0) i = images.length;
-        b=i
-        i--;
-        return setImg();
-    }
+        function prev() {
+            if (i<=0) i = images.length;
+            b=i
+            i--;
+            return setImg();
+        }
 
-    function next() {
-        if (i >= images.length - 1) i = -1;
-        b = i
-        i++;
-        return setImg();
-    }
+        function next() {
+            if (i >= images.length - 1) i = -1;
+            b = i
+            i++;
+            return setImg();
+        }
 
-    function setImg(){
-        return slider_img.setAttribute('src', "{% static '/works/maski/first_part/main_slideshow/pics/' %}" + images[i])
-    }
+        function setImg(){
+            return slider_img.setAttribute('src', "{% static '/works/maski/first_part/main_slideshow/pics/' %}" + images[i])
+        }
 
-    function borderMove(){
-        var border_forward_animation =  anime({
-            targets: '#forward-svg',
-            strokeDashoffset: [anime.setDashoffset,0],
-            easing: 'easeInOutSine',
-            duration: 25000,
-        
-            direction:'alternate',
-            delay: function(el, i) { return i * 250 },
+        function borderMove(){
+            var border_forward_animation =  anime({
+                targets: '#forward-svg',
+                strokeDashoffset: [anime.setDashoffset,0],
+                easing: 'easeInOutSine',
+                duration: 25000,
             
+                direction:'alternate',
+                delay: function(el, i) { return i * 250 },
+                
+                loop: true,
+            });
+
+            var border_backward_animation =  anime({
+                targets: '#backward-svg',
+                strokeDashoffset: [0, anime.setDashoffset],
+                easing: 'easeInOutSine',
+                duration: 25000,
+            
+                direction:'alternate',
+                delay: function(el, i) { return i * 250 },
+                
+                loop: true,
+            });
+        } borderMove()
+
+
+        var arrow_left = anime({
+            targets:'.arrow_left',
+            scale:1.1,
+            duration:450,
+            autoplay:false,
+            loop:false,
+        })
+
+        var arrow_right = anime({
+            targets:'.arrow_right',
+            scale:1.1,
+            duration:450,
+            autoplay:false,
+            loop:false,
+        })
+
+        var motion_of_name =  anime({
+            targets: '.nazvanie',
+            translateY: {
+                value:15,
+                duration: 7500,
+            },
+            direction: 'alternate',
+            easing: 'easeInOutSine',
             loop: true,
         });
 
-        var border_backward_animation =  anime({
-            targets: '#backward-svg',
-            strokeDashoffset: [0, anime.setDashoffset],
-            easing: 'easeInOutSine',
-            duration: 25000,
-        
-            direction:'alternate',
-            delay: function(el, i) { return i * 250 },
-            
-            loop: true,
-        });
-    } borderMove()
+        function razmerSwitchToEnglish() {
+            var english_razmer_appears = anime({
+                targets:'.razmer-english-image',
+                opacity: 1,
+                duration:9000,
+                autoplay:true,
+            })   
 
-    // var razmer = anime({
-    //     targets:'.razmer-image',
-    //     scale: [1.1, 1.0],
-    //     duration: 1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
+            var disappear_razmer = anime({
+                targets:'.razmer-image',
+                opacity: 0,
+                duration:9000,
+                autoplay:true,
+            })
+        }
 
-    // var cifri = anime({
-    //     targets:'.cifri-image',
-    //     scale: [1.1, 1.0],
-    //     duration:1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
+        function razmerBackToRussian() {
+            var disappear_english_razmer = anime({
+                targets:'.razmer-english-image',
+                opacity: 0,
+                duration:9000,
+                
+                autoplay:true,
+            })
 
-    // var material = anime({
-    //     targets:'.material-image',
-    //     scale: [1.1, 1.0],
-    //     duration:1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
+            var razmer_appears = anime({
+                targets:'.razmer-image',
+                opacity: 1,
+                duration:9000,
+                autoplay:true,
+            })
 
-    // var farfor = anime({
-    //     targets:'.farfor-image',
-    //     scale: [1.1, 1.0],
-    //     duration:1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
+        }
 
-    // var cena = anime({
-    //     targets:'.cena-image',
-    //     scale: [1.1, 1.0],
-    //     duration: 1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
+        function materialsSwitchToEnglish() {
+            var english_materials_appears = anime({
+                targets:'.materials-english-image',
+                opacity: 1,
+                duration:9000,
+                autoplay:true,
+            })   
 
-    // var price = anime({
-    //     targets:'.price-image',
-    //     scale: [1.1, 1.0],
-    //     duration: 1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
+            var disappear_materials = anime({
+                targets:'.materials-image',
+                opacity: 0,
+                duration:9000,
+                autoplay:true,
+            })
+        }
 
-    var arrow_left = anime({
-        targets:'.arrow_left',
-        scale:1.1,
-        duration:450,
-        autoplay:false,
-        loop:false,
-    })
+        function materialsBackToRussian() {
+            var disappear_english_materials = anime({
+                targets:'.materials-english-image',
+                opacity: 0,
+                duration:9000,
+                
+                autoplay:true,
+            })
 
-    var arrow_right = anime({
-        targets:'.arrow_right',
-        scale:1.1,
-        duration:450,
-        autoplay:false,
-        loop:false,
-    })
+            var materials_appears = anime({
+                targets:'.materials-image',
+                opacity: 1,
+                duration:9000,
+                autoplay:true,
+            })
+        }
 
-    var motion_of_name =  anime({
-        targets: '.nazvanie',
-        translateY: {
-            value:15,
-            duration: 7500,
-        },
-        direction: 'alternate',
-        easing: 'easeInOutSine',
-        loop: true,
-    });
+        function farforSwitchToEnglish() {
+            var english_farfor_appears = anime({
+                targets:'.farfor-english-image',
+                opacity: 1,
+                duration:9000,
+                autoplay:true,
+            })   
 
-   
+            var disappear_farfor = anime({
+                targets:'.farfor-image',
+                opacity: 0,
+                duration:9000,
+                autoplay:true,
+            })
+        }
+
+        function farforBackToRussian() {
+            var disappear_english_farfor = anime({
+                targets:'.farfor-english-image',
+                opacity: 0,
+                duration:9000,
+                
+                autoplay:true,
+            })
+
+            var farfor_appears = anime({
+                targets:'.farfor-image',
+                opacity: 1,
+                duration:9000,
+                autoplay:true,
+            })
+        }
+
+        function cenaSwitchToEnglish() {
+            var english_cena_appears = anime({
+                targets:'.cena-english-image',
+                opacity: 1,
+                duration:9000,
+                autoplay:true,
+            })   
+
+            var disappear_cena = anime({
+                targets:'.cena-image',
+                opacity: 0,
+                duration:9000,
+                autoplay:true,
+            })
+        }
+
+        function cenaBackToRussian() {
+            var disappear_english_cena = anime({
+                targets:'.cena-english-image',
+                opacity: 0,
+                duration:9000,
+                
+                autoplay:true,
+            })
+
+            var cena_appears = anime({
+                targets:'.cena-image',
+                opacity: 1,
+                duration:9000,
+                autoplay:true,
+            })
+        }
+
+
+
     </script>
 </body>
 

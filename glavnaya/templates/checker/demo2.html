@@ -44,6 +44,17 @@
             grid-row-start: 10;
             grid-row-end: 16;
             overflow: hidden;
+            z-index:2;
+        }
+
+        .razmer-english-image {
+            grid-column-start: 8;
+            grid-column-end: 38;
+            grid-row-start: 10;
+            grid-row-end: 15;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
         }
 
         .cifri-image{
@@ -54,12 +65,23 @@
             overflow: hidden;
         }
 
-        .material-image {
+        .materials-image {
             grid-column-start: 8;
             grid-column-end: 52;
             grid-row-start: 30;
             grid-row-end: 36;
             overflow: hidden;
+            z-index:2;
+        }
+
+        .materials-english-image {
+            grid-column-start: 8;
+            grid-column-end: 52;
+            grid-row-start: 30;
+            grid-row-end: 36;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
         }
 
         .farfor-image {
@@ -68,6 +90,17 @@
             grid-row-start: 36;
             grid-row-end: 40;
             overflow: hidden;
+            z-index:2;
+        }
+
+        .farfor-english-image {
+            grid-column-start: 18;
+            grid-column-end: 40;
+            grid-row-start: 36;
+            grid-row-end: 39;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
         }
 
         .akril-image {
@@ -76,7 +109,18 @@
             grid-row-start: 42;
             grid-row-end: 46;
             overflow: hidden;
+            z-index:2;
         }   
+
+        .akril-english-image {
+            grid-column-start: 18;
+            grid-column-end: 72;
+            grid-row-start: 42;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index:1;
+            opacity:0
+        }
 
         .cena-image {
             grid-column-start: 8;
@@ -84,6 +128,17 @@
             grid-row-start: 51;
             grid-row-end: 57;
             overflow: hidden;
+            z-index:2;
+        }
+
+        .cena-english-image {
+            grid-column-start: 8;
+            grid-column-end:35;
+            grid-row-start: 51;
+            grid-row-end: 57;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
         }
 
         .price-image {
@@ -298,9 +353,9 @@
         #home {
             position:absolute;
             top: 1%;
-            left: 50%;
-            max-height:100px;
-            max-width:100px;
+            left: 49%;
+            max-height: 220px;
+            max-width: 175px;
         }
 
         #zakis {
@@ -417,27 +472,47 @@
         <div class="first_class">
 
             <div class="razmer-image">
-                <img src = "{% static '/works/eye/first_part/text/razmer.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "{% static '/works/eye/first_part/text/razmer.png' %}" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
             
+            <div class="razmer-english-image">
+                <img src = "{% static '/works/eye/first_part/text/english/razmer-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            </div>
+
             <div class="cifri-image">
                 <img src = "{% static '/works/eye/first_part/text/25.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
-            <div class="material-image">
-                <img src = "{% static '/works/eye/first_part/text/material.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="materials-image">
+                <img src = "{% static '/works/eye/first_part/text/materials.png' %}"  onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="materials-english-image">
+                <img src = "{% static '/works/eye/first_part/text/english/materials-english.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-image">
-                <img src = "{% static '/works/eye/first_part/text/farfor.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/eye/first_part/text/farfor.png' %}" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="farfor-english-image">
+                <img src = "{% static '/works/eye/first_part/text/english/farfor-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="akril-image">
-                <img src = "{% static '/works/eye/first_part/text/akril.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/eye/first_part/text/akril.png' %}" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="akril-english-image">
+                <img src = "{% static '/works/eye/first_part/text/english/akril-english.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cena-image">
-                <img src = "{% static '/works/eye/first_part/text/cena.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/eye/first_part/text/cena.png' %}" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="cena-english-image">
+                <img src = "{% static '/works/eye/first_part/text/english/cena-english.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="price-image">
@@ -547,37 +622,37 @@
                         
                     <div class = 'zakis' onmouseover = zakis_onmove.play() onmouseout = zakis_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline : none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/zakis.png' %}" id = 'zakis'>
+                            <img src = "{% static '/every_hidden_page/works/zakis_logo.png' %}" id = 'zakis'>
                         </a>
                     </div>
 
                     <div class = 'glaz'  onmouseover = glaz_onmove.play() onmouseout = glaz_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/glaz.png' %}" id = 'glaz'>
+                            <img src = "{% static '/every_hidden_page/works/glaz_logo.png' %}" id = 'glaz'>
                         </a>
                     </div>
 
                     <div class = 'golova' onmouseover = golova_onmove.play() onmouseout = golova_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/golova.png' %}" id = 'golova'>
+                            <img src = "{% static '/every_hidden_page/works/put_logo.png' %}" id = 'golova'>
                         </a>
                     </div>
 
                     <div class = 'space' onmouseover = space_onmove.play() onmouseout = space_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/space.png' %}" id = 'space'>
+                            <img src = "{% static '/every_hidden_page/works/kosmos_logo.png' %}" id = 'space'>
                         </a>
                     </div>
 
                     <div class = 'emotions' onmouseover = emotions_onmove.play() onmouseout = emotions_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/emotions.png' %}" id = 'emotions'>
+                            <img src = "{% static '/every_hidden_page/works/maski_logo.png' %}" id = 'emotions'>
                         </a>
                     </div>
 
                     <div class = 'ohboy' onmouseover = ohboy_onmove.play() onmouseout = ohboy_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/ohboy.png' %}" id = 'ohboy'>
+                            <img src = "{% static '/every_hidden_page/works/vibe_logo.png' %}" id = 'ohboy'>
                         </a>
                     </div>
                         
@@ -694,6 +769,177 @@
         easing: 'easeInOutSine',
         loop: true,
     });
+
+    function razmerSwitchToEnglish() {
+        var english_razmer_appears = anime({
+            targets:'.razmer-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_razmer = anime({
+            targets:'.razmer-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+    }
+
+    function razmerBackToRussian() {
+        var disappear_english_razmer = anime({
+            targets:'.razmer-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var razmer_appears = anime({
+            targets:'.razmer-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+
+    }
+
+
+    function materialsSwitchToEnglish() {
+        var english_materials_appears = anime({
+            targets:'.materials-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_materials = anime({
+            targets:'.materials-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function materialsBackToRussian() {
+        var disappear_english_materials = anime({
+            targets:'.materials-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var materials_appears = anime({
+            targets:'.materials-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforSwitchToEnglish() {
+        var english_farfor_appears = anime({
+            targets:'.farfor-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_farfor = anime({
+            targets:'.farfor-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforBackToRussian() {
+        var disappear_english_farfor = anime({
+            targets:'.farfor-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var farfor_appears = anime({
+            targets:'.farfor-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilSwitchToEnglish() {
+        var english_akril_appears = anime({
+            targets:'.akril-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_akril = anime({
+            targets:'.akril-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilBackToRussian() {
+        var disappear_english_akril = anime({
+            targets:'.akril-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var akril_appears = anime({
+            targets:'.akril-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function cenaSwitchToEnglish() {
+        var english_cena_appears = anime({
+            targets:'.cena-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_cena = anime({
+            targets:'.cena-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function cenaBackToRussian() {
+        var disappear_english_cena = anime({
+            targets:'.cena-english-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var cena_appears = anime({
+            targets:'.cena-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    
+
+    // LOGO PAGE STARTS HERE
 
     var minis = ['#mini_zakis', '#mini_glaz', '#mini_golova', '#mini_space', "#mini_emotions", '#mini_ohboy']
     var minis_set = anime.set(minis,{

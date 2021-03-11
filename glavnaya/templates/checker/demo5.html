@@ -96,14 +96,36 @@
             grid-row-start: 14;
             grid-row-end: 19;
             overflow: hidden;
+            z-index: 2;
         }
         
+        .obiem-english-image {
+            grid-column-start: 60;
+            grid-column-end: 85;
+            grid-row-start: 14;
+            grid-row-end: 19;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
         .gaivan-image {
             grid-column-start: 42;
             grid-column-end: 82;
             grid-row-start: 21;
             grid-row-end: 24;
             overflow: hidden;
+            z-index: 2;
+        }
+
+        .gaivan-english-image {
+            grid-column-start: 42;
+            grid-column-end: 82;
+            grid-row-start: 21;
+            grid-row-end: 24;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
         }
 
         .piala-image{
@@ -112,14 +134,36 @@
             grid-row-start: 26;
             grid-row-end: 29;
             overflow: hidden;
+            z-index: 2;
         }
 
-        .material-image {
+        .piala-english-image{
+            grid-column-start:49;
+            grid-column-end: 82;
+            grid-row-start: 26;
+            grid-row-end: 29;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .materials-image {
             grid-column-start: 45;
             grid-column-end: 85;
             grid-row-start: 35;
             grid-row-end: 39;
             overflow: hidden;
+            z-index: 2;
+        }
+
+        .materials-english-image {
+            grid-column-start: 45;
+            grid-column-end: 85;
+            grid-row-start: 35;
+            grid-row-end: 39;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
         }
 
         .farfor-image {
@@ -128,6 +172,17 @@
             grid-row-start: 43;
             grid-row-end: 46;
             overflow: hidden;
+            z-index: 2;
+        }
+
+        .farfor-english-image {
+            grid-column-start: 55;
+            grid-column-end: 82;
+            grid-row-start: 43;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
         }
 
         .glazur-image {
@@ -136,6 +191,17 @@
             grid-row-start: 48;
             grid-row-end: 51;
             overflow: hidden;
+            z-index: 2;
+        }
+
+        .glazur-english-image {
+            grid-column-start: 61;
+            grid-column-end: 82;
+            grid-row-start: 48;
+            grid-row-end: 51;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
         }
 
         .akril-image {
@@ -144,6 +210,17 @@
             grid-row-start: 53;
             grid-row-end: 56;
             overflow: hidden;
+            z-index: 2;
+        }
+
+        .akril-english-image {
+            grid-column-start: 25;
+            grid-column-end: 82;
+            grid-row-start: 53;
+            grid-row-end: 56;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
         }
 
         .logotip {
@@ -233,35 +310,63 @@
         <div class="second_class">
             
             <div class="obiem-image">
-                <img src = "{% static '/works/kosmos/second_part/text/obiem.png' %}" onmouseover = razmer.play()  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "{% static '/works/kosmos/second_part/text/obiem.png' %}" onmouseenter = obiemSwitchToEnglish() onmouseleave = obiemBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            </div>
+
+            <div class="obiem-english-image">
+                <img src = "{% static '/works/kosmos/second_part/text/english/obiem-english.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
 
             <div class="gaivan-image">
-                <img src = "{% static '/works/kosmos/second_part/text/1gaivan-01.png' %}" onmouseover = razmer.play()  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "{% static '/works/kosmos/second_part/text/gaivan.png' %}" onmouseenter = gaivanSwitchToEnglish() onmouseleave = gaivanBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
             
-            <div class="piala-image">
-                <img src = "{% static '/works/kosmos/second_part/text/1piala-01.png' %}" onmouseover = cifri.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="gaivan-english-image">
+                <img src = "{% static '/works/kosmos/second_part/text/english/gaivan-english.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
 
-            <div class="material-image">
-                <img src = "{% static '/works/kosmos/second_part/text/materials.png' %}" onmouseover = material.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="piala-image">
+                <img src = "{% static '/works/kosmos/second_part/text/piala.png' %}" onmouseenter = pialaSwitchToEnglish() onmouseleave = pialaBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="piala-english-image">
+                <img src = "{% static '/works/kosmos/second_part/text/english/piala-english.png' %}"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="materials-image">
+                <img src = "{% static '/works/kosmos/second_part/text/materials.png' %}" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+            
+            <div class="materials-english-image">
+                <img src = "{% static '/works/kosmos/second_part/text/english/materials-english.png' %}"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-image">
-                <img src = "{% static '/works/kosmos/second_part/text/1farfor-01.png' %}" onmouseover = farfor.play() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/kosmos/second_part/text/farfor.png' %}" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="farfor-english-image">
+                <img src = "{% static '/works/kosmos/second_part/text/english/00farfor.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="glazur-image">
-                <img src = "{% static '/works/kosmos/second_part/text/1glazur-01.png' %}" onmouseover = glazur.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/kosmos/second_part/text/glazur.png' %}" onmouseenter = glazurSwitchToEnglish() onmouseleave = glazurBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="glazur-english-image">
+                <img src = "{% static '/works/kosmos/second_part/text/english/glazur-english.png' %}"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="akril-image">
-                <img src = "{% static '/works/kosmos/second_part/text/akril.png' %}" onmouseover = akril.play() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/kosmos/second_part/text/akril.png' %}" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>       
 
+            <div class="akril-english-image">
+                <img src = "{% static '/works/kosmos/second_part/text/english/akril-english.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
             <div class="logotip" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/kosmos/second_part/mologotip.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+                <img src = "{% static '/works/kosmos/second_part/logotip.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
             </div> 
 
         </div>
@@ -324,46 +429,6 @@
         });
     } borderMove()
 
-    // var razmer = anime({
-    //     targets:'.razmer-image',
-    //     scale: [1.1, 1.0],
-    //     duration: 1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
-
-    // var material = anime({
-    //     targets:'.material-image',
-    //     scale: [1.1, 1.0],
-    //     duration:1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
-
-    // var farfor = anime({
-    //     targets:'.farfor-image',
-    //     scale: [1.1, 1.0],
-    //     duration:1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
-
-    // var glazur = anime({
-    //     targets:'.glazur-image',
-    //     scale: [1.1, 1.0],
-    //     duration: 1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
-
-    // var akril = anime({
-    //     targets:'.akril-image',
-    //     scale: [1.1, 1.0],
-    //     duration: 1000,
-    //     autoplay:false,
-    //     loop:false,
-    // })
-
     var arrow_left = anime({
         targets:'.arrow_left',
         scale:1.1,
@@ -391,7 +456,237 @@
         loop: true,
     });
 
-   
+    function obiemSwitchToEnglish() {
+        var english_obiem_appears = anime({
+            targets:'.obiem-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_obiem = anime({
+            targets:'.obiem-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function obiemBackToRussian() {
+        var disappear_english_obiem = anime({
+            targets:'.obiem-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var obiem_appears = anime({
+            targets:'.obiem-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+
+    function gaivanSwitchToEnglish() {
+        var english_gaivan_appears = anime({
+            targets:'.gaivan-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_gaivan = anime({
+            targets:'.gaivan-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function gaivanBackToRussian() {
+        var disappear_english_gaivan = anime({
+            targets:'.gaivan-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var gaivan_appears = anime({
+            targets:'.gaivan-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+    
+    function pialaSwitchToEnglish() {
+        var english_piala_appears = anime({
+            targets:'.piala-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_piala = anime({
+            targets:'.piala-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function pialaBackToRussian() {
+        var disappear_english_piala = anime({
+            targets:'.piala-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var piala_appears = anime({
+            targets:'.piala-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function materialsSwitchToEnglish() {
+        var english_materials_appears = anime({
+            targets:'.materials-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_materials = anime({
+            targets:'.materials-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function materialsBackToRussian() {
+        var disappear_english_materials = anime({
+            targets:'.materials-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var materials_appears = anime({
+            targets:'.materials-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforSwitchToEnglish() {
+        var english_farfor_appears = anime({
+            targets:'.farfor-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_farfor = anime({
+            targets:'.farfor-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforBackToRussian() {
+        var disappear_english_farfor = anime({
+            targets:'.farfor-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var farfor_appears = anime({
+            targets:'.farfor-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function glazurSwitchToEnglish() {
+        var english_glazur_appears = anime({
+            targets:'.glazur-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_glazur = anime({
+            targets:'.glazur-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function glazurBackToRussian() {
+        var disappear_english_glazur = anime({
+            targets:'.glazur-english-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var glazur_appears = anime({
+            targets:'.glazur-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilSwitchToEnglish() {
+        var english_akril_appears = anime({
+            targets:'.akril-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_akril = anime({
+            targets:'.akril-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilBackToRussian() {
+        var disappear_english_akril = anime({
+            targets:'.akril-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var akril_appears = anime({
+            targets:'.akril-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+    
     </script>
 </body>
 

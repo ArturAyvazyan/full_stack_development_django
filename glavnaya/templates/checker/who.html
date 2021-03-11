@@ -257,8 +257,7 @@
 
                 <div class="image_slider">
                     
-                    <a href = "{% static '/works/boy/second_part/big_slideshow/1-01.png' %}"
-     
+                    <a href = "{% static '/works/boy/second_part/big_slideshow/1.png' %}"
                     data-fancybox="images-preview" 
                     data-width="1550" data-height="1500"
                     data-thumb="{% static '/works/boy/second_part/big_slideshow/minis/1.png' %}">
@@ -267,17 +266,16 @@
                     </a>
 
                     <div style="display: none;">
-                        <a href="{% static '/works/boy/second_part/big_slideshow/2-01.png' %}" data-fancybox="images-preview" 
+                        <a href="{% static '/works/boy/second_part/big_slideshow/2.png' %}" data-fancybox="images-preview" 
                            data-width="1450" data-height="1450" style = 'background-color: black;'
                            data-thumb="{% static '/works/boy/second_part/big_slideshow/minis/2.png' %}"></a>
                       
-                        <a href="{% static '/works/boy/second_part/big_slideshow/3-01.png' %}" data-fancybox="images-preview" 
+                        <a href="{% static '/works/boy/second_part/big_slideshow/3.png' %}" data-fancybox="images-preview" 
                            data-width="1550" data-height="1850"
                            data-thumb="{% static '/works/boy/second_part/big_slideshow/minis/3.png' %}"></a>
                       
-                      </div> 
+                    </div> 
                       
-                
                 </div>
 
                 <div class="arrow_left" style = 'position:relative; justify-content: center;'>
@@ -300,8 +298,6 @@
                     <img src = "{% static '/works/boy/second_part/logotip.png' %}" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
                 </div> 
 
-               
-
     </div>
     
 
@@ -313,7 +309,7 @@
     <script>
 
     var slider_img = document.querySelector('.slider-img');
-    var images = ['1.png','2.png', 'lol-01.png'];
+    var images = ['1.png','2.png', '3.png'];
     var i =0; 
 
     function prev() {
@@ -391,22 +387,6 @@
         opacity: function () {return 0}
     })
 
-    function materialsSwitchToEnglish() {
-        var english_materials_appears = anime({
-            targets:'.materials-english-image',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })   
-
-        var disappear_materials = anime({
-            targets:'.materials-image',
-            opacity: 0,
-            duration:9000,
-            autoplay:true,
-        })
-    }
-
     function razmerSwitchToEnglish() {
         var english_razmer_appears = anime({
             targets:'.razmer-english-image',
@@ -471,6 +451,22 @@
 
     }
     
+    function materialsSwitchToEnglish() {
+        var english_materials_appears = anime({
+            targets:'.materials-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_materials = anime({
+            targets:'.materials-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
     function materialsBackToRussian() {
         var disappear_english_materials = anime({
             targets:'.materials-english-image',
