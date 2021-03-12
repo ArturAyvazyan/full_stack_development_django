@@ -156,12 +156,24 @@
             grid-row-end: 96;
             overflow: hidden;
         }
+
         .text-buy-image {
             grid-column-start: 40;
             grid-column-end: 72;
             grid-row-start: 82;
             grid-row-end: 90;
             overflow: hidden;
+            z-index: 2;
+        }
+
+        .glaz-buy-image {
+            grid-column-start: 44;
+            grid-column-end: 70;
+            grid-row-start: 82;
+            grid-row-end: 88;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
         }
 
         .first-buy-border {
@@ -524,16 +536,19 @@
             </div>
 
             <div class="text-buy-image" >
-                <img src = "{% static '/works/eye/first_part/buy_but/butbuttton.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/eye/first_part/buy_but/butbuttton.png' %}" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
+            <div class="glaz-buy-image">
+                <img src = "{% static '/works/eye/first_part/buy_but/glaz_buy.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
             
             <div class="first-buy-border" >
-                <img src = "{% static '/works/eye/first_part/buy_but/white-border.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/eye/first_part/buy_but/white-border.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="second-buy-border">
-                <img src = "{% static '/works/eye/first_part/buy_but/red-border.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/eye/first_part/buy_but/red-border.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
             
             <div class="third-buy-border">
@@ -769,6 +784,39 @@
         easing: 'easeInOutSine',
         loop: true,
     });
+
+    function buySwitchToEnglish() {
+        var english_buy_appears = anime({
+            targets:'.glaz-buy-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_buy = anime({
+            targets:'.text-buy-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function buyBackToRussian() {
+        var disappear_english_buy = anime({
+            targets:'.glaz-buy-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var buy_appears = anime({
+            targets:'.text-buy-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
 
     function razmerSwitchToEnglish() {
         var english_razmer_appears = anime({

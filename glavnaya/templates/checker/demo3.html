@@ -222,8 +222,17 @@
             grid-row-start: 82;
             grid-row-end: 90;
             overflow: hidden;
+            z-index: 2;
         }
-
+        .golova-buy-image {
+            grid-column-start: 42;
+            grid-column-end: 70;
+            grid-row-start: 82;
+            grid-row-end: 88;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;        
+        }
         .first-buy-border {
             grid-column-start: 26;
             grid-column-end: 84;
@@ -247,7 +256,6 @@
             grid-row-end: 98;
             overflow: hidden;
         }
-
 
     </style>
 
@@ -383,9 +391,12 @@
             </div>
     
             <div class="text-buy-image">
-                <img src = "{% static '/works/golova/second_part/buy_but/buy_but.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/golova/second_part/buy_but/buy_but.png' %}" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
-    
+
+            <div class="golova-buy-image">
+                <img src = "{% static '/works/golova/second_part/buy_but/golova_buy.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
                 
             <div class="first-buy-border" >
                 <img src = "{% static '/works/golova/second_part/buy_but/white-border.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
@@ -486,6 +497,39 @@
         easing: 'easeInOutSine',
         loop: true,
     });
+
+    function buySwitchToEnglish() {
+        var english_buy_appears = anime({
+            targets:'.golova-buy-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_buy = anime({
+            targets:'.text-buy-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function buyBackToRussian() {
+        var disappear_english_buy = anime({
+            targets:'.golova-buy-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var buy_appears = anime({
+            targets:'.text-buy-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
 
     function razmerSwitchToEnglish() {
         var english_razmer_appears = anime({

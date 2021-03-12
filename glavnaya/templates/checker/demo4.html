@@ -276,6 +276,17 @@
             grid-row-start: 49;
             grid-row-end: 55;
             overflow: hidden;
+            z-index: 2;
+        }
+
+        .zakis-buy-image {
+            grid-column-start: 43;
+            grid-column-end: 63;
+            grid-row-start: 50;
+            grid-row-end: 55;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
         }
 
         .first-buy-border {
@@ -348,7 +359,7 @@
             grid-column-end: 99;
             grid-row-start: 90;
             grid-row-end:100;
-        }   
+        }
     </style>
 
     <div class="container">
@@ -502,10 +513,13 @@
             </div>
     
             <div class="text-buy-image">
-                <img src = "{% static '/works/zakis/second_part/buy_but/buy_but.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "{% static '/works/zakis/second_part/buy_but/buy_but.png' %}" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
-    
-                
+
+            <div class="zakis-buy-image">
+                <img src = "{% static '/works/zakis/second_part/buy_but/zakis_buy.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
             <div class="first-buy-border" >
                 <img src = "{% static '/works/zakis/second_part/buy_but/green.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
@@ -924,6 +938,38 @@
         })
     }
 
+    function buySwitchToEnglish() {
+        var english_buy_appears = anime({
+            targets:'.zakis-buy-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_buy = anime({
+            targets:'.text-buy-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function buyBackToRussian() {
+        var disappear_english_buy = anime({
+            targets:'.zakis-buy-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var buy_appears = anime({
+            targets:'.text-buy-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
    
     </script>
 </body>
