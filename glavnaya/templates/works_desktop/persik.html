@@ -654,7 +654,8 @@
             </div>
 
             <div class="section" id='third'>Секция 3
-                <!-- <div class="section">Секция 4</div> -->
+                
+
             </div>
 
         </div>
@@ -725,7 +726,7 @@
             var upper_hand_animation =  anime({
                 targets: '#upper_hand',
                 strokeDashoffset: [anime.setDashoffset, 0],
-                easing: 'easeInOutSine',
+                easing: 'linear',
                 duration: 13500,
             
                 direction:'alternate',
@@ -736,7 +737,7 @@
             var bottom_hand_animation =  anime({
                 targets: '#bottom_hand',
                 strokeDashoffset: [anime.setDashoffset, 0],
-                easing: 'easeInOutSine',
+                easing: 'linear',
                 duration: 20500,
                 direction:'alternate',
                 delay: function(el, i) { return i * 250 },
