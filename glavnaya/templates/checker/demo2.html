@@ -203,9 +203,6 @@
 /*  */
 /*  */
 /*  */
-/*  */
-/*  */
-/*  */
         .second_class {
             display: grid;
             grid-template-columns: repeat(100, 1fr);
@@ -290,9 +287,11 @@
             transition: color 0.2s 0s, width .3s 0.2s;
         }
 
+        /* АНИМАЦИЯ ВЫХОДА ЦВЕТА ИЗ ЛОГО */
         .morphing-btn-clone {
             position: fixed;
-            background: hsla(0, 39%, 54%, 0.356);;
+            background: url("{% static '/every_hidden_page/background.png' %}");
+            background-size: cover;
             border-radius: 50%;
             z-index: 3;
             -webkit-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
@@ -318,11 +317,8 @@
             height: 100%;
             margin: 0px; /* убирает скролл */
             overflow-x: hidden;
-            /* background: url("{% static '/works/eye/background.png' %}"); */
-            background-color: hsla(0, 39%, 54%, 0.356);
-            opacity: 5;
+            background: url("{% static '/every_hidden_page/background.png' %}");
             background-size: cover;
-            opacity: 1;
         }
 
         /* кнопка закрыть */
@@ -365,81 +361,75 @@
         #home {
             position:absolute;
             top: 1%;
-            left: 49%;
+            left: 52em;
             max-height: 220px;
             max-width: 175px;
+            margin-left:1px;
+        }
+
+        #golova {
+            position:absolute;
+            top: 15%;
+            left: 11%;
+            max-height:15%;
+            max-width:15%; 
         }
 
         #zakis {
             position:absolute;
-            top: 40%;
-            left: 1%;
+            top: 25%;
+            left: 10%;
             max-height:15%;
             max-width:15%; 
         }
 
         #glaz {
             position:absolute;
-            top: 50%;
-            left: 1%;
-            max-height:15%;
-            max-width:15%; 
-        }
-
-        #golova {
-            position:absolute;
-            top: 40%;
-            left: 45%;
+            top: 35%;
+            left: 11%;
             max-height:15%;
             max-width:15%; 
         }
 
         #space {
             position:absolute;
-            top: 52%;
-            left: 45%;
+            top: 15%;
+            right: 10%;
             max-height:15%;
             max-width:15%; 
         }
 
         #emotions {
             position:absolute;
-            top: 40%;
-            right: 1%;
+            top: 25%;
+            right: 11%;
             max-height:15%;
             max-width:15%; 
         }
 
         #ohboy {
             position:absolute;
-            top: 54%;
-            right: 1%;
-            max-height:15%;
-            max-width:15%; 
+            top: 35%;
+            right: 5%;
+            max-height: 100%;
+            max-width: 100%;
+            margin-top: -20px;
         }
 
         #inst {
             position:absolute;
             bottom: 2%;
-            left:45%;
-            max-height:75px;
-            max-width:75px;
-        }
-
-        #youtube {
-            position:absolute;
-            bottom: 2%;
-            right:45%;
-            max-height:75px;
-            max-width:75px;
+            left: 54em;
+            max-height: 5%;
+            max-width: 5%;
         }
 
         #tg {
             position:absolute;
             bottom: 2%;
-            right:39%;
-            max-height:75px;
-            max-width:75px;
+            left: 58em;
+            max-height: 5%;
+            max-width: 5%;
         }
 
         #mini_zakis {
@@ -563,17 +553,17 @@
                    
                     <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 1114.3 763.79">
                         <path stroke = 'rgb(70, 43, 226)' id = 'forward-svg'  stroke-width="1" fill = 'none' d="M1105.62,9q-.19,355.91-.8,711.8l1.09.78Q577.47,721,49,721q.17-355.84.7-711.72l-1.09-.78Q577.09,9.07,1105.62,9Z"/> 
-                        <path stroke = 'rgb(228, 213, 241)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M47.21,721.11q.18-355.91.8-711.8l-1.1-.78Q577,9.12,1107.2,9.08q-.17,355.86-.7,711.73l1.09.78Q577.43,721.05,47.21,721.11Z"/>
-                        <path stroke = 'rgb(143, 56, 194)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1107.88,722.39q-530.21-.14-1060.42-.54l-1.16.74Q47.17,365,47.13,7.43q530.15.12,1060.3.48l1.16-.74Q1107.8,364.77,1107.88,722.39Z"/>
-                        <path stroke = 'rgb(125, 67, 179)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M46,5.78q531.21.13,1062.41.55l1.16-.74q-.87,359.15-.83,718.32-531.13-.12-1062.3-.48l-1.16.74Q46.11,365,46,5.78Z"/>
+                        <path stroke = 'rgb(228, 213, 241)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M47.21,721.11q.18-355.91.8-711.8l-1.1-.78Q577,9.12,1107.2,9.08q-.17,355.86-.7,711.73l1.09.78Q577.43,721.05,47.21,721.11Z"/>
+                        <path stroke = 'rgb(143, 56, 194)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M1107.88,722.39q-530.21-.14-1060.42-.54l-1.16.74Q47.17,365,47.13,7.43q530.15.12,1060.3.48l1.16-.74Q1107.8,364.77,1107.88,722.39Z"/>
+                        <path stroke = 'rgb(125, 67, 179)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M46,5.78q531.21.13,1062.41.55l1.16-.74q-.87,359.15-.83,718.32-531.13-.12-1062.3-.48l-1.16.74Q46.11,365,46,5.78Z"/>
                         <path stroke = 'rgb(190, 116, 166)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M43.89,725.1q.18-360,.8-720l-1.1-.79q533.79.6,1067.61.56-.17,360-.71,719.94l1.1.79Q577.77,725,43.89,725.1Z"/>
                         <path stroke = 'rgb(193, 149, 235)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M1110.3,4.79q-.19,360-.81,720l1.1.79Q577.31,725,44,725q.17-360,.71-719.94l-1.1-.79Q576.92,4.86,1110.3,4.79Z"/>  
                         <path stroke = 'rgb(204, 137, 198)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M1111.87,727.38q-534.57-.12-1069.13-.55l-1.17.75q.87-362.83.83-725.71,534.5.12,1069,.49l1.17-.75Q1111.78,364.48,1111.87,727.38Z"/>
-                        <path stroke = 'rgb(170, 122, 216)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M41.48.55q535.54.38,1071.09,1l1.17-.75q-1,363.86-1.17,727.74-535.47-.36-1071-1l-1.17.75Q41.41,364.47,41.48.55Z"/> 
+                        <path stroke = 'rgb(170, 122, 216)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M41.48.55q535.54.38,1071.09,1l1.17-.75q-1,363.86-1.17,727.74-535.47-.36-1071-1l-1.17.75Q41.41,364.47,41.48.55Z"/> 
                         <path stroke = 'rgb(108, 52, 160)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M1103.88,720.39q-526.56-.14-1053.14-.54l-1.15.74q.87-355.53.82-711.1,526.5.12,1053,.47l1.15-.73Q1103.8,364.79,1103.88,720.39Z"/> 
-                        <path stroke = 'rgb(184, 129, 157)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1100.89,719q-523.58-.12-1047.16-.53l-1.14.73q.85-354.18.82-708.38,523.5.11,1047,.47l1.14-.73Q1100.8,364.8,1100.89,719Z"/> 
-                        <path stroke = 'rgb(250, 246, 248)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M54.31,717.11q.19-352.44.79-704.88L54,11.46Q577.1,12,1100.21,12q-.17,352.4-.7,704.81l1.08.77Q577.48,717.05,54.31,717.11Z"/>
-                        <path stroke = 'rgb(96, 47, 119)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1098.3,13.06q-.18,351.32-.78,702.64l1.07.76q-521.07-.57-1042.18-.54.17-351.27.69-702.57L56,12.59Q577.15,13.11,1098.3,13.06Z"/> 
+                        <path stroke = 'rgb(184, 129, 157)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M1100.89,719q-523.58-.12-1047.16-.53l-1.14.73q.85-354.18.82-708.38,523.5.11,1047,.47l1.14-.73Q1100.8,364.8,1100.89,719Z"/> 
+                        <path stroke = 'rgb(250, 246, 248)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M54.31,717.11q.19-352.44.79-704.88L54,11.46Q577.1,12,1100.21,12q-.17,352.4-.7,704.81l1.08.77Q577.48,717.05,54.31,717.11Z"/>
+                        <path stroke = 'rgb(96, 47, 119)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M1098.3,13.06q-.18,351.32-.78,702.64l1.07.76q-521.07-.57-1042.18-.54.17-351.27.69-702.57L56,12.59Q577.15,13.11,1098.3,13.06Z"/> 
                     </svg>
                     
                 </div>
@@ -634,40 +624,40 @@
                             <img src = "{% static '/every_hidden_page/elements/home.png' %}" id = 'home'>
                         </a>
                     </div>
-                        
+                    
+                    <div class = 'golova' onmouseover = golova_onmove.play() onmouseout = golova_set.play()>
+                        <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "{% static '/every_hidden_page/works/put.png' %}" id = 'golova'>
+                        </a>
+                    </div>
+
                     <div class = 'zakis' onmouseover = zakis_onmove.play() onmouseout = zakis_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline : none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/zakis_logo.png' %}" id = 'zakis'>
+                            <img src = "{% static '/every_hidden_page/works/zakis.png' %}" id = 'zakis'>
                         </a>
                     </div>
 
                     <div class = 'glaz'  onmouseover = glaz_onmove.play() onmouseout = glaz_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/glaz_logo.png' %}" id = 'glaz'>
-                        </a>
-                    </div>
-
-                    <div class = 'golova' onmouseover = golova_onmove.play() onmouseout = golova_set.play()>
-                        <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/put_logo.png' %}" id = 'golova'>
+                            <img src = "{% static '/every_hidden_page/works/glaz.png' %}" id = 'glaz'>
                         </a>
                     </div>
 
                     <div class = 'space' onmouseover = space_onmove.play() onmouseout = space_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/kosmos_logo.png' %}" id = 'space'>
+                            <img src = "{% static '/every_hidden_page/works/kosmos.png' %}" id = 'space'>
                         </a>
                     </div>
 
                     <div class = 'emotions' onmouseover = emotions_onmove.play() onmouseout = emotions_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/maski_logo.png' %}" id = 'emotions'>
+                            <img src = "{% static '/every_hidden_page/works/maski.png' %}" id = 'emotions'>
                         </a>
                     </div>
 
                     <div class = 'ohboy' onmouseover = ohboy_onmove.play() onmouseout = ohboy_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/vibe_logo.png' %}" id = 'ohboy'>
+                            <img src = "{% static '/every_hidden_page/works/vibe.png' %}" id = 'ohboy'>
                         </a>
                     </div>
                         
@@ -677,15 +667,9 @@
                         </a>
                     </div>
 
-                    <div class = 'youtube'>
-                        <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/elements/yt_logo.png' %}" id = 'youtube'>
-                        </a>
-                    </div>
-
                     <div class = 'tg'>
                         <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/elements/telega.png' %}" id = 'tg'>
+                            <img src = "{% static '/every_hidden_page/elements/th-new.png' %}" id = 'tg'>
                         </a>
                     </div>
 
@@ -853,7 +837,6 @@
         })
 
     }
-
 
     function materialsSwitchToEnglish() {
         var english_materials_appears = anime({
