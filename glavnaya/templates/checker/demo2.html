@@ -367,7 +367,7 @@
             margin-left:1px;
         }
 
-        #golova {
+        #put {
             position:absolute;
             top: 15%;
             left: 11%;
@@ -391,7 +391,7 @@
             max-width:15%; 
         }
 
-        #space {
+        #kosmos {
             position:absolute;
             top: 15%;
             right: 10%;
@@ -399,7 +399,7 @@
             max-width:15%; 
         }
 
-        #emotions {
+        #maski {
             position:absolute;
             top: 25%;
             right: 11%;
@@ -625,9 +625,9 @@
                         </a>
                     </div>
                     
-                    <div class = 'golova' onmouseenter = golova_onmove.play() onmouseleave = golova_set.play()>
+                    <div class = 'put' onmouseenter = put_onmove.play() onmouseleave = put_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/put.png' %}" id = 'golova'>
+                            <img src = "{% static '/every_hidden_page/works/put.png' %}" id = 'put'>
                         </a>
                     </div>
 
@@ -643,15 +643,15 @@
                         </a>
                     </div>
 
-                    <div class = 'space' onmouseenter = space_onmove.play() onmouseleave = space_set.play()>
+                    <div class = 'kosmos' onmouseenter = kosmos_onmove.play() onmouseleave = kosmos_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/kosmos.png' %}" id = 'space'>
+                            <img src = "{% static '/every_hidden_page/works/kosmos.png' %}" id = 'kosmos'>
                         </a>
                     </div>
 
-                    <div class = 'emotions' onmouseenter = emotions_onmove.play() onmouseleave = emotions_set.play()>
+                    <div class = 'maski' onmouseenter = maski_onmove.play() onmouseleave = maski_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/maski.png' %}" id = 'emotions'>
+                            <img src = "{% static '/every_hidden_page/works/maski.png' %}" id = 'maski'>
                         </a>
                     </div>
 
@@ -1000,34 +1000,34 @@
         autoplay:false,
     })
 
-    var golova_set = anime({
+    var put_set = anime({
         targets:'#mini_put',
         opacity:0,
         autoplay:false,
     })
-    var golova_onmove = anime({
+    var put_onmove = anime({
         targets: '#mini_put',
         opacity:1,
         autoplay:false,
     })
 
-    var space_set = anime({
+    var kosmos_set = anime({
         targets:'#mini_kosmos',
         opacity:0,
         autoplay:false,
     })
-    var space_onmove = anime({
+    var kosmos_onmove = anime({
         targets: '#mini_kosmos',
         opacity:1,
         autoplay:false,
     })
 
-    var emotions_set = anime({
+    var maski_set = anime({
         targets:'#mini_maski',
         opacity:0,
         autoplay:false,
     })
-    var emotions_onmove = anime({
+    var maski_onmove = anime({
         targets: '#mini_maski',
         opacity:1,
         autoplay:false,
