@@ -434,38 +434,38 @@
 
         #mini_zakis {
             position:absolute;
-            top:34%;
-            left: 17%;
+            top: 37%;
+            left: 37%;
         }
         
         #mini_glaz {
             position:absolute;
-            top: 45%;
-            left: 17%;
+            top: 37%;
+            left: 32%;
         }
 
-        #mini_golova {
+        #mini_put {
             position:absolute;
             top: 35%;
-            left: 36%;
+            left: 37%;
         }
 
-        #mini_space {
+        #mini_kosmos {
             position:absolute;
-            top: 49%;
-            left: 61%;
+            top: 37%;
+            left: 37%;
         }
         
-        #mini_emotions {
+        #mini_maski {
             position:absolute;
-            top: 34%;
-            left: 75%;
+            top: 37%;
+            left: 37%;
         }
 
-        #mini_ohboy {
+        #mini_vibe {
             position:absolute;
-            top: 50%;
-            left: 75%;
+            top: 37%;
+            left: 37%;
         }
 
     </style>
@@ -625,37 +625,37 @@
                         </a>
                     </div>
                     
-                    <div class = 'golova' onmouseover = golova_onmove.play() onmouseout = golova_set.play()>
+                    <div class = 'golova' onmouseenter = golova_onmove.play() onmouseleave = golova_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
                             <img src = "{% static '/every_hidden_page/works/put.png' %}" id = 'golova'>
                         </a>
                     </div>
 
-                    <div class = 'zakis' onmouseover = zakis_onmove.play() onmouseout = zakis_set.play()>
+                    <div class = 'zakis' onmouseenter = zakis_onmove.play() onmouseleave = zakis_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline : none; color: inherit; text-decoration: none;'>
                             <img src = "{% static '/every_hidden_page/works/zakis.png' %}" id = 'zakis'>
                         </a>
                     </div>
 
-                    <div class = 'glaz'  onmouseover = glaz_onmove.play() onmouseout = glaz_set.play()>
+                    <div class = 'glaz'  onmouseenter = glaz_onmove.play() onmouseleave = glaz_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
                             <img src = "{% static '/every_hidden_page/works/glaz.png' %}" id = 'glaz'>
                         </a>
                     </div>
 
-                    <div class = 'space' onmouseover = space_onmove.play() onmouseout = space_set.play()>
+                    <div class = 'space' onmouseenter = space_onmove.play() onmouseleave = space_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
                             <img src = "{% static '/every_hidden_page/works/kosmos.png' %}" id = 'space'>
                         </a>
                     </div>
 
-                    <div class = 'emotions' onmouseover = emotions_onmove.play() onmouseout = emotions_set.play()>
+                    <div class = 'emotions' onmouseenter = emotions_onmove.play() onmouseleave = emotions_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
                             <img src = "{% static '/every_hidden_page/works/maski.png' %}" id = 'emotions'>
                         </a>
                     </div>
 
-                    <div class = 'ohboy' onmouseover = ohboy_onmove.play() onmouseout = ohboy_set.play()>
+                    <div class = 'ohboy' onmouseenter = ohboy_onmove.play() onmouseleave = ohboy_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
                             <img src = "{% static '/every_hidden_page/works/vibe.png' %}" id = 'ohboy'>
                         </a>
@@ -674,12 +674,12 @@
                     </div>
 
                     <!-- POP-UP IMAGES -->
-                    <img src = "{% static '/every_hidden_page/works/photoes/eye.png' %}" id = 'mini_zakis'>
+                    <img src = "{% static '/every_hidden_page/works/photoes/zakis.png' %}" id = 'mini_zakis'>
                     <img src = "{% static '/every_hidden_page/works/photoes/eye.png' %}" id = 'mini_glaz'>
-                    <img src = "{% static '/every_hidden_page/works/photoes/eye.png' %}" id = 'mini_golova'>
-                    <img src = "{% static '/every_hidden_page/works/photoes/eye.png' %}" id = 'mini_space'>
-                    <img src = "{% static '/every_hidden_page/works/photoes/eye.png' %}" id = 'mini_emotions'>
-                    <img src = "{% static '/every_hidden_page/works/photoes/eye.png' %}" id = 'mini_ohboy'>
+                    <img src = "{% static '/every_hidden_page/works/photoes/golova.png' %}" id = 'mini_put'>
+                    <img src = "{% static '/every_hidden_page/works/photoes/kosmos.png' %}" id = 'mini_kosmos'>
+                    <img src = "{% static '/every_hidden_page/works/photoes/maski.png' %}" id = 'mini_maski'>
+                    <img src = "{% static '/every_hidden_page/works/photoes/vibe.png' %}" id = 'mini_vibe'>
 
                         
             </div>
@@ -973,7 +973,7 @@
 
     // LOGO PAGE STARTS HERE
 
-    var minis = ['#mini_zakis', '#mini_glaz', '#mini_golova', '#mini_space', "#mini_emotions", '#mini_ohboy']
+    var minis = ['#mini_zakis', '#mini_glaz', '#mini_put', '#mini_kosmos', "#mini_maski", '#mini_vibe']
     var minis_set = anime.set(minis,{
         opacity:0,
     })
@@ -1001,45 +1001,45 @@
     })
 
     var golova_set = anime({
-        targets:'#mini_golova',
+        targets:'#mini_put',
         opacity:0,
         autoplay:false,
     })
     var golova_onmove = anime({
-        targets: '#mini_golova',
+        targets: '#mini_put',
         opacity:1,
         autoplay:false,
     })
 
     var space_set = anime({
-        targets:'#mini_space',
+        targets:'#mini_kosmos',
         opacity:0,
         autoplay:false,
     })
     var space_onmove = anime({
-        targets: '#mini_space',
+        targets: '#mini_kosmos',
         opacity:1,
         autoplay:false,
     })
 
     var emotions_set = anime({
-        targets:'#mini_emotions',
+        targets:'#mini_maski',
         opacity:0,
         autoplay:false,
     })
     var emotions_onmove = anime({
-        targets: '#mini_emotions',
+        targets: '#mini_maski',
         opacity:1,
         autoplay:false,
     })
 
     var ohboy_set = anime({
-        targets:'#mini_ohboy',
+        targets:'#mini_vibe',
         opacity:0,
         autoplay:false,
     })
     var ohboy_onmove = anime({
-        targets: '#mini_ohboy',
+        targets: '#mini_vibe',
         opacity:1,
         autoplay:false,
     })    
