@@ -17,64 +17,55 @@
             display: inline-block;
             font-size: 3em;
             z-index: 1;
-            min-width: 100vmin;
-            min-height: 100vmin;
+            min-width: 100vw;
+            min-height: 100vh;
         }
 
         #first {
             background: url("{% static '/homepage/backs.png' %}");
             background-size: cover;
-            padding:1px;
-            
+            display:grid;
+            min-width: 100vw;
+            min-height: 100vh;
         }
 
-        /* .first_slide_wrapper {
+        .first_slide_wrapper {
             display: grid;
             grid-template-columns: repeat(100, 1fr);
             grid-template-rows: repeat(100, 1fr);
             overflow: hidden;
-            min-width: 100vmin;
-            min-height: 100vmin;
-        } */
+            min-width: 100vw;
+            min-height: 100vh;
+        }
 
         .animated_logo {
-            min-width: 90vmin;
-            min-height: 90vmin;
-            max-width: 90vmin;
-            max-height: 90vmin;
+            grid-column-start: 1;
+            grid-column-end: 90;
+            grid-row-start: 1;
+            grid-row-end: 90;
             overflow: hidden;
-            padding:1px;
         }
 
         .autor {
-            display:inline-block;
-            position:fixed;
-            top:20;
-            min-width: 40vmin;
-            min-height: 30vmin;
-            max-width: 30vmin;
-            max-height: 40vmin;
+            grid-column-start: 92;
+            grid-column-end: 99;
+            grid-row-start: 29;
+            grid-row-end: 31;
         }
 
         .margarita {
             display:inline-block;
-            position:fixed;
-            top:80%;
-            left: 90%; 
-            min-width: 30vmin;
-            min-height: 40vmin;
-            max-width: 30vmin;
-            max-height: 40vmin;
+            grid-column-start: 89;
+            grid-column-end: 99;
+            grid-row-start: 31;
+            grid-row-end: 33;
         }
 
         .sogrina {
-            display:inline-block;
-            
-            min-width: 30vmin;
-            min-height: 40vmin;
-            max-width: 30vmin;
-            max-height: 40vmin;
-           
+            grid-column-start: 91;
+            grid-column-end: 99;
+            grid-row-start: 32;
+            grid-row-end: 34;
         }
 
         #second_slide1 {
@@ -313,8 +304,8 @@
     <body>
 
         <div id="fullpage">
-            <div class="section" id='first'>
-                
+            <div class="section fp-auto-height-responsive" id='first'>
+                <div class ='first_slide_wrapper'>
 
                     <div class="animated_logo">
                     
@@ -567,7 +558,7 @@
                         <img  src = "{% static '/homepage/first_slide/sogrina.png' %}" style = 'max-width:100%; max-height:100%;'>
                     </div>
 
-                
+                </div>
             </div>
 
             <div class="section" id='second'>
@@ -709,7 +700,7 @@
                         </div>
 
                         <div class = 'image_second_slide_second_box'>
-                            <img  src = "{% static '/homepage/second_slide/vibe.png' %}" style = 'object-fit: cover; width: 100%; max-height: 100%; margin-top: 25px;'>
+                            <img  src = "{% static '/homepage/second_slide/vibe.png' %}" style = 'object-fit: cover; width: 100%; max-height: 100%;margin-top: 25px;'>
                         </div>
 
                         <div class = 'image_second_slide_third_box'>
@@ -792,7 +783,6 @@
         <script>
             $('#fullpage').fullpage({
                 sectionsColor: ['#ADD8E6', '#FCA7A7', '#C0C0C0', '#ADD8E6'],
-            
             });
 
             var motionPath = anime({
