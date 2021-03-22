@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-{% load static %}
-<html>
+<html lang="en" class="no-js">
 
 <head>
-    <meta charset="utf-8">
-    <title>eye</title>
-    <link rel='stylesheet' href="{% static 'fullpage.min.css' %}">
-</head>
+    <meta charset="UTF-8" content="width=device-width, user-scalable=no"/>
+    <title>НУ ЧТО ПОЛЕТЕЛИ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> 
 
+</head>
+{% load static %}
 
 <body>
-    <style>
-        
+    <style> 
         html,
         body {
             position:static;
@@ -19,274 +18,1197 @@
             height: 100%;
             margin: 0px; /* убирает скролл */
             overflow-x: hidden;
-            background: url("{% static '/stonehenge/background/eye_f.png' %}");
+            background: url("{% static '/works/eye/background.png' %}");
             background-size: cover;
         }
-        .two_part {
+        
+        .container {
+            
             display:grid;
             grid-template-columns: 35fr 65fr;
+            grid-template-rows:100;
+            width: 100vw;
+            height: 100vh;
         }
         
-        .border_up {
-            grid-area: up_border;
+        .first_class {
+            display: grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
+            overflow: hidden;
         }
 
-        .border_bottom {
-            grid-area: bottom_border;
+        .razmer-image {
+            grid-column-start: 8;
+            grid-column-end: 40;
+            grid-row-start: 10;
+            grid-row-end: 16;
+            overflow: hidden;
+            z-index:2;
         }
 
-        .border_left {
-            grid-area: left_border;
+        .razmer-english-image {
+            grid-column-start: 8;
+            grid-column-end: 38;
+            grid-row-start: 10;
+            grid-row-end: 15;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
         }
 
-        .border_right {
-            grid-area: right_border;
+        .cifri-image{
+            grid-column-start: 18;
+            grid-column-end: 40;
+            grid-row-start: 16;
+            grid-row-end: 22;
+            overflow: hidden;
         }
 
-        .arrow_left {
-            grid-area: arrow_left;
+        .materials-image {
+            grid-column-start: 8;
+            grid-column-end: 52;
+            grid-row-start: 30;
+            grid-row-end: 36;
+            overflow: hidden;
+            z-index:2;
         }
 
-        .arrow_right {
-            grid-area: right_arrow;
-            align-items: center;
+        .materials-english-image {
+            grid-column-start: 8;
+            grid-column-end: 52;
+            grid-row-start: 30;
+            grid-row-end: 36;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
         }
 
-        .arrow_left {
-            grid-area: left_arrow;
+        .farfor-image {
+            grid-column-start: 18;
+            grid-column-end: 40;
+            grid-row-start: 36;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .farfor-english-image {
+            grid-column-start: 18;
+            grid-column-end: 40;
+            grid-row-start: 36;
+            grid-row-end: 39;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
+        }
+
+        .akril-image {
+            grid-column-start: 18;
+            grid-column-end: 72;
+            grid-row-start: 42;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index:2;
+        }   
+
+        .akril-english-image {
+            grid-column-start: 18;
+            grid-column-end: 72;
+            grid-row-start: 42;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index:1;
+            opacity:0
+        }
+
+        .cena-image {
+            grid-column-start: 8;
+            grid-column-end: 40;
+            grid-row-start: 51;
+            grid-row-end: 57;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .cena-english-image {
+            grid-column-start: 8;
+            grid-column-end:35;
+            grid-row-start: 51;
+            grid-row-end: 57;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        .price-image {
+            grid-column-start: 18;
+            grid-column-end: 35;
+            grid-row-start: 58;
+            grid-row-end: 63;
+            overflow: hidden;
+        }
+
+        .button-image {
+            grid-column-start: 26;
+            grid-column-end: 84;
+            grid-row-start: 74;
+            grid-row-end: 96;
+            overflow: hidden;
+        }
+
+        .text-buy-image {
+            grid-column-start: 40;
+            grid-column-end: 72;
+            grid-row-start: 82;
+            grid-row-end: 90;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .glaz-buy-image {
+            grid-column-start: 44;
+            grid-column-end: 70;
+            grid-row-start: 82;
+            grid-row-end: 88;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .first-buy-border {
+            grid-column-start: 26;
+            grid-column-end: 84;
+            grid-row-start: 70;
+            grid-row-end: 96;
+            overflow: hidden;
+        }
+
+        .second-buy-border {
+            grid-column-start: 28;
+            grid-column-end: 86;
+            grid-row-start: 68;
+            grid-row-end: 94;
+            overflow: hidden;
+        }
+        
+        .third-buy-border {
+            grid-column-start: 32;
+            grid-column-end: 90;
+            grid-row-start: 74;
+            grid-row-end: 100;
+            overflow: hidden;
+        }
+
+/*  */
+/*  */
+/*  */
+        .second_class {
+            display: grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
+            overflow: hidden;
+        }
+
+        .nazvanie {
+            grid-column-start: 75;
+            grid-column-end: 95;
+            grid-row-start: 4;
+            grid-row-end: 20;
+            overflow: hidden;
+        }
+
+        .borders {
+            grid-column-start: 3;
+            grid-column-end: 90;
+            grid-row-start: 16;
+            grid-row-end: 95;
+            overflow: hidden;
+    
         }
 
         .image_slider {
-            grid-area: image_slider;
-            align-items:center;
+            grid-column-start: 12;
+            grid-column-end: 85;
+            grid-row-start: 18;
+            grid-row-end: 81;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .second_half {
-           display:grid;
-           grid-template-columns: 5fr 5fr 80fr 5fr 5fr;
-           /* grid-template-rows: 5fr 55fr 5fr; */
-           grid-template-areas:
-           "up_border up_border up_border up_border up_border"
-           "left_border left_arrow image_slider right_arrow right_border"
-           "bottom_border bottom_border bottom_border bottom_border bottom_border ";
-           align-items: center;
+        .arrow_left { 
+            grid-column-start: 8;
+            grid-column-end:12;
+            grid-row-start:51;
+            grid-row-end:60;
+        }
+
+        .arrow_right { 
+            grid-column-start: 84;
+            grid-column-end: 88;
+            grid-row-start:51;
+            grid-row-end:60;
+        }
+
+        .logotip {
+            grid-column-start: 90;
+            grid-column-end: 100;
+            grid-row-start: 89;
+            grid-row-end:99;
+        }
+
+        .morphing-btn-wrap {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+        }
+
+        .morphing-btn {
+            -webkit-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
+            -moz-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
+            -o-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
+            transition: color 0.3s 0.2s, width 0.2s 0s;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .morphing-btn_circle {
+            color: transparent !important;
+            padding-left: 0;
+            padding-right: 0;
+            width: 35.6px !important;
+
+            /* Override inline style rule */
+            -webkit-transition: color 0.2s 0s, width .3s 0.2s;
+            -moz-transition: color 0.2s 0s, width .3s 0.2s;
+            -o-transition: color 0.2s 0s, width .3s 0.2s;
+            transition: color 0.2s 0s, width .3s 0.2s;
+        }
+
+        /* АНИМАЦИЯ ВЫХОДА ЦВЕТА ИЗ ЛОГО */
+        .morphing-btn-clone {
+            position: fixed;
+            background: url("{% static '/every_hidden_page/background.png' %}");
+            background-size: cover;
+            border-radius: 50%;
+            z-index: 3;
+            -webkit-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+            -moz-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+            -o-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+            transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .morphing-btn-clone_visible {
+            display: block;
+            -webkit-transform: scale(1) !important;
+            -moz-transform: scale(1) !important;
+            -ms-transform: scale(1) !important;
+            -o-transform: scale(1) !important;
+            transform: scale(1) !important;
+        }
+
+        .fancybox-morphing .fancybox-bg {
+            position:static;
+            width: 100%;
+            height: 100%;
+            margin: 0px; /* убирает скролл */
+            overflow-x: hidden;
+            background: url("{% static '/every_hidden_page/background.png' %}");
+            background-size: cover;
+        }
+
+        /* кнопка закрыть */
+        .fancybox-morphing .fancybox-toolbar {
+            top: 20px;
+            right: 40px;
+        }
+
+        .fancybox-morphing .fancybox-button--close {
+            /* background: rgba(0, 0, 0, 0.2); */
+            border-radius: 50%;
+            color: #fff;
+        }
+
+        .fancybox-morphing .fancybox-button--close::after, 
+        .fancybox-morphing .fancybox-button--close::before {
+            height: 1.55px;
+            width: 22px;
+            left: calc(50% - 11px);
+        }
+
+        .fancybox-morphing .fancybox-button--close:hover {
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        #morphing-content {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: transparent;
+            color: black;
+            line-height: 1;
+            z-index: 3;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow:hidden;
+            max-width:100%;max-height:100%;min-width:100%;min-height:100%;
+        }
+
+        #home {
+            position:absolute;
+            top: 1%;
+            left: 52em;
+            max-height: 220px;
+            max-width: 175px;
+            margin-left:1px;
+        }
+
+        #put {
+            position:absolute;
+            top: 15%;
+            left: 11%;
+            max-height:15%;
+            max-width:15%; 
+        }
+
+        #zakis {
+            position:absolute;
+            top: 25%;
+            left: 10%;
+            max-height:15%;
+            max-width:15%; 
+        }
+
+        #glaz {
+            position:absolute;
+            top: 35%;
+            left: 11%;
+            max-height:15%;
+            max-width:15%; 
+        }
+
+        #kosmos {
+            position:absolute;
+            top: 15%;
+            right: 10%;
+            max-height:15%;
+            max-width:15%; 
+        }
+
+        #maski {
+            position:absolute;
+            top: 25%;
+            right: 11%;
+            max-height:15%;
+            max-width:15%; 
+        }
+
+        #ohboy {
+            position:absolute;
+            top: 35%;
+            right: 5%;
+            max-height: 100%;
+            max-width: 100%;
+            margin-top: -20px;
+        }
+
+        #inst {
+            position:absolute;
+            bottom: 2%;
+            left: 54em;
+            max-height: 5%;
+            max-width: 5%;
+        }
+
+        #tg {
+            position:absolute;
+            bottom: 2%;
+            left: 58em;
+            max-height: 5%;
+            max-width: 5%;
+        }
+
+        #mini_zakis {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+        
+        #mini_glaz {
+            position:absolute;
+            top: 37%;
+            left: 32%;
+        }
+
+        #mini_put {
+            position:absolute;
+            top: 35%;
+            left: 37%;
+        }
+
+        #mini_kosmos {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+        
+        #mini_maski {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+
+        #mini_vibe {
+            position:absolute;
+            top: 37%;
+            left: 37%;
         }
 
     </style>
 
+    <div class="container">
+        <div class="first_class">
 
-    <body>
-        <div class = 'two_part'>
-            <div class='first_half'>
-    
-            <div class="logo">
-                <img src = "{% static '/works/eye/hyhy.png' %}" style = 'position:absolute; top: 6vh; left: 55vh;min-width: 10vh;min-height: 10vh;max-width: 10vh;max-height: 10vh; overflow:hidden;' onclick = 'logo()'>
+            <div class="razmer-image">
+                <img src = "{% static '/works/eye/first_part/text/razmer.png' %}" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
-    
-            <h2 style = 'font-size:4.5em; text-align:left'>EYE</h2>
-            <table>
-                <tr>
-                    <td>РАЗМЕР:</td>
-                    <td>25</td> 
-                </tr>
-                <tr>
-                    <th>МАТЕРИАЛ: </th>
-                    <th>ФАРФОР</th>
-                </tr>
-                <tr>
-                    <td> ЧЕТО</td>
-                    <td>НУЖНО  НАПИСАТЬ </td>
-                </tr>
-            </table>
+            
+            <div class="razmer-english-image">
+                <img src = "{% static '/works/eye/first_part/text/english/razmer-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
 
-
-            <div class = 'second_half'>
-                
-                <div class = 'border_left' style = 'margin-top:-5px; overflow:hidden;'>
-
-                    <svg id = 'demo-svg' width="6" height="900" style = 'float: left'>
-                        <path stroke = 'rgb(103, 21, 141)' stroke-width="10" fill = 'none' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg>
-           
-                    <svg id = 'demo-svg' width="6" height="900" style = 'float: left'>
-                        <path stroke = 'rgb(74, 17, 100)' stroke-width="10"  fill = 'none' style = 'margin-left: 10px;' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg>
-
-                    <svg id = 'demo-svg' width="6" height="900" style = 'float: left'>
-                        <path stroke = 'rgb(118, 8, 168)' stroke-width="10" fill = 'none' style = 'margin-left: 10px;' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg>
-                    
-                    <svg id = 'demo-svg' width="6" height="900" style = 'float: left'>
-                        <path stroke = 'rgb(103, 21, 141)' stroke-width="10" fill = 'none' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg>
-           
-                    <svg id = 'demo-svg' width="6" height="900" style = 'float: left'>
-                        <path stroke = 'rgb(74, 17, 100)' stroke-width="10" fill = 'none' style = 'margin-left: 10px;' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg>
-
-                    <svg id = 'demo-svg' width="6" height="900" style = 'float: left'>
-                        <path stroke = 'rgb(118, 8, 168)' stroke-width="10" fill = 'none' style = 'margin-left: 10px;' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg>
-                </div>
-
-
-                <div class = 'border_up'>
-
-                    <svg id = 'demo-svg' width="1000" height="3">
-                        <path stroke = 'rgb(78, 31, 100)' stroke-width="20" fill = 'none' style = 'margin-left: 10px;' d = 'M1.45,12.19,741.5,8.6,1477.78,5l415.33-2a1.5,1.5,0,0,0,0-3l-740,3.6L416.78,7.17,1.45,9.19a1.5,1.5,0,0,0,0,3Z'></path>
-                    </svg>
-
-                    
-                </div>
-
-                
-                <div class = 'arrow_left' style = 'position:relative; justify-content: center;'>
-                    <img src = "{% static '/works/eye/arirow.png' %}" style = 'position:absolute;top:0; '  onclick="prev();gadina()">
-                </div>
-                
-
-                <div class = 'image_slider' style = 'position:relative; max-height: 90vh; min-width: 100%; overflow:hidden;justify-content: center;' >
-                    
-                    <div class = 'first_image' > 
-                        <img src = "{% static '/works/eye/eye_1.png' %}" id='first_image' alt="" class = 'slider-img' style = 'max-height: 89vh; min-width: 100%; overflow:hidden; margin:center;'>
-                    </div>
-
-                </div>
-
-                <div class = 'arrow_right' style = 'position:relative; justify-content: center;'>
-                    <img src = "{% static '/works/eye/arrow--rig.png' %}" id='arrow_first' style = 'position:absolute' onclick="next();gadina()">
-                </div>
-
-                <div class = 'border_right' style = 'overflow:hidden;margin-left:25px;'>
-                    
-                    <svg id = 'demo-svg' width="1" height="900" style = 'float: left; margin-left:1px; margin-top:-5px;'>
-                        <path stroke = 'rgb(103, 21, 141)' stroke-width="20" fill = 'none' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg>
-<!--            
-                    <svg id = 'demo-svg' width="1" height="900" style = 'float: left; margin-left:1px;'>
-                        <path stroke = 'rgb(74, 17, 100)' stroke-width="20" fill = 'none' style = 'margin-left: 10px;' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg>
-
-                    <svg id = 'demo-svg' width="1" height="900" style = 'float: left; margin-left:1px;'>
-                        <path stroke = 'rgb(118, 8, 168)' stroke-width="20" fill = 'none' style = 'margin-left: 10px;' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg>
-
-                    <svg id = 'demo-svg' width="1" height="900" style = 'float: left; margin-left:1px;'>
-                        <path stroke = 'rgb(103, 21, 141)' stroke-width="20" fill = 'none' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg>
-           
-                    <svg id = 'demo-svg' width="1" height="900" style = 'float: left; margin-left:1px;'>
-                        <path stroke = 'rgb(74, 17, 100)' stroke-width="20" fill = 'none' style = 'margin-left: 10px;' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg>
-
-                    <svg id = 'demo-svg' width="1" height="900" style = 'float: left; margin-left:1px;'>
-                        <path stroke = 'rgb(74, 17, 100)' stroke-width="20" fill = 'none' style = 'margin-left: 10px;' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg>
-
-                    <svg id = 'demo-svg' width="1" height="900" style = 'float: left; margin-left:1px;'>
-                        <path stroke = 'rgb(74, 17, 100)' stroke-width="20" fill = 'none' style = 'margin-left: 10px;' d = 'M1.1,18.11Q0,500.08,0,982q0,479.49,1.21,959,.66,270.49,1.69,541c.09,24.12,37.59,24.17,37.5,0q-1.83-482-2.51-963.92-.68-479.5-.19-959,.27-270.5.9-541C38.66-6,1.16-6,1.1,18.11Z'></path>
-                    </svg> -->
-                    
-                    
-                </div>
-                
-                <div class = 'border_bottom'>
-                    
-                    <svg id = 'demo-svg' width="1000" height="3">
-                        <path stroke = 'rgb(78, 31, 100)' stroke-width="20" fill = 'none' style = 'margin-left: 10px;' d = 'M1.45,12.19,741.5,8.6,1477.78,5l415.33-2a1.5,1.5,0,0,0,0-3l-740,3.6L416.78,7.17,1.45,9.19a1.5,1.5,0,0,0,0,3Z'></path>
-                    </svg>
-
-                </div>
-
+            <div class="cifri-image">
+                <img src = "{% static '/works/eye/first_part/text/25.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
+
+            <div class="materials-image">
+                <img src = "{% static '/works/eye/first_part/text/materials.png' %}"  onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="materials-english-image">
+                <img src = "{% static '/works/eye/first_part/text/english/materials-english.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="farfor-image">
+                <img src = "{% static '/works/eye/first_part/text/farfor.png' %}" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="farfor-english-image">
+                <img src = "{% static '/works/eye/first_part/text/english/farfor-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="akril-image">
+                <img src = "{% static '/works/eye/first_part/text/akril.png' %}" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="akril-english-image">
+                <img src = "{% static '/works/eye/first_part/text/english/akril-english.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="cena-image">
+                <img src = "{% static '/works/eye/first_part/text/cena.png' %}" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="cena-english-image">
+                <img src = "{% static '/works/eye/first_part/text/english/cena-english.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="price-image">
+                <img src = "{% static '/works/eye/first_part/text/price.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="button-image">
+                <img src = "{% static '/works/eye/first_part/buy_but/eye-btn.png' %}"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="text-buy-image" >
+                <img src = "{% static '/works/eye/first_part/buy_but/butbuttton.png' %}" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="glaz-buy-image">
+                <img src = "{% static '/works/eye/first_part/buy_but/glaz_buy.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+            
+            <div class="first-buy-border" >
+                <img src = "{% static '/works/eye/first_part/buy_but/white-border.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="second-buy-border">
+                <img src = "{% static '/works/eye/first_part/buy_but/red-border.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+            
+            <div class="third-buy-border">
+                <img src = "{% static '/works/eye/first_part/buy_but/blue-border.png' %}" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
 
         </div>
+        
+        <div class="second_class">
+                <div class="borders">
+                   
+                    <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 1114.3 763.79">
+                        <path stroke = 'rgb(70, 43, 226)' id = 'forward-svg'  stroke-width="1" fill = 'none' d="M1105.62,9q-.19,355.91-.8,711.8l1.09.78Q577.47,721,49,721q.17-355.84.7-711.72l-1.09-.78Q577.09,9.07,1105.62,9Z"/> 
+                        <path stroke = 'rgb(228, 213, 241)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M47.21,721.11q.18-355.91.8-711.8l-1.1-.78Q577,9.12,1107.2,9.08q-.17,355.86-.7,711.73l1.09.78Q577.43,721.05,47.21,721.11Z"/>
+                        <path stroke = 'rgb(143, 56, 194)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M1107.88,722.39q-530.21-.14-1060.42-.54l-1.16.74Q47.17,365,47.13,7.43q530.15.12,1060.3.48l1.16-.74Q1107.8,364.77,1107.88,722.39Z"/>
+                        <path stroke = 'rgb(125, 67, 179)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M46,5.78q531.21.13,1062.41.55l1.16-.74q-.87,359.15-.83,718.32-531.13-.12-1062.3-.48l-1.16.74Q46.11,365,46,5.78Z"/>
+                        <path stroke = 'rgb(190, 116, 166)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M43.89,725.1q.18-360,.8-720l-1.1-.79q533.79.6,1067.61.56-.17,360-.71,719.94l1.1.79Q577.77,725,43.89,725.1Z"/>
+                        <path stroke = 'rgb(193, 149, 235)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M1110.3,4.79q-.19,360-.81,720l1.1.79Q577.31,725,44,725q.17-360,.71-719.94l-1.1-.79Q576.92,4.86,1110.3,4.79Z"/>  
+                        <path stroke = 'rgb(204, 137, 198)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M1111.87,727.38q-534.57-.12-1069.13-.55l-1.17.75q.87-362.83.83-725.71,534.5.12,1069,.49l1.17-.75Q1111.78,364.48,1111.87,727.38Z"/>
+                        <path stroke = 'rgb(170, 122, 216)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M41.48.55q535.54.38,1071.09,1l1.17-.75q-1,363.86-1.17,727.74-535.47-.36-1071-1l-1.17.75Q41.41,364.47,41.48.55Z"/> 
+                        <path stroke = 'rgb(108, 52, 160)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M1103.88,720.39q-526.56-.14-1053.14-.54l-1.15.74q.87-355.53.82-711.1,526.5.12,1053,.47l1.15-.73Q1103.8,364.79,1103.88,720.39Z"/> 
+                        <path stroke = 'rgb(184, 129, 157)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M1100.89,719q-523.58-.12-1047.16-.53l-1.14.73q.85-354.18.82-708.38,523.5.11,1047,.47l1.14-.73Q1100.8,364.8,1100.89,719Z"/> 
+                        <path stroke = 'rgb(250, 246, 248)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M54.31,717.11q.19-352.44.79-704.88L54,11.46Q577.1,12,1100.21,12q-.17,352.4-.7,704.81l1.08.77Q577.48,717.05,54.31,717.11Z"/>
+                        <path stroke = 'rgb(96, 47, 119)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M1098.3,13.06q-.18,351.32-.78,702.64l1.07.76q-521.07-.57-1042.18-.54.17-351.27.69-702.57L56,12.59Q577.15,13.11,1098.3,13.06Z"/> 
+                    </svg>
+                    
+                </div>
+               
+                <div class="nazvanie">
+                    <img src = "{% static '/works/eye/second_part/glaz_logo.png' %}" style = 'max-width:100%;max-height:100%;'>
+                </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-
-        <script>
-
-            var slider_img = document.querySelector('.slider-img');
-            var images = ['eye_1.png','eye_2.png', 'eye_3.png', 'eye_4.png', 'eye_5.png'];
-            var i =0; //Current image
-
-            function prev() {
-                if (i<=0) i = images.length;
-                b=i
-                i--;
-                return setImg();
-            }
-
-            function next() {
-                if (i >= images.length - 1) i = -1;
-                b = i
-                i++;
-                return setImg();
-            }
-
-            function setImg(){
-                return slider_img.setAttribute('src', "{% static '/works/eye/' %}" + images[i])
-            }
-
-            function gadina(){    
-                var brawl = anime({
-                    targets: '.image_slider',
-                    opacity: {
-                        value:[0,1],
-                        duration:900,
-                    },
-                    autoplay:false,
-                    loop:false,
-                }).play()
-            }
-            
-            function logo(){
-                
-                var bear = anime({
-                    targets: '.logo',
-                    scale: 1.2,
-                    translateX:-15,
-                    autoplay:false,
-                    loop:true,
-                }).play()
-            }
-
-            function borders(){
+                <div class="image_slider">
+                    
+                    <a href = "{% static '/works/eye/second_part/big_slideshow/1.png' %}"
      
-                var gorodpod = anime({
-                    targets:'.beware',
-                    // translateY:45,
-                    width:'110.6vh',
-                    duration:8000,
-                    easing: 'linear',
-                    autoplay:false,
-                }).play()
-            }
-            borders()
+                    data-fancybox="images-preview" 
+                    data-width="2100" data-height="900"
+                    data-thumb="{% static '/works/eye/second_part/big_slideshow/minis/1.png' %}">
 
-        var war =  anime({
-            targets: ['#demo-svg path','#demo-svg_second path'],
-            strokeDashoffset: [anime.setDashoffset, 0],
+                        <img src = "{% static '/works/eye/second_part/main_slideshow/pics/01eye.png' %}"  class = 'slider-img' style = 'position:relative; margin-top:9.7%; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
+                    </a>
+
+                    <div style="display: none;">
+                        <a href="{% static '/works/eye/second_part/big_slideshow/2.png' %}" data-fancybox="images-preview" 
+                           data-width="1600" data-height="900" style = 'background-color: black;'
+                           data-thumb="{% static '/works/eye/second_part/big_slideshow/minis/2.png' %}"></a>
+                      
+                        <a href="{% static '/works/eye/second_part/big_slideshow/3.png' %}" data-fancybox="images-preview" 
+                           data-width="1600" data-height="900"
+                           data-thumb="{% static '/works/eye/second_part/big_slideshow/minis/3.png' %}"></a>
+                      
+                        <a href="{% static '/works/eye/second_part/big_slideshow/4.png' %}" data-fancybox="images-preview" 
+                           data-width="900" data-height="900"
+                           data-thumb="{% static '/works/eye/second_part/big_slideshow/minis/4.png' %}"></a>
+                      
+                        <a href="{% static '/works/eye/second_part/big_slideshow/5.png' %}" data-fancybox="images-preview" 
+                           data-width="1600" data-height="900"
+                           data-thumb="{% static '/works/eye/second_part/big_slideshow/minis/5.png' %}"></a>
+
+                      </div> 
+                      
+                
+                </div>
+
+                <div class="arrow_left" style = 'position:relative; justify-content: center;'>
+                    <img src = "{% static '/works/eye/second_part/main_slideshow/elements/arrow_left.png' %}" style = 'max-width:100%;max-height:100%;min-width:100%;min-height:100%;'  onclick="prev(), arrow_left.play()">
+                </div>
+
+                <div class="arrow_right" style = 'position:relative; justify-content: center;'>
+                    <img src = "{% static '/works/eye/second_part/main_slideshow/elements/arrow_right.png' %}" style = 'max-width:100%;max-height:100%;min-width:100%;min-height:100%;' onclick="next(),arrow_right.play()">
+                </div>
+
+                <div class="logotip" style = 'position:relative; justify-content: center;'>
+                    <img src = "{% static '/works/eye/second_part/logotip.png' %}" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+                </div> 
+
+                <div id="morphing-content" class="hidden">
+
+                    <div class="welcome_home">
+                        <a href = 'http://127.0.0.1:8000/' style = 'outline : none; color: inherit; text-decoration: none;'>
+                            <img src = "{% static '/every_hidden_page/elements/home.png' %}" id = 'home'>
+                        </a>
+                    </div>
+                    
+                    <div class = 'put' onmouseenter = put_onmove.play() onmouseleave = put_set.play()>
+                        <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "{% static '/every_hidden_page/works/put.png' %}" id = 'put'>
+                        </a>
+                    </div>
+
+                    <div class = 'zakis' onmouseenter = zakis_onmove.play() onmouseleave = zakis_set.play()>
+                        <a href = 'http://127.0.0.1:8000/' style = 'outline : none; color: inherit; text-decoration: none;'>
+                            <img src = "{% static '/every_hidden_page/works/zakis.png' %}" id = 'zakis'>
+                        </a>
+                    </div>
+
+                    <div class = 'glaz'  onmouseenter = glaz_onmove.play() onmouseleave = glaz_set.play()>
+                        <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "{% static '/every_hidden_page/works/glaz.png' %}" id = 'glaz'>
+                        </a>
+                    </div>
+
+                    <div class = 'kosmos' onmouseenter = kosmos_onmove.play() onmouseleave = kosmos_set.play()>
+                        <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "{% static '/every_hidden_page/works/kosmos.png' %}" id = 'kosmos'>
+                        </a>
+                    </div>
+
+                    <div class = 'maski' onmouseenter = maski_onmove.play() onmouseleave = maski_set.play()>
+                        <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "{% static '/every_hidden_page/works/maski.png' %}" id = 'maski'>
+                        </a>
+                    </div>
+
+                    <div class = 'ohboy' onmouseenter = ohboy_onmove.play() onmouseleave = ohboy_set.play()>
+                        <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "{% static '/every_hidden_page/works/vibe.png' %}" id = 'ohboy'>
+                        </a>
+                    </div>
+                        
+                    <div class = 'inst'>
+                        <a href = 'https://instagram.com/delayu.svoye.delo' style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "{% static '/every_hidden_page/elements/inst.png' %}" id = 'inst'>
+                        </a>
+                    </div>
+
+                    <div class = 'tg'>
+                        <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "{% static '/every_hidden_page/elements/th-new.png' %}" id = 'tg'>
+                        </a>
+                    </div>
+
+                    <!-- POP-UP IMAGES -->
+                    <img src = "{% static '/every_hidden_page/works/photoes/zakis.png' %}" id = 'mini_zakis'>
+                    <img src = "{% static '/every_hidden_page/works/photoes/eye.png' %}" id = 'mini_glaz'>
+                    <img src = "{% static '/every_hidden_page/works/photoes/golova.png' %}" id = 'mini_put'>
+                    <img src = "{% static '/every_hidden_page/works/photoes/kosmos.png' %}" id = 'mini_kosmos'>
+                    <img src = "{% static '/every_hidden_page/works/photoes/maski.png' %}" id = 'mini_maski'>
+                    <img src = "{% static '/every_hidden_page/works/photoes/vibe.png' %}" id = 'mini_vibe'>
+
+                </div>  
+            </div>
+
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+    <script>
+
+    var slider_img = document.querySelector('.slider-img');
+    var images = ['01eye.png','02eye.png', '03eye-01.png', '04eye-01.png', '05eye-01.png'];
+    var i =0; 
+
+    function prev() {
+        if (i<=0) i = images.length;
+        b=i
+        i--;
+        return setImg();
+    }
+
+    function next() {
+        if (i >= images.length - 1) i = -1;
+        b = i
+        i++;
+        return setImg();
+    }
+
+    function setImg(){
+        return slider_img.setAttribute('src', "{% static '/works/eye/second_part/main_slideshow/pics/' %}" + images[i])
+    }
+
+    function borderMove(){
+
+        var border_forward_animation =  anime({
+            targets: '#forward-svg',
+            strokeDashoffset: [anime.setDashoffset,0],
             easing: 'easeInOutSine',
-            duration: 10500,
+            duration: 20500,
+        
+            direction:'alternate',
             delay: function(el, i) { return i * 250 },
-            direction: 'alternate',
-            loop: true
+            
+            loop: true,
         });
 
-        // var gawr =  anime({
-        //     targets: '#demo-svg_second path',
-        //     strokeDashoffset: [anime.setDashoffset, 0],
-        //     easing: 'easeInOutSine',
-        //     duration: 10500,
-        //     delay: function(el, i) { return i * 250 },
-        //     direction: 'alternate',
-        //     loop: true
-        // });
+        var border_backward_animation =  anime({
+            targets: '#backward-svg',
+            strokeDashoffset: [0, anime.setDashoffset],
+            easing: 'easeInOutSine',
+            duration: 20500,
+        
+            direction:'alternate',
+            delay: function(el, i) { return i * 250 },
+            
+            loop: true,
+        });
+    } borderMove()
+
+    var arrow_left = anime({
+        targets:'.arrow_left',
+        scale:1.1,
+        duration:450,
+        autoplay:false,
+        loop:false,
+    })
+
+    var arrow_right = anime({
+        targets:'.arrow_right',
+        scale:1.1,
+        duration:450,
+        autoplay:false,
+        loop:false,
+    })
+
+    var motion_of_name =  anime({
+        targets: '.nazvanie',
+        translateY: {
+            value:15,
+            duration: 7500,
+        },
+        direction: 'alternate',
+        easing: 'easeInOutSine',
+        loop: true,
+    });
+
+    function buySwitchToEnglish() {
+        var english_buy_appears = anime({
+            targets:'.glaz-buy-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_buy = anime({
+            targets:'.text-buy-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function buyBackToRussian() {
+        var disappear_english_buy = anime({
+            targets:'.glaz-buy-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var buy_appears = anime({
+            targets:'.text-buy-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function razmerSwitchToEnglish() {
+        var english_razmer_appears = anime({
+            targets:'.razmer-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_razmer = anime({
+            targets:'.razmer-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+    }
+
+    function razmerBackToRussian() {
+        var disappear_english_razmer = anime({
+            targets:'.razmer-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var razmer_appears = anime({
+            targets:'.razmer-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+
+    }
+
+    function materialsSwitchToEnglish() {
+        var english_materials_appears = anime({
+            targets:'.materials-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_materials = anime({
+            targets:'.materials-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function materialsBackToRussian() {
+        var disappear_english_materials = anime({
+            targets:'.materials-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var materials_appears = anime({
+            targets:'.materials-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforSwitchToEnglish() {
+        var english_farfor_appears = anime({
+            targets:'.farfor-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_farfor = anime({
+            targets:'.farfor-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforBackToRussian() {
+        var disappear_english_farfor = anime({
+            targets:'.farfor-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var farfor_appears = anime({
+            targets:'.farfor-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilSwitchToEnglish() {
+        var english_akril_appears = anime({
+            targets:'.akril-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_akril = anime({
+            targets:'.akril-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilBackToRussian() {
+        var disappear_english_akril = anime({
+            targets:'.akril-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var akril_appears = anime({
+            targets:'.akril-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function cenaSwitchToEnglish() {
+        var english_cena_appears = anime({
+            targets:'.cena-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_cena = anime({
+            targets:'.cena-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function cenaBackToRussian() {
+        var disappear_english_cena = anime({
+            targets:'.cena-english-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var cena_appears = anime({
+            targets:'.cena-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    
+
+    // LOGO PAGE STARTS HERE
+
+    var minis = ['#mini_zakis', '#mini_glaz', '#mini_put', '#mini_kosmos', "#mini_maski", '#mini_vibe']
+    var minis_set = anime.set(minis,{
+        opacity:0,
+    })
+
+    var zakis_set = anime({
+        targets:'#mini_zakis',
+        opacity:0,
+        autoplay:false,
+    })
+    var zakis_onmove = anime({
+        targets: '#mini_zakis',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var glaz_set = anime({
+        targets:'#mini_glaz',
+        opacity:0,
+        autoplay:false,
+    })
+    var glaz_onmove = anime({
+        targets: '#mini_glaz',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var put_set = anime({
+        targets:'#mini_put',
+        opacity:0,
+        autoplay:false,
+    })
+    var put_onmove = anime({
+        targets: '#mini_put',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var kosmos_set = anime({
+        targets:'#mini_kosmos',
+        opacity:0,
+        autoplay:false,
+    })
+    var kosmos_onmove = anime({
+        targets: '#mini_kosmos',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var maski_set = anime({
+        targets:'#mini_maski',
+        opacity:0,
+        autoplay:false,
+    })
+    var maski_onmove = anime({
+        targets: '#mini_maski',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var ohboy_set = anime({
+        targets:'#mini_vibe',
+        opacity:0,
+        autoplay:false,
+    })
+    var ohboy_onmove = anime({
+        targets: '#mini_vibe',
+        opacity:1,
+        autoplay:false,
+    })    
+
+    // ЭФФЕКТ ГЛАВНОГО МЕНЮ ИЗ ЛОГОТИПА
+    // Step 1: Create jQuery plugin
+            // ============================
+
+    $.fn.fancyMorph = function( opts ) {
+
+        var Morphing = function( $btn, opts ) {
+        var self = this;
+
+        self.opts = $.extend({
+        animationEffect : false,
+        infobar    : false,
+        buttons    : ['close'],
+        smallBtn   : false,
+        touch      : false,
+        baseClass  : 'fancybox-morphing',
+        afterClose : function() {
+            self.close();
+        }
+        }, opts);
+
+        self.init( $btn );
+        };
+
+        Morphing.prototype.init = function( $btn ) {
+        var self = this;
+
+        self.$btn = $btn.addClass('morphing-btn');
+
+        self.$clone = $('<div class="morphing-btn-clone" />')
+        .hide()
+        .insertAfter( $btn );
+
+        // Add wrapping element and set initial width used for positioning
+        $btn.wrap( '<span class="morphing-btn-wrap"></span>' ).on('click', function(e) {
+        e.preventDefault();
+
+        self.start();
+        });
+
+        };
+
+        Morphing.prototype.start = function() {
+        var self = this;
+
+        if ( self.$btn.hasClass('morphing-btn_circle') ) {
+        return;
+        }
+
+        // Set initial width, because it is not possible to start CSS transition from "auto"
+        self.$btn.width( self.$btn.width() ).parent().width( self.$btn.outerWidth() );
+
+        self.$btn.off('.fm').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
+
+        if ( e.originalEvent.propertyName === 'width' ) {
+            self.$btn.off('.fm');
+
+            self.animateBg();
+        }
+
+        }).addClass('morphing-btn_circle');
+
+        };
+
+        Morphing.prototype.animateBg = function() {
+        var self = this;
+
+        self.scaleBg();
+
+        self.$clone.show();
+
+        // Trigger repaint
+        self.$clone[0].offsetHeight;
+
+        self.$clone.off('.fm').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
+        self.$clone.off('.fm');
+
+        self.complete();
+
+        }).addClass('morphing-btn-clone_visible');
+        };
+
+        Morphing.prototype.scaleBg = function() {
+        var self = this;
+
+        var $clone = self.$clone;
+        var scale  = self.getScale();
+        var $btn   = self.$btn;
+        var pos    = $btn.offset();
+
+        $clone.css({
+        top       : pos.top  + $btn.outerHeight() * 0.5 - ( $btn.outerHeight() * scale * 0.5 ) - $(window).scrollTop(),
+        left      : pos.left + $btn.outerWidth()  * 0.5 - ( $btn.outerWidth()  * scale * 0.5 ) - $(window).scrollLeft(),
+        width     : $btn.outerWidth()  * scale,
+        height    : $btn.outerHeight() * scale,
+        transform : 'scale(' + ( 1 / scale ) + ')'
+        });
+        };
+
+        Morphing.prototype.getScale = function() {
+        var $btn    = this.$btn,
+            radius  = $btn.outerWidth() * 0.5,
+            left    = $btn.offset().left + radius - $(window).scrollLeft(),
+            top     = $btn.offset().top  + radius - $(window).scrollTop(),
+            windowW = $(window).width(),
+            windowH = $(window).height();
+
+        var maxDistHor  = ( left > windowW / 2 ) ? left : ( windowW - left ),
+            maxDistVert = ( top > windowH / 2 )  ? top  : ( windowH - top );
+
+        return Math.ceil(Math.sqrt( Math.pow( maxDistHor, 2 ) + Math.pow( maxDistVert, 2 ) ) / radius );
+        };
+
+        Morphing.prototype.complete = function() {
+        var self = this;
+        var $btn = self.$btn;
+
+        $.fancybox.open({ src : $btn.data('src') || $btn.attr('href') }, self.opts);
+
+        $(window).on('resize.fm', function() {
+        //self.scaleBg();
+        });
+        };
+
+        Morphing.prototype.close = function() {
+        var self   = this;
+        var $clone = self.$clone;
+
+        self.scaleBg();
+
+        $clone.one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
+        $clone.hide();
+
+        self.$btn.removeClass('morphing-btn_circle');
+        });
+
+        $clone.removeClass('morphing-btn-clone_visible');
+
+        $(window).off('resize.fm');
+        };
+
+        // Init
+        this.each(function() {
+        var $this = $(this);
+
+        if ( !$this.data("morphing") ) {
+        $this.data( "morphing", new Morphing( $this, opts ) );
+        }
+
+        });
+
+        return this;
+        };
 
 
-        </script>
-    </body>
+        // Step 2: Start using it!
+        // =======================
+
+        $("[data-morphing]").fancyMorph({
+        hash : 'morphing'
+        });
+
+    </script>
+</body>
+
+</html>
 
 </html>
