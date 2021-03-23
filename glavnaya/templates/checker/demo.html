@@ -481,111 +481,109 @@
                     <path stroke = ' rgb(247, 174, 221)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M54.31,717.11q.19-352.44.79-704.88L54,11.46Q577.1,12,1100.21,12q-.17,352.4-.7,704.81l1.08.77Q577.48,717.05,54.31,717.11Z"/>
                     <path stroke = '#263794'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1098.3,13.06q-.18,351.32-.78,702.64l1.07.76q-521.07-.57-1042.18-.54.17-351.27.69-702.57L56,12.59Q577.15,13.11,1098.3,13.06Z"/> 
                 </svg>
-            
-                <div class="image_slider" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
-                
-                    <a href = "{% static '/works/maski/first_part/big_slideshow/1.png' %}"
-     
-                    data-fancybox="images-preview" 
-                    data-width="700" data-height="700"
-                    data-thumb= "{% static '/works/maski/first_part/big_slideshow/minis/1.png' %}" >
-    
-                        <img src = "{% static '/works/maski/first_part/main_slideshow/pics/1.png' %}"  class = 'slider-img' >
-                    </a>
-    
-                    <div style="display: none;">
-                        <a href="{% static '/works/maski/first_part/big_slideshow/2.png' %}" data-fancybox="images-preview" 
-                           data-width="800" data-height="700" style = 'background-color: black;'
-                           data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/2.png' %}"></a>
-                      
-                        <a href="{% static '/works/maski/first_part/big_slideshow/3.png' %}" data-fancybox="images-preview" 
-                           data-width="800" data-height="700"
-                           data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/3.png' %}"></a>
-                      
-                        <a href="{% static '/works/maski/first_part/big_slideshow/4.png' %}" data-fancybox="images-preview" 
-                           data-width="700" data-height="700"
-                           data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/4.png' %}"></a>
-                      
-                        <a href="{% static '/works/maski/first_part/big_slideshow/5.png' %}" data-fancybox="images-preview" 
-                           data-width="650" data-height="700"
-                           data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/5.png' %}"></a>
-    
-                      </div> 
-                </div>
 
             </div>
 
-           
+            <div class="image_slider" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
+                
+                <a href = "{% static '/works/maski/first_part/big_slideshow/1.png' %}"
+ 
+                data-fancybox="images-preview" 
+                data-width="700" data-height="700"
+                data-thumb= "{% static '/works/maski/first_part/big_slideshow/minis/1.png' %}" >
+
+                    <img src = "/media/works/maski/first_part/main_slideshow/pics/1.png"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden;object-fit: cover; width: 100%; max-height: 100%; justify-content: center;'>
+                </a>
+
+                <div style="display: none;">
+                    <a href="/media/works/maski/first_part/big_slideshow/2.png" data-fancybox="images-preview" 
+                       data-width="800" data-height="700" style = 'background-color: black;'
+                       data-thumb="/media/works/maski/first_part/big_slideshow/minis/2.png"></a>
+                  
+                    <a href="/media/works/maski/first_part/big_slideshow/3.png" data-fancybox="images-preview" 
+                       data-width="800" data-height="700"
+                       data-thumb="/media/works/maski/first_part/big_slideshow/minis/3.png"></a>
+                  
+                    <a href="/media/works/maski/first_part/big_slideshow/4.png" data-fancybox="images-preview" 
+                       data-width="700" data-height="700"
+                       data-thumb="/media/works/maski/first_part/big_slideshow/minis/4.png"></a>
+                  
+                    <a href="/media/works/maski/first_part/big_slideshow/5.png" data-fancybox="images-preview" 
+                       data-width="650" data-height="700"
+                       data-thumb="/media/works/maski/first_part/big_slideshow/minis/5.png"></a>
+
+                  </div> 
+            </div>
             
             <div class="arrow_left" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/maski/first_part/main_slideshow/elements/arrow_left.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
+                <img src = "/media/works/maski/first_part/main_slideshow/elements/arrow_left.png" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
             </div>
 
             <div class="arrow_right" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/maski/first_part/main_slideshow/elements/arrow_right.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
+                <img src = "/media/works/maski/first_part/main_slideshow/elements/arrow_right.png" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
             </div>
             
             <div class="nazvanie">
-                <img src = "{% static '/works/maski/first_part/maski_logo.png' %}" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;'>
+                <img src = "/media/works/maski/first_part/maski_logo.png" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;'>
             </div>
 
           <div class="logotip" style = 'position:relative; justify-content: center;'>
-              <img src = "{% static '/works/maski/first_part/logotip.png' %}" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+              <img src = "/media/works/maski/first_part/logotip.png" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
           </div>
           
           <div id="morphing-content" class="hidden">
 
             <div class="welcome_home">
                 <a href = 'http://127.0.0.1:8000/' style = 'outline : none; color: inherit; text-decoration: none;'>
-                    <img src = "{% static '/every_hidden_page/elements/home.png' %}" id = 'home'>
+                    <img src = "/media/every_hidden_page/elements/home.png" id = 'home'>
                 </a>
             </div>
             
             <div class = 'put' onmouseenter = put_onmove.play() onmouseleave = put_set.play()>
                 <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "{% static '/every_hidden_page/works/put.png' %}" id = 'put'>
+                    <img src = "/media/every_hidden_page/works/put.png" id = 'put'>
                 </a>
             </div>
 
             <div class = 'zakis' onmouseenter = zakis_onmove.play() onmouseleave = zakis_set.play()>
                 <a href = 'http://127.0.0.1:8000/' style = 'outline : none; color: inherit; text-decoration: none;'>
-                    <img src = "{% static '/every_hidden_page/works/zakis.png' %}" id = 'zakis'>
+                    <img src = "/media/every_hidden_page/works/zakis.png" id = 'zakis'>
                 </a>
             </div>
 
             <div class = 'glaz'  onmouseenter = glaz_onmove.play() onmouseleave = glaz_set.play()>
                 <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "{% static '/every_hidden_page/works/glaz.png' %}" id = 'glaz'>
+                    <img src = "/media/every_hidden_page/works/glaz.png" id = 'glaz'>
                 </a>
             </div>
 
             <div class = 'kosmos' onmouseenter = kosmos_onmove.play() onmouseleave = kosmos_set.play()>
                 <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "{% static '/every_hidden_page/works/kosmos.png' %}" id = 'kosmos'>
+                    <img src = "/media/every_hidden_page/works/kosmos.png" id = 'kosmos'>
                 </a>
             </div>
 
             <div class = 'maski' onmouseenter = maski_onmove.play() onmouseleave = maski_set.play()>
                 <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "{% static '/every_hidden_page/works/maski.png' %}" id = 'maski'>
+                    <img src = "/media/every_hidden_page/works/maski.png" id = 'maski'>
                 </a>
             </div>
 
             <div class = 'ohboy' onmouseenter = ohboy_onmove.play() onmouseleave = ohboy_set.play()>
                 <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "{% static '/every_hidden_page/works/vibe.png' %}" id = 'ohboy'>
+                    <img src = "/media/every_hidden_page/works/vibe.png" id = 'ohboy'>
                 </a>
             </div>
                 
             <div class = 'inst'>
                 <a href = 'https://instagram.com/delayu.svoye.delo' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "{% static '/every_hidden_page/elements/inst.png' %}" id = 'inst'>
+                    <img src = "/media/every_hidden_page/elements/inst.png" id = 'inst'>
                 </a>
             </div>
 
             <div class = 'tg'>
                 <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "{% static '/every_hidden_page/elements/th-new.png' %}" id = 'tg'>
+                    <img src = "/media/every_hidden_page/elements/th-new.png" id = 'tg'>
                 </a>
             </div>
 
@@ -604,67 +602,67 @@
         <div class="second_class">
           
             <div class="materials-image">
-                <img src = "{% static '/works/maski/second_part/text/materials.png' %}" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/text/materials.png" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="materials-english-image">
-                <img src = "{% static '/works/maski/second_part/text/english/materials-english.png' %}"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/text/english/materials-english.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-image">
-                 <img src = "{% static '/works/maski/second_part/text/farfor.png' %}" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                 <img src = "/media/works/maski/second_part/text/farfor.png" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-english-image">
-                <img src = "{% static '/works/maski/second_part/text/english/farfor-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/text/english/farfor-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
            </div>
 
             <div class="razmer-image">
-                <img src = "{% static '/works/maski/second_part/text/razmer.png' %}" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/text/razmer.png" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
 
             <div class="razmer-english-image">
-                <img src = "{% static '/works/maski/second_part/text/english/razmer-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/text/english/razmer-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
 
             <div class="cifri-image">
-                <img src = "{% static '/works/maski/second_part/text/cifri.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/text/cifri.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cena-image">
-                <img src = "{% static '/works/maski/second_part/text/cena.png' %}" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/text/cena.png" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cena-english-image">
-                <img src = "{% static '/works/maski/second_part/text/english/alpha.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/text/english/alpha.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="price-image">
-                <img src = "{% static '/works/maski/second_part/text/price.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/text/price.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="button-image">
-                <img src = "{% static '/works/maski/second_part/buy_but/maski-btn.png' %}"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/buy_but/maski-btn.png"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="text-buy-image" >
-                <img src = "{% static '/works/maski/second_part/buy_but/buy_btn.png' %}" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/buy_but/buy_btn.png" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="maski-buy-image" >
-                <img src = "{% static '/works/maski/second_part/buy_but/maski_buy.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/buy_but/maski_buy.png"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
           
             <div class="first-buy-border" >
-                <img src = "{% static '/works/maski/second_part/buy_but/white_border.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/buy_but/white_border.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="second-buy-border">
-                <img src = "{% static '/works/maski/second_part/buy_but/white_border.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/buy_but/white_border.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
           
             <div class="third-buy-border">
-                <img src = "{% static '/works/maski/second_part/buy_but/viol_border.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/maski/second_part/buy_but/viol_border.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
         </div>
@@ -698,7 +696,7 @@
         }
 
         function setImg(){
-            return slider_img.setAttribute('src', "{% static '/works/maski/first_part/main_slideshow/pics/' %}" + images[i])
+            return slider_img.setAttribute('src', "media/works/maski/first_part/main_slideshow/pics/" + images[i])
         }
 
         function borderMove(){
