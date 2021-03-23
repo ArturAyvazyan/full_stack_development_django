@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
 
 <head>
-    <meta charset="UTF-8" content="width=device-width, user-scalable=no"/>
+    <meta charset="UTF-8" content="width=device-width, user-scalable=1.0"/>
     <title>НУ ЧТО ПОЛЕТЕЛИ</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> 
 
@@ -31,11 +31,15 @@
             height: 100vh;
         }
         
+       
+
         .first_class {
             display: grid;
             grid-template-columns: repeat(100, 1fr);
             grid-template-rows: repeat(100, 1fr);
             overflow: hidden;
+            max-width:100%;
+            max-height:100%;
         }
 
         .nazvanie {
@@ -66,8 +70,8 @@
         }
 
         .arrow_left { 
-            grid-column-start: 17;
-            grid-column-end: 21;
+            grid-column-start: 15;
+            grid-column-end: 19;
             grid-row-start: 54;
             grid-row-end: 59;
         }
@@ -96,6 +100,8 @@
             grid-template-columns: repeat(100, 1fr);
             grid-template-rows: repeat(100, 1fr);
             overflow: hidden;
+            max-width:100%;
+            max-height:100%;
         }
 
         .materials-image {
@@ -108,7 +114,7 @@
         }
 
         .materials-english-image {
-            grid-column-start: 50;
+            grid-column-start: 48;
             grid-column-end: 90;
             grid-row-start: 15;
             grid-row-end: 19;
@@ -127,7 +133,7 @@
         }
         
         .farfor-english-image {
-            grid-column-start: 68;
+            grid-column-start: 64;
             grid-column-end: 90;
             grid-row-start: 21;
             grid-row-end: 24;
@@ -146,7 +152,7 @@
         }
 
         .razmer-english-image {
-            grid-column-start: 65;
+            grid-column-start: 69;
             grid-column-end: 90;
             grid-row-start: 30;
             grid-row-end: 34;
@@ -173,7 +179,7 @@
         }
         
         .cena-english-image {
-            grid-column-start: 68;
+            grid-column-start: 66;
             grid-column-end: 90;
             grid-row-start: 46;
             grid-row-end: 52;
@@ -240,6 +246,9 @@
             grid-row-end: 95;
             overflow: hidden;
         }
+        /*  */
+        /*  */
+        /*  */
 
         .morphing-btn-wrap {
             display: inline-block;
@@ -458,7 +467,7 @@
 
             <div class="borders">
                    
-                <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 1114.3 763.79">
+                <svg style = 'transform:scale(0.99);' id = 'demo-svg' viewBox="0 0 1140 750" >
                     <path stroke = 'rgb(242, 174, 250)' id = 'forward-svg'  stroke-width="1" fill = 'none' d="M1105.62,9q-.19,355.91-.8,711.8l1.09.78Q577.47,721,49,721q.17-355.84.7-711.72l-1.09-.78Q577.09,9.07,1105.62,9Z"/> 
                     <path stroke = 'rgb(137, 136, 145)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M47.21,721.11q.18-355.91.8-711.8l-1.1-.78Q577,9.12,1107.2,9.08q-.17,355.86-.7,711.73l1.09.78Q577.43,721.05,47.21,721.11Z"/>
                     <path stroke = 'rgb(253, 169, 218)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1107.88,722.39q-530.21-.14-1060.42-.54l-1.16.74Q47.17,365,47.13,7.43q530.15.12,1060.3.48l1.16-.74Q1107.8,364.77,1107.88,722.39Z"/>
@@ -483,7 +492,7 @@
                 data-width="700" data-height="700"
                 data-thumb= "{% static '/works/maski/first_part/big_slideshow/minis/1.png' %}" >
 
-                    <img src = "{% static '/works/maski/first_part/main_slideshow/pics/1.png' %}"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
+                    <img src = "{% static '/works/maski/first_part/main_slideshow/pics/1.png' %}"  class = 'slider-img' style = 'object-fit: cover; width: 100%; max-height: 100%;'>
                 </a>
 
                 <div style="display: none;">
