@@ -18,7 +18,7 @@
             height: 100%;
             margin: 0px; /* убирает скролл */
             overflow-x: hidden;
-            background: url("{% static '/works/zakis/koks.png' %}");
+            background: url("/media/works/zakis/koks.png");
             background-size: cover;
         }
         
@@ -175,6 +175,7 @@
             grid-row-end: 94;
             overflow: hidden;
             z-index: 2;
+            margin-left:20px;
         }
 
         .farfor-english-image {
@@ -388,121 +389,121 @@
 
             <div class="image_slider">
                 
-                <a href = "{% static '/works/zakis/first_part/big_slideshow/1.png' %}"
+                <a href = "/media/works/zakis/first_part/big_slideshow/1.png"
  
                 data-fancybox="images-preview" 
                 data-width="1384" data-height="1638"
-                data-thumb="{% static '/works/zakis/first_part/big_slideshow/minis/1.png' %}">
+                data-thumb="/media/works/zakis/first_part/big_slideshow/minis/1.png">
 
-                    <img src = "{% static '/works/zakis/first_part/main_slideshow/pics/1.png' %}"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
+                    <img src = "/media/works/zakis/first_part/main_slideshow/pics/1.png"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
                 </a>
 
                 <div style="display: none;">
-                    <a href="{% static '/works/zakis/first_part/big_slideshow/2.png' %}" data-fancybox="images-preview" 
+                    <a href="/media/works/zakis/first_part/big_slideshow/2.png" data-fancybox="images-preview" 
                        data-width="3024 " data-height="4032" style = 'background-color: black;'
-                       data-thumb="{% static '/works/zakis/first_part/big_slideshow/minis/2.png' %}"></a>
+                       data-thumb="/media/works/zakis/first_part/big_slideshow/minis/2.png"></a>
                   
-                    <a href="{% static '/works/zakis/first_part/big_slideshow/3.png' %}" data-fancybox="images-preview" 
+                    <a href="/media/works/zakis/first_part/big_slideshow/3.png" data-fancybox="images-preview" 
                        data-width="3024" data-height="4032"
-                       data-thumb="{% static '/works/zakis/first_part/big_slideshow/minis/3.png' %}"></a>
+                       data-thumb="/media/works/zakis/first_part/big_slideshow/minis/3.png"></a>
                   
-                    <a href="{% static '/works/zakis/first_part/big_slideshow/4.png' %}" data-fancybox="images-preview" 
+                    <a href="/media/works/zakis/first_part/big_slideshow/4.png" data-fancybox="images-preview" 
                        data-width="3024" data-height="4032"
-                       data-thumb="{% static '/works/zakis/first_part/big_slideshow/minis/4.png' %}"></a>
+                       data-thumb="/media/works/zakis/first_part/big_slideshow/minis/4.png"></a>
 
-                    <a href="{% static '/works/zakis/first_part/big_slideshow/5.png' %}" data-fancybox="images-preview" 
+                    <a href="/media/works/zakis/first_part/big_slideshow/5.png" data-fancybox="images-preview" 
                        data-width="3024" data-height="4032"
-                       data-thumb="{% static '/works/zakis/first_part/big_slideshow/minis/5.png' %}"></a>
+                       data-thumb="/media/works/zakis/first_part/big_slideshow/minis/5.png"></a>
                     
-                   <a href="{% static '/works/zakis/first_part/big_slideshow/6.png' %}" data-fancybox="images-preview" 
+                   <a href="/media/works/zakis/first_part/big_slideshow/6.png" data-fancybox="images-preview" 
                        data-width="3024" data-height="4032"
-                       data-thumb="{% static '/works/zakis/first_part/big_slideshow/minis/6.png' %}"></a>
+                       data-thumb="/media/works/zakis/first_part/big_slideshow/minis/6.png"></a>
 
-                    <a href="{% static '/works/zakis/first_part/big_slideshow/7.png' %}" data-fancybox="images-preview" 
+                    <a href="/media/works/zakis/first_part/big_slideshow/7.png" data-fancybox="images-preview" 
                        data-width="1350 " data-height="1704"
-                       data-thumb="{% static '/works/zakis/first_part/big_slideshow/minis/7.png' %}"></a>   
+                       data-thumb="/media/works/zakis/first_part/big_slideshow/minis/7.png"></a>   
                   </div> 
                   
             </div>
             
             <div class="arrow_left" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/zakis/first_part/main_slideshow/elements/arrow_left.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
+                <img src = "/media/works/zakis/first_part/main_slideshow/elements/arrow_left.png" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
             </div>
 
             <div class="arrow_right" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/zakis/first_part/main_slideshow/elements/arrow_right.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
+                <img src = "/media/works/zakis/first_part/main_slideshow/elements/arrow_right.png" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
             </div>
 
             <div class="razmer-image">
-                <img src = "{% static '/works/zakis/first_part/text/razmer.png' %}" onmouseenter = 'razmerSwitchToEnglish(), cifriSwitchToEnglish()' onmouseleave = 'razmerBackToRussian(), cifriBackToRussian()' style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/razmer.png" onmouseenter = 'razmerSwitchToEnglish(), cifriSwitchToEnglish()' onmouseleave = 'razmerBackToRussian(), cifriBackToRussian()' style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
             
             <div class="razmer-english-image">
-                <img src = "{% static '/works/zakis/first_part/text/english/razmer-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/english/razmer-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
 
             <div class="cifri-image">
-                <img src = "{% static '/works/zakis/first_part/text/cifri.png' %}" onmouseenter = 'razmerSwitchToEnglish(), cifriSwitchToEnglish()' onmouseleave = 'razmerBackToRussian(), cifriBackToRussian()' style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/cifri.png" onmouseenter = 'razmerSwitchToEnglish(), cifriSwitchToEnglish()' onmouseleave = 'razmerBackToRussian(), cifriBackToRussian()' style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cifri-english-image">
-                <img src = "{% static '/works/zakis/first_part/text/english/cifri-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/english/cifri-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cena-image">
-                <img src = "{% static '/works/zakis/first_part/text/cena.png' %}" onmouseenter = 'cenaSwitchToEnglish(), priceSwitchToEnglish()' onmouseleave = 'cenaBackToRussian(), priceBackToRussian()' style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/cena.png" onmouseenter = 'cenaSwitchToEnglish(), priceSwitchToEnglish()' onmouseleave = 'cenaBackToRussian(), priceBackToRussian()' style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cena-english-image">
-                <img src = "{% static '/works/zakis/first_part/text/english/cena-english.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/english/cena-english.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="price-image">
-                <img src = "{% static '/works/zakis/first_part/text/price.png' %}" onmouseenter = 'cenaSwitchToEnglish(), priceSwitchToEnglish()' onmouseleave = 'cenaBackToRussian(), priceBackToRussian()' style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/price.png" onmouseenter = 'cenaSwitchToEnglish(), priceSwitchToEnglish()' onmouseleave = 'cenaBackToRussian(), priceBackToRussian()' style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="price-english-image">
-                <img src = "{% static '/works/zakis/first_part/text/english/price-english.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/english/price-english.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="materials-image">
-                <img src = "{% static '/works/zakis/first_part/text/materials.png' %}" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/materials.png" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="materials-english-image">
-                <img src = "{% static '/works/zakis/first_part/text/english/materials-english.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/english/materials-english.png" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-image">
-                <img src = "{% static '/works/zakis/first_part/text/farfor.png' %}" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/farfor.png" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-english-image">
-                <img src = "{% static '/works/zakis/first_part/text/english/farfor-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/english/farfor-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="aluminium-image">
-                <img src = "{% static '/works/zakis/first_part/text/alum.png' %}" onmouseenter = aluminiumSwitchToEnglish() onmouseleave = aluminiumBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/alum.png" onmouseenter = aluminiumSwitchToEnglish() onmouseleave = aluminiumBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="aluminium-english-image">
-                <img src = "{% static '/works/zakis/first_part/text/english/alum-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/english/alum-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="wood-image">
-                <img src = "{% static '/works/zakis/first_part/text/wood.png' %}" onmouseenter = woodSwitchToEnglish() onmouseleave = woodBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/wood.png" onmouseenter = woodSwitchToEnglish() onmouseleave = woodBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="wood-english-image">
-                <img src = "{% static '/works/zakis/first_part/text/english/wood-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/english/wood-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="akril-image">
-                <img src = "{% static '/works/zakis/first_part/text/akril.png' %}" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/akril.png" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>    
             
             <div class="akril-english-image">
-                <img src = "{% static '/works/zakis/first_part/text/english/akril-english.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/english/akril-english.png" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
         </div>
@@ -510,55 +511,55 @@
         <div class="second_class">
 
             <div class="nazvanie">
-                <img src = "{% static '/works/zakis/second_part/zakislogo.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%;max-height:100%;'>
+                <img src = "/media/works/zakis/second_part/zakislogo.png" style = 'min-width:100%; min-height:100%; max-width:100%;max-height:100%;'>
             </div>   
             
             <div class="button-image">
-                <img src = "{% static '/works/zakis/second_part/buy_but/zakis-btn.png' %}"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/zakis-btn.png"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
     
             <div class="text-buy-image">
-                <img src = "{% static '/works/zakis/second_part/buy_but/buy_but.png' %}" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/buy_but.png" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="zakis-buy-image">
-                <img src = "{% static '/works/zakis/second_part/buy_but/zakis_buy.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/zakis_buy.png"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="first-buy-border" >
-                <img src = "{% static '/works/zakis/second_part/buy_but/green.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/green.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
     
             <div class="second-buy-border">
-                <img src = "{% static '/works/zakis/second_part/buy_but/viol.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/viol.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
                 
             <div class="third-buy-border">
-                <img src = "{% static '/works/zakis/second_part/buy_but/dead.png' %}" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/dead.png" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div> 
 
             <div class="fourth-buy-border">
-                <img src = "{% static '/works/zakis/second_part/buy_but/darkgreen.png' %}" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/darkgreen.png" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="fivth-buy-border">
-                <img src = "{% static '/works/zakis/second_part/buy_but/boloto.png' %}" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/boloto.png" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="six-buy-border">
-                <img src = "{% static '/works/zakis/second_part/buy_but/boloto.png' %}" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/boloto.png" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="seven-buy-border">
-                <img src = "{% static '/works/zakis/second_part/buy_but/boloto.png' %}" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/boloto.png" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="eight-buy-border">
-                <img src = "{% static '/works/zakis/second_part/buy_but/boloto.png' %}" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/boloto.png" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="logotip" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/zakis/second_part/logotip.png' %}" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+                <img src = "/media/works/zakis/second_part/logotip.png" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
             </div> 
 
         </div>
@@ -592,7 +593,7 @@
     }
 
     function setImg(){
-        return slider_img.setAttribute('src', "{% static '/works/zakis/first_part/main_slideshow/pics/' %}" + images[i])
+        return slider_img.setAttribute('src', "/media/works/zakis/first_part/main_slideshow/pics/" + images[i])
     }
 
     function borderMove(){

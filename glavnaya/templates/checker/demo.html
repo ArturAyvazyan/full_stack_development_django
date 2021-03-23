@@ -18,7 +18,7 @@
             height: 100%;
             margin: 0px; /* убирает скролл */
             overflow-x: hidden;
-            background: url("{% static '/works/maski/background.png' %}");
+            background: url("/media/works/maski/background.png");
             background-size: cover;
         }
         
@@ -30,8 +30,6 @@
             width: 100vw;
             height: 100vh;
         }
-        
-       
 
         .first_class {
             display: grid;
@@ -281,7 +279,7 @@
         /* АНИМАЦИЯ ВЫХОДА ЦВЕТА ИЗ ЛОГО */
         .morphing-btn-clone {
             position: fixed;
-            background: url("{% static '/every_hidden_page/background.png' %}");
+            background: url("/media/every_hidden_page/background.png");
             background-size: cover;
             border-radius: 50%;
             z-index: 3;
@@ -308,7 +306,7 @@
             height: 100%;
             margin: 0px; /* убирает скролл */
             overflow-x: hidden;
-            background: url("{% static '/every_hidden_page/background.png' %}");
+            background: url("/media/every_hidden_page/background.png");
             background-size: cover;
         }
 
@@ -467,7 +465,7 @@
 
             <div class="borders">
                    
-                <svg style = 'transform:scale(0.99);' id = 'demo-svg' viewBox="0 0 1140 750" >
+                <svg style = 'transform:scale(0.99); min-width:100%; min-height:100% ;max-width:100%; max-height:100%;'  id = 'demo-svg' viewBox="0 0 1140 750" >
                     <path stroke = 'rgb(242, 174, 250)' id = 'forward-svg'  stroke-width="1" fill = 'none' d="M1105.62,9q-.19,355.91-.8,711.8l1.09.78Q577.47,721,49,721q.17-355.84.7-711.72l-1.09-.78Q577.09,9.07,1105.62,9Z"/> 
                     <path stroke = 'rgb(137, 136, 145)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M47.21,721.11q.18-355.91.8-711.8l-1.1-.78Q577,9.12,1107.2,9.08q-.17,355.86-.7,711.73l1.09.78Q577.43,721.05,47.21,721.11Z"/>
                     <path stroke = 'rgb(253, 169, 218)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1107.88,722.39q-530.21-.14-1060.42-.54l-1.16.74Q47.17,365,47.13,7.43q530.15.12,1060.3.48l1.16-.74Q1107.8,364.77,1107.88,722.39Z"/>
@@ -484,15 +482,15 @@
 
             </div>
 
-            <div class="image_slider" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
+            <div class="image_slider">
                 
-                <a href = "{% static '/works/maski/first_part/big_slideshow/1.png' %}"
+                <a href = "/media/works/maski/first_part/big_slideshow/1.png"
  
                 data-fancybox="images-preview" 
                 data-width="700" data-height="700"
-                data-thumb= "{% static '/works/maski/first_part/big_slideshow/minis/1.png' %}" >
+                data-thumb= "/media/works/maski/first_part/big_slideshow/minis/1.png" >
 
-                    <img src = "/media/works/maski/first_part/main_slideshow/pics/1.png"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden;object-fit: cover; width: 100%; max-height: 100%; justify-content: center;'>
+                    <img src = "/media/works/maski/first_part/main_slideshow/pics/1.png"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden;'>
                 </a>
 
                 <div style="display: none;">
@@ -588,12 +586,12 @@
             </div>
 
             <!-- POP-UP IMAGES -->
-            <img src = "{% static '/every_hidden_page/works/photoes/zakis.png' %}" id = 'mini_zakis'>
-            <img src = "{% static '/every_hidden_page/works/photoes/eye.png' %}" id = 'mini_glaz'>
-            <img src = "{% static '/every_hidden_page/works/photoes/golova.png' %}" id = 'mini_put'>
-            <img src = "{% static '/every_hidden_page/works/photoes/kosmos.png' %}" id = 'mini_kosmos'>
-            <img src = "{% static '/every_hidden_page/works/photoes/maski.png' %}" id = 'mini_maski'>
-            <img src = "{% static '/every_hidden_page/works/photoes/vibe.png' %}" id = 'mini_vibe'>
+            <img src = "/media/every_hidden_page/works/photoes/zakis.png" id = 'mini_zakis'>
+            <img src = "/media/every_hidden_page/works/photoes/eye.png" id = 'mini_glaz'>
+            <img src = "/media/every_hidden_page/works/photoes/golova.png" id = 'mini_put'>
+            <img src = "/media/every_hidden_page/works/photoes/kosmos.png" id = 'mini_kosmos'>
+            <img src = "/media/every_hidden_page/works/photoes/maski.png" id = 'mini_maski'>
+            <img src = "/media/every_hidden_page/works/photoes/vibe.png" id = 'mini_vibe'>
 
         </div> 
             

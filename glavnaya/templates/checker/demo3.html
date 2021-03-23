@@ -18,7 +18,7 @@
             height: 100%;
             margin: 0px; /* убирает скролл */
             overflow-x: hidden;
-            background: url("{% static '/works/golova/background.png' %}");
+            background: url("/media/works/golova/background.png");
             background-size: cover;
         }
         
@@ -264,7 +264,7 @@
 
             <div class="borders">
                    
-                <svg style = ' min-width:100%; min-height:100% ;max-width:100%; max-height:100%;' id = 'demo-svg' viewBox="0 0 1114.3 763.79">
+                <svg style = 'min-width:100%; min-height:100% ;max-width:100%; max-height:100%;' id = 'demo-svg' viewBox="0 0 1114.3 763.79">
 
                     <path stroke = 'rgb(247, 166, 200)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1098.3,13.06q-.18,351.32-.78,702.64l1.07.76q-521.07-.57-1042.18-.54.17-351.27.69-702.57L56,12.59Q577.15,13.11,1098.3,13.06Z"/> 
                     <path  stroke = 'rgb(183, 184, 248)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M54.31,717.11q.19-352.44.79-704.88L54,11.46Q577.1,12,1100.21,12q-.17,352.4-.7,704.81l1.08.77Q577.48,717.05,54.31,717.11Z"/>
@@ -285,49 +285,49 @@
 
             <div class="image_slider">
                 
-                <a href = "{% static '/works/golova/first_part/big_slideshow/1.png' %}"
+                <a href = "/media/works/golova/first_part/big_slideshow/1.png"
  
                 data-fancybox="images-preview" 
                 data-width="1200" data-height="1500"
-                data-thumb= "{% static '/works/golova/first_part/big_slideshow/minis/01-01.png' %}" >
+                data-thumb= "/media/works/golova/first_part/big_slideshow/minis/01-01.png" >
 
-                    <img src = "{% static '/works/golova/first_part/main_slideshow/pics/00.png' %}"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
+                    <img src = "/media/works/golova/first_part/main_slideshow/pics/00.png"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
                 </a>
 
                 <div style="display: none;">
-                    <a href="{% static '/works/golova/first_part/big_slideshow/2.png' %}" data-fancybox="images-preview" 
+                    <a href="/media/works/golova/first_part/big_slideshow/2.png" data-fancybox="images-preview" 
                        data-width="800" data-height="1100" style = 'background-color: black;'
-                       data-thumb="{% static '/works/golova/first_part/big_slideshow/minis/02-01.png' %}"></a>
+                       data-thumb="/media/works/golova/first_part/big_slideshow/minis/02-01.png"></a>
                   
-                    <a href="{% static '/works/golova/first_part/big_slideshow/3.png' %}" data-fancybox="images-preview" 
+                    <a href="/media/works/golova/first_part/big_slideshow/3.png" data-fancybox="images-preview" 
                        data-width="650" data-height="800"
-                       data-thumb="{% static '/works/golova/first_part/big_slideshow/minis/03-01.png' %}"></a>
+                       data-thumb="/media/works/golova/first_part/big_slideshow/minis/03-01.png"></a>
                   
-                    <a href="{% static '/works/golova/first_part/big_slideshow/41-01.png' %}" data-fancybox="images-preview" 
+                    <a href="/media/works/golova/first_part/big_slideshow/41-01.png" data-fancybox="images-preview" 
                        data-width="650" data-height="800"
-                       data-thumb="{% static '/works/golova/first_part/big_slideshow/minis/04-01.png' %}"></a>
+                       data-thumb="/media/works/golova/first_part/big_slideshow/minis/04-01.png"></a>
                   
-                    <a href="{% static '/works/golova/first_part/big_slideshow/5.png' %}" data-fancybox="images-preview" 
+                    <a href="/media/works/golova/first_part/big_slideshow/5.png" data-fancybox="images-preview" 
                        data-width="1200" data-height="1200"
-                       data-thumb="{% static '/works/golova/first_part/big_slideshow/minis/05-01.png' %}"></a>
+                       data-thumb="/media/works/golova/first_part/big_slideshow/minis/05-01.png"></a>
                     
-                    <a href="{% static '/works/golova/first_part/big_slideshow/6.png' %}" data-fancybox="images-preview" 
+                    <a href="/media/works/golova/first_part/big_slideshow/6.png" data-fancybox="images-preview" 
                        data-width="1200" data-height="1200"
-                       data-thumb="{% static '/works/golova/first_part/big_slideshow/minis/06-01.png' %}"></a>
+                       data-thumb="/media/works/golova/first_part/big_slideshow/minis/06-01.png"></a>
 
                   </div> 
             </div>
             
             <div class="arrow_left" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/golova/first_part/main_slideshow/elements/01arrow_left.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
+                <img src = "/media/works/golova/first_part/main_slideshow/elements/01arrow_left.png" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
             </div>
 
             <div class="arrow_right" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/golova/first_part/main_slideshow/elements/01arrow_right.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
+                <img src = "/media/works/golova/first_part/main_slideshow/elements/01arrow_right.png" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
             </div>
             
             <div class="logotip" style = 'position:relative; justify-content: center;'>
-                <img src = "{% static '/works/golova/first_part/logotip.png' %}" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+                <img src = "/media/works/golova/first_part/logotip.png" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
             </div> 
             
         </div>
@@ -335,79 +335,79 @@
         <div class="second_class">
 
             <div class="nazvanie">
-                <img src = "{% static '/works/golova/second_part/put_logo.png' %}" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;'>
+                <img src = "/media/works/golova/second_part/put_logo.png" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;'>
             </div>
                 
             <div class="razmer-image">
-                <img src = "{% static '/works/golova/second_part/text/razmer.png' %}" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/text/razmer.png" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
             
             <div class="razmer-english-image">
-                <img src = "{% static '/works/golova/second_part/text/english/razmer-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/text/english/razmer-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
 
             <div class="cifri-image">
-                <img src = "{% static '/works/golova/second_part/text/cifri.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/text/cifri.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="materials-image">
-                <img src = "{% static '/works/golova/second_part/text/materials.png' %}" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/text/materials.png" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="materials-english-image">
-                <img src = "{% static '/works/golova/second_part/text/english/materials-english.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/text/english/materials-english.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-image">
-                <img src = "{% static '/works/golova/second_part/text/farfor.png' %}" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/text/farfor.png" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-english-image">
-                <img src = "{% static '/works/golova/second_part/text/english/farfor-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/text/english/farfor-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="akril-image">
-                <img src = "{% static '/works/golova/second_part/text/akril.png' %}" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/text/akril.png" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>       
             
             <div class="akril-english-image">
-                <img src = "{% static '/works/golova/second_part/text/english/akril-english.png' %}"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/text/english/akril-english.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cena-image">
-                <img src = "{% static '/works/golova/second_part/text/cena.png' %}" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/text/cena.png" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cena-english-image">
-                <img src = "{% static '/works/golova/second_part/text/english/cena-english.png' %}"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/text/english/cena-english.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="price-image">
-                <img src = "{% static '/works/golova/second_part/text/price.png' %}"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/text/price.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="button-image">
-                <img src = "{% static '/works/golova/second_part/buy_but/golova-btn.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/buy_but/golova-btn.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
     
             <div class="text-buy-image">
-                <img src = "{% static '/works/golova/second_part/buy_but/buy_but.png' %}" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/buy_but/buy_but.png" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="golova-buy-image">
-                <img src = "{% static '/works/golova/second_part/buy_but/golova_buy.png' %}"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/buy_but/golova_buy.png"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
                 
             <div class="first-buy-border" >
-                <img src = "{% static '/works/golova/second_part/buy_but/white-border.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/buy_but/white-border.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
     
             <div class="second-buy-border">
-                <img src = "{% static '/works/golova/second_part/buy_but/second-border.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/buy_but/second-border.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
                 
             <div class="third-buy-border">
-                <img src = "{% static '/works/golova/second_part/buy_but/extra_border.png' %}" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/golova/second_part/buy_but/extra_border.png" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
         </div>
