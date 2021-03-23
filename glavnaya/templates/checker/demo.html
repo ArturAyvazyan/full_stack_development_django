@@ -481,39 +481,41 @@
                     <path stroke = ' rgb(247, 174, 221)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M54.31,717.11q.19-352.44.79-704.88L54,11.46Q577.1,12,1100.21,12q-.17,352.4-.7,704.81l1.08.77Q577.48,717.05,54.31,717.11Z"/>
                     <path stroke = '#263794'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1098.3,13.06q-.18,351.32-.78,702.64l1.07.76q-521.07-.57-1042.18-.54.17-351.27.69-702.57L56,12.59Q577.15,13.11,1098.3,13.06Z"/> 
                 </svg>
+            
+                <div class="image_slider" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
                 
+                    <a href = "{% static '/works/maski/first_part/big_slideshow/1.png' %}"
+     
+                    data-fancybox="images-preview" 
+                    data-width="700" data-height="700"
+                    data-thumb= "{% static '/works/maski/first_part/big_slideshow/minis/1.png' %}" >
+    
+                        <img src = "{% static '/works/maski/first_part/main_slideshow/pics/1.png' %}"  class = 'slider-img' >
+                    </a>
+    
+                    <div style="display: none;">
+                        <a href="{% static '/works/maski/first_part/big_slideshow/2.png' %}" data-fancybox="images-preview" 
+                           data-width="800" data-height="700" style = 'background-color: black;'
+                           data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/2.png' %}"></a>
+                      
+                        <a href="{% static '/works/maski/first_part/big_slideshow/3.png' %}" data-fancybox="images-preview" 
+                           data-width="800" data-height="700"
+                           data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/3.png' %}"></a>
+                      
+                        <a href="{% static '/works/maski/first_part/big_slideshow/4.png' %}" data-fancybox="images-preview" 
+                           data-width="700" data-height="700"
+                           data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/4.png' %}"></a>
+                      
+                        <a href="{% static '/works/maski/first_part/big_slideshow/5.png' %}" data-fancybox="images-preview" 
+                           data-width="650" data-height="700"
+                           data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/5.png' %}"></a>
+    
+                      </div> 
+                </div>
+
             </div>
 
-            <div class="image_slider">
-                
-                <a href = "{% static '/works/maski/first_part/big_slideshow/1.png' %}"
- 
-                data-fancybox="images-preview" 
-                data-width="700" data-height="700"
-                data-thumb= "{% static '/works/maski/first_part/big_slideshow/minis/1.png' %}" >
-
-                    <img src = "{% static '/works/maski/first_part/main_slideshow/pics/1.png' %}"  class = 'slider-img' style = 'object-fit: cover; width: 100%; max-height: 100%;'>
-                </a>
-
-                <div style="display: none;">
-                    <a href="{% static '/works/maski/first_part/big_slideshow/2.png' %}" data-fancybox="images-preview" 
-                       data-width="800" data-height="700" style = 'background-color: black;'
-                       data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/2.png' %}"></a>
-                  
-                    <a href="{% static '/works/maski/first_part/big_slideshow/3.png' %}" data-fancybox="images-preview" 
-                       data-width="800" data-height="700"
-                       data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/3.png' %}"></a>
-                  
-                    <a href="{% static '/works/maski/first_part/big_slideshow/4.png' %}" data-fancybox="images-preview" 
-                       data-width="700" data-height="700"
-                       data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/4.png' %}"></a>
-                  
-                    <a href="{% static '/works/maski/first_part/big_slideshow/5.png' %}" data-fancybox="images-preview" 
-                       data-width="650" data-height="700"
-                       data-thumb="{% static '/works/maski/first_part/big_slideshow/minis/5.png' %}"></a>
-
-                  </div> 
-            </div>
+           
             
             <div class="arrow_left" style = 'position:relative; justify-content: center;'>
                 <img src = "{% static '/works/maski/first_part/main_slideshow/elements/arrow_left.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
