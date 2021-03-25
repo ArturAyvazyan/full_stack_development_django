@@ -34,10 +34,10 @@ urlpatterns = [
 
     url(r'^golova/', views.golova, name='golova'),
     url(r'^eye/', views.eye, name='eye'),
-    url(r'^guy/', views.guy, name='guy'),
-    url(r'^matrix/', views.matrix, name='matrix'),
-    url(r'^persik/', views.persik, name='persik'),
-    url(r'^tarelka/', views.tarelka, name='tarelka'),
+    url(r'^kosmos/', views.kosmos, name='kosmos'),
+    url(r'^zakis/', views.zakis, name='zakis'),
+    url(r'^maski/', views.maski, name='maski'),
+    url(r'^vibe/', views.vibe, name='vibe'),
 ]
 
 

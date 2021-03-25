@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" content="width=device-width, user-scalable=no"/>
+    <title>НУ ЧТО ПОЛЕТЕЛИ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> 
+
+</head>
+{% load static %}
+
+<body>
+    <style> 
+        html,
+        body {
+            position:static;
+            width: 100%;
+            height: 100%;
+            margin: 0px; /* убирает скролл */
+            overflow-x: hidden;
+            background: url("/media/works/kosmos/background.png");
+            background-size: cover;
+        }
+        
+        .container {
+            
+            display:grid;
+            grid-template-columns: 65fr 35fr;
+            grid-template-rows:100;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .first_class {
+            display: grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
+            overflow: hidden;
+        }
+
+        .borders {
+            grid-column-start: 1;
+            grid-column-end: 85;
+            grid-row-start: 5;
+            grid-row-end: 85;
+            overflow: hidden;
+        }
+
+        .image_slider {
+            grid-column-start: 15;
+            grid-column-end: 75;
+            grid-row-start: 10;
+            grid-row-end: 65;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .arrow_left { 
+            grid-column-start: 7;
+            grid-column-end: 11;
+            grid-row-start: 39;
+            grid-row-end: 45;
+        }
+
+        .arrow_right { 
+            grid-column-start: 78;
+            grid-column-end: 82;
+            grid-row-start: 39;
+            grid-row-end: 45;
+        }
+
+        .nazvanie {
+            grid-column-start: 5;
+            grid-column-end: 30;
+            grid-row-start: 85;
+            grid-row-end: 93;
+            overflow: hidden;
+        }
+
+/*  */
+/*  */
+/*  */
+
+        .second_class {
+            display: grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
+            overflow: hidden;
+        }
+
+        .obiem-image {
+            grid-column-start: 60;
+            grid-column-end: 85;
+            grid-row-start: 14;
+            grid-row-end: 19;
+            overflow: hidden;
+            z-index: 2;
+        }
+        
+        .obiem-english-image {
+            grid-column-start: 60;
+            grid-column-end: 85;
+            grid-row-start: 14;
+            grid-row-end: 19;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .gaivan-image {
+            grid-column-start: 42;
+            grid-column-end: 82;
+            grid-row-start: 21;
+            grid-row-end: 24;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .gaivan-english-image {
+            grid-column-start: 42;
+            grid-column-end: 82;
+            grid-row-start: 21;
+            grid-row-end: 24;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .piala-image{
+            grid-column-start:47;
+            grid-column-end: 82;
+            grid-row-start: 26;
+            grid-row-end: 29;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .piala-english-image{
+            grid-column-start:49;
+            grid-column-end: 82;
+            grid-row-start: 26;
+            grid-row-end: 29;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .materials-image {
+            grid-column-start: 45;
+            grid-column-end: 85;
+            grid-row-start: 35;
+            grid-row-end: 39;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .materials-english-image {
+            grid-column-start: 45;
+            grid-column-end: 85;
+            grid-row-start: 35;
+            grid-row-end: 39;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .farfor-image {
+            grid-column-start: 60;
+            grid-column-end: 82;
+            grid-row-start: 43;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .farfor-english-image {
+            grid-column-start: 55;
+            grid-column-end: 82;
+            grid-row-start: 43;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .glazur-image {
+            grid-column-start: 56;
+            grid-column-end: 82;
+            grid-row-start: 48;
+            grid-row-end: 51;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .glazur-english-image {
+            grid-column-start: 61;
+            grid-column-end: 82;
+            grid-row-start: 48;
+            grid-row-end: 51;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .akril-image {
+            grid-column-start: 25;
+            grid-column-end: 82;
+            grid-row-start: 53;
+            grid-row-end: 56;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .akril-english-image {
+            grid-column-start: 25;
+            grid-column-end: 82;
+            grid-row-start: 53;
+            grid-row-end: 56;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .logotip {
+            margin-top:10%;
+            grid-column-start: 85;
+            grid-column-end: 100;
+            grid-row-start: 90;
+            grid-row-end: 100;
+        }
+
+
+    </style>
+
+    <div class="container">
+        <div class="first_class">
+
+            <div class="borders">
+                   
+                <svg style = 'min-width:100%; min-height:100% ;max-width:100%; max-height:100%;' id = 'demo-svg' viewBox="0 0 1114.3 763.79">
+                    <path stroke = 'rgb(30, 255, 244)' id = 'forward-svg'  stroke-width="1" fill = 'none' d="M1105.62,9q-.19,355.91-.8,711.8l1.09.78Q577.47,721,49,721q.17-355.84.7-711.72l-1.09-.78Q577.09,9.07,1105.62,9Z"/> 
+                    <path stroke = 'rgb(70, 45, 255)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M47.21,721.11q.18-355.91.8-711.8l-1.1-.78Q577,9.12,1107.2,9.08q-.17,355.86-.7,711.73l1.09.78Q577.43,721.05,47.21,721.11Z"/>
+                    <path stroke = ' rgb(253, 43, 165)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1107.88,722.39q-530.21-.14-1060.42-.54l-1.16.74Q47.17,365,47.13,7.43q530.15.12,1060.3.48l1.16-.74Q1107.8,364.77,1107.88,722.39Z"/>
+                    <path stroke = 'rgb(255, 38, 67)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M46,5.78q531.21.13,1062.41.55l1.16-.74q-.87,359.15-.83,718.32-531.13-.12-1062.3-.48l-1.16.74Q46.11,365,46,5.78Z"/>
+                    <path stroke = 'rgb(90, 62, 252)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M43.89,725.1q.18-360,.8-720l-1.1-.79q533.79.6,1067.61.56-.17,360-.71,719.94l1.1.79Q577.77,725,43.89,725.1Z"/>
+                    <path stroke = 'rgb(25, 247, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M1110.3,4.79q-.19,360-.81,720l1.1.79Q577.31,725,44,725q.17-360,.71-719.94l-1.1-.79Q576.92,4.86,1110.3,4.79Z"/>  
+                    <path stroke = 'rgb(248, 9, 129)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M1111.87,727.38q-534.57-.12-1069.13-.55l-1.17.75q.87-362.83.83-725.71,534.5.12,1069,.49l1.17-.75Q1111.78,364.48,1111.87,727.38Z"/>
+                    <path stroke = 'rgb(173, 73, 255)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M41.48.55q535.54.38,1071.09,1l1.17-.75q-1,363.86-1.17,727.74-535.47-.36-1071-1l-1.17.75Q41.41,364.47,41.48.55Z"/> 
+                    <path stroke = 'rgb(255, 24, 93)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M1103.88,720.39q-526.56-.14-1053.14-.54l-1.15.74q.87-355.53.82-711.1,526.5.12,1053,.47l1.15-.73Q1103.8,364.79,1103.88,720.39Z"/> 
+                    <path stroke = 'rgb(240, 75, 255)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1100.89,719q-523.58-.12-1047.16-.53l-1.14.73q.85-354.18.82-708.38,523.5.11,1047,.47l1.14-.73Q1100.8,364.8,1100.89,719Z"/> 
+                    <path stroke = 'rgb(23, 247, 255)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M54.31,717.11q.19-352.44.79-704.88L54,11.46Q577.1,12,1100.21,12q-.17,352.4-.7,704.81l1.08.77Q577.48,717.05,54.31,717.11Z"/>
+                    <path stroke = 'rgb(154, 1, 255)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M1098.3,13.06q-.18,351.32-.78,702.64l1.07.76q-521.07-.57-1042.18-.54.17-351.27.69-702.57L56,12.59Q577.15,13.11,1098.3,13.06Z"/> 
+                </svg>
+                
+            </div>
+
+            <div class="image_slider">
+                
+                <a href = "/media/works/kosmos/first_part/big_slideshow/1.png"
+ 
+                data-fancybox="images-preview" 
+                data-width="1532" data-height="1315"
+                data-thumb= "/media/works/kosmos/first_part/big_slideshow/minis/1.png" >
+
+                    <img src = "/media/works/kosmos/first_part/main_slideshow/pics/1.png"  class = 'slider-img' style = 'position:relative; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
+                </a>
+
+                <div style="display: none;">
+                    <a href="/media/works/kosmos/first_part/big_slideshow/2.png" data-fancybox="images-preview" 
+                       data-width="1800" data-height="2010" style = 'background-color: black;'
+                       data-thumb="/media/works/kosmos/first_part/big_slideshow/minis/2.png"></a>
+                  
+                    <a href="/media/works/kosmos/first_part/big_slideshow/3.png" data-fancybox="images-preview" 
+                       data-width="1700" data-height="1500"
+                       data-thumb="/media/works/kosmos/first_part/big_slideshow/minis/3.png"></a>
+                  
+                    <a href="/media/works/kosmos/first_part/big_slideshow/4.png" data-fancybox="images-preview" 
+                       data-width="1700" data-height="1700"
+                       data-thumb="/media/works/kosmos/first_part/big_slideshow/minis/4.png"></a>
+                  
+                    <a href="/media/works/kosmos/first_part/big_slideshow/5.png" data-fancybox="images-preview" 
+                       data-width="1800" data-height="1900"
+                       data-thumb="/media/works/kosmos/first_part/big_slideshow/minis/5.png"></a>
+                    
+                    <a href="/media/works/kosmos/first_part/big_slideshow/6.png" data-fancybox="images-preview" 
+                       data-width="1700" data-height="1900"
+                       data-thumb="/media/works/kosmos/first_part/big_slideshow/minis/6.png"></a>
+
+                  </div> 
+            </div>
+            
+            <div class="arrow_left" style = 'position:relative; justify-content: center;'>
+                <img src = "/media/works/kosmos/first_part/main_slideshow/elements/arrow_left.png" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
+            </div>
+
+            <div class="arrow_right" style = 'position:relative; justify-content: center;'>
+                <img src = "/media/works/kosmos/first_part/main_slideshow/elements/arrow_right.png" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
+            </div>
+            
+            <div class="nazvanie">
+                <img src = "/media/works/kosmos/first_part/kosmos_logo.png" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;'>
+            </div>
+
+            
+            
+        </div>
+        
+        <div class="second_class">
+            
+            <div class="obiem-image">
+                <img src = "/media/works/kosmos/second_part/text/obiem.png" onmouseenter = obiemSwitchToEnglish() onmouseleave = obiemBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            </div>
+
+            <div class="obiem-english-image">
+                <img src = "/media/works/kosmos/second_part/text/english/obiem-english.png"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            </div>
+
+            <div class="gaivan-image">
+                <img src = "/media/works/kosmos/second_part/text/gaivan.png" onmouseenter = gaivanSwitchToEnglish() onmouseleave = gaivanBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            </div>
+            
+            <div class="gaivan-english-image">
+                <img src = "/media/works/kosmos/second_part/text/english/gaivan-english.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            </div>
+
+            <div class="piala-image">
+                <img src = "/media/works/kosmos/second_part/text/piala.png" onmouseenter = pialaSwitchToEnglish() onmouseleave = pialaBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="piala-english-image">
+                <img src = "/media/works/kosmos/second_part/text/english/piala-english.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="materials-image">
+                <img src = "/media/works/kosmos/second_part/text/materials.png" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+            
+            <div class="materials-english-image">
+                <img src = "/media/works/kosmos/second_part/text/english/materials-english.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="farfor-image">
+                <img src = "/media/works/kosmos/second_part/text/farfor.png" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="farfor-english-image">
+                <img src = "/media/works/kosmos/second_part/text/english/00farfor.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="glazur-image">
+                <img src = "/media/works/kosmos/second_part/text/glazur.png" onmouseenter = glazurSwitchToEnglish() onmouseleave = glazurBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="glazur-english-image">
+                <img src = "/media/works/kosmos/second_part/text/english/glazur-english.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="akril-image">
+                <img src = "/media/works/kosmos/second_part/text/akril.png" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>       
+
+            <div class="akril-english-image">
+                <img src = "/media/works/kosmos/second_part/text/english/akril-english.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="logotip" style = 'position:relative; justify-content: center;'>
+                <img src = "/media/works/kosmos/second_part/logotip.png" style = 'min-width:100%; min-height:100%; max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+            </div> 
+
+        </div>
+
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+    <script>
+
+    var slider_img = document.querySelector('.slider-img');
+    var images = ['1.png', '2.png', '3.png','4.png', '5.png', '6.png',];
+    var i =0; 
+
+    function prev() {
+        if (i<=0) i = images.length;
+        b=i
+        i--;
+        return setImg();
+    }
+
+    function next() {
+        if (i >= images.length - 1) i = -1;
+        b = i
+        i++;
+        return setImg();
+    }
+
+    function setImg(){
+        return slider_img.setAttribute('src', "{% static '/works/kosmos/first_part/main_slideshow/pics/' %}" + images[i])
+    }
+
+    function borderMove(){
+        
+        var border_forward_animation =  anime({
+            targets: '#forward-svg',
+            strokeDashoffset: [anime.setDashoffset,0],
+            easing: 'easeInOutSine',
+            duration: 25000,
+        
+            direction:'alternate',
+            delay: function(el, i) { return i * 250 },
+            
+            loop: true,
+        });
+
+        var border_backward_animation =  anime({
+            targets: '#backward-svg',
+            strokeDashoffset: [0, anime.setDashoffset],
+            easing: 'easeInOutSine',
+            duration: 25000,
+        
+            direction:'alternate',
+            delay: function(el, i) { return i * 250 },
+            
+            loop: true,
+        });
+    } borderMove()
+
+    var arrow_left = anime({
+        targets:'.arrow_left',
+        scale:1.1,
+        duration:450,
+        autoplay:false,
+        loop:false,
+    })
+
+    var arrow_right = anime({
+        targets:'.arrow_right',
+        scale:1.1,
+        duration:450,
+        autoplay:false,
+        loop:false,
+    })
+
+    var motion_of_name =  anime({
+        targets: '.nazvanie',
+        translateY: {
+            value:15,
+            duration: 7500,
+        },
+        direction: 'alternate',
+        easing: 'easeInOutSine',
+        loop: true,
+    });
+
+    function obiemSwitchToEnglish() {
+        var english_obiem_appears = anime({
+            targets:'.obiem-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_obiem = anime({
+            targets:'.obiem-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function obiemBackToRussian() {
+        var disappear_english_obiem = anime({
+            targets:'.obiem-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var obiem_appears = anime({
+            targets:'.obiem-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+
+    function gaivanSwitchToEnglish() {
+        var english_gaivan_appears = anime({
+            targets:'.gaivan-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_gaivan = anime({
+            targets:'.gaivan-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function gaivanBackToRussian() {
+        var disappear_english_gaivan = anime({
+            targets:'.gaivan-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var gaivan_appears = anime({
+            targets:'.gaivan-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+    
+    function pialaSwitchToEnglish() {
+        var english_piala_appears = anime({
+            targets:'.piala-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_piala = anime({
+            targets:'.piala-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function pialaBackToRussian() {
+        var disappear_english_piala = anime({
+            targets:'.piala-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var piala_appears = anime({
+            targets:'.piala-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function materialsSwitchToEnglish() {
+        var english_materials_appears = anime({
+            targets:'.materials-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_materials = anime({
+            targets:'.materials-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function materialsBackToRussian() {
+        var disappear_english_materials = anime({
+            targets:'.materials-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var materials_appears = anime({
+            targets:'.materials-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforSwitchToEnglish() {
+        var english_farfor_appears = anime({
+            targets:'.farfor-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_farfor = anime({
+            targets:'.farfor-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforBackToRussian() {
+        var disappear_english_farfor = anime({
+            targets:'.farfor-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var farfor_appears = anime({
+            targets:'.farfor-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function glazurSwitchToEnglish() {
+        var english_glazur_appears = anime({
+            targets:'.glazur-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_glazur = anime({
+            targets:'.glazur-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function glazurBackToRussian() {
+        var disappear_english_glazur = anime({
+            targets:'.glazur-english-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var glazur_appears = anime({
+            targets:'.glazur-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilSwitchToEnglish() {
+        var english_akril_appears = anime({
+            targets:'.akril-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_akril = anime({
+            targets:'.akril-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilBackToRussian() {
+        var disappear_english_akril = anime({
+            targets:'.akril-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var akril_appears = anime({
+            targets:'.akril-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+    
+    </script>
+</body>
+
+</html>
+
+</html>

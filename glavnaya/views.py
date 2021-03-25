@@ -52,29 +52,29 @@ def eye(request):
     })
 
 
-def guy(request):
+def kosmos(request):
     Workas = Work.objects.all()
-    return render(request, 'works_desktop/guy.html', {
+    return render(request, 'works_desktop/kosmos.html', {
         'Workas': Workas
     })
 
 
-def matrix(request):
+def zakis(request):
     Workas = Work.objects.all()
-    return render(request, 'works_desktop/matrix.html', {
+    return render(request, 'works_desktop/zakis.html', {
         'Workas': Workas
     })
 
 
-def persik(request):
+def maski(request):
     Workas = Work.objects.all()
-    return render(request, 'works_desktop/persik.html', {
+    return render(request, 'works_desktop/maski.html', {
         'Workas': Workas
     })
 
 
-def tarelka(request):
+def vibe(request):
     Workas = Work.objects.all()
-    return render(request, 'works_desktop/tarelka.html', {
+    return render(request, 'works_desktop/vibe.html', {
         'Workas': Workas
     })

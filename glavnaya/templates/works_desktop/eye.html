@@ -2,7 +2,8 @@
 <html lang="en" class="no-js">
 
 <head>
-    <meta charset="UTF-8" content="width=device-width, user-scalable=no"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>НУ ЧТО ПОЛЕТЕЛИ</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> 
 
@@ -18,12 +19,11 @@
             height: 100%;
             margin: 0px; /* убирает скролл */
             overflow-x: hidden;
-            background: url("{% static '/works/eye/background.png' %}");
+            background: url("/media/works/eye/background.png");
             background-size: cover;
         }
         
         .container {
-            
             display:grid;
             grid-template-columns: 35fr 65fr;
             grid-template-rows:100;
@@ -259,6 +259,248 @@
             grid-row-end:99;
         }
 
+
+        @media screen and (max-width: 900px) {
+
+            html,
+            body {
+                background: url("/media/works/eye/background.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+
+            .nazvanie {
+                grid-column-start: 21;
+                grid-column-end: 45;
+                grid-row-start: 12;
+                grid-row-end: 20;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 100%; 
+                min-width: 100%; 
+                grid-column-start: 15;
+                grid-column-end: 95;
+                grid-row-start: 16;
+                grid-row-end: 71;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 32;
+                grid-column-end: 76;
+                grid-row-start: 33;
+                grid-row-end: 71;
+            }
+
+            .arrow_left { 
+                grid-column-start: 20;
+                grid-column-end: 25;
+                grid-row-start: 42;
+                grid-row-end: 47;
+            }
+
+            .arrow_right {
+                grid-column-start: 85;
+                grid-column-end: 90;
+                grid-row-start: 42;
+                grid-row-end: 47;
+            }
+
+            .button-image {
+                grid-column-start: 5;
+                grid-column-end: 55;
+                grid-row-start:74;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 16;
+                grid-column-end: 43;
+                grid-row-start: 79;
+                grid-row-end: 85;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .glaz-buy-image {
+                grid-column-start: 20;
+                grid-column-end: 37;
+                grid-row-start: 81;
+                grid-row-end: 85;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 5;
+                grid-column-end: 55;
+                grid-row-start: 70;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .second-buy-border {
+                grid-column-start: 2;
+                grid-column-end: 51;
+                grid-row-start: 74;
+                grid-row-end: 92;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 3;
+                grid-column-end: 57;
+                grid-row-start:70;
+                grid-row-end: 94;
+                overflow: hidden;
+            }
+
+            .logotip {
+                grid-column-start: 87;
+                grid-column-end: 95;
+                grid-row-start: 91;
+                grid-row-end: 97;
+                transform:scale(1.5);
+            }
+            /*  */
+                /*  */
+                    /*  */
+
+            .razmer-image {
+                grid-column-start: 10;
+                grid-column-end: 41;
+                grid-row-start: 120;
+                grid-row-end: 125;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 10;
+                grid-column-end: 31;
+                grid-row-start: 120;
+                grid-row-end: 125;
+                opacity:0;
+                z-index:1;
+            }
+            
+            .cifri-image{
+                grid-column-start: 38;
+                grid-column-end: 77;
+                grid-row-start: 126;
+                grid-row-end: 131;
+                /* z-index:2; */
+            }
+
+            /* .cifri-english-image{
+                grid-column-start: 28;
+                grid-column-end: 57;
+                grid-row-start: 127;
+                grid-row-end: 131;
+                opacity:0;
+                z-index:1;
+            } */
+
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 51;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 51;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 35;
+                grid-column-end: 61;
+                grid-row-start: 145;
+                grid-row-end: 149;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 35;
+                grid-column-end: 63;
+                grid-row-start: 145;
+                grid-row-end: 149;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril-image {
+                grid-column-start: 35;
+                grid-column-end: 80;
+                grid-row-start: 150;
+                grid-row-end: 155;
+                z-index:2;
+            }  
+
+            .akril-english-image {
+                grid-column-start: 35;
+                grid-column-end: 80;
+                grid-row-start: 150;
+                grid-row-end: 155;
+                opacity:0;
+                z-index:1;
+            }   
+
+            .cena-image {
+                grid-column-start: 10;
+                grid-column-end: 33;
+                grid-row-start: 155;
+                grid-row-end: 161;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 155;
+                grid-row-end: 160;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price-image {
+                grid-column-start: 27;
+                grid-column-end: 48;
+                grid-row-start: 162;
+                grid-row-end: 167;
+                overflow: hidden;
+            }
+        }
+
+
         .morphing-btn-wrap {
             display: inline-block;
             position: relative;
@@ -290,7 +532,7 @@
         /* АНИМАЦИЯ ВЫХОДА ЦВЕТА ИЗ ЛОГО */
         .morphing-btn-clone {
             position: fixed;
-            background: url("{% static '/every_hidden_page/background.png' %}");
+            background: url("/media/every_hidden_page/background.png");
             background-size: cover;
             border-radius: 50%;
             z-index: 3;
@@ -317,7 +559,7 @@
             height: 100%;
             margin: 0px; /* убирает скролл */
             overflow-x: hidden;
-            background: url("{% static '/every_hidden_page/background.png' %}");
+            background: url("/media/every_hidden_page/background.png");
             background-size: cover;
         }
 
@@ -360,76 +602,76 @@
 
         #home {
             position:absolute;
-            top: 1%;
-            left: 52em;
-            max-height: 220px;
-            max-width: 175px;
-            margin-left:1px;
+            top: 1vh;
+            left: 45vw;
+            max-height: 25vh;
+            max-width: 25vw;
+            
         }
 
         #put {
             position:absolute;
-            top: 15%;
-            left: 11%;
-            max-height:15%;
-            max-width:15%; 
+            top: 15vh;
+            left: 11vw;
+            max-height:15vh;
+            max-width:15vw; 
         }
 
         #zakis {
             position:absolute;
-            top: 25%;
-            left: 10%;
-            max-height:15%;
-            max-width:15%; 
+            top: 25vh;
+            left: 10vw;
+            max-height: 15vh;
+            max-width: 15vw; 
         }
 
         #glaz {
             position:absolute;
-            top: 35%;
-            left: 11%;
-            max-height:15%;
-            max-width:15%; 
+            top: 35vh;
+            left: 11vw;
+            max-height: 15vh;
+            max-width: 15vw; 
         }
 
         #kosmos {
             position:absolute;
-            top: 15%;
-            right: 10%;
-            max-height:15%;
-            max-width:15%; 
+            top: 15vh;
+            right: 10vw;
+            max-height:15vh;
+            max-width:15vw; 
         }
 
         #maski {
             position:absolute;
-            top: 25%;
-            right: 11%;
-            max-height:15%;
-            max-width:15%; 
+            top: 25vh;
+            right: 11vw;
+            max-height: 15vh;
+            max-width: 15vw; 
         }
 
         #ohboy {
             position:absolute;
-            top: 35%;
-            right: 5%;
-            max-height: 100%;
-            max-width: 100%;
-            margin-top: -20px;
+            top: 35vh;
+            right: 5vw;
+            max-height: 40vh;
+            max-width: 40vw;
+            /* margin-top: -20vh; */
         }
 
         #inst {
             position:absolute;
-            bottom: 2%;
-            left: 54em;
-            max-height: 5%;
-            max-width: 5%;
+            bottom: 2vh;
+            left: 47vw;
+            max-height: 5vh;
+            max-width: 5vw;
         }
 
         #tg {
             position:absolute;
-            bottom: 2%;
-            left: 58em;
-            max-height: 5%;
-            max-width: 5%;
+            bottom: 2vh;
+            left: 50vw;
+            max-height: 5vh;
+            max-width: 5vw;
         }
 
         #mini_zakis {
@@ -474,75 +716,75 @@
         <div class="first_class">
 
             <div class="razmer-image">
-                <img src = "{% static '/works/eye/first_part/text/razmer.png' %}" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/razmer.png" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
             
             <div class="razmer-english-image">
-                <img src = "{% static '/works/eye/first_part/text/english/razmer-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/english/razmer-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
 
             <div class="cifri-image">
-                <img src = "{% static '/works/eye/first_part/text/25.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/25.png" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="materials-image">
-                <img src = "{% static '/works/eye/first_part/text/materials.png' %}"  onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/materials.png"  onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="materials-english-image">
-                <img src = "{% static '/works/eye/first_part/text/english/materials-english.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/english/materials-english.png" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-image">
-                <img src = "{% static '/works/eye/first_part/text/farfor.png' %}" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/farfor.png" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-english-image">
-                <img src = "{% static '/works/eye/first_part/text/english/farfor-english.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/english/farfor-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="akril-image">
-                <img src = "{% static '/works/eye/first_part/text/akril.png' %}" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/akril.png" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="akril-english-image">
-                <img src = "{% static '/works/eye/first_part/text/english/akril-english.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/english/akril-english.png" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cena-image">
-                <img src = "{% static '/works/eye/first_part/text/cena.png' %}" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/cena.png" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cena-english-image">
-                <img src = "{% static '/works/eye/first_part/text/english/cena-english.png' %}" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/english/cena-english.png" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="price-image">
-                <img src = "{% static '/works/eye/first_part/text/price.png' %}" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/price.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="button-image">
-                <img src = "{% static '/works/eye/first_part/buy_but/eye-btn.png' %}"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/buy_but/eye-btn.png"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="text-buy-image" >
-                <img src = "{% static '/works/eye/first_part/buy_but/butbuttton.png' %}" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/buy_but/butbuttton.png" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="glaz-buy-image">
-                <img src = "{% static '/works/eye/first_part/buy_but/glaz_buy.png' %}"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/buy_but/glaz_buy.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
             
             <div class="first-buy-border" >
-                <img src = "{% static '/works/eye/first_part/buy_but/white-border.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/buy_but/white-border.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="second-buy-border">
-                <img src = "{% static '/works/eye/first_part/buy_but/red-border.png' %}" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/buy_but/red-border.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
             
             <div class="third-buy-border">
-                <img src = "{% static '/works/eye/first_part/buy_but/blue-border.png' %}" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/buy_but/blue-border.png" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
 
@@ -551,7 +793,7 @@
         <div class="second_class">
                 <div class="borders">
                    
-                    <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 1114.3 763.79">
+                    <svg style = 'min-width:100%; min-height:100% ;max-width:100%; max-height:100%;' id = 'demo-svg' viewBox="0 0 1114.3 763.79">
                         <path stroke = 'rgb(70, 43, 226)' id = 'forward-svg'  stroke-width="1" fill = 'none' d="M1105.62,9q-.19,355.91-.8,711.8l1.09.78Q577.47,721,49,721q.17-355.84.7-711.72l-1.09-.78Q577.09,9.07,1105.62,9Z"/> 
                         <path stroke = 'rgb(228, 213, 241)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M47.21,721.11q.18-355.91.8-711.8l-1.1-.78Q577,9.12,1107.2,9.08q-.17,355.86-.7,711.73l1.09.78Q577.43,721.05,47.21,721.11Z"/>
                         <path stroke = 'rgb(143, 56, 194)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M1107.88,722.39q-530.21-.14-1060.42-.54l-1.16.74Q47.17,365,47.13,7.43q530.15.12,1060.3.48l1.16-.74Q1107.8,364.77,1107.88,722.39Z"/>
@@ -569,36 +811,36 @@
                 </div>
                
                 <div class="nazvanie">
-                    <img src = "{% static '/works/eye/second_part/glaz_logo.png' %}" style = 'max-width:100%;max-height:100%;'>
+                    <img src = "/media/works/eye/second_part/glaz_logo.png" style = 'max-width:100%;max-height:100%;'>
                 </div>
 
                 <div class="image_slider">
                     
-                    <a href = "{% static '/works/eye/second_part/big_slideshow/1.png' %}"
+                    <a href = "/media/works/eye/second_part/big_slideshow/1.png"
      
                     data-fancybox="images-preview" 
                     data-width="2100" data-height="900"
-                    data-thumb="{% static '/works/eye/second_part/big_slideshow/minis/1.png' %}">
+                    data-thumb="/media/works/eye/second_part/big_slideshow/minis/1.png">
 
-                        <img src = "{% static '/works/eye/second_part/main_slideshow/pics/01eye.png' %}"  class = 'slider-img' style = 'position:relative; margin-top:9.7%; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
+                        <img src = "/media/works/eye/second_part/main_slideshow/pics/1.png"  class = 'slider-img' style = 'transform: scale(0.9); position:relative; margin-top:9.7%; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
                     </a>
 
                     <div style="display: none;">
-                        <a href="{% static '/works/eye/second_part/big_slideshow/2.png' %}" data-fancybox="images-preview" 
+                        <a href="/media/works/eye/second_part/big_slideshow/2.png" data-fancybox="images-preview" 
                            data-width="1600" data-height="900" style = 'background-color: black;'
-                           data-thumb="{% static '/works/eye/second_part/big_slideshow/minis/2.png' %}"></a>
+                           data-thumb="/media/works/eye/second_part/big_slideshow/minis/2.png"></a>
                       
-                        <a href="{% static '/works/eye/second_part/big_slideshow/3.png' %}" data-fancybox="images-preview" 
+                        <a href="/media/works/eye/second_part/big_slideshow/3.png" data-fancybox="images-preview" 
                            data-width="1600" data-height="900"
-                           data-thumb="{% static '/works/eye/second_part/big_slideshow/minis/3.png' %}"></a>
+                           data-thumb="/media/works/eye/second_part/big_slideshow/minis/3.png"></a>
                       
-                        <a href="{% static '/works/eye/second_part/big_slideshow/4.png' %}" data-fancybox="images-preview" 
+                        <a href="/media/works/eye/second_part/big_slideshow/4.png" data-fancybox="images-preview" 
                            data-width="900" data-height="900"
-                           data-thumb="{% static '/works/eye/second_part/big_slideshow/minis/4.png' %}"></a>
+                           data-thumb="/media/works/eye/second_part/big_slideshow/minis/4.png"></a>
                       
-                        <a href="{% static '/works/eye/second_part/big_slideshow/5.png' %}" data-fancybox="images-preview" 
+                        <a href="/media/works/eye/second_part/big_slideshow/5.png" data-fancybox="images-preview" 
                            data-width="1600" data-height="900"
-                           data-thumb="{% static '/works/eye/second_part/big_slideshow/minis/5.png' %}"></a>
+                           data-thumb="/media/works/eye/second_part/big_slideshow/minis/5.png"></a>
 
                       </div> 
                       
@@ -606,80 +848,80 @@
                 </div>
 
                 <div class="arrow_left" style = 'position:relative; justify-content: center;'>
-                    <img src = "{% static '/works/eye/second_part/main_slideshow/elements/arrow_left.png' %}" style = 'max-width:100%;max-height:100%;min-width:100%;min-height:100%;'  onclick="prev(), arrow_left.play()">
+                    <img src = "/media/works/eye/second_part/main_slideshow/elements/arrow_left.png" style = 'max-width:100%;max-height:100%;min-width:100%;min-height:100%;'  onclick="prev(), arrow_left.play()">
                 </div>
 
                 <div class="arrow_right" style = 'position:relative; justify-content: center;'>
-                    <img src = "{% static '/works/eye/second_part/main_slideshow/elements/arrow_right.png' %}" style = 'max-width:100%;max-height:100%;min-width:100%;min-height:100%;' onclick="next(),arrow_right.play()">
+                    <img src = "/media/works/eye/second_part/main_slideshow/elements/arrow_right.png" style = 'max-width:100%;max-height:100%;min-width:100%;min-height:100%;' onclick="next(),arrow_right.play()">
                 </div>
 
                 <div class="logotip" style = 'position:relative; justify-content: center;'>
-                    <img src = "{% static '/works/eye/second_part/logotip.png' %}" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+                    <img src = "/media/works/eye/second_part/logotip.png" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
                 </div> 
 
                 <div id="morphing-content" class="hidden">
 
                     <div class="welcome_home">
                         <a href = 'http://127.0.0.1:8000/' style = 'outline : none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/elements/home.png' %}" id = 'home'>
+                            <img src = "/media/every_hidden_page/elements/home.png" id = 'home'>
                         </a>
                     </div>
                     
                     <div class = 'put' onmouseenter = put_onmove.play() onmouseleave = put_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/put.png' %}" id = 'put'>
+                            <img src = "/media/every_hidden_page/works/put.png" id = 'put'>
                         </a>
                     </div>
 
                     <div class = 'zakis' onmouseenter = zakis_onmove.play() onmouseleave = zakis_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline : none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/zakis.png' %}" id = 'zakis'>
+                            <img src = "/media/every_hidden_page/works/zakis.png" id = 'zakis'>
                         </a>
                     </div>
 
                     <div class = 'glaz'  onmouseenter = glaz_onmove.play() onmouseleave = glaz_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/glaz.png' %}" id = 'glaz'>
+                            <img src = "/media/every_hidden_page/works/glaz.png" id = 'glaz'>
                         </a>
                     </div>
 
                     <div class = 'kosmos' onmouseenter = kosmos_onmove.play() onmouseleave = kosmos_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/kosmos.png' %}" id = 'kosmos'>
+                            <img src = "/media/every_hidden_page/works/kosmos.png" id = 'kosmos'>
                         </a>
                     </div>
 
                     <div class = 'maski' onmouseenter = maski_onmove.play() onmouseleave = maski_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/maski.png' %}" id = 'maski'>
+                            <img src = "/media/every_hidden_page/works/maski.png" id = 'maski'>
                         </a>
                     </div>
 
                     <div class = 'ohboy' onmouseenter = ohboy_onmove.play() onmouseleave = ohboy_set.play()>
                         <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/works/vibe.png' %}" id = 'ohboy'>
+                            <img src = "/media/every_hidden_page/works/vibe.png" id = 'ohboy'>
                         </a>
                     </div>
                         
                     <div class = 'inst'>
                         <a href = 'https://instagram.com/delayu.svoye.delo' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/elements/inst.png' %}" id = 'inst'>
+                            <img src = "/media/every_hidden_page/elements/inst.png" id = 'inst'>
                         </a>
                     </div>
 
                     <div class = 'tg'>
                         <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' style = 'outline: none; color: inherit; text-decoration: none;'>
-                            <img src = "{% static '/every_hidden_page/elements/th-new.png' %}" id = 'tg'>
+                            <img src = "/media/every_hidden_page/elements/th-new.png" id = 'tg'>
                         </a>
                     </div>
 
                     <!-- POP-UP IMAGES -->
-                    <img src = "{% static '/every_hidden_page/works/photoes/zakis.png' %}" id = 'mini_zakis'>
-                    <img src = "{% static '/every_hidden_page/works/photoes/eye.png' %}" id = 'mini_glaz'>
-                    <img src = "{% static '/every_hidden_page/works/photoes/golova.png' %}" id = 'mini_put'>
-                    <img src = "{% static '/every_hidden_page/works/photoes/kosmos.png' %}" id = 'mini_kosmos'>
-                    <img src = "{% static '/every_hidden_page/works/photoes/maski.png' %}" id = 'mini_maski'>
-                    <img src = "{% static '/every_hidden_page/works/photoes/vibe.png' %}" id = 'mini_vibe'>
+                    <img src = "/media/every_hidden_page/works/photoes/zakis.png" id = 'mini_zakis'>
+                    <img src = "/media/every_hidden_page/works/photoes/eye.png" id = 'mini_glaz'>
+                    <img src = "/media/every_hidden_page/works/photoes/golova.png" id = 'mini_put'>
+                    <img src = "/media/every_hidden_page/works/photoes/kosmos.png" id = 'mini_kosmos'>
+                    <img src = "/media/every_hidden_page/works/photoes/maski.png" id = 'mini_maski'>
+                    <img src = "/media/every_hidden_page/works/photoes/vibe.png" id = 'mini_vibe'>
 
                 </div>  
             </div>
@@ -695,7 +937,7 @@
     <script>
 
     var slider_img = document.querySelector('.slider-img');
-    var images = ['01eye.png','02eye.png', '03eye-01.png', '04eye-01.png', '05eye-01.png'];
+    var images = ['1.png','2.png', '3.png', '4.png', '5.png'];
     var i =0; 
 
     function prev() {
@@ -713,7 +955,7 @@
     }
 
     function setImg(){
-        return slider_img.setAttribute('src', "{% static '/works/eye/second_part/main_slideshow/pics/' %}" + images[i])
+        return slider_img.setAttribute('src', "/media/works/eye/second_part/main_slideshow/pics/" + images[i])
     }
 
     function borderMove(){
