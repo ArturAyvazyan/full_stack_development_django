@@ -336,10 +336,10 @@
             }
 
             .maski-buy-image {
-                grid-column-start: 19;
-                grid-column-end: 42;
-                grid-row-start: 81;
-                grid-row-end: 85;
+                grid-column-start: 20;
+                grid-column-end: 38;
+                grid-row-start: 82;
+                grid-row-end: 86;
                 overflow: hidden;
                 z-index: 1;
                 opacity: 0;
@@ -376,12 +376,14 @@
                 grid-row-end: 96;
                 transform:scale(1.5);
             }
+
             /*  */
                 /*  */
                     /*  */
+
             .materials-image {
                 grid-column-start: 10;
-                grid-column-end: 51;
+                grid-column-end: 55;
                 grid-row-start: 120;
                 grid-row-end: 125;
                 z-index:2
@@ -404,8 +406,8 @@
             } 
             
             .farfor-english-image {
-                grid-column-start: 35;
-                grid-column-end: 63;
+                grid-column-start: 30;
+                grid-column-end: 65;
                 grid-row-start: 127;
                 grid-row-end: 131;
                 opacity:0;
@@ -421,8 +423,8 @@
             }
 
             .razmer-english-image {
-                grid-column-start: 10;
-                grid-column-end: 33;
+                grid-column-start: 17;
+                grid-column-end: 40;
                 grid-row-start: 138;
                 grid-row-end: 143;
                 opacity:0;
@@ -430,8 +432,8 @@
             }
 
             .cifri-image{
-                grid-column-start: 38;
-                grid-column-end: 65;
+                grid-column-start: 35;
+                grid-column-end: 70;
                 grid-row-start: 146;
                 grid-row-end: 150;
                 z-index:2;
@@ -448,16 +450,16 @@
 
             .cena-image {
                 grid-column-start: 10;
-                grid-column-end: 33;
+                grid-column-end: 38;
                 grid-row-start: 155;
-                grid-row-end: 161;
+                grid-row-end: 162;
                 overflow: hidden;
                 z-index:2;
             }
             
             .cena-english-image {
-                grid-column-start: 10;
-                grid-column-end: 35;
+                grid-column-start: 13;
+                grid-column-end: 38;
                 grid-row-start: 155;
                 grid-row-end: 160;
                 overflow: hidden;
@@ -467,16 +469,239 @@
 
             .price-image {
                 grid-column-start: 35;
-                grid-column-end: 53;
+                grid-column-end: 55;
                 grid-row-start: 162;
-                grid-row-end: 165;
+                grid-row-end: 166;
                 overflow: hidden;
             }
         
         
         }
 
+        @media screen and (max-width: 600px) {
 
+            html,
+            body {
+                background: url("/media/works/maski/background.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+
+            .nazvanie {
+                grid-column-start: 60;
+                grid-column-end: 88;
+                grid-row-start: 10;
+                grid-row-end: 15;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 100%; 
+                min-width: 100%; 
+                grid-column-start: 5;
+                grid-column-end: 95;
+                grid-row-start: 16;
+                grid-row-end: 71;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 28;
+                grid-column-end: 78;
+                grid-row-start: 25;
+                grid-row-end: 70;
+            }
+
+            .arrow_left { 
+                grid-column-start: 11;
+                grid-column-end: 16;
+                grid-row-start: 42;
+                grid-row-end: 47;
+            }
+
+            .arrow_right {
+                grid-column-start: 85;
+                grid-column-end: 90;
+                grid-row-start: 42;
+                grid-row-end: 47;
+            }
+
+            .button-image {
+                grid-column-start: 5;
+                grid-column-end: 55;
+                grid-row-start:74;
+                grid-row-end: 94;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 15;
+                grid-column-end: 45;
+                grid-row-start: 81;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .maski-buy-image {
+                grid-column-start: 20;
+                grid-column-end: 38;
+                grid-row-start: 82;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 5;
+                grid-column-end: 55;
+                grid-row-start: 74;
+                grid-row-end: 94;
+                overflow: hidden;
+            }
+
+            .second-buy-border {
+                grid-column-start: 2;
+                grid-column-end: 51;
+                grid-row-start: 72;
+                grid-row-end: 92;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 7;
+                grid-column-end: 57;
+                grid-row-start: 73;
+                grid-row-end: 95;
+                overflow: hidden;
+            }
+
+            .logotip {
+                grid-column-start: 87;
+                grid-column-end: 95;
+                grid-row-start: 90;
+                grid-row-end: 96;
+                transform:scale(1.5);
+            }
+
+            /*  */
+                /*  */
+                    /*  */
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 55;
+                grid-row-start: 120;
+                grid-row-end: 125;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 51;
+                grid-row-start: 120;
+                grid-row-end: 125;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 35;
+                grid-column-end: 63;
+                grid-row-start: 127;
+                grid-row-end: 131;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 30;
+                grid-column-end: 65;
+                grid-row-start: 127;
+                grid-row-end: 131;
+                opacity:0;
+                z-index:1;
+            }
+
+            .razmer-image {
+                grid-column-start: 10;
+                grid-column-end: 43;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 17;
+                grid-column-end: 40;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 35;
+                grid-column-end: 70;
+                grid-row-start: 146;
+                grid-row-end: 150;
+                z-index:2;
+            }
+
+            .cifri-english-image{
+                grid-column-start: 28;
+                grid-column-end: 55;
+                grid-row-start: 146;
+                grid-row-end: 150;
+                opacity:0;
+                z-index:1;
+            }   
+
+            .cena-image {
+                grid-column-start: 10;
+                grid-column-end: 38;
+                grid-row-start: 155;
+                grid-row-end: 162;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 13;
+                grid-column-end: 38;
+                grid-row-start: 155;
+                grid-row-end: 160;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price-image {
+                grid-column-start: 35;
+                grid-column-end: 55;
+                grid-row-start: 162;
+                grid-row-end: 166;
+                overflow: hidden;
+            }
+
+
+        }
 
         /*  */
         /*  */

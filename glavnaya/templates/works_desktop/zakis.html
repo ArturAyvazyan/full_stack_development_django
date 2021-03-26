@@ -444,10 +444,10 @@
             }
 
             .zakis-buy-image {
-                grid-column-start: 19;
-                grid-column-end: 40;
-                grid-row-start: 81;
-                grid-row-end: 85;
+                grid-column-start: 20;
+                grid-column-end: 35;
+                grid-row-start: 80;
+                grid-row-end: 84;
                 overflow: hidden;
                 z-index: 1;
                 opacity: 0;
@@ -526,8 +526,8 @@
             }
 
             .cifri-image{
-                grid-column-start: 40;
-                grid-column-end: 89;
+                grid-column-start: 38;
+                grid-column-end: 90;
                 grid-row-start: 126;
                 grid-row-end: 130;
                 z-index:2;
@@ -601,6 +601,7 @@
                 overflow: hidden;
                 z-index: 2;
             }
+
             .wood-english-image {
                 grid-column-start: 21;
                 grid-column-end: 85;
@@ -621,8 +622,8 @@
             }
 
             .aluminium-english-image {
-                grid-column-start: 16;
-                grid-column-end: 86;
+                grid-column-start: 20;
+                grid-column-end: 80;
                 grid-row-start: 165;
                 grid-row-end: 169;
                 overflow: hidden;
@@ -665,6 +666,309 @@
                 overflow: hidden;
             }
         }
+
+
+
+        @media screen and (max-width: 600px) {
+
+            html,
+            body {
+                background: url("/media/works/zakis/koks.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+
+            .nazvanie {
+                grid-column-start: 35;
+                grid-column-end: 77;
+                grid-row-start: 9;
+                grid-row-end: 17;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 100%; 
+                min-width: 100%; 
+                grid-column-start: 5;
+                grid-column-end: 95;
+                grid-row-start: 22;
+                grid-row-end: 52;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 15;
+                grid-column-end: 82;
+                grid-row-start: 19;
+                grid-row-end: 69;
+            }
+
+            .arrow_left { 
+                display: none;
+            }
+
+            .arrow_right {
+                display: none;
+            }
+
+            .button-image {
+                grid-column-start: 11;
+                grid-column-end: 66;
+                grid-row-start: 60;
+                grid-row-end: 75;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 23;
+                grid-column-end: 54;
+                grid-row-start: 65;
+                grid-row-end: 69;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .zakis-buy-image {
+                grid-column-start: 31;
+                grid-column-end: 48;
+                grid-row-start: 65;
+                grid-row-end: 69;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 11;
+                grid-column-end: 66;
+                grid-row-start: 60;
+                grid-row-end: 75;
+                overflow: hidden;
+            }
+
+            .second-buy-border {
+                grid-column-start: 14;
+                grid-column-end: 69;
+                grid-row-start: 57;
+                grid-row-end: 72;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 7;
+                grid-column-end: 71;
+                grid-row-start: 64;
+                grid-row-end: 81;
+                overflow: hidden;
+            }
+
+            .fourth-buy-border {
+                display:none;
+            }
+
+            .fivth-buy-border {
+                display:none;
+            }
+
+            .six-buy-border {
+                display:none;
+            }
+
+            .seven-buy-border {
+                display:none;
+            }
+
+            .eight-buy-border {
+                display:none;
+            }
+
+            .logotip {
+                grid-column-start: 74;
+                grid-column-end: 89;
+                grid-row-start: 91;
+                grid-row-end: 98;
+                transform:scale(1.5);
+            }
+            /*  */
+                /*  */
+                    /*  */
+
+            .razmer-image {
+                grid-column-start: 10;
+                grid-column-end: 55;
+                grid-row-start: 115;
+                grid-row-end: 119;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 115;
+                grid-row-end: 119;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 20;
+                grid-column-end: 90;
+                grid-row-start: 122;
+                grid-row-end: 125;
+                z-index:2;
+            }
+
+            .cifri-english-image{
+                grid-column-start: 20;
+                grid-column-end: 90;
+                grid-row-start: 122;
+                grid-row-end: 125;
+                opacity:0;
+                z-index:1;
+            }
+
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 75;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 75;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 15;
+                grid-column-end: 60;
+                grid-row-start: 145;
+                grid-row-end: 148;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 20;
+                grid-column-end: 65;
+                grid-row-start: 145;
+                grid-row-end: 148;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril-image {
+                grid-column-start: 8;
+                grid-column-end: 90;
+                grid-row-start: 151;
+                grid-row-end: 156;
+                z-index:2;
+            }  
+
+            .akril-english-image {
+                grid-column-start: 8;
+                grid-column-end: 90;
+                grid-row-start: 151;
+                grid-row-end: 156;
+                opacity:0;
+                z-index:1;
+            }   
+
+            .wood-image {
+                grid-column-start: 5;
+                grid-column-end: 95;
+                grid-row-start: 159;
+                grid-row-end: 162;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .wood-english-image {
+                grid-column-start: 5;
+                grid-column-end: 95;
+                grid-row-start: 159;
+                grid-row-end: 162;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .aluminium-image {
+                grid-column-start: 7;
+                grid-column-end: 95;
+                grid-row-start:165;
+                grid-row-end: 168;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .aluminium-english-image {
+                grid-column-start:17;
+                grid-column-end: 83;
+                grid-row-start: 165;
+                grid-row-end: 168;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .cena-image {
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 182;
+                grid-row-end: 187;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 182;
+                grid-row-end: 186;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price-image {
+                grid-column-start: 28;
+                grid-column-end: 60;
+                grid-row-start: 188;
+                grid-row-end: 191;
+                overflow: hidden;
+            }
+
+            .price-english-image {
+                grid-column-start: 32;
+                grid-column-end: 64;
+                grid-row-start: 188;
+                grid-row-end: 191;
+                overflow: hidden;
+            }
+        }
+
     </style>
 
     <div class="container">
