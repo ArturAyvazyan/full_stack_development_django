@@ -489,6 +489,231 @@
         }
 
 
+        @media screen and (max-width: 900px) {
+
+            html,
+            body {
+                background: url("/media/works/golova/background.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+
+            .nazvanie {
+                grid-column-start: 25;
+                grid-column-end: 60;
+                grid-row-start: 10;
+                grid-row-end: 15;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 100%; 
+                min-width: 100%; 
+                grid-column-start: 3;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 60;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 27;
+                grid-column-end: 71;
+                grid-row-start: 32;
+                grid-row-end: 72;
+                transform: scale(1.25)
+            }
+
+            .arrow_left { 
+                display: none;
+            }
+
+            .arrow_right {
+                display: none;
+            }
+
+            .button-image {
+                grid-column-start: 10;
+                grid-column-end: 66;
+                grid-row-start: 67;
+                grid-row-end: 82;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 21;
+                grid-column-end: 56;
+                grid-row-start: 72;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .golova-buy-image {
+                grid-column-start: 30;
+                grid-column-end: 47;
+                grid-row-start: 73;
+                grid-row-end: 77;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 10;
+                grid-column-end: 66;
+                grid-row-start: 64;
+                grid-row-end: 82;
+                overflow: hidden;
+                transform:scale(1.04);
+            }
+
+            .second-buy-border {
+                grid-column-start: 14;
+                grid-column-end: 70;
+                grid-row-start: 64;
+                grid-row-end: 80;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 6;
+                grid-column-end: 60;
+                grid-row-start:72;
+                grid-row-end: 88;
+                overflow: hidden;
+            }
+
+            .logotip {
+                grid-column-start: 74;
+                grid-column-end: 89;
+                grid-row-start: 92;
+                grid-row-end: 98;
+                transform:scale(1.6);
+            }
+            /*  */
+                /*  */
+                    /*  */
+
+            .razmer-image {
+                grid-column-start: 10;
+                grid-column-end: 55;
+                grid-row-start: 120;
+                grid-row-end: 125;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 15;
+                grid-column-end: 45;
+                grid-row-start: 120;
+                grid-row-end: 125;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 36;
+                grid-column-end: 80;
+                grid-row-start: 126;
+                grid-row-end: 130;
+            }
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 80;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 80;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 3;
+                grid-column-end: 95;
+                grid-row-start: 145;
+                grid-row-end: 149;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 3;
+                grid-column-end: 95;
+                grid-row-start: 145;
+                grid-row-end: 149;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril-image {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 150;
+                grid-row-end: 154;
+                z-index:2;
+            }  
+
+            .akril-english-image {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 150;
+                grid-row-end: 154;
+                opacity:0;
+                z-index:1;
+            }   
+
+            .cena-image {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 160;
+                grid-row-end: 166;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 160;
+                grid-row-end: 165;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price-image {
+                grid-column-start: 26;
+                grid-column-end: 60;
+                grid-row-start: 168;
+                grid-row-end: 172;
+                overflow: hidden;
+            }
+        }
+
     </style>
 
     <div class="container">

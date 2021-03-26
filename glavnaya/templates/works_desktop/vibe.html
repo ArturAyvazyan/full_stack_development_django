@@ -362,6 +362,159 @@
             }    
         }
 
+
+        @media screen and (max-width: 600px) {
+
+            html,
+            body {
+                background: url("/media/works/boy/background.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+            
+            .nazvanie {
+                grid-column-start: 10;
+                grid-column-end: 85;
+                grid-row-start: 19;
+                grid-row-end: 25;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 100%; 
+                min-width: 100%; 
+                grid-column-start: 5;
+                grid-column-end: 95;
+                grid-row-start: 40;
+                grid-row-end: 70;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 28;
+                grid-column-end: 78;
+                grid-row-start: 43;
+                grid-row-end: 73;
+            }
+
+            .arrow_left { 
+                display: none;
+            }
+
+            .arrow_right {
+                display: none;
+            }
+
+            .logotip {
+                grid-column-start: 75;
+                grid-column-end: 90;
+                grid-row-start: 90;
+                grid-row-end: 97;
+                transform:scale(1.5);
+            }
+
+            .razmer-image {
+                grid-column-start: 10;
+                grid-column-end: 60;
+                grid-row-start: 120;
+                grid-row-end: 125;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 120;
+                grid-row-end: 125;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 35;
+                grid-column-end: 80;
+                grid-row-start: 127;
+                grid-row-end: 131;
+                z-index:2;
+            }
+
+            .cifri-english-image{
+                grid-column-start: 25;
+                grid-column-end: 70;
+                grid-row-start: 127;
+                grid-row-end: 131;
+                opacity:0;
+                z-index:1;
+            }
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 80;
+                grid-row-start: 142;
+                grid-row-end: 147;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 80;
+                grid-row-start: 142;
+                grid-row-end: 147;
+                z-index:1;
+            }
+
+            .akril-image {
+                grid-column-start: 5;
+                grid-column-end: 95;
+                grid-row-start: 151;
+                grid-row-end: 155;
+                z-index:2;
+            }  
+
+            .akril-english-image {
+                grid-column-start: 5;
+                grid-column-end: 95;
+                grid-row-start: 151;
+                grid-row-end: 155;
+                opacity:0;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 25;
+                grid-column-end: 62;
+                grid-row-start: 158;
+                grid-row-end: 162;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 25;
+                grid-column-end: 65;
+                grid-row-start: 158;
+                grid-row-end: 162;
+                opacity:0;
+                z-index:1;
+            }    
+        }
+
     </style>
 
     <div class="container">
