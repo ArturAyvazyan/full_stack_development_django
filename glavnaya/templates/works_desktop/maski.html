@@ -961,75 +961,9 @@
                 <img src = "/media/works/maski/first_part/maski_logo.png" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;'>
             </div>
 
-          <div class="logotip" style = 'position:relative; justify-content: center;'>
-              <img src = "/media/works/maski/first_part/logotip.png" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
-          </div>
-          
-          <div id="morphing-content" class="hidden">
-
-            <div class="welcome_home">
-                <a href = 'http://127.0.0.1:8000/' style = 'outline : none; color: inherit; text-decoration: none;'>
-                    <img src = "/media/every_hidden_page/elements/home.png" id = 'home'>
-                </a>
-            </div>
-            
-            <div class = 'put' onmouseenter = put_onmove.play() onmouseleave = put_set.play()>
-                <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "/media/every_hidden_page/works/put.png" id = 'put'>
-                </a>
-            </div>
-
-            <div class = 'zakis' onmouseenter = zakis_onmove.play() onmouseleave = zakis_set.play()>
-                <a href = 'http://127.0.0.1:8000/' style = 'outline : none; color: inherit; text-decoration: none;'>
-                    <img src = "/media/every_hidden_page/works/zakis.png" id = 'zakis'>
-                </a>
-            </div>
-
-            <div class = 'glaz'  onmouseenter = glaz_onmove.play() onmouseleave = glaz_set.play()>
-                <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "/media/every_hidden_page/works/glaz.png" id = 'glaz'>
-                </a>
-            </div>
-
-            <div class = 'kosmos' onmouseenter = kosmos_onmove.play() onmouseleave = kosmos_set.play()>
-                <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "/media/every_hidden_page/works/kosmos.png" id = 'kosmos'>
-                </a>
-            </div>
-
-            <div class = 'maski' onmouseenter = maski_onmove.play() onmouseleave = maski_set.play()>
-                <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "/media/every_hidden_page/works/maski.png" id = 'maski'>
-                </a>
-            </div>
-
-            <div class = 'ohboy' onmouseenter = ohboy_onmove.play() onmouseleave = ohboy_set.play()>
-                <a href = 'http://127.0.0.1:8000/' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "/media/every_hidden_page/works/vibe.png" id = 'ohboy'>
-                </a>
-            </div>
-                
-            <div class = 'inst'>
-                <a href = 'https://instagram.com/delayu.svoye.delo' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "/media/every_hidden_page/elements/inst.png" id = 'inst'>
-                </a>
-            </div>
-
-            <div class = 'tg'>
-                <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' style = 'outline: none; color: inherit; text-decoration: none;'>
-                    <img src = "/media/every_hidden_page/elements/th-new.png" id = 'tg'>
-                </a>
-            </div>
-
-            <!-- POP-UP IMAGES -->
-            <img src = "/media/every_hidden_page/works/photoes/zakis.png" id = 'mini_zakis'>
-            <img src = "/media/every_hidden_page/works/photoes/eye.png" id = 'mini_glaz'>
-            <img src = "/media/every_hidden_page/works/photoes/golova.png" id = 'mini_put'>
-            <img src = "/media/every_hidden_page/works/photoes/kosmos.png" id = 'mini_kosmos'>
-            <img src = "/media/every_hidden_page/works/photoes/maski.png" id = 'mini_maski'>
-            <img src = "/media/every_hidden_page/works/photoes/vibe.png" id = 'mini_vibe'>
-
-        </div> 
+           <div class="logotip" style = 'position:relative; justify-content: center;'>
+               <img src = "/media/works/maski/first_part/logotip.png" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+           </div>
             
         </div>
         
@@ -1099,8 +1033,76 @@
                 <img src = "/media/works/maski/second_part/buy_but/viol_border.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
+            <div id="morphing-content" class="hidden">
+
+                <div class="welcome_home">
+                    <a href = "{% url 'home' %}" style = 'outline : none; color: inherit; text-decoration: none;'>
+                        <img src = "/media/every_hidden_page/elements/home.png" id = 'home'>
+                    </a>
+                </div>
+                
+                <div class = 'put' onmouseenter = put_onmove.play() onmouseleave = put_set.play()>
+                    <a href = "{% url 'golova' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                        <img src = "/media/every_hidden_page/works/put.png" id = 'put'>
+                    </a>
+                </div>
+
+                <div class = 'zakis' onmouseenter = zakis_onmove.play() onmouseleave = zakis_set.play()>
+                    <a href = "{% url 'zakis' %}" style = 'outline : none; color: inherit; text-decoration: none;'>
+                        <img src = "/media/every_hidden_page/works/zakis.png" id = 'zakis'>
+                    </a>
+                </div>
+
+                <div class = 'glaz'  onmouseenter = glaz_onmove.play() onmouseleave = glaz_set.play()>
+                    <a href = "{% url 'eye' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                        <img src = "/media/every_hidden_page/works/glaz.png" id = 'glaz'>
+                    </a>
+                </div>
+
+                <div class = 'kosmos' onmouseenter = kosmos_onmove.play() onmouseleave = kosmos_set.play()>
+                    <a href = "{% url 'kosmos' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                        <img src = "/media/every_hidden_page/works/kosmos.png" id = 'kosmos'>
+                    </a>
+                </div>
+
+                <div class = 'maski' onmouseenter = maski_onmove.play() onmouseleave = maski_set.play()>
+                    <a href = "{% url 'maski' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                        <img src = "/media/every_hidden_page/works/maski.png" id = 'maski'>
+                    </a>
+                </div>
+
+                <div class = 'ohboy' onmouseenter = ohboy_onmove.play() onmouseleave = ohboy_set.play()>
+                    <a href = "{% url 'vibe' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                        <img src = "/media/every_hidden_page/works/vibe.png" id = 'ohboy'>
+                    </a>
+                </div>
+                    
+                <div class = 'inst'>
+                    <a href = 'https://instagram.com/delayu.svoye.delo' style = 'outline: none; color: inherit; text-decoration: none;'>
+                        <img src = "/media/every_hidden_page/elements/inst.png" id = 'inst'>
+                    </a>
+                </div>
+
+                <div class = 'tg'>
+                    <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' style = 'outline: none; color: inherit; text-decoration: none;'>
+                        <img src = "/media/every_hidden_page/elements/th-new.png" id = 'tg'>
+                    </a>
+                </div>
+
+                <!-- POP-UP IMAGES -->
+                <img src = "/media/every_hidden_page/works/photoes/zakis.png" id = 'mini_zakis'>
+                <img src = "/media/every_hidden_page/works/photoes/eye.png" id = 'mini_glaz'>
+                <img src = "/media/every_hidden_page/works/photoes/golova.png" id = 'mini_put'>
+                <img src = "/media/every_hidden_page/works/photoes/kosmos.png" id = 'mini_kosmos'>
+                <img src = "/media/every_hidden_page/works/photoes/maski.png" id = 'mini_maski'>
+                <img src = "/media/every_hidden_page/works/photoes/vibe.png" id = 'mini_vibe'>
+
+            </div>
+
         </div>
 
+
+        
     </div>
     
 
@@ -1188,37 +1190,37 @@
         });
 
         function buySwitchToEnglish() {
-        var english_buy_appears = anime({
-            targets:'.maski-buy-image',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })   
+            var english_buy_appears = anime({
+                targets:'.maski-buy-image',
+                opacity: 1,
+                duration:9000,
+                autoplay:true,
+            })   
 
-        var disappear_buy = anime({
-            targets:'.text-buy-image',
-            opacity: 0,
-            duration:9000,
-            autoplay:true,
-        })
-    }
+            var disappear_buy = anime({
+                targets:'.text-buy-image',
+                opacity: 0,
+                duration:9000,
+                autoplay:true,
+            })
+        }
 
-    function buyBackToRussian() {
-        var disappear_english_buy = anime({
-            targets:'.maski-buy-image',
-            opacity: 0,
-            duration:9000,
-            
-            autoplay:true,
-        })
+        function buyBackToRussian() {
+            var disappear_english_buy = anime({
+                targets:'.maski-buy-image',
+                opacity: 0,
+                duration:9000,
+                
+                autoplay:true,
+            })
 
-        var buy_appears = anime({
-            targets:'.text-buy-image',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })
-    }
+            var buy_appears = anime({
+                targets:'.text-buy-image',
+                opacity: 1,
+                duration:9000,
+                autoplay:true,
+            })
+        }
 
         function razmerSwitchToEnglish() {
             var english_razmer_appears = anime({
@@ -1353,242 +1355,243 @@
             })
         }
 
-
         // LOGO PAGE STARTS HERE
 
-    var minis = ['#mini_zakis', '#mini_glaz', '#mini_put', '#mini_kosmos', "#mini_maski", '#mini_vibe']
-    var minis_set = anime.set(minis,{
-        opacity:0,
-    })
+        var minis = ['#mini_zakis', '#mini_glaz', '#mini_put', '#mini_kosmos', "#mini_maski", '#mini_vibe']
+        var minis_set = anime.set(minis,{
+            opacity:0,
+        })
 
-    var zakis_set = anime({
-        targets:'#mini_zakis',
-        opacity:0,
-        autoplay:false,
-    })
-    var zakis_onmove = anime({
-        targets: '#mini_zakis',
-        opacity:1,
-        autoplay:false,
-    })
+        var zakis_set = anime({
+            targets:'#mini_zakis',
+            opacity:0,
+            autoplay:false,
+        })
+        var zakis_onmove = anime({
+            targets: '#mini_zakis',
+            opacity:1,
+            autoplay:false,
+        })
 
-    var glaz_set = anime({
-        targets:'#mini_glaz',
-        opacity:0,
-        autoplay:false,
-    })
-    var glaz_onmove = anime({
-        targets: '#mini_glaz',
-        opacity:1,
-        autoplay:false,
-    })
+        var glaz_set = anime({
+            targets:'#mini_glaz',
+            opacity:0,
+            autoplay:false,
+        })
+        var glaz_onmove = anime({
+            targets: '#mini_glaz',
+            opacity:1,
+            autoplay:false,
+        })
 
-    var put_set = anime({
-        targets:'#mini_put',
-        opacity:0,
-        autoplay:false,
-    })
-    var put_onmove = anime({
-        targets: '#mini_put',
-        opacity:1,
-        autoplay:false,
-    })
+        var put_set = anime({
+            targets:'#mini_put',
+            opacity:0,
+            autoplay:false,
+        })
+        var put_onmove = anime({
+            targets: '#mini_put',
+            opacity:1,
+            autoplay:false,
+        })
 
-    var kosmos_set = anime({
-        targets:'#mini_kosmos',
-        opacity:0,
-        autoplay:false,
-    })
-    var kosmos_onmove = anime({
-        targets: '#mini_kosmos',
-        opacity:1,
-        autoplay:false,
-    })
+        var kosmos_set = anime({
+            targets:'#mini_kosmos',
+            opacity:0,
+            autoplay:false,
+        })
+        var kosmos_onmove = anime({
+            targets: '#mini_kosmos',
+            opacity:1,
+            autoplay:false,
+        })
 
-    var maski_set = anime({
-        targets:'#mini_maski',
-        opacity:0,
-        autoplay:false,
-    })
-    var maski_onmove = anime({
-        targets: '#mini_maski',
-        opacity:1,
-        autoplay:false,
-    })
+        var maski_set = anime({
+            targets:'#mini_maski',
+            opacity:0,
+            autoplay:false,
+        })
+        var maski_onmove = anime({
+            targets: '#mini_maski',
+            opacity:1,
+            autoplay:false,
+        })
 
-    var ohboy_set = anime({
-        targets:'#mini_vibe',
-        opacity:0,
-        autoplay:false,
-    })
-    var ohboy_onmove = anime({
-        targets: '#mini_vibe',
-        opacity:1,
-        autoplay:false,
-    })    
+        var ohboy_set = anime({
+            targets:'#mini_vibe',
+            opacity:0,
+            autoplay:false,
+        })
+        var ohboy_onmove = anime({
+            targets: '#mini_vibe',
+            opacity:1,
+            autoplay:false,
+        })    
 
-    // ЭФФЕКТ ГЛАВНОГО МЕНЮ ИЗ ЛОГОТИПА
-    // Step 1: Create jQuery plugin
-            // ============================
+        // ЭФФЕКТ ГЛАВНОГО МЕНЮ ИЗ ЛОГОТИПА
+        // Step 1: Create jQuery plugin
+                // ============================
 
-    $.fn.fancyMorph = function( opts ) {
+        $.fn.fancyMorph = function( opts ) {
 
-        var Morphing = function( $btn, opts ) {
-        var self = this;
+            var Morphing = function( $btn, opts ) {
+            var self = this;
 
-        self.opts = $.extend({
-        animationEffect : false,
-        infobar    : false,
-        buttons    : ['close'],
-        smallBtn   : false,
-        touch      : false,
-        baseClass  : 'fancybox-morphing',
-        afterClose : function() {
-            self.close();
-        }
-        }, opts);
+            self.opts = $.extend({
+            animationEffect : false,
+            infobar    : false,
+            buttons    : ['close'],
+            smallBtn   : false,
+            touch      : false,
+            baseClass  : 'fancybox-morphing',
+            afterClose : function() {
+                self.close();
+            }
+            }, opts);
 
-        self.init( $btn );
-        };
+            self.init( $btn );
+            };
 
-        Morphing.prototype.init = function( $btn ) {
-        var self = this;
+            Morphing.prototype.init = function( $btn ) {
+            var self = this;
 
-        self.$btn = $btn.addClass('morphing-btn');
+            self.$btn = $btn.addClass('morphing-btn');
 
-        self.$clone = $('<div class="morphing-btn-clone" />')
-        .hide()
-        .insertAfter( $btn );
+            self.$clone = $('<div class="morphing-btn-clone" />')
+            .hide()
+            .insertAfter( $btn );
 
-        // Add wrapping element and set initial width used for positioning
-        $btn.wrap( '<span class="morphing-btn-wrap"></span>' ).on('click', function(e) {
-        e.preventDefault();
+            // Add wrapping element and set initial width used for positioning
+            $btn.wrap( '<span class="morphing-btn-wrap"></span>' ).on('click', function(e) {
+            e.preventDefault();
 
-        self.start();
-        });
+            self.start();
+            });
 
-        };
+            };
 
-        Morphing.prototype.start = function() {
-        var self = this;
+            Morphing.prototype.start = function() {
+            var self = this;
 
-        if ( self.$btn.hasClass('morphing-btn_circle') ) {
-        return;
-        }
+            if ( self.$btn.hasClass('morphing-btn_circle') ) {
+            return;
+            }
 
-        // Set initial width, because it is not possible to start CSS transition from "auto"
-        self.$btn.width( self.$btn.width() ).parent().width( self.$btn.outerWidth() );
+            // Set initial width, because it is not possible to start CSS transition from "auto"
+            self.$btn.width( self.$btn.width() ).parent().width( self.$btn.outerWidth() );
 
-        self.$btn.off('.fm').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
+            self.$btn.off('.fm').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
 
-        if ( e.originalEvent.propertyName === 'width' ) {
-            self.$btn.off('.fm');
+            if ( e.originalEvent.propertyName === 'width' ) {
+                self.$btn.off('.fm');
 
-            self.animateBg();
-        }
+                self.animateBg();
+            }
 
-        }).addClass('morphing-btn_circle');
+            }).addClass('morphing-btn_circle');
 
-        };
+            };
 
-        Morphing.prototype.animateBg = function() {
-        var self = this;
+            Morphing.prototype.animateBg = function() {
+            var self = this;
 
-        self.scaleBg();
+            self.scaleBg();
 
-        self.$clone.show();
+            self.$clone.show();
 
-        // Trigger repaint
-        self.$clone[0].offsetHeight;
+            // Trigger repaint
+            self.$clone[0].offsetHeight;
 
-        self.$clone.off('.fm').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
-        self.$clone.off('.fm');
+            self.$clone.off('.fm').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
+            self.$clone.off('.fm');
 
-        self.complete();
+            self.complete();
 
-        }).addClass('morphing-btn-clone_visible');
-        };
+            }).addClass('morphing-btn-clone_visible');
+            };
 
-        Morphing.prototype.scaleBg = function() {
-        var self = this;
+            Morphing.prototype.scaleBg = function() {
+            var self = this;
 
-        var $clone = self.$clone;
-        var scale  = self.getScale();
-        var $btn   = self.$btn;
-        var pos    = $btn.offset();
+            var $clone = self.$clone;
+            var scale  = self.getScale();
+            var $btn   = self.$btn;
+            var pos    = $btn.offset();
 
-        $clone.css({
-        top       : pos.top  + $btn.outerHeight() * 0.5 - ( $btn.outerHeight() * scale * 0.5 ) - $(window).scrollTop(),
-        left      : pos.left + $btn.outerWidth()  * 0.5 - ( $btn.outerWidth()  * scale * 0.5 ) - $(window).scrollLeft(),
-        width     : $btn.outerWidth()  * scale,
-        height    : $btn.outerHeight() * scale,
-        transform : 'scale(' + ( 1 / scale ) + ')'
-        });
-        };
+            $clone.css({
+            top       : pos.top  + $btn.outerHeight() * 0.5 - ( $btn.outerHeight() * scale * 0.5 ) - $(window).scrollTop(),
+            left      : pos.left + $btn.outerWidth()  * 0.5 - ( $btn.outerWidth()  * scale * 0.5 ) - $(window).scrollLeft(),
+            width     : $btn.outerWidth()  * scale,
+            height    : $btn.outerHeight() * scale,
+            transform : 'scale(' + ( 1 / scale ) + ')'
+            });
+            };
 
-        Morphing.prototype.getScale = function() {
-        var $btn    = this.$btn,
-            radius  = $btn.outerWidth() * 0.5,
-            left    = $btn.offset().left + radius - $(window).scrollLeft(),
-            top     = $btn.offset().top  + radius - $(window).scrollTop(),
-            windowW = $(window).width(),
-            windowH = $(window).height();
+            Morphing.prototype.getScale = function() {
+            var $btn    = this.$btn,
+                radius  = $btn.outerWidth() * 0.5,
+                left    = $btn.offset().left + radius - $(window).scrollLeft(),
+                top     = $btn.offset().top  + radius - $(window).scrollTop(),
+                windowW = $(window).width(),
+                windowH = $(window).height();
 
-        var maxDistHor  = ( left > windowW / 2 ) ? left : ( windowW - left ),
-            maxDistVert = ( top > windowH / 2 )  ? top  : ( windowH - top );
+            var maxDistHor  = ( left > windowW / 2 ) ? left : ( windowW - left ),
+                maxDistVert = ( top > windowH / 2 )  ? top  : ( windowH - top );
 
-        return Math.ceil(Math.sqrt( Math.pow( maxDistHor, 2 ) + Math.pow( maxDistVert, 2 ) ) / radius );
-        };
+            return Math.ceil(Math.sqrt( Math.pow( maxDistHor, 2 ) + Math.pow( maxDistVert, 2 ) ) / radius );
+            };
 
-        Morphing.prototype.complete = function() {
-        var self = this;
-        var $btn = self.$btn;
+            Morphing.prototype.complete = function() {
+            var self = this;
+            var $btn = self.$btn;
 
-        $.fancybox.open({ src : $btn.data('src') || $btn.attr('href') }, self.opts);
+            $.fancybox.open({ src : $btn.data('src') || $btn.attr('href') }, self.opts);
 
-        $(window).on('resize.fm', function() {
-        //self.scaleBg();
-        });
-        };
+            $(window).on('resize.fm', function() {
+            //self.scaleBg();
+            });
+            };
 
-        Morphing.prototype.close = function() {
-        var self   = this;
-        var $clone = self.$clone;
+            Morphing.prototype.close = function() {
+            var self   = this;
+            var $clone = self.$clone;
 
-        self.scaleBg();
+            self.scaleBg();
 
-        $clone.one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
-        $clone.hide();
+            $clone.one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
+            $clone.hide();
 
-        self.$btn.removeClass('morphing-btn_circle');
-        });
+            self.$btn.removeClass('morphing-btn_circle');
+            });
 
-        $clone.removeClass('morphing-btn-clone_visible');
+            $clone.removeClass('morphing-btn-clone_visible');
 
-        $(window).off('resize.fm');
-        };
+            $(window).off('resize.fm');
+            };
 
-        // Init
-        this.each(function() {
-        var $this = $(this);
+            // Init
+            this.each(function() {
+            var $this = $(this);
 
-        if ( !$this.data("morphing") ) {
-        $this.data( "morphing", new Morphing( $this, opts ) );
-        }
+            if ( !$this.data("morphing") ) {
+            $this.data( "morphing", new Morphing( $this, opts ) );
+            }
 
-        });
+            });
 
-        return this;
-        };
+            return this;
+            };
 
 
-        // Step 2: Start using it!
-        // =======================
+            // Step 2: Start using it!
+            // =======================
 
-        $("[data-morphing]").fancyMorph({
-        hash : 'morphing'
-        });
+            $("[data-morphing]").fancyMorph({
+            hash : 'morphing'
+            });
 
+
+    
 
 
     </script>

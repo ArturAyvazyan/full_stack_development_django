@@ -871,6 +871,7 @@
                 transform:scale(1.8) translateX(1vh);
             }     
         }
+
     </style>
 
     <body>
@@ -1139,72 +1140,82 @@
                     <div class="slide_one_container">
 
                         <div class="first_slide_first_box">
+                            <a href = "{% url 'golova' %}">
 
-                            <svg id = 'demo-svg' viewBox="0 0 650 780">
+                                <svg id = 'demo-svg' viewBox="0 0 650 780">
 
-                                <path stroke = 'rgb(21, 247, 247)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                <path stroke = 'rgb(112, 107, 158)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                <path stroke = 'rgb(252, 129, 186)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                <path stroke = 'rgb(168, 252, 210)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                <path stroke = 'rgb(248, 248, 252)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                <path stroke = 'rgb(55, 243, 243)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                <path stroke = 'rgb(112, 255, 219)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                <path stroke = 'rgb(236, 255, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                <path stroke = 'rgb(240, 173, 253)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                <path stroke = 'rgb(166, 157, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
+                                    <path stroke = 'rgb(21, 247, 247)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
+                                    <path stroke = 'rgb(112, 107, 158)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
+                                    <path stroke = 'rgb(252, 129, 186)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
+                                    <path stroke = 'rgb(168, 252, 210)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
+                                    <path stroke = 'rgb(248, 248, 252)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
+                                    <path stroke = 'rgb(55, 243, 243)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
+                                    <path stroke = 'rgb(112, 255, 219)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
+                                    <path stroke = 'rgb(236, 255, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
+                                    <path stroke = 'rgb(240, 173, 253)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
+                                    <path stroke = 'rgb(166, 157, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
 
-                            </svg>
-
+                                </svg>
+                                
+                            </a>
                         </div>
 
                         <div class="first_slide_second_box">
 
-                            <svg id = 'demo-svg' viewBox="0 0 650 780">
+                            <a href = "{% url 'zakis' %}">
+                                <svg id = 'demo-svg' viewBox="0 0 650 780">
 
-                                <path stroke = 'rgb(21, 247, 247)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                <path stroke = 'rgb(112, 107, 158)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                <path stroke = 'rgb(252, 129, 186)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                <path stroke = 'rgb(168, 252, 210)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                <path stroke = 'rgb(248, 248, 252)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                <path stroke = 'rgb(55, 243, 243)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                <path stroke = 'rgb(112, 255, 219)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                <path stroke = 'rgb(236, 255, 255)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                <path stroke = 'rgb(240, 173, 253)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                <path stroke = 'rgb(166, 157, 255)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
+                                    <path stroke = 'rgb(21, 247, 247)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
+                                    <path stroke = 'rgb(112, 107, 158)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
+                                    <path stroke = 'rgb(252, 129, 186)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
+                                    <path stroke = 'rgb(168, 252, 210)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
+                                    <path stroke = 'rgb(248, 248, 252)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
+                                    <path stroke = 'rgb(55, 243, 243)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
+                                    <path stroke = 'rgb(112, 255, 219)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
+                                    <path stroke = 'rgb(236, 255, 255)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
+                                    <path stroke = 'rgb(240, 173, 253)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
+                                    <path stroke = 'rgb(166, 157, 255)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
 
-                            </svg>
+                                </svg>
 
+                            </a>
                         </div>
 
                         <div class="first_slide_third_box">
+                            <a href = "{% url 'eye' %}">
+                                <svg id = 'demo-svg' viewBox="0 0 620 750">
 
-                            <svg id = 'demo-svg' viewBox="0 0 620 750">
+                                    <path stroke = 'rgb(21, 247, 247)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
+                                    <path stroke = 'rgb(112, 107, 158)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
+                                    <path stroke = 'rgb(252, 129, 186)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
+                                    <path stroke = 'rgb(168, 252, 210)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
+                                    <path stroke = 'rgb(248, 248, 252)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
+                                    <path stroke = 'rgb(55, 243, 243)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
+                                    <path stroke = 'rgb(112, 255, 219)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
+                                    <path stroke = 'rgb(236, 255, 255)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
+                                    <path stroke = 'rgb(240, 173, 253)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
+                                    <path stroke = 'rgb(166, 157, 255)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
 
-                                <path stroke = 'rgb(21, 247, 247)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                <path stroke = 'rgb(112, 107, 158)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                <path stroke = 'rgb(252, 129, 186)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                <path stroke = 'rgb(168, 252, 210)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                <path stroke = 'rgb(248, 248, 252)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                <path stroke = 'rgb(55, 243, 243)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                <path stroke = 'rgb(112, 255, 219)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                <path stroke = 'rgb(236, 255, 255)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                <path stroke = 'rgb(240, 173, 253)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                <path stroke = 'rgb(166, 157, 255)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
-
-                            </svg>
-
+                                </svg>
+                            </a>
                         </div>
 
                         <div class = 'image_first_slide_first_box'>
-                            <img src = "/media/homepage/second_slide/golova.png" style = 'object-fit: cover; width: 100%; max-height: 100%; '>
+                            <a href = "{% url 'golova' %}">
+                                <img src = "/media/homepage/second_slide/golova.png" style = 'object-fit: cover; width: 100%; max-height: 100%; '>
+                            </a>
                         </div>
 
                         <div class = 'image_first_slide_second_box'>
-                            <img src = "/media/homepage/second_slide/zakis.png" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
+                            <a href = "{% url 'zakis' %}">
+                                <img src = "/media/homepage/second_slide/zakis.png" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
+                            </a>
                         </div>
 
                         <div class = 'image_first_slide_third_box'>
-                            <img src = "/media/homepage/second_slide/koseye.png" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
+                            <a href = "{% url 'eye' %}">
+                                <img src = "/media/homepage/second_slide/koseye.png" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
+                            </a>
                         </div>
 
                     </div>
@@ -1214,69 +1225,79 @@
                 <div class="slide" id='second_slide2' data-anchor="slide2">
                     <div class="slide_two_container">
                         <div class="second_slide_first_box">
-                            <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 711.21 1003">
+                            <a href = "{% url 'maski' %}">
+                                <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 711.21 1003">
 
-                                <path stroke = 'rgb(21, 247, 247)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                <path stroke = 'rgb(112, 107, 158)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                <path stroke = 'rgb(252, 129, 186)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                <path stroke = 'rgb(168, 252, 210)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                <path stroke = 'rgb(248, 248, 252)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                <path stroke = 'rgb(55, 243, 243)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                <path stroke = 'rgb(112, 255, 219)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                <path stroke = 'rgb(236, 255, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                <path stroke = 'rgb(240, 173, 253)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                <path stroke = 'rgb(166, 157, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
+                                    <path stroke = 'rgb(21, 247, 247)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
+                                    <path stroke = 'rgb(112, 107, 158)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
+                                    <path stroke = 'rgb(252, 129, 186)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
+                                    <path stroke = 'rgb(168, 252, 210)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
+                                    <path stroke = 'rgb(248, 248, 252)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
+                                    <path stroke = 'rgb(55, 243, 243)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
+                                    <path stroke = 'rgb(112, 255, 219)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
+                                    <path stroke = 'rgb(236, 255, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
+                                    <path stroke = 'rgb(240, 173, 253)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
+                                    <path stroke = 'rgb(166, 157, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
 
-                            </svg>
-
+                                </svg>
+                            </a>
                         </div>
 
                         <div class="second_slide_second_box">
-                            <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 711.21 1003">
+                            <a href = "{% url 'vibe' %}">
+                                <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 711.21 1003">
 
-                                <path stroke = 'rgb(21, 247, 247)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                <path stroke = 'rgb(112, 107, 158)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                <path stroke = 'rgb(252, 129, 186)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                <path stroke = 'rgb(168, 252, 210)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                <path stroke = 'rgb(248, 248, 252)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                <path stroke = 'rgb(55, 243, 243)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                <path stroke = 'rgb(112, 255, 219)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                <path stroke = 'rgb(236, 255, 255)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                <path stroke = 'rgb(240, 173, 253)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                <path stroke = 'rgb(166, 157, 255)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
+                                    <path stroke = 'rgb(21, 247, 247)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
+                                    <path stroke = 'rgb(112, 107, 158)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
+                                    <path stroke = 'rgb(252, 129, 186)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
+                                    <path stroke = 'rgb(168, 252, 210)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
+                                    <path stroke = 'rgb(248, 248, 252)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
+                                    <path stroke = 'rgb(55, 243, 243)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
+                                    <path stroke = 'rgb(112, 255, 219)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
+                                    <path stroke = 'rgb(236, 255, 255)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
+                                    <path stroke = 'rgb(240, 173, 253)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
+                                    <path stroke = 'rgb(166, 157, 255)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
 
-                            </svg>
+                                </svg>
 
+                            </a>
                         </div>
 
                         <div class="second_slide_third_box">
-                            <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 711.21 1003">
+                            <a href = "{% url 'kosmos' %}">
+                                <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 711.21 1003">
 
-                                <path stroke = 'rgb(21, 247, 247)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                <path stroke = 'rgb(112, 107, 158)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                <path stroke = 'rgb(252, 129, 186)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                <path stroke = 'rgb(168, 252, 210)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                <path stroke = 'rgb(248, 248, 252)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                <path stroke = 'rgb(55, 243, 243)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                <path stroke = 'rgb(112, 255, 219)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                <path stroke = 'rgb(236, 255, 255)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                <path stroke = 'rgb(240, 173, 253)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                <path stroke = 'rgb(166, 157, 255)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
+                                    <path stroke = 'rgb(21, 247, 247)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
+                                    <path stroke = 'rgb(112, 107, 158)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
+                                    <path stroke = 'rgb(252, 129, 186)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
+                                    <path stroke = 'rgb(168, 252, 210)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
+                                    <path stroke = 'rgb(248, 248, 252)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
+                                    <path stroke = 'rgb(55, 243, 243)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
+                                    <path stroke = 'rgb(112, 255, 219)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
+                                    <path stroke = 'rgb(236, 255, 255)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
+                                    <path stroke = 'rgb(240, 173, 253)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
+                                    <path stroke = 'rgb(166, 157, 255)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
 
-                            </svg>
-
+                                </svg>
+                            </a>
                         </div>
 
                         <div class = 'image_second_slide_first_box'>
-                            <img  src = "/media/homepage/second_slide/maski.png" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
+                            <a href = "{% url 'maski' %}">
+                                <img  src = "/media/homepage/second_slide/maski.png" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
+                            </a>
                         </div>
 
                         <div class = 'image_second_slide_second_box'>
-                            <img  src = "/media/homepage/second_slide/vibe.png" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
+                            <a href = "{% url 'vibe' %}">
+                                <img  src = "/media/homepage/second_slide/vibe.png" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
+                            </a>
                         </div>
 
                         <div class = 'image_second_slide_third_box'>
-                            <img src = "/media/homepage/second_slide/kosmos.png" style = 'object-fit: cover; width: 100%; max-height: 100%; '>
+                            <a href = "{% url 'kosmos' %}">
+                                <img src = "/media/homepage/second_slide/kosmos.png" style = 'object-fit: cover; width: 100%; max-height: 100%; '>
+                            </a>
                         </div>
 
                     </div>

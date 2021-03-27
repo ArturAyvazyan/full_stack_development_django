@@ -516,6 +516,215 @@
             }    
         }
 
+        .morphing-btn-wrap {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+        }
+
+        .morphing-btn {
+            -webkit-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
+            -moz-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
+            -o-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
+            transition: color 0.3s 0.2s, width 0.2s 0s;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .morphing-btn_circle {
+            color: transparent !important;
+            padding-left: 0;
+            padding-right: 0;
+            width: 35.6px !important;
+
+            /* Override inline style rule */
+            -webkit-transition: color 0.2s 0s, width .3s 0.2s;
+            -moz-transition: color 0.2s 0s, width .3s 0.2s;
+            -o-transition: color 0.2s 0s, width .3s 0.2s;
+            transition: color 0.2s 0s, width .3s 0.2s;
+        }
+
+        /* АНИМАЦИЯ ВЫХОДА ЦВЕТА ИЗ ЛОГО */
+        .morphing-btn-clone {
+            position: fixed;
+            background: url("/media/every_hidden_page/background.png");
+            background-size: cover;
+            border-radius: 50%;
+            z-index: 3;
+            -webkit-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+            -moz-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+            -o-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+            transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .morphing-btn-clone_visible {
+            display: block;
+            -webkit-transform: scale(1) !important;
+            -moz-transform: scale(1) !important;
+            -ms-transform: scale(1) !important;
+            -o-transform: scale(1) !important;
+            transform: scale(1) !important;
+        }
+
+        .fancybox-morphing .fancybox-bg {
+            position:static;
+            width: 100%;
+            height: 100%;
+            margin: 0px; /* убирает скролл */
+            overflow-x: hidden;
+            background: url("/media/every_hidden_page/background.png");
+            background-size: cover;
+        }
+
+        /* кнопка закрыть */
+        .fancybox-morphing .fancybox-toolbar {
+            top: 20px;
+            right: 40px;
+        }
+
+        .fancybox-morphing .fancybox-button--close {
+            /* background: rgba(0, 0, 0, 0.2); */
+            border-radius: 50%;
+            color: #fff;
+        }
+
+        .fancybox-morphing .fancybox-button--close::after, 
+        .fancybox-morphing .fancybox-button--close::before {
+            height: 1.55px;
+            width: 22px;
+            left: calc(50% - 11px);
+        }
+
+        .fancybox-morphing .fancybox-button--close:hover {
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        #morphing-content {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: transparent;
+            color: black;
+            line-height: 1;
+            z-index: 3;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow:hidden;
+            max-width:100%;max-height:100%;min-width:100%;min-height:100%;
+        }
+
+        #home {
+            position:absolute;
+            top: 1vh;
+            left: 45vw;
+            max-height: 25vh;
+            max-width: 25vw;
+            
+        }
+
+        #put {
+            position:absolute;
+            top: 15vh;
+            left: 11vw;
+            max-height:15vh;
+            max-width:15vw; 
+        }
+
+        #zakis {
+            position:absolute;
+            top: 25vh;
+            left: 10vw;
+            max-height: 15vh;
+            max-width: 15vw; 
+        }
+
+        #glaz {
+            position:absolute;
+            top: 35vh;
+            left: 11vw;
+            max-height: 15vh;
+            max-width: 15vw; 
+        }
+
+        #kosmos {
+            position:absolute;
+            top: 15vh;
+            right: 10vw;
+            max-height:15vh;
+            max-width:15vw; 
+        }
+
+        #maski {
+            position:absolute;
+            top: 25vh;
+            right: 11vw;
+            max-height: 15vh;
+            max-width: 15vw; 
+        }
+
+        #ohboy {
+            position:absolute;
+            top: 35vh;
+            right: 5vw;
+            max-height: 40vh;
+            max-width: 40vw;
+            /* margin-top: -20vh; */
+        }
+
+        #inst {
+            position:absolute;
+            bottom: 2vh;
+            left: 47vw;
+            max-height: 5vh;
+            max-width: 5vw;
+        }
+
+        #tg {
+            position:absolute;
+            bottom: 2vh;
+            left: 50vw;
+            max-height: 5vh;
+            max-width: 5vw;
+        }
+
+        #mini_zakis {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+        
+        #mini_glaz {
+            position:absolute;
+            top: 37%;
+            left: 32%;
+        }
+
+        #mini_put {
+            position:absolute;
+            top: 35%;
+            left: 37%;
+        }
+
+        #mini_kosmos {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+        
+        #mini_maski {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+
+        #mini_vibe {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+
     </style>
 
     <div class="container">
@@ -620,6 +829,73 @@
 
                 <div class="logotip" style = 'position:relative; justify-content: center;'>
                     <img src = "/media/works/boy/second_part/logotip.png" style = 'max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+                </div> 
+
+
+                <div id="morphing-content" class="hidden">
+
+                    <div class="welcome_home">
+                        <a href = "{% url 'home' %}" style = 'outline : none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/elements/home.png" id = 'home'>
+                        </a>
+                    </div>
+                    
+                    <div class = 'put' onmouseenter = put_onmove.play() onmouseleave = put_set.play()>
+                        <a href = "{% url 'golova' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/works/put.png" id = 'put'>
+                        </a>
+                    </div>
+
+                    <div class = 'zakis' onmouseenter = zakis_onmove.play() onmouseleave = zakis_set.play()>
+                        <a href = "{% url 'zakis' %}" style = 'outline : none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/works/zakis.png" id = 'zakis'>
+                        </a>
+                    </div>
+
+                    <div class = 'glaz'  onmouseenter = glaz_onmove.play() onmouseleave = glaz_set.play()>
+                        <a href = "{% url 'eye' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/works/glaz.png" id = 'glaz'>
+                        </a>
+                    </div>
+
+                    <div class = 'kosmos' onmouseenter = kosmos_onmove.play() onmouseleave = kosmos_set.play()>
+                        <a href = "{% url 'kosmos' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/works/kosmos.png" id = 'kosmos'>
+                        </a>
+                    </div>
+
+                    <div class = 'maski' onmouseenter = maski_onmove.play() onmouseleave = maski_set.play()>
+                        <a href = "{% url 'maski' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/works/maski.png" id = 'maski'>
+                        </a>
+                    </div>
+
+                    <div class = 'ohboy' onmouseenter = ohboy_onmove.play() onmouseleave = ohboy_set.play()>
+                        <a href = "{% url 'vibe' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/works/vibe.png" id = 'ohboy'>
+                        </a>
+                    </div>
+                        
+                    <div class = 'inst'>
+                        <a href = 'https://instagram.com/delayu.svoye.delo' style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/elements/inst.png" id = 'inst'>
+                        </a>
+                    </div>
+
+                    <div class = 'tg'>
+                        <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/elements/th-new.png" id = 'tg'>
+                        </a>
+                    </div>
+
+                    <!-- POP-UP IMAGES -->
+                    <img src = "/media/every_hidden_page/works/photoes/zakis.png" id = 'mini_zakis'>
+                    <img src = "/media/every_hidden_page/works/photoes/eye.png" id = 'mini_glaz'>
+                    <img src = "/media/every_hidden_page/works/photoes/golova.png" id = 'mini_put'>
+                    <img src = "/media/every_hidden_page/works/photoes/kosmos.png" id = 'mini_kosmos'>
+                    <img src = "/media/every_hidden_page/works/photoes/maski.png" id = 'mini_maski'>
+                    <img src = "/media/every_hidden_page/works/photoes/vibe.png" id = 'mini_vibe'>
+
                 </div> 
 
     </div>
@@ -873,6 +1149,240 @@
             autoplay:true,
         })
     }
+
+    var minis = ['#mini_zakis', '#mini_glaz', '#mini_put', '#mini_kosmos', "#mini_maski", '#mini_vibe']
+    var minis_set = anime.set(minis,{
+        opacity:0,
+    })
+
+    var zakis_set = anime({
+        targets:'#mini_zakis',
+        opacity:0,
+        autoplay:false,
+    })
+    var zakis_onmove = anime({
+        targets: '#mini_zakis',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var glaz_set = anime({
+        targets:'#mini_glaz',
+        opacity:0,
+        autoplay:false,
+    })
+    var glaz_onmove = anime({
+        targets: '#mini_glaz',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var put_set = anime({
+        targets:'#mini_put',
+        opacity:0,
+        autoplay:false,
+    })
+    var put_onmove = anime({
+        targets: '#mini_put',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var kosmos_set = anime({
+        targets:'#mini_kosmos',
+        opacity:0,
+        autoplay:false,
+    })
+    var kosmos_onmove = anime({
+        targets: '#mini_kosmos',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var maski_set = anime({
+        targets:'#mini_maski',
+        opacity:0,
+        autoplay:false,
+    })
+    var maski_onmove = anime({
+        targets: '#mini_maski',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var ohboy_set = anime({
+        targets:'#mini_vibe',
+        opacity:0,
+        autoplay:false,
+    })
+    var ohboy_onmove = anime({
+        targets: '#mini_vibe',
+        opacity:1,
+        autoplay:false,
+    })    
+
+    // ЭФФЕКТ ГЛАВНОГО МЕНЮ ИЗ ЛОГОТИПА
+    // Step 1: Create jQuery plugin
+            // ============================
+
+    $.fn.fancyMorph = function( opts ) {
+
+        var Morphing = function( $btn, opts ) {
+        var self = this;
+
+        self.opts = $.extend({
+        animationEffect : false,
+        infobar    : false,
+        buttons    : ['close'],
+        smallBtn   : false,
+        touch      : false,
+        baseClass  : 'fancybox-morphing',
+        afterClose : function() {
+            self.close();
+        }
+        }, opts);
+
+        self.init( $btn );
+        };
+
+        Morphing.prototype.init = function( $btn ) {
+        var self = this;
+
+        self.$btn = $btn.addClass('morphing-btn');
+
+        self.$clone = $('<div class="morphing-btn-clone" />')
+        .hide()
+        .insertAfter( $btn );
+
+        // Add wrapping element and set initial width used for positioning
+        $btn.wrap( '<span class="morphing-btn-wrap"></span>' ).on('click', function(e) {
+        e.preventDefault();
+
+        self.start();
+        });
+
+        };
+
+        Morphing.prototype.start = function() {
+        var self = this;
+
+        if ( self.$btn.hasClass('morphing-btn_circle') ) {
+        return;
+        }
+
+        // Set initial width, because it is not possible to start CSS transition from "auto"
+        self.$btn.width( self.$btn.width() ).parent().width( self.$btn.outerWidth() );
+
+        self.$btn.off('.fm').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
+
+        if ( e.originalEvent.propertyName === 'width' ) {
+            self.$btn.off('.fm');
+
+            self.animateBg();
+        }
+
+        }).addClass('morphing-btn_circle');
+
+        };
+
+        Morphing.prototype.animateBg = function() {
+        var self = this;
+
+        self.scaleBg();
+
+        self.$clone.show();
+
+        // Trigger repaint
+        self.$clone[0].offsetHeight;
+
+        self.$clone.off('.fm').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
+        self.$clone.off('.fm');
+
+        self.complete();
+
+        }).addClass('morphing-btn-clone_visible');
+        };
+
+        Morphing.prototype.scaleBg = function() {
+        var self = this;
+
+        var $clone = self.$clone;
+        var scale  = self.getScale();
+        var $btn   = self.$btn;
+        var pos    = $btn.offset();
+
+        $clone.css({
+        top       : pos.top  + $btn.outerHeight() * 0.5 - ( $btn.outerHeight() * scale * 0.5 ) - $(window).scrollTop(),
+        left      : pos.left + $btn.outerWidth()  * 0.5 - ( $btn.outerWidth()  * scale * 0.5 ) - $(window).scrollLeft(),
+        width     : $btn.outerWidth()  * scale,
+        height    : $btn.outerHeight() * scale,
+        transform : 'scale(' + ( 1 / scale ) + ')'
+        });
+        };
+
+        Morphing.prototype.getScale = function() {
+        var $btn    = this.$btn,
+            radius  = $btn.outerWidth() * 0.5,
+            left    = $btn.offset().left + radius - $(window).scrollLeft(),
+            top     = $btn.offset().top  + radius - $(window).scrollTop(),
+            windowW = $(window).width(),
+            windowH = $(window).height();
+
+        var maxDistHor  = ( left > windowW / 2 ) ? left : ( windowW - left ),
+            maxDistVert = ( top > windowH / 2 )  ? top  : ( windowH - top );
+
+        return Math.ceil(Math.sqrt( Math.pow( maxDistHor, 2 ) + Math.pow( maxDistVert, 2 ) ) / radius );
+        };
+
+        Morphing.prototype.complete = function() {
+        var self = this;
+        var $btn = self.$btn;
+
+        $.fancybox.open({ src : $btn.data('src') || $btn.attr('href') }, self.opts);
+
+        $(window).on('resize.fm', function() {
+        //self.scaleBg();
+        });
+        };
+
+        Morphing.prototype.close = function() {
+        var self   = this;
+        var $clone = self.$clone;
+
+        self.scaleBg();
+
+        $clone.one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
+        $clone.hide();
+
+        self.$btn.removeClass('morphing-btn_circle');
+        });
+
+        $clone.removeClass('morphing-btn-clone_visible');
+
+        $(window).off('resize.fm');
+        };
+
+        // Init
+        this.each(function() {
+        var $this = $(this);
+
+        if ( !$this.data("morphing") ) {
+        $this.data( "morphing", new Morphing( $this, opts ) );
+        }
+
+        });
+
+        return this;
+        };
+
+
+        // Step 2: Start using it!
+        // =======================
+
+        $("[data-morphing]").fancyMorph({
+        hash : 'morphing'
+        });
+
 
     </script>
 </body>
