@@ -141,7 +141,16 @@ WHITENOISE_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# SEND_BROKEN_LINK_EMAILS = True
+# DEFAULT_FROM_EMAIL = 'archiforeverything@gmail.com'
+# SERVER_EMAIL = 'archiforeverything@gmail.com'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_USER = 'archiforeverything@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_PASSWORD = 'ritaonelove21century'
+EMAIL_USE_TLS = True #security layer
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)

@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.contrib import messages
+
+from django.core.mail import send_mail
+
 from glavnaya import models
 from glavnaya.models import Work
 
@@ -19,8 +22,8 @@ from glavnaya.models import Work
 def home(request):
     return render(request, 'home.html')
 
-def who(request):
-    return render(request, 'checker/who.html')
+def who(request):    
+    return render(request, 'who.html')
 
 def demo(request):
     return render(request, 'checker/demo.html')
@@ -35,7 +38,23 @@ def demo4(request):
     return render(request, 'checker/demo4.html')
 
 def demo5(request):
-    return render(request, 'checker/demo5.html')
+    if request.method == 'POST':    
+        message_name = request.POST['message-name']
+        message_email = request.POST['message-email']
+        message = request.POST['message']
+        #send an email
+        send_mail (
+            message_name, #subject
+            message, #message
+            message_email, #from Email
+            ['archiforeverything@gmail.com'], #To Email
+            fail_silently=False,
+            )
+        return render(request, 'checker/demo5.html', {'message_name': message_name})
+    else:
+        return render(request, 'checker/demo5.html', {})
+
+
 
 def golova(request):
     Workas = Work.objects.all()
@@ -43,14 +62,12 @@ def golova(request):
         'Workas': Workas
     })
 
-
 def eye(request):
     # Здесь выбрать конкретную работу и в темплейтах поменять Воркас
     Workas = Work.objects.all()
     return render(request, 'works_desktop/eye.html', {
         'Workas': Workas
     })
-
 
 def kosmos(request):
     Workas = Work.objects.all()
