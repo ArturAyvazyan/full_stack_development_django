@@ -182,6 +182,7 @@
             grid-row-start: 70;
             grid-row-end: 96;
             overflow: hidden;
+            z-index:3;
         }
 
         .second-buy-border {
@@ -469,7 +470,47 @@
         }
 
     </style>
+    {% if zayavka %}
+        <form action = '{% url "demo4" %}' method = "post">
+            {% csrf_token %}
+            <div class="gol">
+                <h2>Оставьте заявку, мы пришлем вам реквизиты</h2>
+                <h1>Введите cвоё имя:</h1>
+                <input type="text" name = 'message-name' id = 'message-name'>
+                <h1>Электронный адрес</h1>
+                <input type="email" name = 'message-email' id = 'message-email'>
+                <h1>Город:</h1>
+                <input type="textarea" name = 'message' id = 'message'>
 
+                <h1>Выберите способ отправления:</h1>
+                <p><input type="checkbox" name="otpravka1" id="o1" checked>Почта России<Br>
+                <input type="checkbox" name="otpravka2" id="o2">СДЭК<Br>
+                
+                <p><b>Выберите способ оплаты</b></p>
+                <p><input type="checkbox" name="option1" id="pay1" checked>Сбербанк<Br>
+                <input type="checkbox" name="option2" id="pay2">Bitcoin<Br>
+                <input type="checkbox" name="option3" id="pay3">Etherium<Br> 
+                <input type="checkbox" name="option4" id="pay4">Cardano<Br> 
+                <input type="checkbox" name="option5" id="pay5">DOGE<Br>
+                <input type="checkbox" name="option6" id="pay6">USDT</p>
+
+                <h1>Оставьте дополнительные контакты для связи:</h1>
+                <h1>Номер телефона:</h1>
+                <input type="textarea" name = 'phone_number' id='phone_number'>                    
+                <h1>TG</h1>
+                <input type="textarea" name = 'telegram' id='telegram'>
+                <h1>Whats Up</h1>
+                <input type="textarea" name = 'whats_up' id = 'whats_up'>
+                <h1>INST</h1>
+                <input type="textarea" name = 'inst' id = 'inst'>
+
+
+                <input type="submit">
+            </div>
+        </form>
+
+    {% else %}
+    
     <div class="container">
         <div class="first_class">
 
@@ -534,7 +575,13 @@
             </div>
             
             <div class="first-buy-border" >
-                <img src = "/media/works/eye/first_part/buy_but/white-border.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <form action = '{% url "who" %}' method = "post">
+                    {% csrf_token %}
+                        <button style = 'opacity:0%'>
+                            <!-- НАКИНУТЬ БАТОН НА РАМКУ КНОПКИ И СДЕЛАТЬ ЕЕ САМЫМ ВЫСОКИМ z-шndex -->
+                            <img src = "/media/works/eye/first_part/buy_but/white-border.png" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                        </button>
+                    </form>
             </div>
 
             <div class="second-buy-border">
@@ -685,6 +732,7 @@
             </div>
 
     </div>
+    {% endif %}
     
 
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>

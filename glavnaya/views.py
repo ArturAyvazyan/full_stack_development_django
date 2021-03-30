@@ -22,8 +22,12 @@ from glavnaya.models import Work
 def home(request):
     return render(request, 'home.html')
 
-def who(request):    
-    return render(request, 'who.html')
+def who(request):
+    if request.method == 'POST':    
+        zayavka = True
+        return render(request, 'checker/demo4.html', {'zayavka':zayavka})
+    else:
+        return render(request, 'checker/who.html', {})
 
 def demo(request):
     return render(request, 'checker/demo.html')
@@ -35,8 +39,24 @@ def demo3(request):
     return render(request, 'checker/demo3.html')
 
 def demo4(request):
-    return render(request, 'checker/demo4.html')
+    if request.method == 'POST':    
+        zayavka_name = request.POST['message-name']
+        zayavka_name = request.POST['message-name']
 
+
+        message_email = request.POST['message-email']
+        message = request.POST['message']
+        #send an email
+        send_mail (
+            message_name, #subject
+            message, #message
+            message_email, #from Email
+            ['archiforeverything@gmail.com'], #To Email
+            fail_silently=False,
+            )
+        return render(request, 'checker/demo5.html', {'message_name': message_name})
+    else:
+        return render(request, 'checker/demo5.html', {})
 def demo5(request):
     if request.method == 'POST':    
         message_name = request.POST['message-name']

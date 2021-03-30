@@ -14,16 +14,31 @@
         
 
     </style>
+    {% if zayavka %}
+        <form action = '{% url "demo4" %}' method = "post">
+            {% csrf_token %}
+            <div class="gol">
+                <h1>Введите name</h1>
+                <input type="text" name = 'message-name'>
+                <h1>Введите email</h1>
+                <input type="email" name = 'message-email'>
+                <h1>Введите message</h1>
+                <input type="textarea" name = 'message'>
+                <input type="submit">
+            </div>
+        </form>
 
+    {% else %}
+        
+    <form action = '{% url "who" %}' method = "post">
+        {% csrf_token %}
+            <button>
+                <!-- НАКИНУТЬ БАТОН НА РАМКУ КНОПКИ И СДЕЛАТЬ ЕЕ САМЫМ ВЫСОКИМ z-шndex -->
+                <img src="/media/every_hidden_page/works/kosmos.png" >
+            </button>
+        </form>
     
-    <div class="hui">
-        <h1>Введите дшфьу</h1>
-        <input type="text">
-        <h1>Введите email</h1>
-        <input type="email">
-        <input type="button">
-    </div>
-
+    {% endif %}
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
