@@ -24,39 +24,102 @@ def home(request):
 
 def who(request):
     if request.method == 'POST':    
-        zayavka = True
-        return render(request, 'checker/demo4.html', {'zayavka':zayavka})
+        soobch = True
+        return render(request, 'checker/who.html', {'soobch':soobch})
     else:
-        return render(request, 'checker/who.html', {})
+        return render(request, 'checker/who.html')
 
 def demo(request):
+    
     return render(request, 'checker/demo.html')
 
 def demo2(request):
-    return render(request, 'checker/demo2.html')
+    if request.method == 'POST':
+        eye = 'ГЛАЗ'
+        zayavka_name = request.POST.get('zayavka-name', False)
+        zayavka_email = request.POST.get('zayavka-email', False)
+        zayavka_city = request.POST.get('zayavka-city', False)
+        
+        otpravka = request.POST.get('otpravka')
+        zayavka_index = request.POST.get('zayavka-index', False)
+        
+        payment = request.POST.get('payment')
+
+        phone_number = request.POST.get('phone-number', False)
+        telegram = request.POST.get('telegram', False)
+        whats_up = request.POST.get('whats-up', False)
+        inst = request.POST.get('inst', False)    
+        comment = request.POST.get('comment', False)
+
+        message = f"""Заявка на покупку работы: {eye},
+        ИМЯ: {zayavka_name}, 
+        e-mail: {zayavka_email}, 
+        Город: {zayavka_city}, 
+        Отправка через: {otpravka},
+        Почтовый индекс: {zayavka_index},
+        Оплата следующим способом: {payment},
+        Номер телефона: {phone_number},
+        Телега: {telegram},
+        ВАЦАП: {whats_up},
+        ИНСТ: {inst},
+        Комментарий к заказу: {comment}."""
+
+        if zayavka_name == False:
+            return render(request, 'checker/demo2.html', {'eye':eye})
+        else:        
+            send_mail (
+                eye, #subject
+                message, #message
+                zayavka_email, #from Email
+                ['archiforeverything@gmail.com'], #To Email
+                fail_silently=False,
+                )
+            return render(request, 'home.html')
+    else:
+        return render(request, 'checker/demo2.html')
 
 def demo3(request):
     return render(request, 'checker/demo3.html')
 
 def demo4(request):
-    if request.method == 'POST':    
-        zayavka_name = request.POST['message-name']
-        zayavka_name = request.POST['message-name']
+    if request.method == 'POST':
+        eye = 'ГЛАЗ'
+        zayavka_name = request.POST.get('zayavka-name', False)
+        zayavka_email = request.POST.get('zayavka-email', False)
+        zayavka_city = request.POST.get('zayavka-city', False)
+        
+        otpravka = request.POST.get('otpravka')
+        payment = request.POST.get('payment')
 
+        phone_number = request.POST.get('phone-number', False)
+        telegram = request.POST.get('telegram', False)
+        whats_up = request.POST.get('whats-up', False)
+        inst = request.POST.get('inst', False)    
+        comment = request.POST.get('comment', False)
 
-        message_email = request.POST['message-email']
-        message = request.POST['message']
-        #send an email
+        message = f"""Заявка на покупку работы: {eye},
+        ИМЯ: {zayavka_name}, 
+        e-mail: {zayavka_email}, 
+        Город: {zayavka_city}, 
+        Отправка через: {otpravka},
+        Оплата следующим способом: {payment},
+        Номер телефона: {phone_number},
+        Телега: {telegram},
+        ВАЦАП: {whats_up},
+        ИНСТ: {inst},
+        Комментарий к заказу: {comment}."""
+        
         send_mail (
-            message_name, #subject
+            eye, #subject
             message, #message
-            message_email, #from Email
+            zayavka_email, #from Email
             ['archiforeverything@gmail.com'], #To Email
             fail_silently=False,
             )
-        return render(request, 'checker/demo5.html', {'message_name': message_name})
+        return render(request, 'checker/demo4.html')
     else:
-        return render(request, 'checker/demo5.html', {})
+        return render(request, 'checker/demo4.html')
+
 def demo5(request):
     if request.method == 'POST':    
         message_name = request.POST['message-name']

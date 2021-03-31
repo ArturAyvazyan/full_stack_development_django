@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" content="width=device-width, user-scalable=no"/>
-    <title>НУ ЧТО ПОЛЕТЕЛИ</title>
+    <title>ЗАЯВКА</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> 
 
 </head>
@@ -21,7 +21,7 @@
             background: url("{% static '/homepage/backs.png' %}");
             background-size: cover;
         }
-        #message-name {
+        #zayavka-name {
             border-radius: 25px;
             border: 2px solid black;
             padding: 20px; 
@@ -29,7 +29,7 @@
             height: 15px;    
         }    
 
-        #message-email {
+        #zayavka-email {
             border-radius: 25px;
             border: 2px solid black;
             padding: 20px; 
@@ -37,7 +37,7 @@
             height: 15px;    
         }   
 
-        #message {
+        #zayavka-city {
             border-radius: 25px;
             border: 2px solid black;
             padding: 20px; 
@@ -45,11 +45,11 @@
             height: 15px;    
         }
 
-        #o1 {
+        #otpravka1 {
 
         }
 
-        #o2 {
+        #otpravka2 {
             
         }
 
@@ -94,29 +94,31 @@
         }
     </style>
 
-    {% if zayavka %}
-        <form action = '{% url "demo4" %}' method = "post">
+    
+        <form action = '{% url "home" %}' method = "post">
+            
             {% csrf_token %}
             <div class="gol">
+                <input type="hidden" id="eye" name="eye" value="eye">  
                 <h2>Оставьте заявку, мы пришлем вам реквизиты</h2>
                 <h1>Введите cвоё имя:</h1>
-                <input type="text" name = 'message-name' id = 'message-name'>
+                <input type="text" name = 'zayavka-name' >
                 <h1>Электронный адрес</h1>
-                <input type="email" name = 'message-email' id = 'message-email'>
+                <input type="email" name = 'zayavka-email' id = 'zayavka-email'>
                 <h1>Город:</h1>
-                <input type="textarea" name = 'message' id = 'message'>
+                <input type="text" name = 'zayavka-city' id = 'zayavka-city'>
 
                 <h1>Выберите способ отправления:</h1>
-                <p><input type="checkbox" name="otpravka1" id="o1" checked>Почта России<Br>
-                <input type="checkbox" name="otpravka2" id="o2">СДЭК<Br>
+                <p><input type="checkbox" name="otpravka" id="otpravka1" checked>Почта России<Br>
+                <input type="checkbox" name="otpravka" id="otpravka2">СДЭК<Br>
                 
                 <p><b>Выберите способ оплаты</b></p>
-                <p><input type="checkbox" name="option1" id="pay1" checked>Сбербанк<Br>
-                <input type="checkbox" name="option2" id="pay2">Bitcoin<Br>
-                <input type="checkbox" name="option3" id="pay3">Etherium<Br> 
-                <input type="checkbox" name="option4" id="pay4">Cardano<Br> 
-                <input type="checkbox" name="option5" id="pay5">DOGE<Br>
-                <input type="checkbox" name="option6" id="pay6">USDT</p>
+                <p><input type="checkbox" name="payment" id="pay1" checked>Сбербанк<Br>
+                <input type="checkbox" name="payment" id="pay2">Bitcoin<Br>
+                <input type="checkbox" name="payment" id="pay3">Etherium<Br> 
+                <input type="checkbox" name="payment" id="pay4">Cardano<Br> 
+                <input type="checkbox" name="payment" id="pay5">DOGE<Br>
+                <input type="checkbox" name="payment" id="pay6">USDT</p>
 
                 <h1>Оставьте дополнительные контакты для связи:</h1>
                 <h1>Номер телефона:</h1>
@@ -133,17 +135,7 @@
             </div>
         </form>
 
-    {% else %}
-        
-    <form action = '{% url "who" %}' method = "post">
-        {% csrf_token %}
-            <button>
-                <!-- НАКИНУТЬ БАТОН НА РАМКУ КНОПКИ И СДЕЛАТЬ ЕЕ САМЫМ ВЫСОКИМ z-шndex -->
-                <img src="/media/every_hidden_page/works/kosmos.png" >
-            </button>
-        </form>
-    
-    {% endif %}
+ 
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
