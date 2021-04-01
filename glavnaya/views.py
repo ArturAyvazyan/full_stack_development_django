@@ -41,7 +41,6 @@ def demo2(request):
         zayavka_city = request.POST.get('zayavka-city', False)
         
         otpravka = request.POST.get('otpravka')
-        zayavka_index = request.POST.get('zayavka-index', False)
         
         payment = request.POST.get('payment')
 
@@ -56,7 +55,6 @@ def demo2(request):
         e-mail: {zayavka_email}, 
         Город: {zayavka_city}, 
         Отправка через: {otpravka},
-        Почтовый индекс: {zayavka_index},
         Оплата следующим способом: {payment},
         Номер телефона: {phone_number},
         Телега: {telegram},

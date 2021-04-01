@@ -82,6 +82,7 @@
             overflow: hidden;
             opacity:0;
             z-index:1;
+            transform:scale(0.8)
         }
 
         .farfor-image {
@@ -199,7 +200,7 @@
             grid-row-start: 74;
             grid-row-end: 100;
             overflow: hidden;
-        }
+            }
 
 /*  */
 /*  */
@@ -244,6 +245,7 @@
             grid-column-end:12;
             grid-row-start:51;
             grid-row-end:60;
+            cursor: pointer;
         }
 
         .arrow_right { 
@@ -251,6 +253,7 @@
             grid-column-end: 88;
             grid-row-start:51;
             grid-row-end:60;
+            cursor: pointer;
         }
 
         .logotip {
@@ -258,6 +261,7 @@
             grid-column-end: 100;
             grid-row-start: 89;
             grid-row-end:99;
+            cursor: pointer;
         }
 
         .morphing-btn-wrap {
@@ -469,59 +473,456 @@
             left: 37%;
         }
 
+        /* ФОРМА */
+        
+        @font-face {
+            font-family: LSDFont;
+            
+            src: url("{% static '/homepage/super_font.ttf' %}");
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
+            overflow: hidden;
+            width: 100vw;
+            height: 150vh;
+            font-family: LSDFont;
+            color: #FDF2F2;
+        }
+
+        /* ИМЯ */
+        .name_text {
+            grid-column-start: 11;
+            grid-column-end: 25;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+            /* transform: scale(1.1) */
+            
+        }
+
+        #name_zapolni {
+            grid-column-start: 9;
+            grid-column-end: 27;
+            grid-row-start: 20;
+            grid-row-end: 26;
+            overflow: hidden;
+        }
+
+        .name_form {
+            grid-column-start: 10;
+            grid-column-end: 26;
+            grid-row-start: 22;
+            grid-row-end: 24;
+            overflow: hidden; 
+            opacity:50%;
+            z-index:10;
+        }
+        /* EMAIL */
+        .email_text {
+            grid-column-start: 46;
+            grid-column-end: 54;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+        }
+        
+        #email_zapolni {
+            grid-column-start: 41;
+            grid-column-end: 59;
+            grid-row-start: 20;
+            grid-row-end: 26;
+            overflow: hidden;
+        }
+
+        .email_form {
+            grid-column-start: 42;
+            grid-column-end: 58;
+            grid-row-start: 22;
+            grid-row-end: 24;
+            overflow: hidden;
+            z-index:2;
+            opacity:50%;
+        }
+
+        /* ГОРОД */
+        .city_text {
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #city_zapolni {
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 20;
+            grid-row-end: 26;
+            overflow: hidden;
+        }
+        .city_form {
+            grid-column-start: 71;
+            grid-column-end: 89;
+            grid-row-start: 22;
+            grid-row-end: 24;
+            overflow: hidden;
+            z-index:2;
+            opacity:50%;
+        }
+
+        /* ОТПРАВКА */
+        .otpravka_text {
+            grid-column-start: 12;
+            grid-column-end: 37;
+            grid-row-start: 37;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #pochta_rossii {
+            grid-column-start: 11;
+            grid-column-end: 25;
+            grid-row-start: 48;
+            grid-row-end: 50;
+            overflow: hidden;
+            z-index:2;
+            /* transform: scale(1.1);    */
+        }
+
+        #sdek {
+            grid-column-start: 11;
+            grid-column-end: 15;
+            grid-row-start: 44;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+        }
+
+        #drugoe {
+            grid-column-start: 11;
+            grid-column-end: 18;
+            grid-row-start: 52;
+            grid-row-end: 54;
+            overflow: hidden;
+            z-index:2;
+            }
+        
+        .otpravka_form {
+            grid-column-start: 5;
+            grid-column-end: 10;
+            grid-row-start: 42;
+            grid-row-end: 62;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        /* ОПЛАТА */
+        .payment_text {
+            grid-column-start: 60;
+            grid-column-end: 87;
+            grid-row-start: 37;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #rub {
+            grid-column-start: 60;
+            grid-column-end: 63;
+            grid-row-start: 44;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        #usd {
+            grid-column-start: 60;
+            grid-column-end: 63;
+            grid-row-start: 48;
+            grid-row-end: 50;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        #btc {
+            grid-column-start: 60;
+            grid-column-end: 63;
+            grid-row-start: 52;
+            grid-row-end: 54;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        #eth {
+            grid-column-start: 60;
+            grid-column-end: 63;
+            grid-row-start: 56;
+            grid-row-end: 58;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        #usdt {
+            grid-column-start: 60;
+            grid-column-end: 64;
+            grid-row-start: 60;
+            grid-row-end: 62;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        .payment_form {
+            grid-column-start: 55;
+            grid-column-end: 59;
+            grid-row-start: 42;
+            grid-row-end: 66;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        /* ЛУЧШЕ СВЯЗАТЬСЯ */
+        .better_text {
+            grid-column-start: 5;
+            grid-column-end: 45;
+            grid-row-start: 68;
+            grid-row-end: 71;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .better_form {
+            grid-column-start: 5;
+            grid-column-end: 9;
+            grid-row-start: 72;
+            grid-row-end: 92;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #telegram {
+            grid-column-start: 9;
+            grid-column-end: 17;
+            grid-row-start: 74;
+            grid-row-end: 76;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #instagram {
+            grid-column-start: 9;
+            grid-column-end: 17;
+            grid-row-start: 78;
+            grid-row-end: 80;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #wup {
+            grid-column-start: 9;
+            grid-column-end: 17;
+            grid-row-start: 82;
+            grid-row-end: 84;
+            overflow: hidden;
+        }
+        
+        #better_zapolni {
+            grid-column-start: 5;
+            grid-column-end: 24;
+            grid-row-start: 86;
+            grid-row-end: 92;
+            overflow: hidden;
+        }
+
+        .better_more {
+            grid-column-start: 6;
+            grid-column-end: 23;
+            grid-row-start: 88;
+            grid-row-end: 90;
+            opacity: 50%;
+            overflow: hidden;
+        }
+
+        /* KOMENT */
+        .koment_text {
+            grid-column-start: 60;
+            grid-column-end: 75;
+            grid-row-start: 68;
+            grid-row-end: 71;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .koment_zapolni {
+            grid-column-start: 59;
+            grid-column-end: 76;
+            grid-row-start: 72;
+            grid-row-end: 78;
+            overflow: hidden;
+        }
+        .koment_more {
+            grid-column-start: 60;
+            grid-column-end: 75;
+            grid-row-start: 74;
+            grid-row-end: 76;
+            overflow: hidden;
+            opacity: 50%;
+        }
+
+        .atom {
+            grid-column-start: 40;
+            grid-column-end: 60;
+            grid-row-start: 85;
+            grid-row-end: 94;
+            overflow: hidden;
+        }
+/* 
+        input[type="radio"]:checked:before {
+            content: "";
+            display: block;
+            position: relative;
+            top: 3px;
+            left: 3px;
+            width: 6px;
+            height: 2em;
+            border-radius: 50%;
+            background: black;
+        } */
+
+        input[type="radio"] {
+            border: 2px solid #999;
+            width: 100%;
+            height: 2em;
+            color:black;
+            margin: 1.85em;
+        }
+        
+
     </style>
 
         {% if eye %}
-        <form action = '{% url "demo2" %}' method = "post">
-            {% csrf_token %}
-            <div class="gol">
-                {{ eye }}
-                <h2>Оставьте заявку, мы пришлем вам реквизиты</h2>
-                <h1>Введите cвоё имя:</h1>
-                <input type="text" name = 'zayavka-name' id = 'zayavka-name'>
-                <h1>Электронный адрес</h1>
-                <input type="email" name = 'zayavka-email' id = 'zayavka-email'>
-                <h1>Город:</h1>
-                <input type="text" name = 'zaayvka-city' id = 'zayavka-city'>
+        <div >
+            <form class="content" action = '{% url "demo2" %}' method = "post">
+                {% csrf_token %}
 
-                <h1>Выберите способ отправления:</h1>
-                <p><input type="checkbox" name="otpravka" id="otpravka1" checked>Почта России<Br>
-                <input type="checkbox" name="otpravka" id="otpravka2">СДЭК<Br>
+                    <!-- ИМЯ -->
+                    <div class = 'name_text'>
+                        <img src = '/media/works/eye/zayavka/name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
+                    </div>  
+   
+                    <img id = 'name_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'z-index:1; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                    <div class = 'name_form'>
+                        <input type="text" name = 'zayavka-name' id = 'zayavka-name' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' required>
+                    </div>
+
+                    <!-- ПОЧТА -->
+                    <div class = 'email_text'>
+                        <img src = '/media/works/eye/zayavka/email.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                    </div> 
+
+                    <img id = 'email_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                    <div class="email_form">
+                        <input type="email" name = 'zayavka-email' id = 'zayavka-email' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                    </div>
                     
-                <h1>Почтовый индекс:</h1>
-                <input type="text" name = 'zayavka-index' id = 'zayavka-index'>
+                    <!-- ГОРОД -->
+                    <div class = 'city_text'>
+                        <img src = '/media/works/eye/zayavka/gorod.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                    </div> 
 
-                <p><b>Выберите способ оплаты</b></p>
-                <p><input type="checkbox" name="payment" id="pay1" checked>Сбербанк<Br>
-                <input type="checkbox" name="payment" id="pay2">Bitcoin<Br>
-                <input type="checkbox" name="payment" id="pay3">Etherium<Br> 
-                <input type="checkbox" name="payment" id="pay4">Cardano<Br> 
-                <input type="checkbox" name="payment" id="pay5">DOGE<Br>
-                <input type="checkbox" name="payment" id="pay6">USDT</p>
+                    <img id = 'city_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                    <div class="city_form">    
+                        <input type="text" name = 'zayavka-city' id = 'zayavka-city' required style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                    </div>
 
-                <h1>Оставьте дополнительные контакты для связи:</h1>
-                <h1>Номер телефона:</h1>
-                <input type="textarea" name = 'phone_number' id='phone_number'>                    
-                <h1>TG</h1>
-                <input type="textarea" name = 'telegram' id='telegram'>
-                <h1>Whats Up</h1>
-                <input type="textarea" name = 'whats_up' id = 'whats_up'>
-                <h1>INST</h1>
-                <input type="textarea" name = 'inst' id = 'inst'>
-                <h1>Дополнительный комментарий</h1>
-                <input type="textarea" name = 'comment' id = 'comment'>
+                    <!-- ОТПРАВКА -->
+                    <div class = 'otpravka_text'>
+                        <img src = '/media/works/eye/zayavka/dostavka.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                    </div> 
+                   
+                    <img id = 'pochta_rossii' src = '/media/works/eye/zayavka/pr.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                    <img id = 'sdek' src = '/media/works/eye/zayavka/sdek.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                    <img id = 'drugoe' src = '/media/works/eye/zayavka/drug.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                   
+                    <div class="otpravka_form" style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>    
+                        <p><input type="radio" name="otpravka" id="otpravka1" value = 'Почта России' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;' required>
+                        <input type="radio" name="otpravka" id="otpravka2" value = 'СДЭК' style = 'cursor: pointer;' >
+                        <input type="radio" name="otpravka" id="otpravka3" value = 'Другое' style = 'cursor: pointer;' onclick = words_appears.play()>
+                    </div>
 
-                <input type="hidden" id="eye" name="eye" value="eye">  
-                <input type="submit">
-                <!-- <button style = 'opacity:100%'> -->
-                    <a href = '{% url "home" %}'>                            
-                        <!-- НАКИНУТЬ БАТОН НА РАМКУ КНОПКИ И СДЕЛАТЬ ЕЕ САМЫМ ВЫСОКИМ z-шndex -->
-                        <img name = 'eye' src = "/media/every_hidden_page/elements/home.png" style = 'min-width:10%; min-height:10%;max-width:10%; max-height:10%; overflow:hidden;'>
-                    </a>
-                <!-- </button> -->
-                
-            </div>
-        </form>
+                    <!-- ОПЛАТА -->
+                    <div class = 'payment_text'>
+                        <img src = '/media/works/eye/zayavka/oplata.png' style = 'max-width: 100%; max-height: 100%;'>
+                    </div>
+
+                    <img id = 'rub' src = '/media/works/eye/zayavka/money_eye/rub.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                    <img id = 'usd' src = '/media/works/eye/zayavka/money_eye/usd.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                    <img id = 'btc' src = '/media/works/eye/zayavka/money_eye/btc.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                    <img id = 'eth' src = '/media/works/eye/zayavka/money_eye/eth.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                    <img id = 'usdt' src = '/media/works/eye/zayavka/money_eye/usdt.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                      
+                   
+                    <div class="payment_form">
+                        <p><input type="radio" name="payment" id="pay1" value = 'RUB' style = 'cursor: pointer' required>
+                        <input type="radio" name="payment" id="pay4" value = 'USD' style = 'cursor: pointer'> 
+                        <input type="radio" name="payment" id="pay2" value = 'BTC' style = 'cursor: pointer'>
+                        <input type="radio" name="payment" id="pay3" value = 'ETH' style = 'cursor: pointer'> 
+                        <input type="radio" name="payment" id="pay6" value = 'USDT' style = 'cursor: pointer'>
+                    </div>
+                    
+                    <!-- ЛУЧШЕ СВЯЗАТЬСЯ -->
+                    <div class = 'better_text'>
+                        <img src = '/media/works/eye/zayavka/better.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    </div>
+
+                    <div class="better_form" style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>    
+                        <p><input type="radio" name="better" id="better1" value = 'TELEGRAM' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                        <input type="radio" name="better" id="better2" value = 'INSTAGRAM' style = 'cursor: pointer'>
+                        <input type="radio" name="better" id="better3" value = 'WHATS UP' style = 'cursor: pointer'>
+                    </div>
+                    <img id = 'telegram' src = '/media/works/eye/zayavka/telegram.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                    <img id = 'instagram' src = '/media/works/eye/zayavka/instagram.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                    <img id = 'wup' src = '/media/works/eye/zayavka/wup.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>      
+
+                    <img id = 'better_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    <div class = 'better_more'>
+                        <input type="text" name = 'better_more' id = 'better_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                    </div>
+
+                    <!-- КОММЕНТАРИЙ -->
+                    <div class = 'koment_text'>
+                        <img src = '/media/works/eye/zayavka/koment.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    </div>
+
+                    <div class = 'koment_zapolni'>
+                        <img src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    </div>
+                    <div class = 'koment_more'>
+                        <input type="text" name = 'koment_more' id = 'koment_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                    </div>
+
+                    <div class="atom">
+                        <input type = 'image' type = 'submit' src = "/media/works/eye/zayavka/atom.png" style = 'opacity:100%;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                    </div>
+        
+                    
+            
+            </form>
+        </div>
         {% else %}
     
     <div class="container">
@@ -1104,6 +1505,22 @@
         opacity:1,
         autoplay:false,
     })    
+
+    var words_appears = anime({
+            targets:'.otpravka_words',
+            opacity: 1,
+            duration:9000,
+            autoplay:false,
+        }) 
+
+    var pochta_appears = anime({
+        targets:'.otpravka_words',
+        opacity: 1,
+        duration:9000,
+        autoplay:false,
+        })
+        
+    
 
     // ЭФФЕКТ ГЛАВНОГО МЕНЮ ИЗ ЛОГОТИПА
     // Step 1: Create jQuery plugin
