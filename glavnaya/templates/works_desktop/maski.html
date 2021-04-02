@@ -514,10 +514,10 @@
 
             .image_slider {
                 display: inline-block;
-                grid-column-start: 28;
-                grid-column-end: 78;
-                grid-row-start: 35;
-                grid-row-end: 80;
+                grid-column-start: 30;
+                grid-column-end: 75;
+                grid-row-start: 33;
+                grid-row-end: 74;
             }
 
             .arrow_left { 
@@ -678,6 +678,242 @@
             }
 
 
+        }
+
+        @media screen and (max-height: 450px), (max-device-height: 450px) {
+            
+            html,
+            body {
+                background: url("/media/works/maski/background.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+
+            .nazvanie {
+                grid-column-start: 80;
+                grid-column-end: 95;
+                grid-row-start: 8;
+                grid-row-end: 16;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 100%; 
+                min-width: 100%; 
+                grid-column-start: 10;
+                grid-column-end: 90;
+                grid-row-start: 10;
+                grid-row-end: 75;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 37;
+                grid-column-end: 67;
+                grid-row-start: 14;
+                grid-row-end: 64;
+            }
+
+            .arrow_left { 
+                display: none;
+            }
+
+            .arrow_right {
+                display: none;
+            }
+
+            .button-image {
+                grid-column-start: 10;
+                grid-column-end: 31;
+                grid-row-start: 78;
+                grid-row-end: 93;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 16;
+                grid-column-end: 26;
+                grid-row-start: 83;
+                grid-row-end: 88;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .maski-buy-image {
+                grid-column-start: 16;
+                grid-column-end: 25;
+                grid-row-start: 83;
+                grid-row-end: 88;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 10;
+                grid-column-end: 31;
+                grid-row-start: 78;
+                grid-row-end: 93;
+                overflow: hidden;
+            }
+
+            .second-buy-border {
+                grid-column-start: 15;
+                grid-column-end: 36;
+                grid-row-start: 81;
+                grid-row-end: 96;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 8;
+                grid-column-end: 26;
+                grid-row-start: 76;
+                grid-row-end: 89;
+                overflow: hidden;
+            }
+
+            .fourth-buy-border {
+                display:none;
+            }
+
+            .fivth-buy-border {
+                display:none;
+            }
+
+            .six-buy-border {
+                display:none;
+            }
+
+            .seven-buy-border {
+                display:none;
+            }
+
+            .eight-buy-border {
+                display:none;
+            }
+
+            .logotip {
+                grid-column-start: 85;
+                grid-column-end: 95;
+                grid-row-start: 85;
+                grid-row-end: 90;
+                transform:scale(0.8);
+            }
+
+            /*  */
+                /*  */
+                    /*  */
+
+            .razmer-image {
+                grid-column-start: 10;
+                grid-column-end: 38;
+                grid-row-start: 114;
+                grid-row-end: 121;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 10;
+                grid-column-end: 26;
+                grid-row-start: 115;
+                grid-row-end: 121;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 20;
+                grid-column-end: 50;
+                grid-row-start: 124;
+                grid-row-end: 131;
+                z-index:2;
+            }
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 55;
+                grid-row-start: 145;
+                grid-row-end: 152;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 55;
+                grid-row-start: 145;
+                grid-row-end: 152;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 20;
+                grid-column-end: 43;
+                grid-row-start: 155;
+                grid-row-end: 162;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 20;
+                grid-column-end: 45;
+                grid-row-start: 155;
+                grid-row-end: 162;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cena-image {
+                grid-column-start: 10;
+                grid-column-end: 32;
+                grid-row-start: 178;
+                grid-row-end: 187;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 178;
+                grid-row-end: 186;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price-image {
+                grid-column-start: 25;
+                grid-column-end: 43;
+                grid-row-start: 189;
+                grid-row-end: 196;
+                overflow: hidden;
+            }
+
+            .price-english-image {
+                grid-column-start: 24;
+                grid-column-end: 42;
+                grid-row-start: 189;
+                grid-row-end: 196;
+                overflow: hidden;
+            }
         }
 
         /*  */
