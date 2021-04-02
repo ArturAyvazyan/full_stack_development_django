@@ -43,12 +43,11 @@ def demo2(request):
         otpravka = request.POST.get('otpravka')
         
         payment = request.POST.get('payment')
-
-        phone_number = request.POST.get('phone-number', False)
-        telegram = request.POST.get('telegram', False)
-        whats_up = request.POST.get('whats-up', False)
-        inst = request.POST.get('inst', False)    
-        comment = request.POST.get('comment', False)
+        
+        better = request.POST.get('better', False)
+        better_more = request.POST.get('better_more', False)
+  
+        koment = request.POST.get('koment', False)
 
         message = f"""Заявка на покупку работы: {eye},
         ИМЯ: {zayavka_name}, 
@@ -56,12 +55,10 @@ def demo2(request):
         Город: {zayavka_city}, 
         Отправка через: {otpravka},
         Оплата следующим способом: {payment},
-        Номер телефона: {phone_number},
-        Телега: {telegram},
-        ВАЦАП: {whats_up},
-        ИНСТ: {inst},
-        Комментарий к заказу: {comment}."""
+        Дополнительный способ связи: {better} : {better_more},
+        Комментарий к заказу: {koment}."""
 
+        
         if zayavka_name == False:
             return render(request, 'checker/demo2.html', {'eye':eye})
         else:        

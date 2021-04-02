@@ -785,24 +785,20 @@
         }
 
         .atom {
-            grid-column-start: 40;
-            grid-column-end: 60;
-            grid-row-start: 85;
-            grid-row-end: 94;
+            grid-column-start: 75;
+            grid-column-end: 95;
+            grid-row-start: 87;
+            grid-row-end: 97;
             overflow: hidden;
         }
-/* 
-        input[type="radio"]:checked:before {
-            content: "";
-            display: block;
-            position: relative;
-            top: 3px;
-            left: 3px;
-            width: 6px;
-            height: 2em;
-            border-radius: 50%;
-            background: black;
-        } */
+
+        .close {
+            grid-column-start: 94;
+            grid-column-end: 97;
+            grid-row-start: 2;
+            grid-row-end: 6;
+            overflow: hidden;
+        }
 
         input[type="radio"] {
             border: 2px solid #999;
@@ -812,6 +808,10 @@
             margin: 1.85em;
         }
         
+        /* @media screen and (max-width: 900px) {
+           
+            
+        } */
 
     </style>
 
@@ -819,6 +819,14 @@
         <div >
             <form class="content" action = '{% url "demo2" %}' method = "post">
                 {% csrf_token %}
+                    
+                    <!-- CLOSE -->
+                    <div class = 'close'>
+                        <a href = '{% url "demo2" %}'>
+                            <img src = "/media/works/eye/zayavka/x.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                    
+                        </a>
+                    </div>                    
+                   
 
                     <!-- ИМЯ -->
                     <div class = 'name_text'>
@@ -904,6 +912,7 @@
                     </div>
 
                     <!-- КОММЕНТАРИЙ -->
+                    
                     <div class = 'koment_text'>
                         <img src = '/media/works/eye/zayavka/koment.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
                     </div>
@@ -915,6 +924,7 @@
                         <input type="text" name = 'koment_more' id = 'koment_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
                     </div>
 
+                    <!-- ОТПРАВЛЯЙ -->
                     <div class="atom">
                         <input type = 'image' type = 'submit' src = "/media/works/eye/zayavka/atom.png" style = 'opacity:100%;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
                     </div>
