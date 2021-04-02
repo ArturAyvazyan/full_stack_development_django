@@ -361,6 +361,8 @@
             grid-row-end:100;
         }
 
+        
+
         @media screen and (max-width: 900px), (max-device-width: 900px) {
 
             html,
@@ -712,10 +714,10 @@
 
             .image_slider {
                 display: inline-block;
-                grid-column-start: 15;
-                grid-column-end: 82;
-                grid-row-start: 19;
-                grid-row-end: 69;
+                grid-column-start: 19;
+                grid-column-end: 76;
+                grid-row-start: 15;
+                grid-row-end: 55;
             }
 
             .arrow_left { 
@@ -963,6 +965,306 @@
                 grid-column-end: 64;
                 grid-row-start: 188;
                 grid-row-end: 191;
+                overflow: hidden;
+            }
+        }
+
+        @media screen and (max-height: 900px), (max-device-height: 900px) {
+            html,
+            body {
+                background: url("/media/works/zakis/koks.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+
+            .nazvanie {
+                grid-column-start: 80;
+                grid-column-end: 95;
+                grid-row-start: 8;
+                grid-row-end: 16;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 85%; 
+                min-width: 85%; 
+                grid-column-start: 15;
+                grid-column-end: 95;
+                grid-row-start: 10;
+                grid-row-end: 75;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 32;
+                grid-column-end: 62;
+                grid-row-start: 14;
+                grid-row-end: 64;
+                transform:scale(1.3);
+            }
+
+            .arrow_left { 
+                display: none;
+            }
+
+            .arrow_right {
+                display: none;
+            }
+
+            .button-image {
+                grid-column-start: 10;
+                grid-column-end: 31;
+                grid-row-start: 78;
+                grid-row-end: 93;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 16;
+                grid-column-end: 26;
+                grid-row-start: 83;
+                grid-row-end: 88;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .zakis-buy-image {
+                grid-column-start: 16;
+                grid-column-end: 25;
+                grid-row-start: 83;
+                grid-row-end: 88;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 10;
+                grid-column-end: 31;
+                grid-row-start: 78;
+                grid-row-end: 93;
+                overflow: hidden;
+            }
+
+            .second-buy-border {
+                grid-column-start: 15;
+                grid-column-end: 36;
+                grid-row-start: 81;
+                grid-row-end: 96;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 8;
+                grid-column-end: 26;
+                grid-row-start: 76;
+                grid-row-end: 89;
+                overflow: hidden;
+            }
+
+            .fourth-buy-border {
+                display:none;
+            }
+
+            .fivth-buy-border {
+                display:none;
+            }
+
+            .six-buy-border {
+                display:none;
+            }
+
+            .seven-buy-border {
+                display:none;
+            }
+
+            .eight-buy-border {
+                display:none;
+            }
+
+            .logotip {
+                grid-column-start: 85;
+                grid-column-end: 95;
+                grid-row-start: 85;
+                grid-row-end: 90;
+                transform:scale(1.1);
+            }
+
+            /*  */
+                /*  */
+                    /*  */
+
+            .razmer-image {
+                grid-column-start: 10;
+                grid-column-end: 30;
+                grid-row-start: 115;
+                grid-row-end: 119;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 10;
+                grid-column-end: 23;
+                grid-row-start: 115;
+                grid-row-end: 119;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 20;
+                grid-column-end: 50;
+                grid-row-start: 122;
+                grid-row-end: 126;
+                z-index:2;
+            }
+
+            .cifri-english-image{
+                grid-column-start: 13;
+                grid-column-end: 43;
+                grid-row-start: 122;
+                grid-row-end: 126;
+                opacity:0;
+                z-index:1;
+            }
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 75;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 75;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 20;
+                grid-column-end: 40;
+                grid-row-start: 145;
+                grid-row-end: 149;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 20;
+                grid-column-end: 45;
+                grid-row-start: 145;
+                grid-row-end: 149;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril-image {
+                grid-column-start: 8;
+                grid-column-end: 90;
+                grid-row-start: 151;
+                grid-row-end: 156;
+                z-index:2;
+            }  
+
+            .akril-english-image {
+                grid-column-start: 8;
+                grid-column-end: 90;
+                grid-row-start: 151;
+                grid-row-end: 156;
+                opacity:0;
+                z-index:1;
+            }   
+
+            .wood-image {
+                grid-column-start: 5;
+                grid-column-end: 45;
+                grid-row-start: 159;
+                grid-row-end: 163;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .wood-english-image {
+                grid-column-start: 5;
+                grid-column-end: 42;
+                grid-row-start: 159;
+                grid-row-end: 163;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .aluminium-image {
+                grid-column-start: 15;
+                grid-column-end: 50;
+                grid-row-start:165;
+                grid-row-end: 169;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .aluminium-english-image {
+                grid-column-start:15;
+                grid-column-end: 47;
+                grid-row-start: 165;
+                grid-row-end: 169;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .cena-image {
+                grid-column-start: 10;
+                grid-column-end: 26;
+                grid-row-start: 182;
+                grid-row-end: 187;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 10;
+                grid-column-end: 26;
+                grid-row-start: 182;
+                grid-row-end: 186;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price-image {
+                grid-column-start: 25;
+                grid-column-end: 39;
+                grid-row-start: 188;
+                grid-row-end: 193;
+                overflow: hidden;
+            }
+
+            .price-english-image {
+                grid-column-start: 24;
+                grid-column-end: 38;
+                grid-row-start: 188;
+                grid-row-end: 193;
                 overflow: hidden;
             }
         }
