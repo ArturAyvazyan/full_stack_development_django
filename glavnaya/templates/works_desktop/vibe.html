@@ -411,8 +411,8 @@
                 display: inline-block;
                 grid-column-start: 28;
                 grid-column-end: 78;
-                grid-row-start: 43;
-                grid-row-end: 73;
+                grid-row-start: 42;
+                grid-row-end: 72;
             }
 
             .arrow_left { 
@@ -514,6 +514,166 @@
                 opacity:0;
                 z-index:1;
             }    
+        }
+
+        @media screen and (max-height: 450px), (max-device-height: 450px) {
+            
+            html,
+            body {
+                background: url("/media/works/boy/background.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+
+            .nazvanie {
+                grid-column-start: 65;
+                grid-column-end: 96;
+                grid-row-start: 8;
+                grid-row-end: 17;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 100%; 
+                min-width: 100%; 
+                grid-column-start: 5;
+                grid-column-end: 65;
+                grid-row-start: 8;
+                grid-row-end: 77;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 23;
+                grid-column-end: 51;
+                grid-row-start: 16;
+                grid-row-end: 68;
+                transform:scale(1.2);
+            }
+
+            .arrow_left { 
+                display: none;
+            }
+
+            .arrow_right {
+                display: none;
+            }
+
+
+            .logotip {
+                grid-column-start: 85;
+                grid-column-end: 95;
+                grid-row-start: 85;
+                grid-row-end: 90;
+                transform:scale(1.1);
+            }
+
+            /*  */
+                /*  */
+                    /*  */
+
+            
+            .razmer-image {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 120;
+                grid-row-end: 129;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 10;
+                grid-column-end: 30;
+                grid-row-start: 120;
+                grid-row-end: 129;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 25;
+                grid-column-end: 53;
+                grid-row-start: 131;
+                grid-row-end: 137;
+                z-index:2;
+            }
+
+            .cifri-english-image{
+                grid-column-start: 20;
+                grid-column-end: 48;
+                grid-row-start: 131;
+                grid-row-end: 137;
+                opacity:0;
+                z-index:1;
+            }
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 52;
+                grid-row-start: 145;
+                grid-row-end: 153;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 50;
+                grid-row-start: 145;
+                grid-row-end: 153;
+                z-index:1;
+            }
+
+            .akril-image {
+                grid-column-start: 15;
+                grid-column-end: 65;
+                grid-row-start: 159;
+                grid-row-end: 166;
+                z-index:2;
+            }  
+
+            .akril-english-image {
+                grid-column-start: 15;
+                grid-column-end: 65;
+                grid-row-start: 159;
+                grid-row-end: 166;
+                opacity:0;
+                z-index:1;
+            }  
+
+            .farfor-image {
+                grid-column-start: 15;
+                grid-column-end: 40;
+                grid-row-start: 171;
+                grid-row-end: 177;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 15;
+                grid-column-end: 45;
+                grid-row-start: 171;
+                grid-row-end: 177;
+                opacity:0;
+                z-index:1;
+            } 
+            
         }
 
         .morphing-btn-wrap {

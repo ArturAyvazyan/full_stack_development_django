@@ -260,7 +260,7 @@
         }
 
 
-        @media screen and (max-width: 900px),(max-device-width:900) {
+        @media screen and (max-width: 900px),(max-device-width:900px) {
 
             html,
             body {
@@ -495,8 +495,7 @@
             }
         }
 
-
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 600px),(max-device-width:600px) {
 
             html,
             body {
@@ -525,8 +524,8 @@
             .nazvanie {
                 grid-column-start: 20;
                 grid-column-end: 60;
-                grid-row-start: 25;
-                grid-row-end: 35;
+                grid-row-start: 15;
+                grid-row-end: 25;
             }
 
             .borders {
@@ -543,8 +542,8 @@
                 display: inline-block;
                 grid-column-start: 26;
                 grid-column-end: 80;
-                grid-row-start: 41;
-                grid-row-end: 83;
+                grid-row-start: 39;
+                grid-row-end: 59;
                 
             }
 
@@ -571,6 +570,7 @@
                 grid-row-end: 78;
                 overflow: hidden;
                 z-index: 2;
+                transform:scale(1.1);
             }
 
             .glaz-buy-image {
@@ -603,8 +603,8 @@
             .third-buy-border {
                 grid-column-start: 7;
                 grid-column-end: 63;
-                grid-row-start: 61;
-                grid-row-end: 76;
+                grid-row-start: 63;
+                grid-row-end: 79;
                 overflow: hidden;
             }
 
@@ -662,7 +662,7 @@
             .farfor-image {
                 grid-column-start: 30;
                 grid-column-end: 70;
-                grid-row-start: 145;
+                grid-row-start: 144;
                 grid-row-end: 149;
                 z-index:2;
             } 
@@ -688,37 +688,267 @@
                 grid-column-start: 15;
                 grid-column-end: 90;
                 grid-row-start: 150;
-                grid-row-end: 155;
+                grid-row-end: 154;
                 opacity:0;
                 z-index:1;
             }   
 
             .cena-image {
                 grid-column-start: 10;
-                grid-column-end: 35;
+                grid-column-end: 38;
                 grid-row-start: 159;
-                grid-row-end: 167;
+                grid-row-end: 165;
                 overflow: hidden;
                 z-index:2;
             }
 
             .cena-english-image {
                 grid-column-start: 12;
-                grid-column-end: 40;
-                grid-row-start: 160;
-                grid-row-end: 167;
+                grid-column-end: 47;
+                grid-row-start: 159;
+                grid-row-end: 164;
                 overflow: hidden;
                 opacity:0;
                 z-index:1;
             }
 
             .price-image {
-                grid-column-start: 25;
-                grid-column-end: 50;
-                grid-row-start: 164;
-                grid-row-end: 168;
+                grid-column-start: 30;
+                grid-column-end: 60;
+                grid-row-start: 165;
+                grid-row-end: 170;
                 overflow: hidden;
             }
+        }
+
+        @media screen and (max-height: 450px), (max-device-height: 450px) {
+            
+            html,
+            body {
+                background: url("/media/works/eye/background.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+
+            .nazvanie {
+                grid-column-start: 75;
+                grid-column-end: 95;
+                grid-row-start: 8;
+                grid-row-end: 22;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 100%; 
+                min-width: 100%; 
+                grid-column-start: 10;
+                grid-column-end: 80;
+                grid-row-start: 8;
+                grid-row-end: 77;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 30;
+                grid-column-end: 60;
+                grid-row-start: 22;
+                grid-row-end: 62;
+                transform:scale(1.4);
+            }
+
+            .arrow_left { 
+                display: none;
+            }
+
+            .arrow_right {
+                display: none;
+            }
+
+            .button-image {
+                grid-column-start: 10;
+                grid-column-end: 27;
+                grid-row-start: 78;
+                grid-row-end: 95;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 14;
+                grid-column-end: 24;
+                grid-row-start: 83;
+                grid-row-end: 90;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .glaz-buy-image {
+                grid-column-start: 14;
+                grid-column-end: 24;
+                grid-row-start: 83;
+                grid-row-end: 89;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 10;
+                grid-column-end: 27;
+                grid-row-start: 78;
+                grid-row-end: 95;
+                overflow: hidden;
+            }
+
+            .second-buy-border {
+                grid-column-start: 15;
+                grid-column-end: 30;
+                grid-row-start: 81;
+                grid-row-end: 97;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 8;
+                grid-column-end: 26;
+                grid-row-start: 76;
+                grid-row-end: 89;
+                overflow: hidden;
+            }
+
+            .logotip {
+                grid-column-start: 85;
+                grid-column-end: 95;
+                grid-row-start: 85;
+                grid-row-end: 90;
+                transform:scale(0.8);
+            }
+
+            /*  */
+                /*  */
+                    /*  */
+
+            .razmer-image {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 114;
+                grid-row-end: 124;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 10;
+                grid-column-end: 25;
+                grid-row-start: 114;
+                grid-row-end: 123;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 30;
+                grid-column-end: 48;
+                grid-row-start: 125;
+                grid-row-end: 134;
+                z-index:2;
+
+            }
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 50;
+                grid-row-start: 144;
+                grid-row-end: 154;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 50;
+                grid-row-start: 144;
+                grid-row-end: 151;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 15;
+                grid-column-end: 42;
+                grid-row-start: 154;
+                grid-row-end: 162;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 15;
+                grid-column-end: 55;
+                grid-row-start: 154;
+                grid-row-end: 161;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril-image {
+                grid-column-start: 15;
+                grid-column-end: 65;
+                grid-row-start: 164;
+                grid-row-end: 172;
+                transform:scale(1.1);
+                z-index:2;
+            }  
+
+            .akril-english-image {
+                grid-column-start: 15;
+                grid-column-end: 65;
+                grid-row-start: 164;
+                grid-row-end: 172;
+                transform:scale(1.1);
+                opacity:0;
+                z-index:1;
+            }   
+            
+            .cena-image {
+                grid-column-start: 10;
+                grid-column-end: 32;
+                grid-row-start: 178;
+                grid-row-end: 189;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 178;
+                grid-row-end: 186;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price-image {
+                grid-column-start: 30;
+                grid-column-end: 48;
+                grid-row-start: 188;
+                grid-row-end: 197;
+                overflow: hidden;
+            }
+
         }
 
         .morphing-btn-wrap {
@@ -940,19 +1170,19 @@
             </div>
             
             <div class="razmer-english-image">
-                <img src = "/media/works/eye/first_part/text/english/razmer-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/english/razmer-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; min-width:100%;min-height:100%;  overflow:hidden;'>
             </div>
 
             <div class="cifri-image">
-                <img src = "/media/works/eye/first_part/text/25.png" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/25.png" style = 'max-width:100%; max-height:100%;min-width:100%;min-height:100%; overflow:hidden;'>
             </div>
 
             <div class="materials-image">
-                <img src = "/media/works/eye/first_part/text/materials.png"  onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/materials.png"  onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="materials-english-image">
-                <img src = "/media/works/eye/first_part/text/english/materials-english.png" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/english/materials-english.png" style = 'max-width:100%; max-height:100%; min-width:100%; min-height:100%; overflow:hidden;'>
             </div>
 
             <div class="farfor-image">
@@ -964,19 +1194,19 @@
             </div>
 
             <div class="akril-image">
-                <img src = "/media/works/eye/first_part/text/akril.png" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/akril.png" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'max-width:100%; max-height:100%; min-width:100%; min-height:100%; overflow:hidden;'>
             </div>
 
             <div class="akril-english-image">
-                <img src = "/media/works/eye/first_part/text/english/akril-english.png" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/english/akril-english.png" style = 'max-width:100%; max-height:100%; overflow:hidden; min-width:100%; min-height:100%;'>
             </div>
 
             <div class="cena-image">
-                <img src = "/media/works/eye/first_part/text/cena.png" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/cena.png" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'max-width:100%; max-height:100%; min-width:100%; min-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cena-english-image">
-                <img src = "/media/works/eye/first_part/text/english/cena-english.png" style = 'max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/eye/first_part/text/english/cena-english.png" style = 'max-width:100%; max-height:100%; min-width:100%; min-height:100%; overflow:hidden;'>
             </div>
 
             <div class="price-image">

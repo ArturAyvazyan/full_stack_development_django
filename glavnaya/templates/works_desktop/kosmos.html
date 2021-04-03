@@ -475,8 +475,9 @@
                 display: inline-block;
                 grid-column-start: 12;
                 grid-column-end: 88;
-                grid-row-start: 28;
-                grid-row-end: 70;
+                grid-row-start: 26;
+                grid-row-end: 68;
+                transform:scale(0.9)
             }
 
             .arrow_left { 
@@ -632,6 +633,199 @@
                 transform:translateY(2vh)
             }
 
+        }
+
+        @media screen and (max-height: 450px), (max-device-height: 450px) {
+            
+            html,
+            body {
+                background: url("/media/works/kosmos/background.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+
+            .nazvanie {
+                grid-column-start: 78;
+                grid-column-end: 95;
+                grid-row-start: 8;
+                grid-row-end: 17;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 100%; 
+                min-width: 100%; 
+                grid-column-start: 10;
+                grid-column-end: 80;
+                grid-row-start: 8;
+                grid-row-end: 77;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 30;
+                grid-column-end: 58;
+                grid-row-start: 17;
+                grid-row-end: 69;
+                transform:scale(1.4);
+            }
+
+            .arrow_left { 
+                display: none;
+            }
+
+            .arrow_right {
+                display: none;
+            }
+
+
+            .logotip {
+                grid-column-start: 85;
+                grid-column-end: 95;
+                grid-row-start: 85;
+                grid-row-end: 90;
+                transform:scale(0.8);
+            }
+
+            /*  */
+                /*  */
+                    /*  */
+
+            .obiem-image {
+                grid-column-start: 5;
+                grid-column-end: 30;
+                grid-row-start: 110;
+                grid-row-end: 117;
+                z-index: 2;
+            }
+
+            .obiem-english-image {
+                grid-column-start: 5;
+                grid-column-end: 30;
+                grid-row-start: 110;
+                grid-row-end: 117;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .gaivan-image {
+                grid-column-start: 15;
+                grid-column-end: 55;
+                grid-row-start: 119;
+                grid-row-end: 125;
+                z-index: 2;
+            }
+
+            .gaivan-english-image {
+                grid-column-start: 15;
+                grid-column-end: 53;
+                grid-row-start: 119;
+                grid-row-end: 125;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .piala-image{
+                grid-column-start: 16;
+                grid-column-end: 50;
+                grid-row-start: 127;
+                grid-row-end: 133;
+                z-index: 2;
+            }
+
+            .piala-english-image{
+                grid-column-start: 16;
+                grid-column-end: 50;
+                grid-row-start: 127;
+                grid-row-end: 133;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 52;
+                grid-row-start: 145;
+                grid-row-end: 153;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 50;
+                grid-row-start: 145;
+                grid-row-end: 153;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 15;
+                grid-column-end: 40;
+                grid-row-start: 155;
+                grid-row-end: 161;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 15;
+                grid-column-end: 45;
+                grid-row-start: 155;
+                grid-row-end: 161;
+                opacity:0;
+                z-index:1;
+            }
+
+            .glazur-image {
+                grid-column-start: 17;
+                grid-column-end: 45;
+                grid-row-start: 163;
+                grid-row-end: 169;
+                z-index: 2;
+            }
+
+            .glazur-english-image {
+                grid-column-start: 17;
+                grid-column-end: 38;
+                grid-row-start: 163;
+                grid-row-end: 169;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .akril-image {
+                grid-column-start: 15;
+                grid-column-end: 65;
+                grid-row-start: 171;
+                grid-row-end: 177;
+                z-index:2;
+            }  
+
+            .akril-english-image {
+                grid-column-start: 15;
+                grid-column-end: 65;
+                grid-row-start: 171;
+                grid-row-end: 177;
+                opacity:0;
+                z-index:1;
+            }   
+            
         }
 
         .morphing-btn-wrap {
