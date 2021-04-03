@@ -59,7 +59,7 @@
 
         .cifri-image{
             grid-column-start: 18;
-            grid-column-end: 40;
+            grid-column-end: 44;
             grid-row-start: 16;
             grid-row-end: 22;
             overflow: hidden;
@@ -259,6 +259,255 @@
             grid-row-end:99;
         }
 
+        @media screen and (max-width: 1200px),(max-device-width: 1200px) {
+            html,
+            body {
+                position:static;
+                width: 100%;
+                height: 100%;
+                margin: 0px; /* убирает скролл */
+                overflow-x: hidden;
+                background: url("/media/works/eye/background.png");
+                background-size: cover;
+            }
+            
+            .container {
+                display:grid;
+                grid-template-columns: 35fr 65fr;
+                grid-template-rows:100;
+                width: 100vw;
+                height: 100vh;
+            }
+            
+            .first_class {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(100, 1fr);
+                overflow: hidden;
+            }
+
+            .razmer-image {
+                grid-column-start: 8;
+                grid-column-end: 50;
+                grid-row-start: 10;
+                grid-row-end: 17;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 9;
+                grid-column-end: 45;
+                grid-row-start: 10;
+                grid-row-end: 16;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 18;
+                grid-column-end: 55;
+                grid-row-start: 16;
+                grid-row-end: 23;
+                overflow: hidden;
+            }
+
+            .materials-image {
+                grid-column-start: 8;
+                grid-column-end: 75;
+                grid-row-start: 30;
+                grid-row-end: 37;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .materials-english-image {
+                grid-column-start: 8;
+                grid-column-end: 75;
+                grid-row-start: 30;
+                grid-row-end: 37;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 18;
+                grid-column-end: 55;
+                grid-row-start: 38;
+                grid-row-end: 43;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .farfor-english-image {
+                grid-column-start: 18;
+                grid-column-end: 70;
+                grid-row-start: 38;
+                grid-row-end: 43;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril-image {
+                grid-column-start: 10;
+                grid-column-end: 85;
+                grid-row-start: 44;
+                grid-row-end: 49;
+                overflow: hidden;
+                z-index:2;
+            }   
+
+            .akril-english-image {
+                grid-column-start: 10;
+                grid-column-end: 90;
+                grid-row-start: 44;
+                grid-row-end: 48;
+                overflow: hidden;
+                z-index:1;
+                opacity:0
+            }
+
+            .cena-image {
+                grid-column-start: 8;
+                grid-column-end: 40;
+                grid-row-start: 52;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 8;
+                grid-column-end: 40;
+                grid-row-start: 52;
+                grid-row-end: 57;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .price-image {
+                grid-column-start: 18;
+                grid-column-end: 44;
+                grid-row-start: 58;
+                grid-row-end: 63;
+                overflow: hidden;
+            }
+
+            .button-image {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 74;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 35;
+                grid-column-end: 66;
+                grid-row-start: 79;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .glaz-buy-image {
+                grid-column-start: 35;
+                grid-column-end: 66;
+                grid-row-start: 79;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 71;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .second-buy-border {
+                grid-column-start: 17;
+                grid-column-end: 77;
+                grid-row-start: 74;
+                grid-row-end: 93;
+                overflow: hidden;
+            }
+            
+            .third-buy-border {
+                grid-column-start: 24;
+                grid-column-end: 84;
+                grid-row-start: 69;
+                grid-row-end: 88;
+                overflow: hidden;
+            }
+
+    /*  */
+    /*  */
+    /*  */
+            .second_class {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(100, 1fr);
+                overflow: hidden;
+            }
+
+            .nazvanie {
+                grid-column-start: 75;
+                grid-column-end: 95;
+                grid-row-start: 4;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .borders {
+                grid-column-start: 3;
+                grid-column-end: 90;
+                grid-row-start: 16;
+                grid-row-end: 95;
+                overflow: hidden;
+        
+            }
+
+            .image_slider {
+                grid-column-start: 12;
+                grid-column-end: 85;
+                grid-row-start: 18;
+                grid-row-end: 81;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .arrow_left { 
+                grid-column-start: 8;
+                grid-column-end:12;
+                grid-row-start:51;
+                grid-row-end:60;
+            }
+
+            .arrow_right { 
+                grid-column-start: 84;
+                grid-column-end: 88;
+                grid-row-start:51;
+                grid-row-end:60;
+            }
+
+            .logotip {
+                grid-column-start: 82;
+                grid-column-end: 97;
+                grid-row-start: 87;
+                grid-row-end: 97;
+            }   
+        
+        }
 
         @media screen and (max-width: 900px),(max-device-width:900px) {
 

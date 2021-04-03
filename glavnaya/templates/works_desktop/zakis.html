@@ -361,7 +361,345 @@
             grid-row-end:100;
         }
 
-        
+        @media screen and (max-width: 1200px), (max-device-width: 1200px) {
+            html,
+            body {
+                position:static;
+                width: 100%;
+                height: 100%;
+                margin: 0px; /* убирает скролл */
+                overflow-x: hidden;
+                background: url("/media/works/zakis/koks.png");
+                background-size: cover;
+            }
+            
+            .container {
+                display:grid;
+                grid-template-columns: 60fr 40fr;
+                grid-template-rows:100;
+                width: 100vw;
+                height: 100vh;
+            }
+            
+            .first_class {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(100, 1fr);
+                overflow: hidden;
+            }
+
+            .borders {
+                margin-left:-5%;
+                grid-column-start: 5;
+                grid-column-end: 100;
+                grid-row-start: 3;
+                grid-row-end: 80;
+                min-height:100%;
+                min-width:100%;
+                overflow: hidden;
+            }
+
+            .image_slider {
+                grid-column-start: 10;
+                grid-column-end: 88;
+                grid-row-start: 10;
+                grid-row-end: 70;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .arrow_left { 
+                grid-column-start: 8;
+                grid-column-end: 14;
+                grid-row-start: 35;
+                grid-row-end: 41;
+            }
+
+            .arrow_right { 
+                grid-column-start: 85;
+                grid-column-end: 91;
+                grid-row-start:35;
+                grid-row-end:41;
+            }
+
+            .razmer-image {
+                grid-column-start: 2;
+                grid-column-end: 30;
+                grid-row-start: 73;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 2;
+                grid-column-end: 27;
+                grid-row-start: 73;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .cifri-image {
+                grid-column-start: 31;
+                grid-column-end: 80;
+                grid-row-start: 74;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .cifri-english-image {
+                grid-column-start: 29;
+                grid-column-end: 78;
+                grid-row-start: 74;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .cena-image {
+                grid-column-start: 2;
+                grid-column-end: 25;
+                grid-row-start: 81;
+                grid-row-end: 87;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 2;
+                grid-column-end: 23;
+                grid-row-start: 81;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .price-image {
+                grid-column-start: 26;
+                grid-column-end: 48;
+                grid-row-start: 82;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .price-english-image {
+                grid-column-start: 24;
+                grid-column-end: 46;
+                grid-row-start: 82;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .materials-image {
+                grid-column-start: 2;
+                grid-column-end: 42;
+                grid-row-start: 88;
+                grid-row-end: 92;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .materials-english-image {
+                grid-column-start: 2;
+                grid-column-end: 42;
+                grid-row-start: 88;
+                grid-row-end: 92;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .farfor-image {
+                grid-column-start: 40;
+                grid-column-end: 60;
+                grid-row-start: 89;
+                grid-row-end: 92;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .farfor-english-image {
+                grid-column-start: 40;
+                grid-column-end: 59;
+                grid-row-start: 89;
+                grid-row-end: 92;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .aluminium-image {
+                grid-column-start: 61;
+                grid-column-end: 100;
+                grid-row-start: 89;
+                grid-row-end: 92;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .aluminium-english-image {
+                grid-column-start: 61;
+                grid-column-end: 100;
+                grid-row-start: 89;
+                grid-row-end: 92;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .wood-image {
+                grid-column-start: 2;
+                grid-column-end: 45;
+                grid-row-start: 95;
+                grid-row-end: 98;
+                overflow: hidden;
+                z-index: 2;
+            }
+            .wood-english-image {
+                grid-column-start: 2;
+                grid-column-end: 32;
+                grid-row-start: 95;
+                grid-row-end: 98;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .akril-image {
+                grid-column-start: 46;
+                grid-column-end: 96;
+                grid-row-start: 95;
+                grid-row-end: 98;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .akril-english-image {
+                grid-column-start: 46;
+                grid-column-end: 96;
+                grid-row-start: 95;
+                grid-row-end: 98;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0
+            }
+    /*  */
+    /*  */
+    /*  */
+
+            .second_class {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(100, 1fr);
+                overflow: hidden;
+            }
+
+            .nazvanie {
+                /* margin-left: -10%; */
+                grid-column-start: 10;
+                grid-column-end: 60;
+                grid-row-start: 15;
+                grid-row-end: 24;
+                overflow: hidden;
+            }
+
+            .button-image {
+                grid-column-start: 26;
+                grid-column-end: 82;
+                grid-row-start: 43;
+                grid-row-end: 59;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 40;
+                grid-column-end: 68;
+                grid-row-start: 49;
+                grid-row-end: 53;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .zakis-buy-image {
+                grid-column-start: 43;
+                grid-column-end: 63;
+                grid-row-start: 49;
+                grid-row-end: 53;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 26;
+                grid-column-end: 82;
+                grid-row-start: 43;
+                grid-row-end: 59;
+                overflow: hidden;
+            }
+
+            .second-buy-border {
+                grid-column-start: 30;
+                grid-column-end: 86;
+                grid-row-start: 46;
+                grid-row-end: 62;
+                overflow: hidden;
+            }
+            
+            .third-buy-border {
+                grid-column-start: 24;
+                grid-column-end: 80;
+                grid-row-start: 41;
+                grid-row-end: 57;
+                overflow: hidden;
+            }
+
+            .fourth-buy-border {
+                grid-column-start: 22;
+                grid-column-end: 78;
+                grid-row-start: 48;
+                grid-row-end: 64;
+                overflow: hidden;
+            }
+
+            .fivth-buy-border {
+                grid-column-start: 20;
+                grid-column-end: 76;
+                grid-row-start: 49;
+                grid-row-end: 65;
+                overflow: hidden;
+            }
+
+            .six-buy-border {
+                display:none;
+            }
+
+            .seven-buy-border {
+                display:none;
+            }
+
+            .eight-buy-border {
+                display:none;
+            }
+
+            .logotip {
+                grid-column-start: 80;
+                grid-column-end: 94;
+                grid-row-start: 90;
+                grid-row-end:100;
+                transform: scale(1.5);
+            }
+        }
 
         @media screen and (max-width: 900px), (max-device-width: 900px) {
 

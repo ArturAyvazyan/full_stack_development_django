@@ -252,7 +252,242 @@
             /*  */
                 /*  */
 
+        @media screen and (max-width: 1200px), (max-device-width: 1200px) {
+            html,
+            body {
+                position:static;
+                width: 100%;
+                height: 100%;
+                margin: 0px; /* убирает скролл */
+                overflow-x: hidden;
+                background: url("/media/works/maski/background.png");
+                background-size: cover;
+            }
+            
+            .container {
+                
+                display:grid;
+                grid-template-columns: 65fr 35fr;
+                grid-template-rows:100;
+                width: 100vw;
+                height: 100vh;
+            }
 
+            .first_class {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(100, 1fr);
+                overflow: hidden;
+                max-width:100%;
+                max-height:100%;
+            }
+
+            .nazvanie {
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 5;
+                grid-row-end: 12;
+                overflow: hidden;
+            }
+
+            .borders {
+                grid-column-start: 10;
+                grid-column-end: 95;
+                grid-row-start: 20;
+                grid-row-end: 95;
+                overflow: hidden;
+            }
+
+            .image_slider {
+                grid-column-start: 30;
+                grid-column-end: 80;
+                grid-row-start: 35;
+                grid-row-end: 77;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .arrow_left { 
+                grid-column-start: 15;
+                grid-column-end: 19;
+                grid-row-start: 54;
+                grid-row-end: 59;
+            }
+
+            .arrow_right { 
+                grid-column-start: 87;
+                grid-column-end: 91;
+                grid-row-start: 54;
+                grid-row-end: 59;
+            }
+
+            .logotip {
+                margin-top:5%;
+                grid-column-start: 5;
+                grid-column-end: 15;
+                grid-row-start: 90;
+                grid-row-end: 100;
+                transform:scale(1.3);
+            }
+
+    /*  */
+    /*  */
+    /*  */
+
+            .second_class {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(100, 1fr);
+                overflow: hidden;
+                max-width:100%;
+                max-height:100%;
+            }
+
+            .materials-image {
+                grid-column-start: 23;
+                grid-column-end: 90;
+                grid-row-start: 15;
+                grid-row-end: 20;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .materials-english-image {
+                grid-column-start: 23;
+                grid-column-end: 90;
+                grid-row-start: 15;
+                grid-row-end: 20;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 40;
+                grid-column-end: 90;
+                grid-row-start: 22;
+                grid-row-end: 26;
+                overflow: hidden;
+                z-index:2;
+            }
+            
+            .farfor-english-image {
+                grid-column-start: 40;
+                grid-column-end: 90;
+                grid-row-start: 22;
+                grid-row-end: 26;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+            
+            .razmer-image {
+                grid-column-start: 45;
+                grid-column-end: 90;
+                grid-row-start: 31;
+                grid-row-end: 36;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 45;
+                grid-column-end: 90;
+                grid-row-start: 31;
+                grid-row-end: 36;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 35;
+                grid-column-end: 90;
+                grid-row-start: 38;
+                grid-row-end: 42;
+                overflow: hidden;
+            }
+
+            .cena-image {
+                grid-column-start: 55;
+                grid-column-end: 90;
+                grid-row-start: 46;
+                grid-row-end: 53;
+                overflow: hidden;
+                z-index:2;
+            }
+            
+            .cena-english-image {
+                grid-column-start: 50;
+                grid-column-end: 90;
+                grid-row-start: 46;
+                grid-row-end: 52;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price-image {
+                grid-column-start: 55;
+                grid-column-end: 90;
+                grid-row-start: 53;
+                grid-row-end: 57;
+                overflow: hidden;
+            }
+
+            .button-image {
+                grid-column-start: 5;
+                grid-column-end: 65;
+                grid-row-start: 74;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 21;
+                grid-column-end: 49;
+                grid-row-start: 80;
+                grid-row-end: 84;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .maski-buy-image {
+                grid-column-start: 21;
+                grid-column-end: 49;
+                grid-row-start: 79;
+                grid-row-end: 84;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 5;
+                grid-column-end: 65;
+                grid-row-start: 74;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .second-buy-border {
+                grid-column-start: 10;
+                grid-column-end: 70;
+                grid-row-start: 76;
+                grid-row-end: 92;
+                overflow: hidden;
+            }
+            
+            .third-buy-border {
+                grid-column-start: 3;
+                grid-column-end: 63;
+                grid-row-start: 72;
+                grid-row-end: 88;
+                overflow: hidden;
+            }
+        }
         @media screen and (max-width: 900px), (max-device-width:900px) {
 
             html,

@@ -203,7 +203,195 @@
 /*  */
 /*  */
 /*  */
+        @media screen and (max-width: 1200px), (max-device-width: 1200px) {
+            html,
+            body {
+                position:static;
+                width: 100%;
+                height: 100%;
+                margin: 0px; /* убирает скролл */
+                overflow-x: hidden;
+                background: url("/media/works/boy/background.png");
+                background-size: cover;
+            }
+            
+            .container {
+                display:grid;
+                grid-template-columns: 35fr 65fr;
+                grid-template-rows:100;
+                width: 100vw;
+                height: 100vh;
+            }
+            
+            .first_class {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(100, 1fr);
+                overflow: hidden;
+            }
 
+            .nazvanie {
+                grid-column-start: 3;
+                grid-column-end: 97;
+                grid-row-start: 4;
+                grid-row-end: 12;
+                overflow: hidden;
+            }
+
+            .razmer-image {
+                grid-column-start: 8;
+                grid-column-end: 55;
+                grid-row-start: 65;
+                grid-row-end: 70;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 8;
+                grid-column-end: 45;
+                grid-row-start: 65;
+                grid-row-end: 70;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 55;
+                grid-column-end: 94;
+                grid-row-start: 70;
+                grid-row-end: 74;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cifri-english-image{
+                grid-column-start: 49;
+                grid-column-end: 88;
+                grid-row-start: 70;
+                grid-row-end: 74;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .materials-image {
+                grid-column-start: 8;
+                grid-column-end: 75;
+                grid-row-start: 80;
+                grid-row-end: 85;
+                overflow: hidden;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 8;
+                grid-column-end: 75;
+                grid-row-start: 80;
+                grid-row-end: 85;
+                overflow: hidden;
+                z-index:1;
+            }
+            
+            .akril-image {
+                grid-column-start: 10;
+                grid-column-end: 100;
+                grid-row-start: 87;
+                grid-row-end: 91;
+                z-index:2;
+            }  
+
+            .akril-english-image {
+                grid-column-start: 10;
+                grid-column-end: 100;
+                grid-row-start: 87;
+                grid-row-end: 91;
+                opacity:0;
+                z-index:1;
+            }
+            
+    /*  */
+            .second_class {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(100, 1fr);
+                overflow: hidden;
+            }
+
+            .borders {
+                grid-column-start: 1;
+                grid-column-end: 90;
+                grid-row-start: 10;
+                grid-row-end: 95;
+                overflow: hidden;
+        
+            }
+
+            .image_slider {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 24;
+                grid-row-end: 84;
+                overflow: hidden;
+            }
+
+            .arrow_left { 
+                grid-column-start: 8;
+                grid-column-end: 14;
+                grid-row-start: 44;
+                grid-row-end: 51;
+            }
+
+            .arrow_right { 
+                grid-column-start: 82;
+                grid-column-end: 88;
+                grid-row-start:44;
+                grid-row-end:51;
+            }
+
+            #arrow_left { 
+                max-width: 100%; 
+                max-height: 100%; 
+                min-width: 100%; 
+                min-height: 100%;
+            }
+
+            #arrow_right { 
+                max-width: 100%; 
+                max-height: 100%; 
+                min-width: 100%; 
+                min-height: 100%;
+            }
+
+            
+            .logotip {
+                grid-column-start: 85;
+                grid-column-end: 100;
+                grid-row-start: 91;
+                grid-row-end: 95;
+            }
+
+            .farfor-image {
+                grid-column-start: 3;
+                grid-column-end: 22;
+                grid-row-start: 87;
+                grid-row-end: 91;
+                overflow: hidden;
+                z-index:2;
+            } 
+            
+            .farfor-english-image {
+                grid-column-start: 3;
+                grid-column-end: 26;
+                grid-row-start: 87;
+                grid-row-end: 91;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }   
+        }
+        
         @media screen and (max-width: 900px), (max-device-width: 900px) {
 
             html,
