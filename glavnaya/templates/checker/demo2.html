@@ -499,8 +499,17 @@
             grid-row-start: 15;
             grid-row-end: 18;
             overflow: hidden;
-            /* transform: scale(1.1) */
-            
+            z-index:2;
+        }
+
+        .english_name_text {
+            grid-column-start: 11;
+            grid-column-end: 25;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
         }
 
         #name_zapolni {
@@ -528,7 +537,7 @@
             grid-row-end: 18;
             overflow: hidden;
         }
-        
+
         #email_zapolni {
             grid-column-start: 41;
             grid-column-end: 59;
@@ -557,6 +566,16 @@
             z-index:2;
         }
 
+        .english_city_text {
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
         #city_zapolni {
             grid-column-start: 70;
             grid-column-end: 90;
@@ -582,6 +601,16 @@
             grid-row-end: 40;
             overflow: hidden;
             z-index:2;
+        }
+
+        .english_otpravka_text {
+            grid-column-start: 12;
+            grid-column-end: 37;
+            grid-row-start: 37;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
         }
 
         #pochta_rossii {
@@ -630,6 +659,16 @@
             grid-row-end: 40;
             overflow: hidden;
             z-index:2;
+        }
+
+        .english_payment_text {
+            grid-column-start: 60;
+            grid-column-end: 87;
+            grid-row-start: 37;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
         }
 
         #rub {
@@ -705,6 +744,16 @@
             z-index:2;
         }
 
+        .english_better_text {
+            grid-column-start: 5;
+            grid-column-end: 40;
+            grid-row-start: 68;
+            grid-row-end: 71;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
         .better_form {
             grid-column-start: 5;
             grid-column-end: 9;
@@ -767,6 +816,16 @@
             z-index:2;
         }
 
+        .english_koment_text {
+            grid-column-start: 60;
+            grid-column-end: 75;
+            grid-row-start: 68;
+            grid-row-end: 71;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
         .koment_zapolni {
             grid-column-start: 59;
             grid-column-end: 76;
@@ -789,6 +848,17 @@
             grid-row-start: 87;
             grid-row-end: 97;
             overflow: hidden;
+            z-index:2;
+        }
+
+        .english_atom {
+            grid-column-start: 75;
+            grid-column-end: 95;
+            grid-row-start: 87;
+            grid-row-end: 97;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
         }
 
         .close {
@@ -814,9 +884,20 @@
                 grid-column-end: 30;
                 grid-row-start: 7;
                 grid-row-end: 10;
-                overflow: hidden;                
+                overflow: hidden;  
+                z-index:1;              
             }
 
+            .english_name_text {
+                grid-column-start: 7;
+                grid-column-end: 30;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;                
+                z-index:2;
+                opacity:0;
+            }
+            
             #name_zapolni {
                 grid-column-start: 8;
                 grid-column-end: 29;
@@ -843,7 +924,7 @@
                 grid-row-end: 10;
                 overflow: hidden;
             }
-            
+
             #email_zapolni {
                 grid-column-start: 40;
                 grid-column-end: 61;
@@ -870,7 +951,17 @@
                 grid-row-start: 7;
                 grid-row-end: 10;
                 overflow: hidden;
+                z-index:1;
+            }
+
+            .english_city_text {
+                grid-column-start: 66;
+                grid-column-end: 98;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;
                 z-index:2;
+                opacity:0;
             }
 
             #city_zapolni {
@@ -902,6 +993,17 @@
                 z-index:2;
             }
 
+            .english_otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
             #pochta_rossii {
                 grid-column-start: 14;
                 grid-column-end: 36;
@@ -909,7 +1011,6 @@
                 grid-row-end: 34;
                 overflow: hidden;
                 z-index:2;
-                /* transform: scale(1.1);    */
             }
 
             #sdek {
@@ -949,6 +1050,17 @@
                 transform:scale(1.2);
                 overflow: hidden;
                 z-index:2;
+            }
+
+            .english_payment_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
             }
 
             #rub {
@@ -1022,6 +1134,16 @@
                 grid-row-end: 59;
                 overflow: hidden;
                 z-index:2;
+            }
+
+            .english_better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 59;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
             }
 
             .better_form {
@@ -1108,6 +1230,17 @@
                 grid-row-start: 86;
                 grid-row-end: 95;
                 overflow: hidden;
+                z-index:2;
+            }
+
+            .english_atom {
+                grid-column-start: 10;
+                grid-column-end: 43;
+                grid-row-start: 86;
+                grid-row-end: 95;
+                overflow: hidden;
+                z-index: 1;
+                opacity:0;
             }
 
             .close {
@@ -1135,6 +1268,17 @@
                 grid-row-start: 10;
                 grid-row-end: 13;
                 overflow: hidden;                
+                z-index:2;
+            }
+
+            .english_name_text {
+                grid-column-start: 7;
+                grid-column-end: 32;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;                
+                z-index:1;
+                opacity:0;
             }
 
             #name_zapolni {
@@ -1193,6 +1337,16 @@
                 z-index:2;
             }
 
+            .english_city_text {
+                grid-column-start: 65;
+                grid-column-end: 97;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
             #city_zapolni {
                 grid-column-start: 69;
                 grid-column-end: 94;
@@ -1220,6 +1374,17 @@
                 transform:scale(1.2);
                 overflow: hidden;
                 z-index:2;
+            }
+
+            .english_otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
             }
 
             #pochta_rossii {
@@ -1269,6 +1434,17 @@
                 transform:scale(1.2);
                 overflow: hidden;
                 z-index:2;
+            }
+
+            .english_payment_text {
+                grid-column-start: 60;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
             }
 
             #rub {
@@ -1344,6 +1520,16 @@
                 z-index:2;
             }
 
+            .english_better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
             .better_form {
                 grid-column-start: 5;
                 grid-column-end: 15;
@@ -1406,6 +1592,16 @@
                 z-index:2;
             }
 
+            .english_koment_text {
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 74;
+                grid-row-end: 77;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
             .koment_zapolni {
                 grid-column-start: 60;
                 grid-column-end: 90;
@@ -1428,6 +1624,17 @@
                 grid-row-start: 87;
                 grid-row-end: 95;
                 overflow: hidden;
+                z-index:2;
+            }
+
+            .english_atom {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 87;
+                grid-row-end: 95;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
             }
 
             .close {
@@ -1454,7 +1661,18 @@
                 grid-column-end: 33;
                 grid-row-start: 10;
                 grid-row-end: 12;
-                overflow: hidden;                
+                overflow: hidden;     
+                z-index:2;           
+            }
+
+            .english_name_text {
+                grid-column-start: 8;
+                grid-column-end: 33;
+                grid-row-start: 10;
+                grid-row-end: 12;
+                overflow: hidden; 
+                z-index:1;
+                opacity:0;               
             }
 
             #name_zapolni {
@@ -1513,6 +1731,16 @@
                 z-index:2;
             }
 
+            .english_city_text {
+                grid-column-start: 67;
+                grid-column-end: 99;
+                grid-row-start: 10;
+                grid-row-end: 12;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
             #city_zapolni {
                 grid-column-start: 70;
                 grid-column-end: 98;
@@ -1540,6 +1768,17 @@
                 transform:scale(1);
                 overflow: hidden;
                 z-index:2;
+            }
+
+            .english_otpravka_text {
+                grid-column-start: 3;
+                grid-column-end: 52;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
             }
 
             #pochta_rossii {
@@ -1584,9 +1823,20 @@
                 grid-column-end: 98;
                 grid-row-start: 25;
                 grid-row-end: 27;
-                transform:scale(1.1);
+                transform:scale(1.2);
                 overflow: hidden;
                 z-index:2;
+            }
+
+            .english_payment_text {
+                grid-column-start: 58;
+                grid-column-end: 98;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
             }
 
             #rub {
@@ -1662,6 +1912,16 @@
                 z-index:2;
             }
 
+            .english_better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 57;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
             .better_form {
                 grid-column-start: 5;
                 grid-column-end: 16;
@@ -1724,6 +1984,16 @@
                 z-index:2;
             }
 
+            .english_koment_text {
+                grid-column-start: 50;
+                grid-column-end: 96;
+                grid-row-start: 70;
+                grid-row-end: 72;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
             .koment_zapolni {
                 grid-column-start: 58;
                 grid-column-end: 94;
@@ -1746,6 +2016,17 @@
                 grid-row-start: 87;
                 grid-row-end: 95;
                 overflow: hidden;
+                z-index:2;
+            }
+
+            .english_atom {
+                grid-column-start: 10;
+                grid-column-end: 60;
+                grid-row-start: 87;
+                grid-row-end: 95;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
             }
 
             .close {
@@ -1772,7 +2053,18 @@
                 grid-column-end: 30;
                 grid-row-start: 6;
                 grid-row-end: 10;
-                overflow: hidden;                
+                overflow: hidden;   
+                z-index:2;             
+            }
+
+            .english_name_text {
+                grid-column-start: 5;
+                grid-column-end: 30;
+                grid-row-start: 6;
+                grid-row-end: 10;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;                
             }
 
             #name_zapolni {
@@ -1829,6 +2121,16 @@
                 z-index:2;
             }
 
+            .english_city_text {
+                grid-column-start: 66;
+                grid-column-end: 98;
+                grid-row-start: 7;
+                grid-row-end: 11;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
             #city_zapolni {
                 grid-column-start: 70;
                 grid-column-end: 95;
@@ -1854,6 +2156,16 @@
                 grid-row-end: 29;
                 overflow: hidden;
                 z-index:2;
+            }
+
+            .english_otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
             }
 
             #pochta_rossii {
@@ -1900,6 +2212,16 @@
                 grid-row-end: 29;
                 overflow: hidden;
                 z-index:2;
+            }
+
+            .english_payment_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
             }
 
             #rub {
@@ -1972,6 +2294,16 @@
                 z-index:2;
             }
 
+            .english_better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 60;
+                grid-row-end: 65;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
             .better_form {
                 grid-column-start: 5;
                 grid-column-end: 15;
@@ -2034,6 +2366,16 @@
                 z-index:2;
             }
 
+            .english_koment_text {
+                grid-column-start: 70;
+                grid-column-end: 95;
+                grid-row-start: 74;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
             .koment_zapolni {
                 grid-column-start: 71;
                 grid-column-end: 94;
@@ -2056,6 +2398,17 @@
                 grid-row-start: 86;
                 grid-row-end: 97;
                 overflow: hidden;
+                z-index:2;
+            }
+
+            .english_atom {
+                grid-column-start: 40;
+                grid-column-end: 65;
+                grid-row-start: 86;
+                grid-row-end: 97;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
             }
 
             .close {
@@ -2092,9 +2445,13 @@
 
                     <!-- ИМЯ -->
                     <div class = 'name_text'>
-                        <img src = '/media/works/eye/zayavka/name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
+                        <img src = '/media/works/eye/zayavka/name.png' onmouseenter = ZayavkaName_SwitchToEnglish() onmouseleave = ZayavkaName_BackToRussian() style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
                     </div>  
-   
+                    
+                    <div class = 'english_name_text'>
+                        <img src = '/media/works/eye/zayavka/english/english_name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
+                    </div>
+
                     <img id = 'name_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'z-index:1; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
                     <div class = 'name_form'>
                         <input type="text" name = 'zayavka-name' id = 'zayavka-name' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' required>
@@ -2112,7 +2469,11 @@
                     
                     <!-- ГОРОД -->
                     <div class = 'city_text'>
-                        <img src = '/media/works/eye/zayavka/gorod.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                        <img src = '/media/works/eye/zayavka/gorod.png' onmouseenter = ZayavkaCity_SwitchToEnglish() onmouseleave = ZayavkaCity_BackToRussian() style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                    </div> 
+
+                    <div class = 'english_city_text'>
+                        <img src = '/media/works/eye/zayavka/english/english_gorod.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
                     </div> 
 
                     <img id = 'city_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
@@ -2121,10 +2482,14 @@
                     </div>
 
                     <!-- ОТПРАВКА -->
-                    <div class = 'otpravka_text'>
+                    <div class = 'otpravka_text' onmouseenter = ZayavkaOtpravka_SwitchToEnglish() onmouseleave = ZayavkaOtpravka_BackToRussian()>
                         <img src = '/media/works/eye/zayavka/dostavka.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
                     </div> 
-                   
+
+                    <div class = 'english_otpravka_text'>
+                        <img src = '/media/works/eye/zayavka/english/english_dostavka.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                    </div> 
+
                     <img id = 'pochta_rossii' src = '/media/works/eye/zayavka/pr.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
                     <img id = 'sdek' src = '/media/works/eye/zayavka/sdek.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
                     <img id = 'drugoe' src = '/media/works/eye/zayavka/drug.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
@@ -2136,8 +2501,12 @@
                     </div>
 
                     <!-- ОПЛАТА -->
-                    <div class = 'payment_text'>
+                    <div class = 'payment_text' onmouseenter = ZayavkaPayment_SwitchToEnglish() onmouseleave = ZayavkaPayment_BackToRussian()>
                         <img src = '/media/works/eye/zayavka/oplata.png' style = 'max-width: 100%; max-height: 100%;'>
+                    </div> 
+
+                    <div class = 'english_payment_text'>
+                        <img src = '/media/works/eye/zayavka/english/english_oplata.png' style = 'max-width: 100%; max-height: 100%;'>
                     </div>
 
                     <img id = 'rub' src = '/media/works/eye/zayavka/money_eye/rub.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
@@ -2155,10 +2524,14 @@
                     </div>
                     
                     <!-- ЛУЧШЕ СВЯЗАТЬСЯ -->
-                    <div class = 'better_text'>
+                    <div class = 'better_text' onmouseenter = ZayavkaBetter_SwitchToEnglish() onmouseleave = ZayavkaBetter_BackToRussian()>
                         <img src = '/media/works/eye/zayavka/better.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
                     </div>
 
+                    <div class = 'english_better_text'>
+                        <img src = '/media/works/eye/zayavka/english/english_better.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    </div>
+                    
                     <div class="better_form" style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>    
                         <p><input type="radio" name="better" id="better1" value = 'TELEGRAM' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
                         <input type="radio" name="better" id="better2" value = 'INSTAGRAM' style = 'cursor: pointer'>
@@ -2175,8 +2548,12 @@
 
                     <!-- КОММЕНТАРИЙ -->
                     
-                    <div class = 'koment_text'>
+                    <div class = 'koment_text' onmouseenter = ZayavkaKoment_SwitchToEnglish() onmouseleave = ZayavkaKoment_BackToRussian()>
                         <img src = '/media/works/eye/zayavka/koment.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    </div>
+
+                    <div class = 'english_koment_text'>
+                        <img src = '/media/works/eye/zayavka/english/english_koment.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
                     </div>
 
                     <div class = 'koment_zapolni'>
@@ -2187,10 +2564,13 @@
                     </div>
 
                     <!-- ОТПРАВЛЯЙ -->
-                    <div class="atom">
+                    <div class="atom" onmouseenter = ZayavkaAtom_SwitchToEnglish() onmouseleave = ZayavkaAtom_BackToRussian()>
                         <input type = 'image' type = 'submit' src = "/media/works/eye/zayavka/atom.png" style = 'opacity:100%;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
                     </div>
-        
+                    
+                    <div class="english_atom">
+                        <input type = 'image' type = 'submit' src = "/media/works/eye/zayavka/english/english_atom.png" style = 'opacity:100%;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                    </div>
                     
             
             </form>
@@ -2703,8 +3083,229 @@
         })
     }
 
-    
+    function ZayavkaName_SwitchToEnglish() {
+        var english_name_text_appears = anime({
+            targets:'.english_name_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
 
+        var disappear_name_text = anime({
+            targets:'.name_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaName_BackToRussian() {
+        var disappear_english_name_text = anime({
+            targets:'.english_name_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var name_text_appears = anime({
+            targets:'.name_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaCity_SwitchToEnglish() {
+        var english_city_text_appears = anime({
+            targets:'.english_city_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_city_text = anime({
+            targets:'.city_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaCity_BackToRussian() {
+        var disappear_english_city_text = anime({
+            targets:'.english_city_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var city_text_appears = anime({
+            targets:'.city_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+    
+    function ZayavkaOtpravka_SwitchToEnglish() {
+        var english_otpravka_text_appears = anime({
+            targets:'.english_otpravka_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_otpravka_text = anime({
+            targets:'.otpravka_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaOtpravka_BackToRussian() {
+        var disappear_english_otpravka_text = anime({
+            targets:'.english_otpravka_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var otpravka_text_appears = anime({
+            targets:'.otpravka_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaPayment_SwitchToEnglish() {
+        var english_payment_text_appears = anime({
+            targets:'.english_payment_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_payment_text = anime({
+            targets:'.payment_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaPayment_BackToRussian() {
+        var disappear_english_payment_text = anime({
+            targets:'.english_payment_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var payment_text_appears = anime({
+            targets:'.payment_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaBetter_SwitchToEnglish() {
+        var english_better_text_appears = anime({
+            targets:'.english_better_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_better_text = anime({
+            targets:'.better_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaBetter_BackToRussian() {
+        var disappear_english_better_text = anime({
+            targets:'.english_better_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var payment_better_appears = anime({
+            targets:'.better_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaKoment_SwitchToEnglish() {
+        var english_koment_text_appears = anime({
+            targets:'.english_koment_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_koment_text = anime({
+            targets:'.koment_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaKoment_BackToRussian() {
+        var disappear_english_koment_text = anime({
+            targets:'.english_koment_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var koment_text_appears = anime({
+            targets:'.koment_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaAtom_SwitchToEnglish() {
+        var english_atom_appears = anime({
+            targets:'.english_atom',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_atom = anime({
+            targets:'.atom',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaAtom_BackToRussian() {
+        var disappear_english_atom = anime({
+            targets:'.english_atom',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var atom_appears = anime({
+            targets:'.atom',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
     // LOGO PAGE STARTS HERE
 
     var minis = ['#mini_zakis', '#mini_glaz', '#mini_put', '#mini_kosmos', "#mini_maski", '#mini_vibe']
