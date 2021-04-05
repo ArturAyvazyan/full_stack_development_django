@@ -611,7 +611,7 @@
             grid-row-end: 54;
             overflow: hidden;
             z-index:2;
-            }
+        }
         
         .otpravka_form {
             grid-column-start: 5;
@@ -683,8 +683,7 @@
             grid-row-end: 62;
             overflow: hidden;
             z-index:2;
-            transform: scale(1.1);   
-            
+            transform: scale(1.1);    
         }
 
         .payment_form {
@@ -805,13 +804,1276 @@
             width: 100%;
             height: 2em;
             color:black;
-            margin: 1.85em;
+            margin: 1.9em;
         }
         
-        /* @media screen and (max-width: 900px) {
-           
+        @media screen and (max-width: 1200px),(max-device-width: 1200px) {
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 7;
+                grid-column-end: 30;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;                
+            }
+
+            #name_zapolni {
+                grid-column-start: 8;
+                grid-column-end: 29;
+                grid-row-start: 12;
+                grid-row-end: 17;
+                overflow: hidden;
+            }
+
+            .name_form {
+                grid-column-start: 9;
+                grid-column-end: 28;
+                grid-row-start: 13;
+                grid-row-end: 15;
+                transform:translateY(1vh);
+                overflow: hidden; 
+                opacity:50%;
+                z-index:10;
+            }
+            /* EMAIL */
+            .email_text {
+                grid-column-start: 44;
+                grid-column-end: 57;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;
+            }
             
-        } */
+            #email_zapolni {
+                grid-column-start: 40;
+                grid-column-end: 61;
+                grid-row-start: 12;
+                grid-row-end: 17;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 41;
+                grid-column-end: 60;
+                grid-row-start: 13;
+                grid-row-end: 15;
+                transform:translateY(1vh);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ГОРОД */
+            .city_text {
+                grid-column-start: 66;
+                grid-column-end: 98;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #city_zapolni {
+                grid-column-start: 69;
+                grid-column-end: 94;
+                grid-row-start: 12;
+                grid-row-end: 17;
+                overflow: hidden;
+            }
+            .city_form {
+                grid-column-start: 70;
+                grid-column-end: 93;
+                grid-row-start: 13;
+                grid-row-end: 15;
+                transform:translateY(1vh);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ОТПРАВКА */
+            .otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #pochta_rossii {
+                grid-column-start: 14;
+                grid-column-end: 36;
+                grid-row-start: 32;
+                grid-row-end: 34;
+                overflow: hidden;
+                z-index:2;
+                /* transform: scale(1.1);    */
+            }
+
+            #sdek {
+                grid-column-start: 14;
+                grid-column-end: 21;
+                grid-row-start: 36;
+                grid-row-end: 38;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+            }
+
+            #drugoe {
+                grid-column-start: 14;
+                grid-column-end: 26;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+            }
+            
+            .otpravka_form {
+                grid-column-start: 5;
+                grid-column-end: 13;
+                grid-row-start: 30;
+                grid-row-end: 45;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ОПЛАТА */
+            .payment_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #rub {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 30;
+                grid-row-end: 32;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usd {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 34;
+                grid-row-end: 36;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #btc {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 38;
+                grid-row-end: 40;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #eth {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 42;
+                grid-row-end: 44;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usdt {
+                grid-column-start: 67;
+                grid-column-end: 75;
+                grid-row-start: 47;
+                grid-row-end: 49;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);    
+            }
+
+            .payment_form {
+                grid-column-start: 59;
+                grid-column-end: 67;
+                grid-row-start: 28;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ЛУЧШЕ СВЯЗАТЬСЯ */
+            .better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 59;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 15;
+                grid-row-start: 60;
+                grid-row-end: 73;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #telegram {
+                grid-column-start: 14;
+                grid-column-end: 32;
+                grid-row-start: 62;
+                grid-row-end: 64;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #instagram {
+                grid-column-start: 14;
+                grid-column-end: 32;
+                grid-row-start: 66;
+                grid-row-end: 68;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #wup {
+                grid-column-start: 14;
+                grid-column-end: 30;
+                grid-row-start: 70;
+                grid-row-end: 72;
+                overflow: hidden;
+            }
+            
+            #better_zapolni {
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 74;
+                grid-row-end: 80;
+                overflow: hidden;
+            }
+
+            .better_more {
+                grid-column-start: 12;
+                grid-column-end: 38;
+                grid-row-start: 76;
+                grid-row-end: 78;
+                opacity: 50%;
+                overflow: hidden;
+            }
+
+            /* KOMENT */
+            .koment_text {
+                grid-column-start: 62;
+                grid-column-end: 88;
+                grid-row-start: 74;
+                grid-row-end: 77;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .koment_zapolni {
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 79;
+                grid-row-end: 85;
+                overflow: hidden;
+            }
+            .koment_more {
+                grid-column-start: 62;
+                grid-column-end: 88;
+                grid-row-start: 81;
+                grid-row-end: 83;
+                overflow: hidden;
+                opacity: 50%;
+            }
+
+            .atom {
+                grid-column-start: 10;
+                grid-column-end: 43;
+                grid-row-start: 86;
+                grid-row-end: 95;
+                overflow: hidden;
+            }
+
+            .close {
+                grid-column-start: 95;
+                grid-column-end: 98;
+                grid-row-start: 2;
+                grid-row-end: 5;
+                overflow: hidden;
+            }
+
+            input[type="radio"] {
+                border: 2px solid #999;
+                width: 100%;
+                height: 1.2em;
+                color:black;
+                margin: 1.2em;
+            }   
+        }
+
+        @media screen and (max-width: 900px),(max-device-width: 900px) {
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 7;
+                grid-column-end: 32;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;                
+            }
+
+            #name_zapolni {
+                grid-column-start: 7;
+                grid-column-end: 30;
+                grid-row-start: 15;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .name_form {
+                grid-column-start: 8;
+                grid-column-end: 29;
+                grid-row-start: 16;
+                grid-row-end: 18;
+                transform:translateY(1vh);
+                overflow: hidden; 
+                opacity:50%;
+                z-index:10;
+            }
+            /* EMAIL */
+            .email_text {
+                grid-column-start: 43;
+                grid-column-end: 58;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;
+            }
+            
+            #email_zapolni {
+                grid-column-start: 39;
+                grid-column-end: 62;
+                grid-row-start: 15;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 40;
+                grid-column-end: 61;
+                grid-row-start: 16;
+                grid-row-end: 18;
+                transform:translateY(1vh);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ГОРОД */
+            .city_text {
+                grid-column-start: 65;
+                grid-column-end: 97;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #city_zapolni {
+                grid-column-start: 69;
+                grid-column-end: 94;
+                grid-row-start: 15;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+            .city_form {
+                grid-column-start: 70;
+                grid-column-end: 93;
+                grid-row-start: 16;
+                grid-row-end: 18;
+                transform:translateY(1vh);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ОТПРАВКА */
+            .otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #pochta_rossii {
+                grid-column-start: 16;
+                grid-column-end: 47;
+                grid-row-start: 32;
+                grid-row-end: 34;
+                overflow: hidden;
+                z-index:2;
+                /* transform: scale(1.1);    */
+            }
+
+            #sdek {
+                grid-column-start: 16;
+                grid-column-end: 28;
+                grid-row-start: 36;
+                grid-row-end: 38;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+            }
+
+            #drugoe {
+                grid-column-start: 16;
+                grid-column-end: 35;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+            }
+            
+            .otpravka_form {
+                grid-column-start: 5;
+                grid-column-end: 13;
+                grid-row-start: 30;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ОПЛАТА */
+            .payment_text {
+                grid-column-start: 60;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #rub {
+                grid-column-start: 64;
+                grid-column-end: 73;
+                grid-row-start: 32;
+                grid-row-end: 34;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usd {
+                grid-column-start: 64;
+                grid-column-end: 73;
+                grid-row-start: 36;
+                grid-row-end: 38;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #btc {
+                grid-column-start: 64;
+                grid-column-end: 73;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #eth {
+                grid-column-start: 64;
+                grid-column-end: 73;
+                grid-row-start: 44;
+                grid-row-end: 46;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usdt {
+                grid-column-start: 64;
+                grid-column-end: 75;
+                grid-row-start: 48;
+                grid-row-end: 50;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);    
+            }
+
+            .payment_form {
+                grid-column-start: 54;
+                grid-column-end: 62;
+                grid-row-start: 30;
+                grid-row-end: 60;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ЛУЧШЕ СВЯЗАТЬСЯ */
+            .better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 15;
+                grid-row-start: 60;
+                grid-row-end: 73;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #telegram {
+                grid-column-start: 17;
+                grid-column-end: 40;
+                grid-row-start: 62;
+                grid-row-end: 64;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #instagram {
+                grid-column-start: 17;
+                grid-column-end: 40;
+                grid-row-start: 66;
+                grid-row-end: 68;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #wup {
+                grid-column-start: 17;
+                grid-column-end: 35;
+                grid-row-start: 70;
+                grid-row-end: 72;
+                overflow: hidden;
+            }
+            
+            #better_zapolni {
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 74;
+                grid-row-end: 80;
+                overflow: hidden;
+            }
+
+            .better_more {
+                grid-column-start: 12;
+                grid-column-end: 38;
+                grid-row-start: 76;
+                grid-row-end: 78;
+                opacity: 50%;
+                overflow: hidden;
+            }
+
+            /* KOMENT */
+            .koment_text {
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 74;
+                grid-row-end: 77;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .koment_zapolni {
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 79;
+                grid-row-end: 85;
+                overflow: hidden;
+            }
+            .koment_more {
+                grid-column-start: 62;
+                grid-column-end: 88;
+                grid-row-start: 81;
+                grid-row-end: 83;
+                overflow: hidden;
+                opacity: 50%;
+            }
+
+            .atom {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 87;
+                grid-row-end: 95;
+                overflow: hidden;
+            }
+
+            .close {
+                grid-column-start: 91;
+                grid-column-end: 95;
+                grid-row-start: 2;
+                grid-row-end: 5;
+                overflow: hidden;
+            }
+
+            input[type="radio"] {
+                border: 2px solid #999;
+                width: 100%;
+                height: 1.5em;
+                color:black;
+                margin: 1.5em;
+            } 
+        }
+
+        @media screen and (max-width: 600px),(max-device-width: 600px) {
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 8;
+                grid-column-end: 33;
+                grid-row-start: 10;
+                grid-row-end: 12;
+                overflow: hidden;                
+            }
+
+            #name_zapolni {
+                grid-column-start: 7;
+                grid-column-end: 35;
+                grid-row-start: 14;
+                grid-row-end: 18;
+                overflow: hidden;
+            }
+
+            .name_form {
+                grid-column-start: 8;
+                grid-column-end: 34;
+                grid-row-start: 15;
+                grid-row-end: 17;
+                transform:scale(0.9);
+                overflow: hidden; 
+                opacity:50%;
+                z-index:10;
+            }
+            /* EMAIL */
+            .email_text {
+                grid-column-start: 44;
+                grid-column-end: 59;
+                grid-row-start: 10;
+                grid-row-end: 12;
+                overflow: hidden;
+            }
+            
+            #email_zapolni {
+                grid-column-start: 39;
+                grid-column-end: 67;
+                grid-row-start: 14;
+                grid-row-end: 18;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 40;
+                grid-column-end: 67;
+                grid-row-start: 15;
+                grid-row-end: 17;
+                transform:scale(0.9);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ГОРОД */
+            .city_text {
+                grid-column-start: 67;
+                grid-column-end: 99;
+                grid-row-start: 10;
+                grid-row-end: 12;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #city_zapolni {
+                grid-column-start: 70;
+                grid-column-end: 98;
+                grid-row-start: 14;
+                grid-row-end: 18;
+                overflow: hidden;
+            }
+            .city_form {
+                grid-column-start: 70;
+                grid-column-end: 98;
+                grid-row-start: 15;
+                grid-row-end: 17;
+                transform:scale(0.9);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ОТПРАВКА */
+            .otpravka_text {
+                grid-column-start: 3;
+                grid-column-end: 52;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #pochta_rossii {
+                grid-column-start: 15;
+                grid-column-end: 50;
+                grid-row-start: 32;
+                grid-row-end: 34;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #sdek {
+                grid-column-start: 15;
+                grid-column-end: 27;
+                grid-row-start: 36;
+                grid-row-end: 38;
+                overflow: hidden;
+                z-index:2;   
+            }
+
+            #drugoe {
+                grid-column-start: 15;
+                grid-column-end: 40;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+            }
+            
+            .otpravka_form {
+                grid-column-start: 2;
+                grid-column-end: 13;
+                grid-row-start: 30;
+                grid-row-end: 45;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ОПЛАТА */
+            .payment_text {
+                grid-column-start: 58;
+                grid-column-end: 98;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.1);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #rub {
+                grid-column-start: 68;
+                grid-column-end: 78;
+                grid-row-start: 32;
+                grid-row-end: 34;
+                overflow: hidden;
+                z-index:2;
+                /* transform: scale(1.1);    */
+                
+            }
+
+            #usd {
+                grid-column-start: 68;
+                grid-column-end: 78;
+                grid-row-start: 36;
+                grid-row-end: 38;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #btc {
+                grid-column-start: 68;
+                grid-column-end: 78;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #eth {
+                grid-column-start: 68;
+                grid-column-end: 78;
+                grid-row-start: 44;
+                grid-row-end: 46;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usdt {
+                grid-column-start: 68;
+                grid-column-end: 80;
+                grid-row-start: 48;
+                grid-row-end: 50;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);    
+            }
+
+            .payment_form {
+                grid-column-start: 55;
+                grid-column-end: 66;
+                grid-row-start: 30;
+                grid-row-end: 60;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ЛУЧШЕ СВЯЗАТЬСЯ */
+            .better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 57;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 16;
+                grid-row-start: 57;
+                grid-row-end: 70;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #telegram {
+                grid-column-start: 17;
+                grid-column-end: 40;
+                grid-row-start: 59;
+                grid-row-end: 61;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #instagram {
+                grid-column-start: 17;
+                grid-column-end: 44;
+                grid-row-start: 63;
+                grid-row-end: 65;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #wup {
+                grid-column-start: 17;
+                grid-column-end: 40;
+                grid-row-start: 67;
+                grid-row-end: 69;
+                overflow: hidden;
+            }
+            
+            #better_zapolni {
+                grid-column-start: 10;
+                grid-column-end: 38;
+                grid-row-start: 71;
+                grid-row-end: 75;
+                overflow: hidden;
+            }
+
+            .better_more {
+                grid-column-start: 12;
+                grid-column-end: 36;
+                grid-row-start: 72;
+                grid-row-end: 74;
+                opacity: 50%;
+                overflow: hidden;
+            }
+
+            /* KOMENT */
+            .koment_text {
+                grid-column-start: 50;
+                grid-column-end: 96;
+                grid-row-start: 70;
+                grid-row-end: 72;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .koment_zapolni {
+                grid-column-start: 58;
+                grid-column-end: 94;
+                grid-row-start: 75;
+                grid-row-end: 79;
+                overflow: hidden;
+            }
+            .koment_more {
+                grid-column-start: 60;
+                grid-column-end: 92;
+                grid-row-start: 76;
+                grid-row-end: 78;
+                overflow: hidden;
+                opacity: 50%;
+            }
+
+            .atom {
+                grid-column-start: 10;
+                grid-column-end: 60;
+                grid-row-start: 87;
+                grid-row-end: 95;
+                overflow: hidden;
+            }
+
+            .close {
+                grid-column-start: 91;
+                grid-column-end: 96;
+                grid-row-start: 2;
+                grid-row-end: 5;
+                overflow: hidden;
+            }
+
+            input[type="radio"] {
+                border: 2px solid #999;
+                width: 100%;
+                height: 1em;
+                color:black;
+                margin: 1.1em;
+            } 
+        }
+
+        @media screen and (max-height: 450px),(max-device-height: 450px) {
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 5;
+                grid-column-end: 30;
+                grid-row-start: 6;
+                grid-row-end: 10;
+                overflow: hidden;                
+            }
+
+            #name_zapolni {
+                grid-column-start: 6;
+                grid-column-end: 29;
+                grid-row-start: 12;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .name_form {
+                grid-column-start: 7;
+                grid-column-end: 28;
+                grid-row-start: 13;
+                grid-row-end: 17;
+                overflow: hidden; 
+                opacity:50%;
+                z-index:10;
+            }
+            /* EMAIL */
+            .email_text {
+                grid-column-start: 44;
+                grid-column-end: 59;
+                grid-row-start: 7;
+                grid-row-end: 11;
+                overflow: hidden;
+            }
+            
+            #email_zapolni {
+                grid-column-start: 40;
+                grid-column-end: 63;
+                grid-row-start: 12;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 41;
+                grid-column-end: 62;
+                grid-row-start: 13;
+                grid-row-end: 17;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ГОРОД */
+            .city_text {
+                grid-column-start: 66;
+                grid-column-end: 98;
+                grid-row-start: 7;
+                grid-row-end: 11;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #city_zapolni {
+                grid-column-start: 70;
+                grid-column-end: 95;
+                grid-row-start: 12;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+            .city_form {
+                grid-column-start: 71;
+                grid-column-end: 94;
+                grid-row-start: 13;
+                grid-row-end: 17;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ОТПРАВКА */
+            .otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #pochta_rossii {
+                grid-column-start: 11;
+                grid-column-end: 33;
+                grid-row-start: 33;
+                grid-row-end: 36;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #sdek {
+                grid-column-start: 11;
+                grid-column-end: 18;
+                grid-row-start: 39;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;  
+            }
+
+            #drugoe {
+                grid-column-start: 11;
+                grid-column-end: 23;
+                grid-row-start: 45;
+                grid-row-end: 48;
+                overflow: hidden;
+                z-index:2;
+            }
+            
+            .otpravka_form {
+                grid-column-start: 5;
+                grid-column-end: 9;
+                grid-row-start: 30;
+                grid-row-end: 50;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ОПЛАТА */
+            .payment_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #rub {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 32;
+                grid-row-end: 35;
+                overflow: hidden;
+                z-index:2;
+                 
+                
+            }
+
+            #usd {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 37;
+                grid-row-end: 40;
+                overflow: hidden;
+                z-index:2;
+               
+                
+            }
+
+            #btc {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 42;
+                grid-row-end: 45;
+                overflow: hidden;
+                z-index:2;
+              
+                
+            }
+
+            #eth {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 47;
+                grid-row-end: 50;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #usdt {
+                grid-column-start: 67;
+                grid-column-end: 75;
+                grid-row-start: 53;
+                grid-row-end: 56;
+                overflow: hidden;
+                z-index:2;    
+            }
+
+            .payment_form {
+                grid-column-start: 59;
+                grid-column-end: 67;
+                grid-row-start: 28;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ЛУЧШЕ СВЯЗАТЬСЯ */
+            .better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 60;
+                grid-row-end: 65;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 15;
+                grid-row-start: 65;
+                grid-row-end: 83;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #telegram {
+                grid-column-start: 14;
+                grid-column-end: 35;
+                grid-row-start: 68;
+                grid-row-end: 72;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #instagram {
+                grid-column-start: 14;
+                grid-column-end: 35;
+                grid-row-start: 74;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #wup {
+                grid-column-start: 14;
+                grid-column-end: 30;
+                grid-row-start: 80;
+                grid-row-end: 84;
+                overflow: hidden;
+            }
+            
+            #better_zapolni {
+                grid-column-start: 8;
+                grid-column-end: 33;
+                grid-row-start: 87;
+                grid-row-end: 95;
+                overflow: hidden;
+            }
+
+            .better_more {
+                grid-column-start: 9;
+                grid-column-end: 32;
+                grid-row-start: 89;
+                grid-row-end: 93;
+                opacity: 50%;
+                overflow: hidden;
+            }
+
+            /* KOMENT */
+            .koment_text {
+                grid-column-start: 70;
+                grid-column-end: 95;
+                grid-row-start: 74;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .koment_zapolni {
+                grid-column-start: 71;
+                grid-column-end: 94;
+                grid-row-start: 80;
+                grid-row-end: 88;
+                overflow: hidden;
+            }
+            .koment_more {
+                grid-column-start: 72;
+                grid-column-end: 93;
+                grid-row-start: 82;
+                grid-row-end: 86;
+                overflow: hidden;
+                opacity: 50%;
+            }
+
+            .atom {
+                grid-column-start: 40;
+                grid-column-end: 65;
+                grid-row-start: 86;
+                grid-row-end: 97;
+                overflow: hidden;
+            }
+
+            .close {
+                grid-column-start: 95;
+                grid-column-end: 98;
+                grid-row-start: 2;
+                grid-row-end: 5;
+                overflow: hidden;
+            }
+
+            input[type="radio"] {
+                border: 2px solid #999;
+                width: 100%;
+                height: 0.9em;
+                color:black;
+                margin: 0.7em;
+            }   
+        }
 
     </style>
 
