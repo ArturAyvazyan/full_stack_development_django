@@ -296,6 +296,7 @@
             grid-row-start: 41;
             grid-row-end: 64;
             overflow: hidden;
+            z-index:3;
         }
 
         .second-buy-border {
@@ -359,6 +360,7 @@
             grid-column-end: 99;
             grid-row-start: 90;
             grid-row-end:100;
+            cursor:pointer;
         }
 
         @media screen and (max-width: 1200px), (max-device-width: 1200px) {
@@ -2247,8 +2249,2189 @@
             }
         }
         
+                /* ФОРМА */
+        
+                @font-face {
+            font-family: LSDFont;
+            
+            src: url("{% static '/homepage/super_font.ttf' %}");
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
+            overflow: hidden;
+            width: 100vw;
+            height: 150vh;
+            font-family: LSDFont;
+            color: #FDF2F2;
+        }
+
+        /* ИМЯ */
+        .name_text {
+            grid-column-start: 11;
+            grid-column-end: 25;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_name_text {
+            grid-column-start: 11;
+            grid-column-end: 25;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
+        }
+
+        #name_zapolni {
+            grid-column-start: 9;
+            grid-column-end: 27;
+            grid-row-start: 20;
+            grid-row-end: 26;
+            overflow: hidden;
+        }
+
+        .name_form {
+            grid-column-start: 10;
+            grid-column-end: 26;
+            grid-row-start: 22;
+            grid-row-end: 24;
+            overflow: hidden; 
+            opacity:50%;
+            z-index:10;
+        }
+        /* EMAIL */
+        .email_text {
+            grid-column-start: 46;
+            grid-column-end: 54;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+        }
+
+        #email_zapolni {
+            grid-column-start: 41;
+            grid-column-end: 59;
+            grid-row-start: 20;
+            grid-row-end: 26;
+            overflow: hidden;
+        }
+
+        .email_form {
+            grid-column-start: 42;
+            grid-column-end: 58;
+            grid-row-start: 22;
+            grid-row-end: 24;
+            overflow: hidden;
+            z-index:2;
+            opacity:50%;
+        }
+
+        /* ГОРОД */
+        .city_text {
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_city_text {
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        #city_zapolni {
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 20;
+            grid-row-end: 26;
+            overflow: hidden;
+        }
+        .city_form {
+            grid-column-start: 71;
+            grid-column-end: 89;
+            grid-row-start: 22;
+            grid-row-end: 24;
+            overflow: hidden;
+            z-index:2;
+            opacity:50%;
+        }
+
+        /* ОТПРАВКА */
+        .otpravka_text {
+            grid-column-start: 12;
+            grid-column-end: 37;
+            grid-row-start: 37;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_otpravka_text {
+            grid-column-start: 12;
+            grid-column-end: 37;
+            grid-row-start: 37;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        #pochta_rossii {
+            grid-column-start: 11;
+            grid-column-end: 25;
+            grid-row-start: 48;
+            grid-row-end: 50;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #sdek {
+            grid-column-start: 11;
+            grid-column-end: 15;
+            grid-row-start: 44;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+        }
+
+        #drugoe {
+            grid-column-start: 11;
+            grid-column-end: 18;
+            grid-row-start: 52;
+            grid-row-end: 54;
+            overflow: hidden;
+            z-index:2;
+        }
+        
+        #english_drugoe {
+            grid-column-start: 11;
+            grid-column-end: 18;
+            grid-row-start: 52;
+            grid-row-end: 54;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        .otpravka_form {
+            grid-column-start: 5;
+            grid-column-end: 10;
+            grid-row-start: 42;
+            grid-row-end: 62;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        /* ОПЛАТА */
+        .payment_text {
+            grid-column-start: 60;
+            grid-column-end: 87;
+            grid-row-start: 37;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_payment_text {
+            grid-column-start: 60;
+            grid-column-end: 87;
+            grid-row-start: 37;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        #rub {
+            grid-column-start: 60;
+            grid-column-end: 63;
+            grid-row-start: 44;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        #usd {
+            grid-column-start: 60;
+            grid-column-end: 63;
+            grid-row-start: 48;
+            grid-row-end: 50;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        #btc {
+            grid-column-start: 60;
+            grid-column-end: 63;
+            grid-row-start: 52;
+            grid-row-end: 54;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        #eth {
+            grid-column-start: 60;
+            grid-column-end: 63;
+            grid-row-start: 56;
+            grid-row-end: 58;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        #usdt {
+            grid-column-start: 60;
+            grid-column-end: 64;
+            grid-row-start: 60;
+            grid-row-end: 62;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);    
+        }
+
+        .payment_form {
+            grid-column-start: 55;
+            grid-column-end: 59;
+            grid-row-start: 42;
+            grid-row-end: 66;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        /* ЛУЧШЕ СВЯЗАТЬСЯ */
+        .better_text {
+            grid-column-start: 5;
+            grid-column-end: 45;
+            grid-row-start: 68;
+            grid-row-end: 71;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_better_text {
+            grid-column-start: 5;
+            grid-column-end: 40;
+            grid-row-start: 68;
+            grid-row-end: 71;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        .better_mob {
+            max-width: 1%;
+            max-height:1%;   
+            opacity:0;
+        }
+
+        .english_better_mob {
+            max-width: 1%;
+            max-height:1%;   
+            opacity:0;
+        }
+
+        .better_form {
+            grid-column-start: 5;
+            grid-column-end: 9;
+            grid-row-start: 72;
+            grid-row-end: 92;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #telegram {
+            grid-column-start: 9;
+            grid-column-end: 17;
+            grid-row-start: 74;
+            grid-row-end: 76;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #instagram {
+            grid-column-start: 9;
+            grid-column-end: 17;
+            grid-row-start: 78;
+            grid-row-end: 80;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #wup {
+            grid-column-start: 9;
+            grid-column-end: 17;
+            grid-row-start: 82;
+            grid-row-end: 84;
+            overflow: hidden;
+        }
+        
+        #better_zapolni {
+            grid-column-start: 5;
+            grid-column-end: 24;
+            grid-row-start: 86;
+            grid-row-end: 92;
+            overflow: hidden;
+        }
+
+        .better_more {
+            grid-column-start: 6;
+            grid-column-end: 23;
+            grid-row-start: 88;
+            grid-row-end: 90;
+            opacity: 50%;
+            overflow: hidden;
+        }
+
+        /* KOMENT */
+        .koment_text {
+            grid-column-start: 60;
+            grid-column-end: 75;
+            grid-row-start: 68;
+            grid-row-end: 71;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_koment_text {
+            grid-column-start: 60;
+            grid-column-end: 75;
+            grid-row-start: 68;
+            grid-row-end: 71;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        .koment_zapolni {
+            grid-column-start: 59;
+            grid-column-end: 76;
+            grid-row-start: 72;
+            grid-row-end: 78;
+            overflow: hidden;
+        }
+        .koment_more {
+            grid-column-start: 60;
+            grid-column-end: 75;
+            grid-row-start: 74;
+            grid-row-end: 76;
+            overflow: hidden;
+            opacity: 50%;
+        }
+
+        .atom {
+            grid-column-start: 75;
+            grid-column-end: 95;
+            grid-row-start: 87;
+            grid-row-end: 97;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_atom {
+            grid-column-start: 75;
+            grid-column-end: 95;
+            grid-row-start: 87;
+            grid-row-end: 97;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        .close {
+            grid-column-start: 94;
+            grid-column-end: 97;
+            grid-row-start: 2;
+            grid-row-end: 6;
+            overflow: hidden;
+        }
+
+        input[type="radio"] {
+            border: 2px solid #999;
+            width: 100%;
+            height: 2em;
+            color:black;
+            margin: 1.9em;
+        }
+        
+        @media screen and (max-width: 1200px),(max-device-width: 1200px) {
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 7;
+                grid-column-end: 30;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;  
+                z-index:1;              
+            }
+
+            .english_name_text {
+                grid-column-start: 7;
+                grid-column-end: 30;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;                
+                z-index:2;
+                opacity:0;
+            }
+            
+            #name_zapolni {
+                grid-column-start: 8;
+                grid-column-end: 29;
+                grid-row-start: 12;
+                grid-row-end: 17;
+                overflow: hidden;
+            }
+
+            .name_form {
+                grid-column-start: 9;
+                grid-column-end: 28;
+                grid-row-start: 13;
+                grid-row-end: 15;
+                transform:translateY(1vh);
+                overflow: hidden; 
+                opacity:50%;
+                z-index:10;
+            }
+            /* EMAIL */
+            .email_text {
+                grid-column-start: 44;
+                grid-column-end: 57;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;
+            }
+
+            #email_zapolni {
+                grid-column-start: 40;
+                grid-column-end: 61;
+                grid-row-start: 12;
+                grid-row-end: 17;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 41;
+                grid-column-end: 60;
+                grid-row-start: 13;
+                grid-row-end: 15;
+                transform:translateY(1vh);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ГОРОД */
+            .city_text {
+                grid-column-start: 66;
+                grid-column-end: 98;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;
+                z-index:1;
+            }
+
+            .english_city_text {
+                grid-column-start: 66;
+                grid-column-end: 98;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;
+                z-index:2;
+                opacity:0;
+            }
+
+            #city_zapolni {
+                grid-column-start: 69;
+                grid-column-end: 94;
+                grid-row-start: 12;
+                grid-row-end: 17;
+                overflow: hidden;
+            }
+            .city_form {
+                grid-column-start: 70;
+                grid-column-end: 93;
+                grid-row-start: 13;
+                grid-row-end: 15;
+                transform:translateY(1vh);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ОТПРАВКА */
+            .otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #pochta_rossii {
+                grid-column-start: 14;
+                grid-column-end: 36;
+                grid-row-start: 32;
+                grid-row-end: 34;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #sdek {
+                grid-column-start: 14;
+                grid-column-end: 21;
+                grid-row-start: 36;
+                grid-row-end: 38;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+            }
+
+            #drugoe {
+                grid-column-start: 14;
+                grid-column-end: 26;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+            }
+            
+            #english_drugoe {
+                grid-column-start: 14;
+                grid-column-end: 26;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .otpravka_form {
+                grid-column-start: 5;
+                grid-column-end: 13;
+                grid-row-start: 30;
+                grid-row-end: 45;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ОПЛАТА */
+            .payment_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_payment_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #rub {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 30;
+                grid-row-end: 32;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usd {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 34;
+                grid-row-end: 36;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #btc {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 38;
+                grid-row-end: 40;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #eth {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 42;
+                grid-row-end: 44;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usdt {
+                grid-column-start: 67;
+                grid-column-end: 75;
+                grid-row-start: 47;
+                grid-row-end: 49;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);    
+            }
+
+            .payment_form {
+                grid-column-start: 59;
+                grid-column-end: 67;
+                grid-row-start: 28;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ЛУЧШЕ СВЯЗАТЬСЯ */
+            .better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 59;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 59;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 15;
+                grid-row-start: 60;
+                grid-row-end: 73;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #telegram {
+                grid-column-start: 14;
+                grid-column-end: 32;
+                grid-row-start: 62;
+                grid-row-end: 64;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #instagram {
+                grid-column-start: 14;
+                grid-column-end: 32;
+                grid-row-start: 66;
+                grid-row-end: 68;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #wup {
+                grid-column-start: 14;
+                grid-column-end: 30;
+                grid-row-start: 70;
+                grid-row-end: 72;
+                overflow: hidden;
+            }
+            
+            #better_zapolni {
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 74;
+                grid-row-end: 80;
+                overflow: hidden;
+            }
+
+            .better_more {
+                grid-column-start: 12;
+                grid-column-end: 38;
+                grid-row-start: 76;
+                grid-row-end: 78;
+                opacity: 50%;
+                overflow: hidden;
+            }
+
+            /* KOMENT */
+            .koment_text {
+                grid-column-start: 62;
+                grid-column-end: 88;
+                grid-row-start: 74;
+                grid-row-end: 77;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .koment_zapolni {
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 79;
+                grid-row-end: 85;
+                overflow: hidden;
+            }
+            .koment_more {
+                grid-column-start: 62;
+                grid-column-end: 88;
+                grid-row-start: 81;
+                grid-row-end: 83;
+                overflow: hidden;
+                opacity: 50%;
+            }
+
+            .atom {
+                grid-column-start: 10;
+                grid-column-end: 43;
+                grid-row-start: 86;
+                grid-row-end: 95;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_atom {
+                grid-column-start: 10;
+                grid-column-end: 43;
+                grid-row-start: 86;
+                grid-row-end: 95;
+                overflow: hidden;
+                z-index: 1;
+                opacity:0;
+            }
+
+            .close {
+                grid-column-start: 95;
+                grid-column-end: 98;
+                grid-row-start: 2;
+                grid-row-end: 5;
+                overflow: hidden;
+            }
+
+            input[type="radio"] {
+                border: 2px solid #999;
+                width: 100%;
+                height: 1.2em;
+                color:black;
+                margin: 1.2em;
+            }   
+        }
+
+        @media screen and (max-width: 900px),(max-device-width: 900px) {
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 7;
+                grid-column-end: 32;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;                
+                z-index:2;
+            }
+
+            .english_name_text {
+                grid-column-start: 7;
+                grid-column-end: 32;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;                
+                z-index:1;
+                opacity:0;
+            }
+
+            #name_zapolni {
+                grid-column-start: 7;
+                grid-column-end: 30;
+                grid-row-start: 15;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .name_form {
+                grid-column-start: 8;
+                grid-column-end: 29;
+                grid-row-start: 16;
+                grid-row-end: 18;
+                transform:translateY(1vh);
+                overflow: hidden; 
+                opacity:50%;
+                z-index:10;
+            }
+            /* EMAIL */
+            .email_text {
+                grid-column-start: 43;
+                grid-column-end: 58;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;
+            }
+            
+            #email_zapolni {
+                grid-column-start: 39;
+                grid-column-end: 62;
+                grid-row-start: 15;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 40;
+                grid-column-end: 61;
+                grid-row-start: 16;
+                grid-row-end: 18;
+                transform:translateY(1vh);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ГОРОД */
+            .city_text {
+                grid-column-start: 65;
+                grid-column-end: 97;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_city_text {
+                grid-column-start: 65;
+                grid-column-end: 97;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #city_zapolni {
+                grid-column-start: 69;
+                grid-column-end: 94;
+                grid-row-start: 15;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+            .city_form {
+                grid-column-start: 70;
+                grid-column-end: 93;
+                grid-row-start: 16;
+                grid-row-end: 18;
+                transform:translateY(1vh);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ОТПРАВКА */
+            .otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #pochta_rossii {
+                grid-column-start: 16;
+                grid-column-end: 47;
+                grid-row-start: 32;
+                grid-row-end: 34;
+                overflow: hidden;
+                z-index:2;
+                /* transform: scale(1.1);    */
+            }
+
+            #sdek {
+                grid-column-start: 16;
+                grid-column-end: 28;
+                grid-row-start: 36;
+                grid-row-end: 38;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+            }
+
+            #drugoe {
+                grid-column-start: 16;
+                grid-column-end: 35;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #english_drugoe {
+                grid-column-start: 16;
+                grid-column-end: 35;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .otpravka_form {
+                grid-column-start: 5;
+                grid-column-end: 13;
+                grid-row-start: 30;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ОПЛАТА */
+            .payment_text {
+                grid-column-start: 60;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_payment_text {
+                grid-column-start: 60;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #rub {
+                grid-column-start: 64;
+                grid-column-end: 73;
+                grid-row-start: 32;
+                grid-row-end: 34;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usd {
+                grid-column-start: 64;
+                grid-column-end: 73;
+                grid-row-start: 36;
+                grid-row-end: 38;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #btc {
+                grid-column-start: 64;
+                grid-column-end: 73;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #eth {
+                grid-column-start: 64;
+                grid-column-end: 73;
+                grid-row-start: 44;
+                grid-row-end: 46;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usdt {
+                grid-column-start: 64;
+                grid-column-end: 75;
+                grid-row-start: 48;
+                grid-row-end: 50;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);    
+            }
+
+            .payment_form {
+                grid-column-start: 54;
+                grid-column-end: 62;
+                grid-row-start: 30;
+                grid-row-end: 60;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ЛУЧШЕ СВЯЗАТЬСЯ */
+            .better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 15;
+                grid-row-start: 60;
+                grid-row-end: 73;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #telegram {
+                grid-column-start: 17;
+                grid-column-end: 40;
+                grid-row-start: 62;
+                grid-row-end: 64;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #instagram {
+                grid-column-start: 17;
+                grid-column-end: 40;
+                grid-row-start: 66;
+                grid-row-end: 68;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #wup {
+                grid-column-start: 17;
+                grid-column-end: 35;
+                grid-row-start: 70;
+                grid-row-end: 72;
+                overflow: hidden;
+            }
+            
+            #better_zapolni {
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 74;
+                grid-row-end: 80;
+                overflow: hidden;
+            }
+
+            .better_more {
+                grid-column-start: 12;
+                grid-column-end: 38;
+                grid-row-start: 76;
+                grid-row-end: 78;
+                opacity: 50%;
+                overflow: hidden;
+            }
+
+            /* KOMENT */
+            .koment_text {
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 74;
+                grid-row-end: 77;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_koment_text {
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 74;
+                grid-row-end: 77;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .koment_zapolni {
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 79;
+                grid-row-end: 85;
+                overflow: hidden;
+            }
+            .koment_more {
+                grid-column-start: 62;
+                grid-column-end: 88;
+                grid-row-start: 81;
+                grid-row-end: 83;
+                overflow: hidden;
+                opacity: 50%;
+            }
+
+            .atom {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 87;
+                grid-row-end: 95;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_atom {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 87;
+                grid-row-end: 95;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .close {
+                grid-column-start: 91;
+                grid-column-end: 95;
+                grid-row-start: 2;
+                grid-row-end: 5;
+                overflow: hidden;
+            }
+
+            input[type="radio"] {
+                border: 2px solid #999;
+                width: 100%;
+                height: 1.5em;
+                color:black;
+                margin: 1.5em;
+            } 
+        }
+
+        @media screen and (max-width: 600px),(max-device-width: 600px) {
+            .content {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(300, 1fr);
+                overflow: hidden;
+                width: 100vw;
+                height: 300vh;
+                font-family: LSDFont;
+                color: #FDF2F2;
+            }
+            
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 20;
+                grid-row-end: 25;
+                overflow: hidden;     
+                z-index:2;           
+            }
+
+            .english_name_text {
+                grid-column-start:20;
+                grid-column-end: 80;
+                grid-row-start: 20;
+                grid-row-end: 25;
+                overflow: hidden; 
+                z-index:1;
+                opacity:0;               
+            }
+
+            #name_zapolni {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 28;
+                grid-row-end: 37;
+                overflow: hidden;
+            }
+
+            .name_form {
+                grid-column-start: 19;
+                grid-column-end: 81;
+                grid-row-start: 30;
+                grid-row-end: 33;
+                overflow: hidden; 
+                opacity:50%;
+                z-index:10;
+            }
+            /* EMAIL */
+            .email_text {
+                grid-column-start:28;
+                grid-column-end: 72;
+                grid-row-start: 40;
+                grid-row-end: 45;
+                overflow: hidden;
+            }
+            
+            #email_zapolni {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 48;
+                grid-row-end: 57;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 19;
+                grid-column-end: 81;
+                grid-row-start: 50;
+                grid-row-end: 53;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ГОРОД */
+            .city_text {
+                grid-column-start: 10;
+                grid-column-end: 90;
+                grid-row-start: 60;
+                grid-row-end: 65;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_city_text {
+                grid-column-start: 10;
+                grid-column-end: 90;
+                grid-row-start: 60;
+                grid-row-end: 65;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #city_zapolni {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 68;
+                grid-row-end: 77;
+                overflow: hidden;
+            }
+            .city_form {
+                grid-column-start: 19;
+                grid-column-end: 81;
+                grid-row-start: 70;
+                grid-row-end: 73;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ОТПРАВКА */
+            .otpravka_text {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 113;
+                grid-row-end: 116;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_otpravka_text {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 113;
+                grid-row-end: 116;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #pochta_rossii {
+                grid-column-start: 23;
+                grid-column-end: 73;
+                grid-row-start: 120;
+                grid-row-end: 123;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #sdek {
+                grid-column-start: 23;
+                grid-column-end: 40;
+                grid-row-start: 125;
+                grid-row-end: 128;
+                overflow: hidden;
+                z-index:2;   
+            }
+
+            #drugoe {
+                grid-column-start: 23;
+                grid-column-end: 48;
+                grid-row-start: 130;
+                grid-row-end: 133;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #english_drugoe {
+                grid-column-start: 23;
+                grid-column-end: 48;
+                grid-row-start: 130;
+                grid-row-end: 133;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .otpravka_form {
+                grid-column-start: 8;
+                grid-column-end: 19;
+                grid-row-start: 117;
+                grid-row-end: 133;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ОПЛАТА */
+            .payment_text {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 143;
+                grid-row-end: 146;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_payment_text {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 143;
+                grid-row-end: 146;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #rub {
+                grid-column-start: 23;
+                grid-column-end: 37;
+                grid-row-start: 150;
+                grid-row-end: 153;
+                overflow: hidden;
+                z-index:2;                
+            }
+
+            #usd {
+                grid-column-start: 23;
+                grid-column-end: 37;
+                grid-row-start: 156;
+                grid-row-end: 159;
+                overflow: hidden;
+                z-index:2;                
+            }
+
+            #btc {
+                grid-column-start: 23;
+                grid-column-end: 37;
+                grid-row-start: 161;
+                grid-row-end: 164;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #eth {
+                grid-column-start: 23;
+                grid-column-end: 37;
+                grid-row-start: 166;
+                grid-row-end: 169;
+                overflow: hidden;
+                z-index:2;                
+            }
+
+            #usdt {
+                grid-column-start: 23;
+                grid-column-end: 40;
+                grid-row-start: 171;
+                grid-row-end: 174;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .payment_form {
+                grid-column-start: 8;
+                grid-column-end: 19;
+                grid-row-start: 147;
+                grid-row-end: 174;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ЛУЧШЕ СВЯЗАТЬСЯ */
+            .better_text {
+                display:none;
+            }
+
+            .english_better_ {
+                display:none;
+            }
+
+            .better_mob {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 207;
+                grid-row-end: 219;
+                transform: scale(1.2);
+                overflow: hidden;
+                z-index:2;
+                max-width: 100%; 
+                max-height: 100%;
+                opacity:100%;
+            }
+
+            .english_better_mob {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 207;
+                grid-row-end: 219;
+                transform: scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                max-width:100%; 
+                max-height: 100%;
+                opacity:0;
+            }
+
+            .better_form {
+                grid-column-start: 15;
+                grid-column-end: 26;
+                grid-row-start: 222;
+                grid-row-end: 240;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #telegram {
+                grid-column-start: 29;
+                grid-column-end: 60;
+                grid-row-start: 225;
+                grid-row-end: 228;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #instagram {
+                grid-column-start: 29;
+                grid-column-end: 61;
+                grid-row-start: 230;
+                grid-row-end: 233;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #wup {
+                grid-column-start: 29;
+                grid-column-end: 60;
+                grid-row-start: 235;
+                grid-row-end: 238;
+                overflow: hidden;
+            }
+            
+            #better_zapolni {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 242;
+                grid-row-end: 251;
+                overflow: hidden;
+            }
+
+            .better_more {
+                grid-column-start: 19;
+                grid-column-end: 81;
+                grid-row-start: 245;
+                grid-row-end: 248;
+                opacity: 50%;
+                overflow: hidden;
+            }
+
+            /* KOMENT */
+            .koment_text {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 253;
+                grid-row-end: 258;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_koment_text {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 253;
+                grid-row-end: 258;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .koment_zapolni {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 262;
+                grid-row-end: 271;
+                overflow: hidden;
+            }
+            .koment_more {
+                grid-column-start: 19;
+                grid-column-end: 81;
+                grid-row-start: 265;
+                grid-row-end: 268;
+                overflow: hidden;
+                opacity: 50%;
+            }
+
+            .atom {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 284;
+                grid-row-end: 296;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_atom {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 284;
+                grid-row-end: 296;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .close {
+                grid-column-start: 85;
+                grid-column-end: 97;
+                grid-row-start: 2;
+                grid-row-end: 8;
+                overflow: hidden;
+            }
+
+            input[type="radio"] {
+                border: 2px solid #999;
+                width: 100%;
+                height: 3.2em;
+                color:black;
+                margin: 2em;
+            } 
+        }
+
+        @media screen and (max-height: 450px),(max-device-height: 450px) {
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 5;
+                grid-column-end: 30;
+                grid-row-start: 6;
+                grid-row-end: 10;
+                overflow: hidden;   
+                z-index:2;             
+            }
+
+            .english_name_text {
+                grid-column-start: 5;
+                grid-column-end: 30;
+                grid-row-start: 6;
+                grid-row-end: 10;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;                
+            }
+
+            #name_zapolni {
+                grid-column-start: 6;
+                grid-column-end: 29;
+                grid-row-start: 12;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .name_form {
+                grid-column-start: 7;
+                grid-column-end: 28;
+                grid-row-start: 13;
+                grid-row-end: 17;
+                overflow: hidden; 
+                opacity:50%;
+                z-index:10;
+            }
+            /* EMAIL */
+            .email_text {
+                grid-column-start: 44;
+                grid-column-end: 59;
+                grid-row-start: 7;
+                grid-row-end: 11;
+                overflow: hidden;
+            }
+            
+            #email_zapolni {
+                grid-column-start: 40;
+                grid-column-end: 63;
+                grid-row-start: 12;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 41;
+                grid-column-end: 62;
+                grid-row-start: 13;
+                grid-row-end: 17;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ГОРОД */
+            .city_text {
+                grid-column-start: 66;
+                grid-column-end: 98;
+                grid-row-start: 7;
+                grid-row-end: 11;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_city_text {
+                grid-column-start: 66;
+                grid-column-end: 98;
+                grid-row-start: 7;
+                grid-row-end: 11;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #city_zapolni {
+                grid-column-start: 70;
+                grid-column-end: 95;
+                grid-row-start: 12;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+            .city_form {
+                grid-column-start: 71;
+                grid-column-end: 94;
+                grid-row-start: 13;
+                grid-row-end: 17;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ОТПРАВКА */
+            .otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #pochta_rossii {
+                grid-column-start: 11;
+                grid-column-end: 33;
+                grid-row-start: 33;
+                grid-row-end: 36;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #sdek {
+                grid-column-start: 11;
+                grid-column-end: 18;
+                grid-row-start: 39;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;  
+            }
+
+            #drugoe {
+                grid-column-start: 11;
+                grid-column-end: 23;
+                grid-row-start: 45;
+                grid-row-end: 48;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #english_drugoe {
+                grid-column-start: 11;
+                grid-column-end: 23;
+                grid-row-start: 45;
+                grid-row-end: 48;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .otpravka_form {
+                grid-column-start: 5;
+                grid-column-end: 9;
+                grid-row-start: 30;
+                grid-row-end: 50;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ОПЛАТА */
+            .payment_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_payment_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #rub {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 32;
+                grid-row-end: 35;
+                overflow: hidden;
+                z-index:2;
+                 
+                
+            }
+
+            #usd {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 37;
+                grid-row-end: 40;
+                overflow: hidden;
+                z-index:2;
+               
+                
+            }
+
+            #btc {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 42;
+                grid-row-end: 45;
+                overflow: hidden;
+                z-index:2;
+              
+                
+            }
+
+            #eth {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 47;
+                grid-row-end: 50;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #usdt {
+                grid-column-start: 67;
+                grid-column-end: 75;
+                grid-row-start: 53;
+                grid-row-end: 56;
+                overflow: hidden;
+                z-index:2;    
+            }
+
+            .payment_form {
+                grid-column-start: 59;
+                grid-column-end: 67;
+                grid-row-start: 28;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ЛУЧШЕ СВЯЗАТЬСЯ */
+            .better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 60;
+                grid-row-end: 65;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 60;
+                grid-row-end: 65;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 15;
+                grid-row-start: 65;
+                grid-row-end: 83;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #telegram {
+                grid-column-start: 14;
+                grid-column-end: 35;
+                grid-row-start: 68;
+                grid-row-end: 72;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #instagram {
+                grid-column-start: 14;
+                grid-column-end: 35;
+                grid-row-start: 74;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #wup {
+                grid-column-start: 14;
+                grid-column-end: 30;
+                grid-row-start: 80;
+                grid-row-end: 84;
+                overflow: hidden;
+            }
+            
+            #better_zapolni {
+                grid-column-start: 8;
+                grid-column-end: 33;
+                grid-row-start: 87;
+                grid-row-end: 95;
+                overflow: hidden;
+            }
+
+            .better_more {
+                grid-column-start: 9;
+                grid-column-end: 32;
+                grid-row-start: 89;
+                grid-row-end: 93;
+                opacity: 50%;
+                overflow: hidden;
+            }
+
+            /* KOMENT */
+            .koment_text {
+                grid-column-start: 70;
+                grid-column-end: 95;
+                grid-row-start: 74;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_koment_text {
+                grid-column-start: 70;
+                grid-column-end: 95;
+                grid-row-start: 74;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .koment_zapolni {
+                grid-column-start: 71;
+                grid-column-end: 94;
+                grid-row-start: 80;
+                grid-row-end: 88;
+                overflow: hidden;
+            }
+            .koment_more {
+                grid-column-start: 72;
+                grid-column-end: 93;
+                grid-row-start: 82;
+                grid-row-end: 86;
+                overflow: hidden;
+                opacity: 50%;
+            }
+
+            .atom {
+                grid-column-start: 40;
+                grid-column-end: 65;
+                grid-row-start: 86;
+                grid-row-end: 97;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_atom {
+                grid-column-start: 40;
+                grid-column-end: 65;
+                grid-row-start: 86;
+                grid-row-end: 97;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .close {
+                grid-column-start: 95;
+                grid-column-end: 98;
+                grid-row-start: 2;
+                grid-row-end: 5;
+                overflow: hidden;
+            }
+
+            input[type="radio"] {
+                border: 2px solid #999;
+                width: 100%;
+                height: 0.9em;
+                color:black;
+                margin: 0.7em;
+            }   
+        }
 
     </style>
+
+    {% if zakis %}
+    <div >
+        <form class="content" action = '{% url "zakis" %}' method = "post">
+            {% csrf_token %}
+                
+                <!-- CLOSE -->
+                <div class = 'close'>
+                    <a href = '{% url "zakis" %}'>
+                        <img src = "/media/works/zakis/zayavka/x.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                    
+                    </a>
+                </div>                    
+            
+
+                <!-- ИМЯ -->
+                <div class = 'name_text'>
+                    <img src = '/media/works/zakis/zayavka/name.png' onmouseenter = ZayavkaName_SwitchToEnglish() onmouseleave = ZayavkaName_BackToRussian() style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
+                </div>  
+                
+                <div class = 'english_name_text'>
+                    <img src = '/media/works/zakis/zayavka/english/english_name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
+                </div>
+
+                <img id = 'name_zapolni' src = '/media/works/zakis/zayavka/zapolni.png' style = 'z-index:1; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                <div class = 'name_form'>
+                    <input type="text" name = 'zayavka-name' id = 'zayavka-name' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' required>
+                </div>
+
+                <!-- ПОЧТА -->
+                <div class = 'email_text'>
+                    <img src = '/media/works/zakis/zayavka/email.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                </div> 
+
+                <img id = 'email_zapolni' src = '/media/works/zakis/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                <div class="email_form">
+                    <input type="email" name = 'zayavka-email' id = 'zayavka-email' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                </div>
+                
+                <!-- ГОРОД -->
+                <div class = 'city_text'>
+                    <img src = '/media/works/zakis/zayavka/gorod.png' onmouseenter = ZayavkaCity_SwitchToEnglish() onmouseleave = ZayavkaCity_BackToRussian() style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                </div> 
+
+                <div class = 'english_city_text'>
+                    <img src = '/media/works/zakis/zayavka/english/english_gorod.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                </div> 
+
+                <img id = 'city_zapolni' src = '/media/works/zakis/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                <div class="city_form">    
+                    <input type="text" name = 'zayavka-city' id = 'zayavka-city' required style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                </div>
+
+                <!-- ОТПРАВКА -->
+                <div class = 'otpravka_text' onmouseenter = ZayavkaOtpravka_SwitchToEnglish() onmouseleave = ZayavkaOtpravka_BackToRussian()>
+                    <img src = '/media/works/zakis/zayavka/dostavka.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                </div> 
+
+                <div class = 'english_otpravka_text'>
+                    <img src = '/media/works/zakis/zayavka/english/english_dostavka.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                </div> 
+
+                <img id = 'pochta_rossii' src = '/media/works/zakis/zayavka/pr.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                <img id = 'sdek' src = '/media/works/zakis/zayavka/sdek.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                <img id = 'drugoe' src = '/media/works/zakis/zayavka/drug.png' onmouseenter = ZayavkaDrugoe_SwitchToEnglish() onmouseleave = ZayavkaDrugoe_BackToRussian()  style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                                               
+                <img id = 'english_drugoe' src = '/media/works/zakis/zayavka/english/english_drug.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                
+                <div class="otpravka_form" style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>    
+                    <p><input type="radio" name="otpravka" id="otpravka1" value = 'Почта России' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;' required>
+                    <input type="radio" name="otpravka" id="otpravka2" value = 'СДЭК' style = 'cursor: pointer;' >
+                    <input type="radio" name="otpravka" id="otpravka3" value = 'Другое' style = 'cursor: pointer;' onclick = words_appears.play()>
+                </div>
+
+                <!-- ОПЛАТА -->
+                <div class = 'payment_text' onmouseenter = ZayavkaPayment_SwitchToEnglish() onmouseleave = ZayavkaPayment_BackToRussian()>
+                    <img src = '/media/works/zakis/zayavka/oplata.png' style = 'max-width: 100%; max-height: 100%;'>
+                </div> 
+
+                <div class = 'english_payment_text'>
+                    <img src = '/media/works/zakis/zayavka/english/english_oplata.png' style = 'max-width: 100%; max-height: 100%;'>
+                </div>
+
+                <img id = 'rub' src = '/media/works/zakis/zayavka/money/rub.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                <img id = 'usd' src = '/media/works/zakis/zayavka/money/usd.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                <img id = 'btc' src = '/media/works/zakis/zayavka/money/btc.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                <img id = 'eth' src = '/media/works/zakis/zayavka/money/eth.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                <img id = 'usdt' src = '/media/works/zakis/zayavka/money/usdt.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                      
+            
+                <div class="payment_form">
+                    <p><input type="radio" name="payment" id="pay1" value = 'RUB' style = 'cursor: pointer' required>
+                    <input type="radio" name="payment" id="pay4" value = 'USD' style = 'cursor: pointer'> 
+                    <input type="radio" name="payment" id="pay2" value = 'BTC' style = 'cursor: pointer'>
+                    <input type="radio" name="payment" id="pay3" value = 'ETH' style = 'cursor: pointer'> 
+                    <input type="radio" name="payment" id="pay6" value = 'USDT' style = 'cursor: pointer'>
+                </div>
+                
+                <!-- ЛУЧШЕ СВЯЗАТЬСЯ -->
+                <div class = 'better_text' onmouseenter = ZayavkaBetter_SwitchToEnglish() onmouseleave = ZayavkaBetter_BackToRussian()>
+                    <img src = '/media/works/zakis/zayavka/better.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                </div>
+
+                <div class = 'english_better_text'>
+                    <img src = '/media/works/zakis/zayavka/english/english_better.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                </div>
+                
+                <div class = 'better_mob' onmouseenter = ZayavkaBetterMob_SwitchToEnglish() onmouseleave = ZayavkaBetterMob_BackToRussian()>
+                    <img src = '/media/works/zakis/zayavka/mobile/mob.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                </div>
+
+                <div class = 'english_better_mob'>
+                    <img src = '/media/works/zakis/zayavka/mobile/english_mob.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                </div>
+
+                <div class="better_form" style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>    
+                    <p><input type="radio" name="better" id="better1" value = 'TELEGRAM' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                    <input type="radio" name="better" id="better2" value = 'INSTAGRAM' style = 'cursor: pointer'>
+                    <input type="radio" name="better" id="better3" value = 'WHATS UP' style = 'cursor: pointer'>
+                </div>
+                <img id = 'telegram' src = '/media/works/zakis/zayavka/telegram.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                <img id = 'instagram' src = '/media/works/zakis/zayavka/instagram.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
+                <img id = 'wup' src = '/media/works/zakis/zayavka/wup.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>      
+
+                <img id = 'better_zapolni' src = '/media/works/zakis/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                <div class = 'better_more'>
+                    <input type="text" name = 'better_more' id = 'better_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                </div>
+
+                <!-- КОММЕНТАРИЙ -->
+                
+                <div class = 'koment_text' onmouseenter = ZayavkaKoment_SwitchToEnglish() onmouseleave = ZayavkaKoment_BackToRussian()>
+                    <img src = '/media/works/zakis/zayavka/koment.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                </div>
+
+                <div class = 'english_koment_text'>
+                    <img src = '/media/works/zakis/zayavka/english/english_koment.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                </div>
+
+                <div class = 'koment_zapolni'>
+                    <img src = '/media/works/zakis/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                </div>
+                <div class = 'koment_more'>
+                    <input type="text" name = 'koment_more' id = 'koment_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                </div>
+
+                <!-- ОТПРАВЛЯЙ -->
+                <div class="atom" onmouseenter = ZayavkaAtom_SwitchToEnglish() onmouseleave = ZayavkaAtom_BackToRussian()>
+                    <input type = 'image' type = 'submit' src = "/media/works/zakis/zayavka/atom.png" style = 'opacity:100%;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                </div>
+                
+                <div class="english_atom">
+                    <input type = 'image' type = 'submit' src = "/media/works/zakis/zayavka/english/english_atom.png" style = 'opacity:100%;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                </div>
+                
+        
+        </form>
+    </div>
+    {% else %}
 
     <div class="container">
         <div class="first_class">
@@ -2314,11 +4497,11 @@
             </div>
             
             <div class="arrow_left" style = 'position:relative; justify-content: center;'>
-                <img src = "/media/works/zakis/first_part/main_slideshow/elements/arrow_left.png" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
+                <img src = "/media/works/zakis/first_part/main_slideshow/elements/arrow_left.png" style = 'cursor:pointer;min-width:100%; min-height:100%;max-width:100%;max-height:100%;'  onclick="prev(), arrow_left.play()">
             </div>
 
             <div class="arrow_right" style = 'position:relative; justify-content: center;'>
-                <img src = "/media/works/zakis/first_part/main_slideshow/elements/arrow_right.png" style = 'min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
+                <img src = "/media/works/zakis/first_part/main_slideshow/elements/arrow_right.png" style = 'cursor:pointer;min-width:100%; min-height:100%;max-width:100%;max-height:100%;' onclick="next(), arrow_right.play();">
             </div>
 
             <div class="razmer-image">
@@ -2402,7 +4585,7 @@
             </div>   
             
             <div class="button-image">
-                <img src = "/media/works/zakis/second_part/buy_but/zakis-btn.png"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/zakis-btn.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
     
             <div class="text-buy-image">
@@ -2410,11 +4593,17 @@
             </div>
 
             <div class="zakis-buy-image">
-                <img src = "/media/works/zakis/second_part/buy_but/zakis_buy.png"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/second_part/buy_but/zakis_buy.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
-            <div class="first-buy-border" >
-                <img src = "/media/works/zakis/second_part/buy_but/green.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="first-buy-border" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian()>
+                <form action = '{% url "zakis" %}' method = "post">
+                   
+                    {% csrf_token %}
+                        <button style = 'cursor:pointer; opacity:0%'>
+                            <img src = "/media/works/zakis/second_part/buy_but/green.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                        </button>
+                </form>
             </div>
     
             <div class="second-buy-border">
@@ -2500,7 +4689,7 @@
                 </div>
 
                 <div class = 'tg'>
-                    <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' style = 'outline: none; color: inherit; text-decoration: none;'>
+                    <a href = 'https://t.me/margaritss' style = 'outline: none; color: inherit; text-decoration: none;'>
                         <img src = "/media/every_hidden_page/elements/th-new.png" id = 'tg'>
                     </a>
                 </div>
@@ -2519,6 +4708,7 @@
 
     </div>
     
+    {% endif %}
 
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -2924,6 +5114,296 @@
 
         var buy_appears = anime({
             targets:'.text-buy-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    // ЗАЯВКА
+
+    function ZayavkaName_SwitchToEnglish() {
+        var english_name_text_appears = anime({
+            targets:'.english_name_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_name_text = anime({
+            targets:'.name_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaName_BackToRussian() {
+        var disappear_english_name_text = anime({
+            targets:'.english_name_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var name_text_appears = anime({
+            targets:'.name_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaCity_SwitchToEnglish() {
+        var english_city_text_appears = anime({
+            targets:'.english_city_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_city_text = anime({
+            targets:'.city_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaCity_BackToRussian() {
+        var disappear_english_city_text = anime({
+            targets:'.english_city_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var city_text_appears = anime({
+            targets:'.city_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+    
+    function ZayavkaOtpravka_SwitchToEnglish() {
+        var english_otpravka_text_appears = anime({
+            targets:'.english_otpravka_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_otpravka_text = anime({
+            targets:'.otpravka_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaOtpravka_BackToRussian() {
+        var disappear_english_otpravka_text = anime({
+            targets:'.english_otpravka_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var otpravka_text_appears = anime({
+            targets:'.otpravka_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaDrugoe_SwitchToEnglish() {
+        var english_drugoe_appears = anime({
+            targets:'#english_drugoe',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_drugoe = anime({
+            targets:'#drugoe',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaDrugoe_BackToRussian() {
+        var disappear_english_drugoe= anime({
+            targets:'#english_drugoe',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var drugoe_appears = anime({
+            targets:'#drugoe',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaPayment_SwitchToEnglish() {
+        var english_payment_text_appears = anime({
+            targets:'.english_payment_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_payment_text = anime({
+            targets:'.payment_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaPayment_BackToRussian() {
+        var disappear_english_payment_text = anime({
+            targets:'.english_payment_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var payment_text_appears = anime({
+            targets:'.payment_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaBetter_SwitchToEnglish() {
+        var english_better_text_appears = anime({
+            targets:'.english_better_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_better_text = anime({
+            targets:'.better_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaBetter_BackToRussian() {
+        var disappear_english_better_text = anime({
+            targets:'.english_better_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var better_appears = anime({
+            targets:'.better_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaBetterMob_SwitchToEnglish() {
+        var english_better_mob_appears = anime({
+            targets:'.english_better_mob',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_better_mob = anime({
+            targets:'.better_mob',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaBetterMob_BackToRussian() {
+        var disappear_english_better_mob = anime({
+            targets:'.english_better_mob',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var better_mob_appears = anime({
+            targets:'.better_mob',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaKoment_SwitchToEnglish() {
+        var english_koment_text_appears = anime({
+            targets:'.english_koment_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_koment_text = anime({
+            targets:'.koment_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaKoment_BackToRussian() {
+        var disappear_english_koment_text = anime({
+            targets:'.english_koment_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var koment_text_appears = anime({
+            targets:'.koment_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaAtom_SwitchToEnglish() {
+        var english_atom_appears = anime({
+            targets:'.english_atom',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_atom = anime({
+            targets:'.atom',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaAtom_BackToRussian() {
+        var disappear_english_atom = anime({
+            targets:'.english_atom',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var atom_appears = anime({
+            targets:'.atom',
             opacity: 1,
             duration:9000,
             autoplay:true,

@@ -20,7 +20,32 @@ from glavnaya.models import Work
 #     })
 
 def home(request):
-    return render(request, 'home.html')
+    if request.method == 'POST':
+        what = 'send_message'
+
+        soobch_name = request.POST.get('name', False)
+        soobch_email = request.POST.get('email', False)
+        soobch_message = request.POST.get('soobch', False)
+        
+        message = f"""СООБЩЕНИЕ С ГЛАВНОЙ: {what}, 
+        ИМЯ: {soobch_name}, 
+        e-mail: {soobch_email}, 
+        СУТЬ: {soobch_message}, """
+
+        if soobch_name == False:
+            return render(request, 'home.html', {'send_message':what})
+        else:
+            send_mail (
+                what, #subject
+                message, #message
+                soobch_email, #from Email
+                ['archiforeverything@gmail.com'], #To Email
+                fail_silently=True,
+                )
+            return render(request, 'home.html')
+        
+    else:
+        return render(request, 'home.html')
 
 def who(request):
     if request.method == 'POST':    
@@ -135,41 +160,170 @@ def demo5(request):
 
 
 def golova(request):
-    Workas = Work.objects.all()
-    return render(request, 'works_desktop/golova.html', {
-        'Workas': Workas
-    })
+    if request.method == 'POST':
+            golova = 'ПУТЬ'
+            zayavka_name = request.POST.get('zayavka-name', False)
+            zayavka_email = request.POST.get('zayavka-email', False)
+            zayavka_city = request.POST.get('zayavka-city', False)
+            
+            otpravka = request.POST.get('otpravka')
+            
+            payment = request.POST.get('payment')
+            
+            better = request.POST.get('better', False)
+            better_more = request.POST.get('better_more', False)
+    
+            koment = request.POST.get('koment', False)
+
+            message = f"""Заявка на покупку работы: {golova},
+            ИМЯ: {zayavka_name}, 
+            e-mail: {zayavka_email}, 
+            Город: {zayavka_city}, 
+            Отправка через: {otpravka},
+            Оплата следующим способом: {payment},
+            Дополнительный способ связи: {better} : {better_more},
+            Комментарий к заказу: {koment}."""
+
+            
+            if zayavka_name == False:
+                return render(request, 'works_desktop/golova.html', {'golova':golova})
+            else:        
+                send_mail (
+                    golova, #subject
+                    message, #message
+                    zayavka_email, #from Email
+                    ['archiforeverything@gmail.com'], #To Email
+                    fail_silently=False,
+                    )
+                return render(request, 'home.html')
+    else:
+        return render(request, 'works_desktop/golova.html')
 
 def eye(request):
-    # Здесь выбрать конкретную работу и в темплейтах поменять Воркас
-    Workas = Work.objects.all()
-    return render(request, 'works_desktop/eye.html', {
-        'Workas': Workas
-    })
+    if request.method == 'POST':
+        eye = 'ГЛАЗ'
+        zayavka_name = request.POST.get('zayavka-name', False)
+        zayavka_email = request.POST.get('zayavka-email', False)
+        zayavka_city = request.POST.get('zayavka-city', False)
+        
+        otpravka = request.POST.get('otpravka')
+        
+        payment = request.POST.get('payment')
+        
+        better = request.POST.get('better', False)
+        better_more = request.POST.get('better_more', False)
+  
+        koment = request.POST.get('koment', False)
+
+        message = f"""Заявка на покупку работы: {eye},
+        ИМЯ: {zayavka_name}, 
+        e-mail: {zayavka_email}, 
+        Город: {zayavka_city}, 
+        Отправка через: {otpravka},
+        Оплата следующим способом: {payment},
+        Дополнительный способ связи: {better} : {better_more},
+        Комментарий к заказу: {koment}."""
+
+        
+        if zayavka_name == False:
+            return render(request, 'works_desktop/eye.html', {'eye':eye})
+        else:        
+            send_mail (
+                eye, #subject
+                message, #message
+                zayavka_email, #from Email
+                ['archiforeverything@gmail.com'], #To Email
+                fail_silently=False,
+                )
+            return render(request, 'home.html')
+    else:
+        return render(request, 'works_desktop/eye.html')
 
 def kosmos(request):
-    Workas = Work.objects.all()
-    return render(request, 'works_desktop/kosmos.html', {
-        'Workas': Workas
-    })
+    return render(request, 'works_desktop/kosmos.html')
 
 
 def zakis(request):
-    Workas = Work.objects.all()
-    return render(request, 'works_desktop/zakis.html', {
-        'Workas': Workas
-    })
+    if request.method == 'POST':
+        zakis = 'ЗАКИС'
+        zayavka_name = request.POST.get('zayavka-name', False)
+        zayavka_email = request.POST.get('zayavka-email', False)
+        zayavka_city = request.POST.get('zayavka-city', False)
+        
+        otpravka = request.POST.get('otpravka')
+        
+        payment = request.POST.get('payment')
+        
+        better = request.POST.get('better', False)
+        better_more = request.POST.get('better_more', False)
+  
+        koment = request.POST.get('koment', False)
+
+        message = f"""Заявка на покупку работы: {zakis},
+        ИМЯ: {zayavka_name}, 
+        e-mail: {zayavka_email}, 
+        Город: {zayavka_city}, 
+        Отправка через: {otpravka},
+        Оплата следующим способом: {payment},
+        Дополнительный способ связи: {better} : {better_more},
+        Комментарий к заказу: {koment}."""
+
+        
+        if zayavka_name == False:
+            return render(request, 'works_desktop/zakis.html', {'zakis':zakis})
+        else:        
+            send_mail (
+                zakis, #subject
+                message, #message
+                zayavka_email, #from Email
+                ['archiforeverything@gmail.com'], #To Email
+                fail_silently=False,
+            )
+            return render(request, 'home.html')
+    else:
+        return render(request, 'works_desktop/zakis.html')
 
 
 def maski(request):
-    Workas = Work.objects.all()
-    return render(request, 'works_desktop/maski.html', {
-        'Workas': Workas
-    })
+    if request.method == 'POST':
+        maski = 'МАСКИ'
+        zayavka_name = request.POST.get('zayavka-name', False)
+        zayavka_email = request.POST.get('zayavka-email', False)
+        zayavka_city = request.POST.get('zayavka-city', False)
+        
+        otpravka = request.POST.get('otpravka')
+        
+        payment = request.POST.get('payment')
+        
+        better = request.POST.get('better', False)
+        better_more = request.POST.get('better_more', False)
+  
+        koment = request.POST.get('koment', False)
+
+        message = f"""Заявка на покупку работы: {maski},
+        ИМЯ: {zayavka_name}, 
+        e-mail: {zayavka_email}, 
+        Город: {zayavka_city}, 
+        Отправка через: {otpravka},
+        Оплата следующим способом: {payment},
+        Дополнительный способ связи: {better} : {better_more},
+        Комментарий к заказу: {koment}."""
+
+        
+        if zayavka_name == False:
+            return render(request, 'works_desktop/maski.html', {'maski':maski})
+        else:        
+            send_mail (
+                maski, #subject
+                message, #message
+                zayavka_email, #from Email
+                ['archiforeverything@gmail.com'], #To Email
+                fail_silently=False,
+            )
+            return render(request, 'home.html')
+    else:
+        return render(request, 'works_desktop/maski.html')
 
 
 def vibe(request):
-    Workas = Work.objects.all()
-    return render(request, 'works_desktop/vibe.html', {
-        'Workas': Workas
-    })
+    return render(request, 'works_desktop/vibe.html')

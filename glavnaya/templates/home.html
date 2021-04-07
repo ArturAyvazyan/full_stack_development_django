@@ -843,7 +843,166 @@
             grid-column-end: 53;
             grid-row-start: 94;
             grid-row-end: 98;
+        } 
+
+
+        /* FORM STARTS HERE */
+        .invis {
+            display: inline-block;
+            grid-column-start: 68;
+            grid-column-end: 96;
+            grid-row-start: 45;
+            grid-row-end: 55;
+            z-index: 3;
+        }
+
+        .content {
+            background: url("{% static '/homepage/backs.png' %}");
+            background-size: cover;
+            display:grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
+            max-width: 100vw;
+            max-height: 100vh;
+            min-width: 100vw;
+            min-height: 100vh;
+        }
+
+        .close {
+            display: inline-block;
+            grid-column-start: 94;
+            grid-column-end: 99;
+            grid-row-start: 3;
+            grid-row-end: 10;
+            z-index: 3;
+        }
+
+        /* ИМЯ */
+        .name_text {
+            grid-column-start: 10;
+            grid-column-end: 25;
+            grid-row-start: 12;
+            grid-row-end: 17;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_name_text {
+            grid-column-start: 10;
+            grid-column-end: 25;
+            grid-row-start: 12;
+            grid-row-end: 17;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
+        }
+
+        #name_zapolni {
+            grid-column-start: 9;
+            grid-column-end: 27;
+            grid-row-start: 19;
+            grid-row-end: 30;
+            overflow: hidden;
+            z-index:1;
+        }
+
+        .name_form {
+            grid-column-start: 10;
+            grid-column-end: 26;
+            grid-row-start: 22;
+            grid-row-end: 26;
+            overflow: hidden; 
+            opacity:50%;
+            z-index:2;
+        }
+
+        
+         /* ГОРОД */
+         .email_text {
+            grid-column-start: 75;
+            grid-column-end: 85;
+            grid-row-start: 12;
+            grid-row-end: 17;
+            overflow: hidden;
+            z-index:1;
+        }
+
+        #email_zapolni {
+            grid-column-start: 70;
+            grid-column-end: 89;
+            grid-row-start: 19;
+            grid-row-end: 30;
+            overflow: hidden;
+        }
+        .email_form {
+            grid-column-start: 71;
+            grid-column-end: 88;
+            grid-row-start: 22;
+            grid-row-end: 26;
+            overflow: hidden;
+            z-index:2;
+            opacity:50%;
+        }
+
+        /* СООБЩЕНИЕ */
+        .soobch_text {
+            display: inline-block;
+            grid-column-start: 35;
+            grid-column-end: 65;
+            grid-row-start: 35;
+            grid-row-end: 44;
+            z-index: 2;
+        }
+
+        .english_soobch_text {
+            display: inline-block;
+            grid-column-start: 38;
+            grid-column-end: 62;
+            grid-row-start: 35;
+            grid-row-end: 43;
+            z-index: 1;
+            opacity:0;
+        }
+
+        #soobch_zapolni {
+            display: inline-block;
+            grid-column-start: 33;
+            grid-column-end: 67;
+            grid-row-start: 47;
+            grid-row-end: 71;
+            z-index: 3;
+        }
+
+        .soobch_form {
+            display: inline-block;
+            grid-column-start: 35;
+            grid-column-end: 65;
+            grid-row-start: 54;
+            grid-row-end: 63;
+            opacity:50%;
+            z-index: 3;
+        }
+
+        .atom {
+            display: inline-block;
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 75;
+            grid-row-end: 90;
+            z-index: 2;
+        }
+
+        .english_atom {
+            display: inline-block;
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 75;
+            grid-row-end: 90;
+            z-index: 1;
+            opacity:0;
         }   
+
+
 
         @media screen and (max-width: 1200px), (max-device-width: 1200px) {
             .message {
@@ -1078,7 +1237,67 @@
         <div id="fullpage">
             <div class="section fp-auto-height-responsive" id='first'>
                 <div class ='first_slide_wrapper'>
+                    {% if send_message %}
+                    <div>
+                        <form class="content" action = '{% url "home" %}' method = "post">
+                            {% csrf_token %}
+                                
+                                <!-- CLOSE -->
+                                <div class = 'close'>
+                                    <a href = '{% url "home" %}'>
+                                        <img src = "/media/homepage/zayavka/x.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                    
+                                    </a>
+                                </div>
+                
+                                <!-- ИМЯ -->
+                                <div class = 'name_text' onmouseenter = NameSwitchToEnglish() onmouseleave = NameBackToRussian()>
+                                    <img src = '/media/homepage/zayavka/name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
+                                </div>  
+                                
+                                <div class = 'english_name_text'>
+                                    <img src = '/media/homepage/zayavka/english_name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
+                                </div>
+                
+                                <img id = 'name_zapolni' src = '/media/homepage/zayavka/zapolni.png' style = 'z-index:1; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                                <div class = 'name_form'>
+                                    <input type="text" name = 'name' id = 'name' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' required>
+                                </div>
+                
+                                <!-- ПОЧТА -->
+                                <div class = 'email_text'>
+                                    <img src = '/media/homepage/zayavka/email.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                                </div> 
+                
+                                <img id = 'email_zapolni' src = '/media/homepage/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                                <div class="email_form">
+                                    <input type="email" name = 'email' id = 'email' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' >
+                                </div>
 
+                                <!-- СООБЩЕНИЕ -->
+                                <div class = 'soobch_text' onmouseenter = SoobchSwitchToEnglish() onmouseleave = SoobchBackToRussian()>
+                                    <img src = '/media/homepage/zayavka/message.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                                </div> 
+                                
+                                <div class = 'english_soobch_text'>
+                                    <img src = '/media/homepage/zayavka/english_message.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                                </div>
+
+                                <img id = 'soobch_zapolni' src = '/media/homepage/zayavka/zapolni-big.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                                <div class="soobch_form">
+                                    <input type="textarea" name = 'soobch' id = 'soobch' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' >
+                                </div>
+
+                                <!-- ОТПРАВЛЯЙ -->
+                                <div class="atom" onmouseenter = ZayavkaAtom_SwitchToEnglish() onmouseleave = ZayavkaAtom_BackToRussian()>
+                                    <input type = 'image' type = 'submit' src = "/media/homepage/zayavka/atom.png" style = 'opacity:100%;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                                </div>
+                                
+                                <div class="english_atom">
+                                    <input type = 'image' type = 'submit' src = "/media/homepage/zayavka/english_atom.png" style = 'opacity:100%;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                                </div>
+                        </form>
+                    </div>
+                    {% else %}
                     <div class="animated_logo">
 
                         <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 215 116">
@@ -1534,35 +1753,46 @@
 
             <div class="section fp-auto-height" id='third' >
                 <div class = 'third_slide_wrapper'>
-
                     <div class="third_words">
-                        Я - Маргаритка, сладкая пипка
+                        rick
+                        roll
+                    </div>
+
+                    <div class="invis" onmouseenter = messageSwitchToEnglish() onmouseleave = messageBackToRussian()>
+                        <form action = '{% url "home" %}' method = "post" style = 'min-width:100%; min-height:100%; opacity:0%'>
+                            {% csrf_token %}
+                                <button style = 'min-width:100%; min-height:20em; opacity:100%'>
+                                </button>
+                        </form>
                     </div>
 
                     <div class="message">
-                        <img src = "/media/homepage/third_slide/napeashi.png" onmouseenter = messageSwitchToEnglish() onmouseleave = messageBackToRussian() style = 'max-width:100%; max-height:100%;'>
+                        <img src = "/media/homepage/third_slide/napeashi.png" onmouseenter = messageSwitchToEnglish() onmouseleave = messageBackToRussian() style = 'cursor:pointer;max-width:100%; max-height:100%;'>
                     </div>
 
                     <div class="message-english">
-                        <img src = "/media/homepage/third_slide/window.png" style = 'max-width:100%; max-height:100%;'>
+                        <img src = "/media/homepage/third_slide/window.png" style = 'cursor:pointer;max-width:100%; max-height:100%;'>
                     </div>
-
 
                     <div class="home_logo">
-                        <img src = "/media/homepage/third_slide/home.png" onclick = words_appears.play() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;'>
+                        <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
+                            <img src = "/media/homepage/third_slide/home.png" onclick = words_appears.play() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;'>
+                        </a>
                     </div>
 
-                    <div class="tg_logo">
+                    <div class="tg_logo"  style = 'outline: none; color: inherit; text-decoration: none;'>
                         <a href = 'https://t.me/margaritss'><img src = "/media/homepage/third_slide/tg.png" style = 'max-width:100%; max-height:100%;'></a>
                     </div>
 
                     <div class="inst_logo">
                         <a href = 'https://instagram.com/delayu.svoye.delo'><img  src = "/media/homepage/third_slide/inst.png" style = 'max-width:100%; max-height:100%;'></a>
-                    </div>
+                    </div>                  
 
                 </div>
 
             </div>
+
+            {% endif %}
 
         </div>
 
@@ -1709,6 +1939,103 @@
                 })
             }
 
+            function NameSwitchToEnglish() {
+                var english_name_appears = anime({
+                    targets:'.english_name_text',
+                    opacity: 1,
+                    duration:9000,
+                    autoplay:true,
+                })   
+
+                var disappear_name = anime({
+                    targets:'.name_text',
+                    opacity: 0,
+                    duration:9000,
+                    autoplay:true,
+                })
+            }
+
+            function NameBackToRussian() {
+
+                var disappear_english_name = anime({
+                    targets:'.english_name_text',
+                    opacity: 0,
+                    duration:9000,
+                    autoplay:true,
+                })
+
+                var name_appears = anime({
+                    targets:'.name_text',
+                    opacity: 1,
+                    duration:9000,
+                    autoplay:true,
+                })
+            }
+            
+            function SoobchSwitchToEnglish() {
+                var english_soobch_appears = anime({
+                    targets:'.english_soobch_text',
+                    opacity: 1,
+                    duration:9000,
+                    autoplay:true,
+                })   
+
+                var disappear_soobch = anime({
+                    targets:'.soobch_text',
+                    opacity: 0,
+                    duration:9000,
+                    autoplay:true,
+                })
+            }
+
+            function SoobchBackToRussian() {
+
+                var disappear_english_soobch = anime({
+                    targets:'.english_soobch_text',
+                    opacity: 0,
+                    duration:9000,
+                    autoplay:true,
+                })
+
+                var soobch_appears = anime({
+                    targets:'.soobch_text',
+                    opacity: 1,
+                    duration:9000,
+                    autoplay:true,
+                })
+            }
+
+            function ZayavkaAtom_SwitchToEnglish() {
+                var english_atom_appears = anime({
+                    targets:'.english_atom',
+                    opacity: 1,
+                    duration:9000,
+                    autoplay:true,
+                })   
+
+                var disappear_atom = anime({
+                    targets:'.atom',
+                    opacity: 0,
+                    duration:9000,
+                    autoplay:true,
+                })
+            }
+
+            function ZayavkaAtom_BackToRussian() {
+                var disappear_english_atom = anime({
+                    targets:'.english_atom',
+                    opacity: 0,
+                    duration:9000,
+                    autoplay:true,
+                })
+
+                var atom_appears = anime({
+                    targets:'.atom',
+                    opacity: 1,
+                    duration:9000,
+                    autoplay:true,
+                })
+            }
         </script>
     </body>
 
