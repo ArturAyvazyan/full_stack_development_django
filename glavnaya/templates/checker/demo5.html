@@ -11,30 +11,196 @@
 
 <body>
     <style> 
+       .content {
+            display: grid;
+            grid-template-columns: repeat(50, 1fr);
+            grid-template-rows: repeat(50, 1fr);
+            overflow: hidden;
+            width: 50vw;
+            height: 150vh;
+            font-family: LSDFont;
+            color: #FDF2F2;
+        }
+
+        /* HIDE RADIO */
+        [type=radio] { 
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* IMAGE STYLES */
+        [type=radio] + img {
+            cursor: pointer;
+        }
+
+        /* CHECKED STYLES */
+        [type=radio]:checked + img {
+            outline: 3px solid #33FF00;
+        } 
+        /* .payment_form {
+            grid-column-start: 40;
+            grid-column-end: 60;
+            grid-row-start: 40;
+            grid-row-end: 60;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            overflow: hidden;
+            max-width: 10vw;
+            max-height: 10vh;
+            min-width: 10vw;
+            min-height: 10vh;
+        } */
+
+        /* .content {
+            grid-column-start: 65;
+            grid-column-end: 70;
+            grid-row-start: 30;
+            grid-row-end: 60;
+        } */
+
+        .payment_form {
+            grid-column-start:40;
+            grid-column-end: 60;
+            grid-row-start: 30;
+            grid-row-end: 60;
+            max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
+            /* overflow: hidden; */
+        }
+        /* #rub {
+             
+        }
+
+        .usda {
+            grid-column-start: 64;
+            grid-column-end: 73;
+            grid-row-start: 36;
+            grid-row-end: 38;
         
+            z-index:2;
+         
+        }
 
+        .btca {
+            grid-column-start: 64;
+            grid-column-end: 73;
+            grid-row-start: 40;
+            grid-row-end: 42;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);
+        }
+
+        .etha {
+            grid-column-start: 64;
+            grid-column-end: 73;
+            grid-row-start: 44;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);
+        }
+
+        .usdta{
+            grid-column-start: 64;
+            grid-column-end: 75;
+            grid-row-start: 48;
+            grid-row-end: 50;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1); 
+        } */
     </style>
-    {% if message_name %}
-    <center>
-        <h2> Thanks {{ message_name }}!</h2>
-        <p>We received your email and will respond shortly...</p>
+    <div class="wrapper">
+        <!-- <form class="content" action = '{% url "zakis" %}' method = "post">
+            <label>
+                <input type="radio" name="test" value="small" checked>
+                <img src="/media/works/maski/zayavka/pr.png">
+            </label>
+        
+            <label>
+                <input type="radio" name="test" value="big">
+                <img src="/media/works/maski/zayavka/sdek.png">
+            </label>
+        </form> -->
+        <form class="content" action = '{% url "zakis" %}' method = "post">
+            {% csrf_token %}        
+                <div class="payment_form">
+                    <div>    
+                        <label class = 'ruba'>
+                            <input type="radio" name="payment" id="pay1" value = 'RUB' style = 'cursor: pointer' required>
+                            <img id = 'rub' src = '/media/works/zakis/zayavka/money/rub.png' style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>  
+                        </label>
+                    </div>
 
-    </center>
-    {% else %}
+                    <div>
+                        <label class = 'usda'>
+                            <input type="radio" name="payment" id="pay4" value = 'USD' style = 'cursor: pointer'>
+                            <img id = 'usd' src = '/media/works/zakis/zayavka/money/usd.png' style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>                        
+                        </label>
+                    </div>
 
-    <form action = '{% url "demo5" %}' method = "post">
-        {% csrf_token %}
-        <div class="gol">
-            <h1>Введите name</h1>
-            <input type="text" name = 'message-name'>
-            <h1>Введите email</h1>
-            <input type="email" name = 'message-email'>
-            <h1>Введите message</h1>
-            <input type="textarea" name = 'message'>
-            <input type="submit">
-        </div>
-    </form>
-    {% endif %}
+                    <div>
+                    <label class = 'btca'>
+                        <input type="radio" name="payment" id="pay2" value = 'BTC' style = 'cursor: pointer'>
+                        <img id = 'btc' src = '/media/works/zakis/zayavka/money/btc.png' style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>                        
+                    </label>
+                    </div>
+
+                    <div>
+                    <label class = 'etha'>
+                        <input type="radio" name="payment" id="pay3" value = 'ETH' style = 'cursor: pointer'> 
+                        <img id = 'eth' src = '/media/works/zakis/zayavka/money/eth.png' style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>                                            
+                    </label>
+                    </div>
+                    
+                    <div>
+                        <label class = 'usdta'>
+                            <input type="radio" name="payment" id="pay6" value = 'USDT' style = 'cursor: pointer'>
+                            <img id = 'usdt' src = '/media/works/zakis/zayavka/money/usdt.png' style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>                      
+                        </label>
+                    </div>
+                </div>
+
+                       <!-- ОТПРАВКА -->
+<!--             
+                <img id = 'pochta_rossii' src = '/media/works/zakis/zayavka/pr.png' style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>                        
+                <img id = 'sdek' src = '/media/works/zakis/zayavka/sdek.png' style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>                        
+                <img id = 'drugoe' src = '/media/works/zakis/zayavka/drug.png' onmouseenter = ZayavkaDrugoe_SwitchToEnglish() onmouseleave = ZayavkaDrugoe_BackToRussian()  style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>                                               
+                <img id = 'english_drugoe' src = '/media/works/zakis/zayavka/english/english_drug.png' style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>                        
+                
+                <div class="otpravka_form" style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>    
+                    <p><input type="radio" name="otpravka" id="otpravka1" value = 'Почта России' style = 'cursor: pointer; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;' required>
+                        <input type="radio" name="otpravka" id="otpravka2" value = 'СДЭК' style = 'cursor: pointer;' >
+                        <input type="radio" name="otpravka" id="otpravka3" value = 'Другое' style = 'cursor: pointer;' onclick = words_appears.play()>
+                </div> -->
+
+    
+
+                              
+                
+                <!-- ЛУЧШЕ СВЯЗАТЬСЯ -->
+
+
+                <!-- <div class="better_form" style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>    
+                    <p><input type="radio" name="better" id="better1" value = 'TELEGRAM' style = 'cursor: pointer; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>
+                    <input type="radio" name="better" id="better2" value = 'INSTAGRAM' style = 'cursor: pointer'>
+                    <input type="radio" name="better" id="better3" value = 'WHATS UP' style = 'cursor: pointer'>
+                </div>
+                <img id = 'telegram' src = '/media/works/zakis/zayavka/telegram.png' style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>                        
+                <img id = 'instagram' src = '/media/works/zakis/zayavka/instagram.png' style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>                        
+                <img id = 'wup' src = '/media/works/zakis/zayavka/wup.png' style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>      
+
+                <img id = 'better_zapolni' src = '/media/works/zakis/zayavka/zapolni.png' style = 'max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;'>  
+                <div class = 'better_more'>
+                    <input type="text" name = 'better_more' id = 'better_more' style = 'min-width: 50%; min-height: 50%; max-width: 50%; max-height: 50%;'>
+                </div>         -->
+        </form>    
+    
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>

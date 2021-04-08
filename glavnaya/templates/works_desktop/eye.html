@@ -1834,6 +1834,22 @@
             src: url("{% static '/homepage/super_font.ttf' %}");
         }
 
+        [type=radio] { 
+            /* position: absolute; */
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        [type=radio] + img {
+            cursor: pointer;
+        }
+
+        [type=radio]:checked + img {
+            outline: 3px solid #FFFFFF;
+            padding:5px;
+        } 
+
         .content {
             display: grid;
             grid-template-columns: repeat(100, 1fr);
@@ -1967,48 +1983,23 @@
         }
 
         #pochta_rossii {
-            grid-column-start: 11;
-            grid-column-end: 25;
-            grid-row-start: 48;
-            grid-row-end: 50;
-            overflow: hidden;
-            z-index:2;
+            margin-top:2vh; margin-left: 2vw; max-width: 85%; max-height: 85%;min-width: 85%; min-height: 85%;
         }
 
         #sdek {
-            grid-column-start: 11;
-            grid-column-end: 15;
-            grid-row-start: 44;
-            grid-row-end: 46;
-            overflow: hidden;
-            z-index:2;
-            transform: scale(1.1);   
+            margin-left: 2vw; max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
         }
 
         #drugoe {
-            grid-column-start: 11;
-            grid-column-end: 18;
-            grid-row-start: 52;
-            grid-row-end: 54;
-            overflow: hidden;
-            z-index:2;
+            margin-left:2vw; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
         }
-        
-        #english_drugoe {
-            grid-column-start: 11;
-            grid-column-end: 18;
-            grid-row-start: 52;
-            grid-row-end: 54;
-            overflow: hidden;
-            z-index:1;
-            opacity:0;
-        }
+
 
         .otpravka_form {
             grid-column-start: 5;
-            grid-column-end: 10;
+            grid-column-end: 28;
             grid-row-start: 42;
-            grid-row-end: 62;
+            grid-row-end: 70;
             overflow: hidden;
             z-index:2;
         }
@@ -2034,64 +2025,30 @@
         }
 
         #rub {
-            grid-column-start: 60;
-            grid-column-end: 63;
-            grid-row-start: 44;
-            grid-row-end: 46;
-            overflow: hidden;
-            z-index:2;
-            transform: scale(1.1);   
-            
-        }
+                margin-top:1px; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
+            }
 
         #usd {
-            grid-column-start: 60;
-            grid-column-end: 63;
-            grid-row-start: 48;
-            grid-row-end: 50;
-            overflow: hidden;
-            z-index:2;
-            transform: scale(1.1);   
-            
+            max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
         }
-
-        #btc {
-            grid-column-start: 60;
-            grid-column-end: 63;
-            grid-row-start: 52;
-            grid-row-end: 54;
-            overflow: hidden;
-            z-index:2;
-            transform: scale(1.1);   
             
+        #btc {
+            max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
         }
 
         #eth {
-            grid-column-start: 60;
-            grid-column-end: 63;
-            grid-row-start: 56;
-            grid-row-end: 58;
-            overflow: hidden;
-            z-index:2;
-            transform: scale(1.1);   
-            
+            max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
         }
 
         #usdt {
-            grid-column-start: 60;
-            grid-column-end: 64;
-            grid-row-start: 60;
-            grid-row-end: 62;
-            overflow: hidden;
-            z-index:2;
-            transform: scale(1.1);    
+            max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%;
         }
-
+        
         .payment_form {
-            grid-column-start: 55;
-            grid-column-end: 59;
-            grid-row-start: 42;
-            grid-row-end: 66;
+            grid-column-start: 65;
+            grid-column-end: 75;
+            grid-row-start: 43;
+            grid-row-end: 70;
             overflow: hidden;
             z-index:2;
         }
@@ -2100,17 +2057,17 @@
         .better_text {
             grid-column-start: 5;
             grid-column-end: 45;
-            grid-row-start: 68;
-            grid-row-end: 71;
+            grid-row-start: 65;
+            grid-row-end: 68;
             overflow: hidden;
             z-index:2;
         }
 
         .english_better_text {
             grid-column-start: 5;
-            grid-column-end: 40;
-            grid-row-start: 68;
-            grid-row-end: 71;
+            grid-column-end: 35;
+            grid-row-start: 65;
+            grid-row-end: 68;
             overflow: hidden;
             z-index:1;
             opacity:0;
@@ -2128,39 +2085,25 @@
             opacity:0;
         }
 
-        .better_form {
-            grid-column-start: 5;
-            grid-column-end: 9;
-            grid-row-start: 72;
-            grid-row-end: 92;
-            overflow: hidden;
-            z-index:2;
-        }
-
         #telegram {
-            grid-column-start: 9;
-            grid-column-end: 17;
-            grid-row-start: 74;
-            grid-row-end: 76;
-            overflow: hidden;
-            z-index:2;
+            margin-left:1px;max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
         }
 
         #instagram {
-            grid-column-start: 9;
-            grid-column-end: 17;
-            grid-row-start: 78;
-            grid-row-end: 80;
-            overflow: hidden;
-            z-index:2;
+            margin-left:1px; max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
         }
 
         #wup {
-            grid-column-start: 9;
-            grid-column-end: 17;
-            grid-row-start: 82;
-            grid-row-end: 84;
+            margin-left:1px; max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
+        }
+
+        .better_form {
+            grid-column-start: 5;
+            grid-column-end: 50;
+            grid-row-start: 70;
+            grid-row-end: 92;
             overflow: hidden;
+            z-index:2;
         }
         
         #better_zapolni {
@@ -2169,6 +2112,7 @@
             grid-row-start: 86;
             grid-row-end: 92;
             overflow: hidden;
+            z-index: 4;
         }
 
         .better_more {
@@ -2178,18 +2122,20 @@
             grid-row-end: 90;
             opacity: 50%;
             overflow: hidden;
+            z-index: 5;
         }
 
         /* KOMENT */
         .koment_text {
             grid-column-start: 60;
-            grid-column-end: 75;
+            grid-column-end: 77;
             grid-row-start: 68;
             grid-row-end: 71;
             overflow: hidden;
             z-index:2;
         }
 
+        
         .english_koment_text {
             grid-column-start: 60;
             grid-column-end: 75;
@@ -2241,14 +2187,6 @@
             grid-row-start: 2;
             grid-row-end: 6;
             overflow: hidden;
-        }
-
-        input[type="radio"] {
-            border: 2px solid #999;
-            width: 100%;
-            height: 2em;
-            color:black;
-            margin: 1.9em;
         }
         
         @media screen and (max-width: 1200px),(max-device-width: 1200px) {
@@ -2379,48 +2317,22 @@
             }
 
             #pochta_rossii {
-                grid-column-start: 14;
-                grid-column-end: 36;
-                grid-row-start: 32;
-                grid-row-end: 34;
-                overflow: hidden;
-                z-index:2;
+                transform: translateY(-2.5em) scale(1.1); margin-left: 2vw; max-width: 80%; max-height: 80%; min-width: 80%; min-height: 80%;
             }
 
             #sdek {
-                grid-column-start: 14;
-                grid-column-end: 21;
-                grid-row-start: 36;
-                grid-row-end: 38;
-                overflow: hidden;
-                z-index:2;
-                transform: scale(1.1);   
+                transform: translateY(-4em) translateX(-2vw) scale(0.8); max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
             }
 
             #drugoe {
-                grid-column-start: 14;
-                grid-column-end: 26;
-                grid-row-start: 40;
-                grid-row-end: 42;
-                overflow: hidden;
-                z-index:2;
-            }
-            
-            #english_drugoe {
-                grid-column-start: 14;
-                grid-column-end: 26;
-                grid-row-start: 40;
-                grid-row-end: 42;
-                overflow: hidden;
-                z-index:1;
-                opacity:0;
+                transform: translateY(-5em) scale(1.1); margin-left:2vw; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
             }
 
             .otpravka_form {
                 grid-column-start: 5;
-                grid-column-end: 13;
-                grid-row-start: 30;
-                grid-row-end: 45;
+                grid-column-end: 28;
+                grid-row-start: 27;
+                grid-row-end: 52;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2448,64 +2360,31 @@
             }
 
             #rub {
-                grid-column-start: 67;
-                grid-column-end: 73;
-                grid-row-start: 30;
-                grid-row-end: 32;
-                overflow: hidden;
-                z-index:2;
-                transform: scale(1.1);   
-                
+                transform: translateY(0.5em) scale(1.3); margin-left:1em; margin-top:1em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
             }
 
             #usd {
-                grid-column-start: 67;
-                grid-column-end: 73;
-                grid-row-start: 34;
-                grid-row-end: 36;
-                overflow: hidden;
-                z-index:2;
-                transform: scale(1.1);   
-                
+                transform: translateY(-0.5em) scale(1.3); margin-left:1em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
             }
-
+            
             #btc {
-                grid-column-start: 67;
-                grid-column-end: 73;
-                grid-row-start: 38;
-                grid-row-end: 40;
-                overflow: hidden;
-                z-index:2;
-                transform: scale(1.1);   
-                
+                transform: translateY(-1.5em) scale(1.3); margin-left:1em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
             }
 
             #eth {
-                grid-column-start: 67;
-                grid-column-end: 73;
-                grid-row-start: 42;
-                grid-row-end: 44;
-                overflow: hidden;
-                z-index:2;
-                transform: scale(1.1);   
-                
+                transform: translateY(-2.5em) scale(1.3); margin-left:1em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
             }
 
             #usdt {
-                grid-column-start: 67;
-                grid-column-end: 75;
-                grid-row-start: 47;
-                grid-row-end: 49;
-                overflow: hidden;
-                z-index:2;
-                transform: scale(1.1);    
+                transform: translateY(-3.5em) scale(1.3); margin-left:1em; max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%;
             }
 
+
             .payment_form {
-                grid-column-start: 59;
-                grid-column-end: 67;
-                grid-row-start: 28;
-                grid-row-end: 58;
+                grid-column-start: 65;
+                grid-column-end: 73;
+                grid-row-start: 23;
+                grid-row-end: 57;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2530,54 +2409,40 @@
                 opacity:0;
             }
 
-            .better_form {
-                grid-column-start: 5;
-                grid-column-end: 15;
-                grid-row-start: 60;
-                grid-row-end: 73;
-                overflow: hidden;
-                z-index:2;
-            }
-
             #telegram {
-                grid-column-start: 14;
-                grid-column-end: 32;
-                grid-row-start: 62;
-                grid-row-end: 64;
-                overflow: hidden;
-                z-index:2;
+                transform: translateY(-1em); margin-left:1px;max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
             }
 
             #instagram {
-                grid-column-start: 14;
-                grid-column-end: 32;
-                grid-row-start: 66;
-                grid-row-end: 68;
+                transform: translateY(-2em); margin-left:1px; max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
+            }
+
+            #wup {
+                transform: translateY(-3em); margin-left:1px; max-width: 33%; max-height: 33%; min-width: 33%; min-height: 33%;            
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 50;
+                grid-row-start: 58;
+                grid-row-end: 77;
                 overflow: hidden;
                 z-index:2;
             }
 
-            #wup {
-                grid-column-start: 14;
-                grid-column-end: 30;
-                grid-row-start: 70;
-                grid-row-end: 72;
-                overflow: hidden;
-            }
-            
             #better_zapolni {
                 grid-column-start: 10;
                 grid-column-end: 40;
-                grid-row-start: 74;
-                grid-row-end: 80;
+                grid-row-start: 80;
+                grid-row-end: 86;
                 overflow: hidden;
             }
 
             .better_more {
                 grid-column-start: 12;
                 grid-column-end: 38;
-                grid-row-start: 76;
-                grid-row-end: 78;
+                grid-row-start: 82;
+                grid-row-end: 84;
                 opacity: 50%;
                 overflow: hidden;
             }
@@ -2590,6 +2455,15 @@
                 grid-row-end: 77;
                 overflow: hidden;
                 z-index:2;
+            }
+
+            .english_koment_text {
+                grid-column-start: 65;
+                grid-column-end: 85;
+                grid-row-start: 74;
+                grid-row-end: 77;
+                overflow: hidden;
+                z-index:1;
             }
 
             .koment_zapolni {
@@ -2609,19 +2483,19 @@
             }
 
             .atom {
-                grid-column-start: 10;
-                grid-column-end: 43;
-                grid-row-start: 86;
-                grid-row-end: 95;
+                grid-column-start: 20;
+                grid-column-end: 53;
+                grid-row-start: 90;
+                grid-row-end: 99;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_atom {
-                grid-column-start: 10;
-                grid-column-end: 43;
-                grid-row-start: 86;
-                grid-row-end: 95;
+                grid-column-start: 20;
+                grid-column-end: 53;
+                grid-row-start: 90;
+                grid-row-end: 99;
                 overflow: hidden;
                 z-index: 1;
                 opacity:0;
@@ -2647,8 +2521,8 @@
         @media screen and (max-width: 900px),(max-device-width: 900px) {
             /* ИМЯ */
             .name_text {
-                grid-column-start: 7;
-                grid-column-end: 32;
+                grid-column-start: 5;
+                grid-column-end: 34;
                 grid-row-start: 10;
                 grid-row-end: 13;
                 overflow: hidden;                
@@ -2656,8 +2530,8 @@
             }
 
             .english_name_text {
-                grid-column-start: 7;
-                grid-column-end: 32;
+                grid-column-start: 5;
+                grid-column-end: 34;
                 grid-row-start: 10;
                 grid-row-end: 13;
                 overflow: hidden;                
@@ -2685,7 +2559,7 @@
             }
             /* EMAIL */
             .email_text {
-                grid-column-start: 43;
+                grid-column-start: 41;
                 grid-column-end: 58;
                 grid-row-start: 10;
                 grid-row-end: 13;
@@ -2713,8 +2587,8 @@
 
             /* ГОРОД */
             .city_text {
-                grid-column-start: 65;
-                grid-column-end: 97;
+                grid-column-start: 64;
+                grid-column-end: 98;
                 grid-row-start: 10;
                 grid-row-end: 13;
                 overflow: hidden;
@@ -2752,7 +2626,7 @@
             /* ОТПРАВКА */
             .otpravka_text {
                 grid-column-start: 10;
-                grid-column-end: 45;
+                grid-column-end: 47;
                 grid-row-start: 25;
                 grid-row-end: 27;
                 transform:scale(1.2);
@@ -2762,7 +2636,7 @@
 
             .english_otpravka_text {
                 grid-column-start: 10;
-                grid-column-end: 45;
+                grid-column-end: 47;
                 grid-row-start: 25;
                 grid-row-end: 27;
                 transform:scale(1.2);
@@ -2772,49 +2646,22 @@
             }
 
             #pochta_rossii {
-                grid-column-start: 16;
-                grid-column-end: 47;
-                grid-row-start: 32;
-                grid-row-end: 34;
-                overflow: hidden;
-                z-index:2;
-                /* transform: scale(1.1);    */
+                transform: translateY(-2.5em) scale(1.1); margin-left: 2vw; max-width: 80%; max-height: 80%; min-width: 80%; min-height: 80%;
             }
 
             #sdek {
-                grid-column-start: 16;
-                grid-column-end: 28;
-                grid-row-start: 36;
-                grid-row-end: 38;
-                overflow: hidden;
-                z-index:2;
-                transform: scale(1.1);   
+                transform: translateY(-6em) translateX(-4vw) scale(0.7); max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
             }
 
             #drugoe {
-                grid-column-start: 16;
-                grid-column-end: 35;
-                grid-row-start: 40;
-                grid-row-end: 42;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            #english_drugoe {
-                grid-column-start: 16;
-                grid-column-end: 35;
-                grid-row-start: 40;
-                grid-row-end: 42;
-                overflow: hidden;
-                z-index:1;
-                opacity:0;
+                transform: translateY(-9em) translateX(-1.8vw) scale(1); max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
             }
 
             .otpravka_form {
                 grid-column-start: 5;
-                grid-column-end: 13;
-                grid-row-start: 30;
-                grid-row-end: 42;
+                grid-column-end: 45;
+                grid-row-start: 27;
+                grid-row-end: 52;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2842,64 +2689,30 @@
             }
 
             #rub {
-                grid-column-start: 64;
-                grid-column-end: 73;
-                grid-row-start: 32;
-                grid-row-end: 34;
-                overflow: hidden;
-                z-index:2;
-                transform: scale(1.1);   
-                
+                transform: translateY(1em); margin-left:1em; margin-top:1em; max-width: 70%; max-height: 70%;min-width: 70%; min-height: 70%;
             }
 
             #usd {
-                grid-column-start: 64;
-                grid-column-end: 73;
-                grid-row-start: 36;
-                grid-row-end: 38;
-                overflow: hidden;
-                z-index:2;
-                transform: scale(1.1);   
-                
+                transform: translateY(-1em); margin-left:1em; max-width: 70%; max-height: 70%;min-width: 70%; min-height: 70%;
             }
-
+            
             #btc {
-                grid-column-start: 64;
-                grid-column-end: 73;
-                grid-row-start: 40;
-                grid-row-end: 42;
-                overflow: hidden;
-                z-index:2;
-                transform: scale(1.1);   
-                
+                transform: translateY(-2em); margin-left:1em; max-width: 70%; max-height: 70%;min-width: 70%; min-height: 70%;
             }
 
             #eth {
-                grid-column-start: 64;
-                grid-column-end: 73;
-                grid-row-start: 44;
-                grid-row-end: 46;
-                overflow: hidden;
-                z-index:2;
-                transform: scale(1.1);   
-                
+                transform: translateY(-3em); margin-left:1em; max-width: 70%; max-height: 70%;min-width: 70%; min-height: 70%;
             }
 
             #usdt {
-                grid-column-start: 64;
-                grid-column-end: 75;
-                grid-row-start: 48;
-                grid-row-end: 50;
-                overflow: hidden;
-                z-index:2;
-                transform: scale(1.1);    
+                transform: translateY(-4em) scale(1.03); margin-left:1em; max-width: 75%; max-height: 75%;min-width: 75%; min-height: 75%;
             }
 
             .payment_form {
-                grid-column-start: 54;
-                grid-column-end: 62;
-                grid-row-start: 30;
-                grid-row-end: 60;
+                grid-column-start: 60;
+                grid-column-end: 75;
+                grid-row-start: 23;
+                grid-row-end: 57;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2907,7 +2720,7 @@
             /* ЛУЧШЕ СВЯЗАТЬСЯ */
             .better_text {
                 grid-column-start: 5;
-                grid-column-end: 90;
+                grid-column-end: 95;
                 grid-row-start: 55;
                 grid-row-end: 58;
                 overflow: hidden;
@@ -2924,52 +2737,38 @@
                 opacity:0;
             }
 
-            .better_form {
-                grid-column-start: 5;
-                grid-column-end: 15;
-                grid-row-start: 60;
-                grid-row-end: 73;
-                overflow: hidden;
-                z-index:2;
-            }
-
             #telegram {
-                grid-column-start: 17;
-                grid-column-end: 40;
-                grid-row-start: 62;
-                grid-row-end: 64;
-                overflow: hidden;
-                z-index:2;
+                transform: translateY(-1em) translateX(2em) scale(1.3); margin-left:1px;max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
             }
 
             #instagram {
-                grid-column-start: 17;
-                grid-column-end: 40;
-                grid-row-start: 66;
-                grid-row-end: 68;
-                overflow: hidden;
-                z-index:2;
+                transform: translateY(-2em) translateX(2em) scale(1.3); margin-left:1px; max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
             }
 
             #wup {
-                grid-column-start: 17;
-                grid-column-end: 35;
-                grid-row-start: 70;
-                grid-row-end: 72;
+                transform: translateY(-3em) translateX(2em) scale(1.3); margin-left:1px; max-width: 33%; max-height: 33%; min-width: 33%; min-height: 33%;            
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 60;
+                grid-row-start: 58;
+                grid-row-end: 77;
                 overflow: hidden;
+                z-index:2;
             }
             
             #better_zapolni {
-                grid-column-start: 10;
-                grid-column-end: 40;
+                grid-column-start: 5;
+                grid-column-end: 35;
                 grid-row-start: 74;
                 grid-row-end: 80;
                 overflow: hidden;
             }
 
             .better_more {
-                grid-column-start: 12;
-                grid-column-end: 38;
+                grid-column-start: 7;
+                grid-column-end: 33;
                 grid-row-start: 76;
                 grid-row-end: 78;
                 opacity: 50%;
@@ -2979,7 +2778,7 @@
             /* KOMENT */
             .koment_text {
                 grid-column-start: 60;
-                grid-column-end: 90;
+                grid-column-end: 95;
                 grid-row-start: 74;
                 grid-row-end: 77;
                 overflow: hidden;
@@ -2997,15 +2796,15 @@
             }
 
             .koment_zapolni {
-                grid-column-start: 60;
-                grid-column-end: 90;
+                grid-column-start: 63;
+                grid-column-end: 93;
                 grid-row-start: 79;
                 grid-row-end: 85;
                 overflow: hidden;
             }
             .koment_more {
-                grid-column-start: 62;
-                grid-column-end: 88;
+                grid-column-start: 65;
+                grid-column-end: 91;
                 grid-row-start: 81;
                 grid-row-end: 83;
                 overflow: hidden;
@@ -3182,47 +2981,22 @@
             }
 
             #pochta_rossii {
-                grid-column-start: 23;
-                grid-column-end: 73;
-                grid-row-start: 120;
-                grid-row-end: 123;
-                overflow: hidden;
-                z-index:2;
+                transform: translateY(-2em) scale(1.1); margin-left: 4vw; max-width: 80%; max-height: 80%; min-width: 80%; min-height: 80%;
             }
 
             #sdek {
-                grid-column-start: 23;
-                grid-column-end: 40;
-                grid-row-start: 125;
-                grid-row-end: 128;
-                overflow: hidden;
-                z-index:2;   
+                transform: translateY(-4.7em) translateX(-5.5vw) scale(0.7); margin-left: 4vw; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
             }
 
             #drugoe {
-                grid-column-start: 23;
-                grid-column-end: 48;
-                grid-row-start: 130;
-                grid-row-end: 133;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            #english_drugoe {
-                grid-column-start: 23;
-                grid-column-end: 48;
-                grid-row-start: 130;
-                grid-row-end: 133;
-                overflow: hidden;
-                z-index:1;
-                opacity:0;
+                transform: translateY(-7em) translateX(-2vw); margin-left:4vw; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
             }
 
             .otpravka_form {
-                grid-column-start: 8;
-                grid-column-end: 19;
-                grid-row-start: 117;
-                grid-row-end: 133;
+                grid-column-start: 5;
+                grid-column-end: 55;
+                grid-row-start: 118;
+                grid-row-end: 143;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3248,58 +3022,34 @@
             }
 
             #rub {
-                grid-column-start: 23;
-                grid-column-end: 37;
-                grid-row-start: 150;
-                grid-row-end: 153;
-                overflow: hidden;
-                z-index:2;                
+                transform: translateY(0.5em) translateX(-0.4em) scale(1.3); margin-left: 1.2em; margin-top:1em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
             }
 
             #usd {
-                grid-column-start: 23;
-                grid-column-end: 37;
-                grid-row-start: 156;
-                grid-row-end: 159;
-                overflow: hidden;
-                z-index:2;                
+                transform: translateY(-0.5em) translateX(-0.4em) scale(1.3); margin-left: 1.2em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
             }
-
+            
             #btc {
-                grid-column-start: 23;
-                grid-column-end: 37;
-                grid-row-start: 161;
-                grid-row-end: 164;
-                overflow: hidden;
-                z-index:2;
+                transform: translateY(-1.5em) translateX(-0.4em) scale(1.3); margin-left: 1.2em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
             }
 
             #eth {
-                grid-column-start: 23;
-                grid-column-end: 37;
-                grid-row-start: 166;
-                grid-row-end: 169;
-                overflow: hidden;
-                z-index:2;                
+                transform: translateY(-2.5em) translateX(-0.4em) scale(1.3); margin-left:1.2em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
             }
 
             #usdt {
-                grid-column-start: 23;
-                grid-column-end: 40;
-                grid-row-start: 171;
-                grid-row-end: 174;
+                transform: translateY(-3.5em) translateX(-0.4em) scale(1.3); margin-left:1.2em; max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%;
+            }
+
+            .payment_form {
+                grid-column-start: 5;
+                grid-column-end: 25;
+                grid-row-start: 142;
+                grid-row-end: 185;
                 overflow: hidden;
                 z-index:2;
             }
 
-            .payment_form {
-                grid-column-start: 8;
-                grid-column-end: 19;
-                grid-row-start: 147;
-                grid-row-end: 174;
-                overflow: hidden;
-                z-index:2;
-            }
 
             /* ЛУЧШЕ СВЯЗАТЬСЯ */
             .better_text {
@@ -3311,11 +3061,11 @@
             }
 
             .better_mob {
-                grid-column-start: 20;
-                grid-column-end: 80;
+                grid-column-start: 10;
+                grid-column-end: 90;
                 grid-row-start: 207;
-                grid-row-end: 219;
-                transform: scale(1.2);
+                grid-row-end: 220;
+                /* transform: scale(1.2); */
                 overflow: hidden;
                 z-index:2;
                 max-width: 100%; 
@@ -3324,11 +3074,11 @@
             }
 
             .english_better_mob {
-                grid-column-start: 20;
-                grid-column-end: 80;
+                grid-column-start: 15;
+                grid-column-end: 85;
                 grid-row-start: 207;
-                grid-row-end: 219;
-                transform: scale(1.2);
+                grid-row-end: 220;
+                /* transform: scale(1.2); */
                 overflow: hidden;
                 z-index:1;
                 max-width:100%; 
@@ -3336,39 +3086,25 @@
                 opacity:0;
             }
 
+            #telegram {
+                transform: translateY(-2em); margin-left:1px;max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
+            }
+
+            #instagram {
+                transform: translateY(-4em); margin-left:1px; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
+            }
+
+            #wup {
+                transform: translateY(-6em); margin-left:1px; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;            
+            }
+
             .better_form {
-                grid-column-start: 15;
-                grid-column-end: 26;
+                grid-column-start: 5;
+                grid-column-end: 70;
                 grid-row-start: 222;
                 grid-row-end: 240;
                 overflow: hidden;
                 z-index:2;
-            }
-
-            #telegram {
-                grid-column-start: 29;
-                grid-column-end: 60;
-                grid-row-start: 225;
-                grid-row-end: 228;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            #instagram {
-                grid-column-start: 29;
-                grid-column-end: 61;
-                grid-row-start: 230;
-                grid-row-end: 233;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            #wup {
-                grid-column-start: 29;
-                grid-column-end: 60;
-                grid-row-start: 235;
-                grid-row-end: 238;
-                overflow: hidden;
             }
             
             #better_zapolni {
@@ -3583,47 +3319,22 @@
             }
 
             #pochta_rossii {
-                grid-column-start: 11;
-                grid-column-end: 33;
-                grid-row-start: 33;
-                grid-row-end: 36;
-                overflow: hidden;
-                z-index:2;
+                margin-top: 5vh; margin-left: 1.3vw; max-width: 85%; max-height: 85%;min-width: 85%; min-height: 85%;
             }
 
             #sdek {
-                grid-column-start: 11;
-                grid-column-end: 18;
-                grid-row-start: 39;
-                grid-row-end: 42;
-                overflow: hidden;
-                z-index:2;  
+                transform: translateY(-4em) translateX(-1em); max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
             }
 
             #drugoe {
-                grid-column-start: 11;
-                grid-column-end: 23;
-                grid-row-start: 45;
-                grid-row-end: 48;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            #english_drugoe {
-                grid-column-start: 11;
-                grid-column-end: 23;
-                grid-row-start: 45;
-                grid-row-end: 48;
-                overflow: hidden;
-                z-index:1;
-                opacity:0;
+                transform: translateY(-5.5em) translateX(-1em); max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
             }
 
             .otpravka_form {
                 grid-column-start: 5;
-                grid-column-end: 9;
-                grid-row-start: 30;
-                grid-row-end: 50;
+                grid-column-end: 30;
+                grid-row-start: 35;
+                grid-row-end: 70;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3649,61 +3360,30 @@
             }
 
             #rub {
-                grid-column-start: 67;
-                grid-column-end: 73;
-                grid-row-start: 32;
-                grid-row-end: 35;
-                overflow: hidden;
-                z-index:2;
-                 
-                
+                margin-top:1px; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
             }
 
             #usd {
-                grid-column-start: 67;
-                grid-column-end: 73;
-                grid-row-start: 37;
-                grid-row-end: 40;
-                overflow: hidden;
-                z-index:2;
-               
-                
+                max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
             }
-
-            #btc {
-                grid-column-start: 67;
-                grid-column-end: 73;
-                grid-row-start: 42;
-                grid-row-end: 45;
-                overflow: hidden;
-                z-index:2;
-              
                 
+            #btc {
+                transform:translateY(-3em); max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
             }
 
             #eth {
-                grid-column-start: 67;
-                grid-column-end: 73;
-                grid-row-start: 47;
-                grid-row-end: 50;
-                overflow: hidden;
-                z-index:2;
+                transform:translateY(-5em); max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
             }
 
             #usdt {
-                grid-column-start: 67;
-                grid-column-end: 75;
-                grid-row-start: 53;
-                grid-row-end: 56;
-                overflow: hidden;
-                z-index:2;    
+                transform:translateY(-7em); max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%;
             }
-
+            
             .payment_form {
-                grid-column-start: 59;
-                grid-column-end: 67;
-                grid-row-start: 28;
-                grid-row-end: 58;
+                grid-column-start: 62;
+                grid-column-end: 72;
+                grid-row-start: 25;
+                grid-row-end: 60;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3728,39 +3408,25 @@
                 opacity:0;
             }
 
-            .better_form {
-                grid-column-start: 5;
-                grid-column-end: 15;
-                grid-row-start: 65;
-                grid-row-end: 83;
-                overflow: hidden;
-                z-index:2;
-            }
-
             #telegram {
-                grid-column-start: 14;
-                grid-column-end: 35;
-                grid-row-start: 68;
-                grid-row-end: 72;
-                overflow: hidden;
-                z-index:2;
+                margin-left:1px;max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
             }
 
             #instagram {
-                grid-column-start: 14;
-                grid-column-end: 35;
-                grid-row-start: 74;
-                grid-row-end: 78;
-                overflow: hidden;
-                z-index:2;
+                margin-left:1px; max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
             }
 
             #wup {
-                grid-column-start: 14;
-                grid-column-end: 30;
-                grid-row-start: 80;
-                grid-row-end: 84;
+                margin-left:1px; max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 50;
+                grid-row-start: 65;
+                grid-row-end: 87;
                 overflow: hidden;
+                z-index:2;
             }
             
             #better_zapolni {
@@ -3915,17 +3581,30 @@
                         <img src = '/media/works/eye/zayavka/english/english_dostavka.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
                     </div> 
 
-                    <img id = 'pochta_rossii' src = '/media/works/eye/zayavka/pr.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
-                    <img id = 'sdek' src = '/media/works/eye/zayavka/sdek.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
-                    <img id = 'drugoe' src = '/media/works/eye/zayavka/drug.png' onmouseenter = ZayavkaDrugoe_SwitchToEnglish() onmouseleave = ZayavkaDrugoe_BackToRussian()  style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                                               
-                    <img id = 'english_drugoe' src = '/media/works/eye/zayavka/english/english_drug.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
-                    
                     <div class="otpravka_form" style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>    
-                        <p><input type="radio" name="otpravka" id="otpravka1" value = 'Почта России' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;' required>
-                        <input type="radio" name="otpravka" id="otpravka2" value = 'СДЭК' style = 'cursor: pointer;' >
-                        <input type="radio" name="otpravka" id="otpravka3" value = 'Другое' style = 'cursor: pointer;' onclick = words_appears.play()>
+                        <div>
+                            <label>
+                                <input type="radio" name="otpravka" id="otpravka1" value = 'Почта России' style = 'cursor: pointer;' required>
+                                <img id = 'pochta_rossii' src = '/media/works/eye/zayavka/pr.png'>                        
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="otpravka" id="otpravka2" value = 'СДЭК' style = 'cursor: pointer;' >
+                                <img id = 'sdek' src = '/media/works/eye/zayavka/sdek.png'>                        
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="otpravka" id="otpravka3" value = 'Другое' style = 'cursor: pointer;' onclick = words_appears.play()>
+                                <img id = 'drugoe' src = '/media/works/eye/zayavka/drug.png'>                                               
+                            </label>
+                        </div>
                     </div>
 
+                    
                     <!-- ОПЛАТА -->
                     <div class = 'payment_text' onmouseenter = ZayavkaPayment_SwitchToEnglish() onmouseleave = ZayavkaPayment_BackToRussian()>
                         <img src = '/media/works/eye/zayavka/oplata.png' style = 'max-width: 100%; max-height: 100%;'>
@@ -3934,19 +3613,43 @@
                     <div class = 'english_payment_text'>
                         <img src = '/media/works/eye/zayavka/english/english_oplata.png' style = 'max-width: 100%; max-height: 100%;'>
                     </div>
-
-                    <img id = 'rub' src = '/media/works/eye/zayavka/money/rub.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
-                    <img id = 'usd' src = '/media/works/eye/zayavka/money/usd.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
-                    <img id = 'btc' src = '/media/works/eye/zayavka/money/btc.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
-                    <img id = 'eth' src = '/media/works/eye/zayavka/money/eth.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
-                    <img id = 'usdt' src = '/media/works/eye/zayavka/money/usdt.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                      
                 
                     <div class="payment_form">
-                        <p><input type="radio" name="payment" id="pay1" value = 'RUB' style = 'cursor: pointer' required>
-                        <input type="radio" name="payment" id="pay4" value = 'USD' style = 'cursor: pointer'> 
-                        <input type="radio" name="payment" id="pay2" value = 'BTC' style = 'cursor: pointer'>
-                        <input type="radio" name="payment" id="pay3" value = 'ETH' style = 'cursor: pointer'> 
-                        <input type="radio" name="payment" id="pay6" value = 'USDT' style = 'cursor: pointer'>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="payment" id="pay1" value = 'RUB' style = 'cursor: pointer' required>
+                                <img id = 'rub' src = '/media/works/eye/zayavka/money/rub.png'>                                                    
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="payment" id="pay4" value = 'USD' style = 'cursor: pointer'> 
+                                <img id = 'usd' src = '/media/works/eye/zayavka/money/usd.png'>                                                
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="payment" id="pay2" value = 'BTC' style = 'cursor: pointer'>
+                                <img id = 'btc' src = '/media/works/eye/zayavka/money/btc.png'>                        
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="payment" id="pay3" value = 'ETH' style = 'cursor: pointer'> 
+                                <img id = 'eth' src = '/media/works/eye/zayavka/money/eth.png'>                                                
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="payment" id="pay6" value = 'USDT' style = 'cursor: pointer'>
+                                <img id = 'usdt' src = '/media/works/eye/zayavka/money/usdt.png'>                                                  
+                            </label>
+                        </div>
                     </div>
                     
                     <!-- ЛУЧШЕ СВЯЗАТЬСЯ -->
@@ -3967,13 +3670,28 @@
                     </div>
 
                     <div class="better_form" style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>    
-                        <p><input type="radio" name="better" id="better1" value = 'TELEGRAM' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
-                        <input type="radio" name="better" id="better2" value = 'INSTAGRAM' style = 'cursor: pointer'>
-                        <input type="radio" name="better" id="better3" value = 'WHATS UP' style = 'cursor: pointer'>
+                        <div>
+                            <label>
+                                <input type="radio" name="better" id="better1" value = 'TELEGRAM' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                                <img id = 'telegram' src = '/media/works/eye/zayavka/telegram.png'>                                                    
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="better" id="better2" value = 'INSTAGRAM' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                                <img id = 'instagram' src = '/media/works/eye/zayavka/instagram.png'>                                                
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="better" id="better3" value = 'WHATS UP' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                                <img id = 'wup' src = '/media/works/eye/zayavka/wup.png'>                                      
+                            </label>
+                        </div>
+
                     </div>
-                    <img id = 'telegram' src = '/media/works/eye/zayavka/telegram.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
-                    <img id = 'instagram' src = '/media/works/eye/zayavka/instagram.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                        
-                    <img id = 'wup' src = '/media/works/eye/zayavka/wup.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>      
 
                     <img id = 'better_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
                     <div class = 'better_more'>

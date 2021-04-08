@@ -2,8 +2,9 @@
 <html lang="en" class="no-js">
 
 <head>
-    <meta charset="UTF-8" content="width=device-width, user-scalable=no"/>
-    <title>ЗАЯВКА</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>НУ ЧТО ПОЛЕТЕЛИ</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> 
 
 </head>
@@ -18,124 +19,4302 @@
             height: 100%;
             margin: 0px; /* убирает скролл */
             overflow-x: hidden;
-            background: url("{% static '/homepage/backs.png' %}");
+            background: url("/media/works/eye/background.png");
             background-size: cover;
         }
-        #zayavka-name {
-            border-radius: 25px;
-            border: 2px solid black;
-            padding: 20px; 
-            width: 200px;
-            height: 15px;    
-        }    
+        
+        .container {
+            display:grid;
+            grid-template-columns: 35fr 65fr;
+            grid-template-rows:100;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .first_class {
+            display: grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
+            overflow: hidden;
+        }
 
-        #zayavka-email {
-            border-radius: 25px;
-            border: 2px solid black;
-            padding: 20px; 
-            width: 200px;
-            height: 15px;    
+        .razmer-image {
+            grid-column-start: 8;
+            grid-column-end: 40;
+            grid-row-start: 10;
+            grid-row-end: 16;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .razmer-english-image {
+            grid-column-start: 8;
+            grid-column-end: 38;
+            grid-row-start: 10;
+            grid-row-end: 15;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
+        }
+
+        .cifri-image{
+            grid-column-start: 18;
+            grid-column-end: 44;
+            grid-row-start: 16;
+            grid-row-end: 22;
+            overflow: hidden;
+        }
+
+        .materials-image {
+            grid-column-start: 8;
+            grid-column-end: 52;
+            grid-row-start: 30;
+            grid-row-end: 36;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .materials-english-image {
+            grid-column-start: 8;
+            grid-column-end: 52;
+            grid-row-start: 30;
+            grid-row-end: 36;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
+        }
+
+        .farfor-image {
+            grid-column-start: 18;
+            grid-column-end: 40;
+            grid-row-start: 36;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .farfor-english-image {
+            grid-column-start: 18;
+            grid-column-end: 40;
+            grid-row-start: 36;
+            grid-row-end: 39;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
+        }
+
+        .akril-image {
+            grid-column-start: 18;
+            grid-column-end: 72;
+            grid-row-start: 42;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index:2;
         }   
 
-        #zayavka-city {
-            border-radius: 25px;
-            border: 2px solid black;
-            padding: 20px; 
-            width: 200px;
-            height: 15px;    
+        .akril-english-image {
+            grid-column-start: 18;
+            grid-column-end: 72;
+            grid-row-start: 42;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index:1;
+            opacity:0
         }
 
-        #otpravka1 {
+        .cena-image {
+            grid-column-start: 8;
+            grid-column-end: 40;
+            grid-row-start: 51;
+            grid-row-end: 57;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .cena-english-image {
+            grid-column-start: 8;
+            grid-column-end:35;
+            grid-row-start: 51;
+            grid-row-end: 57;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        .price-image {
+            grid-column-start: 18;
+            grid-column-end: 35;
+            grid-row-start: 58;
+            grid-row-end: 63;
+            overflow: hidden;
+        }
+
+        .button-image {
+            grid-column-start: 26;
+            grid-column-end: 84;
+            grid-row-start: 74;
+            grid-row-end: 96;
+            overflow: hidden;
+        }
+
+        .text-buy-image {
+            grid-column-start: 40;
+            grid-column-end: 72;
+            grid-row-start: 82;
+            grid-row-end: 90;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .glaz-buy-image {
+            grid-column-start: 44;
+            grid-column-end: 70;
+            grid-row-start: 82;
+            grid-row-end: 88;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .first-buy-border {
+            grid-column-start: 26;
+            grid-column-end: 84;
+            grid-row-start: 70;
+            grid-row-end: 96;
+            overflow: hidden;
+            z-index:10;
+        }
+
+        .second-buy-border {
+            grid-column-start: 28;
+            grid-column-end: 86;
+            grid-row-start: 68;
+            grid-row-end: 94;
+            overflow: hidden;
+        }
+        
+        .third-buy-border {
+            grid-column-start: 32;
+            grid-column-end: 90;
+            grid-row-start: 74;
+            grid-row-end: 100;
+            overflow: hidden;
+        }
+
+/*  */
+/*  */
+/*  */
+        .second_class {
+            display: grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
+            overflow: hidden;
+        }
+
+        .nazvanie {
+            grid-column-start: 75;
+            grid-column-end: 95;
+            grid-row-start: 4;
+            grid-row-end: 20;
+            overflow: hidden;
+        }
+
+        .borders {
+            grid-column-start: 3;
+            grid-column-end: 90;
+            grid-row-start: 16;
+            grid-row-end: 95;
+            overflow: hidden;
+    
+        }
+
+        .image_slider {
+            grid-column-start: 12;
+            grid-column-end: 85;
+            grid-row-start: 18;
+            grid-row-end: 81;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .arrow_left { 
+            grid-column-start: 8;
+            grid-column-end:12;
+            grid-row-start:51;
+            grid-row-end:60;
+        }
+
+        .arrow_right { 
+            grid-column-start: 84;
+            grid-column-end: 88;
+            grid-row-start:51;
+            grid-row-end:60;
+        }
+
+        .logotip {
+            grid-column-start: 90;
+            grid-column-end: 100;
+            grid-row-start: 89;
+            grid-row-end:99;
+        }
+
+        @media screen and (max-width: 1200px),(max-device-width: 1200px) {
+            html,
+            body {
+                position:static;
+                width: 100%;
+                height: 100%;
+                margin: 0px; /* убирает скролл */
+                overflow-x: hidden;
+                background: url("/media/works/eye/background.png");
+                background-size: cover;
+            }
+            
+            .container {
+                display:grid;
+                grid-template-columns: 35fr 65fr;
+                grid-template-rows:100;
+                width: 100vw;
+                height: 100vh;
+            }
+            
+            .first_class {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(100, 1fr);
+                overflow: hidden;
+            }
+
+            .razmer-image {
+                grid-column-start: 8;
+                grid-column-end: 50;
+                grid-row-start: 10;
+                grid-row-end: 17;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 9;
+                grid-column-end: 45;
+                grid-row-start: 10;
+                grid-row-end: 16;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 18;
+                grid-column-end: 55;
+                grid-row-start: 16;
+                grid-row-end: 23;
+                overflow: hidden;
+            }
+
+            .materials-image {
+                grid-column-start: 8;
+                grid-column-end: 75;
+                grid-row-start: 30;
+                grid-row-end: 37;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .materials-english-image {
+                grid-column-start: 8;
+                grid-column-end: 75;
+                grid-row-start: 30;
+                grid-row-end: 37;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 18;
+                grid-column-end: 55;
+                grid-row-start: 38;
+                grid-row-end: 43;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .farfor-english-image {
+                grid-column-start: 18;
+                grid-column-end: 70;
+                grid-row-start: 38;
+                grid-row-end: 43;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril-image {
+                grid-column-start: 10;
+                grid-column-end: 85;
+                grid-row-start: 44;
+                grid-row-end: 49;
+                overflow: hidden;
+                z-index:2;
+            }   
+
+            .akril-english-image {
+                grid-column-start: 10;
+                grid-column-end: 90;
+                grid-row-start: 44;
+                grid-row-end: 48;
+                overflow: hidden;
+                z-index:1;
+                opacity:0
+            }
+
+            .cena-image {
+                grid-column-start: 8;
+                grid-column-end: 40;
+                grid-row-start: 52;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 8;
+                grid-column-end: 40;
+                grid-row-start: 52;
+                grid-row-end: 57;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .price-image {
+                grid-column-start: 18;
+                grid-column-end: 44;
+                grid-row-start: 58;
+                grid-row-end: 63;
+                overflow: hidden;
+            }
+
+            .button-image {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 74;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 35;
+                grid-column-end: 66;
+                grid-row-start: 79;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .glaz-buy-image {
+                grid-column-start: 35;
+                grid-column-end: 66;
+                grid-row-start: 79;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 71;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .second-buy-border {
+                grid-column-start: 17;
+                grid-column-end: 77;
+                grid-row-start: 74;
+                grid-row-end: 93;
+                overflow: hidden;
+            }
+            
+            .third-buy-border {
+                grid-column-start: 24;
+                grid-column-end: 84;
+                grid-row-start: 69;
+                grid-row-end: 88;
+                overflow: hidden;
+            }
+
+    /*  */
+    /*  */
+    /*  */
+            .second_class {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(100, 1fr);
+                overflow: hidden;
+            }
+
+            .nazvanie {
+                grid-column-start: 75;
+                grid-column-end: 95;
+                grid-row-start: 4;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .borders {
+                grid-column-start: 3;
+                grid-column-end: 90;
+                grid-row-start: 16;
+                grid-row-end: 95;
+                overflow: hidden;
+        
+            }
+
+            .image_slider {
+                grid-column-start: 12;
+                grid-column-end: 85;
+                grid-row-start: 18;
+                grid-row-end: 81;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .arrow_left { 
+                grid-column-start: 8;
+                grid-column-end:12;
+                grid-row-start:51;
+                grid-row-end:60;
+            }
+
+            .arrow_right { 
+                grid-column-start: 84;
+                grid-column-end: 88;
+                grid-row-start:51;
+                grid-row-end:60;
+            }
+
+            .logotip {
+                grid-column-start: 82;
+                grid-column-end: 97;
+                grid-row-start: 87;
+                grid-row-end: 97;
+            }   
+        
+        }
+
+        @media screen and (max-width: 900px),(max-device-width:900px) {
+
+            html,
+            body {
+                background: url("/media/works/eye/background.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+
+            .nazvanie {
+                grid-column-start: 21;
+                grid-column-end: 45;
+                grid-row-start: 12;
+                grid-row-end: 20;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 100%; 
+                min-width: 100%; 
+                grid-column-start: 15;
+                grid-column-end: 95;
+                grid-row-start: 16;
+                grid-row-end: 71;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 28;
+                grid-column-end: 82;
+                grid-row-start: 31;
+                grid-row-end: 73;
+                
+            }
+
+            .arrow_left { 
+                display: none;
+            }
+
+            .arrow_right {
+                display: none;
+            }
+
+            .button-image {
+                grid-column-start: 5;
+                grid-column-end: 55;
+                grid-row-start:74;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 16;
+                grid-column-end: 43;
+                grid-row-start: 80;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .glaz-buy-image {
+                grid-column-start: 20;
+                grid-column-end: 37;
+                grid-row-start: 81;
+                grid-row-end: 85;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 5;
+                grid-column-end: 55;
+                grid-row-start: 70;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .second-buy-border {
+                grid-column-start: 2;
+                grid-column-end: 51;
+                grid-row-start: 74;
+                grid-row-end: 92;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 3;
+                grid-column-end: 57;
+                grid-row-start:70;
+                grid-row-end: 94;
+                overflow: hidden;
+            }
+
+            .logotip {
+                grid-column-start: 87;
+                grid-column-end: 95;
+                grid-row-start: 91;
+                grid-row-end: 97;
+                transform:scale(1.5);
+            }
+            /*  */
+                /*  */
+                    /*  */
+
+            .razmer-image {
+                grid-column-start: 10;
+                grid-column-end: 41;
+                grid-row-start: 120;
+                grid-row-end: 125;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 20;
+                grid-column-end: 45;
+                grid-row-start: 120;
+                grid-row-end: 125;
+                opacity:0;
+                z-index:1;
+            }
+            
+            .cifri-image{
+                grid-column-start: 38;
+                grid-column-end: 70;
+                grid-row-start: 126;
+                grid-row-end: 131;
+            }
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 55;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 51;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 35;
+                grid-column-end: 61;
+                grid-row-start: 145;
+                grid-row-end: 149;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 35;
+                grid-column-end: 65;
+                grid-row-start: 145;
+                grid-row-end: 149;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril-image {
+                grid-column-start: 35;
+                grid-column-end: 88;
+                grid-row-start: 150;
+                grid-row-end: 155;
+                z-index:2;
+            }  
+
+            .akril-english-image {
+                grid-column-start: 35;
+                grid-column-end: 88;
+                grid-row-start: 150;
+                grid-row-end: 155;
+                opacity:0;
+                z-index:1;
+            }   
+
+            .cena-image {
+                grid-column-start: 10;
+                grid-column-end: 33;
+                grid-row-start: 155;
+                grid-row-end: 161;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 12;
+                grid-column-end: 37;
+                grid-row-start: 156;
+                grid-row-end: 160;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price-image {
+                grid-column-start: 27;
+                grid-column-end: 48;
+                grid-row-start: 162;
+                grid-row-end: 167;
+                overflow: hidden;
+            }
+        }
+
+        @media screen and (max-width: 600px),(max-device-width:600px) {
+
+            html,
+            body {
+                background: url("/media/works/eye/background.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+
+            .nazvanie {
+                grid-column-start: 20;
+                grid-column-end: 60;
+                grid-row-start: 15;
+                grid-row-end: 25;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 100%; 
+                min-width: 100%; 
+                grid-column-start: 5;
+                grid-column-end: 95;
+                grid-row-start: 20;
+                grid-row-end: 75;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 26;
+                grid-column-end: 80;
+                grid-row-start: 39;
+                grid-row-end: 59;
+                
+            }
+
+            .arrow_left { 
+                display: none;
+            }
+
+            .arrow_right {
+                display: none;
+            }
+
+            .button-image {
+                grid-column-start: 10;
+                grid-column-end: 66;
+                grid-row-start: 67;
+                grid-row-end: 82;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 23;
+                grid-column-end: 57;
+                grid-row-start: 72;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index: 2;
+                transform:scale(1.1);
+            }
+
+            .glaz-buy-image {
+                grid-column-start: 30;
+                grid-column-end: 47;
+                grid-row-start: 73;
+                grid-row-end: 77;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 11;
+                grid-column-end: 66;
+                grid-row-start: 65;
+                grid-row-end: 82;
+                overflow: hidden;
+                transform: translateY(-0.2vh);
+            }
+
+            .second-buy-border {
+                grid-column-start: 15;
+                grid-column-end: 70;
+                grid-row-start: 70;
+                grid-row-end: 85;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 7;
+                grid-column-end: 63;
+                grid-row-start: 63;
+                grid-row-end: 79;
+                overflow: hidden;
+            }
+
+            .logotip {
+                grid-column-start: 74;
+                grid-column-end: 89;
+                grid-row-start: 92;
+                grid-row-end: 98;
+                transform:scale(1.5);
+            }
+            /*  */
+                /*  */
+                    /*  */
+
+            .razmer-image {
+                grid-column-start: 10;
+                grid-column-end: 55;
+                grid-row-start: 120;
+                grid-row-end: 125;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 120;
+                grid-row-end: 124;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 38;
+                grid-column-end: 77;
+                grid-row-start: 126;
+                grid-row-end: 131;
+            }
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 80;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 80;
+                grid-row-start: 138;
+                grid-row-end: 143;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 30;
+                grid-column-end: 70;
+                grid-row-start: 144;
+                grid-row-end: 149;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 15;
+                grid-column-end: 70;
+                grid-row-start: 145;
+                grid-row-end: 149;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril-image {
+                grid-column-start: 15;
+                grid-column-end: 90;
+                grid-row-start: 150;
+                grid-row-end: 155;
+                z-index:2;
+            }  
+
+            .akril-english-image {
+                grid-column-start: 15;
+                grid-column-end: 90;
+                grid-row-start: 150;
+                grid-row-end: 154;
+                opacity:0;
+                z-index:1;
+            }   
+
+            .cena-image {
+                grid-column-start: 10;
+                grid-column-end: 38;
+                grid-row-start: 159;
+                grid-row-end: 165;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 12;
+                grid-column-end: 47;
+                grid-row-start: 159;
+                grid-row-end: 164;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price-image {
+                grid-column-start: 30;
+                grid-column-end: 60;
+                grid-row-start: 165;
+                grid-row-end: 170;
+                overflow: hidden;
+            }
+        }
+
+        @media screen and (max-height: 450px), (max-device-height: 450px) {
+            
+            html,
+            body {
+                background: url("/media/works/eye/background.png");
+                background-size: cover;
+                position:static;
+                grid-template-columns: auto;
+                grid-template-rows: auto; 
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(200, 1fr);
+                height: 200vh;
+            }
+
+            .first_class {
+                display:contents;
+            }
+
+            .second_class {
+                display:contents;
+            }
+
+            .nazvanie {
+                grid-column-start: 75;
+                grid-column-end: 95;
+                grid-row-start: 8;
+                grid-row-end: 22;
+            }
+
+            .borders {
+                display: inline-block;
+                max-width: 100%; 
+                min-width: 100%; 
+                grid-column-start: 10;
+                grid-column-end: 80;
+                grid-row-start: 8;
+                grid-row-end: 77;
+            }
+
+            .image_slider {
+                display: inline-block;
+                grid-column-start: 30;
+                grid-column-end: 60;
+                grid-row-start: 22;
+                grid-row-end: 62;
+                transform:scale(1.4);
+            }
+
+            .arrow_left { 
+                display: none;
+            }
+
+            .arrow_right {
+                display: none;
+            }
+
+            .button-image {
+                grid-column-start: 10;
+                grid-column-end: 27;
+                grid-row-start: 78;
+                grid-row-end: 95;
+                overflow: hidden;
+            }
+
+            .text-buy-image {
+                grid-column-start: 14;
+                grid-column-end: 24;
+                grid-row-start: 83;
+                grid-row-end: 90;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .glaz-buy-image {
+                grid-column-start: 14;
+                grid-column-end: 24;
+                grid-row-start: 83;
+                grid-row-end: 89;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 10;
+                grid-column-end: 27;
+                grid-row-start: 78;
+                grid-row-end: 95;
+                overflow: hidden;
+            }
+
+            .second-buy-border {
+                grid-column-start: 15;
+                grid-column-end: 30;
+                grid-row-start: 81;
+                grid-row-end: 97;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 8;
+                grid-column-end: 26;
+                grid-row-start: 76;
+                grid-row-end: 89;
+                overflow: hidden;
+            }
+
+            .logotip {
+                grid-column-start: 85;
+                grid-column-end: 95;
+                grid-row-start: 85;
+                grid-row-end: 90;
+                transform:scale(0.8);
+            }
+
+            /*  */
+                /*  */
+                    /*  */
+
+            .razmer-image {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 114;
+                grid-row-end: 124;
+                z-index:2;
+            }
+
+            .razmer-english-image {
+                grid-column-start: 10;
+                grid-column-end: 25;
+                grid-row-start: 114;
+                grid-row-end: 123;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cifri-image{
+                grid-column-start: 30;
+                grid-column-end: 48;
+                grid-row-start: 125;
+                grid-row-end: 134;
+                z-index:2;
+
+            }
+
+            .materials-image {
+                grid-column-start: 10;
+                grid-column-end: 50;
+                grid-row-start: 144;
+                grid-row-end: 154;
+                z-index:2
+            }
+
+            .materials-english-image {
+                grid-column-start: 10;
+                grid-column-end: 50;
+                grid-row-start: 144;
+                grid-row-end: 151;
+                z-index:1;
+            }
+
+            .farfor-image {
+                grid-column-start: 15;
+                grid-column-end: 42;
+                grid-row-start: 154;
+                grid-row-end: 162;
+                z-index:2;
+            } 
+
+            .farfor-english-image {
+                grid-column-start: 15;
+                grid-column-end: 55;
+                grid-row-start: 154;
+                grid-row-end: 161;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril-image {
+                grid-column-start: 15;
+                grid-column-end: 65;
+                grid-row-start: 164;
+                grid-row-end: 172;
+                transform:scale(1.1);
+                z-index:2;
+            }  
+
+            .akril-english-image {
+                grid-column-start: 15;
+                grid-column-end: 65;
+                grid-row-start: 164;
+                grid-row-end: 172;
+                transform:scale(1.1);
+                opacity:0;
+                z-index:1;
+            }   
+            
+            .cena-image {
+                grid-column-start: 10;
+                grid-column-end: 32;
+                grid-row-start: 178;
+                grid-row-end: 189;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english-image {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 178;
+                grid-row-end: 186;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price-image {
+                grid-column-start: 30;
+                grid-column-end: 48;
+                grid-row-start: 188;
+                grid-row-end: 197;
+                overflow: hidden;
+            }
 
         }
 
-        #otpravka2 {
+        .morphing-btn-wrap {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+        }
+
+        .morphing-btn {
+            -webkit-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
+            -moz-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
+            -o-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
+            transition: color 0.3s 0.2s, width 0.2s 0s;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .morphing-btn_circle {
+            color: transparent !important;
+            padding-left: 0;
+            padding-right: 0;
+            width: 35.6px !important;
+
+            /* Override inline style rule */
+            -webkit-transition: color 0.2s 0s, width .3s 0.2s;
+            -moz-transition: color 0.2s 0s, width .3s 0.2s;
+            -o-transition: color 0.2s 0s, width .3s 0.2s;
+            transition: color 0.2s 0s, width .3s 0.2s;
+        }
+
+        /* АНИМАЦИЯ ВЫХОДА ЦВЕТА ИЗ ЛОГО */
+        .morphing-btn-clone {
+            position: fixed;
+            background: url("/media/every_hidden_page/background.png");
+            background-size: cover;
+            border-radius: 50%;
+            z-index: 3;
+            -webkit-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+            -moz-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+            -o-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+            transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .morphing-btn-clone_visible {
+            display: block;
+            -webkit-transform: scale(1) !important;
+            -moz-transform: scale(1) !important;
+            -ms-transform: scale(1) !important;
+            -o-transform: scale(1) !important;
+            transform: scale(1) !important;
+        }
+
+        .fancybox-morphing .fancybox-bg {
+            position:static;
+            width: 100%;
+            height: 100%;
+            margin: 0px; /* убирает скролл */
+            overflow-x: hidden;
+            background: url("/media/every_hidden_page/background.png");
+            background-size: cover;
+        }
+
+        /* кнопка закрыть */
+        .fancybox-morphing .fancybox-toolbar {
+            top: 20px;
+            right: 40px;
+        }
+
+        .fancybox-morphing .fancybox-button--close {
+            /* background: rgba(0, 0, 0, 0.2); */
+            border-radius: 50%;
+            color: #fff;
+        }
+
+        .fancybox-morphing .fancybox-button--close::after, 
+        .fancybox-morphing .fancybox-button--close::before {
+            height: 1.55px;
+            width: 22px;
+            left: calc(50% - 11px);
+        }
+
+        .fancybox-morphing .fancybox-button--close:hover {
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        #morphing-content {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: transparent;
+            color: black;
+            line-height: 1;
+            z-index: 3;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow:hidden;
+            max-width:100%;max-height:100%;min-width:100%;min-height:100%;
+        }
+
+        #home {
+            position:absolute;
+            top: 1vh;
+            left: 45vw;
+            max-height: 25vh;
+            max-width: 25vw;
             
         }
 
-        #pay1 {
-
+        #put {
+            position:absolute;
+            top: 15vh;
+            left: 11vw;
+            max-height:15vh;
+            max-width:15vw; 
         }
 
-        #pay2 {
-            
+        #zakis {
+            position:absolute;
+            top: 25vh;
+            left: 10vw;
+            max-height: 15vh;
+            max-width: 15vw; 
         }
 
-        #pay3 {
-            
+        #glaz {
+            position:absolute;
+            top: 35vh;
+            left: 11vw;
+            max-height: 15vh;
+            max-width: 15vw; 
         }
 
-        #pay4 {
-            
+        #kosmos {
+            position:absolute;
+            top: 15vh;
+            right: 10vw;
+            max-height:15vh;
+            max-width:15vw; 
         }
 
-        #pay5 {
-            
+        #maski {
+            position:absolute;
+            top: 25vh;
+            right: 11vw;
+            max-height: 15vh;
+            max-width: 15vw; 
         }
 
-        #pay6 {
-            
-        }
-
-        #phone_number {
-
-        }
-
-        #telegram {
-
-        }
-
-        #whats_up {
-
+        #ohboy {
+            position:absolute;
+            top: 35vh;
+            right: 5vw;
+            max-height: 40vh;
+            max-width: 40vw;
+            /* margin-top: -20vh; */
         }
 
         #inst {
-
+            position:absolute;
+            bottom: 2vh;
+            left: 47vw;
+            max-height: 5vh;
+            max-width: 5vw;
         }
+
+        #tg {
+            position:absolute;
+            bottom: 2vh;
+            left: 50vw;
+            max-height: 5vh;
+            max-width: 5vw;
+        }
+
+        #mini_zakis {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+        
+        #mini_glaz {
+            position:absolute;
+            top: 37%;
+            left: 32%;
+        }
+
+        #mini_put {
+            position:absolute;
+            top: 35%;
+            left: 37%;
+        }
+
+        #mini_kosmos {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+        
+        #mini_maski {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+
+        #mini_vibe {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+
+        @media screen and (max-width: 1200px),(max-device-width: 1200px) {
+            
+            #home {
+                position:absolute;
+                top: 1vh;
+                left: 26em;
+                max-height: 10em;
+                max-width: 10em;
+                
+            }
+
+            #put {
+                position:absolute;
+                top: 15vh;
+                left: 10vw;
+                max-height:15vh;
+                max-width:15vw; 
+            }
+
+            #zakis {
+                position:absolute;
+                top: 26vh;
+                left: 10vw;
+                max-height: 15vh;
+                max-width: 15vw; 
+                transform: scale(1.1);
+            }
+
+            #glaz {
+                position:absolute;
+                top: 35vh;
+                left: 10vw;
+                max-height: 15vh;
+                max-width: 15vw; 
+            }
+
+            #kosmos {
+                position:absolute;
+                top: 15vh;
+                right: 10vw;
+                max-height:15vh;
+                max-width:15vw;
+                transform: scale(1.2); 
+            }
+
+            #maski {
+                position:absolute;
+                top: 25vh;
+                right: 11vw;
+                max-height: 15vh;
+                max-width: 15vw; 
+                transform: scale(1.2);
+            }
+
+            #ohboy {
+                position:absolute;
+                top: 35vh;
+                right: 5vw;
+                max-height: 40vh;
+                max-width: 40vw;
+                transform:scale(0.9);
+                
+            }
+
+            #inst {
+                position:absolute;
+                bottom: 2vh;
+                left: 47vw;
+                max-height: 5vh;
+                max-width: 5vw;
+                transform:translateX(-2em)
+            }
+
+            #tg {
+                position:absolute;
+                bottom: 2vh;
+                left: 50vw;
+                max-height: 5vh;
+                max-width: 5vw;
+                transform:translateX(-1em)
+            }
+
+            #mini_zakis {
+                display:none;
+            }
+            
+            #mini_glaz {
+                display:none;
+            }
+
+            #mini_put {
+                display:none;
+            }
+
+            #mini_kosmos {
+                display:none;
+            }
+            
+            #mini_maski {
+                display:none;
+            }
+
+            #mini_vibe {
+                display:none;
+            }
+        }
+
+        @media screen and (max-width: 900px),(max-device-width:900px) {
+            
+            #home { 
+                position:absolute;
+                top: 1vh;
+                left: 20em;
+                max-height: 10em;
+                max-width: 10em;
+            }
+
+            #put {
+                position:absolute;
+                top: 13em;
+                left: 10vw;
+                max-height:15vh;
+                max-width:15vw; 
+            }
+
+            #zakis {
+                position:absolute;
+                top: 18em;
+                left: 10vw;
+                max-height: 15vh;
+                max-width: 15vw; 
+                transform: scale(1.2);
+            }
+
+            #glaz {
+                position:absolute;
+                top: 22em;
+                left: 10vw;
+                max-height: 15vh;
+                max-width: 15vw; 
+            }
+
+            #kosmos {
+                position:absolute;
+                top: 13em;
+                right: 10vw;
+                max-height:15vh;
+                max-width:15vw;
+                transform: scale(1.4); 
+            }
+
+            #maski {
+                position:absolute;
+                top: 18em;
+                right: 11vw;
+                max-height: 15vh;
+                max-width: 15vw; 
+                transform: scale(1.2);
+            }
+
+            #ohboy {
+                position:absolute;
+                top: 22em;
+                right: 5vw;
+                max-height: 40vh;
+                max-width: 40vw;
+                transform:scale(0.9);
+                
+            }
+
+            #inst {
+                position:absolute;
+                bottom: 10em;
+                left: 23em;
+                max-height: 5vh;
+                max-width: 5vw;
+                transform:translateX(-2em)
+            }
+
+            #tg {
+                position:absolute;
+                bottom: 10em;
+                left: 26em;
+                max-height: 5vh;
+                max-width: 5vw;
+                transform:translateX(-1em)
+            }
+
+            #mini_zakis {
+                display:none;
+            }
+            
+            #mini_glaz {
+                display:none;
+            }
+
+            #mini_put {
+                display:none;
+            }
+
+            #mini_kosmos {
+                display:none;
+            }
+            
+            #mini_maski {
+                display:none;
+            }
+
+            #mini_vibe {
+                display:none;
+            }
+        }
+
+        @media screen and (max-width: 600px),(max-device-width:600px) {
+            #home { 
+                position:absolute;
+                top: 2em;
+                left: 7em;
+                max-height: 10em;
+                max-width: 10em;
+            }
+
+            #put {
+                position:absolute;
+                top: 15em;
+                left: 10vw;
+                max-height:15vh;
+                max-width:15vw; 
+                transform: scale(1.8);
+            }
+
+            #zakis {
+                position:absolute;
+                top: 19em;
+                left: 10vw;
+                max-height: 15vh;
+                max-width: 15vw; 
+                transform: scale(2);
+            }
+
+            #glaz {
+                position:absolute;
+                top: 23em;
+                left: 10vw;
+                max-height: 15vh;
+                max-width: 15vw; 
+                transform: scale(2);
+            }
+
+            #kosmos {
+                position:absolute;
+                top: 15em;
+                right: 10vw;
+                max-height:15vh;
+                max-width:15vw;
+                transform: scale(2); 
+            }
+
+            #maski {
+                position:absolute;
+                top: 19em;
+                right: 11vw;
+                max-height: 15vh;
+                max-width: 15vw; 
+                transform: scale(2);
+            }
+
+            #ohboy {
+                position:absolute;
+                top: 23em;
+                right: 2em;
+                max-height: 40vh;
+                max-width: 40vw;
+                transform:scale(1.3);
+                
+            }
+
+            #inst {
+                position:absolute;
+                bottom: 2em;
+                left: 11em;
+                max-height: 2em;
+                max-width: 2em;
+                transform:translateX(-2em)
+            }
+
+            #tg {
+                position:absolute;
+                bottom: 2em;
+                left: 13em;
+                max-height: 2em;
+                max-width: 2em;
+                transform:translateX(-1em)
+            }
+
+            #mini_zakis {
+                display:none;
+            }
+            
+            #mini_glaz {
+                display:none;
+            }
+
+            #mini_put {
+                display:none;
+            }
+
+            #mini_kosmos {
+                display:none;
+            }
+            
+            #mini_maski {
+                display:none;
+            }
+
+            #mini_vibe {
+                display:none;
+            }
+        }
+
+        @media screen and (max-height: 450px), (max-device-height: 450px) {
+            #home { 
+                position:absolute;
+                top: 1em;
+                left: 18em;
+                max-height: 7em;
+                max-width: 7em;
+            }
+
+            #put {
+                position:absolute;
+                top: 10em;
+                left: 1em;
+                max-height:15vh;
+                max-width:15vw; 
+                transform: scale(0.8);
+            }
+
+            #zakis {
+                position:absolute;
+                top: 13em;
+                left: 1em;
+                max-height: 15vh;
+                max-width: 15vw; 
+                transform: scale(0.95);
+            }
+
+            #glaz {
+                position:absolute;
+                top: 16em;
+                left: 1vw;
+                max-height: 15vh;
+                max-width: 15vw; 
+                transform: scale(0.8);            
+            }
+
+            #kosmos {
+                position:absolute;
+                top: 10em;
+                right: 2em;
+                max-height:15vh;
+                max-width:15vw;
+                transform: scale(1); 
+            }
+
+            #maski {
+                position:absolute;
+                top: 13em;
+                right: 2em;
+                max-height: 15vh;
+                max-width: 15vw; 
+                transform: scale(1);
+            }
+
+            #ohboy {
+                position:absolute;
+                top: 16em;
+                right: -1em;
+                max-height: 40vh;
+                max-width: 40vw;
+                transform:scale(0.8);
+                
+            }
+
+            #inst {
+                position:absolute;
+                bottom: 1em;
+                left: 20em;
+                max-height: 2em;
+                max-width: 2em;
+                transform:translateX(-2em)
+            }
+
+            #tg {
+                position:absolute;
+                bottom: 1em;
+                left: 22em;
+                max-height: 2em;
+                max-width: 2em;
+                transform:translateX(-1em)
+            }
+
+            #mini_zakis {
+                display:none;
+            }
+            
+            #mini_glaz {
+                display:none;
+            }
+
+            #mini_put {
+                display:none;
+            }
+
+            #mini_kosmos {
+                display:none;
+            }
+            
+            #mini_maski {
+                display:none;
+            }
+
+            #mini_vibe {
+                display:none;
+            }
+        }
+
+        /* ФОРМА */
+        
+        @font-face {
+            font-family: LSDFont;
+            
+            src: url("{% static '/homepage/super_font.ttf' %}");
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
+            overflow: hidden;
+            width: 100vw;
+            height: 150vh;
+            font-family: LSDFont;
+            color: #FDF2F2;
+        }
+
+        /* ИМЯ */
+        .name_text {
+            grid-column-start: 11;
+            grid-column-end: 25;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_name_text {
+            grid-column-start: 11;
+            grid-column-end: 25;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
+        }
+
+        #name_zapolni {
+            grid-column-start: 9;
+            grid-column-end: 27;
+            grid-row-start: 20;
+            grid-row-end: 26;
+            overflow: hidden;
+        }
+
+        .name_form {
+            grid-column-start: 10;
+            grid-column-end: 26;
+            grid-row-start: 22;
+            grid-row-end: 24;
+            overflow: hidden; 
+            opacity:50%;
+            z-index:10;
+        }
+        /* EMAIL */
+        .email_text {
+            grid-column-start: 46;
+            grid-column-end: 54;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+        }
+
+        #email_zapolni {
+            grid-column-start: 41;
+            grid-column-end: 59;
+            grid-row-start: 20;
+            grid-row-end: 26;
+            overflow: hidden;
+        }
+
+        .email_form {
+            grid-column-start: 42;
+            grid-column-end: 58;
+            grid-row-start: 22;
+            grid-row-end: 24;
+            overflow: hidden;
+            z-index:2;
+            opacity:50%;
+        }
+
+        /* ГОРОД */
+        .city_text {
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_city_text {
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 15;
+            grid-row-end: 18;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        #city_zapolni {
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 20;
+            grid-row-end: 26;
+            overflow: hidden;
+        }
+        .city_form {
+            grid-column-start: 71;
+            grid-column-end: 89;
+            grid-row-start: 22;
+            grid-row-end: 24;
+            overflow: hidden;
+            z-index:2;
+            opacity:50%;
+        }
+
+        /* ОТПРАВКА */
+        .otpravka_text {
+            grid-column-start: 12;
+            grid-column-end: 37;
+            grid-row-start: 37;
+            grid-row-end: 40;
+            overflow: hidden;
+            transform:scale(1.1);
+            z-index:2;
+        }
+
+        .english_otpravka_text {
+            grid-column-start: 12;
+            grid-column-end: 37;
+            grid-row-start: 37;
+            grid-row-end: 40;
+            overflow: hidden;
+            transform:scale(1.1);
+            z-index:1;
+            opacity:0;
+        }
+
+        /* .payment_form {
+            grid-column-start:10;
+            grid-column-end: 26;
+            grid-row-start:43;
+            grid-row-end: 58; */
+            /* max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%; */
+            /* overflow: hidden;
+            }
+             */
+        
+
+        [type=radio] { 
+            /* position: absolute; */
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        [type=radio] + img {
+            cursor: pointer;
+        }
+
+        [type=radio]:checked + img {
+            outline: 3px solid #FFFFFF;
+            padding:5px;
+        } 
+
+        /* #pochta_rossii {
+            grid-column-start: 11;
+            grid-column-end: 25;
+            grid-row-start: 48;
+            grid-row-end: 50;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #sdek {
+            grid-column-start: 11;
+            grid-column-end: 15;
+            grid-row-start: 44;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+        }
+
+        #drugoe {
+            grid-column-start: 11;
+            grid-column-end: 18;
+            grid-row-start: 52;
+            grid-row-end: 54;
+            overflow: hidden;
+            z-index:2;
+        }
+        
+        #english_drugoe {
+            grid-column-start: 11;
+            grid-column-end: 18;
+            grid-row-start: 52;
+            grid-row-end: 54;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        } */
+
+        .otpravka_form {
+            grid-column-start: 5;
+            grid-column-end: 28;
+            grid-row-start: 40;
+            grid-row-end: 65;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        /* ОПЛАТА */
+        .payment_text {
+            grid-column-start: 60;
+            grid-column-end: 87;
+            grid-row-start: 37;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_payment_text {
+            grid-column-start: 60;
+            grid-column-end: 87;
+            grid-row-start: 37;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        #rub {
+            grid-column-start: 60;
+            grid-column-end: 63;
+            grid-row-start: 44;
+            grid-row-end: 46;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        #usd {
+            grid-column-start: 60;
+            grid-column-end: 63;
+            grid-row-start: 48;
+            grid-row-end: 50;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        #btc {
+            grid-column-start: 60;
+            grid-column-end: 63;
+            grid-row-start: 52;
+            grid-row-end: 54;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        #eth {
+            grid-column-start: 60;
+            grid-column-end: 63;
+            grid-row-start: 56;
+            grid-row-end: 58;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);   
+            
+        }
+
+        #usdt {
+            grid-column-start: 60;
+            grid-column-end: 64;
+            grid-row-start: 60;
+            grid-row-end: 62;
+            overflow: hidden;
+            z-index:2;
+            transform: scale(1.1);    
+        }
+
+        .payment_form {
+            grid-column-start: 55;
+            grid-column-end: 59;
+            grid-row-start: 42;
+            grid-row-end: 66;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        /* ЛУЧШЕ СВЯЗАТЬСЯ */
+        .better_text {
+            grid-column-start: 5;
+            grid-column-end: 45;
+            grid-row-start: 68;
+            grid-row-end: 71;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_better_text {
+            grid-column-start: 5;
+            grid-column-end: 40;
+            grid-row-start: 68;
+            grid-row-end: 71;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        .better_mob {
+            max-width: 1%;
+            max-height:1%;   
+            opacity:0;
+        }
+
+        .english_better_mob {
+            max-width: 1%;
+            max-height:1%;   
+            opacity:0;
+        }
+
+        .better_form {
+            grid-column-start: 5;
+            grid-column-end: 9;
+            grid-row-start: 72;
+            grid-row-end: 92;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #telegram {
+            grid-column-start: 9;
+            grid-column-end: 17;
+            grid-row-start: 74;
+            grid-row-end: 76;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #instagram {
+            grid-column-start: 9;
+            grid-column-end: 17;
+            grid-row-start: 78;
+            grid-row-end: 80;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        #wup {
+            grid-column-start: 9;
+            grid-column-end: 17;
+            grid-row-start: 82;
+            grid-row-end: 84;
+            overflow: hidden;
+        }
+        
+        #better_zapolni {
+            grid-column-start: 5;
+            grid-column-end: 24;
+            grid-row-start: 86;
+            grid-row-end: 92;
+            overflow: hidden;
+        }
+
+        .better_more {
+            grid-column-start: 6;
+            grid-column-end: 23;
+            grid-row-start: 88;
+            grid-row-end: 90;
+            opacity: 50%;
+            overflow: hidden;
+        }
+
+        /* KOMENT */
+        .koment_text {
+            grid-column-start: 60;
+            grid-column-end: 75;
+            grid-row-start: 68;
+            grid-row-end: 71;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_koment_text {
+            grid-column-start: 60;
+            grid-column-end: 75;
+            grid-row-start: 68;
+            grid-row-end: 71;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        .koment_zapolni {
+            grid-column-start: 59;
+            grid-column-end: 76;
+            grid-row-start: 72;
+            grid-row-end: 78;
+            overflow: hidden;
+        }
+        .koment_more {
+            grid-column-start: 60;
+            grid-column-end: 75;
+            grid-row-start: 74;
+            grid-row-end: 76;
+            overflow: hidden;
+            opacity: 50%;
+        }
+
+        .atom {
+            grid-column-start: 75;
+            grid-column-end: 95;
+            grid-row-start: 87;
+            grid-row-end: 97;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_atom {
+            grid-column-start: 75;
+            grid-column-end: 95;
+            grid-row-start: 87;
+            grid-row-end: 97;
+            overflow: hidden;
+            z-index:1;
+            opacity:0;
+        }
+
+        .close {
+            grid-column-start: 94;
+            grid-column-end: 97;
+            grid-row-start: 2;
+            grid-row-end: 6;
+            overflow: hidden;
+        }
+
+        input[type="radio"] {
+            border: 2px solid #999;
+            width: 100%;
+            height: 2em;
+            color:black;
+            margin: 1.9em;
+        }
+        
+        @media screen and (max-width: 1200px),(max-device-width: 1200px) {
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 7;
+                grid-column-end: 30;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;  
+                z-index:1;              
+            }
+
+            .english_name_text {
+                grid-column-start: 7;
+                grid-column-end: 30;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;                
+                z-index:2;
+                opacity:0;
+            }
+            
+            #name_zapolni {
+                grid-column-start: 8;
+                grid-column-end: 29;
+                grid-row-start: 12;
+                grid-row-end: 17;
+                overflow: hidden;
+            }
+
+            .name_form {
+                grid-column-start: 9;
+                grid-column-end: 28;
+                grid-row-start: 13;
+                grid-row-end: 15;
+                transform:translateY(1vh);
+                overflow: hidden; 
+                opacity:50%;
+                z-index:10;
+            }
+            /* EMAIL */
+            .email_text {
+                grid-column-start: 44;
+                grid-column-end: 57;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;
+            }
+
+            #email_zapolni {
+                grid-column-start: 40;
+                grid-column-end: 61;
+                grid-row-start: 12;
+                grid-row-end: 17;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 41;
+                grid-column-end: 60;
+                grid-row-start: 13;
+                grid-row-end: 15;
+                transform:translateY(1vh);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ГОРОД */
+            .city_text {
+                grid-column-start: 66;
+                grid-column-end: 98;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;
+                z-index:1;
+            }
+
+            .english_city_text {
+                grid-column-start: 66;
+                grid-column-end: 98;
+                grid-row-start: 7;
+                grid-row-end: 10;
+                overflow: hidden;
+                z-index:2;
+                opacity:0;
+            }
+
+            #city_zapolni {
+                grid-column-start: 69;
+                grid-column-end: 94;
+                grid-row-start: 12;
+                grid-row-end: 17;
+                overflow: hidden;
+            }
+            .city_form {
+                grid-column-start: 70;
+                grid-column-end: 93;
+                grid-row-start: 13;
+                grid-row-end: 15;
+                transform:translateY(1vh);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ОТПРАВКА */
+            .otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #pochta_rossii {
+                grid-column-start: 14;
+                grid-column-end: 36;
+                grid-row-start: 32;
+                grid-row-end: 34;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #sdek {
+                grid-column-start: 14;
+                grid-column-end: 21;
+                grid-row-start: 36;
+                grid-row-end: 38;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+            }
+
+            #drugoe {
+                grid-column-start: 14;
+                grid-column-end: 26;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+            }
+            
+            #english_drugoe {
+                grid-column-start: 14;
+                grid-column-end: 26;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .otpravka_form {
+                grid-column-start: 5;
+                grid-column-end: 13;
+                grid-row-start: 30;
+                grid-row-end: 45;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ОПЛАТА */
+            .payment_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_payment_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #rub {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 30;
+                grid-row-end: 32;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usd {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 34;
+                grid-row-end: 36;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #btc {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 38;
+                grid-row-end: 40;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #eth {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 42;
+                grid-row-end: 44;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usdt {
+                grid-column-start: 67;
+                grid-column-end: 75;
+                grid-row-start: 47;
+                grid-row-end: 49;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);    
+            }
+
+            .payment_form {
+                grid-column-start: 59;
+                grid-column-end: 67;
+                grid-row-start: 28;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ЛУЧШЕ СВЯЗАТЬСЯ */
+            .better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 59;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 59;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 15;
+                grid-row-start: 60;
+                grid-row-end: 73;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #telegram {
+                grid-column-start: 14;
+                grid-column-end: 32;
+                grid-row-start: 62;
+                grid-row-end: 64;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #instagram {
+                grid-column-start: 14;
+                grid-column-end: 32;
+                grid-row-start: 66;
+                grid-row-end: 68;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #wup {
+                grid-column-start: 14;
+                grid-column-end: 30;
+                grid-row-start: 70;
+                grid-row-end: 72;
+                overflow: hidden;
+            }
+            
+            #better_zapolni {
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 74;
+                grid-row-end: 80;
+                overflow: hidden;
+            }
+
+            .better_more {
+                grid-column-start: 12;
+                grid-column-end: 38;
+                grid-row-start: 76;
+                grid-row-end: 78;
+                opacity: 50%;
+                overflow: hidden;
+            }
+
+            /* KOMENT */
+            .koment_text {
+                grid-column-start: 62;
+                grid-column-end: 88;
+                grid-row-start: 74;
+                grid-row-end: 77;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .koment_zapolni {
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 79;
+                grid-row-end: 85;
+                overflow: hidden;
+            }
+            .koment_more {
+                grid-column-start: 62;
+                grid-column-end: 88;
+                grid-row-start: 81;
+                grid-row-end: 83;
+                overflow: hidden;
+                opacity: 50%;
+            }
+
+            .atom {
+                grid-column-start: 10;
+                grid-column-end: 43;
+                grid-row-start: 86;
+                grid-row-end: 95;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_atom {
+                grid-column-start: 10;
+                grid-column-end: 43;
+                grid-row-start: 86;
+                grid-row-end: 95;
+                overflow: hidden;
+                z-index: 1;
+                opacity:0;
+            }
+
+            .close {
+                grid-column-start: 95;
+                grid-column-end: 98;
+                grid-row-start: 2;
+                grid-row-end: 5;
+                overflow: hidden;
+            }
+
+            input[type="radio"] {
+                border: 2px solid #999;
+                width: 100%;
+                height: 1.2em;
+                color:black;
+                margin: 1.2em;
+            }   
+        }
+
+        @media screen and (max-width: 900px),(max-device-width: 900px) {
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 7;
+                grid-column-end: 32;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;                
+                z-index:2;
+            }
+
+            .english_name_text {
+                grid-column-start: 7;
+                grid-column-end: 32;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;                
+                z-index:1;
+                opacity:0;
+            }
+
+            #name_zapolni {
+                grid-column-start: 7;
+                grid-column-end: 30;
+                grid-row-start: 15;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .name_form {
+                grid-column-start: 8;
+                grid-column-end: 29;
+                grid-row-start: 16;
+                grid-row-end: 18;
+                transform:translateY(1vh);
+                overflow: hidden; 
+                opacity:50%;
+                z-index:10;
+            }
+            /* EMAIL */
+            .email_text {
+                grid-column-start: 43;
+                grid-column-end: 58;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;
+            }
+            
+            #email_zapolni {
+                grid-column-start: 39;
+                grid-column-end: 62;
+                grid-row-start: 15;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 40;
+                grid-column-end: 61;
+                grid-row-start: 16;
+                grid-row-end: 18;
+                transform:translateY(1vh);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ГОРОД */
+            .city_text {
+                grid-column-start: 65;
+                grid-column-end: 97;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_city_text {
+                grid-column-start: 65;
+                grid-column-end: 97;
+                grid-row-start: 10;
+                grid-row-end: 13;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #city_zapolni {
+                grid-column-start: 69;
+                grid-column-end: 94;
+                grid-row-start: 15;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+            .city_form {
+                grid-column-start: 70;
+                grid-column-end: 93;
+                grid-row-start: 16;
+                grid-row-end: 18;
+                transform:translateY(1vh);
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ОТПРАВКА */
+            .otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #pochta_rossii {
+                grid-column-start: 16;
+                grid-column-end: 47;
+                grid-row-start: 32;
+                grid-row-end: 34;
+                overflow: hidden;
+                z-index:2;
+                /* transform: scale(1.1);    */
+            }
+
+            #sdek {
+                grid-column-start: 16;
+                grid-column-end: 28;
+                grid-row-start: 36;
+                grid-row-end: 38;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+            }
+
+            #drugoe {
+                grid-column-start: 16;
+                grid-column-end: 35;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #english_drugoe {
+                grid-column-start: 16;
+                grid-column-end: 35;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .otpravka_form {
+                grid-column-start: 5;
+                grid-column-end: 13;
+                grid-row-start: 30;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ОПЛАТА */
+            .payment_text {
+                grid-column-start: 60;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_payment_text {
+                grid-column-start: 60;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 27;
+                transform:scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #rub {
+                grid-column-start: 64;
+                grid-column-end: 73;
+                grid-row-start: 32;
+                grid-row-end: 34;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usd {
+                grid-column-start: 64;
+                grid-column-end: 73;
+                grid-row-start: 36;
+                grid-row-end: 38;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #btc {
+                grid-column-start: 64;
+                grid-column-end: 73;
+                grid-row-start: 40;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #eth {
+                grid-column-start: 64;
+                grid-column-end: 73;
+                grid-row-start: 44;
+                grid-row-end: 46;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);   
+                
+            }
+
+            #usdt {
+                grid-column-start: 64;
+                grid-column-end: 75;
+                grid-row-start: 48;
+                grid-row-end: 50;
+                overflow: hidden;
+                z-index:2;
+                transform: scale(1.1);    
+            }
+
+            .payment_form {
+                grid-column-start: 54;
+                grid-column-end: 62;
+                grid-row-start: 30;
+                grid-row-end: 60;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ЛУЧШЕ СВЯЗАТЬСЯ */
+            .better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 55;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 15;
+                grid-row-start: 60;
+                grid-row-end: 73;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #telegram {
+                grid-column-start: 17;
+                grid-column-end: 40;
+                grid-row-start: 62;
+                grid-row-end: 64;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #instagram {
+                grid-column-start: 17;
+                grid-column-end: 40;
+                grid-row-start: 66;
+                grid-row-end: 68;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #wup {
+                grid-column-start: 17;
+                grid-column-end: 35;
+                grid-row-start: 70;
+                grid-row-end: 72;
+                overflow: hidden;
+            }
+            
+            #better_zapolni {
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 74;
+                grid-row-end: 80;
+                overflow: hidden;
+            }
+
+            .better_more {
+                grid-column-start: 12;
+                grid-column-end: 38;
+                grid-row-start: 76;
+                grid-row-end: 78;
+                opacity: 50%;
+                overflow: hidden;
+            }
+
+            /* KOMENT */
+            .koment_text {
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 74;
+                grid-row-end: 77;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_koment_text {
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 74;
+                grid-row-end: 77;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .koment_zapolni {
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 79;
+                grid-row-end: 85;
+                overflow: hidden;
+            }
+            .koment_more {
+                grid-column-start: 62;
+                grid-column-end: 88;
+                grid-row-start: 81;
+                grid-row-end: 83;
+                overflow: hidden;
+                opacity: 50%;
+            }
+
+            .atom {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 87;
+                grid-row-end: 95;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_atom {
+                grid-column-start: 10;
+                grid-column-end: 45;
+                grid-row-start: 87;
+                grid-row-end: 95;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .close {
+                grid-column-start: 91;
+                grid-column-end: 95;
+                grid-row-start: 2;
+                grid-row-end: 5;
+                overflow: hidden;
+            }
+
+            input[type="radio"] {
+                border: 2px solid #999;
+                width: 100%;
+                height: 1.5em;
+                color:black;
+                margin: 1.5em;
+            } 
+        }
+
+        @media screen and (max-width: 600px),(max-device-width: 600px) {
+            .content {
+                display: grid;
+                grid-template-columns: repeat(100, 1fr);
+                grid-template-rows: repeat(300, 1fr);
+                overflow: hidden;
+                width: 100vw;
+                height: 300vh;
+                font-family: LSDFont;
+                color: #FDF2F2;
+            }
+            
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 20;
+                grid-row-end: 25;
+                overflow: hidden;     
+                z-index:2;           
+            }
+
+            .english_name_text {
+                grid-column-start:20;
+                grid-column-end: 80;
+                grid-row-start: 20;
+                grid-row-end: 25;
+                overflow: hidden; 
+                z-index:1;
+                opacity:0;               
+            }
+
+            #name_zapolni {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 28;
+                grid-row-end: 37;
+                overflow: hidden;
+            }
+
+            .name_form {
+                grid-column-start: 19;
+                grid-column-end: 81;
+                grid-row-start: 30;
+                grid-row-end: 33;
+                overflow: hidden; 
+                opacity:50%;
+                z-index:10;
+            }
+            /* EMAIL */
+            .email_text {
+                grid-column-start:28;
+                grid-column-end: 72;
+                grid-row-start: 40;
+                grid-row-end: 45;
+                overflow: hidden;
+            }
+            
+            #email_zapolni {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 48;
+                grid-row-end: 57;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 19;
+                grid-column-end: 81;
+                grid-row-start: 50;
+                grid-row-end: 53;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ГОРОД */
+            .city_text {
+                grid-column-start: 10;
+                grid-column-end: 90;
+                grid-row-start: 60;
+                grid-row-end: 65;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_city_text {
+                grid-column-start: 10;
+                grid-column-end: 90;
+                grid-row-start: 60;
+                grid-row-end: 65;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #city_zapolni {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 68;
+                grid-row-end: 77;
+                overflow: hidden;
+            }
+            .city_form {
+                grid-column-start: 19;
+                grid-column-end: 81;
+                grid-row-start: 70;
+                grid-row-end: 73;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ОТПРАВКА */
+            .otpravka_text {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 113;
+                grid-row-end: 116;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_otpravka_text {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 113;
+                grid-row-end: 116;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #pochta_rossii {
+                grid-column-start: 23;
+                grid-column-end: 73;
+                grid-row-start: 120;
+                grid-row-end: 123;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #sdek {
+                grid-column-start: 23;
+                grid-column-end: 40;
+                grid-row-start: 125;
+                grid-row-end: 128;
+                overflow: hidden;
+                z-index:2;   
+            }
+
+            #drugoe {
+                grid-column-start: 23;
+                grid-column-end: 48;
+                grid-row-start: 130;
+                grid-row-end: 133;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #english_drugoe {
+                grid-column-start: 23;
+                grid-column-end: 48;
+                grid-row-start: 130;
+                grid-row-end: 133;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .otpravka_form {
+                grid-column-start: 8;
+                grid-column-end: 19;
+                grid-row-start: 117;
+                grid-row-end: 133;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ОПЛАТА */
+            .payment_text {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 143;
+                grid-row-end: 146;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_payment_text {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 143;
+                grid-row-end: 146;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #rub {
+                grid-column-start: 23;
+                grid-column-end: 37;
+                grid-row-start: 150;
+                grid-row-end: 153;
+                overflow: hidden;
+                z-index:2;                
+            }
+
+            #usd {
+                grid-column-start: 23;
+                grid-column-end: 37;
+                grid-row-start: 156;
+                grid-row-end: 159;
+                overflow: hidden;
+                z-index:2;                
+            }
+
+            #btc {
+                grid-column-start: 23;
+                grid-column-end: 37;
+                grid-row-start: 161;
+                grid-row-end: 164;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #eth {
+                grid-column-start: 23;
+                grid-column-end: 37;
+                grid-row-start: 166;
+                grid-row-end: 169;
+                overflow: hidden;
+                z-index:2;                
+            }
+
+            #usdt {
+                grid-column-start: 23;
+                grid-column-end: 40;
+                grid-row-start: 171;
+                grid-row-end: 174;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .payment_form {
+                grid-column-start: 8;
+                grid-column-end: 19;
+                grid-row-start: 147;
+                grid-row-end: 174;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ЛУЧШЕ СВЯЗАТЬСЯ */
+            .better_text {
+                display:none;
+            }
+
+            .english_better_ {
+                display:none;
+            }
+
+            .better_mob {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 207;
+                grid-row-end: 219;
+                transform: scale(1.2);
+                overflow: hidden;
+                z-index:2;
+                max-width: 100%; 
+                max-height: 100%;
+                opacity:100%;
+            }
+
+            .english_better_mob {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 207;
+                grid-row-end: 219;
+                transform: scale(1.2);
+                overflow: hidden;
+                z-index:1;
+                max-width:100%; 
+                max-height: 100%;
+                opacity:0;
+            }
+
+            .better_form {
+                grid-column-start: 15;
+                grid-column-end: 26;
+                grid-row-start: 222;
+                grid-row-end: 240;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #telegram {
+                grid-column-start: 29;
+                grid-column-end: 60;
+                grid-row-start: 225;
+                grid-row-end: 228;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #instagram {
+                grid-column-start: 29;
+                grid-column-end: 61;
+                grid-row-start: 230;
+                grid-row-end: 233;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #wup {
+                grid-column-start: 29;
+                grid-column-end: 60;
+                grid-row-start: 235;
+                grid-row-end: 238;
+                overflow: hidden;
+            }
+            
+            #better_zapolni {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 242;
+                grid-row-end: 251;
+                overflow: hidden;
+            }
+
+            .better_more {
+                grid-column-start: 19;
+                grid-column-end: 81;
+                grid-row-start: 245;
+                grid-row-end: 248;
+                opacity: 50%;
+                overflow: hidden;
+            }
+
+            /* KOMENT */
+            .koment_text {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 253;
+                grid-row-end: 258;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_koment_text {
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 253;
+                grid-row-end: 258;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .koment_zapolni {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 262;
+                grid-row-end: 271;
+                overflow: hidden;
+            }
+            .koment_more {
+                grid-column-start: 19;
+                grid-column-end: 81;
+                grid-row-start: 265;
+                grid-row-end: 268;
+                overflow: hidden;
+                opacity: 50%;
+            }
+
+            .atom {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 284;
+                grid-row-end: 296;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_atom {
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 284;
+                grid-row-end: 296;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .close {
+                grid-column-start: 85;
+                grid-column-end: 97;
+                grid-row-start: 2;
+                grid-row-end: 8;
+                overflow: hidden;
+            }
+
+            input[type="radio"] {
+                border: 2px solid #999;
+                width: 100%;
+                height: 1em;
+                color:black;
+                margin: 1.1em;
+            } 
+        }
+
+        @media screen and (max-height: 450px),(max-device-height: 450px) {
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 5;
+                grid-column-end: 30;
+                grid-row-start: 6;
+                grid-row-end: 10;
+                overflow: hidden;   
+                z-index:2;             
+            }
+
+            .english_name_text {
+                grid-column-start: 5;
+                grid-column-end: 30;
+                grid-row-start: 6;
+                grid-row-end: 10;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;                
+            }
+
+            #name_zapolni {
+                grid-column-start: 6;
+                grid-column-end: 29;
+                grid-row-start: 12;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .name_form {
+                grid-column-start: 7;
+                grid-column-end: 28;
+                grid-row-start: 13;
+                grid-row-end: 17;
+                overflow: hidden; 
+                opacity:50%;
+                z-index:10;
+            }
+            /* EMAIL */
+            .email_text {
+                grid-column-start: 44;
+                grid-column-end: 59;
+                grid-row-start: 7;
+                grid-row-end: 11;
+                overflow: hidden;
+            }
+            
+            #email_zapolni {
+                grid-column-start: 40;
+                grid-column-end: 63;
+                grid-row-start: 12;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 41;
+                grid-column-end: 62;
+                grid-row-start: 13;
+                grid-row-end: 17;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ГОРОД */
+            .city_text {
+                grid-column-start: 66;
+                grid-column-end: 98;
+                grid-row-start: 7;
+                grid-row-end: 11;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_city_text {
+                grid-column-start: 66;
+                grid-column-end: 98;
+                grid-row-start: 7;
+                grid-row-end: 11;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #city_zapolni {
+                grid-column-start: 70;
+                grid-column-end: 95;
+                grid-row-start: 12;
+                grid-row-end: 20;
+                overflow: hidden;
+            }
+            .city_form {
+                grid-column-start: 71;
+                grid-column-end: 94;
+                grid-row-start: 13;
+                grid-row-end: 17;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            /* ОТПРАВКА */
+            .otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_otpravka_text {
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #pochta_rossii {
+                grid-column-start: 11;
+                grid-column-end: 33;
+                grid-row-start: 33;
+                grid-row-end: 36;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #sdek {
+                grid-column-start: 11;
+                grid-column-end: 18;
+                grid-row-start: 39;
+                grid-row-end: 42;
+                overflow: hidden;
+                z-index:2;  
+            }
+
+            #drugoe {
+                grid-column-start: 11;
+                grid-column-end: 23;
+                grid-row-start: 45;
+                grid-row-end: 48;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #english_drugoe {
+                grid-column-start: 11;
+                grid-column-end: 23;
+                grid-row-start: 45;
+                grid-row-end: 48;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .otpravka_form {
+                grid-column-start: 5;
+                grid-column-end: 9;
+                grid-row-start: 30;
+                grid-row-end: 50;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ОПЛАТА */
+            .payment_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_payment_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            #rub {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 32;
+                grid-row-end: 35;
+                overflow: hidden;
+                z-index:2;
+                 
+                
+            }
+
+            #usd {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 37;
+                grid-row-end: 40;
+                overflow: hidden;
+                z-index:2;
+               
+                
+            }
+
+            #btc {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 42;
+                grid-row-end: 45;
+                overflow: hidden;
+                z-index:2;
+              
+                
+            }
+
+            #eth {
+                grid-column-start: 67;
+                grid-column-end: 73;
+                grid-row-start: 47;
+                grid-row-end: 50;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #usdt {
+                grid-column-start: 67;
+                grid-column-end: 75;
+                grid-row-start: 53;
+                grid-row-end: 56;
+                overflow: hidden;
+                z-index:2;    
+            }
+
+            .payment_form {
+                grid-column-start: 59;
+                grid-column-end: 67;
+                grid-row-start: 28;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            /* ЛУЧШЕ СВЯЗАТЬСЯ */
+            .better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 60;
+                grid-row-end: 65;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_better_text {
+                grid-column-start: 5;
+                grid-column-end: 90;
+                grid-row-start: 60;
+                grid-row-end: 65;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .better_form {
+                grid-column-start: 5;
+                grid-column-end: 15;
+                grid-row-start: 65;
+                grid-row-end: 83;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #telegram {
+                grid-column-start: 14;
+                grid-column-end: 35;
+                grid-row-start: 68;
+                grid-row-end: 72;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #instagram {
+                grid-column-start: 14;
+                grid-column-end: 35;
+                grid-row-start: 74;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            #wup {
+                grid-column-start: 14;
+                grid-column-end: 30;
+                grid-row-start: 80;
+                grid-row-end: 84;
+                overflow: hidden;
+            }
+            
+            #better_zapolni {
+                grid-column-start: 8;
+                grid-column-end: 33;
+                grid-row-start: 87;
+                grid-row-end: 95;
+                overflow: hidden;
+            }
+
+            .better_more {
+                grid-column-start: 9;
+                grid-column-end: 32;
+                grid-row-start: 89;
+                grid-row-end: 93;
+                opacity: 50%;
+                overflow: hidden;
+            }
+
+            /* KOMENT */
+            .koment_text {
+                grid-column-start: 70;
+                grid-column-end: 95;
+                grid-row-start: 74;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_koment_text {
+                grid-column-start: 70;
+                grid-column-end: 95;
+                grid-row-start: 74;
+                grid-row-end: 78;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .koment_zapolni {
+                grid-column-start: 71;
+                grid-column-end: 94;
+                grid-row-start: 80;
+                grid-row-end: 88;
+                overflow: hidden;
+            }
+            .koment_more {
+                grid-column-start: 72;
+                grid-column-end: 93;
+                grid-row-start: 82;
+                grid-row-end: 86;
+                overflow: hidden;
+                opacity: 50%;
+            }
+
+            .atom {
+                grid-column-start: 40;
+                grid-column-end: 65;
+                grid-row-start: 86;
+                grid-row-end: 97;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_atom {
+                grid-column-start: 40;
+                grid-column-end: 65;
+                grid-row-start: 86;
+                grid-row-end: 97;
+                overflow: hidden;
+                z-index:1;
+                opacity:0;
+            }
+
+            .close {
+                grid-column-start: 95;
+                grid-column-end: 98;
+                grid-row-start: 2;
+                grid-row-end: 5;
+                overflow: hidden;
+            }
+
+            input[type="radio"] {
+                border: 2px solid #999;
+                width: 100%;
+                height: 0.9em;
+                color:black;
+                margin: 0.7em;
+            }   
+        }
+
+
     </style>
 
-    
-        <form action = '{% url "home" %}' method = "post">
-            
-            {% csrf_token %}
-            <div class="gol">
-                <input type="hidden" id="eye" name="eye" value="eye">  
-                <h2>Оставьте заявку, мы пришлем вам реквизиты</h2>
-                <h1>Введите cвоё имя:</h1>
-                <input type="text" name = 'zayavka-name' >
-                <h1>Электронный адрес</h1>
-                <input type="email" name = 'zayavka-email' id = 'zayavka-email'>
-                <h1>Город:</h1>
-                <input type="text" name = 'zayavka-city' id = 'zayavka-city'>
-
-                <h1>Выберите способ отправления:</h1>
-                <p><input type="checkbox" name="otpravka" id="otpravka1" checked>Почта России<Br>
-                <input type="checkbox" name="otpravka" id="otpravka2">СДЭК<Br>
+        {% if eye %}
+        <div >
+            <form class="content" action = '{% url "demo4" %}' method = "post">
+                {% csrf_token %}
+                    
+                    <!-- CLOSE -->
+                    <div class = 'close'>
+                        <a href = '{% url "demo4" %}'>
+                            <img src = "/media/works/eye/zayavka/x.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                    
+                        </a>
+                    </div>                    
                 
-                <p><b>Выберите способ оплаты</b></p>
-                <p><input type="checkbox" name="payment" id="pay1" checked>Сбербанк<Br>
-                <input type="checkbox" name="payment" id="pay2">Bitcoin<Br>
-                <input type="checkbox" name="payment" id="pay3">Etherium<Br> 
-                <input type="checkbox" name="payment" id="pay4">Cardano<Br> 
-                <input type="checkbox" name="payment" id="pay5">DOGE<Br>
-                <input type="checkbox" name="payment" id="pay6">USDT</p>
 
-                <h1>Оставьте дополнительные контакты для связи:</h1>
-                <h1>Номер телефона:</h1>
-                <input type="textarea" name = 'phone_number' id='phone_number'>                    
-                <h1>TG</h1>
-                <input type="textarea" name = 'telegram' id='telegram'>
-                <h1>Whats Up</h1>
-                <input type="textarea" name = 'whats_up' id = 'whats_up'>
-                <h1>INST</h1>
-                <input type="textarea" name = 'inst' id = 'inst'>
+                    <!-- ИМЯ -->
+                    <div class = 'name_text'>
+                        <img src = '/media/works/eye/zayavka/name.png' onmouseenter = ZayavkaName_SwitchToEnglish() onmouseleave = ZayavkaName_BackToRussian() style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
+                    </div>  
+                    
+                    <div class = 'english_name_text'>
+                        <img src = '/media/works/eye/zayavka/english/english_name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
+                    </div>
 
+                    <img id = 'name_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'z-index:1; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                    <div class = 'name_form'>
+                        <input type="text" name = 'zayavka-name' id = 'zayavka-name' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' required>
+                    </div>
 
-                <input type="submit">
+                    <!-- ПОЧТА -->
+                    <div class = 'email_text'>
+                        <img src = '/media/works/eye/zayavka/email.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                    </div> 
+
+                    <img id = 'email_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                    <div class="email_form">
+                        <input type="email" name = 'zayavka-email' id = 'zayavka-email' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                    </div>
+                    
+                    <!-- ГОРОД -->
+                    <div class = 'city_text'>
+                        <img src = '/media/works/eye/zayavka/gorod.png' onmouseenter = ZayavkaCity_SwitchToEnglish() onmouseleave = ZayavkaCity_BackToRussian() style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                    </div> 
+
+                    <div class = 'english_city_text'>
+                        <img src = '/media/works/eye/zayavka/english/english_gorod.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                    </div> 
+
+                    <img id = 'city_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                    <div class="city_form">    
+                        <input type="text" name = 'zayavka-city' id = 'zayavka-city' required style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                    </div>
+
+                    <!-- ОТПРАВКА -->
+                    <div class = 'otpravka_text' onmouseenter = ZayavkaOtpravka_SwitchToEnglish() onmouseleave = ZayavkaOtpravka_BackToRussian()>
+                        <img src = '/media/works/eye/zayavka/dostavka.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                    </div> 
+
+                    <div class = 'english_otpravka_text'>
+                        <img src = '/media/works/eye/zayavka/english/english_dostavka.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                    </div> 
+                    
+                    <div class="otpravka_form" style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>    
+                        <div>
+                            <label>
+                                <input type="radio" name="otpravka" id="otpravka1" value = 'Почта России' style = 'cursor: pointer;' required>
+                                <img id = 'pochta_rossii' src = '/media/works/eye/zayavka/pr.png' style = 'margin-left: 2vw; max-width: 85%; max-height: 85%;min-width: 85%; min-height: 85%;'>                        
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>                            
+                                <input type="radio" name="otpravka" id="otpravka2" value = 'СДЭК' style = 'cursor: pointer;' >
+                                <img id = 'sdek' src = '/media/works/eye/zayavka/sdek.png' style = 'margin-left: 2vw;max-width: 40%; max-height: 40%; min-width: 40%; min-height: 40%;'>                        
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="otpravka" id="otpravka3" value = 'Другое' style = 'cursor: pointer;' onclick = words_appears.play()>
+                                <img id = 'drugoe' src = '/media/works/eye/zayavka/drug.png' onmouseenter = ZayavkaDrugoe_SwitchToEnglish() onmouseleave = ZayavkaDrugoe_BackToRussian()  style = 'margin-left:2vw; max-width: 55%; max-height: 55%;min-width: 55%; min-height: 55%;'>                                               
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- ОПЛАТА -->
+                    <div class = 'payment_text' onmouseenter = ZayavkaPayment_SwitchToEnglish() onmouseleave = ZayavkaPayment_BackToRussian()>
+                        <img src = '/media/works/eye/zayavka/oplata.png' style = 'max-width: 100%; max-height: 100%;'>
+                    </div> 
+
+                    <div class = 'english_payment_text'>
+                        <img src = '/media/works/eye/zayavka/english/english_oplata.png' style = 'max-width: 100%; max-height: 100%;'>
+                    </div>
+                
+                    <div class="payment_form">
+                        <div>
+                            <label> 
+                                <input type="radio" name="payment" id="pay1" value = 'RUB' style = 'cursor: pointer' required>
+                                <img id = 'rub' src = '/media/works/eye/zayavka/money/rub.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                                                
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="payment" id="pay4" value = 'USD' style = 'cursor: pointer'> 
+                                <img id = 'usd' src = '/media/works/eye/zayavka/money/usd.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                                                
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="payment" id="pay2" value = 'BTC' style = 'cursor: pointer'>
+                                <img id = 'btc' src = '/media/works/eye/zayavka/money/btc.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                                                
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="payment" id="pay3" value = 'ETH' style = 'cursor: pointer'> 
+                                <img id = 'eth' src = '/media/works/eye/zayavka/money/eth.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                                                
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="payment" id="pay6" value = 'USDT' style = 'cursor: pointer'>
+                                <img id = 'usdt' src = '/media/works/eye/zayavka/money/usdt.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                                              
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- ЛУЧШЕ СВЯЗАТЬСЯ -->
+                    <div class = 'better_text' onmouseenter = ZayavkaBetter_SwitchToEnglish() onmouseleave = ZayavkaBetter_BackToRussian()>
+                        <img src = '/media/works/eye/zayavka/better.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    </div>
+
+                    <div class = 'english_better_text'>
+                        <img src = '/media/works/eye/zayavka/english/english_better.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    </div>
+                    
+                    <div class = 'better_mob' onmouseenter = ZayavkaBetterMob_SwitchToEnglish() onmouseleave = ZayavkaBetterMob_BackToRussian()>
+                        <img src = '/media/works/eye/zayavka/mobile/mob.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    </div>
+
+                    <div class = 'english_better_mob'>
+                        <img src = '/media/works/eye/zayavka/mobile/english_mob.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    </div>
+
+                    <div class="better_form" style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>    
+                        <div>
+                            <label>    
+                                <input type="radio" name="better" id="better1" value = 'TELEGRAM' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                                <img id = 'telegram' src = '/media/works/eye/zayavka/telegram.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                                                
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="better" id="better2" value = 'INSTAGRAM' style = 'cursor: pointer'>
+                                <img id = 'instagram' src = '/media/works/eye/zayavka/instagram.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>                                                
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="radio" name="better" id="better3" value = 'WHATS UP' style = 'cursor: pointer'>
+                                <img id = 'wup' src = '/media/works/eye/zayavka/wup.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>      
+                            </label>
+                        </div>
+                    </div>
+
+                    <img id = 'better_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    <div class = 'better_more'>
+                        <input type="text" name = 'better_more' id = 'better_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                    </div>
+
+                    <!-- КОММЕНТАРИЙ -->
+                    
+                    <div class = 'koment_text' onmouseenter = ZayavkaKoment_SwitchToEnglish() onmouseleave = ZayavkaKoment_BackToRussian()>
+                        <img src = '/media/works/eye/zayavka/koment.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    </div>
+
+                    <div class = 'english_koment_text'>
+                        <img src = '/media/works/eye/zayavka/english/english_koment.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    </div>
+
+                    <div class = 'koment_zapolni'>
+                        <img src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                    </div>
+                    <div class = 'koment_more'>
+                        <input type="text" name = 'koment_more' id = 'koment_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                    </div>
+
+                    <!-- ОТПРАВЛЯЙ -->
+                    <div class="atom" onmouseenter = ZayavkaAtom_SwitchToEnglish() onmouseleave = ZayavkaAtom_BackToRussian()>
+                        <input type = 'image' type = 'submit' src = "/media/works/eye/zayavka/atom.png" style = 'opacity:100%;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                    </div>
+                    
+                    <div class="english_atom">
+                        <input type = 'image' type = 'submit' src = "/media/works/eye/zayavka/english/english_atom.png" style = 'opacity:100%;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                    </div>
+                    
+            
+            </form>
+        </div>
+        {% else %}
+
+    <div class="container">
+        <div class="first_class">
+
+            <div class="razmer-image">
+                <img src = "/media/works/eye/first_part/text/razmer.png" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
             </div>
-        </form>
+            
+            <div class="razmer-english-image">
+                <img src = "/media/works/eye/first_part/text/english/razmer-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; min-width:100%;min-height:100%;  overflow:hidden;'>
+            </div>
 
- 
+            <div class="cifri-image">
+                <img src = "/media/works/eye/first_part/text/25.png" style = 'max-width:100%; max-height:100%;min-width:100%;min-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="materials-image">
+                <img src = "/media/works/eye/first_part/text/materials.png"  onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="materials-english-image">
+                <img src = "/media/works/eye/first_part/text/english/materials-english.png" style = 'max-width:100%; max-height:100%; min-width:100%; min-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="farfor-image">
+                <img src = "/media/works/eye/first_part/text/farfor.png" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="farfor-english-image">
+                <img src = "/media/works/eye/first_part/text/english/farfor-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="akril-image">
+                <img src = "/media/works/eye/first_part/text/akril.png" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'max-width:100%; max-height:100%; min-width:100%; min-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="akril-english-image">
+                <img src = "/media/works/eye/first_part/text/english/akril-english.png" style = 'max-width:100%; max-height:100%; overflow:hidden; min-width:100%; min-height:100%;'>
+            </div>
+
+            <div class="cena-image">
+                <img src = "/media/works/eye/first_part/text/cena.png" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'max-width:100%; max-height:100%; min-width:100%; min-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="cena-english-image">
+                <img src = "/media/works/eye/first_part/text/english/cena-english.png" style = 'max-width:100%; max-height:100%; min-width:100%; min-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="price-image">
+                <img src = "/media/works/eye/first_part/text/price.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="button-image">
+                <img src = "/media/works/eye/first_part/buy_but/eye-btn.png"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="text-buy-image" >
+                <img src = "/media/works/eye/first_part/buy_but/butbuttton.png" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="glaz-buy-image">
+                <img src = "/media/works/eye/first_part/buy_but/glaz_buy.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+            
+            <div class="first-buy-border" >
+                <form action = '{% url "demo4" %}' method = "post">
+                   
+                    {% csrf_token %}
+                        <button style = 'cursor:pointer; opacity:0%'>
+                            
+                            <!-- НАКИНУТЬ БАТОН НА РАМКУ КНОПКИ И СДЕЛАТЬ ЕЕ САМЫМ ВЫСОКИМ z-шndex -->
+                            <img name = 'eye' src = "/media/works/eye/first_part/buy_but/white-border.png" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                        </button>
+                    </form>
+            </div>
+
+            <div class="second-buy-border">
+                <img src = "/media/works/eye/first_part/buy_but/red-border.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+            
+            <div class="third-buy-border">
+                <img src = "/media/works/eye/first_part/buy_but/blue-border.png" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+
+        </div>
+        
+        <div class="second_class">
+                <div class="borders">
+                   
+                    <svg style = 'min-width:100%; min-height:100% ;max-width:100%; max-height:100%;' id = 'demo-svg' viewBox="0 0 1114.3 763.79">
+                        <path stroke = 'rgb(70, 43, 226)' id = 'forward-svg'  stroke-width="1" fill = 'none' d="M1105.62,9q-.19,355.91-.8,711.8l1.09.78Q577.47,721,49,721q.17-355.84.7-711.72l-1.09-.78Q577.09,9.07,1105.62,9Z"/> 
+                        <path stroke = 'rgb(228, 213, 241)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M47.21,721.11q.18-355.91.8-711.8l-1.1-.78Q577,9.12,1107.2,9.08q-.17,355.86-.7,711.73l1.09.78Q577.43,721.05,47.21,721.11Z"/>
+                        <path stroke = 'rgb(143, 56, 194)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M1107.88,722.39q-530.21-.14-1060.42-.54l-1.16.74Q47.17,365,47.13,7.43q530.15.12,1060.3.48l1.16-.74Q1107.8,364.77,1107.88,722.39Z"/>
+                        <path stroke = 'rgb(125, 67, 179)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M46,5.78q531.21.13,1062.41.55l1.16-.74q-.87,359.15-.83,718.32-531.13-.12-1062.3-.48l-1.16.74Q46.11,365,46,5.78Z"/>
+                        <path stroke = 'rgb(190, 116, 166)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M43.89,725.1q.18-360,.8-720l-1.1-.79q533.79.6,1067.61.56-.17,360-.71,719.94l1.1.79Q577.77,725,43.89,725.1Z"/>
+                        <path stroke = 'rgb(193, 149, 235)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M1110.3,4.79q-.19,360-.81,720l1.1.79Q577.31,725,44,725q.17-360,.71-719.94l-1.1-.79Q576.92,4.86,1110.3,4.79Z"/>  
+                        <path stroke = 'rgb(204, 137, 198)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M1111.87,727.38q-534.57-.12-1069.13-.55l-1.17.75q.87-362.83.83-725.71,534.5.12,1069,.49l1.17-.75Q1111.78,364.48,1111.87,727.38Z"/>
+                        <path stroke = 'rgb(170, 122, 216)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M41.48.55q535.54.38,1071.09,1l1.17-.75q-1,363.86-1.17,727.74-535.47-.36-1071-1l-1.17.75Q41.41,364.47,41.48.55Z"/> 
+                        <path stroke = 'rgb(108, 52, 160)'  id = 'backward-svg' stroke-width="1" fill = 'none' d="M1103.88,720.39q-526.56-.14-1053.14-.54l-1.15.74q.87-355.53.82-711.1,526.5.12,1053,.47l1.15-.73Q1103.8,364.79,1103.88,720.39Z"/> 
+                        <path stroke = 'rgb(184, 129, 157)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M1100.89,719q-523.58-.12-1047.16-.53l-1.14.73q.85-354.18.82-708.38,523.5.11,1047,.47l1.14-.73Q1100.8,364.8,1100.89,719Z"/> 
+                        <path stroke = 'rgb(250, 246, 248)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M54.31,717.11q.19-352.44.79-704.88L54,11.46Q577.1,12,1100.21,12q-.17,352.4-.7,704.81l1.08.77Q577.48,717.05,54.31,717.11Z"/>
+                        <path stroke = 'rgb(96, 47, 119)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M1098.3,13.06q-.18,351.32-.78,702.64l1.07.76q-521.07-.57-1042.18-.54.17-351.27.69-702.57L56,12.59Q577.15,13.11,1098.3,13.06Z"/> 
+                    </svg>
+                    
+                </div>
+               
+                <div class="nazvanie">
+                    <img src = "/media/works/eye/second_part/glaz_logo.png" style = 'max-width:100%;max-height:100%;'>
+                </div>
+
+                <div class="image_slider">
+                    
+                    <a href = "/media/works/eye/second_part/big_slideshow/1.png"
+     
+                    data-fancybox="images-preview" 
+                    data-width="2100" data-height="900"
+                    data-thumb="/media/works/eye/second_part/big_slideshow/minis/1.png">
+
+                        <img src = "/media/works/eye/second_part/main_slideshow/pics/1.png"  class = 'slider-img' style = 'transform: scale(0.9); position:relative; margin-top:9.7%; max-height: 100%; max-width:100%; min-width: 100%; overflow:hidden; justify-content: center;'>
+                    </a>
+
+                    <div style="display: none;">
+                        <a href="/media/works/eye/second_part/big_slideshow/2.png" data-fancybox="images-preview" 
+                           data-width="1600" data-height="900" style = 'background-color: black;'
+                           data-thumb="/media/works/eye/second_part/big_slideshow/minis/2.png"></a>
+                      
+                        <a href="/media/works/eye/second_part/big_slideshow/3.png" data-fancybox="images-preview" 
+                           data-width="1600" data-height="900"
+                           data-thumb="/media/works/eye/second_part/big_slideshow/minis/3.png"></a>
+                      
+                        <a href="/media/works/eye/second_part/big_slideshow/4.png" data-fancybox="images-preview" 
+                           data-width="900" data-height="900"
+                           data-thumb="/media/works/eye/second_part/big_slideshow/minis/4.png"></a>
+                      
+                        <a href="/media/works/eye/second_part/big_slideshow/5.png" data-fancybox="images-preview" 
+                           data-width="1600" data-height="900"
+                           data-thumb="/media/works/eye/second_part/big_slideshow/minis/5.png"></a>
+
+                      </div> 
+                      
+                
+                </div>
+
+                <div class="arrow_left" style = 'position:relative; justify-content: center;'>
+                    <img src = "/media/works/eye/second_part/main_slideshow/elements/arrow_left.png" style = 'cursor:pointer;max-width:100%;max-height:100%;min-width:100%;min-height:100%;'  onclick="prev(), arrow_left.play()">
+                </div>
+
+                <div class="arrow_right" style = 'position:relative; justify-content: center;'>
+                    <img src = "/media/works/eye/second_part/main_slideshow/elements/arrow_right.png" style = 'cursor:pointer;max-width:100%;max-height:100%;min-width:100%;min-height:100%;' onclick="next(),arrow_right.play()">
+                </div>
+
+                <div class="logotip" style = 'position:relative; justify-content: center;'>
+                    <img src = "/media/works/eye/second_part/logotip.png" style = 'cursor:pointer;max-width:100%;max-height:100%;' data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+                </div> 
+
+                <div id="morphing-content" class="hidden">
+
+                    <div class="welcome_home">
+                        <a href = "{% url 'home' %}" style = 'outline : none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/elements/home.png" id = 'home'>
+                        </a>
+                    </div>
+                    
+                    <div class = 'put' onmouseenter = put_onmove.play() onmouseleave = put_set.play()>
+                        <a href = "{% url 'golova' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/works/put.png" id = 'put'>
+                        </a>
+                    </div>
+
+                    <div class = 'zakis' onmouseenter = zakis_onmove.play() onmouseleave = zakis_set.play()>
+                        <a href = "{% url 'zakis' %}" style = 'outline : none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/works/zakis.png" id = 'zakis'>
+                        </a>
+                    </div>
+
+                    <div class = 'glaz'  onmouseenter = glaz_onmove.play() onmouseleave = glaz_set.play()>
+                        <a href = "{% url 'eye' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/works/glaz.png" id = 'glaz'>
+                        </a>
+                    </div>
+
+                    <div class = 'kosmos' onmouseenter = kosmos_onmove.play() onmouseleave = kosmos_set.play()>
+                        <a href = "{% url 'kosmos' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/works/kosmos.png" id = 'kosmos'>
+                        </a>
+                    </div>
+
+                    <div class = 'maski' onmouseenter = maski_onmove.play() onmouseleave = maski_set.play()>
+                        <a href = "{% url 'maski' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/works/maski.png" id = 'maski'>
+                        </a>
+                    </div>
+
+                    <div class = 'ohboy' onmouseenter = ohboy_onmove.play() onmouseleave = ohboy_set.play()>
+                        <a href = "{% url 'vibe' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/works/vibe.png" id = 'ohboy' style = 'z-index:25;'>
+                        </a>
+                    </div>
+                        
+                    <div class = 'inst'>
+                        <a href = 'https://instagram.com/delayu.svoye.delo' style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/elements/inst.png" id = 'inst'>
+                        </a>
+                    </div>
+
+                    <div class = 'tg'>
+                        <a href = 'https://t.me/margaritss' style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <img src = "/media/every_hidden_page/elements/th-new.png" id = 'tg'>
+                        </a>
+                    </div>
+
+                    <!-- POP-UP IMAGES -->
+                    <img src = "/media/every_hidden_page/works/photoes/zakis.png" id = 'mini_zakis'>
+                    <img src = "/media/every_hidden_page/works/photoes/eye.png" id = 'mini_glaz'>
+                    <img src = "/media/every_hidden_page/works/photoes/golova.png" id = 'mini_put'>
+                    <img src = "/media/every_hidden_page/works/photoes/kosmos.png" id = 'mini_kosmos'>
+                    <img src = "/media/every_hidden_page/works/photoes/maski.png" id = 'mini_maski'>
+                    <img src = "/media/every_hidden_page/works/photoes/vibe.png" id = 'mini_vibe'>
+
+                </div>  
+            </div>
+
+    </div>
+    {% endif %}
+    
+
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -143,7 +4322,808 @@
 
     <script>
 
-   </script>
+    var slider_img = document.querySelector('.slider-img');
+    var images = ['1.png','2.png', '3.png', '4.png', '5.png'];
+    var i =0; 
+
+    function prev() {
+        if (i<=0) i = images.length;
+        b=i
+        i--;
+        return setImg();
+    }
+
+    function next() {
+        if (i >= images.length - 1) i = -1;
+        b = i
+        i++;
+        return setImg();
+    }
+
+    function setImg(){
+        return slider_img.setAttribute('src', "/media/works/eye/second_part/main_slideshow/pics/" + images[i])
+    }
+
+    function borderMove(){
+
+        var border_forward_animation =  anime({
+            targets: '#forward-svg',
+            strokeDashoffset: [anime.setDashoffset,0],
+            easing: 'easeInOutSine',
+            duration: 20500,
+        
+            direction:'alternate',
+            delay: function(el, i) { return i * 250 },
+            
+            loop: true,
+        });
+
+        var border_backward_animation =  anime({
+            targets: '#backward-svg',
+            strokeDashoffset: [0, anime.setDashoffset],
+            easing: 'easeInOutSine',
+            duration: 20500,
+        
+            direction:'alternate',
+            delay: function(el, i) { return i * 250 },
+            
+            loop: true,
+        });
+    } borderMove()
+
+    var arrow_left = anime({
+        targets:'.arrow_left',
+        scale:1.1,
+        duration:450,
+        autoplay:false,
+        loop:false,
+    })
+
+    var arrow_right = anime({
+        targets:'.arrow_right',
+        scale:1.1,
+        duration:450,
+        autoplay:false,
+        loop:false,
+    })
+
+    var motion_of_name =  anime({
+        targets: '.nazvanie',
+        translateY: {
+            value:15,
+            duration: 7500,
+        },
+        direction: 'alternate',
+        easing: 'easeInOutSine',
+        loop: true,
+    });
+
+    function buySwitchToEnglish() {
+        var english_buy_appears = anime({
+            targets:'.glaz-buy-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_buy = anime({
+            targets:'.text-buy-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function buyBackToRussian() {
+        var disappear_english_buy = anime({
+            targets:'.glaz-buy-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var buy_appears = anime({
+            targets:'.text-buy-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function razmerSwitchToEnglish() {
+        var english_razmer_appears = anime({
+            targets:'.razmer-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_razmer = anime({
+            targets:'.razmer-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+    }
+
+    function razmerBackToRussian() {
+        var disappear_english_razmer = anime({
+            targets:'.razmer-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var razmer_appears = anime({
+            targets:'.razmer-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+
+    }
+
+    function materialsSwitchToEnglish() {
+        var english_materials_appears = anime({
+            targets:'.materials-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_materials = anime({
+            targets:'.materials-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function materialsBackToRussian() {
+        var disappear_english_materials = anime({
+            targets:'.materials-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var materials_appears = anime({
+            targets:'.materials-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforSwitchToEnglish() {
+        var english_farfor_appears = anime({
+            targets:'.farfor-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_farfor = anime({
+            targets:'.farfor-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforBackToRussian() {
+        var disappear_english_farfor = anime({
+            targets:'.farfor-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var farfor_appears = anime({
+            targets:'.farfor-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilSwitchToEnglish() {
+        var english_akril_appears = anime({
+            targets:'.akril-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_akril = anime({
+            targets:'.akril-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilBackToRussian() {
+        var disappear_english_akril = anime({
+            targets:'.akril-english-image',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var akril_appears = anime({
+            targets:'.akril-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function cenaSwitchToEnglish() {
+        var english_cena_appears = anime({
+            targets:'.cena-english-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_cena = anime({
+            targets:'.cena-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function cenaBackToRussian() {
+        var disappear_english_cena = anime({
+            targets:'.cena-english-image',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var cena_appears = anime({
+            targets:'.cena-image',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    // ЗАЯВКА
+
+    function ZayavkaName_SwitchToEnglish() {
+        var english_name_text_appears = anime({
+            targets:'.english_name_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_name_text = anime({
+            targets:'.name_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaName_BackToRussian() {
+        var disappear_english_name_text = anime({
+            targets:'.english_name_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var name_text_appears = anime({
+            targets:'.name_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaCity_SwitchToEnglish() {
+        var english_city_text_appears = anime({
+            targets:'.english_city_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_city_text = anime({
+            targets:'.city_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaCity_BackToRussian() {
+        var disappear_english_city_text = anime({
+            targets:'.english_city_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var city_text_appears = anime({
+            targets:'.city_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+    
+    function ZayavkaOtpravka_SwitchToEnglish() {
+        var english_otpravka_text_appears = anime({
+            targets:'.english_otpravka_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_otpravka_text = anime({
+            targets:'.otpravka_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaOtpravka_BackToRussian() {
+        var disappear_english_otpravka_text = anime({
+            targets:'.english_otpravka_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var otpravka_text_appears = anime({
+            targets:'.otpravka_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaDrugoe_SwitchToEnglish() {
+        var english_drugoe_appears = anime({
+            targets:'#english_drugoe',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_drugoe = anime({
+            targets:'#drugoe',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaDrugoe_BackToRussian() {
+        var disappear_english_drugoe= anime({
+            targets:'#english_drugoe',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var drugoe_appears = anime({
+            targets:'#drugoe',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaPayment_SwitchToEnglish() {
+        var english_payment_text_appears = anime({
+            targets:'.english_payment_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_payment_text = anime({
+            targets:'.payment_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaPayment_BackToRussian() {
+        var disappear_english_payment_text = anime({
+            targets:'.english_payment_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var payment_text_appears = anime({
+            targets:'.payment_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaBetter_SwitchToEnglish() {
+        var english_better_text_appears = anime({
+            targets:'.english_better_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_better_text = anime({
+            targets:'.better_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaBetter_BackToRussian() {
+        var disappear_english_better_text = anime({
+            targets:'.english_better_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var better_appears = anime({
+            targets:'.better_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaBetterMob_SwitchToEnglish() {
+        var english_better_mob_appears = anime({
+            targets:'.english_better_mob',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_better_mob = anime({
+            targets:'.better_mob',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaBetterMob_BackToRussian() {
+        var disappear_english_better_mob = anime({
+            targets:'.english_better_mob',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var better_mob_appears = anime({
+            targets:'.better_mob',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaKoment_SwitchToEnglish() {
+        var english_koment_text_appears = anime({
+            targets:'.english_koment_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_koment_text = anime({
+            targets:'.koment_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaKoment_BackToRussian() {
+        var disappear_english_koment_text = anime({
+            targets:'.english_koment_text',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var koment_text_appears = anime({
+            targets:'.koment_text',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaAtom_SwitchToEnglish() {
+        var english_atom_appears = anime({
+            targets:'.english_atom',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_atom = anime({
+            targets:'.atom',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function ZayavkaAtom_BackToRussian() {
+        var disappear_english_atom = anime({
+            targets:'.english_atom',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var atom_appears = anime({
+            targets:'.atom',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+    
+
+    // LOGO PAGE STARTS HERE
+
+    var minis = ['#mini_zakis', '#mini_glaz', '#mini_put', '#mini_kosmos', "#mini_maski", '#mini_vibe']
+    var minis_set = anime.set(minis,{
+        opacity:0,
+    })
+
+    var zakis_set = anime({
+        targets:'#mini_zakis',
+        opacity:0,
+        autoplay:false,
+    })
+    var zakis_onmove = anime({
+        targets: '#mini_zakis',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var glaz_set = anime({
+        targets:'#mini_glaz',
+        opacity:0,
+        autoplay:false,
+    })
+    var glaz_onmove = anime({
+        targets: '#mini_glaz',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var put_set = anime({
+        targets:'#mini_put',
+        opacity:0,
+        autoplay:false,
+    })
+    var put_onmove = anime({
+        targets: '#mini_put',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var kosmos_set = anime({
+        targets:'#mini_kosmos',
+        opacity:0,
+        autoplay:false,
+    })
+    var kosmos_onmove = anime({
+        targets: '#mini_kosmos',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var maski_set = anime({
+        targets:'#mini_maski',
+        opacity:0,
+        autoplay:false,
+    })
+    var maski_onmove = anime({
+        targets: '#mini_maski',
+        opacity:1,
+        autoplay:false,
+    })
+
+    var ohboy_set = anime({
+        targets:'#mini_vibe',
+        opacity:0,
+        autoplay:false,
+    })
+    var ohboy_onmove = anime({
+        targets: '#mini_vibe',
+        opacity:1,
+        autoplay:false,
+    })    
+
+    // ЭФФЕКТ ГЛАВНОГО МЕНЮ ИЗ ЛОГОТИПА
+    // Step 1: Create jQuery plugin
+            // ============================
+
+    $.fn.fancyMorph = function( opts ) {
+
+        var Morphing = function( $btn, opts ) {
+        var self = this;
+
+        self.opts = $.extend({
+        animationEffect : false,
+        infobar    : false,
+        buttons    : ['close'],
+        smallBtn   : false,
+        touch      : false,
+        baseClass  : 'fancybox-morphing',
+        afterClose : function() {
+            self.close();
+        }
+        }, opts);
+
+        self.init( $btn );
+        };
+
+        Morphing.prototype.init = function( $btn ) {
+        var self = this;
+
+        self.$btn = $btn.addClass('morphing-btn');
+
+        self.$clone = $('<div class="morphing-btn-clone" />')
+        .hide()
+        .insertAfter( $btn );
+
+        // Add wrapping element and set initial width used for positioning
+        $btn.wrap( '<span class="morphing-btn-wrap"></span>' ).on('click', function(e) {
+        e.preventDefault();
+
+        self.start();
+        });
+
+        };
+
+        Morphing.prototype.start = function() {
+        var self = this;
+
+        if ( self.$btn.hasClass('morphing-btn_circle') ) {
+        return;
+        }
+
+        // Set initial width, because it is not possible to start CSS transition from "auto"
+        self.$btn.width( self.$btn.width() ).parent().width( self.$btn.outerWidth() );
+
+        self.$btn.off('.fm').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
+
+        if ( e.originalEvent.propertyName === 'width' ) {
+            self.$btn.off('.fm');
+
+            self.animateBg();
+        }
+
+        }).addClass('morphing-btn_circle');
+
+        };
+
+        Morphing.prototype.animateBg = function() {
+        var self = this;
+
+        self.scaleBg();
+
+        self.$clone.show();
+
+        // Trigger repaint
+        self.$clone[0].offsetHeight;
+
+        self.$clone.off('.fm').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
+        self.$clone.off('.fm');
+
+        self.complete();
+
+        }).addClass('morphing-btn-clone_visible');
+        };
+
+        Morphing.prototype.scaleBg = function() {
+        var self = this;
+
+        var $clone = self.$clone;
+        var scale  = self.getScale();
+        var $btn   = self.$btn;
+        var pos    = $btn.offset();
+
+        $clone.css({
+        top       : pos.top  + $btn.outerHeight() * 0.5 - ( $btn.outerHeight() * scale * 0.5 ) - $(window).scrollTop(),
+        left      : pos.left + $btn.outerWidth()  * 0.5 - ( $btn.outerWidth()  * scale * 0.5 ) - $(window).scrollLeft(),
+        width     : $btn.outerWidth()  * scale,
+        height    : $btn.outerHeight() * scale,
+        transform : 'scale(' + ( 1 / scale ) + ')'
+        });
+        };
+
+        Morphing.prototype.getScale = function() {
+        var $btn    = this.$btn,
+            radius  = $btn.outerWidth() * 0.5,
+            left    = $btn.offset().left + radius - $(window).scrollLeft(),
+            top     = $btn.offset().top  + radius - $(window).scrollTop(),
+            windowW = $(window).width(),
+            windowH = $(window).height();
+
+        var maxDistHor  = ( left > windowW / 2 ) ? left : ( windowW - left ),
+            maxDistVert = ( top > windowH / 2 )  ? top  : ( windowH - top );
+
+        return Math.ceil(Math.sqrt( Math.pow( maxDistHor, 2 ) + Math.pow( maxDistVert, 2 ) ) / radius );
+        };
+
+        Morphing.prototype.complete = function() {
+        var self = this;
+        var $btn = self.$btn;
+
+        $.fancybox.open({ src : $btn.data('src') || $btn.attr('href') }, self.opts);
+
+        $(window).on('resize.fm', function() {
+        //self.scaleBg();
+        });
+        };
+
+        Morphing.prototype.close = function() {
+        var self   = this;
+        var $clone = self.$clone;
+
+        self.scaleBg();
+
+        $clone.one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
+        $clone.hide();
+
+        self.$btn.removeClass('morphing-btn_circle');
+        });
+
+        $clone.removeClass('morphing-btn-clone_visible');
+
+        $(window).off('resize.fm');
+        };
+
+        // Init
+        this.each(function() {
+        var $this = $(this);
+
+        if ( !$this.data("morphing") ) {
+        $this.data( "morphing", new Morphing( $this, opts ) );
+        }
+
+        });
+
+        return this;
+        };
+
+
+        // Step 2: Start using it!
+        // =======================
+
+        $("[data-morphing]").fancyMorph({
+        hash : 'morphing'
+        });
+
+    </script>
 </body>
 
 </html>

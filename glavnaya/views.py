@@ -109,13 +109,13 @@ def demo4(request):
         zayavka_city = request.POST.get('zayavka-city', False)
         
         otpravka = request.POST.get('otpravka')
+        
         payment = request.POST.get('payment')
-
-        phone_number = request.POST.get('phone-number', False)
-        telegram = request.POST.get('telegram', False)
-        whats_up = request.POST.get('whats-up', False)
-        inst = request.POST.get('inst', False)    
-        comment = request.POST.get('comment', False)
+        
+        better = request.POST.get('better', False)
+        better_more = request.POST.get('better_more', False)
+  
+        koment = request.POST.get('koment', False)
 
         message = f"""Заявка на покупку работы: {eye},
         ИМЯ: {zayavka_name}, 
@@ -123,22 +123,24 @@ def demo4(request):
         Город: {zayavka_city}, 
         Отправка через: {otpravka},
         Оплата следующим способом: {payment},
-        Номер телефона: {phone_number},
-        Телега: {telegram},
-        ВАЦАП: {whats_up},
-        ИНСТ: {inst},
-        Комментарий к заказу: {comment}."""
+        Дополнительный способ связи: {better} : {better_more},
+        Комментарий к заказу: {koment}."""
+
         
-        send_mail (
-            eye, #subject
-            message, #message
-            zayavka_email, #from Email
-            ['archiforeverything@gmail.com'], #To Email
-            fail_silently=False,
-            )
-        return render(request, 'checker/demo4.html')
+        if zayavka_name == False:
+            return render(request, 'checker/demo4.html', {'eye':eye})
+        else:        
+            send_mail (
+                eye, #subject
+                message, #message
+                zayavka_email, #from Email
+                ['archiforeverything@gmail.com'], #To Email
+                fail_silently=False,
+                )
+            return render(request, 'home.html')
     else:
         return render(request, 'checker/demo4.html')
+
 
 def demo5(request):
     if request.method == 'POST':    
