@@ -19,7 +19,7 @@ SECRET_KEY = os.environ.get(
 # DEBUG = False
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = ['margarits-porcelain.herokuapp.com', 'marg-arita.herokuapp.com' '127.0.0.1']
+ALLOWED_HOSTS = ['marg-arita.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
