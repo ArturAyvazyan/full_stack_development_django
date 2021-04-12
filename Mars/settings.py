@@ -147,9 +147,9 @@ MEDIA_URL = '/media/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST_USER = 'archiforeverything@gmail.com'
-EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_PASSWORD = '14YojiYamamotorola88'
+EMAIL_HOST_PASSWORD = 'ritaonelove21century'
 EMAIL_USE_TLS = True #security layer
 
 db_from_env = dj_database_url.config(conn_max_age=500)

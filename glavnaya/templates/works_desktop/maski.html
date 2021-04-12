@@ -1990,17 +1990,17 @@
             opacity:0;
         }
 
-            #pochta_rossii {
-                margin-top:1vh;
-            }
+        #pochta_rossii {
+            max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%; margin-top:1vh;
+        }
 
-            #sdek {
-                margin-top:1vh;
-            }
+        #sdek {
+            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+        }
 
-            #drugoe {
-                margin-top:1vh;
-            }
+        #drugoe {
+            max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%; margin-top:1vh;
+        }
 
         .otpravka_form {
             grid-column-start: 13;
@@ -2032,25 +2032,25 @@
             opacity:0;
         }
         
-            #rub {
-                margin-top:1vh;
-            }
+        #rub {
+            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+        }
 
-            #usd {
-                margin-top:1vh;
-            }
+        #usd {
+            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+        }
                 
-            #btc {
-                margin-top:1vh;
-            }
+        #btc {
+            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+        }
 
-            #eth {
-                margin-top:1vh;
-            }
+        #eth {
+            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+        }
 
-            #usdt {
-                margin-top:1vh;
-            }
+        #usdt {
+            max-width: 30%; max-height: 30%; min-width: 30%; min-height: 30%; margin-top:1vh;
+        }
 
         .payment_form {
             grid-column-start: 68;
@@ -2095,15 +2095,15 @@
         }
 
         #telegram {
-            margin-left:1vw;
+            max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%; margin-left:1vw;
         }
 
         #instagram {
-            margin-left:1vw;
+            max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%; margin-left:1vw;
         }
 
         #wup {
-            margin-left:1vw;
+            max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%; margin-left:1vw;
         }
 
 
@@ -2111,7 +2111,7 @@
             grid-column-start: 12;
             grid-column-end: 35;
             grid-row-start: 72;
-            grid-row-end: 81;
+            grid-row-end: 86;
             overflow: hidden;
             z-index:2;
             transform: scale(1.2);
@@ -2120,8 +2120,8 @@
         #better_zapolni {
             grid-column-start: 7;
             grid-column-end: 26;
-            grid-row-start: 82;
-            grid-row-end: 89;
+            grid-row-start: 88;
+            grid-row-end: 95;
             overflow: hidden;
             z-index: 4;
         }
@@ -2129,12 +2129,13 @@
         .better_more {
             grid-column-start: 8;
             grid-column-end: 25;
-            grid-row-start: 84;
-            grid-row-end: 87;
+            grid-row-start: 90;
+            grid-row-end: 93;
             opacity: 50%;
             overflow: hidden;
             z-index: 5;
         }
+
 
         .inside_better {
             font-size: 35pt;
@@ -3663,6 +3664,11 @@
                         </label>
                     </div>
 
+                </div>
+
+                <img id = 'better_zapolni' src = '/media/works/maski/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
+                <div class = 'better_more'>
+                    <input type="text" name = 'better_more' id = 'better_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
                 </div>
 
                   <!-- КОММЕНТАРИЙ -->
