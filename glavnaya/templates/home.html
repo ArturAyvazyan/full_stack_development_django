@@ -253,8 +253,11 @@
             background: url("{% static '/homepage/backs.png' %}");
             background-size: cover;
             display:grid;
+            max-width: 100vw;
+            max-height: 100vh;
             min-width: 100vw;
             min-height: 100vh;
+            position: absolute;
         }
 
         .slide_one_container {
@@ -264,6 +267,9 @@
             overflow: hidden;
             max-width: 100vw;
             max-height: 100vh;
+            min-width: 100vw;
+            min-height: 100vh;
+            position: absolute;
         }
 
         .first_slide_first_box {
@@ -528,8 +534,11 @@
         #second_slide2 {
             background: url("{% static '/homepage/backs.png' %}");
             background-size: cover;
+            position: absolute;
             min-width: 100vw;
             min-height: 100vh;
+            max-width: 100vw;
+            max-height: 100vh;
         }
 
         .slide_two_container {
@@ -537,6 +546,9 @@
             grid-template-columns: repeat(100, 1fr);
             grid-template-rows: repeat(100, 1fr);
             overflow: hidden;
+            position: absolute;
+            min-width: 100vw;
+            min-height: 100vh;
             max-width: 100vw;
             max-height: 100vh;
         }
@@ -793,6 +805,9 @@
             overflow: hidden;
             max-width: 100vw;
             max-height: 100vh;
+            min-width: 100vw;
+            min-height: 100vh;
+            position: absolute;
         }
 
         .third_words {
