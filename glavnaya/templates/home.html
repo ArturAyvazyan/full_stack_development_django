@@ -166,6 +166,18 @@
 
         @media screen and (max-width: 600px), (max-device-width: 600px) {
             
+            .section {
+                display: inline-block;
+                font-size: 3em;
+                z-index: 1;
+                min-width: 100%;
+                min-height: 100%;
+                max-width: 100%;
+                max-height: 100%;
+                height: 100vh;
+                height: calc(var(--vh, 1vh) * 100);
+            }
+            
             .animated_logo {
                 grid-column-start: 1;
                 grid-column-end: 65;
@@ -2430,6 +2442,16 @@
 
 
         <script>
+            let vh = window.innerHeight * 0.01;
+            // Then we set the value in the --vh custom property to the root of the document
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+            window.addEventListener('resize', () => {
+                // We execute the same script as before
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            });
+
+
             $('#fullpage').fullpage({
                 sectionsColor: ['#ADD8E6', '#FCA7A7', '#C0C0C0', '#ADD8E6'],
             });
