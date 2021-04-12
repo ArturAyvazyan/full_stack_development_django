@@ -821,6 +821,15 @@
             opacity:0;
         }
 
+        .invis {
+            display: inline-block;
+            grid-column-start: 68;
+            grid-column-end: 96;
+            grid-row-start: 65;
+            grid-row-end: 85;
+            z-index: 3;
+        }
+
         .home_logo {
             display: inline-block;
             grid-column-start: 5;
@@ -845,165 +854,6 @@
             grid-row-start: 94;
             grid-row-end: 98;
         } 
-
-
-        /* FORM STARTS HERE */
-        .invis {
-            display: inline-block;
-            grid-column-start: 68;
-            grid-column-end: 96;
-            grid-row-start: 45;
-            grid-row-end: 55;
-            z-index: 3;
-        }
-
-        .content {
-            background: url("{% static '/homepage/backs.png' %}");
-            background-size: cover;
-            display:grid;
-            grid-template-columns: repeat(100, 1fr);
-            grid-template-rows: repeat(100, 1fr);
-            max-width: 100vw;
-            max-height: 100vh;
-            min-width: 100vw;
-            min-height: 100vh;
-        }
-
-        .close {
-            display: inline-block;
-            grid-column-start: 94;
-            grid-column-end: 99;
-            grid-row-start: 3;
-            grid-row-end: 10;
-            z-index: 3;
-        }
-
-        /* ИМЯ */
-        .name_text {
-            grid-column-start: 10;
-            grid-column-end: 25;
-            grid-row-start: 12;
-            grid-row-end: 17;
-            overflow: hidden;
-            z-index:2;
-        }
-
-        .english_name_text {
-            grid-column-start: 10;
-            grid-column-end: 25;
-            grid-row-start: 12;
-            grid-row-end: 17;
-            overflow: hidden;
-            opacity:0;
-            z-index:1;
-        }
-
-        #name_zapolni {
-            grid-column-start: 9;
-            grid-column-end: 27;
-            grid-row-start: 19;
-            grid-row-end: 30;
-            overflow: hidden;
-            z-index:1;
-        }
-
-        .name_form {
-            grid-column-start: 10;
-            grid-column-end: 26;
-            grid-row-start: 22;
-            grid-row-end: 26;
-            overflow: hidden; 
-            opacity:50%;
-            z-index:2;
-        }
-
-        
-         /* ГОРОД */
-         .email_text {
-            grid-column-start: 75;
-            grid-column-end: 85;
-            grid-row-start: 12;
-            grid-row-end: 17;
-            overflow: hidden;
-            z-index:1;
-        }
-
-        #email_zapolni {
-            grid-column-start: 70;
-            grid-column-end: 89;
-            grid-row-start: 19;
-            grid-row-end: 30;
-            overflow: hidden;
-        }
-        .email_form {
-            grid-column-start: 71;
-            grid-column-end: 88;
-            grid-row-start: 22;
-            grid-row-end: 26;
-            overflow: hidden;
-            z-index:2;
-            opacity:50%;
-        }
-
-        /* СООБЩЕНИЕ */
-        .soobch_text {
-            display: inline-block;
-            grid-column-start: 35;
-            grid-column-end: 65;
-            grid-row-start: 35;
-            grid-row-end: 44;
-            z-index: 2;
-        }
-
-        .english_soobch_text {
-            display: inline-block;
-            grid-column-start: 38;
-            grid-column-end: 62;
-            grid-row-start: 35;
-            grid-row-end: 43;
-            z-index: 1;
-            opacity:0;
-        }
-
-        #soobch_zapolni {
-            display: inline-block;
-            grid-column-start: 33;
-            grid-column-end: 67;
-            grid-row-start: 47;
-            grid-row-end: 71;
-            z-index: 3;
-        }
-
-        .soobch_form {
-            display: inline-block;
-            grid-column-start: 35;
-            grid-column-end: 65;
-            grid-row-start: 54;
-            grid-row-end: 63;
-            opacity:50%;
-            z-index: 3;
-        }
-
-        .atom {
-            display: inline-block;
-            grid-column-start: 70;
-            grid-column-end: 90;
-            grid-row-start: 75;
-            grid-row-end: 90;
-            z-index: 2;
-        }
-
-        .english_atom {
-            display: inline-block;
-            grid-column-start: 70;
-            grid-column-end: 90;
-            grid-row-start: 75;
-            grid-row-end: 90;
-            z-index: 1;
-            opacity:0;
-        }   
-
-
 
         @media screen and (max-width: 1200px), (max-device-width: 1200px) {
             .message {
@@ -1232,6 +1082,781 @@
 
         }
 
+         /* FORM STARTS HERE */
+
+         .content {
+            background: url("{% static '/homepage/backs.png' %}");
+            background-size: cover;
+            display:grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(100, 1fr);
+            max-width: 100vw;
+            max-height: 100vh;
+            min-width: 100vw;
+            min-height: 100vh;
+        }
+
+        .close {
+            display: inline-block;
+            grid-column-start: 94;
+            grid-column-end: 99;
+            grid-row-start: 3;
+            grid-row-end: 10;
+            z-index: 3;
+        }
+
+        /* ИМЯ */
+        .name_text {
+            grid-column-start: 10;
+            grid-column-end: 25;
+            grid-row-start: 12;
+            grid-row-end: 17;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .english_name_text {
+            grid-column-start: 10;
+            grid-column-end: 25;
+            grid-row-start: 12;
+            grid-row-end: 17;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
+        }
+
+        #name_zapolni {
+            grid-column-start: 9;
+            grid-column-end: 27;
+            grid-row-start: 19;
+            grid-row-end: 30;
+            overflow: hidden;
+            z-index:1;
+        }
+
+        .name_form {
+            grid-column-start: 10;
+            grid-column-end: 26;
+            grid-row-start: 22;
+            grid-row-end: 27;
+            overflow: hidden; 
+            opacity:50%;
+            z-index:2;
+        }
+
+        .inside_name {
+            font-size: 32pt;
+        }
+        
+         /* ГОРОД */
+         .email_text {
+            grid-column-start: 75;
+            grid-column-end: 85;
+            grid-row-start: 12;
+            grid-row-end: 17;
+            overflow: hidden;
+            z-index:1;
+        }
+
+        #email_zapolni {
+            grid-column-start: 70;
+            grid-column-end: 89;
+            grid-row-start: 19;
+            grid-row-end: 30;
+            overflow: hidden;
+        }
+        .email_form {
+            grid-column-start: 71;
+            grid-column-end: 88;
+            grid-row-start: 22;
+            grid-row-end: 27;
+            overflow: hidden;
+            z-index:2;
+            opacity:50%;
+        }
+
+        .inside_email {
+            font-size: 32pt;
+        }
+
+        /* СООБЩЕНИЕ */
+        .soobch_text {
+            display: inline-block;
+            grid-column-start: 35;
+            grid-column-end: 65;
+            grid-row-start: 35;
+            grid-row-end: 44;
+            z-index: 2;
+        }
+
+        .english_soobch_text {
+            display: inline-block;
+            grid-column-start: 38;
+            grid-column-end: 62;
+            grid-row-start: 35;
+            grid-row-end: 43;
+            z-index: 1;
+            opacity:0;
+        }
+
+        #soobch_zapolni {
+            display: inline-block;
+            grid-column-start: 33;
+            grid-column-end: 67;
+            grid-row-start: 47;
+            grid-row-end: 71;
+            z-index: 3;
+        }
+
+        .soobch_form {
+            display: inline-block;
+            grid-column-start: 35;
+            grid-column-end: 65;
+            grid-row-start: 54;
+            grid-row-end: 63;
+            opacity:50%;
+            z-index: 3;
+        }
+
+        .inside_soobch {
+            font-size: 45pt;
+        }
+
+        .atom {
+            display: inline-block;
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 75;
+            grid-row-end: 90;
+            z-index: 2;
+        }
+
+        .english_atom {
+            display: inline-block;
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 75;
+            grid-row-end: 90;
+            z-index: 1;
+            opacity:0;
+        }   
+
+        @media screen and (max-width: 1200px), (max-device-width: 1200px) {
+            .close {
+                display: inline-block;
+                grid-column-start: 94;
+                grid-column-end: 99;
+                grid-row-start: 3;
+                grid-row-end: 10;
+                z-index: 3;
+            }
+
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 8;
+                grid-column-end: 32;
+                grid-row-start: 12;
+                grid-row-end: 18;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_name_text {
+                grid-column-start: 8;
+                grid-column-end: 32;
+                grid-row-start: 12;
+                grid-row-end: 18;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            #name_zapolni {
+                grid-column-start: 8;
+                grid-column-end: 32;
+                grid-row-start: 19;
+                grid-row-end: 30;
+                overflow: hidden;
+                z-index:1;
+            }
+
+            .name_form {
+                grid-column-start: 9;
+                grid-column-end: 31;
+                grid-row-start: 21;
+                grid-row-end: 27;
+                overflow: hidden; 
+                opacity:50%;
+                z-index:2;
+            }
+
+            .inside_name {
+                font-size: 18pt;
+            }
+            
+            /* ГОРОД */
+            .email_text {
+                grid-column-start: 73;
+                grid-column-end: 88;
+                grid-row-start: 12;
+                grid-row-end: 18;
+                overflow: hidden;
+                z-index:1;
+            }
+
+            #email_zapolni {
+                grid-column-start: 68;
+                grid-column-end: 92;
+                grid-row-start: 19;
+                grid-row-end: 30;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 69;
+                grid-column-end: 91;
+                grid-row-start: 21;
+                grid-row-end: 27;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            .inside_email {
+                font-size: 18pt;
+            }
+
+            /* СООБЩЕНИЕ */
+            .soobch_text {
+                display: inline-block;
+                grid-column-start: 31;
+                grid-column-end: 69;
+                grid-row-start: 38;
+                grid-row-end: 47;
+                z-index: 2;
+            }
+
+            .english_soobch_text {
+                display: inline-block;
+                grid-column-start: 36;
+                grid-column-end: 64;
+                grid-row-start: 38;
+                grid-row-end: 46;
+                z-index: 1;
+                opacity:0;
+            }
+
+            #soobch_zapolni {
+                display: inline-block;
+                grid-column-start: 26;
+                grid-column-end: 74;
+                grid-row-start: 48;
+                grid-row-end: 72;
+                z-index: 3;
+            }
+
+            .soobch_form {
+                display: inline-block;
+                grid-column-start: 28;
+                grid-column-end: 71;
+                grid-row-start: 55;
+                grid-row-end: 64;
+                opacity:50%;
+                z-index: 3;
+            }
+
+            .inside_soobch {
+                font-size: 32pt;
+            }
+
+            .atom {
+                display: inline-block;
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 77;
+                grid-row-end: 95;
+                z-index: 2;
+            }
+
+            .english_atom {
+                display: inline-block;
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 77;
+                grid-row-end: 95;
+                z-index: 1;
+                opacity:0;
+            }   
+        }
+
+        @media screen and (max-width: 900px), (max-device-width: 900px) {
+            .close {
+                display: inline-block;
+                grid-column-start: 91;
+                grid-column-end: 99;
+                grid-row-start: 3;
+                grid-row-end: 10;
+                z-index: 3;
+            }
+
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 8;
+                grid-column-end: 40;
+                grid-row-start: 12;
+                grid-row-end: 17;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_name_text {
+                grid-column-start: 8;
+                grid-column-end: 40;
+                grid-row-start: 12;
+                grid-row-end: 17;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            #name_zapolni {
+                grid-column-start: 7;
+                grid-column-end: 41;
+                grid-row-start: 19;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:1;
+            }
+
+            .name_form {
+                grid-column-start: 9;
+                grid-column-end: 40;
+                grid-row-start: 21;
+                grid-row-end: 26;
+                overflow: hidden; 
+                opacity:50%;
+                z-index:2;
+            }
+
+            .inside_name {
+                font-size: 14pt;
+            }
+            
+            /* ГОРОД */
+            .email_text {
+                grid-column-start: 70;
+                grid-column-end: 90;
+                grid-row-start: 12;
+                grid-row-end: 17;
+                overflow: hidden;
+                z-index:1;
+            }
+
+            #email_zapolni {
+                grid-column-start: 63;
+                grid-column-end: 96;
+                grid-row-start: 19;
+                grid-row-end: 29;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 64;
+                grid-column-end: 95;
+                grid-row-start: 21;
+                grid-row-end: 26;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            .inside_email {
+                font-size: 14pt;
+            }
+
+            /* СООБЩЕНИЕ */
+            .soobch_text {
+                display: inline-block;
+                grid-column-start: 24;
+                grid-column-end: 76;
+                grid-row-start: 39;
+                grid-row-end: 45;
+                z-index: 2;
+            }
+
+            .english_soobch_text {
+                display: inline-block;
+                grid-column-start: 30;
+                grid-column-end: 70;
+                grid-row-start: 39;
+                grid-row-end: 45;
+                z-index: 1;
+                opacity:0;
+            }
+
+            #soobch_zapolni {
+                display: inline-block;
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 48;
+                grid-row-end: 70;
+                z-index: 3;
+            }
+
+            .soobch_form {
+                display: inline-block;
+                grid-column-start: 18;
+                grid-column-end: 81;
+                grid-row-start: 55;
+                grid-row-end: 63;
+                opacity:50%;
+                z-index: 3;
+            }
+
+            .inside_soobch {
+                font-size: 32pt;
+            }
+
+            .atom {
+                display: inline-block;
+                grid-column-start: 37;
+                grid-column-end: 90;
+                grid-row-start: 77;
+                grid-row-end: 95;
+                z-index: 2;
+            }
+
+            .english_atom {
+                display: inline-block;
+                grid-column-start: 40;
+                grid-column-end: 90;
+                grid-row-start: 77;
+                grid-row-end: 95;
+                z-index: 1;
+                opacity:0;
+            }   
+        }
+
+        @media screen and (max-width: 600px), (max-device-width: 600px) {
+            
+            .close {
+                display: inline-block;
+                grid-column-start: 91;
+                grid-column-end: 99;
+                grid-row-start: 3;
+                grid-row-end: 8;
+                z-index: 3;
+            }
+
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 2;
+                grid-column-end: 58;
+                grid-row-start: 12;
+                grid-row-end: 18;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .name_image {
+                transform: scale(0.85) translateY(-1vh);
+            }
+
+            .english_name_text {
+                grid-column-start: 2;
+                grid-column-end: 55;
+                grid-row-start: 12;
+                grid-row-end: 18;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .english_name_image {
+                transform: scale(0.85) translateY(-1vh);
+            }
+
+            #name_zapolni {
+                grid-column-start: 7;
+                grid-column-end: 47;
+                grid-row-start: 20;
+                grid-row-end: 29;
+                overflow: hidden;
+                z-index:1;
+            }
+
+            .name_form {
+                grid-column-start: 9;
+                grid-column-end: 45;
+                grid-row-start: 21;
+                grid-row-end: 26;
+                overflow: hidden; 
+                opacity:50%;
+                z-index:2;
+            }
+
+            .inside_name {
+                font-size: 14pt;
+            }
+            
+            /* ГОРОД */
+            .email_text {
+                grid-column-start: 65;
+                grid-column-end: 95;
+                grid-row-start: 12;
+                grid-row-end: 18;
+                overflow: hidden;
+                z-index:1;
+            }
+
+            .email_image {
+                transform: scale(0.85) translateY(-1vh);
+            }
+
+            #email_zapolni {
+                grid-column-start: 57;
+                grid-column-end: 97;
+                grid-row-start: 20;
+                grid-row-end: 29;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 59;
+                grid-column-end: 95;
+                grid-row-start: 21;
+                grid-row-end: 26;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            .inside_email {
+                font-size: 14pt;
+            }
+
+            /* СООБЩЕНИЕ */
+            .soobch_text {
+                display: inline-block;
+                grid-column-start: 18;
+                grid-column-end: 82;
+                grid-row-start: 38;
+                grid-row-end: 44;
+                z-index: 2;
+            }
+
+            .english_soobch_text {
+                display: inline-block;
+                grid-column-start: 25;
+                grid-column-end: 75;
+                grid-row-start: 38;
+                grid-row-end: 44;
+                z-index: 1;
+                opacity:0;
+            }
+
+            #soobch_zapolni {
+                display: inline-block;
+                grid-column-start: 13;
+                grid-column-end: 87;
+                grid-row-start: 48;
+                grid-row-end: 64;
+                z-index: 3;
+            }
+
+            .soobch_form {
+                display: inline-block;
+                grid-column-start: 17;
+                grid-column-end: 81;
+                grid-row-start: 52;
+                grid-row-end: 57;
+                opacity:50%;
+                z-index: 3;
+            }
+
+            .inside_soobch {
+                font-size: 32pt;
+            }
+
+            .atom {
+                display: inline-block;
+                grid-column-start: 30;
+                grid-column-end: 90;
+                grid-row-start: 79;
+                grid-row-end: 93;
+                z-index: 2;
+            }
+
+            .english_atom {
+                display: inline-block;
+                grid-column-start: 30;
+                grid-column-end: 90;
+                grid-row-start: 79;
+                grid-row-end: 93;
+                z-index: 1;
+                opacity:0;
+            }
+        }
+
+        @media screen and (max-height: 450px), (max-device-height: 450px) {
+            .close {
+                display: inline-block;
+                grid-column-start: 94;
+                grid-column-end: 99;
+                grid-row-start: 3;
+                grid-row-end:11;
+                z-index: 3;
+            }
+
+            /* ИМЯ */
+            .name_text {
+                grid-column-start: 5;
+                grid-column-end: 35;
+                grid-row-start: 10;
+                grid-row-end: 20;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .english_name_text {
+                grid-column-start: 5;
+                grid-column-end: 35;
+                grid-row-start: 10;
+                grid-row-end: 20;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .name_image {
+                transform: scale(0.85) translateY(-1vh);
+            }
+
+            .english_name_image {
+                transform: scale(0.85) translateY(-1vh);
+            }
+
+            #name_zapolni {
+                grid-column-start: 7;
+                grid-column-end: 32;
+                grid-row-start: 25;
+                grid-row-end: 40;
+                overflow: hidden;
+                z-index:1;
+            }
+
+            .name_form {
+                grid-column-start: 8;
+                grid-column-end: 31;
+                grid-row-start: 26;
+                grid-row-end: 36;
+                overflow: hidden; 
+                opacity:50%;
+                z-index:2;
+            }
+
+            .inside_name {
+                font-size: 12pt;
+            }
+            
+            /* ГОРОД */
+            .email_text {
+                grid-column-start: 68;
+                grid-column-end: 87;
+                grid-row-start: 10;
+                grid-row-end: 20;
+                overflow: hidden;
+                z-index:1;
+            }
+
+            .email_image {
+                transform: scale(0.85) translateY(-1vh);
+            }
+
+            #email_zapolni {
+                grid-column-start: 65;
+                grid-column-end: 90;
+                grid-row-start: 25;
+                grid-row-end: 40;
+                overflow: hidden;
+            }
+
+            .email_form {
+                grid-column-start: 66;
+                grid-column-end: 89;
+                grid-row-start: 26;
+                grid-row-end: 36;
+                overflow: hidden;
+                z-index:2;
+                opacity:50%;
+            }
+
+            .inside_email {
+                font-size: 12pt;
+            }
+
+            /* СООБЩЕНИЕ */
+            .soobch_text {
+                display: inline-block;
+                grid-column-start: 32;
+                grid-column-end: 68;
+                grid-row-start: 42;
+                grid-row-end: 51;
+                z-index: 2;
+            }
+
+            .english_soobch_text {
+                display: inline-block;
+                grid-column-start: 36;
+                grid-column-end: 64;
+                grid-row-start: 42;
+                grid-row-end: 51;
+                z-index: 1;
+                opacity:0;
+            }
+
+            #soobch_zapolni {
+                display: inline-block;
+                grid-column-start: 35;
+                grid-column-end: 65;
+                grid-row-start: 55;
+                grid-row-end: 72;
+                z-index: 3;
+            }
+
+            .soobch_form {
+                display: inline-block;
+                grid-column-start: 36;
+                grid-column-end: 63;
+                grid-row-start: 55;
+                grid-row-end: 61;
+                opacity:50%;
+                z-index: 3;
+            }
+
+            .inside_soobch {
+                font-size: 12pt;
+            }
+
+            .atom {
+                display: inline-block;
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 74;
+                grid-row-end: 95;
+                z-index: 2;
+            }
+
+            .english_atom {
+                display: inline-block;
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 76;
+                grid-row-end: 95;
+                z-index: 1;
+                opacity:0;
+            }
+        }
     </style>
 
     <body>
@@ -1253,26 +1878,26 @@
                 
                                 <!-- ИМЯ -->
                                 <div class = 'name_text' onmouseenter = NameSwitchToEnglish() onmouseleave = NameBackToRussian()>
-                                    <img src = '/media/homepage/zayavka/name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
+                                    <img class = 'name_image' src = '/media/homepage/zayavka/name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
                                 </div>  
                                 
                                 <div class = 'english_name_text'>
-                                    <img src = '/media/homepage/zayavka/english_name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
+                                    <img class = 'english_name_image' src = '/media/homepage/zayavka/english_name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
                                 </div>
                 
                                 <img id = 'name_zapolni' src = '/media/homepage/zayavka/zapolni.png' style = 'z-index:1; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
                                 <div class = 'name_form'>
-                                    <input type="text" name = 'name' id = 'name' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' required>
+                                    <input class = 'inside_name' type="text" name = 'name' id = 'name' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' required>
                                 </div>
                 
                                 <!-- ПОЧТА -->
                                 <div class = 'email_text'>
-                                    <img src = '/media/homepage/zayavka/email.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
+                                    <img class = 'email_image' src = '/media/homepage/zayavka/email.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
                                 </div> 
                 
                                 <img id = 'email_zapolni' src = '/media/homepage/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
                                 <div class="email_form">
-                                    <input type="email" name = 'email' id = 'email' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' >
+                                    <input class = 'inside_email' type="email" name = 'email' id = 'email' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' >
                                 </div>
 
                                 <!-- СООБЩЕНИЕ -->
@@ -1286,7 +1911,7 @@
 
                                 <img id = 'soobch_zapolni' src = '/media/homepage/zayavka/zapolni-big.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
                                 <div class="soobch_form">
-                                    <input type="textarea" name = 'soobch' id = 'soobch' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' >
+                                    <input class = 'inside_soobch' type="textarea" name = 'soobch' id = 'soobch' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' >
                                 </div>
 
                                 <!-- ОТПРАВЛЯЙ -->
@@ -1763,7 +2388,7 @@
                     <div class="invis" onmouseenter = messageSwitchToEnglish() onmouseleave = messageBackToRussian()>
                         <form action = '{% url "home" %}' method = "post" style = 'min-width:100%; min-height:100%; opacity:0%'>
                             {% csrf_token %}
-                                <button style = 'min-width:100%; min-height:20em; opacity:100%'>
+                                <button style = 'cursor:pointer; min-width:100%; min-height:20em; opacity:100%'>
                                 </button>
                         </form>
                     </div>

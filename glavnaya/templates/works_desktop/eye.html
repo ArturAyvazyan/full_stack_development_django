@@ -87,8 +87,8 @@
         .farfor-image {
             grid-column-start: 18;
             grid-column-end: 40;
-            grid-row-start: 36;
-            grid-row-end: 40;
+            grid-row-start: 37;
+            grid-row-end: 41;
             overflow: hidden;
             z-index:2;
         }
@@ -96,8 +96,8 @@
         .farfor-english-image {
             grid-column-start: 18;
             grid-column-end: 40;
-            grid-row-start: 36;
-            grid-row-end: 39;
+            grid-row-start: 37;
+            grid-row-end: 41;
             overflow: hidden;
             opacity:0;
             z-index:1;
@@ -114,7 +114,7 @@
 
         .akril-english-image {
             grid-column-start: 18;
-            grid-column-end: 72;
+            grid-column-end: 75;
             grid-row-start: 42;
             grid-row-end: 46;
             overflow: hidden;
@@ -1855,7 +1855,7 @@
                 max-height: 8vh;
                 max-width: 4vw;
             }
-            
+
             #mini_zakis {
                 display:none;
             }
@@ -1901,7 +1901,7 @@
         }
 
         [type=radio]:checked + img {
-            outline: 3px solid #FFFFFF;
+            outline: 6px solid #FFFFFF;
             padding:5px;
         } 
 
@@ -1940,7 +1940,7 @@
             grid-column-start: 9;
             grid-column-end: 27;
             grid-row-start: 20;
-            grid-row-end: 26;
+            grid-row-end: 27;
             overflow: hidden;
         }
 
@@ -1948,11 +1948,16 @@
             grid-column-start: 10;
             grid-column-end: 26;
             grid-row-start: 22;
-            grid-row-end: 24;
+            grid-row-end: 25;
             overflow: hidden; 
             opacity:50%;
             z-index:10;
         }
+
+        .inside_name {
+            font-size: 35pt;
+        }
+
         /* EMAIL */
         .email_text {
             grid-column-start: 46;
@@ -1966,7 +1971,7 @@
             grid-column-start: 41;
             grid-column-end: 59;
             grid-row-start: 20;
-            grid-row-end: 26;
+            grid-row-end: 27;
             overflow: hidden;
         }
 
@@ -1974,10 +1979,14 @@
             grid-column-start: 42;
             grid-column-end: 58;
             grid-row-start: 22;
-            grid-row-end: 24;
+            grid-row-end: 25;
             overflow: hidden;
             z-index:2;
             opacity:50%;
+        }
+
+        .inside_email {
+            font-size: 35pt;
         }
 
         /* ГОРОД */
@@ -2004,23 +2013,27 @@
             grid-column-start: 70;
             grid-column-end: 90;
             grid-row-start: 20;
-            grid-row-end: 26;
+            grid-row-end: 27;
             overflow: hidden;
         }
         .city_form {
             grid-column-start: 71;
             grid-column-end: 89;
             grid-row-start: 22;
-            grid-row-end: 24;
+            grid-row-end: 25;
             overflow: hidden;
             z-index:2;
             opacity:50%;
         }
 
+        .inside_city {
+            font-size: 35pt;
+        }
+
         /* ОТПРАВКА */
         .otpravka_text {
-            grid-column-start: 12;
-            grid-column-end: 37;
+            grid-column-start: 9;
+            grid-column-end: 34;
             grid-row-start: 37;
             grid-row-end: 40;
             overflow: hidden;
@@ -2028,8 +2041,8 @@
         }
 
         .english_otpravka_text {
-            grid-column-start: 12;
-            grid-column-end: 37;
+            grid-column-start: 9;
+            grid-column-end: 34;
             grid-row-start: 37;
             grid-row-end: 40;
             overflow: hidden;
@@ -2037,30 +2050,31 @@
             opacity:0;
         }
 
-        #pochta_rossii {
-            margin-top:2vh; margin-left: 2vw; max-width: 85%; max-height: 85%;min-width: 85%; min-height: 85%;
-        }
+            #pochta_rossii {
+                margin-top:1vh;
+            }
 
-        #sdek {
-            margin-left: 2vw; max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
-        }
+            #sdek {
+                margin-top:1vh;
+            }
 
-        #drugoe {
-            margin-left:2vw; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
-        }
+            #drugoe {
+                margin-top:1vh;
+            }
 
         .otpravka_form {
-            grid-column-start: 5;
-            grid-column-end: 28;
-            grid-row-start: 42;
+            grid-column-start: 13;
+            grid-column-end: 38;
+            grid-row-start: 44;
             grid-row-end: 70;
             overflow: hidden;
             z-index:2;
+            transform:scale(1.2);
         }
 
         /* ОПЛАТА */
         .payment_text {
-            grid-column-start: 60;
+            grid-column-start: 65;
             grid-column-end: 87;
             grid-row-start: 37;
             grid-row-end: 40;
@@ -2069,7 +2083,7 @@
         }
 
         .english_payment_text {
-            grid-column-start: 60;
+            grid-column-start: 65;
             grid-column-end: 87;
             grid-row-start: 37;
             grid-row-end: 40;
@@ -2077,51 +2091,52 @@
             z-index:1;
             opacity:0;
         }
-
-        #rub {
-                margin-top:1px; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
+        
+            #rub {
+                margin-top:1vh;
             }
 
-        #usd {
-            max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
-        }
-            
-        #btc {
-            max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
-        }
+            #usd {
+                margin-top:1vh;
+            }
+                
+            #btc {
+                margin-top:1vh;
+            }
 
-        #eth {
-            max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
-        }
+            #eth {
+                margin-top:1vh;
+            }
 
-        #usdt {
-            max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%;
-        }
-        
+            #usdt {
+                margin-top:1vh;
+            }
+
         .payment_form {
-            grid-column-start: 65;
-            grid-column-end: 75;
-            grid-row-start: 43;
-            grid-row-end: 70;
+            grid-column-start: 68;
+            grid-column-end: 85;
+            grid-row-start: 44;
+            grid-row-end: 72;
             overflow: hidden;
             z-index:2;
+            transform:scale(1.2);
         }
 
         /* ЛУЧШЕ СВЯЗАТЬСЯ */
         .better_text {
             grid-column-start: 5;
-            grid-column-end: 45;
+            grid-column-end: 60;
             grid-row-start: 65;
-            grid-row-end: 68;
+            grid-row-end: 69;
             overflow: hidden;
             z-index:2;
         }
 
         .english_better_text {
             grid-column-start: 5;
-            grid-column-end: 35;
+            grid-column-end: 45;
             grid-row-start: 65;
-            grid-row-end: 68;
+            grid-row-end: 69;
             overflow: hidden;
             z-index:1;
             opacity:0;
@@ -2140,84 +2155,93 @@
         }
 
         #telegram {
-            margin-left:1px;max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
+            margin-left:1vw;
         }
 
         #instagram {
-            margin-left:1px; max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
+            margin-left:1vw;
         }
 
         #wup {
-            margin-left:1px; max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
+            margin-left:1vw;
         }
 
+
         .better_form {
-            grid-column-start: 5;
-            grid-column-end: 50;
-            grid-row-start: 70;
-            grid-row-end: 92;
+            grid-column-start: 12;
+            grid-column-end: 35;
+            grid-row-start: 72;
+            grid-row-end: 81;
             overflow: hidden;
             z-index:2;
+            transform: scale(1.2);
         }
         
         #better_zapolni {
-            grid-column-start: 5;
-            grid-column-end: 24;
-            grid-row-start: 86;
-            grid-row-end: 92;
+            grid-column-start: 7;
+            grid-column-end: 26;
+            grid-row-start: 82;
+            grid-row-end: 89;
             overflow: hidden;
             z-index: 4;
         }
 
         .better_more {
-            grid-column-start: 6;
-            grid-column-end: 23;
-            grid-row-start: 88;
-            grid-row-end: 90;
+            grid-column-start: 8;
+            grid-column-end: 25;
+            grid-row-start: 84;
+            grid-row-end: 87;
             opacity: 50%;
             overflow: hidden;
             z-index: 5;
         }
 
+        .inside_better {
+            font-size: 35pt;
+        }
+
         /* KOMENT */
         .koment_text {
-            grid-column-start: 60;
-            grid-column-end: 77;
+            grid-column-start: 65;
+            grid-column-end: 90;
             grid-row-start: 68;
-            grid-row-end: 71;
+            grid-row-end: 72;
             overflow: hidden;
             z-index:2;
         }
-
         
         .english_koment_text {
-            grid-column-start: 60;
-            grid-column-end: 75;
+            grid-column-start: 65;
+            grid-column-end: 90;
             grid-row-start: 68;
-            grid-row-end: 71;
+            grid-row-end: 72;
             overflow: hidden;
             z-index:1;
             opacity:0;
         }
 
         .koment_zapolni {
-            grid-column-start: 59;
-            grid-column-end: 76;
-            grid-row-start: 72;
-            grid-row-end: 78;
+            grid-column-start: 66;
+            grid-column-end: 88;
+            grid-row-start: 73;
+            grid-row-end: 80;
             overflow: hidden;
         }
+
         .koment_more {
-            grid-column-start: 60;
-            grid-column-end: 75;
-            grid-row-start: 74;
-            grid-row-end: 76;
+            grid-column-start: 67;
+            grid-column-end: 87;
+            grid-row-start: 75;
+            grid-row-end: 78;
             overflow: hidden;
             opacity: 50%;
         }
+        .inside_koment {
+            font-size: 35pt;
+        }
 
         .atom {
-            grid-column-start: 75;
+            grid-column-start: 70;
             grid-column-end: 95;
             grid-row-start: 87;
             grid-row-end: 97;
@@ -2226,7 +2250,7 @@
         }
 
         .english_atom {
-            grid-column-start: 75;
+            grid-column-start: 70;
             grid-column-end: 95;
             grid-row-start: 87;
             grid-row-end: 97;
@@ -2244,6 +2268,12 @@
         }
         
         @media screen and (max-width: 1200px),(max-device-width: 1200px) {
+
+            [type=radio]:checked + img {
+                outline: 3px solid #FFFFFF;
+                padding:5px;
+            } 
+            
             /* ИМЯ */
             .name_text {
                 grid-column-start: 7;
@@ -2268,20 +2298,24 @@
                 grid-column-start: 8;
                 grid-column-end: 29;
                 grid-row-start: 12;
-                grid-row-end: 17;
+                grid-row-end: 18;
                 overflow: hidden;
             }
 
             .name_form {
                 grid-column-start: 9;
                 grid-column-end: 28;
-                grid-row-start: 13;
-                grid-row-end: 15;
-                transform:translateY(1vh);
+                grid-row-start: 14;
+                grid-row-end: 16;
                 overflow: hidden; 
                 opacity:50%;
                 z-index:10;
             }
+
+            .inside_name {
+               font-size: 12pt;
+            }
+
             /* EMAIL */
             .email_text {
                 grid-column-start: 44;
@@ -2295,19 +2329,22 @@
                 grid-column-start: 40;
                 grid-column-end: 61;
                 grid-row-start: 12;
-                grid-row-end: 17;
+                grid-row-end: 18;
                 overflow: hidden;
             }
 
             .email_form {
                 grid-column-start: 41;
                 grid-column-end: 60;
-                grid-row-start: 13;
-                grid-row-end: 15;
-                transform:translateY(1vh);
+                grid-row-start: 14;
+                grid-row-end: 16;
                 overflow: hidden;
                 z-index:2;
                 opacity:50%;
+            }
+
+            .inside_email {
+               font-size: 12pt;
             }
 
             /* ГОРОД */
@@ -2334,59 +2371,60 @@
                 grid-column-start: 69;
                 grid-column-end: 94;
                 grid-row-start: 12;
-                grid-row-end: 17;
+                grid-row-end: 18;
                 overflow: hidden;
             }
             .city_form {
                 grid-column-start: 70;
                 grid-column-end: 93;
-                grid-row-start: 13;
-                grid-row-end: 15;
-                transform:translateY(1vh);
+                grid-row-start: 14;
+                grid-row-end: 16;
                 overflow: hidden;
                 z-index:2;
                 opacity:50%;
             }
 
+            .inside_city {
+               font-size: 12pt;
+            }
+
             /* ОТПРАВКА */
             .otpravka_text {
-                grid-column-start: 10;
-                grid-column-end: 35;
+                grid-column-start: 5;
+                grid-column-end: 43;
                 grid-row-start: 25;
-                grid-row-end: 27;
-                transform:scale(1.2);
+                grid-row-end: 28;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_otpravka_text {
-                grid-column-start: 10;
-                grid-column-end: 35;
+                grid-column-start: 5;
+                grid-column-end: 43;
                 grid-row-start: 25;
-                grid-row-end: 27;
-                transform:scale(1.2);
+                grid-row-end: 28;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
             #pochta_rossii {
-                margin-top: 2em;margin-left: 2vw; max-width: 80%; max-height: 80%; min-width: 80%; min-height: 80%;
+                max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%;
             }
 
             #sdek {
-                transform: translateX(-1em) scale(0.7); margin-top: 1em; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
+                max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
             }
 
             #drugoe {
-                margin-top: 1em; margin-left:2vw; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
+                max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
             }
-
+            
             .otpravka_form {
-                grid-column-start: 5;
-                grid-column-end: 28;
-                grid-row-start: 27;
-                grid-row-end: 52;
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 33;
+                grid-row-end: 50;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2396,8 +2434,7 @@
                 grid-column-start: 65;
                 grid-column-end: 95;
                 grid-row-start: 25;
-                grid-row-end: 27;
-                transform:scale(1.2);
+                grid-row-end: 28;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2406,39 +2443,37 @@
                 grid-column-start: 65;
                 grid-column-end: 95;
                 grid-row-start: 25;
-                grid-row-end: 27;
-                transform:scale(1.2);
+                grid-row-end: 28;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
-/* 
+
             #rub {
-                transform: translateY(0.5em) scale(1.3); margin-left:1em; margin-top:1em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
-            }
+                margin-top:1em; max-width: 40%; max-height: 40%;min-width: 40%; min-height: 40%;
+                }
 
             #usd {
-                transform: translateY(-0.5em) scale(1.3); margin-left:1em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
+                max-width: 40%; max-height: 40%;min-width: 40%; min-height: 40%;
             }
-            
+                
             #btc {
-                transform: translateY(-1.5em) scale(1.3); margin-left:1em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
+                max-width: 40%; max-height: 40%;min-width: 40%; min-height: 40%;
             }
 
             #eth {
-                transform: translateY(-2.5em) scale(1.3); margin-left:1em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
+                max-width: 40%; max-height: 40%;min-width: 40%; min-height: 40%;
             }
 
             #usdt {
-                transform: translateY(-3.5em) scale(1.3); margin-left:1em; max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%;
-            } */
-
+                max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
+            }
 
             .payment_form {
-                grid-column-start: 65;
-                grid-column-end: 73;
-                grid-row-start: 29;
-                grid-row-end: 62;
+                grid-column-start: 68;
+                grid-column-end: 81;
+                grid-row-start: 33;
+                grid-row-end: 67;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2447,75 +2482,83 @@
             .better_text {
                 grid-column-start: 5;
                 grid-column-end: 90;
-                grid-row-start: 55;
-                grid-row-end: 59;
+                grid-row-start: 53;
+                grid-row-end: 57;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_better_text {
                 grid-column-start: 5;
-                grid-column-end: 90;
-                grid-row-start: 55;
-                grid-row-end: 59;
+                grid-column-end: 65;
+                grid-row-start: 53;
+                grid-row-end: 57;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
+            /* #instagram {
+                transform: scale(1.1)
+            } */
+
             #telegram {
-                transform: translateY(-1em); margin-left:1px;max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
+                transform: translateY(1vh); margin-top: 2vh; max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
             }
 
             #instagram {
-                transform: translateY(-2em); margin-left:1px; max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
+                max-width: 30%; max-height: 30%; min-width: 30%; min-height: 30%;
             }
 
             #wup {
-                transform: translateY(-3em); margin-left:1px; max-width: 33%; max-height: 33%; min-width: 33%; min-height: 33%;            
+                transform: translateY(-1vh); max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
             }
 
             .better_form {
-                grid-column-start: 5;
-                grid-column-end: 50;
+                grid-column-start: 12;
+                grid-column-end: 57;
                 grid-row-start: 58;
-                grid-row-end: 77;
+                grid-row-end: 75;
                 overflow: hidden;
                 z-index:2;
             }
 
             #better_zapolni {
-                grid-column-start: 10;
-                grid-column-end: 40;
-                grid-row-start: 80;
-                grid-row-end: 86;
+                grid-column-start: 7;
+                grid-column-end: 37;
+                grid-row-start: 75;
+                grid-row-end: 82;
                 overflow: hidden;
             }
 
             .better_more {
-                grid-column-start: 12;
-                grid-column-end: 38;
-                grid-row-start: 82;
-                grid-row-end: 84;
+                grid-column-start: 9;
+                grid-column-end: 35;
+                grid-row-start: 77;
+                grid-row-end: 80;
                 opacity: 50%;
                 overflow: hidden;
             }
 
+            .inside_better {
+               font-size: 12pt;
+            }
+
             /* KOMENT */
             .koment_text {
-                grid-column-start: 62;
-                grid-column-end: 88;
-                grid-row-start: 74;
-                grid-row-end: 77;
+                grid-column-start: 60;
+                grid-column-end: 95;
+                grid-row-start: 71;
+                grid-row-end: 76;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_koment_text {
                 grid-column-start: 65;
-                grid-column-end: 85;
-                grid-row-start: 74;
-                grid-row-end: 77;
+                grid-column-end: 90;
+                grid-row-start: 71;
+                grid-row-end: 75;
                 overflow: hidden;
                 z-index:1;
             }
@@ -2524,23 +2567,27 @@
                 grid-column-start: 60;
                 grid-column-end: 90;
                 grid-row-start: 79;
-                grid-row-end: 85;
+                grid-row-end: 86;
                 overflow: hidden;
             }
             .koment_more {
                 grid-column-start: 62;
                 grid-column-end: 88;
                 grid-row-start: 81;
-                grid-row-end: 83;
+                grid-row-end: 84;
                 overflow: hidden;
                 opacity: 50%;
+            }
+
+            .inside_koment {
+               font-size: 12pt;
             }
 
             .atom {
                 grid-column-start: 20;
                 grid-column-end: 53;
-                grid-row-start: 90;
-                grid-row-end: 99;
+                grid-row-start: 87;
+                grid-row-end: 97;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2548,8 +2595,8 @@
             .english_atom {
                 grid-column-start: 20;
                 grid-column-end: 53;
-                grid-row-start: 90;
-                grid-row-end: 99;
+                grid-row-start: 86;
+                grid-row-end: 97;
                 overflow: hidden;
                 z-index: 1;
                 opacity:0;
@@ -2565,6 +2612,11 @@
         }
 
         @media screen and (max-width: 900px),(max-device-width: 900px) {
+            [type=radio]:checked + img {
+                outline: 4px solid #FFFFFF;
+                padding:5px;
+            } 
+            
             /* ИМЯ */
             .name_text {
                 grid-column-start: 5;
@@ -2586,23 +2638,24 @@
             }
 
             #name_zapolni {
-                grid-column-start: 7;
-                grid-column-end: 30;
+                grid-column-start: 5;
+                grid-column-end: 32;
                 grid-row-start: 15;
                 grid-row-end: 20;
                 overflow: hidden;
             }
 
             .name_form {
-                grid-column-start: 8;
-                grid-column-end: 29;
-                grid-row-start: 16;
-                grid-row-end: 18;
-                transform:translateY(1vh);
+                grid-column-start: 6;
+                grid-column-end: 31;
+                grid-row-start: 17;
+                grid-row-end: 19;
+                transform:translateY(-1vh);
                 overflow: hidden; 
                 opacity:50%;
                 z-index:10;
             }
+
             /* EMAIL */
             .email_text {
                 grid-column-start: 41;
@@ -2613,16 +2666,16 @@
             }
             
             #email_zapolni {
-                grid-column-start: 39;
-                grid-column-end: 62;
+                grid-column-start: 37;
+                grid-column-end: 64;
                 grid-row-start: 15;
                 grid-row-end: 20;
                 overflow: hidden;
             }
 
             .email_form {
-                grid-column-start: 40;
-                grid-column-end: 61;
+                grid-column-start: 38;
+                grid-column-end: 63;
                 grid-row-start: 16;
                 grid-row-end: 18;
                 transform:translateY(1vh);
@@ -2652,15 +2705,15 @@
             }
 
             #city_zapolni {
-                grid-column-start: 69;
-                grid-column-end: 94;
+                grid-column-start: 68;
+                grid-column-end: 97;
                 grid-row-start: 15;
                 grid-row-end: 20;
                 overflow: hidden;
             }
             .city_form {
                 grid-column-start: 70;
-                grid-column-end: 93;
+                grid-column-end: 95;
                 grid-row-start: 16;
                 grid-row-end: 18;
                 transform:translateY(1vh);
@@ -2671,104 +2724,80 @@
 
             /* ОТПРАВКА */
             .otpravka_text {
-                grid-column-start: 10;
-                grid-column-end: 47;
+                grid-column-start: 5;
+                grid-column-end: 52;
                 grid-row-start: 25;
-                grid-row-end: 27;
-                transform:scale(1.2);
+                grid-row-end: 28;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_otpravka_text {
-                grid-column-start: 10;
-                grid-column-end: 47;
+                grid-column-start: 5;
+                grid-column-end: 49;
                 grid-row-start: 25;
-                grid-row-end: 27;
-                transform:scale(1.2);
+                grid-row-end: 28;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
             #pochta_rossii {
-                transform: translateY(-2.5em) scale(1.1); margin-left: 2vw; max-width: 80%; max-height: 80%; min-width: 80%; min-height: 80%;
+                max-width: 70%; max-height: 70%; min-width: 70%; min-height: 70%;
             }
 
-            #sdek {
-                transform: translateY(-6em) translateX(-4vw) scale(0.7); max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
+            /* #sdek {
+                max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
             }
 
             #drugoe {
-                transform: translateY(-9em) translateX(-1.8vw) scale(1); max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
-            }
+                max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
+            } */
 
             .otpravka_form {
-                grid-column-start: 5;
-                grid-column-end: 45;
-                grid-row-start: 27;
-                grid-row-end: 52;
+                grid-column-start: 8;
+                grid-column-end: 48;
+                grid-row-start: 33;
+                grid-row-end: 58;
                 overflow: hidden;
                 z-index:2;
             }
 
             /* ОПЛАТА */
             .payment_text {
-                grid-column-start: 60;
+                grid-column-start: 56;
                 grid-column-end: 95;
                 grid-row-start: 25;
-                grid-row-end: 27;
-                transform:scale(1.2);
+                grid-row-end: 28;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_payment_text {
-                grid-column-start: 60;
+                grid-column-start: 55;
                 grid-column-end: 95;
                 grid-row-start: 25;
-                grid-row-end: 27;
-                transform:scale(1.2);
+                grid-row-end: 28;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
-            #rub {
-                transform: translateY(1em); margin-left:1em; margin-top:1em; max-width: 70%; max-height: 70%;min-width: 70%; min-height: 70%;
-            }
-
-            #usd {
-                transform: translateY(-1em); margin-left:1em; max-width: 70%; max-height: 70%;min-width: 70%; min-height: 70%;
-            }
-            
-            #btc {
-                transform: translateY(-2em); margin-left:1em; max-width: 70%; max-height: 70%;min-width: 70%; min-height: 70%;
-            }
-
-            #eth {
-                transform: translateY(-3em); margin-left:1em; max-width: 70%; max-height: 70%;min-width: 70%; min-height: 70%;
-            }
-
-            #usdt {
-                transform: translateY(-4em) scale(1.03); margin-left:1em; max-width: 75%; max-height: 75%;min-width: 75%; min-height: 75%;
-            }
-
             .payment_form {
-                grid-column-start: 60;
-                grid-column-end: 75;
-                grid-row-start: 23;
-                grid-row-end: 57;
+                grid-column-start: 63;
+                grid-column-end: 83;
+                grid-row-start: 33;
+                grid-row-end: 73;
                 overflow: hidden;
                 z-index:2;
             }
 
             /* ЛУЧШЕ СВЯЗАТЬСЯ */
             .better_text {
-                grid-column-start: 5;
-                grid-column-end: 95;
-                grid-row-start: 55;
-                grid-row-end: 58;
+                grid-column-start: 3;
+                grid-column-end: 97;
+                grid-row-start: 51;
+                grid-row-end: 54;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2776,57 +2805,57 @@
             .english_better_text {
                 grid-column-start: 5;
                 grid-column-end: 90;
-                grid-row-start: 55;
-                grid-row-end: 58;
+                grid-row-start: 50;
+                grid-row-end: 53;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
-            #telegram {
-                transform: translateY(-1em) translateX(2em) scale(1.3); margin-left:1px;max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
-            }
-
-            #instagram {
-                transform: translateY(-2em) translateX(2em) scale(1.3); margin-left:1px; max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
-            }
-
-            #wup {
-                transform: translateY(-3em) translateX(2em) scale(1.3); margin-left:1px; max-width: 33%; max-height: 33%; min-width: 33%; min-height: 33%;            
-            }
-
             .better_form {
-                grid-column-start: 5;
-                grid-column-end: 60;
-                grid-row-start: 58;
-                grid-row-end: 77;
+                grid-column-start: 10;
+                grid-column-end: 65;
+                grid-row-start: 54;
+                grid-row-end: 67;
                 overflow: hidden;
                 z-index:2;
             }
             
+            #telegram {
+                transform: translateY(1vh); margin-top: 2vh; max-width: 40%; max-height: 40%; min-width: 40%; min-height: 40%;
+            }
+
+            #instagram {
+                max-width: 45%; max-height: 45%; min-width: 45%; min-height: 45%;
+            }
+
+            #wup {
+                transform: translateY(-1vh); max-width: 37%; max-height: 37%; min-width: 37%; min-height: 37%;
+            }
+
             #better_zapolni {
                 grid-column-start: 5;
                 grid-column-end: 35;
-                grid-row-start: 74;
-                grid-row-end: 80;
+                grid-row-start: 68;
+                grid-row-end: 74;
                 overflow: hidden;
             }
 
             .better_more {
                 grid-column-start: 7;
                 grid-column-end: 33;
-                grid-row-start: 76;
-                grid-row-end: 78;
+                grid-row-start: 70;
+                grid-row-end: 72;
                 opacity: 50%;
                 overflow: hidden;
             }
 
             /* KOMENT */
             .koment_text {
-                grid-column-start: 60;
+                grid-column-start: 55;
                 grid-column-end: 95;
-                grid-row-start: 74;
-                grid-row-end: 77;
+                grid-row-start: 71;
+                grid-row-end: 74;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2834,8 +2863,8 @@
             .english_koment_text {
                 grid-column-start: 60;
                 grid-column-end: 90;
-                grid-row-start: 74;
-                grid-row-end: 77;
+                grid-row-start: 71;
+                grid-row-end: 74;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
@@ -2844,22 +2873,22 @@
             .koment_zapolni {
                 grid-column-start: 63;
                 grid-column-end: 93;
-                grid-row-start: 79;
-                grid-row-end: 85;
+                grid-row-start: 76;
+                grid-row-end: 82;
                 overflow: hidden;
             }
             .koment_more {
                 grid-column-start: 65;
                 grid-column-end: 91;
-                grid-row-start: 81;
-                grid-row-end: 83;
+                grid-row-start: 78;
+                grid-row-end: 80;
                 overflow: hidden;
                 opacity: 50%;
             }
 
             .atom {
                 grid-column-start: 10;
-                grid-column-end: 45;
+                grid-column-end: 50;
                 grid-row-start: 87;
                 grid-row-end: 95;
                 overflow: hidden;
@@ -2868,7 +2897,7 @@
 
             .english_atom {
                 grid-column-start: 10;
-                grid-column-end: 45;
+                grid-column-end: 50;
                 grid-row-start: 87;
                 grid-row-end: 95;
                 overflow: hidden;
@@ -2877,7 +2906,7 @@
             }
 
             .close {
-                grid-column-start: 91;
+                grid-column-start: 90;
                 grid-column-end: 95;
                 grid-row-start: 2;
                 grid-row-end: 5;
@@ -2886,6 +2915,11 @@
         }
 
         @media screen and (max-width: 600px),(max-device-width: 600px) {
+            [type=radio]:checked + img {
+                outline: 2px solid #FFFFFF;
+                padding:5px;
+            } 
+            
             .content {
                 display: grid;
                 grid-template-columns: repeat(100, 1fr);
@@ -2901,8 +2935,8 @@
             .name_text {
                 grid-column-start: 20;
                 grid-column-end: 80;
-                grid-row-start: 20;
-                grid-row-end: 25;
+                grid-row-start: 19;
+                grid-row-end: 24;
                 overflow: hidden;     
                 z-index:2;           
             }
@@ -2910,8 +2944,8 @@
             .english_name_text {
                 grid-column-start:20;
                 grid-column-end: 80;
-                grid-row-start: 20;
-                grid-row-end: 25;
+                grid-row-start: 19;
+                grid-row-end: 24;
                 overflow: hidden; 
                 z-index:1;
                 opacity:0;               
@@ -2920,7 +2954,7 @@
             #name_zapolni {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 28;
+                grid-row-start: 27;
                 grid-row-end: 37;
                 overflow: hidden;
             }
@@ -2928,16 +2962,16 @@
             .name_form {
                 grid-column-start: 19;
                 grid-column-end: 81;
-                grid-row-start: 30;
-                grid-row-end: 33;
+                grid-row-start: 31;
+                grid-row-end: 35;
                 overflow: hidden; 
                 opacity:50%;
                 z-index:10;
             }
             /* EMAIL */
             .email_text {
-                grid-column-start:28;
-                grid-column-end: 72;
+                grid-column-start: 32;
+                grid-column-end: 68;
                 grid-row-start: 40;
                 grid-row-end: 45;
                 overflow: hidden;
@@ -2945,17 +2979,17 @@
             
             #email_zapolni {
                 grid-column-start: 15;
-                grid-column-end: 85;
+                grid-column-end: 86;
                 grid-row-start: 48;
-                grid-row-end: 57;
+                grid-row-end: 58;
                 overflow: hidden;
             }
 
             .email_form {
                 grid-column-start: 19;
-                grid-column-end: 81;
+                grid-column-end: 82;
                 grid-row-start: 50;
-                grid-row-end: 53;
+                grid-row-end: 54;
                 overflow: hidden;
                 z-index:2;
                 opacity:50%;
@@ -2965,8 +2999,8 @@
             .city_text {
                 grid-column-start: 10;
                 grid-column-end: 90;
-                grid-row-start: 60;
-                grid-row-end: 65;
+                grid-row-start: 63;
+                grid-row-end: 68;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2974,8 +3008,8 @@
             .english_city_text {
                 grid-column-start: 10;
                 grid-column-end: 90;
-                grid-row-start: 60;
-                grid-row-end: 65;
+                grid-row-start: 63;
+                grid-row-end: 68;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
@@ -2984,15 +3018,15 @@
             #city_zapolni {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 68;
-                grid-row-end: 77;
+                grid-row-start: 71;
+                grid-row-end: 81;
                 overflow: hidden;
             }
             .city_form {
-                grid-column-start: 19;
+                grid-column-start: 18;
                 grid-column-end: 81;
-                grid-row-start: 70;
-                grid-row-end: 73;
+                grid-row-start: 73;
+                grid-row-end: 77;
                 overflow: hidden;
                 z-index:2;
                 opacity:50%;
@@ -3000,41 +3034,41 @@
 
             /* ОТПРАВКА */
             .otpravka_text {
-                grid-column-start: 15;
-                grid-column-end: 85;
+                grid-column-start: 10;
+                grid-column-end: 90;
                 grid-row-start: 113;
-                grid-row-end: 116;
+                grid-row-end: 118;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_otpravka_text {
-                grid-column-start: 15;
-                grid-column-end: 85;
+                grid-column-start: 10;
+                grid-column-end: 90;
                 grid-row-start: 113;
-                grid-row-end: 116;
+                grid-row-end: 118;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
             #pochta_rossii {
-                transform: translateY(-2em) scale(1.1); margin-left: 4vw; max-width: 80%; max-height: 80%; min-width: 80%; min-height: 80%;
+                transform: translateY(1vw); max-width: 75%; max-height: 75%; min-width: 75%; min-height: 75%;
             }
 
             #sdek {
-                transform: translateY(-4.7em) translateX(-5.5vw) scale(0.7); margin-left: 4vw; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
+                max-width: 30%; max-height: 30%; min-width: 30%; min-height: 30%;
             }
 
             #drugoe {
-                transform: translateY(-7em) translateX(-2vw); margin-left:4vw; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
+                max-width: 40%; max-height: 40%; min-width: 40%; min-height: 40%;
             }
 
             .otpravka_form {
-                grid-column-start: 5;
-                grid-column-end: 55;
-                grid-row-start: 118;
-                grid-row-end: 143;
+                grid-column-start: 15;
+                grid-column-end: 75;
+                grid-row-start: 123;
+                grid-row-end: 142;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3043,47 +3077,27 @@
             .payment_text {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 143;
-                grid-row-end: 146;
+                grid-row-start: 145;
+                grid-row-end: 150;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_payment_text {
-                grid-column-start: 15;
-                grid-column-end: 85;
-                grid-row-start: 143;
-                grid-row-end: 146;
+                grid-column-start: 10;
+                grid-column-end: 90;
+                grid-row-start: 145;
+                grid-row-end: 150;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
-            #rub {
-                transform: translateY(0.5em) translateX(-0.4em) scale(1.3); margin-left: 1.2em; margin-top:1em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
-            }
-
-            #usd {
-                transform: translateY(-0.5em) translateX(-0.4em) scale(1.3); margin-left: 1.2em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
-            }
-            
-            #btc {
-                transform: translateY(-1.5em) translateX(-0.4em) scale(1.3); margin-left: 1.2em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
-            }
-
-            #eth {
-                transform: translateY(-2.5em) translateX(-0.4em) scale(1.3); margin-left:1.2em; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
-            }
-
-            #usdt {
-                transform: translateY(-3.5em) translateX(-0.4em) scale(1.3); margin-left:1.2em; max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%;
-            }
-
             .payment_form {
-                grid-column-start: 5;
-                grid-column-end: 25;
-                grid-row-start: 142;
-                grid-row-end: 185;
+                grid-column-start: 15;
+                grid-column-end: 45;
+                grid-row-start: 155;
+                grid-row-end: 191;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3099,11 +3113,10 @@
             }
 
             .better_mob {
-                grid-column-start: 10;
-                grid-column-end: 90;
-                grid-row-start: 207;
-                grid-row-end: 220;
-                /* transform: scale(1.2); */
+                grid-column-start: 15;
+                grid-column-end: 80;
+                grid-row-start: 206;
+                grid-row-end: 221;
                 overflow: hidden;
                 z-index:2;
                 max-width: 100%; 
@@ -3113,34 +3126,33 @@
 
             .english_better_mob {
                 grid-column-start: 15;
-                grid-column-end: 85;
-                grid-row-start: 207;
+                grid-column-end: 80;
+                grid-row-start: 205;
                 grid-row-end: 220;
-                /* transform: scale(1.2); */
                 overflow: hidden;
                 z-index:1;
-                max-width:100%; 
+                max-width: 100%; 
                 max-height: 100%;
-                opacity:0;
+                opacity: 0;
             }
 
             #telegram {
-                transform: translateY(-2em); margin-left:1px;max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
+                transform: translateY(-1vh) translateX(1vw); max-width: 38%; max-height: 38%; min-width: 38%; min-height: 38%;
             }
 
             #instagram {
-                transform: translateY(-4em); margin-left:1px; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
+                transform: translateY(-2vh) translateX(1vw); max-width: 42%; max-height: 42%; min-width: 42%; min-height: 42%;
             }
 
             #wup {
-                transform: translateY(-6em); margin-left:1px; max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;            
+                transform: translateY(-3vh) translateX(1vw); max-width: 33%; max-height: 33%; min-width: 33%; min-height: 33%;
             }
 
             .better_form {
-                grid-column-start: 5;
-                grid-column-end: 70;
+                grid-column-start: 15;
+                grid-column-end: 90;
                 grid-row-start: 222;
-                grid-row-end: 240;
+                grid-row-end: 244;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3148,35 +3160,37 @@
             #better_zapolni {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 242;
-                grid-row-end: 251;
+                grid-row-start: 245;
+                grid-row-end: 255;
                 overflow: hidden;
+                transform: translateY(-5vw);
             }
 
             .better_more {
                 grid-column-start: 19;
                 grid-column-end: 81;
-                grid-row-start: 245;
-                grid-row-end: 248;
+                grid-row-start: 248;
+                grid-row-end: 252;
                 opacity: 50%;
                 overflow: hidden;
+                transform: translateY(-5vw);
             }
 
             /* KOMENT */
             .koment_text {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 253;
-                grid-row-end: 258;
+                grid-row-start: 258;
+                grid-row-end: 263;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_koment_text {
-                grid-column-start: 20;
-                grid-column-end: 80;
-                grid-row-start: 253;
-                grid-row-end: 258;
+                grid-column-start: 21;
+                grid-column-end: 79;
+                grid-row-start: 258;
+                grid-row-end: 263;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
@@ -3185,15 +3199,16 @@
             .koment_zapolni {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 262;
-                grid-row-end: 271;
+                grid-row-start: 264;
+                grid-row-end: 274;
                 overflow: hidden;
             }
+
             .koment_more {
                 grid-column-start: 19;
                 grid-column-end: 81;
-                grid-row-start: 265;
-                grid-row-end: 268;
+                grid-row-start: 267;
+                grid-row-end: 271;
                 overflow: hidden;
                 opacity: 50%;
             }
@@ -3201,7 +3216,7 @@
             .atom {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 284;
+                grid-row-start: 282;
                 grid-row-end: 296;
                 overflow: hidden;
                 z-index:2;
@@ -3210,7 +3225,7 @@
             .english_atom {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 284;
+                grid-row-start: 282;
                 grid-row-end: 296;
                 overflow: hidden;
                 z-index:1;
@@ -3218,7 +3233,7 @@
             }
 
             .close {
-                grid-column-start: 85;
+                grid-column-start: 87;
                 grid-column-end: 97;
                 grid-row-start: 2;
                 grid-row-end: 8;
@@ -3227,28 +3242,33 @@
         }
 
         @media screen and (max-height: 450px),(max-device-height: 450px) {
+            [type=radio]:checked + img {
+                outline: 2px solid #FFFFFF;
+                padding: 5px;
+            } 
+            
             /* ИМЯ */
             .name_text {
-                grid-column-start: 5;
-                grid-column-end: 30;
-                grid-row-start: 6;
+                grid-column-start: 9;
+                grid-column-end: 28;
+                grid-row-start: 7;
                 grid-row-end: 10;
-                overflow: hidden;   
-                z-index:2;             
+                overflow: hidden;  
+                z-index:1;              
             }
 
             .english_name_text {
-                grid-column-start: 5;
-                grid-column-end: 30;
-                grid-row-start: 6;
+                grid-column-start: 9;
+                grid-column-end: 28;
+                grid-row-start: 7;
                 grid-row-end: 10;
-                overflow: hidden;
-                z-index:1;
-                opacity:0;                
+                overflow: hidden;                
+                z-index:2;
+                opacity:0;
             }
-
+            
             #name_zapolni {
-                grid-column-start: 6;
+                grid-column-start: 8;
                 grid-column-end: 29;
                 grid-row-start: 12;
                 grid-row-end: 20;
@@ -3256,26 +3276,26 @@
             }
 
             .name_form {
-                grid-column-start: 7;
+                grid-column-start: 9;
                 grid-column-end: 28;
-                grid-row-start: 13;
-                grid-row-end: 17;
+                grid-row-start: 15;
+                grid-row-end: 18;
                 overflow: hidden; 
                 opacity:50%;
                 z-index:10;
             }
             /* EMAIL */
             .email_text {
-                grid-column-start: 44;
-                grid-column-end: 59;
+                grid-column-start: 45;
+                grid-column-end: 55;
                 grid-row-start: 7;
-                grid-row-end: 11;
+                grid-row-end: 10;
                 overflow: hidden;
             }
-            
+
             #email_zapolni {
                 grid-column-start: 40;
-                grid-column-end: 63;
+                grid-column-end: 61;
                 grid-row-start: 12;
                 grid-row-end: 20;
                 overflow: hidden;
@@ -3283,8 +3303,8 @@
 
             .email_form {
                 grid-column-start: 41;
-                grid-column-end: 62;
-                grid-row-start: 13;
+                grid-column-end: 60;
+                grid-row-start: 14;
                 grid-row-end: 17;
                 overflow: hidden;
                 z-index:2;
@@ -3293,35 +3313,35 @@
 
             /* ГОРОД */
             .city_text {
-                grid-column-start: 66;
-                grid-column-end: 98;
+                grid-column-start: 69;
+                grid-column-end: 95;
                 grid-row-start: 7;
-                grid-row-end: 11;
+                grid-row-end: 10;
                 overflow: hidden;
-                z-index:2;
+                z-index:1;
             }
 
             .english_city_text {
-                grid-column-start: 66;
-                grid-column-end: 98;
+                grid-column-start: 69;
+                grid-column-end: 95;
                 grid-row-start: 7;
-                grid-row-end: 11;
+                grid-row-end: 10;
                 overflow: hidden;
-                z-index:1;
+                z-index:2;
                 opacity:0;
             }
 
             #city_zapolni {
-                grid-column-start: 70;
-                grid-column-end: 95;
+                grid-column-start: 69;
+                grid-column-end: 94;
                 grid-row-start: 12;
                 grid-row-end: 20;
                 overflow: hidden;
             }
             .city_form {
-                grid-column-start: 71;
-                grid-column-end: 94;
-                grid-row-start: 13;
+                grid-column-start: 70;
+                grid-column-end: 93;
+                grid-row-start: 14;
                 grid-row-end: 17;
                 overflow: hidden;
                 z-index:2;
@@ -3330,51 +3350,43 @@
 
             /* ОТПРАВКА */
             .otpravka_text {
-                grid-column-start: 10;
-                grid-column-end: 35;
-                grid-row-start: 25;
-                grid-row-end: 29;
+                grid-column-start: 5;
+                grid-column-end: 45;
+                grid-row-start: 27;
+                grid-row-end: 31;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_otpravka_text {
-                grid-column-start: 10;
-                grid-column-end: 35;
-                grid-row-start: 25;
-                grid-row-end: 29;
+                grid-column-start: 5;
+                grid-column-end: 45;
+                grid-row-start: 27;
+                grid-row-end: 31;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
-            /* #pochta_rossii {
-                margin-top: 5vh; margin-left: 1.3vw; max-width: 85%; max-height: 85%;min-width: 85%; min-height: 85%;
+            #pochta_rossii {
+                margin-top:1vh;
             }
-
-            #sdek {
-                transform: translateY(-4em) translateX(-1em); max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
-            }
-
-            #drugoe {
-                transform: translateY(-5.5em) translateX(-1em); max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%;
-            } */
 
             .otpravka_form {
                 grid-column-start: 5;
                 grid-column-end: 30;
-                grid-row-start: 35;
-                grid-row-end: 70;
+                grid-row-start: 36;
+                grid-row-end: 59;
                 overflow: hidden;
                 z-index:2;
             }
 
             /* ОПЛАТА */
             .payment_text {
-                grid-column-start: 65;
-                grid-column-end: 95;
-                grid-row-start: 25;
-                grid-row-end: 29;
+                grid-column-start: 58;
+                grid-column-end: 92;
+                grid-row-start: 27;
+                grid-row-end: 31;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3382,38 +3394,38 @@
             .english_payment_text {
                 grid-column-start: 65;
                 grid-column-end: 95;
-                grid-row-start: 25;
-                grid-row-end: 29;
+                grid-row-start: 27;
+                grid-row-end: 31;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
-            /* #rub {
-                margin-top:1px; max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
-            }
+            #rub {
+                margin-top:1em; max-width: 45%; max-height: 45%;min-width: 45%; min-height: 45%;
+                }
 
             #usd {
-                max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
+                max-width: 45%; max-height: 45%; min-width: 45%; min-height: 45%;
             }
                 
             #btc {
-                transform:translateY(-3em); max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
+                max-width: 45%; max-height: 45%; min-width: 45%; min-height: 45%;
             }
 
             #eth {
-                transform:translateY(-5em); max-width: 50%; max-height: 50%;min-width: 50%; min-height: 50%;
+                max-width: 45%; max-height: 45%; min-width: 45%; min-height: 45%;
             }
 
             #usdt {
-                transform:translateY(-7em); max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%;
-            } */
-            
+                max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%;
+            }
+
             .payment_form {
-                grid-column-start: 62;
-                grid-column-end: 72;
-                grid-row-start: 25;
-                grid-row-end: 60;
+                grid-column-start: 63;
+                grid-column-end: 73;
+                grid-row-start: 32;
+                grid-row-end: 55;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3421,100 +3433,99 @@
             /* ЛУЧШЕ СВЯЗАТЬСЯ */
             .better_text {
                 grid-column-start: 5;
-                grid-column-end: 90;
-                grid-row-start: 60;
-                grid-row-end: 65;
+                grid-column-end: 70;
+                grid-row-start: 57;
+                grid-row-end: 61;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_better_text {
                 grid-column-start: 5;
-                grid-column-end: 90;
-                grid-row-start: 60;
-                grid-row-end: 65;
+                grid-column-end: 70;
+                grid-row-start: 55;
+                grid-row-end: 59;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
-            /* #telegram {
-                margin-left:1px;max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
+            #telegram {
+                margin-left: 1vh; transform: translateY(3vh); margin-top: 2vh; max-width: 29%; max-height: 29%; min-width: 29%; min-height: 29%;
             }
 
             #instagram {
-                margin-left:1px; max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
+                margin-left: 1vh; max-width: 33%; max-height: 33%; min-width: 33%; min-height: 33%;
             }
 
             #wup {
-                margin-left:1px; max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
-            } */
+                margin-left: 1vh; transform: translateY(-3vh); max-width: 28%; max-height: 28%; min-width: 28%; min-height: 28%;
+            }
 
             .better_form {
-                grid-column-start: 5;
-                grid-column-end: 50;
-                grid-row-start: 65;
-                grid-row-end: 87;
+                grid-column-start: 8;
+                grid-column-end: 48;
+                grid-row-start: 58;
+                grid-row-end: 82;
                 overflow: hidden;
                 z-index:2;
             }
-            
+
             #better_zapolni {
-                grid-column-start: 8;
-                grid-column-end: 33;
-                grid-row-start: 87;
-                grid-row-end: 95;
+                grid-column-start: 7;
+                grid-column-end: 27;
+                grid-row-start: 81;
+                grid-row-end: 89;
                 overflow: hidden;
             }
 
             .better_more {
-                grid-column-start: 9;
-                grid-column-end: 32;
-                grid-row-start: 89;
-                grid-row-end: 93;
+                grid-column-start: 8;
+                grid-column-end: 26;
+                grid-row-start: 83;
+                grid-row-end: 87;
                 opacity: 50%;
                 overflow: hidden;
             }
 
             /* KOMENT */
             .koment_text {
-                grid-column-start: 70;
-                grid-column-end: 95;
-                grid-row-start: 74;
-                grid-row-end: 78;
+                grid-column-start: 60;
+                grid-column-end: 90;
+                grid-row-start: 67;
+                grid-row-end: 72;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_koment_text {
-                grid-column-start: 70;
-                grid-column-end: 95;
-                grid-row-start: 74;
-                grid-row-end: 78;
+                grid-column-start: 60;
+                grid-column-end: 80;
+                grid-row-start: 67;
+                grid-row-end: 72;
                 overflow: hidden;
                 z-index:1;
-                opacity:0;
             }
 
             .koment_zapolni {
-                grid-column-start: 71;
-                grid-column-end: 94;
-                grid-row-start: 80;
-                grid-row-end: 88;
+                grid-column-start: 65;
+                grid-column-end: 85;
+                grid-row-start: 76;
+                grid-row-end: 84;
                 overflow: hidden;
             }
             .koment_more {
-                grid-column-start: 72;
-                grid-column-end: 93;
-                grid-row-start: 82;
-                grid-row-end: 86;
+                grid-column-start: 66;
+                grid-column-end: 84;
+                grid-row-start: 78;
+                grid-row-end: 82;
                 overflow: hidden;
                 opacity: 50%;
             }
 
             .atom {
-                grid-column-start: 40;
-                grid-column-end: 65;
+                grid-column-start: 35;
+                grid-column-end: 60;
                 grid-row-start: 86;
                 grid-row-end: 97;
                 overflow: hidden;
@@ -3522,12 +3533,12 @@
             }
 
             .english_atom {
-                grid-column-start: 40;
-                grid-column-end: 65;
+                grid-column-start: 35;
+                grid-column-end: 60;
                 grid-row-start: 86;
                 grid-row-end: 97;
                 overflow: hidden;
-                z-index:1;
+                z-index: 1;
                 opacity:0;
             }
 
@@ -3537,7 +3548,7 @@
                 grid-row-start: 2;
                 grid-row-end: 5;
                 overflow: hidden;
-            }
+            } 
         }
 
 
@@ -3565,9 +3576,9 @@
                         <img src = '/media/works/eye/zayavka/english/english_name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
                     </div>
 
-                    <img id = 'name_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'z-index:1; '>
+                    <img id = 'name_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'z-index:1; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
                     <div class = 'name_form'>
-                        <input type="text" name = 'zayavka-name' id = 'zayavka-name' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' required>
+                        <input class = 'inside_name' type="text" name = 'zayavka-name' id = 'zayavka-name' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' required>
                     </div>
 
                     <!-- ПОЧТА -->
@@ -3577,7 +3588,7 @@
 
                     <img id = 'email_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
                     <div class="email_form">
-                        <input type="email" name = 'zayavka-email' id = 'zayavka-email' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                        <input class = 'inside_email' type="email" name = 'zayavka-email' id = 'zayavka-email' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
                     </div>
                     
                     <!-- ГОРОД -->
@@ -3591,7 +3602,7 @@
 
                     <img id = 'city_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
                     <div class="city_form">    
-                        <input type="text" name = 'zayavka-city' id = 'zayavka-city' required style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
+                        <input class = 'inside_city' type="text" name = 'zayavka-city' id = 'zayavka-city' required style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
                     </div>
 
                     <!-- ОТПРАВКА -->
@@ -3605,21 +3616,21 @@
 
                     <div class="otpravka_form" style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>    
                         <div>
-                            <label>
+                            <label style = 'display: block;'>
                                 <input type="radio" name="otpravka" id="otpravka1" value = 'Почта России' style = 'cursor: pointer;' required>
                                 <img id = 'pochta_rossii' src = '/media/works/eye/zayavka/pr.png'>                        
                             </label>
                         </div>
 
                         <div>
-                            <label>
+                            <label style = 'display: block; margin-top:1vh;'>
                                 <input type="radio" name="otpravka" id="otpravka2" value = 'СДЭК' style = 'cursor: pointer;' >
                                 <img id = 'sdek' src = '/media/works/eye/zayavka/sdek.png'>                        
                             </label>
                         </div>
 
                         <div>
-                            <label>
+                            <label style = 'display: block; margin-top:1vh;'>
                                 <input type="radio" name="otpravka" id="otpravka3" value = 'Другое' style = 'cursor: pointer;'>
                                 <img id = 'drugoe' src = '/media/works/eye/zayavka/drug.png'>                                               
                             </label>
@@ -3629,45 +3640,45 @@
                     
                     <!-- ОПЛАТА -->
                     <div class = 'payment_text' onmouseenter = ZayavkaPayment_SwitchToEnglish() onmouseleave = ZayavkaPayment_BackToRussian()>
-                        <img src = '/media/works/eye/zayavka/oplata.png' style = 'max-width: 100%; max-height: 100%;'>
+                        <img src = '/media/works/eye/zayavka/oplata.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
                     </div> 
 
                     <div class = 'english_payment_text'>
-                        <img src = '/media/works/eye/zayavka/english/english_oplata.png' style = 'max-width: 100%; max-height: 100%;'>
+                        <img src = '/media/works/eye/zayavka/english/english_oplata.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
                     </div>
                 
                     <div class="payment_form">
 
                         <div>
-                            <label>
+                            <label style = 'display: block;'>
                                 <input type="radio" name="payment" id="pay1" value = 'RUB' style = 'cursor: pointer' required>
                                 <img id = 'rub' src = '/media/works/eye/zayavka/money/rub.png'>                                                    
                             </label>
                         </div>
 
                         <div>
-                            <label>
+                            <label style = 'display: block; margin-top:1vh;'>
                                 <input type="radio" name="payment" id="pay4" value = 'USD' style = 'cursor: pointer'> 
                                 <img id = 'usd' src = '/media/works/eye/zayavka/money/usd.png'>                                                
                             </label>
                         </div>
 
                         <div>
-                            <label>
+                            <label style = 'display: block; margin-top:1vh;'>
                                 <input type="radio" name="payment" id="pay2" value = 'BTC' style = 'cursor: pointer'>
                                 <img id = 'btc' src = '/media/works/eye/zayavka/money/btc.png'>                        
                             </label>
                         </div>
 
                         <div>
-                            <label>
+                            <label style = 'display: block; margin-top:1vh;'>
                                 <input type="radio" name="payment" id="pay3" value = 'ETH' style = 'cursor: pointer'> 
                                 <img id = 'eth' src = '/media/works/eye/zayavka/money/eth.png'>                                                
                             </label>
                         </div>
 
                         <div>
-                            <label>
+                            <label style = 'display: block; margin-top:1vh;'>
                                 <input type="radio" name="payment" id="pay6" value = 'USDT' style = 'cursor: pointer'>
                                 <img id = 'usdt' src = '/media/works/eye/zayavka/money/usdt.png'>                                                  
                             </label>
@@ -3717,7 +3728,7 @@
 
                     <img id = 'better_zapolni' src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
                     <div class = 'better_more'>
-                        <input type="text" name = 'better_more' id = 'better_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                        <input class = 'inside_better' type="text" name = 'better_more' id = 'better_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
                     </div>
 
                     <!-- КОММЕНТАРИЙ -->
@@ -3734,7 +3745,7 @@
                         <img src = '/media/works/eye/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
                     </div>
                     <div class = 'koment_more'>
-                        <input type="text" name = 'koment_more' id = 'koment_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
+                        <input class = 'inside_koment' type="text" name = 'koment_more' id = 'koment_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
                     </div>
 
                     <!-- ОТПРАВЛЯЙ -->
