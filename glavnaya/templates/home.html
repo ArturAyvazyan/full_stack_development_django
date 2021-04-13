@@ -798,11 +798,12 @@
         .third_words {
             display: inline-block;
             font-family: LSDFont;
+            font-size: 30px;
             color: #270E47;
-            grid-column-start: 35;
-            grid-column-end: 55;
-            grid-row-start: 35;
-            grid-row-end: 55;
+            grid-column-start: 30;
+            grid-column-end: 60;
+            grid-row-start: 25;
+            grid-row-end: 45;
             opacity: 0;
         }
 
@@ -860,6 +861,19 @@
         } 
 
         @media screen and (max-width: 1200px), (max-device-width: 1200px) {
+            
+            .third_words {
+                display: inline-block;
+                font-family: LSDFont;
+                font-size:  22px;
+                color: #270E47;
+                grid-column-start: 35;
+                grid-column-end: 60;
+                grid-row-start: 15;
+                grid-row-end: 35;
+                opacity: 0;
+            }
+            
             .message {
                 display: inline-block;
                 grid-column-start: 68;
@@ -879,6 +893,15 @@
                 opacity:0;
             }
 
+            .invis {
+                display: inline-block;
+                grid-column-start: 68;
+                grid-column-end: 96;
+                grid-row-start: 65;
+                grid-row-end: 68;
+                z-index: 3;
+            }
+            
             .home_logo {
                 display: inline-block;
                 grid-column-start: 5;
@@ -912,11 +935,12 @@
             .third_words {
                 display: inline-block;
                 font-family: LSDFont;
+                font-size:  25px;
                 color: #270E47;
-                grid-column-start: 35;
-                grid-column-end: 55;
-                grid-row-start: 35;
-                grid-row-end: 55;
+                grid-column-start: 40;
+                grid-column-end: 80;
+                grid-row-start: 15;
+                grid-row-end: 35;
                 opacity: 0;
             }
 
@@ -980,11 +1004,12 @@
             .third_words {
                 display: inline-block;
                 font-family: LSDFont;
+                font-size:  18px;
                 color: #270E47;
-                grid-column-start: 40;
-                grid-column-end: 50;
-                grid-row-start: 40;
-                grid-row-end: 65;
+                grid-column-start: 42;
+                grid-column-end: 90;
+                grid-row-start: 10;
+                grid-row-end: 40;
                 opacity: 0;
                 transform:scale(0.7);
             }
@@ -1049,11 +1074,12 @@
             .third_words {
                 display: inline-block;
                 font-family: LSDFont;
+                font-size:  20px;
                 color: #270E47;
-                grid-column-start: 40;
-                grid-column-end: 50;
-                grid-row-start: 40;
-                grid-row-end: 65;
+                grid-column-start: 27;
+                grid-column-end: 67;
+                grid-row-start: 15;
+                grid-row-end: 40;
                 opacity: 0;
                 transform:scale(0.7);
             }
@@ -1949,7 +1975,7 @@
                     {% else %}
                     <div class="animated_logo">
 
-                        <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 215 116">
+                        <svg loading = 'lazy' style = 'display:flex;' id = 'demo-svg' viewBox="0 0 215 116">
 
                             <path stroke = 'pink' id = 'upper_main_lines' stroke-width="0.2" fill = 'none'  d="M73.25,31.24l1.1,2.34L76.05,41l.12,1.93-.82,1.55-4.2,5.59-2.8,6.27a4.92,4.92,0,0,1-2.8-2.79,5.28,5.28,0,0,1,0-2.79A9.54,9.54,0,0,1,67,47.28l2.8-4.18.7-1.4L67.91,34l-9.76-5.53-4.39-1,2-1.81,1.4-.7h7Z"/>
                             <path stroke = 'pink' id = 'upper_main_lines' stroke-width="0.2" fill = 'none' d="M83.84,14.78l-4.92.61h-11l4,.7H74l2.56.74,5,.73a2,2,0,0,0,2.19-.77A1.91,1.91,0,0,0,83.84,14.78Z"/> 
@@ -2403,8 +2429,10 @@
             <div class="section fp-auto-height" id='third' >
                 <div class = 'third_slide_wrapper'>
                     <div class="third_words">
-                        rick
-                        roll
+                        Приветствую! 
+                        <p>Если ты это читаешь, то, скорее всего, уже ознакомился с моим творчеством)</p>
+                        Я этому очень рада и, надеюсь, что ты неплохо провел свое время, возможно, даже вдохновился и что-то приобрел для себя. 
+                        Я стараюсь чтоб было так!
                     </div>
 
                     <div class="invis" onmouseenter = messageSwitchToEnglish() onmouseleave = messageBackToRussian()>
@@ -2424,9 +2452,7 @@
                     </div>
 
                     <div class="home_logo">
-                        <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
-                            <img src = "/media/homepage/third_slide/home.png" onclick = words_appears.play() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;'>
-                        </a>
+                        <img src = "/media/homepage/third_slide/home.png" onclick = words_appears.play() style = 'cursor: pointer; min-width:100%; min-height:100%;max-width:100%; max-height:100%;'>
                     </div>
 
                     <div class="tg_logo"  style = 'outline: none; color: inherit; text-decoration: none;'>
