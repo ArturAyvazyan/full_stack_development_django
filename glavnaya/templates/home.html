@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
     <title>main</title>
@@ -663,16 +663,16 @@
                 display: inline-block;
                 grid-column-start: 30;
                 grid-column-end: 75;
-                grid-row-start: 10;
-                grid-row-end: 43;
+                grid-row-start: 7;
+                grid-row-end: 40;
             }
 
             .image_second_slide_first_box {
                 display: inline-block;
                 grid-column-start: 33;
                 grid-column-end: 67;
-                grid-row-start: 13;
-                grid-row-end: 32;
+                grid-row-start: 10;
+                grid-row-end: 29;
                 transform: scale(0.9);
             }
 
@@ -688,8 +688,8 @@
                 display: inline-block;
                 grid-column-start: 41;
                 grid-column-end: 76;
-                grid-row-start: 39;
-                grid-row-end: 67;
+                grid-row-start: 36;
+                grid-row-end: 64;
                 transform:scale(0.8);
             }
 
@@ -697,8 +697,8 @@
                 display: inline-block;
                 grid-column-start: 40;
                 grid-column-end: 85;
-                grid-row-start: 70;
-                grid-row-end: 90;
+                grid-row-start: 67;
+                grid-row-end: 87;
                 
             }
 
@@ -706,8 +706,8 @@
                 display: inline-block;
                 grid-column-start: 41;
                 grid-column-end: 82;
-                grid-row-start: 72;
-                grid-row-end: 89;
+                grid-row-start: 69;
+                grid-row-end: 86;
                 transform: scale(0.9);
             }
         }
@@ -1650,7 +1650,7 @@
             .name_form {
                 grid-column-start: 9;
                 grid-column-end: 45;
-                grid-row-start: 21;
+                grid-row-start: 20;
                 grid-row-end: 26;
                 overflow: hidden; 
                 opacity:50%;
@@ -1658,7 +1658,12 @@
             }
 
             .inside_name {
-                font-size: 14pt;
+                /* position: sticky; */
+                grid-column-start: 9;
+                grid-column-end: 45;
+                grid-row-start: 20;
+                grid-row-end: 26;
+                font-size: 10pt;
             }
             
             /* ГОРОД */
@@ -1694,7 +1699,11 @@
             }
 
             .inside_email {
-                font-size: 14pt;
+                grid-column-start: 59;
+                grid-column-end: 95;
+                grid-row-start: 21;
+                grid-row-end: 26;
+                font-size: 10pt;
             }
 
             /* СООБЩЕНИЕ */
@@ -1737,7 +1746,7 @@
             }
 
             .inside_soobch {
-                font-size: 32pt;
+                font-size: 25pt;
             }
 
             .atom {
