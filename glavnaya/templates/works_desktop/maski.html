@@ -1886,7 +1886,7 @@
         }
 
         [type=radio]:checked + img {
-            outline: 6px solid #080062;
+            outline: 4px solid #080062;
             padding:5px;
         } 
 
@@ -1896,7 +1896,7 @@
             grid-template-rows: repeat(100, 1fr);
             overflow: hidden;
             width: 100vw;
-            height: 150vh;
+            height: 100vh;
             font-family: LSDFont;
             color: #FDF2F2;
         }
@@ -1905,35 +1905,37 @@
         .name_text {
             grid-column-start: 11;
             grid-column-end: 25;
-            grid-row-start: 15;
-            grid-row-end: 18;
+            grid-row-start: 10;
+            grid-row-end: 13;
             overflow: hidden;
             z-index:2;
+            transform: scale(0.8);
         }
 
         .english_name_text {
             grid-column-start: 11;
             grid-column-end: 25;
-            grid-row-start: 15;
-            grid-row-end: 18;
+            grid-row-start: 10;
+            grid-row-end: 13;
             overflow: hidden;
             opacity:0;
             z-index:1;
+            transform: scale(0.8);
         }
 
         #name_zapolni {
             grid-column-start: 9;
             grid-column-end: 27;
-            grid-row-start: 20;
-            grid-row-end: 27;
+            grid-row-start: 15;
+            grid-row-end: 22;
             overflow: hidden;
         }
 
         .name_form {
             grid-column-start: 10;
             grid-column-end: 26;
-            grid-row-start: 22;
-            grid-row-end: 25;
+            grid-row-start: 17;
+            grid-row-end: 20;
             overflow: hidden; 
             opacity:50%;
             z-index:10;
@@ -1947,24 +1949,25 @@
         .email_text {
             grid-column-start: 46;
             grid-column-end: 54;
-            grid-row-start: 15;
-            grid-row-end: 18;
+            grid-row-start: 10;
+            grid-row-end: 13;
             overflow: hidden;
+            transform: scale(0.8);
         }
 
         #email_zapolni {
             grid-column-start: 41;
             grid-column-end: 59;
-            grid-row-start: 20;
-            grid-row-end: 27;
+            grid-row-start: 15;
+            grid-row-end: 22;
             overflow: hidden;
         }
 
         .email_form {
             grid-column-start: 42;
             grid-column-end: 58;
-            grid-row-start: 22;
-            grid-row-end: 25;
+            grid-row-start: 17;
+            grid-row-end: 20;
             overflow: hidden;
             z-index:2;
             opacity:50%;
@@ -1978,34 +1981,36 @@
         .city_text {
             grid-column-start: 70;
             grid-column-end: 90;
-            grid-row-start: 15;
-            grid-row-end: 18;
+            grid-row-start: 10;
+            grid-row-end: 13;
             overflow: hidden;
             z-index:2;
+            transform: scale(0.8);
         }
 
         .english_city_text {
             grid-column-start: 70;
             grid-column-end: 90;
-            grid-row-start: 15;
-            grid-row-end: 18;
+            grid-row-start: 10;
+            grid-row-end: 13;
             overflow: hidden;
             z-index:1;
             opacity:0;
+            transform: scale(0.8);
         }
 
         #city_zapolni {
             grid-column-start: 70;
             grid-column-end: 90;
-            grid-row-start: 20;
-            grid-row-end: 27;
+            grid-row-start: 15;
+            grid-row-end: 22;
             overflow: hidden;
         }
         .city_form {
             grid-column-start: 71;
             grid-column-end: 89;
-            grid-row-start: 22;
-            grid-row-end: 25;
+            grid-row-start: 17;
+            grid-row-end: 20;
             overflow: hidden;
             z-index:2;
             opacity:50%;
@@ -2017,208 +2022,133 @@
 
         /* ОТПРАВКА */
         .otpravka_text {
-            grid-column-start: 9;
-            grid-column-end: 34;
-            grid-row-start: 37;
-            grid-row-end: 40;
+            grid-column-start: 6;
+            grid-column-end: 31;
+            grid-row-start: 30;
+            grid-row-end: 33;
             overflow: hidden;
             z-index:2;
+            transform: scale(0.8);
         }
 
         .english_otpravka_text {
-            grid-column-start: 9;
-            grid-column-end: 34;
-            grid-row-start: 37;
-            grid-row-end: 40;
+            grid-column-start: 6;
+            grid-column-end: 31;
+            grid-row-start: 30;
+            grid-row-end: 33;
             overflow: hidden;
             z-index:1;
             opacity:0;
+            transform: scale(0.8);
         }
 
         #pochta_rossii {
-            max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%; margin-top:1vh;
+            max-width: 55%; max-height: 55%; min-width: 55%; min-height: 55%; margin-top:1vh;
         }
 
         #sdek {
-            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+            max-width: 20%; max-height: 20%; min-width: 20%; min-height: 20%; margin-top:1vh;
         }
 
         #drugoe {
-            max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%; margin-top:1vh;
+            max-width: 30%; max-height: 30%; min-width: 30%; min-height: 30%; margin-top:1vh;
         }
 
         .otpravka_form {
-            grid-column-start: 13;
-            grid-column-end: 38;
-            grid-row-start: 44;
-            grid-row-end: 70;
+            grid-column-start: 9;
+            grid-column-end: 34;
+            grid-row-start: 35;
+            grid-row-end: 61;
             overflow: hidden;
             z-index:2;
-            transform:scale(1.2);
+            /* transform:scale(1.2); */
         }
 
         /* ОПЛАТА */
         .payment_text {
-            grid-column-start: 65;
-            grid-column-end: 87;
-            grid-row-start: 37;
-            grid-row-end: 40;
+            grid-column-start: 39;
+            grid-column-end: 61;
+            grid-row-start: 30;
+            grid-row-end: 33;
             overflow: hidden;
             z-index:2;
+            transform: scale(0.8);
         }
 
         .english_payment_text {
-            grid-column-start: 65;
-            grid-column-end: 87;
-            grid-row-start: 37;
-            grid-row-end: 40;
+            grid-column-start: 39;
+            grid-column-end: 61;
+            grid-row-start: 30;
+            grid-row-end: 33;
             overflow: hidden;
             z-index:1;
             opacity:0;
+            transform: scale(0.8);
         }
         
         #rub {
-            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+            max-width: 20%; max-height: 20%; min-width: 20%; min-height: 20%; margin-top:1vh;
         }
 
         #usd {
-            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+            max-width: 20%; max-height: 20%; min-width: 20%; min-height: 20%; margin-top:1vh;
         }
                 
         #btc {
-            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+            max-width: 20%; max-height: 20%; min-width: 20%; min-height: 20%; margin-top:1vh;
         }
 
         #eth {
-            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+            max-width: 20%; max-height: 20%; min-width: 20%; min-height: 20%; margin-top:1vh;
         }
 
         #usdt {
-            max-width: 30%; max-height: 30%; min-width: 30%; min-height: 30%; margin-top:1vh;
+            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
         }
 
         .payment_form {
-            grid-column-start: 68;
-            grid-column-end: 85;
-            grid-row-start: 44;
-            grid-row-end: 72;
+            grid-column-start: 42;
+            grid-column-end: 59;
+            grid-row-start: 35;
+            grid-row-end: 64;
             overflow: hidden;
             z-index:2;
-            transform:scale(1.2);
-        }
-
-        /* ЛУЧШЕ СВЯЗАТЬСЯ */
-        .better_text {
-            grid-column-start: 5;
-            grid-column-end: 60;
-            grid-row-start: 65;
-            grid-row-end: 69;
-            overflow: hidden;
-            z-index:2;
-        }
-
-        .english_better_text {
-            grid-column-start: 5;
-            grid-column-end: 45;
-            grid-row-start: 65;
-            grid-row-end: 69;
-            overflow: hidden;
-            z-index:1;
-            opacity:0;
-        }
-
-        .better_mob {
-            max-width: 1%;
-            max-height:1%;   
-            opacity:0;
-        }
-
-        .english_better_mob {
-            max-width: 1%;
-            max-height:1%;   
-            opacity:0;
-        }
-
-        #telegram {
-            max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%; margin-left:1vw;
-        }
-
-        #instagram {
-            max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%; margin-left:1vw;
-        }
-
-        #wup {
-            max-width: 50%; max-height: 50%; min-width: 50%; min-height: 50%; margin-left:1vw;
-        }
-
-
-        .better_form {
-            grid-column-start: 12;
-            grid-column-end: 35;
-            grid-row-start: 72;
-            grid-row-end: 86;
-            overflow: hidden;
-            z-index:2;
-            transform: scale(1.2);
-        }
-        
-        #better_zapolni {
-            grid-column-start: 7;
-            grid-column-end: 26;
-            grid-row-start: 88;
-            grid-row-end: 95;
-            overflow: hidden;
-            z-index: 4;
-        }
-
-        .better_more {
-            grid-column-start: 8;
-            grid-column-end: 25;
-            grid-row-start: 90;
-            grid-row-end: 93;
-            opacity: 50%;
-            overflow: hidden;
-            z-index: 5;
-        }
-
-
-        .inside_better {
-            font-size: 35pt;
+            /* transform:scale(1.2); */
         }
 
         /* KOMENT */
         .koment_text {
-            grid-column-start: 65;
-            grid-column-end: 90;
-            grid-row-start: 68;
-            grid-row-end: 72;
+            grid-column-start: 73;
+            grid-column-end: 88;
+            grid-row-start: 30;
+            grid-row-end: 33;
             overflow: hidden;
             z-index:2;
         }
         
         .english_koment_text {
-            grid-column-start: 65;
-            grid-column-end: 90;
-            grid-row-start: 68;
-            grid-row-end: 72;
+            grid-column-start: 73;
+            grid-column-end: 88;
+            grid-row-start: 30;
+            grid-row-end: 33;
             overflow: hidden;
             z-index:1;
             opacity:0;
         }
 
         .koment_zapolni {
-            grid-column-start: 66;
-            grid-column-end: 88;
-            grid-row-start: 73;
-            grid-row-end: 80;
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 38;
+            grid-row-end: 45;
             overflow: hidden;
         }
 
         .koment_more {
-            grid-column-start: 67;
-            grid-column-end: 87;
-            grid-row-start: 75;
-            grid-row-end: 78;
+            grid-column-start: 71;
+            grid-column-end: 89;
+            grid-row-start: 40;
+            grid-row-end: 43;
             overflow: hidden;
             opacity: 50%;
         }
@@ -2227,19 +2157,19 @@
         }
 
         .atom {
-            grid-column-start: 70;
-            grid-column-end: 95;
-            grid-row-start: 87;
-            grid-row-end: 97;
+            grid-column-start: 57;
+            grid-column-end: 77;
+            grid-row-start: 53;
+            grid-row-end: 63;
             overflow: hidden;
             z-index:2;
         }
 
         .english_atom {
-            grid-column-start: 70;
-            grid-column-end: 95;
-            grid-row-start: 87;
-            grid-row-end: 97;
+            grid-column-start: 57;
+            grid-column-end: 77;
+            grid-row-start: 53;
+            grid-row-end: 63;
             overflow: hidden;
             z-index:1;
             opacity:0;
@@ -2376,19 +2306,19 @@
 
             /* ОТПРАВКА */
             .otpravka_text {
-                grid-column-start: 5;
-                grid-column-end: 43;
-                grid-row-start: 25;
-                grid-row-end: 28;
+                grid-column-start: 1;
+                grid-column-end: 39;
+                grid-row-start: 22;
+                grid-row-end: 25;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_otpravka_text {
-                grid-column-start: 5;
-                grid-column-end: 43;
-                grid-row-start: 25;
-                grid-row-end: 28;
+                grid-column-start: 1;
+                grid-column-end: 39;
+                grid-row-start: 22;
+                grid-row-end: 25;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
@@ -2407,29 +2337,29 @@
             }
             
             .otpravka_form {
-                grid-column-start: 10;
-                grid-column-end: 40;
-                grid-row-start: 33;
-                grid-row-end: 50;
+                grid-column-start: 6;
+                grid-column-end: 36;
+                grid-row-start: 27;
+                grid-row-end: 44;
                 overflow: hidden;
                 z-index:2;
             }
 
             /* ОПЛАТА */
             .payment_text {
-                grid-column-start: 65;
-                grid-column-end: 95;
-                grid-row-start: 25;
-                grid-row-end: 28;
+                grid-column-start: 37;
+                grid-column-end: 67;
+                grid-row-start: 22;
+                grid-row-end: 25;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_payment_text {
-                grid-column-start: 65;
-                grid-column-end: 95;
-                grid-row-start: 25;
-                grid-row-end: 28;
+                grid-column-start: 37;
+                grid-column-end: 67;
+                grid-row-start: 22;
+                grid-row-end: 25;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
@@ -2456,86 +2386,20 @@
             }
 
             .payment_form {
-                grid-column-start: 68;
-                grid-column-end: 81;
-                grid-row-start: 33;
-                grid-row-end: 67;
+                grid-column-start: 40;
+                grid-column-end: 52;
+                grid-row-start: 27;
+                grid-row-end: 61;
                 overflow: hidden;
                 z-index:2;
-            }
-
-            /* ЛУЧШЕ СВЯЗАТЬСЯ */
-            .better_text {
-                grid-column-start: 5;
-                grid-column-end: 90;
-                grid-row-start: 53;
-                grid-row-end: 57;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            .english_better_text {
-                grid-column-start: 5;
-                grid-column-end: 65;
-                grid-row-start: 53;
-                grid-row-end: 57;
-                overflow: hidden;
-                z-index:1;
-                opacity:0;
-            }
-
-            /* #instagram {
-                transform: scale(1.1)
-            } */
-
-            #telegram {
-                transform: translateY(1vh); margin-top: 2vh; max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
-            }
-
-            #instagram {
-                max-width: 30%; max-height: 30%; min-width: 30%; min-height: 30%;
-            }
-
-            #wup {
-                transform: translateY(-1vh); max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
-            }
-
-            .better_form {
-                grid-column-start: 12;
-                grid-column-end: 57;
-                grid-row-start: 58;
-                grid-row-end: 75;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            #better_zapolni {
-                grid-column-start: 7;
-                grid-column-end: 37;
-                grid-row-start: 75;
-                grid-row-end: 82;
-                overflow: hidden;
-            }
-
-            .better_more {
-                grid-column-start: 9;
-                grid-column-end: 35;
-                grid-row-start: 77;
-                grid-row-end: 80;
-                opacity: 50%;
-                overflow: hidden;
-            }
-
-            .inside_better {
-               font-size: 12pt;
             }
 
             /* KOMENT */
             .koment_text {
-                grid-column-start: 60;
+                grid-column-start: 70;
                 grid-column-end: 95;
-                grid-row-start: 71;
-                grid-row-end: 76;
+                grid-row-start: 22;
+                grid-row-end: 25;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2543,24 +2407,24 @@
             .english_koment_text {
                 grid-column-start: 65;
                 grid-column-end: 90;
-                grid-row-start: 71;
-                grid-row-end: 75;
+                grid-row-start: 22;
+                grid-row-end: 27;
                 overflow: hidden;
                 z-index:1;
             }
 
             .koment_zapolni {
-                grid-column-start: 60;
-                grid-column-end: 90;
-                grid-row-start: 79;
-                grid-row-end: 86;
+                grid-column-start: 69;
+                grid-column-end: 94;
+                grid-row-start: 27;
+                grid-row-end: 33;
                 overflow: hidden;
             }
             .koment_more {
-                grid-column-start: 62;
-                grid-column-end: 88;
-                grid-row-start: 81;
-                grid-row-end: 84;
+                grid-column-start: 70;
+                grid-column-end: 93;
+                grid-row-start: 29;
+                grid-row-end: 31;
                 overflow: hidden;
                 opacity: 50%;
             }
@@ -2570,19 +2434,19 @@
             }
 
             .atom {
-                grid-column-start: 20;
-                grid-column-end: 53;
-                grid-row-start: 87;
-                grid-row-end: 97;
+                grid-column-start: 55;
+                grid-column-end: 88;
+                grid-row-start: 67;
+                grid-row-end: 87;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_atom {
-                grid-column-start: 20;
-                grid-column-end: 53;
-                grid-row-start: 86;
-                grid-row-end: 97;
+                grid-column-start: 40;
+                grid-column-end: 73;
+                grid-row-start: 46;
+                grid-row-end: 57;
                 overflow: hidden;
                 z-index: 1;
                 opacity:0;
@@ -2776,64 +2640,6 @@
                 grid-row-end: 73;
                 overflow: hidden;
                 z-index:2;
-            }
-
-            /* ЛУЧШЕ СВЯЗАТЬСЯ */
-            .better_text {
-                grid-column-start: 3;
-                grid-column-end: 97;
-                grid-row-start: 51;
-                grid-row-end: 54;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            .english_better_text {
-                grid-column-start: 5;
-                grid-column-end: 90;
-                grid-row-start: 50;
-                grid-row-end: 53;
-                overflow: hidden;
-                z-index:1;
-                opacity:0;
-            }
-
-            .better_form {
-                grid-column-start: 10;
-                grid-column-end: 65;
-                grid-row-start: 54;
-                grid-row-end: 67;
-                overflow: hidden;
-                z-index:2;
-            }
-            
-            #telegram {
-                transform: translateY(1vh); margin-top: 2vh; max-width: 40%; max-height: 40%; min-width: 40%; min-height: 40%;
-            }
-
-            #instagram {
-                max-width: 45%; max-height: 45%; min-width: 45%; min-height: 45%;
-            }
-
-            #wup {
-                transform: translateY(-1vh); max-width: 37%; max-height: 37%; min-width: 37%; min-height: 37%;
-            }
-
-            #better_zapolni {
-                grid-column-start: 5;
-                grid-column-end: 35;
-                grid-row-start: 68;
-                grid-row-end: 74;
-                overflow: hidden;
-            }
-
-            .better_more {
-                grid-column-start: 7;
-                grid-column-end: 33;
-                grid-row-start: 70;
-                grid-row-end: 72;
-                opacity: 50%;
-                overflow: hidden;
             }
 
             /* KOMENT */
@@ -3086,80 +2892,6 @@
                 grid-row-end: 191;
                 overflow: hidden;
                 z-index:2;
-            }
-
-
-            /* ЛУЧШЕ СВЯЗАТЬСЯ */
-            .better_text {
-                display:none;
-            }
-
-            .english_better_ {
-                display:none;
-            }
-
-            .better_mob {
-                grid-column-start: 15;
-                grid-column-end: 80;
-                grid-row-start: 206;
-                grid-row-end: 221;
-                overflow: hidden;
-                z-index:2;
-                max-width: 100%; 
-                max-height: 100%;
-                opacity:100%;
-            }
-
-            .english_better_mob {
-                grid-column-start: 15;
-                grid-column-end: 80;
-                grid-row-start: 205;
-                grid-row-end: 220;
-                overflow: hidden;
-                z-index:1;
-                max-width: 100%; 
-                max-height: 100%;
-                opacity: 0;
-            }
-
-            #telegram {
-                transform: translateY(-1vh) translateX(1vw); max-width: 38%; max-height: 38%; min-width: 38%; min-height: 38%;
-            }
-
-            #instagram {
-                transform: translateY(-2vh) translateX(1vw); max-width: 42%; max-height: 42%; min-width: 42%; min-height: 42%;
-            }
-
-            #wup {
-                transform: translateY(-3vh) translateX(1vw); max-width: 33%; max-height: 33%; min-width: 33%; min-height: 33%;
-            }
-
-            .better_form {
-                grid-column-start: 15;
-                grid-column-end: 90;
-                grid-row-start: 222;
-                grid-row-end: 244;
-                overflow: hidden;
-                z-index:2;
-            }
-            
-            #better_zapolni {
-                grid-column-start: 15;
-                grid-column-end: 85;
-                grid-row-start: 245;
-                grid-row-end: 255;
-                overflow: hidden;
-                transform: translateY(-5vw);
-            }
-
-            .better_more {
-                grid-column-start: 19;
-                grid-column-end: 81;
-                grid-row-start: 248;
-                grid-row-end: 252;
-                opacity: 50%;
-                overflow: hidden;
-                transform: translateY(-5vw);
             }
 
             /* KOMENT */
@@ -3416,64 +3148,6 @@
                 z-index:2;
             }
 
-            /* ЛУЧШЕ СВЯЗАТЬСЯ */
-            .better_text {
-                grid-column-start: 5;
-                grid-column-end: 70;
-                grid-row-start: 57;
-                grid-row-end: 61;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            .english_better_text {
-                grid-column-start: 5;
-                grid-column-end: 70;
-                grid-row-start: 55;
-                grid-row-end: 59;
-                overflow: hidden;
-                z-index:1;
-                opacity:0;
-            }
-
-            #telegram {
-                margin-left: 1vh; transform: translateY(3vh); margin-top: 2vh; max-width: 29%; max-height: 29%; min-width: 29%; min-height: 29%;
-            }
-
-            #instagram {
-                margin-left: 1vh; max-width: 33%; max-height: 33%; min-width: 33%; min-height: 33%;
-            }
-
-            #wup {
-                margin-left: 1vh; transform: translateY(-3vh); max-width: 28%; max-height: 28%; min-width: 28%; min-height: 28%;
-            }
-
-            .better_form {
-                grid-column-start: 8;
-                grid-column-end: 48;
-                grid-row-start: 58;
-                grid-row-end: 82;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            #better_zapolni {
-                grid-column-start: 7;
-                grid-column-end: 27;
-                grid-row-start: 81;
-                grid-row-end: 89;
-                overflow: hidden;
-            }
-
-            .better_more {
-                grid-column-start: 8;
-                grid-column-end: 26;
-                grid-row-start: 83;
-                grid-row-end: 87;
-                opacity: 50%;
-                overflow: hidden;
-            }
-
             /* KOMENT */
             .koment_text {
                 grid-column-start: 60;
@@ -3670,52 +3344,6 @@
                     </div>
                 </div>
                   
-                  <!-- ЛУЧШЕ СВЯЗАТЬСЯ -->
-                  <div class = 'better_text' onmouseenter = ZayavkaBetter_SwitchToEnglish() onmouseleave = ZayavkaBetter_BackToRussian()>
-                      <img src = '/media/works/maski/zayavka/better.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
-                  </div>
-
-                  <div class = 'english_better_text'>
-                      <img src = '/media/works/maski/zayavka/english/english_better.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
-                  </div>
-                  
-                  <div class = 'better_mob' onmouseenter = ZayavkaBetterMob_SwitchToEnglish() onmouseleave = ZayavkaBetterMob_BackToRussian()>
-                      <img src = '/media/works/maski/zayavka/mobile/mob.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
-                  </div>
-
-                  <div class = 'english_better_mob'>
-                      <img src = '/media/works/maski/zayavka/mobile/english_mob.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
-                  </div>
-
-                  <div class="better_form" style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>    
-                    <div>
-                        <label>
-                            <input type="radio" name="better" id="better1" value = 'TELEGRAM' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
-                            <img id = 'telegram' src = '/media/works/maski/zayavka/telegram.png'>                                                    
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="better" id="better2" value = 'INSTAGRAM' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
-                            <img id = 'instagram' src = '/media/works/maski/zayavka/instagram.png'>                                                
-                        </label>
-                    </div>
-
-                    <div>
-                        <label>
-                            <input type="radio" name="better" id="better3" value = 'WHATS UP' style = 'cursor: pointer; max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
-                            <img id = 'wup' src = '/media/works/maski/zayavka/wup.png'>                                      
-                        </label>
-                    </div>
-
-                </div>
-
-                <img id = 'better_zapolni' src = '/media/works/maski/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>  
-                <div class = 'better_more'>
-                    <input type="text" name = 'better_more' id = 'better_more' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
-                </div>
-
                   <!-- КОММЕНТАРИЙ -->
                   
                   <div class = 'koment_text' onmouseenter = ZayavkaKoment_SwitchToEnglish() onmouseleave = ZayavkaKoment_BackToRussian()>
