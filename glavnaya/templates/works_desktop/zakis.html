@@ -457,7 +457,7 @@
             .cifri-image {
                 grid-column-start: 30;
                 grid-column-end: 71;
-                grid-row-start: 75;
+                grid-row-start: 74;
                 grid-row-end: 78;
                 overflow: hidden;
                 z-index: 2;
@@ -466,7 +466,7 @@
             .cifri-english-image {
                 grid-column-start: 26;
                 grid-column-end: 68;
-                grid-row-start: 75;
+                grid-row-start: 74;
                 grid-row-end: 78;
                 overflow: hidden;
                 z-index: 1;
@@ -1214,7 +1214,7 @@
             .cifri-image{
                 grid-column-start: 20;
                 grid-column-end: 90;
-                grid-row-start: 122;
+                grid-row-start: 121;
                 grid-row-end: 125;
                 z-index:2;
             }
@@ -1222,7 +1222,7 @@
             .cifri-english-image{
                 grid-column-start: 20;
                 grid-column-end: 90;
-                grid-row-start: 122;
+                grid-row-start: 121;
                 grid-row-end: 125;
                 opacity:0;
                 z-index:1;
@@ -1528,7 +1528,7 @@
             .cifri-image{
                 grid-column-start: 25;
                 grid-column-end: 60;
-                grid-row-start: 124;
+                grid-row-start: 123;
                 grid-row-end: 130;
                 z-index:2;
             }
@@ -1537,7 +1537,7 @@
                 grid-column-start: 20;
                 grid-column-end: 55;
                 grid-row-start: 123;
-                grid-row-end: 129;
+                grid-row-end: 130;
                 opacity:0;
                 z-index:1;
             }
@@ -2388,7 +2388,7 @@
             grid-template-rows: repeat(100, 1fr);
             overflow: hidden;
             width: 100vw;
-            height: 150vh;
+            height: 100vh;
             font-family: LSDFont;
             color: #FDF2F2;
         }
@@ -2397,34 +2397,36 @@
         .name_text {
             grid-column-start: 11;
             grid-column-end: 25;
-            grid-row-start: 15;
-            grid-row-end: 18;
+            grid-row-start: 10;
+            grid-row-end: 15;
             overflow: hidden;
             z-index:2;
+            /* transform: scale(0.8); */
         }
 
         .english_name_text {
             grid-column-start: 11;
             grid-column-end: 25;
-            grid-row-start: 15;
-            grid-row-end: 18;
+            grid-row-start: 10;
+            grid-row-end: 15;
             overflow: hidden;
             opacity:0;
             z-index:1;
+            /* transform: scale(0.8); */
         }
 
         #name_zapolni {
             grid-column-start: 9;
             grid-column-end: 27;
-            grid-row-start: 20;
-            grid-row-end: 27;
+            grid-row-start: 18;
+            grid-row-end: 28;
             overflow: hidden;
         }
 
         .name_form {
             grid-column-start: 10;
             grid-column-end: 26;
-            grid-row-start: 22;
+            grid-row-start: 21;
             grid-row-end: 25;
             overflow: hidden; 
             opacity:50%;
@@ -2439,23 +2441,24 @@
         .email_text {
             grid-column-start: 46;
             grid-column-end: 54;
-            grid-row-start: 15;
-            grid-row-end: 18;
+            grid-row-start: 10;
+            grid-row-end: 15;
             overflow: hidden;
+            /* transform: scale(0.8); */
         }
 
         #email_zapolni {
             grid-column-start: 41;
             grid-column-end: 59;
-            grid-row-start: 20;
-            grid-row-end: 27;
+            grid-row-start: 18;
+            grid-row-end: 28;
             overflow: hidden;
         }
 
         .email_form {
             grid-column-start: 42;
             grid-column-end: 58;
-            grid-row-start: 22;
+            grid-row-start: 21;
             grid-row-end: 25;
             overflow: hidden;
             z-index:2;
@@ -2470,33 +2473,35 @@
         .city_text {
             grid-column-start: 70;
             grid-column-end: 90;
-            grid-row-start: 15;
-            grid-row-end: 18;
+            grid-row-start: 10;
+            grid-row-end: 15;
             overflow: hidden;
             z-index:2;
+            /* transform: scale(0.8); */
         }
 
         .english_city_text {
             grid-column-start: 70;
             grid-column-end: 90;
-            grid-row-start: 15;
-            grid-row-end: 18;
+            grid-row-start: 10;
+            grid-row-end: 15;
             overflow: hidden;
             z-index:1;
             opacity:0;
+            /* transform: scale(0.8); */
         }
 
         #city_zapolni {
             grid-column-start: 70;
             grid-column-end: 90;
-            grid-row-start: 20;
-            grid-row-end: 27;
+            grid-row-start: 18;
+            grid-row-end: 28;
             overflow: hidden;
         }
         .city_form {
             grid-column-start: 71;
             grid-column-end: 89;
-            grid-row-start: 22;
+            grid-row-start: 21;
             grid-row-end: 25;
             overflow: hidden;
             z-index:2;
@@ -2509,129 +2514,131 @@
 
         /* ОТПРАВКА */
         .otpravka_text {
-            grid-column-start: 9;
-            grid-column-end: 34;
-            grid-row-start: 37;
-            grid-row-end: 40;
+            grid-column-start: 6;
+            grid-column-end: 31;
+            grid-row-start: 38;
+            grid-row-end: 43;
             overflow: hidden;
             z-index:2;
         }
 
         .english_otpravka_text {
-            grid-column-start: 9;
-            grid-column-end: 34;
-            grid-row-start: 37;
-            grid-row-end: 40;
+            grid-column-start: 6;
+            grid-column-end: 31;
+            grid-row-start: 38;
+            grid-row-end: 43;
             overflow: hidden;
             z-index:1;
             opacity:0;
         }
 
         #pochta_rossii {
-            max-width: 60%; max-height: 60%; min-width: 60%; min-height: 60%; margin-top:1vh;
+            max-width: 55%; max-height: 55%; min-width: 55%; min-height: 55%; margin-top:1vh;
         }
 
         #sdek {
-            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+            max-width: 20%; max-height: 20%; min-width: 20%; min-height: 20%; margin-top:1vh;
         }
 
         #drugoe {
-            max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%; margin-top:1vh;
+            max-width: 30%; max-height: 30%; min-width: 30%; min-height: 30%; margin-top:1vh;
         }
 
         .otpravka_form {
-            grid-column-start: 13;
-            grid-column-end: 38;
-            grid-row-start: 44;
-            grid-row-end: 70;
+            grid-column-start: 9;
+            grid-column-end: 34;
+            grid-row-start: 45;
+            grid-row-end: 71;
             overflow: hidden;
             z-index:2;
-            transform:scale(1.2);
+            /* transform:scale(1.2); */
         }
 
         /* ОПЛАТА */
         .payment_text {
-            grid-column-start: 65;
-            grid-column-end: 87;
-            grid-row-start: 37;
-            grid-row-end: 40;
+            grid-column-start: 39;
+            grid-column-end: 61;
+            grid-row-start: 38;
+            grid-row-end: 43;
             overflow: hidden;
             z-index:2;
+            /* transform: scale(0.8); */
         }
 
         .english_payment_text {
-            grid-column-start: 65;
-            grid-column-end: 87;
-            grid-row-start: 37;
-            grid-row-end: 40;
+            grid-column-start: 39;
+            grid-column-end: 61;
+            grid-row-start: 38;
+            grid-row-end: 43;
             overflow: hidden;
             z-index:1;
             opacity:0;
+            /* transform: scale(0.8); */
         }
         
         #rub {
-            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+            max-width: 20%; max-height: 20%; min-width: 20%; min-height: 20%; margin-top:1vh;
         }
 
         #usd {
-            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+            max-width: 20%; max-height: 20%; min-width: 20%; min-height: 20%; margin-top:1vh;
         }
                 
         #btc {
-            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+            max-width: 20%; max-height: 20%; min-width: 20%; min-height: 20%; margin-top:1vh;
         }
 
         #eth {
-            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
+            max-width: 20%; max-height: 20%; min-width: 20%; min-height: 20%; margin-top:1vh;
         }
 
         #usdt {
-            max-width: 30%; max-height: 30%; min-width: 30%; min-height: 30%; margin-top:1vh;
+            max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%; margin-top:1vh;
         }
 
         .payment_form {
-            grid-column-start: 68;
-            grid-column-end: 85;
-            grid-row-start: 44;
-            grid-row-end: 72;
+            grid-column-start: 42;
+            grid-column-end: 59;
+            grid-row-start: 45;
+            grid-row-end: 74;
             overflow: hidden;
             z-index:2;
-            transform:scale(1.2);
+            /* transform:scale(1.2); */
         }
 
         /* KOMENT */
         .koment_text {
-            grid-column-start: 65;
+            grid-column-start: 70;
             grid-column-end: 90;
-            grid-row-start: 68;
-            grid-row-end: 72;
+            grid-row-start: 38;
+            grid-row-end: 43;
             overflow: hidden;
             z-index:2;
         }
         
         .english_koment_text {
-            grid-column-start: 65;
+            grid-column-start: 70;
             grid-column-end: 90;
-            grid-row-start: 68;
-            grid-row-end: 72;
+            grid-row-start: 38;
+            grid-row-end: 43;
             overflow: hidden;
             z-index:1;
             opacity:0;
         }
 
         .koment_zapolni {
-            grid-column-start: 66;
-            grid-column-end: 88;
-            grid-row-start: 73;
-            grid-row-end: 80;
+            grid-column-start: 70;
+            grid-column-end: 90;
+            grid-row-start: 47;
+            grid-row-end: 57;
             overflow: hidden;
         }
 
         .koment_more {
-            grid-column-start: 67;
-            grid-column-end: 87;
-            grid-row-start: 75;
-            grid-row-end: 78;
+            grid-column-start: 71;
+            grid-column-end: 89;
+            grid-row-start: 50;
+            grid-row-end: 54;
             overflow: hidden;
             opacity: 50%;
         }
@@ -2640,26 +2647,26 @@
         }
 
         .atom {
-            grid-column-start: 70;
-            grid-column-end: 95;
-            grid-row-start: 87;
-            grid-row-end: 97;
+            grid-column-start: 56;
+            grid-column-end: 76;
+            grid-row-start: 75;
+            grid-row-end: 89;
             overflow: hidden;
             z-index:2;
         }
 
         .english_atom {
-            grid-column-start: 70;
-            grid-column-end: 95;
-            grid-row-start: 87;
-            grid-row-end: 97;
+            grid-column-start: 56;
+            grid-column-end: 76;
+            grid-row-start: 75;
+            grid-row-end: 89;
             overflow: hidden;
             z-index:1;
             opacity:0;
         }
 
         .close {
-            grid-column-start: 94;
+            grid-column-start: 95;
             grid-column-end: 97;
             grid-row-start: 2;
             grid-row-end: 6;
@@ -2677,8 +2684,8 @@
             .name_text {
                 grid-column-start: 7;
                 grid-column-end: 30;
-                grid-row-start: 7;
-                grid-row-end: 10;
+                grid-row-start: 10;
+                grid-row-end: 15;
                 overflow: hidden;  
                 z-index:1;              
             }
@@ -2686,8 +2693,8 @@
             .english_name_text {
                 grid-column-start: 7;
                 grid-column-end: 30;
-                grid-row-start: 7;
-                grid-row-end: 10;
+                grid-row-start: 10;
+                grid-row-end: 15;
                 overflow: hidden;                
                 z-index:2;
                 opacity:0;
@@ -2696,16 +2703,16 @@
             #name_zapolni {
                 grid-column-start: 8;
                 grid-column-end: 29;
-                grid-row-start: 12;
-                grid-row-end: 18;
+                grid-row-start: 20;
+                grid-row-end: 29;
                 overflow: hidden;
             }
 
             .name_form {
                 grid-column-start: 9;
                 grid-column-end: 28;
-                grid-row-start: 14;
-                grid-row-end: 16;
+                grid-row-start: 23;
+                grid-row-end: 26;
                 overflow: hidden; 
                 opacity:50%;
                 z-index:10;
@@ -2719,24 +2726,24 @@
             .email_text {
                 grid-column-start: 44;
                 grid-column-end: 57;
-                grid-row-start: 7;
-                grid-row-end: 10;
+                grid-row-start: 10;
+                grid-row-end: 15;
                 overflow: hidden;
             }
 
             #email_zapolni {
                 grid-column-start: 40;
                 grid-column-end: 61;
-                grid-row-start: 12;
-                grid-row-end: 18;
+                grid-row-start: 20;
+                grid-row-end: 29;
                 overflow: hidden;
             }
 
             .email_form {
                 grid-column-start: 41;
                 grid-column-end: 60;
-                grid-row-start: 14;
-                grid-row-end: 16;
+                grid-row-start: 23;
+                grid-row-end: 26;
                 overflow: hidden;
                 z-index:2;
                 opacity:50%;
@@ -2750,8 +2757,8 @@
             .city_text {
                 grid-column-start: 66;
                 grid-column-end: 98;
-                grid-row-start: 7;
-                grid-row-end: 10;
+                grid-row-start: 10;
+                grid-row-end: 15;
                 overflow: hidden;
                 z-index:1;
             }
@@ -2759,25 +2766,25 @@
             .english_city_text {
                 grid-column-start: 66;
                 grid-column-end: 98;
-                grid-row-start: 7;
-                grid-row-end: 10;
+                grid-row-start: 10;
+                grid-row-end: 15;
                 overflow: hidden;
                 z-index:2;
                 opacity:0;
             }
 
             #city_zapolni {
-                grid-column-start: 69;
-                grid-column-end: 94;
-                grid-row-start: 12;
-                grid-row-end: 18;
+                grid-column-start: 70;
+                grid-column-end: 91;
+                grid-row-start: 20;
+                grid-row-end: 29;
                 overflow: hidden;
             }
             .city_form {
-                grid-column-start: 70;
-                grid-column-end: 93;
-                grid-row-start: 14;
-                grid-row-end: 16;
+                grid-column-start: 71;
+                grid-column-end: 90;
+                grid-row-start: 23;
+                grid-row-end: 26;
                 overflow: hidden;
                 z-index:2;
                 opacity:50%;
@@ -2789,22 +2796,24 @@
 
             /* ОТПРАВКА */
             .otpravka_text {
-                grid-column-start: 5;
-                grid-column-end: 43;
-                grid-row-start: 25;
-                grid-row-end: 28;
+                grid-column-start: 3;
+                grid-column-end: 36;
+                grid-row-start: 37;
+                grid-row-end: 42;
                 overflow: hidden;
                 z-index:2;
+                transform: scale(0.9);
             }
 
             .english_otpravka_text {
-                grid-column-start: 5;
-                grid-column-end: 43;
-                grid-row-start: 25;
-                grid-row-end: 28;
+                grid-column-start: 1;
+                grid-column-end: 39;
+                grid-row-start: 37;
+                grid-row-end: 42;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
+                transform: scale(0.9);
             }
 
             #pochta_rossii {
@@ -2820,32 +2829,34 @@
             }
             
             .otpravka_form {
-                grid-column-start: 10;
-                grid-column-end: 40;
-                grid-row-start: 33;
-                grid-row-end: 50;
+                grid-column-start: 6;
+                grid-column-end: 36;
+                grid-row-start: 44;
+                grid-row-end: 61;
                 overflow: hidden;
                 z-index:2;
             }
 
             /* ОПЛАТА */
             .payment_text {
-                grid-column-start: 65;
-                grid-column-end: 95;
-                grid-row-start: 25;
-                grid-row-end: 28;
+                grid-column-start: 37;
+                grid-column-end: 67;
+                grid-row-start: 37;
+                grid-row-end: 42;
                 overflow: hidden;
                 z-index:2;
+                transform: scale(0.9);
             }
 
             .english_payment_text {
-                grid-column-start: 65;
-                grid-column-end: 95;
-                grid-row-start: 25;
-                grid-row-end: 28;
+                grid-column-start: 37;
+                grid-column-end: 67;
+                grid-row-start: 37;
+                grid-row-end: 42;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
+                transform: scale(0.9);
             }
 
             #rub {
@@ -2869,20 +2880,20 @@
             }
 
             .payment_form {
-                grid-column-start: 68;
-                grid-column-end: 81;
-                grid-row-start: 33;
-                grid-row-end: 67;
+                grid-column-start: 40;
+                grid-column-end: 52;
+                grid-row-start: 44;
+                grid-row-end: 78;
                 overflow: hidden;
                 z-index:2;
             }
 
             /* KOMENT */
             .koment_text {
-                grid-column-start: 60;
+                grid-column-start: 70;
                 grid-column-end: 95;
-                grid-row-start: 71;
-                grid-row-end: 76;
+                grid-row-start: 37;
+                grid-row-end: 42;
                 overflow: hidden;
                 z-index:2;
             }
@@ -2890,24 +2901,24 @@
             .english_koment_text {
                 grid-column-start: 65;
                 grid-column-end: 90;
-                grid-row-start: 71;
-                grid-row-end: 75;
+                grid-row-start: 37;
+                grid-row-end: 42;
                 overflow: hidden;
                 z-index:1;
             }
 
             .koment_zapolni {
-                grid-column-start: 60;
-                grid-column-end: 90;
-                grid-row-start: 79;
-                grid-row-end: 86;
+                grid-column-start: 69;
+                grid-column-end: 94;
+                grid-row-start: 44;
+                grid-row-end: 53;
                 overflow: hidden;
             }
             .koment_more {
-                grid-column-start: 62;
-                grid-column-end: 88;
-                grid-row-start: 81;
-                grid-row-end: 84;
+                grid-column-start: 70;
+                grid-column-end: 93;
+                grid-row-start: 47;
+                grid-row-end: 50;
                 overflow: hidden;
                 opacity: 50%;
             }
@@ -2917,29 +2928,29 @@
             }
 
             .atom {
-                grid-column-start: 20;
-                grid-column-end: 53;
-                grid-row-start: 87;
-                grid-row-end: 97;
+                grid-column-start: 67;
+                grid-column-end: 92;
+                grid-row-start: 77;
+                grid-row-end: 92;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_atom {
-                grid-column-start: 20;
-                grid-column-end: 53;
-                grid-row-start: 86;
-                grid-row-end: 97;
+                grid-column-start: 67;
+                grid-column-end: 92;
+                grid-row-start: 77;
+                grid-row-end: 92;
                 overflow: hidden;
                 z-index: 1;
                 opacity:0;
             }
 
             .close {
-                grid-column-start: 95;
+                grid-column-start: 94;
                 grid-column-end: 98;
                 grid-row-start: 2;
-                grid-row-end: 5;
+                grid-row-end: 7;
                 overflow: hidden;
             } 
         }
@@ -2955,7 +2966,7 @@
                 grid-column-start: 5;
                 grid-column-end: 34;
                 grid-row-start: 10;
-                grid-row-end: 13;
+                grid-row-end: 14;
                 overflow: hidden;                
                 z-index:2;
             }
@@ -2964,7 +2975,7 @@
                 grid-column-start: 5;
                 grid-column-end: 34;
                 grid-row-start: 10;
-                grid-row-end: 13;
+                grid-row-end: 14;
                 overflow: hidden;                
                 z-index:1;
                 opacity:0;
@@ -2973,17 +2984,16 @@
             #name_zapolni {
                 grid-column-start: 5;
                 grid-column-end: 32;
-                grid-row-start: 15;
-                grid-row-end: 20;
+                grid-row-start: 18;
+                grid-row-end: 24;
                 overflow: hidden;
             }
 
             .name_form {
                 grid-column-start: 6;
                 grid-column-end: 31;
-                grid-row-start: 17;
-                grid-row-end: 19;
-                transform:translateY(-1vh);
+                grid-row-start: 20;
+                grid-row-end: 22;
                 overflow: hidden; 
                 opacity:50%;
                 z-index:10;
@@ -2994,24 +3004,23 @@
                 grid-column-start: 41;
                 grid-column-end: 58;
                 grid-row-start: 10;
-                grid-row-end: 13;
+                grid-row-end: 14;
                 overflow: hidden;
             }
             
             #email_zapolni {
                 grid-column-start: 37;
                 grid-column-end: 64;
-                grid-row-start: 15;
-                grid-row-end: 20;
+                grid-row-start: 18;
+                grid-row-end: 24;
                 overflow: hidden;
             }
 
             .email_form {
                 grid-column-start: 38;
                 grid-column-end: 63;
-                grid-row-start: 16;
-                grid-row-end: 18;
-                transform:translateY(1vh);
+                grid-row-start: 20;
+                grid-row-end: 22;
                 overflow: hidden;
                 z-index:2;
                 opacity:50%;
@@ -3022,16 +3031,16 @@
                 grid-column-start: 64;
                 grid-column-end: 98;
                 grid-row-start: 10;
-                grid-row-end: 13;
+                grid-row-end: 14;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_city_text {
-                grid-column-start: 65;
-                grid-column-end: 97;
+                grid-column-start: 66;
+                grid-column-end: 98;
                 grid-row-start: 10;
-                grid-row-end: 13;
+                grid-row-end: 14;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
@@ -3040,16 +3049,15 @@
             #city_zapolni {
                 grid-column-start: 68;
                 grid-column-end: 97;
-                grid-row-start: 15;
-                grid-row-end: 20;
+                grid-row-start: 18;
+                grid-row-end: 24;
                 overflow: hidden;
             }
             .city_form {
                 grid-column-start: 70;
                 grid-column-end: 95;
-                grid-row-start: 16;
-                grid-row-end: 18;
-                transform:translateY(1vh);
+                grid-row-start: 20;
+                grid-row-end: 22;
                 overflow: hidden;
                 z-index:2;
                 opacity:50%;
@@ -3057,19 +3065,19 @@
 
             /* ОТПРАВКА */
             .otpravka_text {
-                grid-column-start: 5;
+                grid-column-start: 3;
                 grid-column-end: 52;
-                grid-row-start: 25;
-                grid-row-end: 28;
+                grid-row-start: 28;
+                grid-row-end: 32;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_otpravka_text {
-                grid-column-start: 5;
-                grid-column-end: 49;
-                grid-row-start: 25;
-                grid-row-end: 28;
+                grid-column-start: 3;
+                grid-column-end: 52;
+                grid-row-start: 28;
+                grid-row-end: 32;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
@@ -3079,19 +3087,11 @@
                 max-width: 70%; max-height: 70%; min-width: 70%; min-height: 70%;
             }
 
-            /* #sdek {
-                max-width: 25%; max-height: 25%; min-width: 25%; min-height: 25%;
-            }
-
-            #drugoe {
-                max-width: 35%; max-height: 35%; min-width: 35%; min-height: 35%;
-            } */
-
             .otpravka_form {
-                grid-column-start: 8;
-                grid-column-end: 48;
+                grid-column-start: 6;
+                grid-column-end: 46;
                 grid-row-start: 33;
-                grid-row-end: 58;
+                grid-row-end: 55;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3099,26 +3099,26 @@
             /* ОПЛАТА */
             .payment_text {
                 grid-column-start: 56;
-                grid-column-end: 95;
-                grid-row-start: 25;
-                grid-row-end: 28;
+                grid-column-end: 97;
+                grid-row-start: 28;
+                grid-row-end: 32;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_payment_text {
-                grid-column-start: 55;
-                grid-column-end: 95;
-                grid-row-start: 25;
-                grid-row-end: 28;
+                grid-column-start: 56;
+                grid-column-end: 97;
+                grid-row-start: 28;
+                grid-row-end: 32;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
             .payment_form {
-                grid-column-start: 63;
-                grid-column-end: 83;
+                grid-column-start: 60;
+                grid-column-end: 80;
                 grid-row-start: 33;
                 grid-row-end: 73;
                 overflow: hidden;
@@ -3127,53 +3127,53 @@
 
             /* KOMENT */
             .koment_text {
-                grid-column-start: 55;
-                grid-column-end: 95;
-                grid-row-start: 71;
-                grid-row-end: 74;
+                grid-column-start: 5;
+                grid-column-end: 48;
+                grid-row-start: 58;
+                grid-row-end: 63;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_koment_text {
-                grid-column-start: 60;
-                grid-column-end: 90;
-                grid-row-start: 71;
-                grid-row-end: 74;
+                grid-column-start: 5;
+                grid-column-end: 48;
+                grid-row-start: 58;
+                grid-row-end: 63;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
             .koment_zapolni {
-                grid-column-start: 63;
-                grid-column-end: 93;
-                grid-row-start: 76;
-                grid-row-end: 82;
+                grid-column-start: 8;
+                grid-column-end: 38;
+                grid-row-start: 66;
+                grid-row-end: 72;
                 overflow: hidden;
             }
             .koment_more {
-                grid-column-start: 65;
-                grid-column-end: 91;
-                grid-row-start: 78;
-                grid-row-end: 80;
+                grid-column-start: 10;
+                grid-column-end: 36;
+                grid-row-start: 68;
+                grid-row-end: 70;
                 overflow: hidden;
                 opacity: 50%;
             }
 
             .atom {
-                grid-column-start: 10;
-                grid-column-end: 50;
-                grid-row-start: 87;
+                grid-column-start: 50;
+                grid-column-end: 90;
+                grid-row-start: 85;
                 grid-row-end: 95;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_atom {
-                grid-column-start: 10;
-                grid-column-end: 50;
-                grid-row-start: 87;
+                grid-column-start: 50;
+                grid-column-end: 90;
+                grid-row-start: 85;
                 grid-row-end: 95;
                 overflow: hidden;
                 z-index:1;
@@ -3198,20 +3198,20 @@
             .content {
                 display: grid;
                 grid-template-columns: repeat(100, 1fr);
-                grid-template-rows: repeat(300, 1fr);
+                grid-template-rows: repeat(225, 1fr);
                 overflow: hidden;
                 width: 100vw;
-                height: 300vh;
+                height: 205vh;
                 font-family: LSDFont;
                 color: #FDF2F2;
             }
             
             /* ИМЯ */
             .name_text {
-                grid-column-start: 20;
-                grid-column-end: 80;
-                grid-row-start: 19;
-                grid-row-end: 24;
+                grid-column-start: 25;
+                grid-column-end: 75;
+                grid-row-start: 17;
+                grid-row-end: 22;
                 overflow: hidden;     
                 z-index:2;           
             }
@@ -3219,8 +3219,8 @@
             .english_name_text {
                 grid-column-start:20;
                 grid-column-end: 80;
-                grid-row-start: 19;
-                grid-row-end: 24;
+                grid-row-start: 17;
+                grid-row-end: 22;
                 overflow: hidden; 
                 z-index:1;
                 opacity:0;               
@@ -3229,42 +3229,42 @@
             #name_zapolni {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 27;
-                grid-row-end: 37;
+                grid-row-start: 25;
+                grid-row-end: 35;
                 overflow: hidden;
             }
 
             .name_form {
                 grid-column-start: 19;
                 grid-column-end: 81;
-                grid-row-start: 31;
-                grid-row-end: 35;
+                grid-row-start: 28;
+                grid-row-end: 32;
                 overflow: hidden; 
                 opacity:50%;
                 z-index:10;
             }
             /* EMAIL */
             .email_text {
-                grid-column-start: 32;
-                grid-column-end: 68;
-                grid-row-start: 40;
-                grid-row-end: 45;
+                grid-column-start: 37;
+                grid-column-end: 63;
+                grid-row-start: 38;
+                grid-row-end: 43;
                 overflow: hidden;
             }
             
             #email_zapolni {
                 grid-column-start: 15;
                 grid-column-end: 86;
-                grid-row-start: 48;
-                grid-row-end: 58;
+                grid-row-start: 46;
+                grid-row-end: 56;
                 overflow: hidden;
             }
 
             .email_form {
                 grid-column-start: 19;
                 grid-column-end: 82;
-                grid-row-start: 50;
-                grid-row-end: 54;
+                grid-row-start: 49;
+                grid-row-end: 53;
                 overflow: hidden;
                 z-index:2;
                 opacity:50%;
@@ -3272,19 +3272,19 @@
 
             /* ГОРОД */
             .city_text {
-                grid-column-start: 10;
-                grid-column-end: 90;
-                grid-row-start: 63;
-                grid-row-end: 68;
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 61;
+                grid-row-end: 66;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_city_text {
-                grid-column-start: 10;
-                grid-column-end: 90;
-                grid-row-start: 63;
-                grid-row-end: 68;
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 61;
+                grid-row-end: 66;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
@@ -3293,15 +3293,15 @@
             #city_zapolni {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 71;
-                grid-row-end: 81;
+                grid-row-start: 69;
+                grid-row-end: 79;
                 overflow: hidden;
             }
             .city_form {
                 grid-column-start: 18;
                 grid-column-end: 81;
-                grid-row-start: 73;
-                grid-row-end: 77;
+                grid-row-start: 72;
+                grid-row-end: 76;
                 overflow: hidden;
                 z-index:2;
                 opacity:50%;
@@ -3311,20 +3311,22 @@
             .otpravka_text {
                 grid-column-start: 10;
                 grid-column-end: 90;
-                grid-row-start: 113;
-                grid-row-end: 118;
+                grid-row-start: 90;
+                grid-row-end: 95;
                 overflow: hidden;
                 z-index:2;
+                transform: scale(1.02);
             }
 
             .english_otpravka_text {
                 grid-column-start: 10;
                 grid-column-end: 90;
-                grid-row-start: 113;
-                grid-row-end: 118;
+                grid-row-start: 90;
+                grid-row-end: 95;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
+                transform: scale(1.02);
             }
 
             #pochta_rossii {
@@ -3342,37 +3344,39 @@
             .otpravka_form {
                 grid-column-start: 15;
                 grid-column-end: 75;
-                grid-row-start: 123;
-                grid-row-end: 142;
+                grid-row-start: 98;
+                grid-row-end: 118;
                 overflow: hidden;
                 z-index:2;
             }
 
             /* ОПЛАТА */
             .payment_text {
-                grid-column-start: 15;
-                grid-column-end: 85;
-                grid-row-start: 143;
-                grid-row-end: 148;
+                grid-column-start: 10;
+                grid-column-end: 90;
+                grid-row-start: 122;
+                grid-row-end: 127;
                 overflow: hidden;
                 z-index:2;
+                transform: scale(1.02);
             }
 
             .english_payment_text {
-                grid-column-start: 10;
-                grid-column-end: 90;
-                grid-row-start: 143;
-                grid-row-end: 148;
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 122;
+                grid-row-end: 127;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
+                transform: scale(1.02);
             }
 
             .payment_form {
                 grid-column-start: 15;
                 grid-column-end: 45;
-                grid-row-start: 153;
-                grid-row-end: 189;
+                grid-row-start: 130;
+                grid-row-end: 166;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3381,35 +3385,37 @@
             .koment_text {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 258;
-                grid-row-end: 263;
+                grid-row-start: 169;
+                grid-row-end: 175;
                 overflow: hidden;
                 z-index:2;
+                transform: scale(1.02);
             }
 
             .english_koment_text {
                 grid-column-start: 21;
                 grid-column-end: 79;
-                grid-row-start: 258;
-                grid-row-end: 263;
+                grid-row-start: 169;
+                grid-row-end: 175;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
+                transform: scale(1.02);
             }
 
             .koment_zapolni {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 264;
-                grid-row-end: 274;
+                grid-row-start: 178;
+                grid-row-end: 188;
                 overflow: hidden;
             }
 
             .koment_more {
                 grid-column-start: 19;
                 grid-column-end: 81;
-                grid-row-start: 267;
-                grid-row-end: 271;
+                grid-row-start: 181;
+                grid-row-end: 185;
                 overflow: hidden;
                 opacity: 50%;
             }
@@ -3417,8 +3423,8 @@
             .atom {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 282;
-                grid-row-end: 296;
+                grid-row-start: 201;
+                grid-row-end: 215;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3426,8 +3432,8 @@
             .english_atom {
                 grid-column-start: 15;
                 grid-column-end: 85;
-                grid-row-start: 282;
-                grid-row-end: 296;
+                grid-row-start: 201;
+                grid-row-end: 215;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
@@ -3452,35 +3458,37 @@
             .name_text {
                 grid-column-start: 9;
                 grid-column-end: 28;
-                grid-row-start: 7;
-                grid-row-end: 10;
+                grid-row-start: 11;
+                grid-row-end: 16;
                 overflow: hidden;  
-                z-index:1;              
+                z-index:1;
+                transform: scale(1.1);      
             }
 
             .english_name_text {
                 grid-column-start: 9;
                 grid-column-end: 28;
-                grid-row-start: 7;
-                grid-row-end: 10;
+                grid-row-start: 11;
+                grid-row-end: 16;
                 overflow: hidden;                
                 z-index:2;
                 opacity:0;
+                transform: scale(1.1);
             }
             
             #name_zapolni {
                 grid-column-start: 8;
                 grid-column-end: 29;
-                grid-row-start: 12;
-                grid-row-end: 20;
+                grid-row-start: 19;
+                grid-row-end: 29;
                 overflow: hidden;
             }
 
             .name_form {
                 grid-column-start: 9;
                 grid-column-end: 28;
-                grid-row-start: 15;
-                grid-row-end: 18;
+                grid-row-start: 22;
+                grid-row-end: 26;
                 overflow: hidden; 
                 opacity:50%;
                 z-index:10;
@@ -3489,24 +3497,25 @@
             .email_text {
                 grid-column-start: 45;
                 grid-column-end: 55;
-                grid-row-start: 7;
-                grid-row-end: 10;
+                grid-row-start: 11;
+                grid-row-end: 16;
                 overflow: hidden;
+                transform: scale(1.1);
             }
 
             #email_zapolni {
                 grid-column-start: 40;
                 grid-column-end: 61;
-                grid-row-start: 12;
-                grid-row-end: 20;
+                grid-row-start: 19;
+                grid-row-end: 29;
                 overflow: hidden;
             }
 
             .email_form {
                 grid-column-start: 41;
                 grid-column-end: 60;
-                grid-row-start: 14;
-                grid-row-end: 17;
+                grid-row-start: 22;
+                grid-row-end: 26;
                 overflow: hidden;
                 z-index:2;
                 opacity:50%;
@@ -3516,34 +3525,36 @@
             .city_text {
                 grid-column-start: 69;
                 grid-column-end: 95;
-                grid-row-start: 7;
-                grid-row-end: 10;
+                grid-row-start: 11;
+                grid-row-end: 16;
                 overflow: hidden;
                 z-index:1;
+                transform: scale(1.1);
             }
 
             .english_city_text {
                 grid-column-start: 69;
                 grid-column-end: 95;
-                grid-row-start: 7;
-                grid-row-end: 10;
+                grid-row-start:11;
+                grid-row-end: 16;
                 overflow: hidden;
                 z-index:2;
                 opacity:0;
+                transform: scale(1.1);
             }
 
             #city_zapolni {
                 grid-column-start: 69;
                 grid-column-end: 94;
-                grid-row-start: 12;
-                grid-row-end: 20;
+                grid-row-start: 19;
+                grid-row-end: 29;
                 overflow: hidden;
             }
             .city_form {
                 grid-column-start: 70;
                 grid-column-end: 93;
-                grid-row-start: 14;
-                grid-row-end: 17;
+                grid-row-start: 22;
+                grid-row-end: 26;
                 overflow: hidden;
                 z-index:2;
                 opacity:50%;
@@ -3552,32 +3563,28 @@
             /* ОТПРАВКА */
             .otpravka_text {
                 grid-column-start: 5;
-                grid-column-end: 45;
-                grid-row-start: 27;
-                grid-row-end: 31;
+                grid-column-end: 42;
+                grid-row-start: 35;
+                grid-row-end: 41;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_otpravka_text {
                 grid-column-start: 5;
-                grid-column-end: 45;
-                grid-row-start: 27;
-                grid-row-end: 31;
+                grid-column-end: 42;
+                grid-row-start: 35;
+                grid-row-end: 41;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
             }
 
-            #pochta_rossii {
-                margin-top:1vh;
-            }
-
             .otpravka_form {
-                grid-column-start: 5;
-                grid-column-end: 30;
-                grid-row-start: 36;
-                grid-row-end: 59;
+                grid-column-start: 7;
+                grid-column-end: 32;
+                grid-row-start: 44;
+                grid-row-end: 67;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3586,8 +3593,8 @@
             .payment_text {
                 grid-column-start: 58;
                 grid-column-end: 92;
-                grid-row-start: 27;
-                grid-row-end: 31;
+                grid-row-start: 35;
+                grid-row-end: 41;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3595,8 +3602,8 @@
             .english_payment_text {
                 grid-column-start: 65;
                 grid-column-end: 95;
-                grid-row-start: 27;
-                grid-row-end: 31;
+                grid-row-start: 35;
+                grid-row-end: 41;
                 overflow: hidden;
                 z-index:1;
                 opacity:0;
@@ -3623,62 +3630,62 @@
             }
 
             .payment_form {
-                grid-column-start: 63;
-                grid-column-end: 73;
-                grid-row-start: 32;
-                grid-row-end: 55;
+                grid-column-start: 60;
+                grid-column-end: 70;
+                grid-row-start: 41;
+                grid-row-end: 79;
                 overflow: hidden;
                 z-index:2;
             }
 
             /* KOMENT */
             .koment_text {
-                grid-column-start: 60;
-                grid-column-end: 90;
-                grid-row-start: 67;
-                grid-row-end: 72;
+                grid-column-start: 6;
+                grid-column-end: 36;
+                grid-row-start: 69;
+                grid-row-end: 76;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_koment_text {
-                grid-column-start: 60;
-                grid-column-end: 80;
-                grid-row-start: 67;
-                grid-row-end: 72;
+                grid-column-start: 6;
+                grid-column-end: 36;
+                grid-row-start: 69;
+                grid-row-end: 76;
                 overflow: hidden;
                 z-index:1;
             }
 
             .koment_zapolni {
-                grid-column-start: 65;
-                grid-column-end: 85;
-                grid-row-start: 76;
-                grid-row-end: 84;
+                grid-column-start: 8;
+                grid-column-end: 29;
+                grid-row-start: 79;
+                grid-row-end: 89;
                 overflow: hidden;
             }
             .koment_more {
-                grid-column-start: 66;
-                grid-column-end: 84;
-                grid-row-start: 78;
-                grid-row-end: 82;
+                grid-column-start: 9;
+                grid-column-end: 28;
+                grid-row-start: 82;
+                grid-row-end: 86;
                 overflow: hidden;
                 opacity: 50%;
             }
 
             .atom {
-                grid-column-start: 35;
-                grid-column-end: 60;
-                grid-row-start: 86;
+                grid-column-start: 65;
+                grid-column-end: 90;
+                grid-row-start: 83;
                 grid-row-end: 97;
                 overflow: hidden;
                 z-index:2;
             }
 
             .english_atom {
-                grid-column-start: 35;
-                grid-column-end: 60;
-                grid-row-start: 86;
+                grid-column-start: 65;
+                grid-column-end: 90;
+                grid-row-start: 83;
                 grid-row-end: 97;
                 overflow: hidden;
                 z-index: 1;
@@ -3689,7 +3696,7 @@
                 grid-column-start: 95;
                 grid-column-end: 98;
                 grid-row-start: 2;
-                grid-row-end: 5;
+                grid-row-end: 8;
                 overflow: hidden;
             } 
         }
@@ -3941,7 +3948,7 @@
             </div>
 
             <div class="cifri-english-image">
-                <img src = "/media/works/zakis/first_part/text/english/cifri-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <img src = "/media/works/zakis/first_part/text/cifri.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="cena-image">
