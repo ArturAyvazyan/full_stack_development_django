@@ -21,9 +21,14 @@
             background: url("/media/works/golova/background.png");
             background-size: cover;
         }
+
+        @font-face {
+            font-family: LSDFont;
+            color: #765F85;
+            src: url("{% static '/homepage/super_font.ttf' %}");
+        }
         
-        .container {
-            
+        .container {   
             display:grid;
             grid-template-columns: 65fr 35fr;
             grid-template-rows:100;
@@ -98,114 +103,174 @@
             overflow: hidden;
         }
 
-        .razmer-image {
+        .razmer {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: left;
+            grid-column-start: 5;
+            grid-column-end: 40;
+            grid-row-start: 20;
+            grid-row-end: 26;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .razmer-english {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: left;
+            grid-column-start: 5;
+            grid-column-end: 28;
+            grid-row-start: 20;
+            grid-row-end: 26;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .cifri {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: right;
+            grid-column-start: 15;
+            grid-column-end: 55;
+            grid-row-start: 27;
+            grid-row-end: 31;
+            overflow: hidden;
+        }
+
+        .materials {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: left;
+            grid-column-start: 5;
+            grid-column-end: 65;
+            grid-row-start: 34;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .materials-english {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: left;
+            grid-column-start: 5;
+            grid-column-end: 65;
+            grid-row-start: 34;
+            grid-row-end: 40;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .farfor {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: left;
+            grid-column-start: 15;
+            grid-column-end: 90;
+            grid-row-start: 41;
+            grid-row-end: 45;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .farfor-english {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: left;
+            grid-column-start: 15;
+            grid-column-end: 90;
+            grid-row-start: 41;
+            grid-row-end: 45;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .akril {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: left;
+            grid-column-start: 15;
+            grid-column-end: 70;
+            grid-row-start: 46;
+            grid-row-end: 50;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .akril-english {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: left;
+            grid-column-start: 15;
+            grid-column-end: 70;
+            grid-row-start: 46;
+            grid-row-end: 50;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .cena {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: left;
             grid-column-start: 5;
             grid-column-end: 35;
-            grid-row-start: 20;
-            grid-row-end: 24;
-            overflow: hidden;
-            z-index: 2;
-        }
-
-        .razmer-english-image {
-            grid-column-start: 5;
-            grid-column-end: 28;
-            grid-row-start: 20;
-            grid-row-end: 24;
-            overflow: hidden;
-            z-index: 1;
-            opacity: 0;
-        }
-
-        .cifri-image{
-            grid-column-start: 15;
-            grid-column-end: 48;
-            grid-row-start: 25;
-            grid-row-end: 29;
-            overflow: hidden;
-        }
-
-        .materials-image {
-            grid-column-start: 5;
-            grid-column-end: 46;
-            grid-row-start: 34;
-            grid-row-end: 38;
-            overflow: hidden;
-            z-index:2;
-        }
-
-        .materials-english-image {
-            grid-column-start: 5;
-            grid-column-end: 46;
-            grid-row-start: 34;
-            grid-row-end: 38;
-            overflow: hidden;
-            z-index: 1;
-            opacity: 0;
-        }
-
-        .farfor-image {
-            grid-column-start: 15;
-            grid-column-end: 75;
-            grid-row-start: 40;
-            grid-row-end: 43;
-            overflow: hidden;
-            z-index:2;
-        }
-
-        .farfor-english-image {
-            grid-column-start: 15;
-            grid-column-end: 75;
-            grid-row-start: 40;
-            grid-row-end: 43;
-            overflow: hidden;
-            z-index: 1;
-            opacity: 0;
-        }
-
-        .akril-image {
-            grid-column-start: 15;
-            grid-column-end: 55;
-            grid-row-start: 45;
-            grid-row-end: 48;
-            overflow: hidden;
-            z-index: 2;
-        }
-
-        .akril-english-image {
-            grid-column-start: 15;
-            grid-column-end: 55;
-            grid-row-start: 45;
-            grid-row-end: 48;
-            overflow: hidden;
-            z-index: 1;
-            opacity: 0;
-        }
-
-        .cena-image {
-            grid-column-start: 5;
-            grid-column-end: 28;
-            grid-row-start: 52;
-            grid-row-end: 57;
+            grid-row-start: 53;
+            grid-row-end: 59;
             overflow: hidden;
             z-index: 2;
         }
         
-        .cena-english-image {
+        .cena-english {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: left;
             grid-column-start: 5;
-            grid-column-end: 28;
-            grid-row-start: 52;
-            grid-row-end: 57;
+            grid-column-end: 35;
+            grid-row-start: 53;
+            grid-row-end: 59;
             overflow: hidden;
             z-index: 1;
             opacity: 0;
         }
 
-        .price-image {
+        .price {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: left;
             grid-column-start: 15;
             grid-column-end: 35;
-            grid-row-start: 58;
-            grid-row-end: 61;
+            grid-row-start: 60;
+            grid-row-end: 64;
             overflow: hidden;
         }
 
@@ -359,118 +424,139 @@
                 overflow: hidden;
             }
 
-            .razmer-image {
-                grid-column-start: 5;
-                grid-column-end: 45;
-                grid-row-start: 20;
+            .razmer {
+                text-align: right;
+                font-size: 40px;
+                grid-column-start: 35;
+                grid-column-end: 90;
+                grid-row-start: 19;
                 grid-row-end: 24;
-                overflow: hidden;
-                z-index: 2;
-            }
-
-            .razmer-english-image {
-                grid-column-start: 5;
-                grid-column-end: 32;
-                grid-row-start: 20;
-                grid-row-end: 24;
-                overflow: hidden;
-                z-index: 1;
-                opacity: 0;
-            }
-
-            .cifri-image{
-                grid-column-start: 15;
-                grid-column-end: 65;
-                grid-row-start: 26;
-                grid-row-end: 30;
-                overflow: hidden;
-            }
-
-            .materials-image {
-                grid-column-start: 5;
-                grid-column-end: 55;
-                grid-row-start: 34;
-                grid-row-end: 38;
                 overflow: hidden;
                 z-index:2;
             }
 
-            .materials-english-image {
-                grid-column-start: 5;
-                grid-column-end: 55;
-                grid-row-start: 34;
-                grid-row-end: 38;
+            .razmer-english {
+                text-align: right;
+                font-size: 40px;
+                grid-column-start: 40;
+                grid-column-end: 85;
+                grid-row-start: 19;
+                grid-row-end: 24;
                 overflow: hidden;
-                z-index: 1;
-                opacity: 0;
+                opacity:0;
+                z-index:1;
             }
 
-            .farfor-image {
-                grid-column-start: 12;
-                grid-column-end: 87;
-                grid-row-start: 40;
-                grid-row-end: 43;
+            .cifri {
+                font-size: 30px;
+                text-align: right;
+                grid-column-start: 28;
+                grid-column-end: 90;
+                grid-row-start: 25;
+                grid-row-end: 29;
+                overflow: hidden;
+            }
+
+            .materials {
+                font-size: 40px;
+                text-align: right;                
+                grid-column-start: 15;
+                grid-column-end: 90;
+                grid-row-start: 32;
+                grid-row-end: 37;
                 overflow: hidden;
                 z-index:2;
-                transform:scale(1.2);
             }
 
-            .farfor-english-image {
+            .materials-english {
+                font-size: 40px;
+                text-align: right;
                 grid-column-start: 15;
-                grid-column-end: 87;
-                grid-row-start: 40;
-                grid-row-end: 43;
+                grid-column-end: 90;
+                grid-row-start: 32;
+                grid-row-end: 37;
                 overflow: hidden;
-                z-index: 1;
-                opacity: 0;
+                opacity:0;
+                z-index:1;
             }
 
-            .akril-image {
-                grid-column-start: 15;
-                grid-column-end: 67;
-                grid-row-start: 45;
+            .farfor {
+                font-size: 30px;
+                text-align: right;
+                grid-column-start: 10;
+                grid-column-end: 90;
+                grid-row-start: 39;
                 grid-row-end: 48;
                 overflow: hidden;
-                z-index: 2;
-                transform:scale(1.2);
-            }
-
-            .akril-english-image {
-                grid-column-start: 15;
-                grid-column-end: 78;
-                grid-row-start: 45;
-                grid-row-end: 48;
-                overflow: hidden;
-                z-index: 1;
-                opacity: 0;
-            }
-
-            .cena-image {
-                grid-column-start: 5;
-                grid-column-end: 35;
-                grid-row-start: 54;
-                grid-row-end: 59;
-                overflow: hidden;
-                z-index: 2;
+                z-index:2;
             }
             
-            .cena-english-image {
-                grid-column-start: 5;
-                grid-column-end: 35;
-                grid-row-start: 54;
+            .farfor-english {
+                font-size: 30px;
+                text-align: right;
+                grid-column-start: 40;
+                grid-column-end: 90;
+                grid-row-start: 39;
+                grid-row-end: 48;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril {
+                font-size: 30px;
+                text-align: right;
+                grid-column-start: 40;
+                grid-column-end: 90;
+                grid-row-start: 49;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .akril-english {
+                font-size: 30px;
+                text-align: right;
+                grid-column-start: 40;
+                grid-column-end: 90;
+                grid-row-start: 49;
                 grid-row-end: 58;
                 overflow: hidden;
                 z-index: 1;
                 opacity: 0;
             }
 
-            .price-image {
-                grid-column-start: 15;
-                grid-column-end: 45;
-                grid-row-start: 60;
-                grid-row-end: 63;
+            .cena {
+                font-size: 40px;
+                text-align: right;
+                grid-column-start: 48;
+                grid-column-end: 90;
+                grid-row-start: 59;
+                grid-row-end: 65;
                 overflow: hidden;
-                transform:Scale(1.1);
+                z-index:2;
+            }
+            
+            .cena-english {
+                font-size: 40px;
+                text-align: right;
+                grid-column-start: 50;
+                grid-column-end: 90;
+                grid-row-start: 59;
+                grid-row-end: 65;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price {
+                font-size: 30px;
+                text-align: right;
+                grid-column-start: 50;
+                grid-column-end: 90;
+                grid-row-start: 66;
+                grid-row-end: 70;
+                overflow: hidden;
             }
 
             .button-image {
@@ -519,7 +605,7 @@
             .second-buy-border {
                 grid-column-start: 21;
                 grid-column-end: 77;
-                grid-row-start: 70;
+                grid-row-start: 71;
                 grid-row-end: 88;
                 overflow: hidden;
             }
@@ -549,8 +635,8 @@
             .container {
                 display: grid;
                 grid-template-columns: repeat(100, 1fr);
-                grid-template-rows: repeat(200, 1fr);
-                height: 200%;
+                grid-template-rows: repeat(166, 1fr);
+                height: 166%;
             }
 
             .first_class {
@@ -673,104 +759,124 @@
                 /*  */
                     /*  */
 
-            .razmer-image {
+            .razmer {
+                text-align: left;
+                font-size: 65px;
                 grid-column-start: 10;
-                grid-column-end: 41;
-                grid-row-start: 120;
-                grid-row-end: 125;
+                grid-column-end: 43;
+                grid-row-start: 105;
+                grid-row-end: 111;
                 z-index:2;
             }
 
-            .razmer-english-image {
-                grid-column-start: 20;
-                grid-column-end: 41;
-                grid-row-start: 120;
-                grid-row-end: 125;
+            .razmer-english {
+                text-align: left;
+                font-size: 65px;
+                text-align: left;
+                grid-column-start: 10;
+                grid-column-end: 33;
+                grid-row-start: 105;
+                grid-row-end: 111;
                 opacity:0;
                 z-index:1;
             }
 
-            .cifri-image{
-                grid-column-start: 39;
-                grid-column-end: 69;
-                grid-row-start: 126;
-                grid-row-end: 130;
-            }
+            .cifri {
+                font-size: 45px;
+                grid-column-start: 25;
+                grid-column-end: 65;
+                grid-row-start: 112;
+                grid-row-end: 117;
+                z-index:2;
+            }   
 
-            .materials-image {
+            .materials {
+                text-align: left;
+                font-size: 65px;
                 grid-column-start: 10;
-                grid-column-end: 51;
-                grid-row-start: 138;
-                grid-row-end: 143;
+                grid-column-end: 60;
+                grid-row-start: 122;
+                grid-row-end: 129;
                 z-index:2
             }
 
-            .materials-english-image {
+            .materials-english {
+                text-align: left;
+                font-size: 65px;
                 grid-column-start: 10;
-                grid-column-end: 51;
-                grid-row-start: 138;
-                grid-row-end: 143;
+                grid-column-end: 60;
+                grid-row-start: 122;
+                grid-row-end: 129;
                 z-index:1;
             }
 
-            .farfor-image {
-                grid-column-start: 20;
-                grid-column-end: 78;
-                grid-row-start: 145;
-                grid-row-end: 148;
+            .farfor {
+                font-size: 45px;
+                grid-column-start: 10;
+                grid-column-end: 90;
+                grid-row-start: 130;
+                grid-row-end: 135;
                 z-index:2;
             } 
+            
+            .farfor-english {
+                font-size: 45px;
+                grid-column-start: 40;
+                grid-column-end: 70;
+                grid-row-start: 130;
+                grid-row-end: 135;
+                opacity:0;
+                z-index:1;
+            }
 
-            .farfor-english-image {
+            .akril {
+                font-size: 45px;
                 grid-column-start: 20;
-                grid-column-end: 78;
-                grid-row-start: 145;
-                grid-row-end: 148;
+                grid-column-end: 80;
+                grid-row-start: 136;
+                grid-row-end: 141;
+                z-index:2;
+            } 
+            
+            .akril-english {
+                font-size: 45px;
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 136;
+                grid-row-end: 141;
                 opacity:0;
                 z-index:1;
             }
 
-            .akril-image {
-                grid-column-start: 35;
-                grid-column-end: 75;
-                grid-row-start: 150;
-                grid-row-end: 153;
-                z-index:2;
-            }  
-
-            .akril-english-image {
-                grid-column-start: 35;
-                grid-column-end: 75;
-                grid-row-start: 150;
-                grid-row-end: 153;
-                opacity:0;
-                z-index:1;
-            }   
-
-            .cena-image {
+            .cena {
+                font-size: 65px;
+                text-align: left;
                 grid-column-start: 10;
-                grid-column-end: 33;
-                grid-row-start: 160;
-                grid-row-end: 166;
+                grid-column-end: 38;
+                grid-row-start: 141;
+                grid-row-end: 149;
                 overflow: hidden;
                 z-index:2;
             }
-
-            .cena-english-image {
-                grid-column-start: 12;
-                grid-column-end: 35;
-                grid-row-start: 160;
-                grid-row-end: 165;
+            
+            .cena-english {
+                font-size: 65px;
+                text-align: left;
+                grid-column-start: 10;
+                grid-column-end: 38;
+                grid-row-start: 141;
+                grid-row-end: 148;
                 overflow: hidden;
                 opacity:0;
                 z-index:1;
             }
 
-            .price-image {
-                grid-column-start: 27;
+            .price {
+                font-size: 45px;
+                grid-column-start: 25;
                 grid-column-end: 45;
-                grid-row-start: 168;
-                grid-row-end: 171;
+                grid-row-start: 149;
+                grid-row-end: 155;
                 overflow: hidden;
             }
         }
@@ -789,8 +895,8 @@
             .container {
                 display: grid;
                 grid-template-columns: repeat(100, 1fr);
-                grid-template-rows: repeat(200, 1fr);
-                height: 200vh;
+                grid-template-rows: repeat(165, 1fr);
+                height: 165%;
             }
 
             .first_class {
@@ -909,105 +1015,117 @@
                 /*  */
                     /*  */
 
-            .razmer-image {
+            .razmer {
+                font-size: 40px;
                 grid-column-start: 10;
-                grid-column-end: 55;
-                grid-row-start: 120;
-                grid-row-end: 125;
+                grid-column-end: 60;
+                grid-row-start: 105;
+                grid-row-end: 111;
                 z-index:2;
             }
 
-            .razmer-english-image {
-                grid-column-start: 15;
-                grid-column-end: 45;
-                grid-row-start: 120;
-                grid-row-end: 125;
+            .razmer-english {
+                font-size: 40px;
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 105;
+                grid-row-end: 111;
                 opacity:0;
                 z-index:1;
             }
 
-            .cifri-image{
+            .cifri {
+                font-size: 30px;
                 grid-column-start: 35;
                 grid-column-end: 85;
-                grid-row-start: 126;
-                grid-row-end: 131;
-            }
+                grid-row-start: 112;
+                grid-row-end: 116;
+                z-index:2;
+            } 
 
-            .materials-image {
+            .materials {
+                font-size: 40px;
                 grid-column-start: 10;
-                grid-column-end: 80;
-                grid-row-start: 138;
-                grid-row-end: 143;
+                grid-column-end: 85;
+                grid-row-start: 122;
+                grid-row-end: 128;
                 z-index:2
             }
 
-            .materials-english-image {
+            .materials-english {
+                font-size: 40px;
                 grid-column-start: 10;
-                grid-column-end: 80;
-                grid-row-start: 138;
-                grid-row-end: 143;
+                grid-column-end: 85;
+                grid-row-start: 122;
+                grid-row-end: 128;
                 z-index:1;
             }
 
-            .farfor-image {
-                grid-column-start: 3;
+            .farfor {
+                font-size: 30px;
+                grid-column-start: 5;
                 grid-column-end: 95;
-                grid-row-start: 145;
-                grid-row-end: 149;
+                grid-row-start: 129;
+                grid-row-end: 134;
                 z-index:2;
-                transform: scale(0.9);
             } 
 
-            .farfor-english-image {
-                grid-column-start: 3;
+            .farfor-english {
+                font-size: 30px;
+                grid-column-start: 5;
                 grid-column-end: 95;
-                grid-row-start: 145;
-                grid-row-end: 149;
+                grid-row-start: 129;
+                grid-row-end: 134;
                 opacity:0;
                 z-index:1;
             }
 
-            .akril-image {
-                grid-column-start: 15;
-                grid-column-end: 65;
-                grid-row-start: 150;
-                grid-row-end: 153;
+            .akril {
+                font-size: 30px;
+                grid-column-start: 30;
+                grid-column-end: 95;
+                grid-row-start: 135;
+                grid-row-end: 140;
                 z-index:2;
-            }  
+            } 
 
-            .akril-english-image {
-                grid-column-start: 15;
-                grid-column-end: 65;
-                grid-row-start: 150;
-                grid-row-end: 153;
+            .akril-english {
+                font-size: 30px;
+                grid-column-start: 30;
+                grid-column-end: 95;
+                grid-row-start: 135;
+                grid-row-end: 140;
                 opacity:0;
                 z-index:1;
-            }   
+            }
 
-            .cena-image {
+            .cena {
+                font-size: 40px;
                 grid-column-start: 10;
-                grid-column-end: 45;
-                grid-row-start: 160;
-                grid-row-end: 166;
+                grid-column-end: 40;
+                grid-row-start: 143;
+                grid-row-end: 150;
                 overflow: hidden;
                 z-index:2;
             }
 
-            .cena-english-image {
+            .cena-english {
+                font-size: 40px;
                 grid-column-start: 10;
-                grid-column-end: 45;
-                grid-row-start: 160;
-                grid-row-end: 165;
+                grid-column-end: 50;
+                grid-row-start: 143;
+                grid-row-end: 150;
                 overflow: hidden;
                 opacity:0;
                 z-index:1;
             }
 
-            .price-image {
-                grid-column-start: 26;
-                grid-column-end: 52;
-                grid-row-start: 168;
-                grid-row-end: 171;
+            .price {
+                font-size: 30px;
+                grid-column-start: 30;
+                grid-column-end: 55;
+                grid-row-start: 150;
+                grid-row-end: 155;
                 overflow: hidden;
             }
         }
@@ -1146,105 +1264,121 @@
                 /*  */
                     /*  */
 
-            .razmer-image {
+                    .razmer {
+                font-size: 40px;
                 grid-column-start: 10;
-                grid-column-end: 35;
-                grid-row-start: 114;
-                grid-row-end: 121;
+                grid-column-end: 34;
+                grid-row-start: 108;
+                grid-row-end: 119;
                 z-index:2;
             }
 
-            .razmer-english-image {
-                grid-column-start: 10;
-                grid-column-end: 25;
-                grid-row-start: 114;
-                grid-row-end: 123;
+            .razmer-english {
+                font-size: 40px;
+                grid-column-start: 13;
+                grid-column-end: 29;
+                grid-row-start: 108;
+                grid-row-end: 119;
                 opacity:0;
                 z-index:1;
             }
 
-            .cifri-image{
+            .cifri {
+                font-size: 30px;
                 grid-column-start: 20;
-                grid-column-end: 46;
-                grid-row-start: 124;
-                grid-row-end: 131;
+                grid-column-end: 52;
+                grid-row-start: 120;
+                grid-row-end: 129;
                 z-index:2;
             }
 
-            .materials-image {
+            .materials {
+                font-size: 40px;
                 grid-column-start: 10;
-                grid-column-end: 40;
-                grid-row-start: 144;
-                grid-row-end: 151;
+                grid-column-end: 50;
+                grid-row-start: 136;
+                grid-row-end: 147;
                 z-index:2
             }
 
-            .materials-english-image {
+            .materials-english {
+                font-size: 40px;
                 grid-column-start: 10;
-                grid-column-end: 40;
-                grid-row-start: 145;
-                grid-row-end: 151;
+                grid-column-end: 45;
+                grid-row-start: 136;
+                grid-row-end: 147;
                 z-index:1;
             }
 
-            .farfor-image {
-                grid-column-start: 15;
-                grid-column-end: 60;
-                grid-row-start: 155;
-                grid-row-end: 160;
+            .farfor {
+                font-size: 30px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 70;
+                grid-row-start: 147;
+                grid-row-end: 154;
                 z-index:2;
             } 
 
-            .farfor-english-image {
-                grid-column-start: 15;
+            .farfor-english {
+                font-size: 30px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 70;
+                grid-row-start: 147;
+                grid-row-end: 154;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril {
+                font-size: 30px;
+                text-align: left;
+                grid-column-start: 20;
                 grid-column-end: 70;
                 grid-row-start: 155;
-                grid-row-end: 160;
+                grid-row-end: 162;
+                z-index:2;
+            } 
+
+            .akril-english {
+                font-size: 30px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 70;
+                grid-row-start: 155;
+                grid-row-end: 162;
                 opacity:0;
                 z-index:1;
             }
 
-            .akril-image {
-                grid-column-start: 15;
-                grid-column-end: 45;
-                grid-row-start: 164;
-                grid-row-end: 169;
-                z-index:2;
-            }  
-
-            .akril-english-image {
-                grid-column-start: 15;
-                grid-column-end: 50;
-                grid-row-start: 164;
-                grid-row-end: 169;
-                opacity:0;
-                z-index:1;
-            }   
-            
-            .cena-image {
-                grid-column-start: 10;
-                grid-column-end: 27;
-                grid-row-start: 178;
-                grid-row-end: 187;
+            .cena {
+                font-size: 40px;
+                grid-column-start: 9;
+                grid-column-end: 29;
+                grid-row-start: 168;
+                grid-row-end: 180;
                 overflow: hidden;
                 z-index:2;
             }
 
-            .cena-english-image {
-                grid-column-start: 10;
+            .cena-english {
+                font-size: 40px;
+                grid-column-start: 9;
+                grid-column-end: 34;
+                grid-row-start: 168;
+                grid-row-end: 180;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price {
+                font-size: 30px;
+                grid-column-start: 15;
                 grid-column-end: 30;
-                grid-row-start: 178;
-                grid-row-end: 186;
-                overflow: hidden;
-                opacity:0;
-                z-index:1;
-            }
-
-            .price-image {
-                grid-column-start: 25;
-                grid-column-end: 40;
-                grid-row-start: 189;
-                grid-row-end: 194;
+                grid-row-start: 181;
+                grid-row-end: 188;
                 overflow: hidden;
             }
         }
@@ -1472,12 +1606,6 @@
             position:absolute;
             top: 37%;
             left: 37%;
-        }
-
-        @font-face {
-            font-family: LSDFont;
-            
-            src: url("{% static '/homepage/super_font.ttf' %}");
         }
     
         @media screen and (max-width: 1200px),(max-device-width: 1200px) {
@@ -1948,12 +2076,6 @@
         }
 
         /* ФОРМА */
-        
-        @font-face {
-            font-family: LSDFont;
-            
-            src: url("{% static '/homepage/super_font.ttf' %}");
-        }
 
         [type=radio] { 
             /* position: absolute; */
@@ -3532,52 +3654,52 @@
                 <img src = "/media/works/golova/second_part/put_logo.png" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;'>
             </div>
                 
-            <div class="razmer-image">
-                <img src = "/media/works/golova/second_part/text/razmer.png" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            <div class="razmer" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian()>
+                РАЗМЕР:
             </div>
             
-            <div class="razmer-english-image">
-                <img src = "/media/works/golova/second_part/text/english/razmer-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            <div class="razmer-english">
+                SIZE:
             </div>
           
-            <div class="cifri-image">
-                <img src = "/media/works/golova/second_part/text/cifri.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="cifri">
+                16*17*16cm
             </div>
 
-            <div class="materials-image">
-                <img src = "/media/works/golova/second_part/text/materials.png" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="materials"  onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian()>
+                МАТЕРИАЛЫ:
             </div>
 
-            <div class="materials-english-image">
-                <img src = "/media/works/golova/second_part/text/english/materials-english.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="materials-english">
+                MATERIALS:
             </div>
 
-            <div class="farfor-image">
-                <img src = "/media/works/golova/second_part/text/farfor.png" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="farfor"  onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian()>
+                НЕОБОЖЖЁННЫЙ ФАРФОР
             </div>
 
-            <div class="farfor-english-image">
-                <img src = "/media/works/golova/second_part/text/english/farfor-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="farfor-english">
+                UNFIRED PORCELAIN
             </div>
 
-            <div class="akril-image">
-                <img src = "/media/works/golova/second_part/text/akril.png" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="akril" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian()>
+                АКРИЛОВЫЙ ЛАК
             </div>       
             
-            <div class="akril-english-image">
-                <img src = "/media/works/golova/second_part/text/english/akril-english.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="akril-english">
+                ACRYLIC LACQUER
             </div>
 
-            <div class="cena-image">
-                <img src = "/media/works/golova/second_part/text/cena.png" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="cena"  onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian()>
+                ЦЕНА:
             </div>
 
-            <div class="cena-english-image">
-                <img src = "/media/works/golova/second_part/text/english/cena-english.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="cena-english">
+                PRICE:
             </div>
 
-            <div class="price-image">
-                <img src = "/media/works/golova/second_part/text/price.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="price">
+                20000
             </div>
 
             <div class="button-image">
@@ -3807,14 +3929,14 @@
 
     function razmerSwitchToEnglish() {
         var english_razmer_appears = anime({
-            targets:'.razmer-english-image',
+            targets:'.razmer-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_razmer = anime({
-            targets:'.razmer-image',
+            targets:'.razmer',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -3823,7 +3945,7 @@
 
     function razmerBackToRussian() {
         var disappear_english_razmer = anime({
-            targets:'.razmer-english-image',
+            targets:'.razmer-english',
             opacity: 0,
             duration:9000,
             
@@ -3831,7 +3953,7 @@
         })
 
         var razmer_appears = anime({
-            targets:'.razmer-image',
+            targets:'.razmer',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -3840,14 +3962,14 @@
 
     function materialsSwitchToEnglish() {
         var english_materials_appears = anime({
-            targets:'.materials-english-image',
+            targets:'.materials-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_materials = anime({
-            targets:'.materials-image',
+            targets:'.materials',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -3856,7 +3978,7 @@
 
     function materialsBackToRussian() {
         var disappear_english_materials = anime({
-            targets:'.materials-english-image',
+            targets:'.materials-english',
             opacity: 0,
             duration:9000,
             
@@ -3864,7 +3986,7 @@
         })
 
         var materials_appears = anime({
-            targets:'.materials-image',
+            targets:'.materials',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -3873,14 +3995,14 @@
 
     function farforSwitchToEnglish() {
         var english_farfor_appears = anime({
-            targets:'.farfor-english-image',
+            targets:'.farfor-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_farfor = anime({
-            targets:'.farfor-image',
+            targets:'.farfor',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -3889,7 +4011,7 @@
 
     function farforBackToRussian() {
         var disappear_english_farfor = anime({
-            targets:'.farfor-english-image',
+            targets:'.farfor-english',
             opacity: 0,
             duration:9000,
             
@@ -3897,7 +4019,7 @@
         })
 
         var farfor_appears = anime({
-            targets:'.farfor-image',
+            targets:'.farfor',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -3906,14 +4028,14 @@
 
     function akrilSwitchToEnglish() {
         var english_akril_appears = anime({
-            targets:'.akril-english-image',
+            targets:'.akril-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_akril = anime({
-            targets:'.akril-image',
+            targets:'.akril',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -3922,7 +4044,7 @@
 
     function akrilBackToRussian() {
         var disappear_english_akril = anime({
-            targets:'.akril-english-image',
+            targets:'.akril-english',
             opacity: 0,
             duration:9000,
             
@@ -3930,7 +4052,7 @@
         })
 
         var akril_appears = anime({
-            targets:'.akril-image',
+            targets:'.akril',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -3939,14 +4061,14 @@
 
     function cenaSwitchToEnglish() {
         var english_cena_appears = anime({
-            targets:'.cena-english-image',
+            targets:'.cena-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_cena = anime({
-            targets:'.cena-image',
+            targets:'.cena',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -3955,14 +4077,14 @@
 
     function cenaBackToRussian() {
         var disappear_english_cena = anime({
-            targets:'.cena-english-image',
+            targets:'.cena-english',
             opacity: 0,
             duration:9000,
             autoplay:true,
         })
 
         var cena_appears = anime({
-            targets:'.cena-image',
+            targets:'.cena',
             opacity: 1,
             duration:9000,
             autoplay:true,
