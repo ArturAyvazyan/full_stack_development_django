@@ -96,10 +96,15 @@
         }
 
         .nazvanie {
+            cursor:default;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 75px;
+            text-align: left;
             grid-column-start: 49;
             grid-column-end: 89;
             grid-row-start: 7;
-            grid-row-end: 14;
+            grid-row-end: 16;
             overflow: hidden;
         }
 
@@ -274,24 +279,46 @@
             overflow: hidden;
         }
 
+        .tg {
+            display: none;
+        }
+
+        .inst {
+            display: none;
+        }
+
+        .wup {
+            display: none;
+        }
+
         .button-image {
             grid-column-start: 27;
             grid-column-end: 83;
             grid-row-start: 75;
             grid-row-end: 95;
             overflow: hidden;
-        }
-        .text-buy-image {
-            grid-column-start: 38;
-            grid-column-end: 73;
+            }
+        .text-buy {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: center;
+            grid-column-start: 27;
+            grid-column-end: 83;
             grid-row-start: 82;
             grid-row-end: 90;
             overflow: hidden;
             z-index: 2;
         }
-        .golova-buy-image {
-            grid-column-start: 42;
-            grid-column-end: 70;
+        .golova-buy {
+            cursor: pointer;
+            color: #765F85;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: center;
+            grid-column-start: 27;
+            grid-column-end: 83;
             grid-row-start: 82;
             grid-row-end: 88;
             overflow: hidden;
@@ -417,10 +444,11 @@
             }
 
             .nazvanie {
+                font-size: 60px;
                 grid-column-start: 49;
                 grid-column-end: 89;
-                grid-row-start: 7;
-                grid-row-end: 14;
+                grid-row-start: 5;
+                grid-row-end: 13;
                 overflow: hidden;
             }
 
@@ -559,6 +587,18 @@
                 overflow: hidden;
             }
 
+            .tg {
+                display: none;
+            }
+
+            .inst {
+                display: none;
+            }
+
+            .wup {
+                display: none;
+            }
+
             .button-image {
                 grid-column-start: 25;
                 grid-column-end: 80;
@@ -566,17 +606,19 @@
                 grid-row-end: 90;
                 overflow: hidden;
             }
-            .text-buy-image {
-                grid-column-start: 37;
-                grid-column-end: 73;
+            .text-buy {
+                font-size: 35px;
+                grid-column-start: 25;
+                grid-column-end: 80;
                 grid-row-start: 80;
                 grid-row-end: 86;
                 overflow: hidden;
                 z-index: 2;
             }
-            .golova-buy-image {
-                grid-column-start: 41;
-                grid-column-end: 69;
+            .golova-buy {
+                font-size: 35px;
+                grid-column-start: 25;
+                grid-column-end: 80;
                 grid-row-start: 80;
                 grid-row-end: 85;
                 overflow: hidden;
@@ -648,9 +690,10 @@
             }
 
             .nazvanie {
+                font-size: 70px;
                 grid-column-start: 15;
                 grid-column-end: 40;
-                grid-row-start: 10;
+                grid-row-start: 8;
                 grid-row-end: 16;
             }
 
@@ -695,18 +738,20 @@
                 overflow: hidden;
             }
 
-            .text-buy-image {
-                grid-column-start: 15;
-                grid-column-end: 44;
+            .text-buy {
+                font-size: 55px;
+                grid-column-start: 7;
+                grid-column-end: 53;
                 grid-row-start: 79;
                 grid-row-end: 86;
                 overflow: hidden;
                 z-index: 2;
             }
 
-            .golova-buy-image {
-                grid-column-start: 18;
-                grid-column-end: 41;
+            .golova-buy {
+                font-size: 55px;
+                grid-column-start: 7;
+                grid-column-end: 53;
                 grid-row-start: 79;
                 grid-row-end: 86;
                 overflow: hidden;
@@ -879,6 +924,33 @@
                 grid-row-end: 155;
                 overflow: hidden;
             }
+
+            .tg {
+                display: grid;
+                grid-column-start: 35;
+                grid-column-end: 43;
+                grid-row-start: 159;
+                grid-row-end: 164;
+                transform: scale(0.8);
+            }
+
+            .inst {
+                display: grid;
+                grid-column-start: 45;
+                grid-column-end: 53;
+                grid-row-start: 159;
+                grid-row-end: 164;
+                transform: scale(0.8);    
+            }
+
+            .wup {
+                display: grid;
+                grid-column-start: 55;
+                grid-column-end: 63;
+                grid-row-start: 159;
+                grid-row-end: 164;
+                transform: scale(0.8);
+            }
         }
 
         @media screen and (max-width: 600px), (max-device-width:600px) {
@@ -908,10 +980,11 @@
             }
 
             .nazvanie {
+                font-size: 55px;
                 grid-column-start: 20;
                 grid-column-end: 53;
                 grid-row-start: 10;
-                grid-row-end: 15;
+                grid-row-end: 18;
             }
 
             .borders {
@@ -949,7 +1022,8 @@
                 overflow: hidden;
             }
 
-            .text-buy-image {
+            .text-buy {
+                font-size: 40px;
                 grid-column-start: 21;
                 grid-column-end: 56;
                 grid-row-start: 72;
@@ -958,11 +1032,12 @@
                 z-index: 2;
             }
 
-            .golova-buy-image {
-                grid-column-start: 30;
-                grid-column-end: 47;
-                grid-row-start: 73;
-                grid-row-end: 77;
+            .golova-buy {
+                font-size: 40px;
+                grid-column-start: 21;
+                grid-column-end: 56;
+                grid-row-start: 72;
+                grid-row-end: 78;
                 overflow: hidden;
                 z-index: 1;
                 opacity: 0;
@@ -1128,6 +1203,30 @@
                 grid-row-end: 155;
                 overflow: hidden;
             }
+
+            .tg {
+                display: grid;
+                grid-column-start: 35;
+                grid-column-end: 43;
+                grid-row-start: 159;
+                grid-row-end: 164;
+            }
+
+            .inst {
+                display: grid;
+                grid-column-start: 49;
+                grid-column-end: 57;
+                grid-row-start: 159;
+                grid-row-end: 164;    
+            }
+
+            .wup {
+                display: grid;
+                grid-column-start: 62;
+                grid-column-end: 70;
+                grid-row-start: 159;
+                grid-row-end: 164;
+            }
         }
 
         @media screen and (max-height: 450px), (max-device-height: 450px) {
@@ -1159,10 +1258,11 @@
             }
 
             .nazvanie {
-                grid-column-start: 80;
+                font-size: 50px;
+                grid-column-start: 77;
                 grid-column-end: 95;
-                grid-row-start: 8;
-                grid-row-end: 16;
+                grid-row-start: 7;
+                grid-row-end: 19;
             }
 
             .borders {
@@ -1200,20 +1300,22 @@
                 overflow: hidden;
             }
 
-            .text-buy-image {
-                grid-column-start: 11;
-                grid-column-end: 23;
-                grid-row-start: 17;
-                grid-row-end: 25;
+            .text-buy {
+                font-size: 30px;
+                grid-column-start: 5;
+                grid-column-end: 30;
+                grid-row-start: 16;
+                grid-row-end: 24;
                 overflow: hidden;
                 z-index: 2;
             }
 
-            .golova-buy-image {
-                grid-column-start: 12;
-                grid-column-end: 22;
-                grid-row-start: 18;
-                grid-row-end: 25;
+            .golova-buy {
+                font-size: 35px;
+                grid-column-start: 5;
+                grid-column-end: 30;
+                grid-row-start: 16;
+                grid-row-end: 24;
                 overflow: hidden;
                 z-index: 2;
             }
@@ -1264,7 +1366,7 @@
                 /*  */
                     /*  */
 
-                    .razmer {
+            .razmer {
                 font-size: 40px;
                 grid-column-start: 10;
                 grid-column-end: 34;
@@ -1380,6 +1482,30 @@
                 grid-row-start: 181;
                 grid-row-end: 188;
                 overflow: hidden;
+            }
+
+            .tg {
+                display: grid;
+                grid-column-start: 38;
+                grid-column-end: 43;
+                grid-row-start: 190;
+                grid-row-end: 197;
+            }
+
+            .inst {
+                display: grid;
+                grid-column-start: 47;
+                grid-column-end: 52;
+                grid-row-start: 190;
+                grid-row-end: 197;    
+            }
+
+            .wup {
+                display: grid;
+                grid-column-start: 56;
+                grid-column-end: 61;
+                grid-row-start: 190;
+                grid-row-end: 197;
             }
         }
 
@@ -3651,7 +3777,7 @@
         <div class="second_class">
 
             <div class="nazvanie">
-                <img src = "/media/works/golova/second_part/put_logo.png" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;'>
+                ПУТЬ
             </div>
                 
             <div class="razmer" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian()>
@@ -3702,19 +3828,31 @@
                 20000
             </div>
 
+            <div class="tg">
+                <img src = "/media/works/golova/socials/tg.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
+            </div>
+
+            <div class = "inst">
+                <img src = "/media/works/golova/socials/inst.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
+            </div>
+
+            <div class="wup">
+                <img src = "/media/works/golova/socials/wup.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
+            </div>
+
             <div class="button-image">
                 <img src = "/media/works/golova/second_part/buy_but/golova-btn.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
     
-            <div class="text-buy-image">
-                <img src = "/media/works/golova/second_part/buy_but/buy_but.png" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'z-index:2; min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="text-buy" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian()>
+                КУПИТЬ
             </div>
 
-            <div class="golova-buy-image">
-                <img src = "/media/works/golova/second_part/buy_but/golova_buy.png"   style = 'z-index:1;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="golova-buy">
+                BUY
             </div>
             
-            <div class="first-buy-border" style = 'z-index:3;'>
+            <div class="first-buy-border" style = 'z-index:3;' onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian()>
                 <form action = '{% url "golova" %}' method = "post">
                    
                     {% csrf_token %}
@@ -3896,14 +4034,14 @@
 
     function buySwitchToEnglish() {
         var english_buy_appears = anime({
-            targets:'.golova-buy-image',
+            targets:'.golova-buy',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_buy = anime({
-            targets:'.text-buy-image',
+            targets:'.text-buy',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -3912,15 +4050,14 @@
 
     function buyBackToRussian() {
         var disappear_english_buy = anime({
-            targets:'.golova-buy-image',
+            targets:'.golova-buy',
             opacity: 0,
             duration:9000,
-            
             autoplay:true,
         })
 
         var buy_appears = anime({
-            targets:'.text-buy-image',
+            targets:'.text-buy',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -4247,70 +4384,6 @@
 
         var payment_text_appears = anime({
             targets:'.payment_text',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })
-    }
-
-    function ZayavkaBetter_SwitchToEnglish() {
-        var english_better_text_appears = anime({
-            targets:'.english_better_text',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })   
-
-        var disappear_better_text = anime({
-            targets:'.better_text',
-            opacity: 0,
-            duration:9000,
-            autoplay:true,
-        })
-    }
-
-    function ZayavkaBetter_BackToRussian() {
-        var disappear_english_better_text = anime({
-            targets:'.english_better_text',
-            opacity: 0,
-            duration:9000,
-            autoplay:true,
-        })
-
-        var better_appears = anime({
-            targets:'.better_text',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })
-    }
-
-    function ZayavkaBetterMob_SwitchToEnglish() {
-        var english_better_mob_appears = anime({
-            targets:'.english_better_mob',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })   
-
-        var disappear_better_mob = anime({
-            targets:'.better_mob',
-            opacity: 0,
-            duration:9000,
-            autoplay:true,
-        })
-    }
-
-    function ZayavkaBetterMob_BackToRussian() {
-        var disappear_english_better_mob = anime({
-            targets:'.english_better_mob',
-            opacity: 0,
-            duration:9000,
-            autoplay:true,
-        })
-
-        var better_mob_appears = anime({
-            targets:'.better_mob',
             opacity: 1,
             duration:9000,
             autoplay:true,

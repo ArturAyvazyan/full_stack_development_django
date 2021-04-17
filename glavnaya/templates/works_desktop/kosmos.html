@@ -22,8 +22,13 @@
             background-size: cover;
         }
         
+        @font-face {
+            font-family: LSDFont;
+            color: #00FCBF;
+            src: url("{% static '/homepage/super_font.ttf' %}");
+        }
+
         .container {
-            
             display:grid;
             grid-template-columns: 65fr 35fr;
             grid-template-rows:100;
@@ -72,6 +77,11 @@
         }
 
         .nazvanie {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 75px;
+            text-align: right;            
             grid-column-start: 5;
             grid-column-end: 30;
             grid-row-start: 85;
@@ -90,137 +100,279 @@
             overflow: hidden;
         }
 
-        .obiem-image {
-            grid-column-start: 60;
+        .obiem {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: right;
+            grid-column-start: 50;
             grid-column-end: 85;
             grid-row-start: 14;
-            grid-row-end: 19;
+            grid-row-end: 20;
             overflow: hidden;
             z-index: 2;
         }
         
-        .obiem-english-image {
-            grid-column-start: 60;
+        .obiem-english {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: right;
+            grid-column-start: 50;
             grid-column-end: 85;
             grid-row-start: 14;
-            grid-row-end: 19;
+            grid-row-end: 20;
             overflow: hidden;
             z-index: 1;
             opacity: 0;
         }
 
-        .gaivan-image {
-            grid-column-start: 42;
+        .gaivan {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: right;
+            grid-column-start: 32;
             grid-column-end: 82;
             grid-row-start: 21;
-            grid-row-end: 24;
+            grid-row-end: 25;
             overflow: hidden;
             z-index: 2;
         }
 
-        .gaivan-english-image {
-            grid-column-start: 42;
+        .gaivan-english {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: right;
+            grid-column-start: 32;
             grid-column-end: 82;
             grid-row-start: 21;
-            grid-row-end: 24;
+            grid-row-end: 25;
             overflow: hidden;
             z-index: 1;
             opacity: 0;
         }
 
-        .piala-image{
-            grid-column-start:47;
+        .piala {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: right;
+            grid-column-start:30;
             grid-column-end: 82;
             grid-row-start: 26;
-            grid-row-end: 29;
+            grid-row-end: 30;
             overflow: hidden;
             z-index: 2;
         }
 
-        .piala-english-image{
-            grid-column-start:49;
+        .piala-english {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: right;
+            grid-column-start:30;
             grid-column-end: 82;
             grid-row-start: 26;
-            grid-row-end: 29;
+            grid-row-end: 30;
             overflow: hidden;
             z-index: 1;
             opacity: 0;
         }
 
-        .materials-image {
-            grid-column-start: 45;
+        .materials {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: right;
+            grid-column-start: 25;
             grid-column-end: 85;
             grid-row-start: 35;
-            grid-row-end: 39;
+            grid-row-end: 41;
             overflow: hidden;
             z-index: 2;
         }
 
-        .materials-english-image {
-            grid-column-start: 45;
+        .materials-english {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: right;
+            grid-column-start: 25;
             grid-column-end: 85;
             grid-row-start: 35;
-            grid-row-end: 39;
+            grid-row-end: 41;
             overflow: hidden;
             z-index: 1;
             opacity: 0;
         }
 
-        .farfor-image {
-            grid-column-start: 60;
+        .farfor {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: right;
+            grid-column-start: 50;
             grid-column-end: 82;
             grid-row-start: 43;
-            grid-row-end: 46;
+            grid-row-end: 47;
             overflow: hidden;
             z-index: 2;
         }
 
-        .farfor-english-image {
-            grid-column-start: 55;
+        .farfor-english {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: right;
+            grid-column-start: 45;
             grid-column-end: 82;
             grid-row-start: 43;
-            grid-row-end: 46;
+            grid-row-end: 47;
             overflow: hidden;
             z-index: 1;
             opacity: 0;
         }
 
-        .glazur-image {
-            grid-column-start: 56;
+        .glazur {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: right;
+            grid-column-start: 50;
             grid-column-end: 82;
             grid-row-start: 48;
-            grid-row-end: 51;
+            grid-row-end: 52;
             overflow: hidden;
             z-index: 2;
         }
 
-        .glazur-english-image {
-            grid-column-start: 61;
+        .glazur-english {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: right;
+            grid-column-start: 51;
             grid-column-end: 82;
             grid-row-start: 48;
-            grid-row-end: 51;
+            grid-row-end: 52;
             overflow: hidden;
             z-index: 1;
             opacity: 0;
         }
 
-        .akril-image {
-            grid-column-start: 25;
+        .akril {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: right;
+            grid-column-start: 15;
             grid-column-end: 82;
             grid-row-start: 53;
-            grid-row-end: 56;
+            grid-row-end: 57;
             overflow: hidden;
             z-index: 2;
         }
 
-        .akril-english-image {
-            grid-column-start: 25;
+        .akril-english {
+            cursor: pointer;
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: right;
+            grid-column-start: 10;
             grid-column-end: 82;
             grid-row-start: 53;
-            grid-row-end: 56;
+            grid-row-end: 57;
             overflow: hidden;
             z-index: 1;
             opacity: 0;
+        }
+        
+        .tg {
+            display: none;
+        }
+
+        .inst {
+            display: none;
+        }
+
+        .wup {
+            display: none;
+        }
+
+        .button-image {
+            grid-column-start: 30;
+            grid-column-end: 75;
+            grid-row-start: 75;
+            grid-row-end: 90;
+            overflow: hidden;
+        }
+        
+        .text-buy {
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 40px;
+            text-align: center;
+            grid-column-start: 28;
+            grid-column-end: 75;
+            grid-row-start: 80;
+            grid-row-end: 86;
+            overflow: hidden;
+            z-index: 5;
+        }
+
+        .kosmos-buy {
+            color: #00FCBF;
+            font-family: LSDFont;
+            font-size: 40px;
+            text-align: center;
+            grid-column-start: 27;
+            grid-column-end: 75;
+            grid-row-start: 80;
+            grid-row-end: 85;
+            overflow: hidden;
+            z-index: 4;
+            opacity: 0;        
+        }
+
+        .first-buy-border {
+            grid-column-start: 30;
+            grid-column-end: 75;
+            grid-row-start: 75;
+            grid-row-end: 90;
+            overflow: hidden;
+            z-index:10;
+        }
+
+        .second-buy-border {
+            grid-column-start: 33;
+            grid-column-end: 78;
+            grid-row-start: 78;
+            grid-row-end: 93;
+            overflow: hidden;
+        }
+        
+        .third-buy-border {
+            grid-column-start: 28;
+            grid-column-end: 73;
+            grid-row-start: 73;
+            grid-row-end: 88;
+            overflow: hidden;
         }
 
         .logotip {
@@ -293,10 +445,11 @@
             }
 
             .nazvanie {
+                font-size: 60px;
                 grid-column-start: 5;
-                grid-column-end: 35;
+                grid-column-end: 45;
                 grid-row-start: 80;
-                grid-row-end: 86;
+                grid-row-end: 88;
                 overflow: hidden;
             }
 
@@ -311,7 +464,8 @@
                 overflow: hidden;
             }
 
-            .obiem-image {
+            .obiem {
+                font-size: 40px;
                 grid-column-start: 36;
                 grid-column-end: 85;
                 grid-row-start: 14;
@@ -320,7 +474,8 @@
                 z-index: 2;
             }
             
-            .obiem-english-image {
+            .obiem-english {
+                font-size: 40px;
                 grid-column-start: 35;
                 grid-column-end: 85;
                 grid-row-start: 14;
@@ -330,7 +485,8 @@
                 opacity: 0;
             }
 
-            .gaivan-image {
+            .gaivan {
+                font-size: 30px;
                 grid-column-start: 10;
                 grid-column-end: 85;
                 grid-row-start: 21;
@@ -339,7 +495,8 @@
                 z-index: 2;
             }
 
-            .gaivan-english-image {
+            .gaivan-english {
+                font-size: 30px;
                 grid-column-start: 15;
                 grid-column-end: 85;
                 grid-row-start: 21;
@@ -349,7 +506,8 @@
                 opacity: 0;
             }
 
-            .piala-image{
+            .piala {
+                font-size: 30px;
                 grid-column-start:20;
                 grid-column-end: 85;
                 grid-row-start: 27;
@@ -358,7 +516,8 @@
                 z-index: 2;
             }
 
-            .piala-english-image{
+            .piala-english {
+                font-size: 30px;
                 grid-column-start: 20;
                 grid-column-end: 85;
                 grid-row-start: 27;
@@ -368,7 +527,8 @@
                 opacity: 0;
             }
 
-            .materials-image {
+            .materials {
+                font-size: 40px;
                 grid-column-start: 15;
                 grid-column-end: 85;
                 grid-row-start: 38;
@@ -377,7 +537,8 @@
                 z-index: 2;
             }
 
-            .materials-english-image {
+            .materials-english {
+                font-size: 40px;
                 grid-column-start: 15;
                 grid-column-end: 85;
                 grid-row-start: 38;
@@ -387,65 +548,123 @@
                 opacity: 0;
             }
 
-            .farfor-image {
-                grid-column-start: 40;
+            .farfor {
+                font-size: 30px;
+                grid-column-start: 25;
                 grid-column-end: 87;
                 grid-row-start: 44;
                 grid-row-end: 48;
                 overflow: hidden;
                 z-index: 2;
-                transform:scale(0.9);
             }
 
-            .farfor-english-image {
-                grid-column-start: 30;
+            .farfor-english {
+                font-size: 30px;
+                grid-column-start: 25;
                 grid-column-end: 85;
                 grid-row-start: 44;
                 grid-row-end: 48;
                 overflow: hidden;
                 z-index: 1;
                 opacity: 0;
-                transform:scale(0.9);
             }
 
-            .glazur-image {
+            .glazur {
+                font-size: 30px;
                 grid-column-start: 40;
                 grid-column-end: 87;
                 grid-row-start: 49;
                 grid-row-end: 53;
                 overflow: hidden;
                 z-index: 2;
-                transform:scale(0.9);
             }
 
-            .glazur-english-image {
-                grid-column-start: 45;
+            .glazur-english {
+                font-size: 30px;
+                grid-column-start: 40;
                 grid-column-end: 87;
                 grid-row-start: 49;
                 grid-row-end: 53;
                 overflow: hidden;
                 z-index: 1;
                 opacity: 0;
-                transform:scale(0.9);
             }
 
-            .akril-image {
+            .akril {
+                font-size: 30px;
+                grid-column-start: 1;
+                grid-column-end: 87;
+                grid-row-start: 54;
+                grid-row-end: 58;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .akril-english {
+                font-size: 30px;
                 grid-column-start: 1;
                 grid-column-end: 95;
                 grid-row-start: 54;
                 grid-row-end: 58;
                 overflow: hidden;
-                z-index: 2;
-            }
-
-            .akril-english-image {
-                grid-column-start: 1;
-                grid-column-end: 90;
-                grid-row-start: 54;
-                grid-row-end: 58;
-                overflow: hidden;
                 z-index: 1;
                 opacity: 0;
+            }
+
+            .button-image {
+                grid-column-start: 20;
+                grid-column-end: 75;
+                grid-row-start: 75;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+            
+            .text-buy {
+                font-size: 30px;
+                text-align: center;
+                grid-column-start: 20;
+                grid-column-end: 75;
+                grid-row-start: 80;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 5;
+            }
+
+            .kosmos-buy {
+                font-size: 30px;
+                text-align: center;
+                grid-column-start: 20;
+                grid-column-end: 75;
+                grid-row-start: 80;
+                grid-row-end: 85;
+                overflow: hidden;
+                z-index: 4;
+                opacity: 0;        
+            }
+
+            .first-buy-border {
+                grid-column-start: 20;
+                grid-column-end: 75;
+                grid-row-start: 75;
+                grid-row-end: 90;
+                overflow: hidden;
+                z-index:10;
+            }
+
+            .second-buy-border {
+                grid-column-start: 23;
+                grid-column-end: 78;
+                grid-row-start: 78;
+                grid-row-end: 93;
+                overflow: hidden;
+            }
+            
+            .third-buy-border {
+                grid-column-start: 17;
+                grid-column-end: 72;
+                grid-row-start: 72;
+                grid-row-end: 87;
+                overflow: hidden;
             }
 
             .logotip {
@@ -473,8 +692,8 @@
             .container {
                 display: grid;
                 grid-template-columns: repeat(100, 1fr);
-                grid-template-rows: repeat(200, 1fr);
-                height: 200%;
+                grid-template-rows: repeat(175, 1fr);
+                height: 175%;
             }
 
             .first_class {
@@ -518,10 +737,65 @@
             }
 
             .nazvanie {
+                font-size: 75px;
                 grid-column-start: 15;
-                grid-column-end: 60;
-                grid-row-start: 77;
-                grid-row-end: 84;
+                grid-column-end: 55;
+                grid-row-start: 10;
+                grid-row-end: 20;
+            }
+
+            .button-image {
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 73;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .text-buy {
+                font-size: 55px;
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 79;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .kosmos-buy {
+                font-size: 55px;
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 79;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 73;
+                grid-row-end: 90;
+                overflow: hidden;
+                z-index:10;
+            }
+
+            .second-buy-border {
+                grid-column-start: 9;
+                grid-column-end: 55;
+                grid-row-start: 75;
+                grid-row-end: 92;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 4;
+                grid-column-end: 50;
+                grid-row-start: 70;
+                grid-row-end: 87;
+                overflow: hidden;
             }
 
             .logotip {
@@ -532,56 +806,68 @@
                 transform:scale(1.5);
             }
 
-            .obiem-image {
+            .obiem {
+                font-size: 60px;
+                text-align: left;
                 grid-column-start: 10;
                 grid-column-end: 40;
-                grid-row-start: 114;
-                grid-row-end: 119;
+                grid-row-start: 108;
+                grid-row-end: 114;
                 overflow: hidden;
                 z-index: 2;
             }
             
-            .obiem-english-image {
+            .obiem-english {
+                font-size: 60px;
+                text-align: left;
                 grid-column-start: 10;
                 grid-column-end: 40;
-                grid-row-start: 114;
-                grid-row-end: 119;
+                grid-row-start: 108;
+                grid-row-end: 114;
                 overflow: hidden;
                 z-index: 1;
                 opacity: 0;
             }
 
-            .gaivan-image {
-                grid-column-start: 25;
+            .gaivan {
+                font-size: 50px;
+                text-align: left;
+                grid-column-start: 20;
                 grid-column-end: 75;
-                grid-row-start: 121;
-                grid-row-end: 125;
+                grid-row-start: 115;
+                grid-row-end: 120;
                 overflow: hidden;
                 z-index: 2;
             }
 
-            .gaivan-english-image {
-                grid-column-start: 25;
+            .gaivan-english {
+                font-size: 50px;
+                text-align: left;
+                grid-column-start: 20;
                 grid-column-end: 75;
-                grid-row-start: 121;
-                grid-row-end: 125;
+                grid-row-start: 115;
+                grid-row-end: 120;
                 overflow: hidden;
                 z-index: 1;
                 opacity: 0;
             }
 
-            .piala-image{
-                grid-column-start: 30;
-                grid-column-end: 70;
-                grid-row-start: 127;
-                grid-row-end: 131;
+            .piala {
+                font-size: 50px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 75;
+                grid-row-start: 121;
+                grid-row-end: 126;
                 overflow: hidden;
                 z-index: 2;
             }
 
-            .piala-english-image{
-                grid-column-start: 30;
-                grid-column-end: 70;
+            .piala-english {
+                font-size: 50px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 75;
                 grid-row-start: 127;
                 grid-row-end: 131;
                 overflow: hidden;
@@ -589,75 +875,113 @@
                 opacity: 0;
             }
 
-
-            .materials-image {
+            .materials {
+                font-size: 60px;
+                text-align: left;
                 grid-column-start: 10;
                 grid-column-end: 60;
-                grid-row-start: 142;
-                grid-row-end: 147;
+                grid-row-start: 134;
+                grid-row-end: 140;
                 z-index:2
             }
 
-            .materials-english-image {
+            .materials-english {
+                font-size: 60px;
+                text-align: left;
                 grid-column-start: 10;
                 grid-column-end: 60;
-                grid-row-start: 142;
-                grid-row-end: 147;
+                grid-row-start: 134;
+                grid-row-end: 140;
                 z-index:1;
             }
 
-            .farfor-image {
-                grid-column-start: 27;
-                grid-column-end: 55;
-                grid-row-start: 150;
-                grid-row-end: 154;
+            .farfor {
+                font-size: 50px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 75;
+                grid-row-start: 141;
+                grid-row-end: 146;
                 z-index:2;
             } 
 
-            .farfor-english-image {
-                grid-column-start: 27;
-                grid-column-end: 57;
-                grid-row-start: 150;
-                grid-row-end: 154;
+            .farfor-english {
+                font-size: 50px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 75;
+                grid-row-start: 141;
+                grid-row-end: 146;
                 opacity:0;
                 z-index:1;
             }
 
-            .glazur-image {
-                grid-column-start: 27;
-                grid-column-end: 55;
-                grid-row-start: 156;
-                grid-row-end: 160;
+            .glazur {
+                font-size: 50px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 75;
+                grid-row-start: 147;
+                grid-row-end: 152;
                 overflow: hidden;
                 z-index: 2;
             }
 
-            .glazur-english-image {
-                grid-column-start: 30;
-                grid-column-end: 55;
-                grid-row-start: 156;
-                grid-row-end: 160;
+            .glazur-english {
+                font-size: 50px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 75;
+                grid-row-start: 147;
+                grid-row-end: 152;
                 overflow: hidden;
                 z-index: 1;
                 opacity: 0;
             }
 
-            .akril-image {
-                grid-column-start: 14;
-                grid-column-end: 83;
-                grid-row-start: 162;
-                grid-row-end: 166;
+            .akril {
+                font-size: 50px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 95;
+                grid-row-start: 153;
+                grid-row-end: 158;
                 z-index:2;
-                transform: scale(0.9);
             }  
 
-            .akril-english-image {
-                grid-column-start: 14;
-                grid-column-end: 83;
-                grid-row-start: 162;
-                grid-row-end: 166;
+            .akril-english {
+                font-size: 50px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 99;
+                grid-row-start: 153;
+                grid-row-end: 158;
                 opacity:0;
                 z-index:1;
+            }
+
+            .tg {
+                display: grid;
+                grid-column-start: 35;
+                grid-column-end: 43;
+                grid-row-start: 164;
+                grid-row-end: 169;
+            }
+
+            .inst {
+                display: grid;
+                grid-column-start: 45;
+                grid-column-end: 53;
+                grid-row-start: 164;
+                grid-row-end: 169;    
+            }
+
+            .wup {
+                display: grid;
+                grid-column-start: 55;
+                grid-column-end: 63;
+                grid-row-start: 164;
+                grid-row-end: 169;
             }
 
        }
@@ -678,8 +1002,8 @@
             .container {
                 display: grid;
                 grid-template-columns: repeat(100, 1fr);
-                grid-template-rows: repeat(200, 1fr);
-                height: 200%;
+                grid-template-rows: repeat(185, 1fr);
+                height: 185%;
             }
 
             .first_class {
@@ -718,11 +1042,66 @@
                 display: none;
             }
 
+            .button-image {
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 73;
+                grid-row-end: 85;
+                overflow: hidden;
+            }
+
+            .text-buy {
+                font-size: 30px;
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 77;
+                grid-row-end: 84;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .kosmos-buy {
+                font-size: 30px;
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 77;
+                grid-row-end: 84;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 73;
+                grid-row-end: 85;
+                overflow: hidden;
+                z-index:10;
+            }
+
+            .second-buy-border {
+                grid-column-start: 10;
+                grid-column-end: 56;
+                grid-row-start: 76;
+                grid-row-end: 88;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 5;
+                grid-column-end: 51;
+                grid-row-start: 71;
+                grid-row-end: 83;
+                overflow: hidden;
+            }
+
             .nazvanie {
+                font-size: 55px;
                 grid-column-start: 20;
                 grid-column-end: 73;
-                grid-row-start: 69;
-                grid-row-end: 76;
+                grid-row-start: 9;
+                grid-row-end: 17;
             }
 
             .logotip {
@@ -733,26 +1112,29 @@
                 transform:scale(1.5);
             }
 
-            .obiem-image {
+            .obiem {
+                font-size: 40px;
                 grid-column-start: 5;
                 grid-column-end: 56;
                 grid-row-start: 111;
-                grid-row-end: 116;
+                grid-row-end: 117;
                 overflow: hidden;
                 z-index: 2;
             }
 
-            .obiem-english-image {
+            .obiem-english {
+                font-size: 40px;
                 grid-column-start: 5;
                 grid-column-end: 56;
                 grid-row-start: 111;
-                grid-row-end: 116;
+                grid-row-end: 117;
                 overflow: hidden;
                 z-index: 1;
                 opacity: 0;
             }
 
-            .gaivan-image {
+            .gaivan {
+                font-size: 30px;
                 grid-column-start: 13;
                 grid-column-end: 88;
                 grid-row-start: 119;
@@ -761,7 +1143,8 @@
                 z-index: 2;
             }
 
-            .gaivan-english-image {
+            .gaivan-english {
+                font-size: 30px;
                 grid-column-start: 13;
                 grid-column-end: 88;
                 grid-row-start: 119;
@@ -771,7 +1154,8 @@
                 opacity: 0;
             }
 
-            .piala-image{
+            .piala {
+                font-size: 30px;
                 grid-column-start: 19;
                 grid-column-end: 84;
                 grid-row-start: 125;
@@ -780,7 +1164,8 @@
                 z-index: 2;
             }
 
-            .piala-english-image{
+            .piala-english {
+                font-size: 30px;
                 grid-column-start: 20;
                 grid-column-end: 74;
                 grid-row-start: 125;
@@ -790,52 +1175,55 @@
                 opacity: 0;
             }
 
-            .materials-image {
-                grid-column-start: 15;
+            .materials {
+                font-size: 40px;
+                grid-column-start: 5;
                 grid-column-end: 90;
                 grid-row-start: 144;
-                grid-row-end: 149;
+                grid-row-end: 150;
                 z-index:2
             }
 
-            .materials-english-image {
-                grid-column-start: 10;
-                grid-column-end: 80;
+            .materials-english {
+                font-size: 40px;
+                grid-column-start: 5;
+                grid-column-end: 90;
                 grid-row-start: 144;
-                grid-row-end: 148;
+                grid-row-end: 50;
                 z-index:1;
             }
 
-            .farfor-image {
+            .farfor {
+                font-size: 30px;
                 grid-column-start: 25;
                 grid-column-end: 65;
                 grid-row-start: 153;
                 grid-row-end: 157;
                 z-index:2;
-                transform: scale(1);
             } 
 
-            .farfor-english-image {
+            .farfor-english {
+                font-size: 30px;
                 grid-column-start: 25;
                 grid-column-end: 70;
                 grid-row-start: 153;
                 grid-row-end: 157;
                 opacity:0;
                 z-index:1;
-                transform: scale(1.1);
             }
 
-            .glazur-image {
+            .glazur {
+                font-size: 30px;
                 grid-column-start: 27;
                 grid-column-end: 65;
                 grid-row-start: 159;
                 grid-row-end: 163;
                 overflow: hidden;
                 z-index: 2;
-                transform:translateY(1vh)
             }
 
-            .glazur-english-image {
+            .glazur-english {
+                font-size: 30px;
                 grid-column-start: 25;
                 grid-column-end: 55;
                 grid-row-start: 159;
@@ -843,28 +1231,51 @@
                 overflow: hidden;
                 z-index: 1;
                 opacity: 0;
-                transform:translateY(1vh)
             }
 
-            .akril-image {
+            .akril {
+                font-size: 30px;
                 grid-column-start: 7;
                 grid-column-end: 92;
                 grid-row-start: 165;
                 grid-row-end: 169;
                 z-index:2;
-                transform:translateY(2vh)
             }  
 
-            .akril-english-image {
+            .akril-english {
+                font-size: 30px;
                 grid-column-start: 7;
                 grid-column-end: 92;
                 grid-row-start: 165;
                 grid-row-end: 169;
                 opacity:0;
                 z-index:1;
-                transform:translateY(2vh)
             }
 
+            .tg {
+                display: grid;
+                grid-column-start: 35;
+                grid-column-end: 43;
+                grid-row-start: 175;
+                grid-row-end: 180;
+            }
+
+            .inst {
+                display: grid;
+                grid-column-start: 49;
+                grid-column-end: 57;
+                grid-row-start: 175;
+                grid-row-end: 180;    
+            }
+
+            .wup {
+                display: grid;
+                grid-column-start: 62;
+                grid-column-end: 70;
+                grid-row-start: 175;
+                grid-row-end: 180;
+            }
+            
         }
 
         @media screen and (max-height: 450px), (max-device-height: 450px) {
@@ -896,10 +1307,11 @@
             }
 
             .nazvanie {
+                font-size: 50px;
                 grid-column-start: 70;
                 grid-column-end: 95;
                 grid-row-start: 8;
-                grid-row-end: 18;
+                grid-row-end: 22;
             }
 
             .borders {
@@ -930,134 +1342,226 @@
             }
 
             .logotip {
-                grid-column-start: 93;
-                grid-column-end: 98;
+                grid-column-start: 3;
+                grid-column-end: 8;
                 grid-row-start: 90;
                 grid-row-end: 90;
                 transform:scale(1.4);
+            }
+
+            .button-image {
+                grid-column-start: 75;
+                grid-column-end: 95;
+                grid-row-start: 73;
+                grid-row-end: 88;
+                overflow: hidden;
+            }
+
+            .text-buy {
+                font-size: 20px;
+                grid-column-start: 75;
+                grid-column-end: 95;
+                grid-row-start: 78;
+                grid-row-end: 83;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .kosmos-buy {
+                font-size: 20px;
+                grid-column-start: 75;
+                grid-column-end: 95;
+                grid-row-start: 78;
+                grid-row-end: 83;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 75;
+                grid-column-end: 95;
+                grid-row-start: 73;
+                grid-row-end: 88;
+                overflow: hidden;
+                z-index:10;
+            }
+
+            .second-buy-border {
+                grid-column-start: 77;
+                grid-column-end: 97;
+                grid-row-start: 75;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 72;
+                grid-column-end: 92;
+                grid-row-start: 70;
+                grid-row-end: 85;
+                overflow: hidden;
             }
 
             /*  */
                 /*  */
                     /*  */
 
-            .obiem-image {
+            .obiem {
+                font-size: 40px;
                 grid-column-start: 10;
                 grid-column-end: 30;
-                grid-row-start: 110;
+                grid-row-start: 108;
                 grid-row-end: 118;
                 z-index: 2;
             }
 
-            .obiem-english-image {
-                grid-column-start: 5;
-                grid-column-end: 30;
-                grid-row-start: 110;
+            .obiem-english {
+                font-size: 40px;
+                grid-column-start: 10;
+                grid-column-end: 35;
+                grid-row-start: 108;
                 grid-row-end: 118;
                 z-index: 1;
                 opacity: 0;
             }
 
-            .gaivan-image {
+            .gaivan {
+                font-size: 30px;
                 grid-column-start: 15;
-                grid-column-end: 45;
+                grid-column-end: 75;
                 grid-row-start: 119;
-                grid-row-end: 125;
+                grid-row-end: 127;
                 z-index: 2;
             }
 
-            .gaivan-english-image {
+            .gaivan-english {
+                font-size: 30px;
                 grid-column-start: 15;
-                grid-column-end: 48;
+                grid-column-end: 75;
                 grid-row-start: 119;
-                grid-row-end: 125;
+                grid-row-end: 127;
                 z-index: 1;
                 opacity: 0;
             }
 
-            .piala-image{
+            .piala {
+                font-size: 30px;
                 grid-column-start: 15;
-                grid-column-end: 40;
-                grid-row-start: 127;
-                grid-row-end: 133;
+                grid-column-end: 75;
+                grid-row-start: 128;
+                grid-row-end: 136;
                 z-index: 2;
             }
 
-            .piala-english-image{
-                grid-column-start: 16;
+            .piala-english {
+                font-size: 30px;
+                grid-column-start: 15;
+                grid-column-end: 75;
+                grid-row-start: 128;
+                grid-row-end: 136;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .materials {
+                font-size: 40px;
+                grid-column-start: 10;
                 grid-column-end: 50;
-                grid-row-start: 127;
-                grid-row-end: 133;
-                z-index: 1;
-                opacity: 0;
-            }
-
-            .materials-image {
-                grid-column-start: 10;
-                grid-column-end: 40;
-                grid-row-start: 145;
-                grid-row-end: 153;
+                grid-row-start: 144;
+                grid-row-end: 154;
                 z-index:2
             }
 
-            .materials-english-image {
+            .materials-english {
+                font-size: 40px;
                 grid-column-start: 10;
-                grid-column-end: 40;
-                grid-row-start: 145;
-                grid-row-end: 153;
+                grid-column-end: 50;
+                grid-row-start: 144;
+                grid-row-end: 154;
                 z-index:1;
             }
 
-            .farfor-image {
+            .farfor {
+                font-size: 30px;
                 grid-column-start: 20;
                 grid-column-end: 36;
                 grid-row-start: 155;
-                grid-row-end: 161;
+                grid-row-end: 163;
                 z-index:2;
             } 
 
-            .farfor-english-image {
+            .farfor-english {
+                font-size: 30px;
                 grid-column-start: 20;
-                grid-column-end: 40;
+                grid-column-end: 45;
                 grid-row-start: 155;
-                grid-row-end: 161;
+                grid-row-end: 163;
                 opacity:0;
                 z-index:1;
             }
 
-            .glazur-image {
+            .glazur {
+                font-size: 30px;
                 grid-column-start: 20;
-                grid-column-end: 36;
-                grid-row-start: 163;
-                grid-row-end: 169;
+                grid-column-end: 50;
+                grid-row-start: 164;
+                grid-row-end: 172;
                 z-index: 2;
             }
 
-            .glazur-english-image {
-                grid-column-start: 17;
-                grid-column-end: 38;
-                grid-row-start: 163;
-                grid-row-end: 169;
+            .glazur-english {
+                font-size: 30px;
+                grid-column-start: 20;
+                grid-column-end: 50;
+                grid-row-start: 164;
+                grid-row-end: 172;
                 z-index: 1;
                 opacity: 0;
             }
 
-            .akril-image {
-                grid-column-start: 15;
+            .akril {
+                font-size: 30px;
+                grid-column-start: 20;
                 grid-column-end: 55;
-                grid-row-start: 171;
-                grid-row-end: 177;
+                grid-row-start: 173;
+                grid-row-end: 181;
                 z-index:2;
             }  
 
-            .akril-english-image {
-                grid-column-start: 15;
-                grid-column-end: 60;
-                grid-row-start: 171;
-                grid-row-end: 177;
+            .akril-english {
+                font-size: 30px;
+                grid-column-start: 20;
+                grid-column-end: 55;
+                grid-row-start: 173;
+                grid-row-end: 181;
                 opacity:0;
                 z-index:1;
             }   
+
+            .tg {
+                display: grid;
+                grid-column-start: 38;
+                grid-column-end: 43;
+                grid-row-start: 190;
+                grid-row-end: 196;
+            }
+
+            .inst {
+                display: grid;
+                grid-column-start: 46;
+                grid-column-end: 51;
+                grid-row-start: 190;
+                grid-row-end: 196;    
+            }
+
+            .wup {
+                display: grid;
+                grid-column-start: 54;
+                grid-column-end: 59;
+                grid-row-start: 190;
+                grid-row-end: 196;
+            }
             
         }
 
@@ -1821,7 +2325,7 @@
             </div>
             
             <div class="nazvanie">
-                <img src = "/media/works/kosmos/first_part/kosmos_logo.png" style = 'max-width:100%;max-height:100%; min-width:100%;min-height:100%;'>
+                КОСМОС
             </div>
 
             
@@ -1830,60 +2334,96 @@
         
         <div class="second_class">
             
-            <div class="obiem-image">
-                <img src = "/media/works/kosmos/second_part/text/obiem.png" onmouseenter = obiemSwitchToEnglish() onmouseleave = obiemBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            <div class="obiem" onmouseenter = obiemSwitchToEnglish() onmouseleave = obiemBackToRussian()>
+                ОБЪЕМ:
             </div>
 
-            <div class="obiem-english-image">
-                <img src = "/media/works/kosmos/second_part/text/english/obiem-english.png"   style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            <div class="obiem-english">
+                VOLUME:
             </div>
 
-            <div class="gaivan-image">
-                <img src = "/media/works/kosmos/second_part/text/gaivan.png" onmouseenter = gaivanSwitchToEnglish() onmouseleave = gaivanBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            <div class="gaivan" onmouseenter = gaivanSwitchToEnglish() onmouseleave = gaivanBackToRussian()>
+                ГАЙВАНЬ: 125мл
             </div>
             
-            <div class="gaivan-english-image">
-                <img src = "/media/works/kosmos/second_part/text/english/gaivan-english.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            <div class="gaivan-english">
+                GAIWAN: 125ml
             </div>
 
-            <div class="piala-image">
-                <img src = "/media/works/kosmos/second_part/text/piala.png" onmouseenter = pialaSwitchToEnglish() onmouseleave = pialaBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="piala" onmouseenter = pialaSwitchToEnglish() onmouseleave = pialaBackToRussian() >
+                ПИАЛА: 25мл
             </div>
 
-            <div class="piala-english-image">
-                <img src = "/media/works/kosmos/second_part/text/english/piala-english.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="piala-english">
+                PIALA: 25ml
             </div>
 
-            <div class="materials-image">
-                <img src = "/media/works/kosmos/second_part/text/materials.png" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="materials" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() >
+                МАТЕРИАЛЫ:
             </div>
             
-            <div class="materials-english-image">
-                <img src = "/media/works/kosmos/second_part/text/english/materials-english.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="materials-english">
+                MATERIALS:
             </div>
 
-            <div class="farfor-image">
-                <img src = "/media/works/kosmos/second_part/text/farfor.png" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="farfor" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian()>
+                ФАРФОР
             </div>
 
-            <div class="farfor-english-image">
-                <img src = "/media/works/kosmos/second_part/text/english/00farfor.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="farfor-english">
+                PORCELAIN
             </div>
 
-            <div class="glazur-image">
-                <img src = "/media/works/kosmos/second_part/text/glazur.png" onmouseenter = glazurSwitchToEnglish() onmouseleave = glazurBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="glazur" onmouseenter = glazurSwitchToEnglish() onmouseleave = glazurBackToRussian()>
+                ГЛАЗУРЬ
             </div>
 
-            <div class="glazur-english-image">
-                <img src = "/media/works/kosmos/second_part/text/english/glazur-english.png"  style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="glazur-english">
+                GLAZUR
             </div>
 
-            <div class="akril-image">
-                <img src = "/media/works/kosmos/second_part/text/akril.png" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="akril" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian()>
+                АКРИЛ ДЛЯ КЕРАМИКИ
             </div>       
 
-            <div class="akril-english-image">
-                <img src = "/media/works/kosmos/second_part/text/english/akril-english.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="akril-english">
+                ACRYLIC FOR CERAMICS
+            </div>
+
+            <div class="tg">
+                <img src = "/media/works/kosmos/socials/tg.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
+            </div>
+
+            <div class = "inst">
+                <img src = "/media/works/kosmos/socials/inst.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
+            </div>
+
+            <div class="wup">
+                <img src = "/media/works/kosmos/socials/wup.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
+            </div>
+
+            <div class="button-image" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian()>
+                <img src = "/media/works/kosmos/second_part/buy_but/btn.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+    
+            <div class="text-buy" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian()>
+                ПРОДАНО
+            </div>
+
+            <div class="kosmos-buy" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian()>
+                SOLD
+            </div>
+            
+            <div class="first-buy-border" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'z-index:3;'>
+                <img name = 'kosmos' src = "/media/works/kosmos/second_part/buy_but/first-border.png"  onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'z-index: 3; min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="second-buy-border">
+                <img src = "/media/works/kosmos/second_part/buy_but/second-border.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+                
+            <div class="third-buy-border">
+                <img src = "/media/works/kosmos/second_part/buy_but/third-border.png" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="logotip" style = 'position:relative; justify-content: center;'>
@@ -2046,14 +2586,14 @@
 
     function obiemSwitchToEnglish() {
         var english_obiem_appears = anime({
-            targets:'.obiem-english-image',
+            targets:'.obiem-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_obiem = anime({
-            targets:'.obiem-image',
+            targets:'.obiem',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -2062,7 +2602,7 @@
 
     function obiemBackToRussian() {
         var disappear_english_obiem = anime({
-            targets:'.obiem-english-image',
+            targets:'.obiem-english',
             opacity: 0,
             duration:9000,
             
@@ -2070,7 +2610,7 @@
         })
 
         var obiem_appears = anime({
-            targets:'.obiem-image',
+            targets:'.obiem',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -2080,14 +2620,14 @@
 
     function gaivanSwitchToEnglish() {
         var english_gaivan_appears = anime({
-            targets:'.gaivan-english-image',
+            targets:'.gaivan-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_gaivan = anime({
-            targets:'.gaivan-image',
+            targets:'.gaivan',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -2096,7 +2636,7 @@
 
     function gaivanBackToRussian() {
         var disappear_english_gaivan = anime({
-            targets:'.gaivan-english-image',
+            targets:'.gaivan-english',
             opacity: 0,
             duration:9000,
             
@@ -2104,7 +2644,7 @@
         })
 
         var gaivan_appears = anime({
-            targets:'.gaivan-image',
+            targets:'.gaivan',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -2113,14 +2653,14 @@
     
     function pialaSwitchToEnglish() {
         var english_piala_appears = anime({
-            targets:'.piala-english-image',
+            targets:'.piala-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_piala = anime({
-            targets:'.piala-image',
+            targets:'.piala',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -2129,7 +2669,7 @@
 
     function pialaBackToRussian() {
         var disappear_english_piala = anime({
-            targets:'.piala-english-image',
+            targets:'.piala-english',
             opacity: 0,
             duration:9000,
             
@@ -2137,7 +2677,7 @@
         })
 
         var piala_appears = anime({
-            targets:'.piala-image',
+            targets:'.piala',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -2146,14 +2686,14 @@
 
     function materialsSwitchToEnglish() {
         var english_materials_appears = anime({
-            targets:'.materials-english-image',
+            targets:'.materials-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_materials = anime({
-            targets:'.materials-image',
+            targets:'.materials',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -2162,7 +2702,7 @@
 
     function materialsBackToRussian() {
         var disappear_english_materials = anime({
-            targets:'.materials-english-image',
+            targets:'.materials-english',
             opacity: 0,
             duration:9000,
             
@@ -2170,7 +2710,7 @@
         })
 
         var materials_appears = anime({
-            targets:'.materials-image',
+            targets:'.materials',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -2179,14 +2719,14 @@
 
     function farforSwitchToEnglish() {
         var english_farfor_appears = anime({
-            targets:'.farfor-english-image',
+            targets:'.farfor-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_farfor = anime({
-            targets:'.farfor-image',
+            targets:'.farfor',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -2195,7 +2735,7 @@
 
     function farforBackToRussian() {
         var disappear_english_farfor = anime({
-            targets:'.farfor-english-image',
+            targets:'.farfor-english',
             opacity: 0,
             duration:9000,
             
@@ -2203,7 +2743,7 @@
         })
 
         var farfor_appears = anime({
-            targets:'.farfor-image',
+            targets:'.farfor',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -2212,14 +2752,14 @@
 
     function glazurSwitchToEnglish() {
         var english_glazur_appears = anime({
-            targets:'.glazur-english-image',
+            targets:'.glazur-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_glazur = anime({
-            targets:'.glazur-image',
+            targets:'.glazur',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -2228,14 +2768,14 @@
 
     function glazurBackToRussian() {
         var disappear_english_glazur = anime({
-            targets:'.glazur-english-image',
+            targets:'.glazur-english',
             opacity: 0,
             duration:9000,
             autoplay:true,
         })
 
         var glazur_appears = anime({
-            targets:'.glazur-image',
+            targets:'.glazur',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -2244,14 +2784,14 @@
 
     function akrilSwitchToEnglish() {
         var english_akril_appears = anime({
-            targets:'.akril-english-image',
+            targets:'.akril-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_akril = anime({
-            targets:'.akril-image',
+            targets:'.akril',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -2260,7 +2800,7 @@
 
     function akrilBackToRussian() {
         var disappear_english_akril = anime({
-            targets:'.akril-english-image',
+            targets:'.akril-english',
             opacity: 0,
             duration:9000,
             
@@ -2268,12 +2808,46 @@
         })
 
         var akril_appears = anime({
-            targets:'.akril-image',
+            targets:'.akril',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })
     }
+
+    function buySwitchToEnglish() {
+        var english_buy_appears = anime({
+            targets:'.kosmos-buy',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_buy = anime({
+            targets:'.text-buy',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function buyBackToRussian() {
+        var disappear_english_buy = anime({
+            targets:'.kosmos-buy',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var buy_appears = anime({
+            targets:'.text-buy',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
 
     // LOGO PAGE STARTS HERE
 

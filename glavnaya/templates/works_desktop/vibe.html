@@ -21,6 +21,12 @@
             background: url("/media/works/boy/background.png");
             background-size: cover;
         }
+
+        @font-face {
+            font-family: LSDFont;
+            src: url("{% static '/homepage/super_font.ttf' %}");
+        }
+
         
         .container {
             display:grid;
@@ -38,86 +44,239 @@
         }
 
         .nazvanie {
-            grid-column-start: 27;
+            cursor: pointer;
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 75px;
+            text-align: center;
+            grid-column-start: 17;
             grid-column-end: 95;
             grid-row-start: 4;
             grid-row-end: 12;
             overflow: hidden;
         }
 
-        .razmer-image {
+        .razmer {
+            cursor: pointer;
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: left;
             grid-column-start: 8;
             grid-column-end: 38;
-            grid-row-start: 84;
+            grid-row-start: 83;
             grid-row-end: 88;
             overflow: hidden;
             z-index:2;
         }
 
-        .razmer-english-image {
+        .razmer-english {
+            cursor: pointer;
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: left;
             grid-column-start: 8;
             grid-column-end: 30;
-            grid-row-start: 84;
+            grid-row-start: 83;
             grid-row-end: 88;
             overflow: hidden;
             opacity:0;
             z-index:1;
         }
 
-        .cifri-image{
+        .cifri {
+            cursor: pointer;
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: left;
             grid-column-start: 39;
-            grid-column-end: 70;
-            grid-row-start: 85;
-            grid-row-end: 89;
+            grid-column-end: 75;
+            grid-row-start: 84;
+            grid-row-end: 88;
             overflow: hidden;
             z-index:2;
-            transform: scale(0.9);
         }
 
-        .cifri-english-image{
+        .cifri-english {
+            cursor: pointer;
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: left;
             grid-column-start: 31;
-            grid-column-end: 62;
-            grid-row-start: 85;
-            grid-row-end: 89;
+            grid-column-end: 72;
+            grid-row-start: 84;
+            grid-row-end: 88;
             overflow: hidden;
             opacity:0;
             z-index:1;
             transform: scale(0.9);
         }
 
-        .materials-image {
+        .materials {
+            cursor: pointer;
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: left;
             grid-column-start: 8;
             grid-column-end: 52;
-            grid-row-start:92;
-            grid-row-end: 96;
+            grid-row-start: 90;
+            grid-row-end: 95;
             overflow: hidden;
             z-index:2
         }
 
-        .materials-english-image {
+        .materials-english {
+            cursor: pointer;
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 50px;
+            text-align: left;
             grid-column-start: 8;
             grid-column-end: 52;
-            grid-row-start:92;
-            grid-row-end: 96;
+            grid-row-start: 90;
+            grid-row-end: 95;
             overflow: hidden;
             z-index:1;
         }
-        
-        .akril-image {
+          
+        .farfor {
+            cursor: pointer;
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: left;
             grid-column-start: 54;
-            grid-column-end: 100;
-            grid-row-start: 93;
-            grid-row-end: 96;
+            grid-column-end: 75;
+            grid-row-start: 91;
+            grid-row-end: 95;
+            overflow: hidden;
+            z-index:2;
+        } 
+        
+        .farfor-english {
+            cursor: pointer;
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: left;
+            grid-column-start: 54;
+            grid-column-end: 75;
+            grid-row-start: 91;
+            grid-row-end: 95;
+            overflow: hidden;
+            opacity:0;
+            z-index:1;
+        }
+        
+        .akril {
+            cursor: pointer;
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: left;
+            grid-column-start: 8;
+            grid-column-end: 78;
+            grid-row-start: 96;
+            grid-row-end: 99;
             z-index:2;
         }  
 
-        .akril-english-image {
-            grid-column-start: 54;
-            grid-column-end: 100;
-            grid-row-start: 93;
-            grid-row-end: 96;
+        .akril-english {
+            cursor: pointer;
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 35px;
+            text-align: left;
+            grid-column-start: 8;
+            grid-column-end: 78;
+            grid-row-start: 96;
+            grid-row-end: 99;
             opacity:0;
             z-index:1;
+        }
+
+        .tg {
+            display: none;
+        }
+
+        .inst {
+            display: none;
+        }
+
+        .wup {
+            display: none;
+        }
+
+        .button-image {
+            grid-column-start: 15;
+            grid-column-end: 60;
+            grid-row-start: 25;
+            grid-row-end: 42;
+            overflow: hidden;
+        }
+        
+        .text-buy {
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 45px;
+            text-align: center;
+            grid-column-start: 15;
+            grid-column-end: 60;
+            grid-row-start: 30;
+            grid-row-end: 37;
+            overflow: hidden;
+            z-index: 5;
+        }
+
+        .vibe-buy {
+            color: #093012;
+            font-family: LSDFont;
+            font-size: 40px;
+            text-align: center;
+            grid-column-start: 15;
+            grid-column-end: 60;
+            grid-row-start: 30;
+            grid-row-end: 37;
+            overflow: hidden;
+            z-index: 4;
+            opacity: 0;        
+        }
+
+        .first-buy-border {
+            grid-column-start: 15;
+            grid-column-end: 60;
+            grid-row-start: 25;
+            grid-row-end: 42;
+            overflow: hidden;
+            z-index:10;
+        }
+
+        .second-buy-border {
+            grid-column-start: 18;
+            grid-column-end: 68;
+            grid-row-start: 28;
+            grid-row-end: 45;
+            overflow: hidden;
+        }
+        
+        .third-buy-border {
+            grid-column-start: 12;
+            grid-column-end: 57;
+            grid-row-start: 22;
+            grid-row-end: 39;
+            overflow: hidden;
+        }
+
+        .logotip {
+            margin-top:10%;
+            grid-column-start: 85;
+            grid-column-end: 100;
+            grid-row-start: 90;
+            grid-row-end: 100;
         }
         
 /*  */
@@ -181,25 +340,6 @@
             grid-row-end:99;
         }
 
-        .farfor-image {
-            grid-column-start: 1;
-            grid-column-end: 11;
-            grid-row-start: 93;
-            grid-row-end: 96;
-            overflow: hidden;
-            z-index:2;
-        } 
-        
-        .farfor-english-image {
-            grid-column-start: 1;
-            grid-column-end: 11;
-            grid-row-start: 93;
-            grid-row-end: 96;
-            overflow: hidden;
-            opacity:0;
-            z-index:1;
-        }
-
 /*  */
 /*  */
 /*  */
@@ -233,6 +373,7 @@
             }
 
             .nazvanie {
+                font-size: 45px;
                 grid-column-start: 10;
                 grid-column-end: 100;
                 grid-row-start: 9;
@@ -240,7 +381,8 @@
                 overflow: hidden;
             }
 
-            .razmer-image {
+            .razmer {
+                font-size:40px;
                 grid-column-start: 8;
                 grid-column-end: 55;
                 grid-row-start: 62;
@@ -249,7 +391,8 @@
                 z-index:2;
             }
 
-            .razmer-english-image {
+            .razmer-english {
+                font-size:40px;
                 grid-column-start: 8;
                 grid-column-end: 45;
                 grid-row-start: 62;
@@ -259,7 +402,8 @@
                 z-index:1;
             }
 
-            .cifri-image{
+            .cifri {
+                font-size: 30px;
                 grid-column-start: 18;
                 grid-column-end: 73;
                 grid-row-start: 69;
@@ -268,7 +412,8 @@
                 z-index:2;
             }
 
-            .cifri-english-image{
+            .cifri-english {
+                font-size: 30px;
                 grid-column-start: 28;
                 grid-column-end: 83;
                 grid-row-start: 69;
@@ -278,7 +423,8 @@
                 z-index:1;
             }
 
-            .materials-image {
+            .materials {
+                font-size:40px;
                 grid-column-start: 8;
                 grid-column-end: 80;
                 grid-row-start: 80;
@@ -287,7 +433,8 @@
                 z-index:2
             }
 
-            .materials-english-image {
+            .materials-english {
+                font-size:40px;
                 grid-column-start: 8;
                 grid-column-end: 75;
                 grid-row-start: 80;
@@ -296,21 +443,128 @@
                 z-index:1;
             }
             
-            .akril-image {
+            .akril {
+                font-size: 30px;
                 grid-column-start: 10;
-                grid-column-end: 100;
+                grid-column-end: 99;
                 grid-row-start: 87;
                 grid-row-end: 90;
                 z-index:2;
             }  
 
-            .akril-english-image {
-                grid-column-start: 10;
-                grid-column-end: 100;
+            .akril-english {
+                font-size: 30px;
+                grid-column-start: 5;
+                grid-column-end: 99;
                 grid-row-start: 87;
                 grid-row-end: 90;
                 opacity:0;
                 z-index:1;
+            }
+
+            .farfor {
+                font-size: 30px;
+                grid-column-start: 15;
+                grid-column-end: 75;
+                grid-row-start: 91;
+                grid-row-end: 95;
+                overflow: hidden;
+                z-index:2;
+            } 
+            
+            .farfor-english {
+                font-size: 30px;
+                grid-column-start: 15;
+                grid-column-end: 75;
+                grid-row-start: 91;
+                grid-row-end: 95;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }   
+
+            .button-image {
+                grid-column-start: 10;
+                grid-column-end: 65;
+                grid-row-start: 25;
+                grid-row-end: 40;
+                overflow: hidden;
+            }
+            
+            .text-buy {
+                color: #093012;
+                font-family: LSDFont;
+                font-size: 30px;
+                text-align: center;
+                grid-column-start: 15;
+                grid-column-end: 60;
+                grid-row-start: 30;
+                grid-row-end: 37;
+                overflow: hidden;
+                z-index: 5;
+            }
+
+            .vibe-buy {
+                color: #093012;
+                font-family: LSDFont;
+                font-size: 30px;
+                text-align: center;
+                grid-column-start: 15;
+                grid-column-end: 60;
+                grid-row-start: 30;
+                grid-row-end: 37;
+                overflow: hidden;
+                z-index: 4;
+                opacity: 0;        
+            }
+
+            .first-buy-border {
+                grid-column-start: 10;
+                grid-column-end: 65;
+                grid-row-start: 25;
+                grid-row-end: 40;
+                overflow: hidden;
+                z-index:10;
+            }
+
+            .second-buy-border {
+                grid-column-start: 13;
+                grid-column-end: 68;
+                grid-row-start: 28;
+                grid-row-end: 43;
+                overflow: hidden;
+            }
+            
+            .third-buy-border {
+                grid-column-start: 7;
+                grid-column-end: 62;
+                grid-row-start: 22;
+                grid-row-end: 37;
+                overflow: hidden;
+            }
+
+            .tg {
+                display: grid;
+                grid-column-start: 35;
+                grid-column-end: 43;
+                grid-row-start: 159;
+                grid-row-end: 164;
+            }
+
+            .inst {
+                display: grid;
+                grid-column-start: 45;
+                grid-column-end: 53;
+                grid-row-start: 159;
+                grid-row-end: 164;    
+            }
+
+            .wup {
+                display: grid;
+                grid-column-start: 55;
+                grid-column-end: 63;
+                grid-row-start: 159;
+                grid-row-end: 164;
             }
             
     /*  */
@@ -370,28 +624,9 @@
             .logotip {
                 grid-column-start: 85;
                 grid-column-end: 100;
-                grid-row-start: 91;
-                grid-row-end: 95;
+                grid-row-start: 90;
+                grid-row-end: 94;
             }
-
-            .farfor-image {
-                grid-column-start: 3;
-                grid-column-end: 22;
-                grid-row-start: 87;
-                grid-row-end: 90;
-                overflow: hidden;
-                z-index:2;
-            } 
-            
-            .farfor-english-image {
-                grid-column-start: 3;
-                grid-column-end: 26;
-                grid-row-start: 87;
-                grid-row-end: 90;
-                overflow: hidden;
-                opacity:0;
-                z-index:1;
-            }   
         }
         
         @media screen and (max-width: 900px), (max-device-width: 900px) {
@@ -410,8 +645,8 @@
             .container {
                 display: grid;
                 grid-template-columns: repeat(100, 1fr);
-                grid-template-rows: repeat(200, 1fr);
-                height: 200%;
+                grid-template-rows: repeat(166, 1fr);
+                height: 166%;
             }
 
             .first_class {
@@ -455,10 +690,11 @@
             }
 
             .nazvanie {
+                font-size: 65px;
                 grid-column-start: 10;
-                grid-column-end: 65;
-                grid-row-start: 77;
-                grid-row-end: 83;
+                grid-column-end: 90;
+                grid-row-start: 7;
+                grid-row-end: 13;
             }
 
             .logotip {
@@ -469,92 +705,166 @@
                 transform:scale(1.5);
             }
 
-
-            .razmer-image {
+            .razmer {
+                text-align: left;
+                font-size: 65px;
                 grid-column-start: 10;
                 grid-column-end: 43;
-                grid-row-start: 120;
-                grid-row-end: 125;
+                grid-row-start: 105;
+                grid-row-end: 111;
                 z-index:2;
             }
 
-            .razmer-english-image {
+            .razmer-english {
+                text-align: left;
+                font-size: 65px;
+                text-align: left;
                 grid-column-start: 10;
                 grid-column-end: 33;
-                grid-row-start: 120;
-                grid-row-end: 125;
+                grid-row-start: 105;
+                grid-row-end: 111;
                 opacity:0;
                 z-index:1;
             }
 
-            .cifri-image{
-                grid-column-start: 35;
-                grid-column-end: 70;
-                grid-row-start: 126;
-                grid-row-end: 131;
-                z-index:2;
-            }
-
-            .cifri-english-image{
+            .cifri {
+                font-size: 45px;
                 grid-column-start: 25;
-                grid-column-end: 60;
-                grid-row-start: 126;
-                grid-row-end: 131;
-                opacity:0;
-                z-index:1;
-            }
+                grid-column-end: 65;
+                grid-row-start: 112;
+                grid-row-end: 117;
+                z-index:2;
+            }   
 
-            .materials-image {
+            .cifri-english {
+                font-size: 45px;
+                grid-column-start: 25;
+                grid-column-end: 65;
+                grid-row-start: 112;
+                grid-row-end: 117;
+                z-index:2;
+            } 
+
+            .materials {
+                text-align: left;
+                font-size: 65px;
                 grid-column-start: 10;
                 grid-column-end: 60;
-                grid-row-start: 138;
-                grid-row-end: 143;
+                grid-row-start: 122;
+                grid-row-end: 129;
                 z-index:2
             }
 
-            .materials-english-image {
+            .materials-english {
+                text-align: left;
+                font-size: 65px;
                 grid-column-start: 10;
-                grid-column-end: 51;
-                grid-row-start: 138;
-                grid-row-end: 143;
-                z-index:1;
-            }
-            
-            .akril-image {
-                grid-column-start: 20;
-                grid-column-end: 87;
-                grid-row-start: 147;
-                grid-row-end: 151;
-                z-index:2;
-            }  
-
-            .akril-english-image {
-                grid-column-start: 20;
-                grid-column-end: 87;
-                grid-row-start: 147;
-                grid-row-end: 151;
-                opacity:0;
+                grid-column-end: 60;
+                grid-row-start: 122;
+                grid-row-end: 129;
                 z-index:1;
             }
 
-            .farfor-image {
-                grid-column-start: 28;
-                grid-column-end: 55;
-                grid-row-start: 154;
-                grid-row-end: 158;
+            .farfor {
+                font-size: 45px;
+                grid-column-start: 15;
+                grid-column-end: 90;
+                grid-row-start: 130;
+                grid-row-end: 135;
                 z-index:2;
-                transform: scale(0.9);
             } 
             
-            .farfor-english-image {
-                grid-column-start: 30;
-                grid-column-end: 60;
-                grid-row-start: 154;
-                grid-row-end: 158;
-                transform: scale(0.9);
+            .farfor-english {
+                font-size: 45px;
+                grid-column-start: 15;
+                grid-column-end: 90;
+                grid-row-start: 130;
+                grid-row-end: 135;
                 opacity:0;
                 z-index:1;
-            }    
+            }
+
+            .akril {
+                font-size: 45px;
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 136;
+                grid-row-end: 141;
+                z-index:2;
+            } 
+            
+            .akril-english {
+                font-size: 45px;
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 136;
+                grid-row-end: 141;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price {
+                font-size: 45px;
+                grid-column-start: 25;
+                grid-column-end: 45;
+                grid-row-start: 149;
+                grid-row-end: 155;
+                overflow: hidden;
+            }
+
+            .button-image {
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 74;
+                grid-row-end: 90;
+                overflow: hidden;
+            }
+
+            .text-buy {
+                font-size: 55px;
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 79;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .vibe-buy {
+                font-size: 55px;
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 79;
+                grid-row-end: 86;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 74;
+                grid-row-end: 90;
+                overflow: hidden;
+                z-index:10;
+            }
+
+            .second-buy-border {
+                grid-column-start: 9;
+                grid-column-end: 55;
+                grid-row-start: 76;
+                grid-row-end: 92;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 4;
+                grid-column-end: 50;
+                grid-row-start: 71;
+                grid-row-end: 87;
+                overflow: hidden;
+            }
         }
 
         @media screen and (max-width: 600px), (max-device-width: 600px) {
@@ -573,8 +883,8 @@
             .container {
                 display: grid;
                 grid-template-columns: repeat(100, 1fr);
-                grid-template-rows: repeat(200, 1fr);
-                height: 200%;
+                grid-template-rows: repeat(157, 1fr);
+                height: 157%;
             }
 
             .first_class {
@@ -586,8 +896,9 @@
             }
             
             .nazvanie {
-                grid-column-start: 10;
-                grid-column-end: 85;
+                font-size: 45px;
+                grid-column-start: 15;
+                grid-column-end: 95;
                 grid-row-start: 22;
                 grid-row-end: 28;
             }
@@ -618,6 +929,60 @@
                 display: none;
             }
 
+            .button-image {
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 76;
+                grid-row-end: 88;
+                overflow: hidden;
+            }
+
+            .text-buy {
+                font-size: 30px;
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 80;
+                grid-row-end: 87;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .vibe-buy {
+                font-size: 30px;
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 80;
+                grid-row-end: 87;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .first-buy-border {
+                grid-column-start: 7;
+                grid-column-end: 53;
+                grid-row-start: 76;
+                grid-row-end: 88;
+                overflow: hidden;
+                z-index:10;
+            }
+
+            .second-buy-border {
+                grid-column-start: 10;
+                grid-column-end: 56;
+                grid-row-start: 79;
+                grid-row-end: 91;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 4;
+                grid-column-end: 50;
+                grid-row-start: 73;
+                grid-row-end: 85;
+                overflow: hidden;
+            }
+
             .logotip {
                 grid-column-start: 75;
                 grid-column-end: 90;
@@ -626,91 +991,113 @@
                 transform:scale(1.5);
             }
 
-            .razmer-image {
+            .razmer {
+                font-size: 40px;
                 grid-column-start: 10;
                 grid-column-end: 60;
-                grid-row-start: 120;
-                grid-row-end: 125;
+                grid-row-start: 105;
+                grid-row-end: 111;
                 z-index:2;
             }
 
-            .razmer-english-image {
+            .razmer-english {
+                font-size: 40px;
                 grid-column-start: 10;
                 grid-column-end: 40;
-                grid-row-start: 120;
-                grid-row-end: 125;
+                grid-row-start: 105;
+                grid-row-end: 111;
                 opacity:0;
                 z-index:1;
             }
 
-            .cifri-image{
-                grid-column-start: 25;
-                grid-column-end: 80;
-                grid-row-start: 127;
-                grid-row-end: 132;
-                z-index:2;
-            }
-
-            .cifri-english-image{
-                grid-column-start: 25;
-                grid-column-end: 80;
-                grid-row-start: 127;
-                grid-row-end: 132;
-                opacity:0;
-                z-index:1;
-            }
-
-            .materials-image {
-                grid-column-start: 10;
-                grid-column-end: 80;
-                grid-row-start: 142;
-                grid-row-end: 147;
-                z-index:2
-            }
-
-            .materials-english-image {
-                grid-column-start: 10;
-                grid-column-end: 80;
-                grid-row-start: 142;
-                grid-row-end: 147;
-                z-index:1;
-            }
-
-            .akril-image {
-                grid-column-start: 5;
-                grid-column-end: 95;
-                grid-row-start: 151;
-                grid-row-end: 155;
-                z-index:2;
-                transform: scale(0.9);
-            }  
-
-            .akril-english-image {
-                grid-column-start: 5;
-                grid-column-end: 95;
-                grid-row-start: 151;
-                grid-row-end: 155;
-                opacity:0;
-                z-index:1;
-                transform: scale(0.9);
-            }
-
-            .farfor-image {
-                grid-column-start: 25;
-                grid-column-end: 62;
-                grid-row-start: 158;
-                grid-row-end: 162;
+            .cifri {
+                font-size: 30px;
+                grid-column-start: 35;
+                grid-column-end: 85;
+                grid-row-start: 112;
+                grid-row-end: 116;
                 z-index:2;
             } 
 
-            .farfor-english-image {
-                grid-column-start: 25;
-                grid-column-end: 65;
-                grid-row-start: 158;
-                grid-row-end: 162;
+            .materials {
+                font-size: 40px;
+                grid-column-start: 10;
+                grid-column-end: 85;
+                grid-row-start: 122;
+                grid-row-end: 128;
+                z-index:2
+            }
+
+            .materials-english {
+                font-size: 40px;
+                grid-column-start: 10;
+                grid-column-end: 85;
+                grid-row-start: 122;
+                grid-row-end: 128;
+                z-index:1;
+            }
+
+            .farfor {
+                font-size: 30px;
+                grid-column-start: 5;
+                grid-column-end: 95;
+                grid-row-start: 129;
+                grid-row-end: 134;
+                z-index:2;
+            } 
+
+            .farfor-english {
+                font-size: 30px;
+                grid-column-start: 5;
+                grid-column-end: 95;
+                grid-row-start: 129;
+                grid-row-end: 134;
                 opacity:0;
                 z-index:1;
-            }    
+            }
+
+            .akril {
+                font-size: 30px;
+                grid-column-start: 5;
+                grid-column-end: 95;
+                grid-row-start: 135;
+                grid-row-end: 140;
+                z-index:2;
+            } 
+
+            .akril-english {
+                font-size: 30px;
+                grid-column-start: 5;
+                grid-column-end: 95;
+                grid-row-start: 135;
+                grid-row-end: 140;
+                opacity:0;
+                z-index:1;
+            }
+
+            .tg {
+                display: grid;
+                grid-column-start: 35;
+                grid-column-end: 43;
+                grid-row-start: 149;
+                grid-row-end: 154;
+            }
+
+            .inst {
+                display: grid;
+                grid-column-start: 49;
+                grid-column-end: 57;
+                grid-row-start: 149;
+                grid-row-end: 154;    
+            }
+
+            .wup {
+                display: grid;
+                grid-column-start: 62;
+                grid-column-end: 70;
+                grid-row-start: 149;
+                grid-row-end: 154;
+            }
         }
 
         @media screen and (max-height: 450px), (max-device-height: 450px) {
@@ -729,8 +1116,8 @@
             .container {
                 display: grid;
                 grid-template-columns: repeat(100, 1fr);
-                grid-template-rows: repeat(200, 1fr);
-                height: 200%;
+                grid-template-rows: repeat(180, 1fr);
+                height: 180%;
             }
 
             .first_class {
@@ -742,7 +1129,9 @@
             }
 
             .nazvanie {
-                grid-column-start: 65;
+                font-size: 35px;
+                text-align: right;
+                grid-column-start: 55;
                 grid-column-end: 96;
                 grid-row-start: 8;
                 grid-row-end: 17;
@@ -775,6 +1164,58 @@
                 display: none;
             }
 
+            .button-image {
+                grid-column-start: 70;
+                grid-column-end: 93;
+                grid-row-start: 38;
+                grid-row-end: 52;
+                overflow: hidden;
+            }
+
+            .text-buy {
+                font-size: 25px;
+                grid-column-start: 72;
+                grid-column-end: 90;
+                grid-row-start: 42;
+                grid-row-end: 48;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .vibe-buy {
+                font-size: 25px;
+                grid-column-start: 75;
+                grid-column-end: 88;
+                grid-row-start: 42;
+                grid-row-end: 48;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            .first-buy-border {
+                grid-column-start: 70;
+                grid-column-end: 93;
+                grid-row-start: 38;
+                grid-row-end: 52;
+                overflow: hidden;
+                z-index:10;
+            }
+
+            .second-buy-border {
+                grid-column-start: 72;
+                grid-column-end: 95;
+                grid-row-start: 40;
+                grid-row-end: 54;
+                overflow: hidden;
+            }
+
+            .third-buy-border {
+                grid-column-start: 68;
+                grid-column-end: 91;
+                grid-row-start: 36;
+                grid-row-end: 50;
+                overflow: hidden;
+            }
 
             .logotip {
                 grid-column-start: 88;
@@ -789,92 +1230,127 @@
                     /*  */
 
             
-            .razmer-image {
-                grid-column-start: 10;
-                grid-column-end: 35;
-                grid-row-start: 120;
-                grid-row-end: 129;
-                z-index:2;
-            }
+                .razmer {
+                    font-size: 40px;
+                    grid-column-start: 10;
+                    grid-column-end: 34;
+                    grid-row-start: 108;
+                    grid-row-end: 119;
+                    z-index:2;
+                }
 
-            .razmer-english-image {
-                grid-column-start: 10;
-                grid-column-end: 30;
-                grid-row-start: 120;
-                grid-row-end: 129;
-                opacity:0;
-                z-index:1;
-            }
+                .razmer-english {
+                    font-size: 40px;
+                    grid-column-start: 13;
+                    grid-column-end: 29;
+                    grid-row-start: 108;
+                    grid-row-end: 119;
+                    opacity:0;
+                    z-index:1;
+                }
 
-            .cifri-image{
-                grid-column-start: 25;
-                grid-column-end: 53;
-                grid-row-start: 131;
-                grid-row-end: 138;
-                z-index:2;
-            }
+                .cifri {
+                    font-size: 30px;
+                    grid-column-start: 20;
+                    grid-column-end: 52;
+                    grid-row-start: 120;
+                    grid-row-end: 129;
+                    z-index:2;
+                }
 
-            .cifri-english-image{
-                grid-column-start: 22;
-                grid-column-end: 50;
-                grid-row-start: 131;
-                grid-row-end: 138;
-                opacity:0;
-                z-index:1;
-            }
+                .cifri-english {
+                    font-size: 30px;
+                    grid-column-start: 20;
+                    grid-column-end: 52;
+                    grid-row-start: 120;
+                    grid-row-end: 129;
+                    z-index:2;
+                }
 
-            .materials-image {
-                grid-column-start: 10;
-                grid-column-end: 49;
-                grid-row-start: 145;
-                grid-row-end: 154;
-                z-index:2
-            }
+                .materials {
+                    font-size: 40px;
+                    grid-column-start: 10;
+                    grid-column-end: 50;
+                    grid-row-start: 136;
+                    grid-row-end: 147;
+                    z-index:2
+                }
 
-            .materials-english-image {
-                grid-column-start: 10;
-                grid-column-end: 39;
-                grid-row-start: 145;
-                grid-row-end: 154;
-                z-index:1;
-            }
+                .materials-english {
+                    font-size: 40px;
+                    grid-column-start: 10;
+                    grid-column-end: 45;
+                    grid-row-start: 136;
+                    grid-row-end: 147;
+                    z-index:1;
+                }
 
-            .akril-image {
-                grid-column-start: 13;
-                grid-column-end: 63;
-                grid-row-start: 159;
-                grid-row-end: 166;
-                z-index:2;
-                transform: scale(0.9);
-            }  
+                .farfor {
+                    font-size: 30px;
+                    text-align: left;
+                    grid-column-start: 20;
+                    grid-column-end: 70;
+                    grid-row-start: 147;
+                    grid-row-end: 154;
+                    z-index:2;
+                } 
 
-            .akril-english-image {
-                grid-column-start: 13;
-                grid-column-end: 63;
-                grid-row-start: 159;
-                grid-row-end: 166;
-                opacity:0;
-                z-index:1;
-                transform: scale(0.9);
-            }  
+                .farfor-english {
+                    font-size: 30px;
+                    text-align: left;
+                    grid-column-start: 20;
+                    grid-column-end: 70;
+                    grid-row-start: 147;
+                    grid-row-end: 154;
+                    opacity:0;
+                    z-index:1;
+                }
 
-            .farfor-image {
-                grid-column-start: 15;
-                grid-column-end: 35;
-                grid-row-start: 171;
-                grid-row-end: 177;
-                z-index:2;
-            } 
+                .akril {
+                    font-size: 30px;
+                    text-align: left;
+                    grid-column-start: 20;
+                    grid-column-end: 70;
+                    grid-row-start: 155;
+                    grid-row-end: 162;
+                    z-index:2;
+                } 
 
-            .farfor-english-image {
-                grid-column-start: 15;
-                grid-column-end: 45;
-                grid-row-start: 171;
-                grid-row-end: 177;
-                opacity:0;
-                z-index:1;
-            } 
-            
+                .akril-english {
+                    font-size: 30px;
+                    text-align: left;
+                    grid-column-start: 20;
+                    grid-column-end: 70;
+                    grid-row-start: 155;
+                    grid-row-end: 162;
+                    opacity:0;
+                    z-index:1;
+                }
+
+                .tg {
+                    display: grid;
+                    grid-column-start: 38;
+                    grid-column-end: 43;
+                    grid-row-start: 170;
+                    grid-row-end: 177;
+                }
+
+                .inst {
+                    display: grid;
+                    grid-column-start: 47;
+                    grid-column-end: 52;
+                    grid-row-start: 170;
+                    grid-row-end: 177;    
+                }
+
+                .wup {
+                    display: grid;
+                    grid-column-start: 56;
+                    grid-column-end: 61;
+                    grid-row-start: 170;
+                    grid-row-end: 177;
+                }
+                
         }
 
         .morphing-btn-wrap {
@@ -1575,39 +2051,83 @@
         <div class="first_class">
 
             <div class="nazvanie">
-                <img src = "/media/works/boy/first_part/vibe_logo.png" style = 'min-width:100%; min-height:100%; max-width:100%;max-height:100%;'>
+                ПАЙНЭПЛ ВАЙБ
             </div>
 
-            <div class="razmer-image">
-                <img src = "/media/works/boy/first_part/text/razmer.png" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            <div class="razmer" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian()>
+                РАЗМЕР:
             </div>
             
-            <div class="razmer-english-image">
-                <img src = "/media/works/boy/first_part/text/english/razmer-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            <div class="razmer-english">
+                SIZE:
             </div>
 
-            <div class="cifri-image">
-                <img src = "/media/works/boy/first_part/text/cifri.png" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="cifri" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian()>
+                10*8.5*10cm
             </div>
 
-            <div class="cifri-english-image">
-                <img src = "/media/works/boy/first_part/text/cifri.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="cifri-english">
+                10*8.5*10cm
             </div>
 
-            <div class="materials-image">
-                <img src = "/media/works/boy/first_part/text/materials.png" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="materials" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian()>
+                МАТЕРИАЛЫ:
             </div>
 
-            <div class="materials-english-image">
-                <img src = "/media/works/boy/first_part/text/english/materials-english.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="materials-english">
+                MATERIALS:
             </div>
 
-            <div class="akril-image">
-                <img src = "/media/works/boy/first_part/text/akril.png" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="akril" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() >
+                АКРИЛ ДЛЯ КЕРАМИКИ
             </div>
 
-            <div class="akril-english-image">
-                <img src = "/media/works/boy/first_part/text/english/akril-english.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="akril-english">
+                ACRYLIC FOR CERAMICS
+            </div>
+
+            <div class="farfor" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian()>
+                ФАРФОР
+            </div>
+
+            <div class="farfor-english">
+                PORCELAIN
+            </div>
+            
+            <div class="tg">
+                <img src = "/media/works/boy/socials/tg.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
+            </div>
+
+            <div class = "inst">
+                <img src = "/media/works/boy/socials/inst.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
+            </div>
+
+            <div class="wup">
+                <img src = "/media/works/boy/socials/wup.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
+            </div>
+
+            <div class="button-image" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian()>
+                <img src = "/media/works/boy/second_part/buy_btn/btn.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+    
+            <div class="text-buy" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian()>
+                ПРОДАНО
+            </div>
+
+            <div class="vibe-buy" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian()>
+                SOLD
+            </div>
+            
+            <div class="first-buy-border" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'z-index:3;'>
+                <img name = 'vibe' src = "/media/works/boy/second_part/buy_btn/first-border.png"  onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'z-index: 3; min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+
+            <div class="second-buy-border">
+                <img src = "/media/works/boy/second_part/buy_btn/second-border.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            </div>
+                
+            <div class="third-buy-border">
+                <img src = "/media/works/boy/second_part/buy_btn/third-border.png" id = 'third-buy-border'  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
         </div>
@@ -1661,14 +2181,6 @@
 
                 <div class="arrow_right" style = 'cursor:pointer;position:relative; justify-content: center;'>
                     <img src = "/media/works/boy/second_part/main_slideshow/elements/arrow_right.png" id = 'arrow_right'  onclick="next(),arrow_right.play()">
-                </div>
-
-                <div class="farfor-image">
-                    <img src = "/media/works/boy/first_part/text/farfor.png" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
-                </div>
-
-                <div class="farfor-english-image">
-                    <img src = "/media/works/boy/first_part/text/english/farfor-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
                 </div>
 
                 <div class="logotip" style = 'position:relative; justify-content: center;'>
@@ -1827,34 +2339,34 @@
         loop: true,
     })
     
-    var english_setter = anime.set('.materials-english-image', {
+    var english_setter = anime.set('.materials-english', {
         opacity: function () {return 0}
     })
 
     function razmerSwitchToEnglish() {
         var english_razmer_appears = anime({
-            targets:'.razmer-english-image',
+            targets:'.razmer-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_razmer = anime({
-            targets:'.razmer-image',
+            targets:'.razmer',
             opacity: 0,
             duration:9000,
             autoplay:true,
         })
 
         var english_cifri_appears = anime({
-            targets:'.cifri-english-image',
+            targets:'.cifri-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_cifri = anime({
-            targets:'.cifri-image',
+            targets:'.cifri',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -1864,7 +2376,7 @@
 
     function razmerBackToRussian() {
         var disappear_english_razmer = anime({
-            targets:'.razmer-english-image',
+            targets:'.razmer-english',
             opacity: 0,
             duration:9000,
             
@@ -1872,14 +2384,14 @@
         })
 
         var razmer_appears = anime({
-            targets:'.razmer-image',
+            targets:'.razmer',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })
     
         var disappear_english_cifri = anime({
-            targets:'.cifri-english-image',
+            targets:'.cifri-english',
             opacity: 0,
             duration:9000,
             
@@ -1887,7 +2399,7 @@
         })
 
         var cifri_appears = anime({
-            targets:'.cifri-image',
+            targets:'.cifri',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -1897,14 +2409,14 @@
     
     function materialsSwitchToEnglish() {
         var english_materials_appears = anime({
-            targets:'.materials-english-image',
+            targets:'.materials-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_materials = anime({
-            targets:'.materials-image',
+            targets:'.materials',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -1913,15 +2425,14 @@
 
     function materialsBackToRussian() {
         var disappear_english_materials = anime({
-            targets:'.materials-english-image',
+            targets:'.materials-english',
             opacity: 0,
             duration:9000,
-            
             autoplay:true,
         })
 
         var materials_appears = anime({
-            targets:'.materials-image',
+            targets:'.materials',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -1930,14 +2441,14 @@
 
     function akrilSwitchToEnglish() {
         var english_akril_appears = anime({
-            targets:'.akril-english-image',
+            targets:'.akril-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_akril = anime({
-            targets:'.akril-image',
+            targets:'.akril',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -1946,15 +2457,14 @@
 
     function akrilBackToRussian() {
         var disappear_english_akril = anime({
-            targets:'.akril-english-image',
+            targets:'.akril-english',
             opacity: 0,
             duration:9000,
-            
             autoplay:true,
         })
 
         var akril_appears = anime({
-            targets:'.akril-image',
+            targets:'.akril',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -1963,14 +2473,14 @@
 
     function farforSwitchToEnglish() {
         var english_farfor_appears = anime({
-            targets:'.farfor-english-image',
+            targets:'.farfor-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_farfor = anime({
-            targets:'.farfor-image',
+            targets:'.farfor',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -1979,7 +2489,7 @@
 
     function farforBackToRussian() {
         var disappear_english_farfor = anime({
-            targets:'.farfor-english-image',
+            targets:'.farfor-english',
             opacity: 0,
             duration:9000,
             
@@ -1987,7 +2497,40 @@
         })
 
         var farfor_appears = anime({
-            targets:'.farfor-image',
+            targets:'.farfor',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function buySwitchToEnglish() {
+        var english_buy_appears = anime({
+            targets:'.vibe-buy',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_buy = anime({
+            targets:'.text-buy',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function buyBackToRussian() {
+        var disappear_english_buy = anime({
+            targets:'.vibe-buy',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var buy_appears = anime({
+            targets:'.text-buy',
             opacity: 1,
             duration:9000,
             autoplay:true,

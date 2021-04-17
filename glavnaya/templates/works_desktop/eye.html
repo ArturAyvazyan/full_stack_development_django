@@ -12,6 +12,12 @@
 
 <body>
     <style> 
+
+        @font-face {
+            font-family: LSDFont;
+            src: url("{% static '/homepage/super_font.ttf' %}");
+        }
+                
         html,
         body {
             position:static;
@@ -38,7 +44,11 @@
             overflow: hidden;
         }
 
-        .razmer-image {
+        .razmer {
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: LSDFont;
+            font-size: 50px;
             grid-column-start: 8;
             grid-column-end: 40;
             grid-row-start: 10;
@@ -47,7 +57,11 @@
             z-index:2;
         }
 
-        .razmer-english-image {
+        .razmer-english {
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: LSDFont;
+            font-size: 50px;
             grid-column-start: 8;
             grid-column-end: 38;
             grid-row-start: 10;
@@ -57,7 +71,11 @@
             z-index:1;
         }
 
-        .cifri-image{
+        .cifri {
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: LSDFont;
+            font-size: 35px;
             grid-column-start: 18;
             grid-column-end: 45;
             grid-row-start: 17;
@@ -65,7 +83,11 @@
             overflow: hidden;
         }
 
-        .materials-image {
+        .materials {
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: LSDFont;
+            font-size: 50px;
             grid-column-start: 8;
             grid-column-end: 52;
             grid-row-start: 30;
@@ -74,7 +96,11 @@
             z-index:2;
         }
 
-        .materials-english-image {
+        .materials-english {
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: LSDFont;
+            font-size: 50px;
             grid-column-start: 8;
             grid-column-end: 52;
             grid-row-start: 30;
@@ -84,18 +110,26 @@
             z-index:1;
         }
 
-        .farfor-image {
+        .farfor {
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: LSDFont;
+            font-size: 35px;
             grid-column-start: 18;
-            grid-column-end: 40;
+            grid-column-end: 42;
             grid-row-start: 37;
             grid-row-end: 41;
             overflow: hidden;
             z-index:2;
         }
 
-        .farfor-english-image {
+        .farfor-english {
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: LSDFont;
+            font-size: 35px;
             grid-column-start: 18;
-            grid-column-end: 40;
+            grid-column-end: 46;
             grid-row-start: 37;
             grid-row-end: 41;
             overflow: hidden;
@@ -103,7 +137,11 @@
             z-index:1;
         }
 
-        .akril-image {
+        .akril {
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: LSDFont;
+            font-size: 35px;
             grid-column-start: 18;
             grid-column-end: 72;
             grid-row-start: 42;
@@ -112,7 +150,11 @@
             z-index:2;
         }   
 
-        .akril-english-image {
+        .akril-english {
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: LSDFont;
+            font-size: 35px;
             grid-column-start: 18;
             grid-column-end: 75;
             grid-row-start: 42;
@@ -122,7 +164,11 @@
             opacity:0
         }
 
-        .cena-image {
+        .cena {
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: LSDFont;
+            font-size: 50px;
             grid-column-start: 8;
             grid-column-end: 29;
             grid-row-start: 51;
@@ -131,7 +177,11 @@
             z-index:2;
         }
 
-        .cena-english-image {
+        .cena-english {
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: LSDFont;
+            font-size: 50px;
             grid-column-start: 8;
             grid-column-end: 34;
             grid-row-start: 51;
@@ -141,12 +191,28 @@
             opacity:0;
         }
 
-        .price-image {
+        .price {
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: LSDFont;
+            font-size: 35px;
             grid-column-start: 18;
             grid-column-end: 35;
             grid-row-start: 58;
             grid-row-end: 63;
             overflow: hidden;
+        }
+
+        .tg {
+            display: none;
+        }
+
+        .inst {
+            display: none;
+        }
+
+        .wup {
+            display: none;
         }
 
         .button-image {
@@ -296,7 +362,9 @@
                 overflow: hidden;
             }
 
-            .razmer-image {
+            .razmer {
+                text-align: left;
+                font-size: 40px;
                 grid-column-start: 8;
                 grid-column-end: 52;
                 grid-row-start: 10;
@@ -305,7 +373,9 @@
                 z-index:2;
             }
 
-            .razmer-english-image {
+            .razmer-english {
+                text-align: left;
+                font-size: 40px;
                 grid-column-start: 9;
                 grid-column-end: 46;
                 grid-row-start: 10;
@@ -315,7 +385,9 @@
                 z-index:1;
             }
 
-            .cifri-image{
+            .cifri {
+                text-align: left;
+                font-size: 30px;
                 grid-column-start: 18;
                 grid-column-end: 60;
                 grid-row-start: 18;
@@ -323,7 +395,9 @@
                 overflow: hidden;
             }
 
-            .materials-image {
+            .materials {
+                text-align: left;
+                font-size: 40px;
                 grid-column-start: 8;
                 grid-column-end: 75;
                 grid-row-start: 30;
@@ -332,7 +406,9 @@
                 z-index:2;
             }
 
-            .materials-english-image {
+            .materials-english {
+                text-align: left;
+                font-size: 40px;
                 grid-column-start: 8;
                 grid-column-end: 75;
                 grid-row-start: 30;
@@ -342,7 +418,9 @@
                 z-index:1;
             }
 
-            .farfor-image {
+            .farfor {
+                text-align: left;
+                font-size: 30px;
                 grid-column-start: 18;
                 grid-column-end: 55;
                 grid-row-start: 38;
@@ -351,7 +429,9 @@
                 z-index:2;
             }
 
-            .farfor-english-image {
+            .farfor-english {
+                text-align: left;
+                font-size: 30px;
                 grid-column-start: 18;
                 grid-column-end: 70;
                 grid-row-start: 38;
@@ -361,18 +441,22 @@
                 z-index:1;
             }
 
-            .akril-image {
-                grid-column-start: 10;
-                grid-column-end: 87;
+            .akril {
+                text-align: left;
+                font-size: 30px;
+                grid-column-start: 5;
+                grid-column-end: 95;
                 grid-row-start: 44;
                 grid-row-end: 49;
                 overflow: hidden;
                 z-index:2;
             }   
 
-            .akril-english-image {
-                grid-column-start: 10;
-                grid-column-end: 90;
+            .akril-english {
+                text-align: left;
+                font-size: 30px;
+                grid-column-start: 5;
+                grid-column-end: 95;
                 grid-row-start: 44;
                 grid-row-end: 48;
                 overflow: hidden;
@@ -380,7 +464,9 @@
                 opacity:0
             }
 
-            .cena-image {
+            .cena {
+                text-align: left;
+                font-size: 40px;
                 grid-column-start: 8;
                 grid-column-end: 40;
                 grid-row-start: 52;
@@ -389,9 +475,11 @@
                 z-index:2;
             }
 
-            .cena-english-image {
+            .cena-english {
+                text-align: left;
+                font-size: 40px;
                 grid-column-start: 8;
-                grid-column-end: 40;
+                grid-column-end: 45;
                 grid-row-start: 52;
                 grid-row-end: 57;
                 overflow: hidden;
@@ -399,7 +487,9 @@
                 opacity:0;
             }
 
-            .price-image {
+            .price {
+                text-align: left;
+                font-size: 30px;
                 grid-column-start: 18;
                 grid-column-end: 44;
                 grid-row-start: 58;
@@ -545,8 +635,8 @@
             .container {
                 display: grid;
                 grid-template-columns: repeat(100, 1fr);
-                grid-template-rows: repeat(200, 1fr);
-                height: 200%;
+                grid-template-rows: repeat(175, 1fr);
+                height: 175%;
             }
 
             .first_class {
@@ -663,105 +753,149 @@
                 /*  */
                     /*  */
 
-            .razmer-image {
+            .razmer {
+                text-align: left;
+                font-size: 65px;
                 grid-column-start: 10;
-                grid-column-end: 41;
-                grid-row-start: 120;
-                grid-row-end: 126;
+                grid-column-end: 43;
+                grid-row-start: 105;
+                grid-row-end: 111;
                 z-index:2;
             }
 
-            .razmer-english-image {
-                grid-column-start: 20;
-                grid-column-end: 45;
-                grid-row-start: 120;
-                grid-row-end: 125;
+            .razmer-english {
+                text-align: left;
+                font-size: 65px;
+                text-align: left;
+                grid-column-start: 10;
+                grid-column-end: 33;
+                grid-row-start: 105;
+                grid-row-end: 111;
                 opacity:0;
                 z-index:1;
             }
-            
-            .cifri-image{
-                grid-column-start: 38;
-                grid-column-end: 63;
-                grid-row-start: 126;
-                grid-row-end: 131;
-            }
 
-            .materials-image {
+            .cifri {
+                font-size: 45px;
+                grid-column-start: 25;
+                grid-column-end: 65;
+                grid-row-start: 112;
+                grid-row-end: 117;
+                z-index:2;
+            }   
+
+            .materials {
+                text-align: left;
+                font-size: 65px;
                 grid-column-start: 10;
-                grid-column-end: 55;
-                grid-row-start: 138;
-                grid-row-end: 144;
+                grid-column-end: 60;
+                grid-row-start: 122;
+                grid-row-end: 129;
                 z-index:2
             }
 
-            .materials-english-image {
+            .materials-english {
+                text-align: left;
+                font-size: 65px;
                 grid-column-start: 10;
-                grid-column-end: 51;
-                grid-row-start: 138;
-                grid-row-end: 144;
+                grid-column-end: 60;
+                grid-row-start: 122;
+                grid-row-end: 129;
                 z-index:1;
             }
 
-            .farfor-image {
-                grid-column-start: 35;
-                grid-column-end: 59;
-                grid-row-start: 145;
-                grid-row-end: 150;
+            .farfor {
+                font-size: 45px;
+                grid-column-start: 20;
+                grid-column-end: 90;
+                grid-row-start: 130;
+                grid-row-end: 135;
                 z-index:2;
             } 
-
-            .farfor-english-image {
-                grid-column-start: 35;
-                grid-column-end: 65;
-                grid-row-start: 145;
-                grid-row-end: 149;
+            
+            .farfor-english {
+                font-size: 45px;
+                grid-column-start: 20;
+                grid-column-end: 90;
+                grid-row-start: 130;
+                grid-row-end: 135;
                 opacity:0;
                 z-index:1;
             }
 
-            .akril-image {
-                grid-column-start: 35;
-                grid-column-end: 91;
-                grid-row-start: 150;
-                grid-row-end: 155;
+            .akril {
+                font-size: 45px;
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 136;
+                grid-row-end: 141;
                 z-index:2;
-            }  
-
-            .akril-english-image {
-                grid-column-start: 35;
-                grid-column-end: 89;
-                grid-row-start: 150;
-                grid-row-end: 154;
+            } 
+            
+            .akril-english {
+                font-size: 45px;
+                grid-column-start: 20;
+                grid-column-end: 80;
+                grid-row-start: 136;
+                grid-row-end: 141;
                 opacity:0;
                 z-index:1;
-            }   
+            }
 
-            .cena-image {
+            .cena {
+                font-size: 65px;
+                text-align: left;
                 grid-column-start: 10;
-                grid-column-end: 33;
-                grid-row-start: 155;
-                grid-row-end: 161;
+                grid-column-end: 38;
+                grid-row-start: 141;
+                grid-row-end: 149;
                 overflow: hidden;
                 z-index:2;
             }
-
-            .cena-english-image {
-                grid-column-start: 12;
-                grid-column-end: 37;
-                grid-row-start: 156;
-                grid-row-end: 160;
+            
+            .cena-english {
+                font-size: 65px;
+                text-align: left;
+                grid-column-start: 10;
+                grid-column-end: 38;
+                grid-row-start: 141;
+                grid-row-end: 148;
                 overflow: hidden;
                 opacity:0;
                 z-index:1;
             }
 
-            .price-image {
-                grid-column-start: 27;
-                grid-column-end: 44;
-                grid-row-start: 162;
-                grid-row-end: 167;
+            .price {
+                font-size: 45px;
+                grid-column-start: 25;
+                grid-column-end: 45;
+                grid-row-start: 149;
+                grid-row-end: 155;
                 overflow: hidden;
+            }
+
+            .tg {
+                display: grid;
+                grid-column-start: 35;
+                grid-column-end: 43;
+                grid-row-start: 169;
+                grid-row-end: 174;
+            }
+
+            .inst {
+                display: grid;
+                grid-column-start: 45;
+                grid-column-end: 53;
+                grid-row-start: 169;
+                grid-row-end: 174;    
+            }
+
+            .wup {
+                display: grid;
+                grid-column-start: 55;
+                grid-column-end: 63;
+                grid-row-start: 169;
+                grid-row-end: 174;
             }
         }
 
@@ -781,8 +915,8 @@
             .container {
                 display: grid;
                 grid-template-columns: repeat(100, 1fr);
-                grid-template-rows: repeat(200, 1fr);
-                height: 200%;
+                grid-template-rows: repeat(175, 1fr);
+                height: 175%;
             }
 
             .first_class {
@@ -902,105 +1036,142 @@
                 /*  */
                     /*  */
 
-            .razmer-image {
+            .razmer {
+                font-size: 40px;
                 grid-column-start: 10;
-                grid-column-end: 55;
-                grid-row-start: 120;
-                grid-row-end: 126;
+                grid-column-end: 60;
+                grid-row-start: 105;
+                grid-row-end: 111;
                 z-index:2;
             }
 
-            .razmer-english-image {
-                grid-column-start: 12;
-                grid-column-end: 45;
-                grid-row-start: 120;
-                grid-row-end: 125;
+            .razmer-english {
+                font-size: 40px;
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 105;
+                grid-row-end: 111;
                 opacity:0;
                 z-index:1;
             }
 
-            .cifri-image{
-                grid-column-start: 38;
-                grid-column-end: 75;
-                grid-row-start: 126;
-                grid-row-end: 131;
-            }
-
-            .materials-image {
-                grid-column-start: 10;
-                grid-column-end: 80;
-                grid-row-start: 138;
-                grid-row-end: 144;
-                z-index:2
-            }
-
-            .materials-english-image {
-                grid-column-start: 10;
-                grid-column-end: 80;
-                grid-row-start: 138;
-                grid-row-end: 143;
-                z-index:1;
-            }
-
-            .farfor-image {
-                grid-column-start: 30;
-                grid-column-end: 63;
-                grid-row-start: 144;
-                grid-row-end: 149;
+            .cifri {
+                font-size: 30px;
+                grid-column-start: 35;
+                grid-column-end: 85;
+                grid-row-start: 112;
+                grid-row-end: 116;
                 z-index:2;
             } 
 
-            .farfor-english-image {
+            .materials {
+                font-size: 40px;
+                grid-column-start: 10;
+                grid-column-end: 85;
+                grid-row-start: 122;
+                grid-row-end: 128;
+                z-index:2
+            }
+
+            .materials-english {
+                font-size: 40px;
+                grid-column-start: 10;
+                grid-column-end: 85;
+                grid-row-start: 122;
+                grid-row-end: 128;
+                z-index:1;
+            }
+
+            .farfor {
+                font-size: 30px;
                 grid-column-start: 15;
-                grid-column-end: 70;
-                grid-row-start: 145;
-                grid-row-end: 149;
+                grid-column-end: 85;
+                grid-row-start: 129;
+                grid-row-end: 134;
+                z-index:2;
+            } 
+
+            .farfor-english {
+                font-size: 30px;
+                grid-column-start: 15;
+                grid-column-end: 85;
+                grid-row-start: 129;
+                grid-row-end: 134;
                 opacity:0;
                 z-index:1;
             }
 
-            .akril-image {
+            .akril {
+                font-size: 30px;
                 grid-column-start: 15;
-                grid-column-end: 90;
+                grid-column-end: 95;
+                grid-row-start: 135;
+                grid-row-end: 140;
+                z-index:2;
+            } 
+
+            .akril-english {
+                font-size: 30px;
+                grid-column-start: 15;
+                grid-column-end: 95;
+                grid-row-start: 135;
+                grid-row-end: 140;
+                opacity:0;
+                z-index:1;
+            }
+
+            .cena {
+                font-size: 40px;
+                grid-column-start: 10;
+                grid-column-end: 40;
+                grid-row-start: 143;
+                grid-row-end: 150;
+                overflow: hidden;
+                z-index:2;
+            }
+
+            .cena-english {
+                font-size: 40px;
+                grid-column-start: 10;
+                grid-column-end: 50;
+                grid-row-start: 143;
+                grid-row-end: 150;
+                overflow: hidden;
+                opacity:0;
+                z-index:1;
+            }
+
+            .price {
+                font-size: 30px;
+                grid-column-start: 30;
+                grid-column-end: 55;
                 grid-row-start: 150;
                 grid-row-end: 155;
-                z-index:2;
-            }  
-
-            .akril-english-image {
-                grid-column-start: 15;
-                grid-column-end: 90;
-                grid-row-start: 150;
-                grid-row-end: 154;
-                opacity:0;
-                z-index:1;
-            }   
-
-            .cena-image {
-                grid-column-start: 10;
-                grid-column-end: 38;
-                grid-row-start: 159;
-                grid-row-end: 165;
                 overflow: hidden;
-                z-index:2;
             }
 
-            .cena-english-image {
-                grid-column-start: 12;
-                grid-column-end: 47;
-                grid-row-start: 159;
-                grid-row-end: 164;
-                overflow: hidden;
-                opacity:0;
-                z-index:1;
+            .tg {
+                display: grid;
+                grid-column-start: 35;
+                grid-column-end: 43;
+                grid-row-start: 169;
+                grid-row-end: 174;
             }
 
-            .price-image {
-                grid-column-start: 30;
-                grid-column-end: 58;
-                grid-row-start: 165;
-                grid-row-end: 170;
-                overflow: hidden;
+            .inst {
+                display: grid;
+                grid-column-start: 49;
+                grid-column-end: 57;
+                grid-row-start: 169;
+                grid-row-end: 174;    
+            }
+
+            .wup {
+                display: grid;
+                grid-column-start: 62;
+                grid-column-end: 70;
+                grid-row-start: 169;
+                grid-row-end: 174;
             }
         }
 
@@ -1139,110 +1310,147 @@
                 /*  */
                     /*  */
 
-            .razmer-image {
+                    .razmer {
+                font-size: 40px;
                 grid-column-start: 10;
-                grid-column-end: 35;
-                grid-row-start: 114;
-                grid-row-end: 124;
+                grid-column-end: 34;
+                grid-row-start: 108;
+                grid-row-end: 119;
                 z-index:2;
             }
 
-            .razmer-english-image {
-                grid-column-start: 10;
-                grid-column-end: 25;
-                grid-row-start: 114;
-                grid-row-end: 123;
+            .razmer-english {
+                font-size: 40px;
+                grid-column-start: 13;
+                grid-column-end: 29;
+                grid-row-start: 108;
+                grid-row-end: 119;
                 opacity:0;
                 z-index:1;
             }
 
-            .cifri-image{
-                grid-column-start: 30;
-                grid-column-end: 53;
-                grid-row-start: 125;
-                grid-row-end: 134;
+            .cifri {
+                font-size: 30px;
+                grid-column-start: 20;
+                grid-column-end: 52;
+                grid-row-start: 120;
+                grid-row-end: 129;
                 z-index:2;
-
             }
 
-            .materials-image {
+            .materials {
+                font-size: 40px;
                 grid-column-start: 10;
                 grid-column-end: 50;
-                grid-row-start: 144;
-                grid-row-end: 154;
+                grid-row-start: 136;
+                grid-row-end: 147;
                 z-index:2
             }
 
-            .materials-english-image {
+            .materials-english {
+                font-size: 40px;
                 grid-column-start: 10;
-                grid-column-end: 50;
-                grid-row-start: 144;
-                grid-row-end: 151;
+                grid-column-end: 45;
+                grid-row-start: 136;
+                grid-row-end: 147;
                 z-index:1;
             }
 
-            .farfor-image {
-                grid-column-start: 15;
-                grid-column-end: 37;
-                grid-row-start: 154;
-                grid-row-end: 163;
-                transform:scale(0.9);
+            .farfor {
+                font-size: 30px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 70;
+                grid-row-start: 147;
+                grid-row-end: 154;
                 z-index:2;
             } 
 
-            .farfor-english-image {
-                grid-column-start: 15;
-                grid-column-end: 45;
-                grid-row-start: 154;
+            .farfor-english {
+                font-size: 30px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 70;
+                grid-row-start: 147;
+                grid-row-end: 154;
+                opacity:0;
+                z-index:1;
+            }
+
+            .akril {
+                font-size: 30px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 70;
+                grid-row-start: 155;
+                grid-row-end: 162;
+                z-index:2;
+            } 
+
+            .akril-english {
+                font-size: 30px;
+                text-align: left;
+                grid-column-start: 20;
+                grid-column-end: 70;
+                grid-row-start: 155;
                 grid-row-end: 162;
                 opacity:0;
                 z-index:1;
             }
 
-            .akril-image {
-                grid-column-start: 15;
-                grid-column-end: 60;
-                grid-row-start: 164;
-                grid-row-end: 172;
+            .cena {
+                font-size: 40px;
+                grid-column-start: 9;
+                grid-column-end: 29;
+                grid-row-start: 168;
+                grid-row-end: 180;
+                overflow: hidden;
                 z-index:2;
-            }  
+            }
 
-            .akril-english-image {
-                grid-column-start: 15;
-                grid-column-end: 60;
-                grid-row-start: 164;
-                grid-row-end: 172;
+            .cena-english {
+                font-size: 40px;
+                grid-column-start: 9;
+                grid-column-end: 34;
+                grid-row-start: 168;
+                grid-row-end: 180;
+                overflow: hidden;
                 opacity:0;
                 z-index:1;
-            }   
-            
-            .cena-image {
-                grid-column-start: 10;
-                grid-column-end: 28;
-                grid-row-start: 178;
+            }
+
+            .price {
+                font-size: 30px;
+                grid-column-start: 15;
+                grid-column-end: 30;
+                grid-row-start: 181;
                 grid-row-end: 188;
                 overflow: hidden;
-                z-index:2;
             }
 
-            .cena-english-image {
-                grid-column-start: 10;
-                grid-column-end: 33;
-                grid-row-start: 178;
-                grid-row-end: 186;
-                overflow: hidden;
-                opacity:0;
-                z-index:1;
-            }
-
-            .price-image {
-                grid-column-start: 25;
-                grid-column-end: 38;
-                grid-row-start: 188;
+            .tg {
+                display: grid;
+                grid-column-start: 38;
+                grid-column-end: 43;
+                grid-row-start: 190;
                 grid-row-end: 197;
-                overflow: hidden;
             }
 
+            .inst {
+                display: grid;
+                grid-column-start: 47;
+                grid-column-end: 52;
+                grid-row-start: 190;
+                grid-row-end: 197;    
+            }
+
+            .wup {
+                display: grid;
+                grid-column-start: 56;
+                grid-column-end: 61;
+                grid-row-start: 190;
+                grid-row-end: 197;
+            }
         }
 
         .morphing-btn-wrap {
@@ -3447,60 +3655,72 @@
     <div class="container">
         <div class="first_class">
 
-            <div class="razmer-image">
-                <img src = "/media/works/eye/first_part/text/razmer.png" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%;  overflow:hidden;'>
+            <div class="razmer" onmouseenter = razmerSwitchToEnglish() onmouseleave = razmerBackToRussian()>
+                РАЗМЕР:
             </div>
             
-            <div class="razmer-english-image">
-                <img src = "/media/works/eye/first_part/text/english/razmer-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; min-width:100%;min-height:100%;  overflow:hidden;'>
+            <div class="razmer-english">
+                SIZE:
             </div>
 
-            <div class="cifri-image">
-                <img src = "/media/works/eye/first_part/text/cifri.png" style = 'max-width:100%; max-height:100%;min-width:100%;min-height:100%; overflow:hidden;'>
+            <div class="cifri">
+                17х5х7
             </div>
 
-            <div class="materials-image">
-                <img src = "/media/works/eye/first_part/text/materials.png"  onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian() style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="materials" onmouseenter = materialsSwitchToEnglish() onmouseleave = materialsBackToRussian()>
+                МАТЕРИАЛЫ:
             </div>
 
-            <div class="materials-english-image">
-                <img src = "/media/works/eye/first_part/text/english/materials-english.png" style = 'max-width:100%; max-height:100%; min-width:100%; min-height:100%; overflow:hidden;'>
+            <div class="materials-english">
+                MATERIALS:
             </div>
 
-            <div class="farfor-image">
-                <img src = "/media/works/eye/first_part/text/farfor.png" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="farfor" onmouseenter = farforSwitchToEnglish() onmouseleave = farforBackToRussian() >
+                ФАРФОР
             </div>
 
-            <div class="farfor-english-image">
-                <img src = "/media/works/eye/first_part/text/english/farfor-english.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="farfor-english">
+                PORCELAIN
             </div>
 
-            <div class="akril-image">
-                <img src = "/media/works/eye/first_part/text/akril.png" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian() style = 'max-width:100%; max-height:100%; min-width:100%; min-height:100%; overflow:hidden;'>
+            <div class="akril" onmouseenter = akrilSwitchToEnglish() onmouseleave = akrilBackToRussian()>
+                АКРИЛ ДЛЯ КЕРАМИКИ
             </div>
 
-            <div class="akril-english-image">
-                <img src = "/media/works/eye/first_part/text/english/akril-english.png" style = 'max-width:100%; max-height:100%; overflow:hidden; min-width:100%; min-height:100%;'>
+            <div class="akril-english">
+                ACRYLIC FOR CERAMICS
             </div>
 
-            <div class="cena-image">
-                <img src = "/media/works/eye/first_part/text/cena.png" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian() style = 'max-width:100%; max-height:100%; min-width:100%; min-height:100%; overflow:hidden;'>
+            <div class="cena" onmouseenter = cenaSwitchToEnglish() onmouseleave = cenaBackToRussian()>
+                ЦЕНА:
             </div>
 
-            <div class="cena-english-image">
-                <img src = "/media/works/eye/first_part/text/english/cena-english.png" style = 'max-width:100%; max-height:100%; min-width:100%; min-height:100%; overflow:hidden;'>
+            <div class="cena-english">
+                PRICE:
             </div>
 
-            <div class="price-image">
-                <img src = "/media/works/eye/first_part/text/price.png" style = 'min-width:100%; min-height:100%; max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="price">
+                5000
+            </div>
+
+            <div class="tg">
+                <img src = "/media/works/eye/socials/tg.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
+            </div>
+
+            <div class = "inst">
+                <img src = "/media/works/eye/socials/inst.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
+            </div>
+
+            <div class="wup">
+                <img src = "/media/works/eye/socials/wup.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
             </div>
 
             <div class="button-image">
                 <img src = "/media/works/eye/first_part/buy_but/eye-btn.png"style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
-            <div class="text-buy-image" >
-                <img src = "/media/works/eye/first_part/buy_but/butbuttton.png" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian() style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="text-buy-image" onmouseenter = buySwitchToEnglish() onmouseleave = buyBackToRussian()>
+                <img src = "/media/works/eye/first_part/buy_but/butbuttton.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
             </div>
 
             <div class="glaz-buy-image">
@@ -3758,14 +3978,14 @@
 
     function buySwitchToEnglish() {
         var english_buy_appears = anime({
-            targets:'.glaz-buy-image',
+            targets:'.glaz-buy',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_buy = anime({
-            targets:'.text-buy-image',
+            targets:'.text-buy',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -3774,7 +3994,7 @@
 
     function buyBackToRussian() {
         var disappear_english_buy = anime({
-            targets:'.glaz-buy-image',
+            targets:'.glaz-buy',
             opacity: 0,
             duration:9000,
             
@@ -3782,7 +4002,7 @@
         })
 
         var buy_appears = anime({
-            targets:'.text-buy-image',
+            targets:'.text-buy',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -3791,14 +4011,14 @@
 
     function razmerSwitchToEnglish() {
         var english_razmer_appears = anime({
-            targets:'.razmer-english-image',
+            targets:'.razmer-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_razmer = anime({
-            targets:'.razmer-image',
+            targets:'.razmer',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -3808,7 +4028,7 @@
 
     function razmerBackToRussian() {
         var disappear_english_razmer = anime({
-            targets:'.razmer-english-image',
+            targets:'.razmer-english',
             opacity: 0,
             duration:9000,
             
@@ -3816,7 +4036,7 @@
         })
 
         var razmer_appears = anime({
-            targets:'.razmer-image',
+            targets:'.razmer',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -3826,14 +4046,14 @@
 
     function materialsSwitchToEnglish() {
         var english_materials_appears = anime({
-            targets:'.materials-english-image',
+            targets:'.materials-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_materials = anime({
-            targets:'.materials-image',
+            targets:'.materials',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -3842,7 +4062,7 @@
 
     function materialsBackToRussian() {
         var disappear_english_materials = anime({
-            targets:'.materials-english-image',
+            targets:'.materials-english',
             opacity: 0,
             duration:9000,
             
@@ -3850,7 +4070,7 @@
         })
 
         var materials_appears = anime({
-            targets:'.materials-image',
+            targets:'.materials',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -3859,14 +4079,14 @@
 
     function farforSwitchToEnglish() {
         var english_farfor_appears = anime({
-            targets:'.farfor-english-image',
+            targets:'.farfor-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_farfor = anime({
-            targets:'.farfor-image',
+            targets:'.farfor',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -3875,7 +4095,7 @@
 
     function farforBackToRussian() {
         var disappear_english_farfor = anime({
-            targets:'.farfor-english-image',
+            targets:'.farfor-english',
             opacity: 0,
             duration:9000,
             
@@ -3883,7 +4103,7 @@
         })
 
         var farfor_appears = anime({
-            targets:'.farfor-image',
+            targets:'.farfor',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -3892,14 +4112,14 @@
 
     function akrilSwitchToEnglish() {
         var english_akril_appears = anime({
-            targets:'.akril-english-image',
+            targets:'.akril-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_akril = anime({
-            targets:'.akril-image',
+            targets:'.akril',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -3908,7 +4128,7 @@
 
     function akrilBackToRussian() {
         var disappear_english_akril = anime({
-            targets:'.akril-english-image',
+            targets:'.akril-english',
             opacity: 0,
             duration:9000,
             
@@ -3916,7 +4136,7 @@
         })
 
         var akril_appears = anime({
-            targets:'.akril-image',
+            targets:'.akril',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -3925,14 +4145,14 @@
 
     function cenaSwitchToEnglish() {
         var english_cena_appears = anime({
-            targets:'.cena-english-image',
+            targets:'.cena-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_cena = anime({
-            targets:'.cena-image',
+            targets:'.cena',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -3941,14 +4161,14 @@
 
     function cenaBackToRussian() {
         var disappear_english_cena = anime({
-            targets:'.cena-english-image',
+            targets:'.cena-english',
             opacity: 0,
             duration:9000,
             autoplay:true,
         })
 
         var cena_appears = anime({
-            targets:'.cena-image',
+            targets:'.cena',
             opacity: 1,
             duration:9000,
             autoplay:true,
