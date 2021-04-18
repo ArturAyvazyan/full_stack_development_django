@@ -8,8 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
     <title>main</title>
-    <link rel='stylesheet' href="{% static 'fullpage.min.css' %}">
-    <!-- <link rel='stylesheet' href="{% static 'jquery.pagepiling.css' %}"> -->
 </head>
 
 
@@ -17,27 +15,9 @@
     <style>
 
         html, body {
-            height: 100%;
-        }
-
-        .section {
-            display: inline-block;
-            font-size: 3em;
-            z-index: 1;
-            min-width: 100%;
-            min-height: 100%;
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        #first {
             background: url("{% static '/homepage/backs.png' %}");
             background-size: cover;
-            display:grid;
-            min-width: 100vw;
-            min-height: 100vh;
-            max-width: 100vw;
-            max-height: 100vh;
+            overflow-x: hidden;
         }
 
         .first_slide_wrapper {
@@ -60,35 +40,17 @@
             overflow: hidden;
         }
 
-        .autor {
-            display:inline-block;
-            grid-column-start: 85;
-            grid-column-end: 94;
-            grid-row-start: 81;
-            grid-row-end: 88;
-            transform:scale(0.8);
-        }
-
-        .margarita {
-            display:inline-block;
-            position:sticky;
-            grid-column-start: 80;
-            grid-column-end: 99;
-            grid-row-start: 89;
+        .art {
+            display: none;
+            /* font-family: LSDFont;
+            font-size: 50px;
+            display: inline-block;
+            grid-column-start: 89;
+            grid-column-end: 96;
+            grid-row-start: 90;
             grid-row-end: 95;
-            transform:scale(0.8)
+            overflow: hidden; */
         }
-
-        .sogrina {
-            display:inline-block;
-            grid-column-start: 83;
-            grid-column-end: 97;
-            grid-row-start: 93;
-            grid-row-end: 100;
-            transform:scale(0.75);
-            margin-right: 5px;
-        }
-
         @media screen and (max-width: 1200px), (max-device-width: 1200px) {
 
             .animated_logo {
@@ -98,6 +60,420 @@
                 grid-row-start: 1;
                 grid-row-end: 99;
                 overflow: hidden;
+            }
+
+        }
+
+        @media screen and (max-width: 900px), (max-device-width: 900px) {
+            
+            .animated_logo {
+                grid-column-start: 1;
+                grid-column-end: 70;
+                grid-row-start: 1;
+                grid-row-end: 75;
+                transform: scale(1.6) translateY(15vh) translateX(13vh);
+            }
+
+        }
+
+        @media screen and (max-width: 600px), (max-device-width: 600px) {
+            
+            .animated_logo {
+                grid-column-start: 1;
+                grid-column-end: 65;
+                grid-row-start: 1;
+                grid-row-end: 50;
+                overflow: hidden;
+                transform: scale(2) translateY(17vh) translateX(8vh);
+            }
+
+        }
+
+        @media screen and (max-height: 450px), (max-device-height: 450px) {
+            
+            .animated_logo {
+                grid-column-start: 10;
+                grid-column-end: 65;
+                grid-row-start: 10;
+                grid-row-end: 85;
+                overflow: hidden;
+            }
+
+        }
+
+        .slide_container {
+            display: grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(85, 1fr);
+            overflow: hidden;
+            max-width: 100vw;
+            max-height: 85vh;
+        }
+
+
+        .arrow_left{
+            font-size: 75px;
+            font-family: LSDFont;
+            color: black;
+            grid-column-start: 3;
+            grid-column-end: 7;
+            grid-row-start: 34;
+            grid-row-end: 39;
+            z-index:25;
+            cursor: pointer;
+        }
+
+        .arrow_right {
+            font-size: 75px;
+            font-family: LSDFont;
+            color: black;
+            grid-column-start: 94;
+            grid-column-end: 97;
+            grid-row-start: 34;
+            grid-row-end: 39;
+            z-index:25;
+            cursor: pointer;
+        }
+        
+        .first_box {
+            display: inline-block;
+            grid-column-start: 10;
+            grid-column-end: 32;
+            grid-row-start: 14;
+            grid-row-end: 79;
+            z-index:9;
+            transform: scale(1.1);
+        }
+
+        .second_box {
+            display: inline-block;
+            grid-column-start: 39;
+            grid-column-end: 64;
+            grid-row-start: 25;
+            grid-row-end: 92;
+            z-index:9;
+            transform: scale(1.1);
+        }
+
+        .third_box {
+            display: inline-block;
+            grid-column-start: 68;
+            grid-column-end: 96;
+            grid-row-start: 30;
+            grid-row-end: 79;
+            z-index:9;
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width: 1200px), (max-device-width: 1200px) {
+
+            #arrow_left{
+                grid-column-start: 5;
+                grid-column-end: 10;
+                grid-row-start: 37;
+                grid-row-end: 42;
+                z-index:25;
+                cursor: pointer;
+                transform: scale(0.8);
+            }
+
+            #arrow_right {
+                grid-column-start: 94;
+                grid-column-end: 99;
+                grid-row-start: 37;
+                grid-row-end: 42;
+                z-index:25;
+                cursor: pointer;
+                transform: scale(0.8);
+            }
+            
+            .first_box {
+                display: inline-block;
+                grid-column-start: 10;
+                grid-column-end: 36;
+                grid-row-start: 5;
+                grid-row-end: 45;
+                z-index: 9;
+            }
+
+            .second_box {
+                display: inline-block;
+                grid-column-start: 38;
+                grid-column-end: 68;
+                grid-row-start: 30;
+                grid-row-end: 77;
+                z-index: 9;
+                
+            }
+
+            .third_box {
+                display: inline-block;
+                grid-column-start: 68;
+                grid-column-end: 96;
+                grid-row-start: 20;
+                grid-row-end: 83;
+                z-index: 9;
+            }
+        }
+
+        @media screen and (max-width: 900px), (max-device-width: 900px) {
+
+            .arrow_left{
+                grid-column-start: 5;
+                grid-column-end: 10;
+                grid-row-start: 43;
+                grid-row-end: 48;
+                z-index:25;
+                cursor: pointer;
+            }
+
+            .arrow_right {
+                grid-column-start: 94;
+                grid-column-end: 99;
+                grid-row-start: 43;
+                grid-row-end: 48;
+                z-index:25;
+                cursor: pointer;
+            }
+
+            .first_box {
+                display: inline-block;
+                grid-column-start: 8;
+                grid-column-end: 40;
+                grid-row-start: 18;
+                grid-row-end: 62;
+                z-index:9;
+            }
+
+            .second_box {
+                display: inline-block;
+                grid-column-start: 35;
+                grid-column-end: 70;
+                grid-row-start: 50;
+                grid-row-end: 85;
+                z-index:9;
+            }
+
+            .third_box {
+                display: inline-block;
+                grid-column-start: 70;
+                grid-column-end: 97;
+                grid-row-start: 20;
+                grid-row-end: 40;
+                z-index:9;
+            }
+
+        }
+
+        @media screen and (max-width: 600px), (max-device-width: 600px) {
+
+            .arrow_left{
+                font-size: 50px;
+                grid-column-start: 3;
+                grid-column-end: 5;
+                grid-row-start: 39;
+                grid-row-end: 42;
+                z-index:25;
+                cursor: pointer;
+            }
+
+            .arrow_right {
+                font-size: 50px;
+                grid-column-start: 93;
+                grid-column-end: 97;
+                grid-row-start: 39;
+                grid-row-end: 42;
+                z-index:25;
+                cursor: pointer;
+            }
+
+            .first_box {
+                display: inline-block;
+                grid-column-start: 30;
+                grid-column-end: 70;
+                grid-row-start: 3;
+                grid-row-end: 33;
+                z-index:9;
+            }
+
+            .second_box {
+                display: inline-block;
+                grid-column-start: 25;
+                grid-column-end: 65;
+                grid-row-start: 33;
+                grid-row-end: 63;
+                z-index:9;
+            }
+
+            .third_box {
+                display: inline-block;
+                grid-column-start: 40;
+                grid-column-end: 90;
+                grid-row-start: 63;
+                grid-row-end: 87;
+                z-index:9;    
+            }
+
+        }
+
+        @media screen and (max-height: 450px), (max-device-height: 450px) {
+            
+            .arrow_left{
+                font-size: 55px;
+                grid-column-start: 3;
+                grid-column-end: 5;
+                grid-row-start: 39;
+                grid-row-end: 42;
+                z-index:25;
+                cursor: pointer;
+            }
+
+            .arrow_right {
+                font-size: 55px;
+                grid-column-start: 93;
+                grid-column-end: 97;
+                grid-row-start: 39;
+                grid-row-end: 42;
+                z-index:25;
+                cursor: pointer;
+            }
+
+            .first_box {
+                display: inline-block;
+                grid-column-start:10;
+                grid-column-end: 35;
+                grid-row-start: 15;
+                grid-row-end: 65;
+                z-index:9;
+            }
+
+            .second_box {
+                display: inline-block;
+                grid-column-start: 40;
+                grid-column-end: 65;
+                grid-row-start: 30;
+                grid-row-end: 85;
+                z-index:9;
+            }
+
+            .third_box {
+                display: inline-block;
+                grid-column-start: 70;
+                grid-column-end: 95;
+                grid-row-start: 20;
+                grid-row-end: 55;
+                z-index:9;
+            }
+        }
+       
+        @font-face {
+            font-family: LSDFont;
+            src: url("{% static '/homepage/super_font.ttf' %}");
+        }
+
+        .third_slide_wrapper {
+            display: grid;
+            grid-template-columns: repeat(100, 1fr);
+            grid-template-rows: repeat(70, 1fr);
+            overflow: hidden;
+            max-width: 100vw;
+            max-height: 70vh;
+        }
+
+        .home_logo {
+            display: inline-block;
+            grid-column-start: 5;
+            grid-column-end: 20;
+            grid-row-start: 1;
+            grid-row-end: 46;
+
+        }
+
+        .autor {
+            font-family: LSDFont;
+            font-size: 35px;
+            color: black;
+            text-align: center;
+            display:inline-block;
+            grid-column-start: 83;
+            grid-column-end: 97;
+            grid-row-start: 73;
+            grid-row-end: 80;
+        }
+
+        .margarita {
+            font-family: LSDFont;
+            font-size: 30px;
+            color: black;
+            text-align: center;
+            display:inline-block;
+            position:sticky;
+            grid-column-start: 83;
+            grid-column-end: 97;
+            grid-row-start: 82;
+            grid-row-end: 88;
+        }
+
+        .sogrina {
+            font-family: LSDFont;
+            font-size: 30px;
+            color: black;
+            text-align: center;
+            display:inline-block;
+            grid-column-start: 83;
+            grid-column-end: 97;
+            grid-row-start: 90;
+            grid-row-end: 96;
+        }
+
+        .third_words {
+            display: inline-block;
+            font-family: LSDFont;
+            font-size: 30px;
+            color: #270E47;
+            grid-column-start: 30;
+            grid-column-end: 60;
+            grid-row-start: 5;
+            grid-row-end: 65;
+            opacity: 0;
+        }
+
+        .tg_logo {
+            display: inline-block;
+            grid-column-start: 48;
+            grid-column-end: 50;
+            grid-row-start: 94;
+            grid-row-end: 98;
+        }
+
+        .inst_logo {
+            display: inline-block;
+            grid-column-start: 51;
+            grid-column-end: 53;
+            grid-row-start: 94;
+            grid-row-end: 98;
+        } 
+
+        .wup_logo {
+            display: inline-block;
+            grid-column-start: 54;
+            grid-column-end: 56;
+            grid-row-start: 94;
+            grid-row-end: 98;
+        } 
+        
+        @media screen and (max-width: 1200px), (max-device-width: 1200px) {
+            
+            .third_words {
+                display: inline-block;
+                font-family: LSDFont;
+                font-size:  22px;
+                color: #270E47;
+                grid-column-start: 35;
+                grid-column-end: 60;
+                grid-row-start: 15;
+                grid-row-end: 35;
+                opacity: 0;
             }
 
             .autor {
@@ -128,17 +504,57 @@
                 transform:scale(1);
                 margin-right: 5px;
             }
+            
+            .home_logo {
+                display: inline-block;
+                grid-column-start: 5;
+                grid-column-end: 25;
+                grid-row-start: 15;
+                grid-row-end: 50;
+
+            }
+
+            .tg_logo {
+                display: inline-block;
+                grid-column-start: 46;
+                grid-column-end: 48;
+                grid-row-start: 90;
+                grid-row-end: 94;
+                transform:scale(2);
+            }
+
+            .inst_logo {
+                display: inline-block;
+                grid-column-start: 51;
+                grid-column-end: 53;
+                grid-row-start: 90;
+                grid-row-end: 94;
+                transform:scale(2);
+            }
+
+            .wup_logo {
+                display: inline-block;
+                grid-column-start: 56;
+                grid-column-end: 58;
+                grid-row-start: 90;
+                grid-row-end: 94;
+                transform:scale(2);
+            } 
 
         }
 
         @media screen and (max-width: 900px), (max-device-width: 900px) {
-            
-            .animated_logo {
-                grid-column-start: 1;
-                grid-column-end: 70;
-                grid-row-start: 1;
-                grid-row-end: 75;
-                transform: scale(1.6) translateY(15vh) translateX(13vh);
+
+            .third_words {
+                display: inline-block;
+                font-family: LSDFont;
+                font-size:  25px;
+                color: #270E47;
+                grid-column-start: 40;
+                grid-column-end: 90;
+                grid-row-start: 15;
+                grid-row-end: 35;
+                opacity: 0;
             }
 
             .autor {
@@ -170,847 +586,38 @@
                 
             }
 
-        }
-
-        @media screen and (max-width: 600px), (max-device-width: 600px) {
-            
-            .section {
-                display: inline-block;
-                font-size: 3em;
-                z-index: 1;
-                min-width: 100%;
-                min-height: 100%;
-                max-width: 100%;
-                max-height: 100%;
-            }
-            
-            .animated_logo {
-                grid-column-start: 1;
-                grid-column-end: 65;
-                grid-row-start: 1;
-                grid-row-end: 50;
-                overflow: hidden;
-                transform: scale(2) translateY(17vh) translateX(8vh);
-            }
-
-            .autor {
-                display:inline-block;
-                grid-column-start: 75;
-                grid-column-end: 94;
-                grid-row-start: 73;
-                grid-row-end: 80;
-                transform:scale(1.2) translateX(-0.4em);
-            }
-
-            .margarita {
-                display:inline-block;
-                position:sticky;
-                grid-column-start: 70;
-                grid-column-end: 99;
-                grid-row-start: 81;
-                grid-row-end: 87;
-                transform:scale(1.5) translateX(-2vh);
-            }
-
-            .sogrina {
-                display:inline-block;
-                grid-column-start: 73;
-                grid-column-end: 97;
-                grid-row-start: 85;
-                grid-row-end: 92;
-                transform:scale(1.5) translateX(-2vh);
-            }
-        }
-
-        @media screen and (max-height: 450px), (max-device-height: 450px) {
-            
-            .animated_logo {
-                grid-column-start: 10;
-                grid-column-end: 45;
-                grid-row-start: 10;
-                grid-row-end: 25;
-                overflow: hidden;
-                transform: translateX(2em) scale(2);
-            }
-
-            .autor {
-                display:inline-block;
-                grid-column-start: 76;
-                grid-column-end: 84;
-                grid-row-start: 10;
-                grid-row-end: 11;
-                transform: scale(1.6);
-                
-            }
-
-            .margarita {
-                display:inline-block;
-                position:sticky;
-                grid-column-start: 75;
-                grid-column-end: 85;
-                grid-row-start: 13;
-                grid-row-end: 14;
-                transform: translateY(2vh) scale(2.5);
-            }
-
-            .sogrina {
-                display:inline-block;
-                grid-column-start: 73;
-                grid-column-end: 87;
-                grid-row-start: 15;
-                grid-row-end: 16;
-                transform: translateY(2vh) scale(1.8);
-            }
-        }
-
-        #second_slide1 {
-            background: url("{% static '/homepage/backs.png' %}");
-            background-size: cover;
-            display:grid;
-            min-width: 100vw;
-            min-height: 100vh;
-        }
-
-        .slide_one_container {
-            display: grid;
-            grid-template-columns: repeat(100, 1fr);
-            grid-template-rows: repeat(100, 1fr);
-            overflow: hidden;
-            max-width: 100vw;
-            max-height: 100vh;
-        }
-
-        .first_slide_first_box {
-            display: inline-block;
-            grid-column-start: 4;
-            grid-column-end: 31;
-            grid-row-start: 15;
-            grid-row-end: 75;
-        }
-
-        .image_first_slide_first_box {
-            display: inline-block;
-            grid-column-start: 8;
-            grid-column-end: 26;
-            grid-row-start: 19;
-            grid-row-end: 72;
-            /* margin-top: -30px; */
-        }
-
-        .first_slide_second_box {
-            display: inline-block;
-            grid-column-start: 36;
-            grid-column-end: 66;
-            grid-row-start: 25;
-            grid-row-end: 85;
-        }
-
-        .image_first_slide_second_box {
-            display: inline-block;
-            grid-column-start: 40;
-            grid-column-end: 62;
-            grid-row-start: 35;
-            grid-row-end: 83;
-        }
-
-        .first_slide_third_box {
-            display: inline-block;
-            grid-column-start: 68;
-            grid-column-end: 96;
-            grid-row-start: 19;
-            grid-row-end: 82;
-        }
-
-        .image_first_slide_third_box {
-            display: inline-block;
-            grid-column-start: 70;
-            grid-column-end: 92;
-            grid-row-start: 41;
-            grid-row-end: 77;
-        }
-
-        @media screen and (max-width: 1200px), (max-device-width: 1200px) {
-
-            .first_slide_first_box {
-                display: inline-block;
-                grid-column-start: 7;
-                grid-column-end: 34;
-                grid-row-start: 25;
-                grid-row-end: 65;
-            }
-
-            .image_first_slide_first_box {
-                display: inline-block;
-                grid-column-start: 11;
-                grid-column-end: 29;
-                grid-row-start: 29;
-                grid-row-end: 62;
-            }
-
-            .first_slide_second_box {
-                display: inline-block;
-                grid-column-start: 36;
-                grid-column-end: 66;
-                grid-row-start: 35;
-                grid-row-end: 80;
-            }
-
-            .image_first_slide_second_box {
-                display: inline-block;
-                grid-column-start: 40;
-                grid-column-end: 62;
-                grid-row-start: 43;
-                grid-row-end: 83;
-            }
-
-            .first_slide_third_box {
-                display: inline-block;
-                grid-column-start: 68;
-                grid-column-end: 96;
-                grid-row-start: 20;
-                grid-row-end: 83;
-            }
-
-            .image_first_slide_third_box {
-                display: inline-block;
-                grid-column-start: 70;
-                grid-column-end: 92;
-                grid-row-start: 31;
-                grid-row-end: 67;
-            }
-        }
-
-        @media screen and (max-width: 900px), (max-device-width: 900px) {
-
-            .first_slide_first_box {
-                display: inline-block;
-                grid-column-start: 8;
-                grid-column-end: 40;
-                grid-row-start: 20;
-                grid-row-end: 40;
-            }
-
-            .image_first_slide_first_box {
-                display: inline-block;
-                grid-column-start: 14;
-                grid-column-end: 32;
-                grid-row-start: 25;
-                grid-row-end: 50;
-                /* margin-top: -30px; */
-            }
-
-            .first_slide_second_box {
-                display: inline-block;
-                grid-column-start: 40;
-                grid-column-end: 71;
-                grid-row-start: 50;
-                grid-row-end: 80;
-            }
-
-            .image_first_slide_second_box {
-                display: inline-block;
-                grid-column-start: 43;
-                grid-column-end: 65;
-                grid-row-start: 56;
-                grid-row-end: 83;
-            }
-
-            .first_slide_third_box {
-                display: inline-block;
-                grid-column-start: 71;
-                grid-column-end: 98;
-                grid-row-start: 10;
-                grid-row-end: 30;
-            }
-
-            .image_first_slide_third_box {
-                display: inline-block;
-                grid-column-start: 72;
-                grid-column-end: 94;
-                grid-row-start: 20;
-                grid-row-end: 35;
-            }
-        }
-
-        @media screen and (max-width: 600px), (max-device-width: 600px) {
-
-            .first_slide_first_box {
-                display: inline-block;
-                grid-column-start: 30;
-                grid-column-end: 70;
-                grid-row-start: 3;
-                grid-row-end: 33;
-            }
-
-            .image_first_slide_first_box {
-                display: inline-block;
-                grid-column-start: 31;
-                grid-column-end: 67;
-                grid-row-start: 3;
-                grid-row-end: 27;
-                transform: scale(0.8);
-            }
-
-            .first_slide_second_box {
-                display: inline-block;
-                grid-column-start: 25;
-                grid-column-end: 65;
-                grid-row-start: 33;
-                grid-row-end: 63;
-            }
-
-            .image_first_slide_second_box {
-                display: inline-block;
-                grid-column-start: 26;
-                grid-column-end: 64;
-                grid-row-start: 33;
-                grid-row-end: 62;
-                transform:scale(0.9);
-            }
-
-            .first_slide_third_box {
-                display: inline-block;
-                grid-column-start: 40;
-                grid-column-end: 90;
-                grid-row-start: 63;
-                grid-row-end: 87;
-                
-            }
-
-            .image_first_slide_third_box {
-                display: inline-block;
-                grid-column-start: 40;
-                grid-column-end: 85;
-                grid-row-start: 73;
-                grid-row-end: 85;
-                transform: scale(0.9);
-            }
-        }
-
-        @media screen and (max-height: 450px), (max-device-height: 450px) {
-            .first_slide_first_box {
-                display: inline-block;
-                grid-column-start:10;
-                grid-column-end: 35;
-                grid-row-start: 10;
-                grid-row-end: 35;
-            }
-
-            .image_first_slide_first_box {
-                display: inline-block;
-                grid-column-start: 14;
-                grid-column-end: 31;
-                grid-row-start: 14;
-                grid-row-end: 63;
-                /* margin-top: -30px; */
-            }
-
-            .first_slide_second_box {
-                display: inline-block;
-                grid-column-start: 40;
-                grid-column-end: 65;
-                grid-row-start: 30;
-                grid-row-end: 55;
-            }
-
-            .image_first_slide_second_box {
-                display: inline-block;
-                grid-column-start: 42;
-                grid-column-end: 62;
-                grid-row-start: 37;
-                grid-row-end: 78;
-                transform:scale(0.9);
-            }
-
-            .first_slide_third_box {
-                display: inline-block;
-                grid-column-start: 70;
-                grid-column-end: 95;
-                grid-row-start: 10;
-                grid-row-end: 35;
-            }
-
-            .image_first_slide_third_box {
-                display: inline-block;
-                grid-column-start: 72;
-                grid-column-end: 91;
-                grid-row-start: 28;
-                grid-row-end: 60;
-            }
-        }
-
-        #second_slide2 {
-            background: url("{% static '/homepage/backs.png' %}");
-            background-size: cover;
-            min-width: 100vw;
-            min-height: 100vh;
-        }
-
-        .slide_two_container {
-            display: grid;
-            grid-template-columns: repeat(100, 1fr);
-            grid-template-rows: repeat(100, 1fr);
-            overflow: hidden;
-            max-width: 100vw;
-            max-height: 100vh;
-        }
-
-        .second_slide_first_box {
-            display: inline-block;
-            grid-column-start: 6;
-            grid-column-end: 33;
-            grid-row-start: 40;
-            grid-row-end: 80;
-        }
-
-        .image_second_slide_first_box {
-            display: inline-block;
-            grid-column-start: 8;
-            grid-column-end: 27;
-            grid-row-start: 48;
-            grid-row-end: 83;
-        }
-
-        .second_slide_second_box {
-            display: inline-block;
-            grid-column-start: 34;
-            grid-column-end: 64;
-            grid-row-start: 15;
-            grid-row-end: 55;
-        }
-
-        .image_second_slide_second_box {
-            display: inline-block;
-            grid-column-start: 38;
-            grid-column-end: 55;
-            grid-row-start: 25;
-            grid-row-end: 70;
-        }
-
-        .second_slide_third_box {
-            display: inline-block;
-            grid-column-start: 68;
-            grid-column-end: 96;
-            grid-row-start: 25;
-            grid-row-end: 60;
-        }
-
-        .image_second_slide_third_box {
-            display: inline-block;
-            grid-column-start: 70;
-            grid-column-end: 90;
-            grid-row-start: 35;
-            grid-row-end: 70;
-        }
-
-        @media screen and (max-width: 1200px), (max-device-width: 1200px) {
-            
-        }
-        @media screen and (max-width: 900px), (max-device-width: 900px) {
-
-            .second_slide_first_box {
-                display: inline-block;
-                grid-column-start: 8;
-                grid-column-end: 38;
-                grid-row-start: 55;
-                grid-row-end: 70;
-            }
-
-            .image_second_slide_first_box {
-                display: inline-block;
-                grid-column-start:12;
-                grid-column-end: 31;
-                grid-row-start: 60;
-                grid-row-end: 77;
-            }
-
-            .second_slide_second_box {
-                display: inline-block;
-                grid-column-start: 36;
-                grid-column-end: 66;
-                grid-row-start: 10;
-                grid-row-end: 25;
-            }
-
-            .image_second_slide_second_box {
-                display: inline-block;
-                grid-column-start: 41;
-                grid-column-end: 58;
-                grid-row-start: 16;
-                grid-row-end: 36;
-            }
-
-            .second_slide_third_box {
-                display: inline-block;
-                grid-column-start: 70;
-                grid-column-end: 97;
-                grid-row-start: 30;
-                grid-row-end: 42;
-            }
-
-            .image_second_slide_third_box {
-                display: inline-block;
-                grid-column-start: 73;
-                grid-column-end: 91;
-                grid-row-start: 36;
-                grid-row-end: 63;
-            }   
-        }
-
-        @media screen and (max-width: 600px), (max-device-width: 600px) {
-
-            .second_slide_first_box {
-                display: inline-block;
-                grid-column-start: 30;
-                grid-column-end: 75;
-                grid-row-start: 7;
-                grid-row-end: 40;
-            }
-
-            .image_second_slide_first_box {
-                display: inline-block;
-                grid-column-start: 33;
-                grid-column-end: 67;
-                grid-row-start: 10;
-                grid-row-end: 29;
-                transform: scale(0.9);
-            }
-
-            .second_slide_second_box {
-                display: inline-block;
-                grid-column-start: 40;
-                grid-column-end: 85;
-                grid-row-start: 38;
-                grid-row-end: 75;
-            }
-
-            .image_second_slide_second_box {
-                display: inline-block;
-                grid-column-start: 41;
-                grid-column-end: 76;
-                grid-row-start: 36;
-                grid-row-end: 64;
-                transform:scale(0.8);
-            }
-
-            .second_slide_third_box {
-                display: inline-block;
-                grid-column-start: 40;
-                grid-column-end: 85;
-                grid-row-start: 67;
-                grid-row-end: 87;
-                
-            }
-
-            .image_second_slide_third_box {
-                display: inline-block;
-                grid-column-start: 41;
-                grid-column-end: 82;
-                grid-row-start: 69;
-                grid-row-end: 86;
-                transform: scale(0.9);
-            }
-        }
-
-        @media screen and (max-height: 450px), (max-device-height: 450px) {
-            
-            .second_slide_first_box {
-                display: inline-block;
-                grid-column-start: 10;
-                grid-column-end: 35;
-                grid-row-start: 10;
-                grid-row-end: 35;
-            }
-
-            .image_second_slide_first_box {
-                display: inline-block;
-                grid-column-start: 12;
-                grid-column-end: 29;
-                grid-row-start: 16;
-                grid-row-end: 65;
-                /* margin-top: -30px; */
-            }
-
-            .second_slide_second_box {
-                display: inline-block;
-                grid-column-start: 40;
-                grid-column-end: 65;
-                grid-row-start: 30;
-                grid-row-end: 55;
-            }
-
-            .image_second_slide_second_box {
-                display: inline-block;
-                grid-column-start: 42;
-                grid-column-end: 62;
-                grid-row-start: 33;
-                grid-row-end: 84;
-                transform:scale(0.7);
-            }
-
-            .second_slide_third_box {
-                display: inline-block;
-                grid-column-start: 70;
-                grid-column-end: 95;
-                grid-row-start: 10;
-                grid-row-end: 35;
-            }
-
-            .image_second_slide_third_box {
-                display: inline-block;
-                grid-column-start: 72;
-                grid-column-end: 91;
-                grid-row-start: 20;
-                grid-row-end: 55;
-            }
-        }
-
-        #second_slide3 {
-            background: url("{% static '/homepage/backs.png' %}");
-            background-size: cover;   
-            min-width: 100vw;
-            min-height: 100vh;
-        }
-
-        .slide_three_container {
-            display: grid;
-            grid-template-columns: repeat(100, 1fr);
-            grid-template-rows: repeat(100, 1fr);
-            max-width: 100vw;
-            max-height: 100vh;
-        }
-
-        .third_slide_first_box  {
-            display: inline-block;
-            grid-column-start: 34;
-            grid-column-end: 64;
-            grid-row-start: 15;
-            grid-row-end: 55;
-        }
-
-        @font-face {
-            font-family: LSDFont;
-            src: url("{% static '/homepage/super_font.ttf' %}");
-        }
-
-        #third {
-            background: url("{% static '/homepage/backs.png' %}");
-            background-size: cover;
-            max-width: 100vmin;
-            max-height: 100vmin;
-        }
-
-        .third_slide_wrapper {
-            display: grid;
-            grid-template-columns: repeat(100, 1fr);
-            grid-template-rows: repeat(100, 1fr);
-            overflow: hidden;
-            max-width: 100vw;
-            max-height: 100vh;
-        }
-
-        .third_words {
-            display: inline-block;
-            font-family: LSDFont;
-            font-size: 30px;
-            color: #270E47;
-            grid-column-start: 30;
-            grid-column-end: 60;
-            grid-row-start: 25;
-            grid-row-end: 45;
-            opacity: 0;
-        }
-
-        .message {
-            display: inline-block;
-            grid-column-start: 68;
-            grid-column-end: 96;
-            grid-row-start: 65;
-            grid-row-end: 85;
-            z-index: 2;
-        }
-
-        .message-english {
-            display: inline-block;
-            grid-column-start: 68;
-            grid-column-end: 96;
-            grid-row-start: 65;
-            grid-row-end: 85;
-            z-index:1;
-            opacity:0;
-        }
-
-        .invis {
-            display: inline-block;
-            grid-column-start: 68;
-            grid-column-end: 96;
-            grid-row-start: 65;
-            grid-row-end: 85;
-            z-index: 3;
-        }
-
-        .home_logo {
-            display: inline-block;
-            grid-column-start: 5;
-            grid-column-end: 20;
-            grid-row-start: 15;
-            grid-row-end: 55;
-
-        }
-
-        .tg_logo {
-            display: inline-block;
-            grid-column-start: 48;
-            grid-column-end: 50;
-            grid-row-start: 94;
-            grid-row-end: 98;
-        }
-
-        .inst_logo {
-            display: inline-block;
-            grid-column-start: 51;
-            grid-column-end: 53;
-            grid-row-start: 94;
-            grid-row-end: 98;
-        } 
-
-        @media screen and (max-width: 1200px), (max-device-width: 1200px) {
-            
-            .third_words {
-                display: inline-block;
-                font-family: LSDFont;
-                font-size:  22px;
-                color: #270E47;
-                grid-column-start: 35;
-                grid-column-end: 60;
-                grid-row-start: 15;
-                grid-row-end: 35;
-                opacity: 0;
-            }
-            
-            .message {
-                display: inline-block;
-                grid-column-start: 68;
-                grid-column-end: 96;
-                grid-row-start: 65;
-                grid-row-end: 85;
-                z-index: 2;
-            }
-
-            .message-english {
-                display: inline-block;
-                grid-column-start: 68;
-                grid-column-end: 96;
-                grid-row-start: 65;
-                grid-row-end: 68;
-                z-index:1;
-                opacity:0;
-            }
-
-            .invis {
-                display: inline-block;
-                grid-column-start: 68;
-                grid-column-end: 96;
-                grid-row-start: 65;
-                grid-row-end: 68;
-                z-index: 3;
-            }
-            
-            .home_logo {
-                display: inline-block;
-                grid-column-start: 5;
-                grid-column-end: 25;
-                grid-row-start: 15;
-                grid-row-end: 50;
-
-            }
-
-            .tg_logo {
-                display: inline-block;
-                grid-column-start: 46;
-                grid-column-end: 48;
-                grid-row-start: 90;
-                grid-row-end: 94;
-                transform:scale(2);
-            }
-
-            .inst_logo {
-                display: inline-block;
-                grid-column-start: 51;
-                grid-column-end: 53;
-                grid-row-start: 90;
-                grid-row-end: 94;
-                transform:scale(2);
-            }
-        }
-
-        @media screen and (max-width: 900px), (max-device-width: 900px) {
-
-            .third_words {
-                display: inline-block;
-                font-family: LSDFont;
-                font-size:  25px;
-                color: #270E47;
-                grid-column-start: 40;
-                grid-column-end: 80;
-                grid-row-start: 15;
-                grid-row-end: 35;
-                opacity: 0;
-            }
-
-            .message {
-                display: inline-block;
-                grid-column-start: 50;
-                grid-column-end: 95;
-                grid-row-start: 75;
-                grid-row-end: 95;
-                z-index: 2;
-            }
-
-            .message-english {
-                display: inline-block;
-                grid-column-start: 50;
-                grid-column-end: 95;
-                grid-row-start: 75;
-                grid-row-end: 95;
-                z-index:1;
-                opacity:0;
-            }
-
-            .invis {
-                display: inline-block;
-                grid-column-start: 50;
-                grid-column-end: 95;
-                grid-row-start: 75;
-                grid-row-end: 95;
-                z-index: 3;
-            }
-
             .home_logo {
                 display: inline-block;
                 grid-column-start: 6;
                 grid-column-end: 36;
                 grid-row-start: 15;
-                grid-row-end: 43;
+                grid-row-end: 44;
             }
 
             .tg_logo {
                 display: inline-block;
-                grid-column-start: 46;
-                grid-column-end: 48;
-                grid-row-start: 92;
-                grid-row-end: 96;
-                transform:scale(2.2);
+                grid-column-start: 37;
+                grid-column-end: 40;
+                grid-row-start: 87;
+                grid-row-end: 91;
             }
 
             .inst_logo {
                 display: inline-block;
-                grid-column-start: 49;
-                grid-column-end: 51;
-                grid-row-start: 92;
-                grid-row-end: 96;
-                transform:scale(2.2) translateX(1vh);
-            }        
+                grid-column-start: 46;
+                grid-column-end: 49;
+                grid-row-start: 87;
+                grid-row-end: 91;
+            }  
+
+            .wup_logo {
+                display: inline-block;
+                grid-column-start: 55;
+                grid-column-end: 58;
+                grid-row-start: 87;
+                grid-row-end: 91;
+            }
+                 
         }
 
         @media screen and (max-width: 600px), (max-device-width: 600px) {
@@ -1020,40 +627,40 @@
                 font-family: LSDFont;
                 font-size:  18px;
                 color: #270E47;
-                grid-column-start: 42;
-                grid-column-end: 90;
-                grid-row-start: 10;
+                grid-column-start: 39;
+                grid-column-end: 99;
+                grid-row-start: 6;
                 grid-row-end: 40;
                 opacity: 0;
-                transform:scale(0.7);
+                transform:scale(0.8);
             }
 
-            .message {
-                display: inline-block;
-                grid-column-start: 30;
-                grid-column-end: 90;
-                grid-row-start: 60;
-                grid-row-end: 75;
-                z-index: 2;
+            .autor {
+                font-size: 21px;
+                display:inline-block;
+                grid-column-start: 72;
+                grid-column-end: 94;
+                grid-row-start: 66;
+                grid-row-end: 71;
             }
 
-            .message-english {
-                display: inline-block;
-                grid-column-start: 30;
-                grid-column-end: 90;
-                grid-row-start: 60;
-                grid-row-end: 75;
-                z-index:1;
-                opacity:0;
+            .margarita {
+                font-size: 18px;
+                display:inline-block;
+                position:sticky;
+                grid-column-start: 69;
+                grid-column-end: 99;
+                grid-row-start: 78;
+                grid-row-end: 84;
             }
 
-            .invis {
-                display: inline-block;
-                grid-column-start: 30;
-                grid-column-end: 90;
-                grid-row-start: 60;
-                grid-row-end: 75;
-                z-index: 3;
+            .sogrina {
+                font-size: 18px;
+                display:inline-block;
+                grid-column-start: 73;
+                grid-column-end: 97;
+                grid-row-start: 85;
+                grid-row-end: 92;
             }
             
             .home_logo {
@@ -1066,21 +673,28 @@
 
             .tg_logo {
                 display: inline-block;
-                grid-column-start: 44;
-                grid-column-end: 48;
-                grid-row-start: 80;
-                grid-row-end: 86;
-                /* transform:scale(2) translateX(-1vh); */
+                grid-column-start: 36;
+                grid-column-end: 40;
+                grid-row-start: 83;
+                grid-row-end: 88;
             }
 
             .inst_logo {
                 display: inline-block;
-                grid-column-start: 50;
-                grid-column-end: 54;
-                grid-row-start: 80;
-                grid-row-end: 86;
-                /* transform:scale(2) translateX(1vh); */
+                grid-column-start: 46;
+                grid-column-end: 50;
+                grid-row-start: 83;
+                grid-row-end: 88;
             }     
+
+            .wup_logo {
+                display: inline-block;
+                grid-column-start: 56;
+                grid-column-end: 60;
+                grid-row-start: 83;
+                grid-row-end: 88;
+            }
+
         }
 
         @media screen and (max-height: 450px), (max-device-height: 450px) {
@@ -1090,32 +704,43 @@
                 font-family: LSDFont;
                 font-size:  20px;
                 color: #270E47;
-                grid-column-start: 27;
-                grid-column-end: 67;
+                grid-column-start: 25;
+                grid-column-end: 90;
                 grid-row-start: 15;
                 grid-row-end: 40;
                 opacity: 0;
                 transform:scale(0.7);
             }
 
-            .message {
-                display: inline-block;
-                grid-column-start: 60;
-                grid-column-end: 90;
-                grid-row-start: 60;
-                grid-row-end: 85;
-                z-index: 2;
-                transform: translateX(1em);
+            .autor {
+                font-size: 25px;
+                text-align: center;
+                display:inline-block;
+                grid-column-start: 83;
+                grid-column-end: 95;
+                grid-row-start: 86;
+                grid-row-end: 87;                
             }
 
-            .message-english {
-                display: inline-block;
-                grid-column-start: 60;
-                grid-column-end: 90;
-                grid-row-start: 60;
-                grid-row-end: 85;
-                z-index:1;
-                opacity:0;
+            .margarita {
+                font-size: 25px;
+                text-align: center;
+                display:inline-block;
+                position:sticky;
+                grid-column-start: 80;
+                grid-column-end: 95;
+                grid-row-start: 88;
+                grid-row-end: 89;
+            }
+
+            .sogrina {
+                font-size: 25px;
+                text-align: center;
+                display:inline-block;
+                grid-column-start: 82;
+                grid-column-end: 95;
+                grid-row-start: 90;
+                grid-row-end: 91;
             }
 
             .home_logo {
@@ -1123,884 +748,49 @@
                 grid-column-start: 5;
                 grid-column-end: 25;
                 grid-row-start: 10;
-                grid-row-end: 60;
+                grid-row-end: 63;
             }
 
             .tg_logo {
                 display: inline-block;
-                grid-column-start: 45;
-                grid-column-end: 48;
-                grid-row-start: 78;
-                grid-row-end: 82;
+                grid-column-start: 43;
+                grid-column-end: 45;
+                grid-row-start: 90;
+                grid-row-end: 94;
             }
 
             .inst_logo {
                 display: inline-block;
                 grid-column-start: 50;
-                grid-column-end: 53;
-                grid-row-start: 78;
-                grid-row-end: 82;
+                grid-column-end: 52;
+                grid-row-start: 90;
+                grid-row-end: 94;
             }
 
-        }
-
-         /* FORM STARTS HERE */
-
-         .content {
-            background: url("{% static '/homepage/backs.png' %}");
-            background-size: cover;
-            display:grid;
-            grid-template-columns: repeat(100, 1fr);
-            grid-template-rows: repeat(100, 1fr);
-            max-width: 100vw;
-            max-height: 100vh;
-            min-width: 100vw;
-            min-height: 100vh;
-        }
-
-        .close {
-            display: inline-block;
-            grid-column-start: 94;
-            grid-column-end: 99;
-            grid-row-start: 3;
-            grid-row-end: 10;
-            z-index: 3;
-        }
-
-        /* ИМЯ */
-        .name_text {
-            grid-column-start: 10;
-            grid-column-end: 25;
-            grid-row-start: 12;
-            grid-row-end: 17;
-            overflow: hidden;
-            z-index:2;
-        }
-
-        .english_name_text {
-            grid-column-start: 10;
-            grid-column-end: 25;
-            grid-row-start: 12;
-            grid-row-end: 17;
-            overflow: hidden;
-            opacity:0;
-            z-index:1;
-        }
-
-        #name_zapolni {
-            grid-column-start: 9;
-            grid-column-end: 27;
-            grid-row-start: 19;
-            grid-row-end: 30;
-            overflow: hidden;
-            z-index:1;
-        }
-
-        .name_form {
-            grid-column-start: 10;
-            grid-column-end: 26;
-            grid-row-start: 22;
-            grid-row-end: 27;
-            overflow: hidden; 
-            opacity:50%;
-            z-index:2;
-        }
-
-        .inside_name {
-            font-size: 32pt;
-        }
-        
-         /* ГОРОД */
-         .email_text {
-            grid-column-start: 75;
-            grid-column-end: 85;
-            grid-row-start: 12;
-            grid-row-end: 17;
-            overflow: hidden;
-            z-index:1;
-        }
-
-        #email_zapolni {
-            grid-column-start: 70;
-            grid-column-end: 89;
-            grid-row-start: 19;
-            grid-row-end: 30;
-            overflow: hidden;
-        }
-        .email_form {
-            grid-column-start: 71;
-            grid-column-end: 88;
-            grid-row-start: 22;
-            grid-row-end: 27;
-            overflow: hidden;
-            z-index:2;
-            opacity:50%;
-        }
-
-        .inside_email {
-            font-size: 32pt;
-        }
-
-        /* СООБЩЕНИЕ */
-        .soobch_text {
-            display: inline-block;
-            grid-column-start: 35;
-            grid-column-end: 65;
-            grid-row-start: 35;
-            grid-row-end: 44;
-            z-index: 2;
-        }
-
-        .english_soobch_text {
-            display: inline-block;
-            grid-column-start: 38;
-            grid-column-end: 62;
-            grid-row-start: 35;
-            grid-row-end: 43;
-            z-index: 1;
-            opacity:0;
-        }
-
-        #soobch_zapolni {
-            display: inline-block;
-            grid-column-start: 33;
-            grid-column-end: 67;
-            grid-row-start: 47;
-            grid-row-end: 71;
-            z-index: 3;
-        }
-
-        .soobch_form {
-            display: inline-block;
-            grid-column-start: 35;
-            grid-column-end: 65;
-            grid-row-start: 54;
-            grid-row-end: 63;
-            opacity:50%;
-            z-index: 3;
-        }
-
-        .inside_soobch {
-            font-size: 45pt;
-        }
-
-        .atom {
-            display: inline-block;
-            grid-column-start: 70;
-            grid-column-end: 90;
-            grid-row-start: 75;
-            grid-row-end: 90;
-            z-index: 2;
-        }
-
-        .english_atom {
-            display: inline-block;
-            grid-column-start: 70;
-            grid-column-end: 90;
-            grid-row-start: 75;
-            grid-row-end: 90;
-            z-index: 1;
-            opacity:0;
-        }   
-
-        @media screen and (max-width: 1200px), (max-device-width: 1200px) {
-            .close {
+            .wup_logo {
                 display: inline-block;
-                grid-column-start: 94;
-                grid-column-end: 99;
-                grid-row-start: 3;
-                grid-row-end: 10;
-                z-index: 3;
-            }
-
-            /* ИМЯ */
-            .name_text {
-                grid-column-start: 8;
-                grid-column-end: 32;
-                grid-row-start: 12;
-                grid-row-end: 18;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            .english_name_text {
-                grid-column-start: 8;
-                grid-column-end: 32;
-                grid-row-start: 12;
-                grid-row-end: 18;
-                overflow: hidden;
-                opacity:0;
-                z-index:1;
-            }
-
-            #name_zapolni {
-                grid-column-start: 8;
-                grid-column-end: 32;
-                grid-row-start: 19;
-                grid-row-end: 30;
-                overflow: hidden;
-                z-index:1;
-            }
-
-            .name_form {
-                grid-column-start: 9;
-                grid-column-end: 31;
-                grid-row-start: 21;
-                grid-row-end: 27;
-                overflow: hidden; 
-                opacity:50%;
-                z-index:2;
-            }
-
-            .inside_name {
-                font-size: 18pt;
-            }
-            
-            /* ГОРОД */
-            .email_text {
-                grid-column-start: 73;
-                grid-column-end: 88;
-                grid-row-start: 12;
-                grid-row-end: 18;
-                overflow: hidden;
-                z-index:1;
-            }
-
-            #email_zapolni {
-                grid-column-start: 68;
-                grid-column-end: 92;
-                grid-row-start: 19;
-                grid-row-end: 30;
-                overflow: hidden;
-            }
-
-            .email_form {
-                grid-column-start: 69;
-                grid-column-end: 91;
-                grid-row-start: 21;
-                grid-row-end: 27;
-                overflow: hidden;
-                z-index:2;
-                opacity:50%;
-            }
-
-            .inside_email {
-                font-size: 18pt;
-            }
-
-            /* СООБЩЕНИЕ */
-            .soobch_text {
-                display: inline-block;
-                grid-column-start: 31;
-                grid-column-end: 69;
-                grid-row-start: 38;
-                grid-row-end: 47;
-                z-index: 2;
-            }
-
-            .english_soobch_text {
-                display: inline-block;
-                grid-column-start: 36;
-                grid-column-end: 64;
-                grid-row-start: 38;
-                grid-row-end: 46;
-                z-index: 1;
-                opacity:0;
-            }
-
-            #soobch_zapolni {
-                display: inline-block;
-                grid-column-start: 26;
-                grid-column-end: 74;
-                grid-row-start: 48;
-                grid-row-end: 72;
-                z-index: 3;
-            }
-
-            .soobch_form {
-                display: inline-block;
-                grid-column-start: 28;
-                grid-column-end: 71;
-                grid-row-start: 55;
-                grid-row-end: 64;
-                opacity:50%;
-                z-index: 3;
-            }
-
-            .inside_soobch {
-                font-size: 32pt;
-            }
-
-            .atom {
-                display: inline-block;
-                grid-column-start: 60;
-                grid-column-end: 90;
-                grid-row-start: 77;
-                grid-row-end: 95;
-                z-index: 2;
-            }
-
-            .english_atom {
-                display: inline-block;
-                grid-column-start: 60;
-                grid-column-end: 90;
-                grid-row-start: 77;
-                grid-row-end: 95;
-                z-index: 1;
-                opacity:0;
-            }   
-        }
-
-        @media screen and (max-width: 900px), (max-device-width: 900px) {
-            .close {
-                display: inline-block;
-                grid-column-start: 91;
-                grid-column-end: 99;
-                grid-row-start: 3;
-                grid-row-end: 10;
-                z-index: 3;
-            }
-
-            /* ИМЯ */
-            .name_text {
-                grid-column-start: 8;
-                grid-column-end: 40;
-                grid-row-start: 12;
-                grid-row-end: 17;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            .english_name_text {
-                grid-column-start: 8;
-                grid-column-end: 40;
-                grid-row-start: 12;
-                grid-row-end: 17;
-                overflow: hidden;
-                opacity:0;
-                z-index:1;
-            }
-
-            #name_zapolni {
-                grid-column-start: 7;
-                grid-column-end: 41;
-                grid-row-start: 19;
-                grid-row-end: 29;
-                overflow: hidden;
-                z-index:1;
-            }
-
-            .name_form {
-                grid-column-start: 9;
-                grid-column-end: 40;
-                grid-row-start: 21;
-                grid-row-end: 26;
-                overflow: hidden; 
-                opacity:50%;
-                z-index:2;
-            }
-
-            .inside_name {
-                font-size: 14pt;
-            }
-            
-            /* ГОРОД */
-            .email_text {
-                grid-column-start: 70;
-                grid-column-end: 90;
-                grid-row-start: 12;
-                grid-row-end: 17;
-                overflow: hidden;
-                z-index:1;
-            }
-
-            #email_zapolni {
-                grid-column-start: 63;
-                grid-column-end: 96;
-                grid-row-start: 19;
-                grid-row-end: 29;
-                overflow: hidden;
-            }
-
-            .email_form {
-                grid-column-start: 64;
-                grid-column-end: 95;
-                grid-row-start: 21;
-                grid-row-end: 26;
-                overflow: hidden;
-                z-index:2;
-                opacity:50%;
-            }
-
-            .inside_email {
-                font-size: 14pt;
-            }
-
-            /* СООБЩЕНИЕ */
-            .soobch_text {
-                display: inline-block;
-                grid-column-start: 24;
-                grid-column-end: 76;
-                grid-row-start: 39;
-                grid-row-end: 45;
-                z-index: 2;
-            }
-
-            .english_soobch_text {
-                display: inline-block;
-                grid-column-start: 30;
-                grid-column-end: 70;
-                grid-row-start: 39;
-                grid-row-end: 45;
-                z-index: 1;
-                opacity:0;
-            }
-
-            #soobch_zapolni {
-                display: inline-block;
-                grid-column-start: 15;
-                grid-column-end: 85;
-                grid-row-start: 48;
-                grid-row-end: 70;
-                z-index: 3;
-            }
-
-            .soobch_form {
-                display: inline-block;
-                grid-column-start: 18;
-                grid-column-end: 81;
-                grid-row-start: 55;
-                grid-row-end: 63;
-                opacity:50%;
-                z-index: 3;
-            }
-
-            .inside_soobch {
-                font-size: 32pt;
-            }
-
-            .atom {
-                display: inline-block;
-                grid-column-start: 37;
-                grid-column-end: 90;
-                grid-row-start: 77;
-                grid-row-end: 95;
-                z-index: 2;
-            }
-
-            .english_atom {
-                display: inline-block;
-                grid-column-start: 40;
-                grid-column-end: 90;
-                grid-row-start: 77;
-                grid-row-end: 95;
-                z-index: 1;
-                opacity:0;
-            }   
-        }
-
-        @media screen and (max-width: 600px), (max-device-width: 600px) {
-            
-            .close {
-                display: inline-block;
-                grid-column-start: 91;
-                grid-column-end: 99;
-                grid-row-start: 3;
-                grid-row-end: 8;
-                z-index: 3;
-            }
-
-            /* ИМЯ */
-            .name_text {
-                grid-column-start: 2;
-                grid-column-end: 58;
-                grid-row-start: 12;
-                grid-row-end: 18;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            .name_image {
-                transform: scale(0.85) translateY(-1vh);
-            }
-
-            .english_name_text {
-                grid-column-start: 2;
-                grid-column-end: 55;
-                grid-row-start: 12;
-                grid-row-end: 18;
-                overflow: hidden;
-                opacity:0;
-                z-index:1;
-            }
-
-            .english_name_image {
-                transform: scale(0.85) translateY(-1vh);
-            }
-
-            #name_zapolni {
-                grid-column-start: 7;
-                grid-column-end: 47;
-                grid-row-start: 20;
-                grid-row-end: 29;
-                overflow: hidden;
-                z-index:1;
-            }
-
-            .name_form {
-                grid-column-start: 9;
-                grid-column-end: 45;
-                grid-row-start: 20;
-                grid-row-end: 26;
-                overflow: hidden; 
-                opacity:50%;
-                z-index:2;
-            }
-
-            .inside_name {
-                /* position: sticky; */
-                grid-column-start: 9;
-                grid-column-end: 45;
-                grid-row-start: 20;
-                grid-row-end: 26;
-                font-size: 8pt;
-                text-align:center;
-            }
-            
-            /* ГОРОД */
-            .email_text {
-                grid-column-start: 65;
-                grid-column-end: 95;
-                grid-row-start: 12;
-                grid-row-end: 18;
-                overflow: hidden;
-                z-index:1;
-            }
-
-            .email_image {
-                transform: scale(0.85) translateY(-1vh);
-            }
-
-            #email_zapolni {
                 grid-column-start: 57;
-                grid-column-end: 97;
-                grid-row-start: 20;
-                grid-row-end: 29;
-                overflow: hidden;
-            }
+                grid-column-end: 59;
+                grid-row-start: 90;
+                grid-row-end: 94;
+            } 
 
-            .email_form {
-                grid-column-start: 59;
-                grid-column-end: 95;
-                grid-row-start: 20;
-                grid-row-end: 26;
-                overflow: hidden;
-                z-index:2;
-                opacity:50%;
-            }
-
-            .inside_email {
-                grid-column-start: 59;
-                grid-column-end: 95;
-                grid-row-start: 21;
-                grid-row-end: 26;
-                text-align:center;
-                font-size: 8pt;
-            }
-
-            /* СООБЩЕНИЕ */
-            .soobch_text {
-                display: inline-block;
-                grid-column-start: 18;
-                grid-column-end: 82;
-                grid-row-start: 38;
-                grid-row-end: 44;
-                z-index: 2;
-            }
-
-            .english_soobch_text {
-                display: inline-block;
-                grid-column-start: 25;
-                grid-column-end: 75;
-                grid-row-start: 38;
-                grid-row-end: 44;
-                z-index: 1;
-                opacity:0;
-            }
-
-            #soobch_zapolni {
-                display: inline-block;
-                grid-column-start: 13;
-                grid-column-end: 87;
-                grid-row-start: 48;
-                grid-row-end: 64;
-                z-index: 3;
-            }
-
-            .soobch_form {
-                display: inline-block;
-                grid-column-start: 17;
-                grid-column-end: 81;
-                grid-row-start: 51;
-                grid-row-end: 56;
-                opacity:50%;
-                z-index: 3;
-            }
-
-            .inside_soobch {
-                font-size: 18pt;
-            }
-
-            .atom {
-                display: inline-block;
-                grid-column-start: 30;
-                grid-column-end: 90;
-                grid-row-start: 79;
-                grid-row-end: 93;
-                z-index: 2;
-            }
-
-            .english_atom {
-                display: inline-block;
-                grid-column-start: 30;
-                grid-column-end: 90;
-                grid-row-start: 79;
-                grid-row-end: 93;
-                z-index: 1;
-                opacity:0;
-            }
         }
 
-        @media screen and (max-height: 450px), (max-device-height: 450px) {
-            .close {
-                display: inline-block;
-                grid-column-start: 94;
-                grid-column-end: 99;
-                grid-row-start: 3;
-                grid-row-end:11;
-                z-index: 3;
-            }
-
-            /* ИМЯ */
-            .name_text {
-                grid-column-start: 5;
-                grid-column-end: 35;
-                grid-row-start: 10;
-                grid-row-end: 20;
-                overflow: hidden;
-                z-index:2;
-            }
-
-            .english_name_text {
-                grid-column-start: 5;
-                grid-column-end: 35;
-                grid-row-start: 10;
-                grid-row-end: 20;
-                overflow: hidden;
-                opacity:0;
-                z-index:1;
-            }
-
-            .name_image {
-                transform: scale(0.85) translateY(-1vh);
-            }
-
-            .english_name_image {
-                transform: scale(0.85) translateY(-1vh);
-            }
-
-            #name_zapolni {
-                grid-column-start: 7;
-                grid-column-end: 32;
-                grid-row-start: 25;
-                grid-row-end: 40;
-                overflow: hidden;
-                z-index:1;
-            }
-
-            .name_form {
-                grid-column-start: 8;
-                grid-column-end: 31;
-                grid-row-start: 26;
-                grid-row-end: 36;
-                overflow: hidden; 
-                opacity:50%;
-                z-index:2;
-            }
-
-            .inside_name {
-                font-size: 12pt;
-            }
-            
-            /* ГОРОД */
-            .email_text {
-                grid-column-start: 68;
-                grid-column-end: 87;
-                grid-row-start: 10;
-                grid-row-end: 20;
-                overflow: hidden;
-                z-index:1;
-            }
-
-            .email_image {
-                transform: scale(0.85) translateY(-1vh);
-            }
-
-            #email_zapolni {
-                grid-column-start: 65;
-                grid-column-end: 90;
-                grid-row-start: 25;
-                grid-row-end: 40;
-                overflow: hidden;
-            }
-
-            .email_form {
-                grid-column-start: 66;
-                grid-column-end: 89;
-                grid-row-start: 26;
-                grid-row-end: 36;
-                overflow: hidden;
-                z-index:2;
-                opacity:50%;
-            }
-
-            .inside_email {
-                font-size: 12pt;
-            }
-
-            /* СООБЩЕНИЕ */
-            .soobch_text {
-                display: inline-block;
-                grid-column-start: 32;
-                grid-column-end: 68;
-                grid-row-start: 42;
-                grid-row-end: 51;
-                z-index: 2;
-            }
-
-            .english_soobch_text {
-                display: inline-block;
-                grid-column-start: 36;
-                grid-column-end: 64;
-                grid-row-start: 42;
-                grid-row-end: 51;
-                z-index: 1;
-                opacity:0;
-            }
-
-            #soobch_zapolni {
-                display: inline-block;
-                grid-column-start: 35;
-                grid-column-end: 65;
-                grid-row-start: 55;
-                grid-row-end: 72;
-                z-index: 3;
-            }
-
-            .soobch_form {
-                display: inline-block;
-                grid-column-start: 36;
-                grid-column-end: 63;
-                grid-row-start: 55;
-                grid-row-end: 61;
-                opacity:50%;
-                z-index: 3;
-            }
-
-            .inside_soobch {
-                font-size: 12pt;
-            }
-
-            .atom {
-                display: inline-block;
-                grid-column-start: 60;
-                grid-column-end: 90;
-                grid-row-start: 74;
-                grid-row-end: 95;
-                z-index: 2;
-            }
-
-            .english_atom {
-                display: inline-block;
-                grid-column-start: 60;
-                grid-column-end: 90;
-                grid-row-start: 76;
-                grid-row-end: 95;
-                z-index: 1;
-                opacity:0;
-            }
-        }
     </style>
 
     <body>
 
-        <div id="fullpage">
-            <div class="section fp-auto-height-responsive" id='first'>
+        <div class = 'great_wrapper'>
+            <div id='first'>
                 <div class ='first_slide_wrapper'>
-                    {% if send_message %}
-                    <div>
-                        <form class="content" action = '{% url "home" %}' method = "post">
-                            {% csrf_token %}
-                                
-                                <!-- CLOSE -->
-                                <div class = 'close'>
-                                    <a href = '{% url "home" %}'>
-                                        <img src = "/media/homepage/zayavka/x.png" style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                    
-                                    </a>
-                                </div>
-                
-                                <!-- ИМЯ -->
-                                <div class = 'name_text' onmouseenter = NameSwitchToEnglish() onmouseleave = NameBackToRussian()>
-                                    <img class = 'name_image' src = '/media/homepage/zayavka/name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
-                                </div>  
-                                
-                                <div class = 'english_name_text'>
-                                    <img class = 'english_name_image' src = '/media/homepage/zayavka/english_name.png' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'> 
-                                </div>
-                
-                                <img id = 'name_zapolni' src = '/media/homepage/zayavka/zapolni.png' style = 'z-index:1; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;'>
-                                <div class = 'name_form'>
-                                    <input class = 'inside_name' type="text" name = 'name' id = 'name' style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' required>
-                                </div>
-                
-                                <!-- ПОЧТА -->
-                                <div class = 'email_text'>
-                                    <img class = 'email_image' src = '/media/homepage/zayavka/email.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
-                                </div> 
-                
-                                <img id = 'email_zapolni' src = '/media/homepage/zayavka/zapolni.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
-                                <div class="email_form">
-                                    <input class = 'inside_email' type="email" name = 'email' id = 'email' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' >
-                                </div>
-
-                                <!-- СООБЩЕНИЕ -->
-                                <div class = 'soobch_text' onmouseenter = SoobchSwitchToEnglish() onmouseleave = SoobchBackToRussian()>
-                                    <img src = '/media/homepage/zayavka/message.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
-                                </div> 
-                                
-                                <div class = 'english_soobch_text'>
-                                    <img src = '/media/homepage/zayavka/english_message.png' style = 'max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;'>
-                                </div>
-
-                                <img id = 'soobch_zapolni' src = '/media/homepage/zayavka/zapolni-big.png' style = 'max-width: 100%; max-height: 100%;min-width: 100%; min-height: 100%;'>
-                                <div class="soobch_form">
-                                    <input class = 'inside_soobch' type="textarea" name = 'soobch' id = 'soobch' required style = 'min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;' >
-                                </div>
-
-                                <!-- ОТПРАВЛЯЙ -->
-                                <div class="atom" onmouseenter = ZayavkaAtom_SwitchToEnglish() onmouseleave = ZayavkaAtom_BackToRussian()>
-                                    <input type = 'image' type = 'submit' src = "/media/homepage/zayavka/atom.png" style = 'opacity:100%;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
-                                </div>
-                                
-                                <div class="english_atom">
-                                    <input type = 'image' type = 'submit' src = "/media/homepage/zayavka/english_atom.png" style = 'opacity:100%;min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
-                                </div>
-                        </form>
+                    
+                    <div class = 'art'>
+                        ART
                     </div>
-                    {% else %}
                     <div class="animated_logo">
 
-                        <svg loading = 'lazy' style = 'display:flex;' id = 'demo-svg' viewBox="0 0 215 116">
+                        <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 215 116">
 
                             <path stroke = 'pink' id = 'upper_main_lines' stroke-width="0.2" fill = 'none'  d="M73.25,31.24l1.1,2.34L76.05,41l.12,1.93-.82,1.55-4.2,5.59-2.8,6.27a4.92,4.92,0,0,1-2.8-2.79,5.28,5.28,0,0,1,0-2.79A9.54,9.54,0,0,1,67,47.28l2.8-4.18.7-1.4L67.91,34l-9.76-5.53-4.39-1,2-1.81,1.4-.7h7Z"/>
                             <path stroke = 'pink' id = 'upper_main_lines' stroke-width="0.2" fill = 'none' d="M83.84,14.78l-4.92.61h-11l4,.7H74l2.56.74,5,.73a2,2,0,0,0,2.19-.77A1.91,1.91,0,0,0,83.84,14.78Z"/> 
@@ -2237,243 +1027,61 @@
 
                     </div>
 
+                </div>
+            </div>
+
+
+            <div id='second_slide' data-anchor="slide1">
+                <div class="slide_container">
+                    <div class="arrow_left">
+                        <div id = 'arrow_left' src = "/media/homepage/second_slide/arrow_left.png" onclick ="prev_one(), prev_second(), prev_third(), arrow_left.play()" > < </div>
+                    </div>
+
+                    <div class = 'first_box'>
+                        <a id = 'slider_one_link' href = "#" onclick="FirstLink()">
+                            <img src = "/media/homepage/second_slide/golova.png" class = 'slider-one' style = 'object-fit: cover; width: 80%; max-height: 80%; '>
+                        </a>
+                    </div>
+
+                    <div class = 'second_box'>
+                        <a id = 'slider_two_link' href = "#" onclick="SecondLink()">
+                            <img src = "/media/homepage/second_slide/zakis.png" class = 'slider-two' style = 'object-fit: cover; width: 80%; max-height: 80%;'>
+                        </a>
+                    </div>
+
+                    <div class = 'third_box'>
+                        <a id = 'slider_three_link' href = "#" onclick="ThirdLink()">
+                            <img src = "/media/homepage/second_slide/eye.PNG" class = 'slider-three' style = 'object-fit: cover; width: 80%; max-height: 80%;'>
+                        </a>
+                    </div>
+
+                    <div class="arrow_right" >
+                        <div id = 'arrow_right' onclick ="next_one(), next_second(), next_third(), arrow_right.play()"> > </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id='third' >
+                <div class = 'third_slide_wrapper'>
+
                     <div class="autor">
-                        <img  src = "/media/homepage/first_slide/autor.png" style = 'height: 100%; width: 100%; object-fit: contain; display:block; margin:auto;'>
+                        АВТОР
                     </div>
 
                     <div class="margarita">
-                        <img  src = "/media/homepage/first_slide/margarita.png" style = 'height: 80%; width: 80%; object-fit: contain; display:block; margin:auto;'>                    
+                        МАРГАРИТА
                     </div>
 
-                    <div class="sogrina">    
-                        <img  src = "/media/homepage/first_slide/sogrina.png" style = 'height: 80%; width: 80%; object-fit: contain; display:block; margin:auto;'>
+                    <div class="sogrina">
+                        СОГРИНА    
                     </div>
 
-                </div>
-            </div>
-
-            <div class="section" id='second'>
-
-                <div class="slide" id='second_slide1' data-anchor="slide1">
-                    <div class="slide_one_container">
-
-                        <div class="first_slide_first_box">
-                            <a href = "{% url 'golova' %}">
-
-                                <svg id = 'demo-svg' viewBox="0 0 650 780">
-
-                                    <path stroke = 'rgb(21, 247, 247)'  id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                    <path stroke = 'rgb(112, 107, 158)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                    <path stroke = 'rgb(252, 129, 186)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                    <path stroke = 'rgb(168, 252, 210)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                    <path stroke = 'rgb(248, 248, 252)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                    <path stroke = 'rgb(55, 243, 243)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                    <path stroke = 'rgb(112, 255, 219)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                    <path stroke = 'rgb(236, 255, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                    <path stroke = 'rgb(240, 173, 253)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                    <path stroke = 'rgb(166, 157, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
-
-                                </svg>
-                                
-                            </a>
-                        </div>
-
-                        <div class="first_slide_second_box">
-
-                            <a href = "{% url 'zakis' %}">
-                                <svg id = 'demo-svg' viewBox="0 0 650 780">
-
-                                    <path stroke = 'rgb(21, 247, 247)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                    <path stroke = 'rgb(112, 107, 158)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                    <path stroke = 'rgb(252, 129, 186)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                    <path stroke = 'rgb(168, 252, 210)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                    <path stroke = 'rgb(248, 248, 252)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                    <path stroke = 'rgb(55, 243, 243)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                    <path stroke = 'rgb(112, 255, 219)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                    <path stroke = 'rgb(236, 255, 255)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                    <path stroke = 'rgb(240, 173, 253)' style = 'transform: scale(1.05)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                    <path stroke = 'rgb(166, 157, 255)' style = 'transform: scale(1.05)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
-
-                                </svg>
-
-                            </a>
-                        </div>
-
-                        <div class="first_slide_third_box">
-                            <a href = "{% url 'eye' %}">
-                                <svg id = 'demo-svg' viewBox="0 0 620 750">
-
-                                    <path stroke = 'rgb(21, 247, 247)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                    <path stroke = 'rgb(112, 107, 158)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                    <path stroke = 'rgb(252, 129, 186)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                    <path stroke = 'rgb(168, 252, 210)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                    <path stroke = 'rgb(248, 248, 252)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                    <path stroke = 'rgb(55, 243, 243)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                    <path stroke = 'rgb(112, 255, 219)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                    <path stroke = 'rgb(236, 255, 255)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                    <path stroke = 'rgb(240, 173, 253)' style = 'transform: scale(0.96)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                    <path stroke = 'rgb(166, 157, 255)' style = 'transform: scale(0.96)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
-
-                                </svg>
-                            </a>
-                        </div>
-
-                        <div class = 'image_first_slide_first_box'>
-                            <a href = "{% url 'golova' %}">
-                                <img src = "/media/homepage/second_slide/golova.png" style = 'object-fit: cover; width: 100%; max-height: 100%; '>
-                            </a>
-                        </div>
-
-                        <div class = 'image_first_slide_second_box'>
-                            <a href = "{% url 'zakis' %}">
-                                <img src = "/media/homepage/second_slide/zakis.png" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
-                            </a>
-                        </div>
-
-                        <div class = 'image_first_slide_third_box'>
-                            <a href = "{% url 'eye' %}">
-                                <img src = "/media/homepage/second_slide/eye.PNG" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
-                            </a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="slide" id='second_slide2' data-anchor="slide2">
-                    <div class="slide_two_container">
-                        <div class="second_slide_first_box">
-                            <a href = "{% url 'maski' %}">
-                                <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 711.21 1003">
-
-                                    <path stroke = 'rgb(21, 247, 247)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                    <path stroke = 'rgb(112, 107, 158)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                    <path stroke = 'rgb(252, 129, 186)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                    <path stroke = 'rgb(168, 252, 210)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                    <path stroke = 'rgb(248, 248, 252)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                    <path stroke = 'rgb(55, 243, 243)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                    <path stroke = 'rgb(112, 255, 219)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                    <path stroke = 'rgb(236, 255, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                    <path stroke = 'rgb(240, 173, 253)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                    <path stroke = 'rgb(166, 157, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
-
-                                </svg>
-                            </a>
-                        </div>
-
-                        <div class="second_slide_second_box">
-                            <a href = "{% url 'vibe' %}">
-                                <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 711.21 1003">
-
-                                    <path stroke = 'rgb(21, 247, 247)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                    <path stroke = 'rgb(112, 107, 158)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                    <path stroke = 'rgb(252, 129, 186)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                    <path stroke = 'rgb(168, 252, 210)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                    <path stroke = 'rgb(248, 248, 252)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                    <path stroke = 'rgb(55, 243, 243)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                    <path stroke = 'rgb(112, 255, 219)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                    <path stroke = 'rgb(236, 255, 255)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                    <path stroke = 'rgb(240, 173, 253)' style = 'transform: scale(1.12)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                    <path stroke = 'rgb(166, 157, 255)' style = 'transform: scale(1.12)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
-
-                                </svg>
-
-                            </a>
-                        </div>
-
-                        <div class="second_slide_third_box">
-                            <a href = "{% url 'kosmos' %}">
-                                <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 711.21 1003">
-
-                                    <path stroke = 'rgb(21, 247, 247)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                    <path stroke = 'rgb(112, 107, 158)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                    <path stroke = 'rgb(252, 129, 186)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                    <path stroke = 'rgb(168, 252, 210)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                    <path stroke = 'rgb(248, 248, 252)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                    <path stroke = 'rgb(55, 243, 243)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                    <path stroke = 'rgb(112, 255, 219)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                    <path stroke = 'rgb(236, 255, 255)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                    <path stroke = 'rgb(240, 173, 253)' style = 'transform: scale(1.10)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                    <path stroke = 'rgb(166, 157, 255)' style = 'transform: scale(1.10)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
-
-                                </svg>
-                            </a>
-                        </div>
-
-                        <div class = 'image_second_slide_first_box'>
-                            <a href = "{% url 'maski' %}">
-                                <img  src = "/media/homepage/second_slide/maski.png" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
-                            </a>
-                        </div>
-
-                        <div class = 'image_second_slide_second_box'>
-                            <a href = "{% url 'vibe' %}">
-                                <img  src = "/media/homepage/second_slide/vibe.png" style = 'object-fit: cover; width: 100%; max-height: 100%;'>
-                            </a>
-                        </div>
-
-                        <div class = 'image_second_slide_third_box'>
-                            <a href = "{% url 'kosmos' %}">
-                                <img src = "/media/homepage/second_slide/kosmos.PNG" style = 'object-fit: cover; width: 100%; max-height: 100%; '>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="slide" id='second_slide3' data-anchor="slide2">
-                    <div class="slide_three_container">
-
-                        <div class="third_slide_first_box">
-                            <svg style = 'display:flex;' id = 'demo-svg' viewBox="0 0 711.21 1003">
-
-                                <path stroke = 'rgb(21, 247, 247)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M591.16,693v-1.18H1l-.51.59L0,693V1H.83V690.85H591.16V1H.83V0H593l-.5.59-.51.59V690.85h1l-.92,1.07Z"/> 
-                                <path stroke = 'rgb(112, 107, 158)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M3.83,3V4.17H590l.5-.59L591,3V689h-.83V5.13H3.83V689H590.17v1H2l.5-.58.5-.59V5.13H2l.91-1.06Z"/>
-                                <path stroke = 'rgb(252, 129, 186)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M589,7.12h-1V686.84l.49.58.5.58H4.82v-1H587.18V7.12H4.82V687H4V5l.5.58L5,6.16H587.18V5l.91,1.06Z"/>
-                                <path stroke = 'rgb(168, 252, 210)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M7,683.89H8V8.15l-.49-.57L7,7H584.19V8H8.79V683.89h575.4V8H585V686l-.49-.58-.49-.57H8.79V686l-.89-1Z"/>
-                                <path stroke = 'rgb(248, 248, 252)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M581.22,684v-1.15H11l-.48.58L10,684V10h.81v672H581.22V10H10.81V9H583l-.49.57-.48.58V681.91h1l-.89,1Z"/>
-                                <path stroke = 'rgb(55, 243, 243)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M14.76,11v1.14H579l.48-.57L580,11V679.06h-.8v-666H14.76v666H579.2V680H13l.48-.57.48-.57V13.08H13l.88-1Z"/>  
-                                <path stroke = 'rgb(112, 255, 219)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M579,15.06h-1V676.87l.48.57.48.56H15.79v-.94H577.25v-662H15.79v662H15V13l.48.56.48.57H577.25V13l.87,1Z"/>
-                                <path stroke = 'rgb(236, 255, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M17,673H18V17.12l-.47-.56L17,16H576.21v.93H18.74V673H576.21v-656H577V675l-.48-.56-.47-.56H18.74V675l-.87-1Z"/> 
-                                <path stroke = 'rgb(240, 173, 253)' id = 'forward-svg' stroke-width="1" fill = 'none' d="M573.27,673v-1.11H19.94l-.47.55L19,673V18.92h.78V671H573.27v-652H19.78V18H575l-.47.56-.47.55V671H575l-.86,1Z"/> 
-                                <path stroke = 'rgb(166, 157, 255)' id = 'backward-svg' stroke-width="1" fill = 'none' d="M23.71,20v1.1H571.07l.46-.55L572,20V670.08h-.77V22H23.71V670.08H571.23V671H22l.47-.55.46-.55V22H22l.85-1Z"/>
-
-                            </svg>
-
-                            <div class = 'image_third_slide_first_box'>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="section fp-auto-height" id='third' >
-                <div class = 'third_slide_wrapper'>
                     <div class="third_words">
                         Приветствую! 
-                        <p>Если ты это читаешь, то, скорее всего, уже ознакомился с моим творчеством)</p>
+                        <p>Если ты это читаешь, то, скорее всего, уже ознакомился с моим творчеством</p>
                         Я этому очень рада и, надеюсь, что ты неплохо провел свое время, возможно, даже вдохновился и что-то приобрел для себя. 
                         Я стараюсь чтоб было так!
-                    </div>
-
-                    <div class="invis" onmouseenter = messageSwitchToEnglish() onmouseleave = messageBackToRussian()>
-                        <form action = '{% url "home" %}' method = "post" style = 'min-width:100%; min-height:100%; opacity:0%'>
-                            {% csrf_token %}
-                                <button style = 'cursor:pointer; min-width:100%; min-height:20em; opacity:100%'>
-                                </button>
-                        </form>
-                    </div>
-
-                    <div class="message">
-                        <img src = "/media/homepage/third_slide/napeashi.png" onmouseenter = messageSwitchToEnglish() onmouseleave = messageBackToRussian() style = 'cursor:pointer;max-width:100%; max-height:100%;'>
-                    </div>
-
-                    <div class="message-english">
-                        <img src = "/media/homepage/third_slide/window.png" style = 'cursor:pointer;max-width:100%; max-height:100%;'>
                     </div>
 
                     <div class="home_logo">
@@ -2488,34 +1096,123 @@
                         <a href = 'https://instagram.com/delayu.svoye.delo'><img  src = "/media/homepage/third_slide/inst.png" style = 'max-width:100%; max-height:100%;'></a>
                     </div>                  
 
+                    <div class="wup_logo">
+                        <a href = 'https://wa.me/+79992025979'><img  src = "/media/homepage/third_slide/wup.png" style = 'max-width:100%; max-height:100%;'></a>
+                    </div>
+
                 </div>
 
             </div>
-
-            {% endif %}
 
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-        <script src="{% static 'scrolloverflow.js' %}"></script>
-        <script src="{% static 'fullpage.js' %}"></script>
-
 
         <script>
-            let vh = window.innerHeight * 0.01;
-            // Then we set the value in the --vh custom property to the root of the document
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-            window.addEventListener('resize', () => {
-                // We execute the same script as before
-                let vh = window.innerHeight * 0.01;
-                document.documentElement.style.setProperty('--vh', `${vh}px`);
-            });
+
+            var arrow_left = anime({
+                targets:'.arrow_left',
+                scale:1.1,
+                duration:450,
+                autoplay:false,
+                loop:false,
+            })
+
+            var arrow_right = anime({
+                targets:'.arrow_right',
+                scale:1.1,
+                duration:450,
+                autoplay:false,
+                loop:false,
+            })
+
+            var slider_img = document.querySelector('.slider-one');
+            
+            var first_images = ['golova.png', 'maski.png'];
+            var first_links = ["{% url 'golova' %}", "{% url 'maski' %}"];
+
+            var i =0; 
+
+            function prev_one() {
+                if (i<=0) i = first_images.length;
+                b=i
+                i--;
+                return setImg_one();
+            }
+
+            function next_one() {
+                if (i >= first_images.length - 1) i = -1;
+                b = i
+                i++;
+                return setImg_one();
+            }
+
+            function FirstLink() {
+                document.getElementById("slider_one_link").href= first_links[i]; 
+            }
+
+            function setImg_one(){
+                return slider_img.setAttribute('src', "/media/homepage/second_slide/" + first_images[i])
+            }
+            
+            var slider_two = document.querySelector('.slider-two');
+            var second_images = ['zakis.png', 'vibe.png'];
+            var second_links = ["{% url 'zakis' %}", "{% url 'vibe' %}"];
+
+            var tw =0; 
+
+            function prev_second() {
+                if (tw<=0) tw = second_images.length;
+                b=tw
+                tw--;
+                return setImg_two();
+            }
+
+            function next_second() {
+                if (tw >= second_images.length - 1) tw = -1;
+                b = tw
+                tw++;
+                return setImg_two();
+            }
+
+            function SecondLink() {
+                document.getElementById("slider_two_link").href= second_links[tw]; 
+            }
+
+            function setImg_two(){
+                return slider_two.setAttribute('src', "/media/homepage/second_slide/" + second_images[tw])
+            }
+            
+
+            var slider_three = document.querySelector('.slider-three');
+            var third_images = ['eye.png', 'kosmos.png'];
+            var third_links = ["{% url 'eye' %}", "{% url 'kosmos' %}"];
+
+            var th =0; 
+
+            function prev_third() {
+                if (th<=0) th = third_images.length;
+                b=th
+                th--;
+                return setImg_three();
+            }
+
+            function next_third() {
+                if (th >= third_images.length - 1) th = -1;
+                b = th
+                th++;
+                return setImg_three();
+            }
+
+            function ThirdLink() {
+                document.getElementById("slider_three_link").href= third_links[th]; 
+            }
 
 
-            $('#fullpage').fullpage({
-                sectionsColor: ['#ADD8E6', '#FCA7A7', '#C0C0C0', '#ADD8E6'],
-            });
+            function setImg_three(){
+                return slider_three.setAttribute('src', "/media/homepage/second_slide/" + third_images[th])
+            }
 
             var motionPath = anime({
                 targets: '.stone1',
@@ -2586,68 +1283,12 @@
                 });
             } Hands()
 
-            function borderMove(){
-
-                var border_forward_animation =  anime({
-                    targets: '#forward-svg',
-                    strokeDashoffset: [anime.setDashoffset,0],
-                    easing: 'easeInOutSine',
-                    duration: 25000,
-                    direction:'alternate',
-                    delay: function(el, i) { return i * 250 },
-                    loop: true,
-                });
-
-                var border_backward_animation =  anime({
-                    targets: '#backward-svg',
-                    strokeDashoffset: [0, anime.setDashoffset],
-                    easing: 'easeInOutSine',
-                    duration: 25000,
-                    direction:'alternate',
-                    delay: function(el, i) { return i * 250 },
-                    loop: true,
-                });
-            } borderMove()    
-
             var words_appears = anime({
                 targets:'.third_words',
                 opacity: 1,
                 duration:9000,
                 autoplay:false,
             }) 
-
-            function messageSwitchToEnglish() {
-                var english_message_appears = anime({
-                    targets:'.message-english',
-                    opacity: 1,
-                    duration:9000,
-                    autoplay:true,
-                })   
-
-                var disappear_message = anime({
-                    targets:'.message',
-                    opacity: 0,
-                    duration:9000,
-                    autoplay:true,
-                })
-            }
-
-            function messageBackToRussian() {
-
-                var disappear_english_message = anime({
-                    targets:'.message-english',
-                    opacity: 0,
-                    duration:9000,
-                    autoplay:true,
-                })
-
-                var message_appears = anime({
-                    targets:'.message',
-                    opacity: 1,
-                    duration:9000,
-                    autoplay:true,
-                })
-            }
 
             function NameSwitchToEnglish() {
                 var english_name_appears = anime({
@@ -2682,70 +1323,6 @@
                 })
             }
             
-            function SoobchSwitchToEnglish() {
-                var english_soobch_appears = anime({
-                    targets:'.english_soobch_text',
-                    opacity: 1,
-                    duration:9000,
-                    autoplay:true,
-                })   
-
-                var disappear_soobch = anime({
-                    targets:'.soobch_text',
-                    opacity: 0,
-                    duration:9000,
-                    autoplay:true,
-                })
-            }
-
-            function SoobchBackToRussian() {
-
-                var disappear_english_soobch = anime({
-                    targets:'.english_soobch_text',
-                    opacity: 0,
-                    duration:9000,
-                    autoplay:true,
-                })
-
-                var soobch_appears = anime({
-                    targets:'.soobch_text',
-                    opacity: 1,
-                    duration:9000,
-                    autoplay:true,
-                })
-            }
-
-            function ZayavkaAtom_SwitchToEnglish() {
-                var english_atom_appears = anime({
-                    targets:'.english_atom',
-                    opacity: 1,
-                    duration:9000,
-                    autoplay:true,
-                })   
-
-                var disappear_atom = anime({
-                    targets:'.atom',
-                    opacity: 0,
-                    duration:9000,
-                    autoplay:true,
-                })
-            }
-
-            function ZayavkaAtom_BackToRussian() {
-                var disappear_english_atom = anime({
-                    targets:'.english_atom',
-                    opacity: 0,
-                    duration:9000,
-                    autoplay:true,
-                })
-
-                var atom_appears = anime({
-                    targets:'.atom',
-                    opacity: 1,
-                    duration:9000,
-                    autoplay:true,
-                })
-            }
         </script>
     </body>
 
