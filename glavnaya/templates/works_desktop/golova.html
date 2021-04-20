@@ -1044,13 +1044,12 @@
             }
 
             .main-borda {
-                grid-column-start: 7;
-                grid-column-end: 69;
-                grid-row-start: 62;
-                grid-row-end: 84;
+                grid-column-start:9;
+                grid-column-end: 67;
+                grid-row-start: 66;
+                grid-row-end: 83;
                 overflow: hidden;
                 z-index: 10;
-                transform:scale(2);
             }
 
             .first-buy-border {
@@ -1325,7 +1324,7 @@
                 grid-column-start: 5;
                 grid-column-end: 30;
                 grid-row-start: 12;
-                grid-row-end: 29;
+                grid-row-end: 33;
                 overflow: hidden;
                 z-index: 10;
             }
@@ -1907,37 +1906,43 @@
 
             #put {
                 position:absolute;
-                font-size: 35px; 
+                font-size: 30px;
+                left:5vw; 
                 top: 40vh;
             }
 
             #zakis {
                 position:absolute;
-                font-size: 35px; 
+                font-size: 30px; 
+                left:5vw;
                 top: 50vh;
             }
 
             #glaz {
                 position:absolute;
-                font-size: 35px; 
+                font-size: 30px; 
+                left:5vw;
                 top: 60vh;
             }
 
             #kosmos {
                 position:absolute;
-                font-size: 35px;
+                font-size: 30px;
+                left: 65vw;
                 top: 40vh; 
             }
 
             #maski {
                 position:absolute;
-                font-size: 35px;
+                font-size: 30px;
+                left: 65vw;
                 top: 50vh; 
             }
 
             #ohboy {
                 position:absolute;
-                font-size: 35px;
+                font-size: 30px;
+                left: 52vw;
                 top: 60vh;                
             }
 
@@ -3890,11 +3895,11 @@
                 <img src = "/media/works/golova/second_part/buy_but/white-border.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
             </div>
 
-            <div class="main-borda" style = '-webkit-appearance: none;opacity:100%; cursor:pointer; z-index: 9; min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
-                <form action = '{% url "golova" %}' method = "post" style = '-webkit-appearance: none;opacity:100%; cursor:pointer; z-index: 9; min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+            <div class="main-borda">
+                <form action = '{% url "golova" %}' method = "post">
                    
                     {% csrf_token %}
-                        <button type = 'submit' style = '-webkit-appearance: none; opacity:100%; cursor:pointer; z-index: 9; min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                        <button type = 'submit' style = '-webkit-appearance: none; opacity:50%; cursor:pointer; z-index: 9; overflow:hidden;'>
                             
                             <!-- НАКИНУТЬ БАТОН НА РАМКУ КНОПКИ И СДЕЛАТЬ ЕЕ САМЫМ ВЫСОКИМ z-шndex -->
                             <img name = 'golova' src = "/media/works/golova/second_part/buy_but/main-borda.png">
