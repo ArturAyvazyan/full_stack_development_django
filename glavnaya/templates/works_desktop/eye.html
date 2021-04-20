@@ -1027,7 +1027,6 @@
                 grid-row-start: 70;
                 grid-row-end: 88;
                 overflow: hidden;
-                /* transform: translateY(-0.2vh); */
                 z-index:1;
             }
 
@@ -1038,7 +1037,7 @@
                 grid-row-end: 88;
                 overflow: hidden;
                 transform: translateY(-0.2vh);
-                z-index:10;
+                z-index:9;
             }
 
             .second-buy-border {
@@ -1304,7 +1303,7 @@
                 grid-row-start: 12;
                 grid-row-end: 33;
                 overflow: hidden;
-                z-index:1;
+                z-index:9;
             }
 
             .first-buy-border {
@@ -1313,7 +1312,7 @@
                 grid-row-start: 12;
                 grid-row-end: 33;
                 overflow: hidden;
-                z-index:10;
+                z-index:1;
             }
 
             .second-buy-border {
@@ -3818,7 +3817,7 @@
             <div class="main-borda">
                 <form action = '{% url "eye" %}' method = "post">   
                     {% csrf_token %}
-                        <button type = 'submit' style = '-webkit-appearance: none; opacity:50%; cursor:pointer; z-index: 9; overflow:hidden;'>
+                        <button type = 'submit' style = '-webkit-appearance: none; opacity:0%; cursor:pointer; z-index: 9; overflow:hidden;'>
                             <img name = 'eye' src = "/media/works/eye/second_part/buy_but/main-borda.png">
                         </button>
                 </form>
