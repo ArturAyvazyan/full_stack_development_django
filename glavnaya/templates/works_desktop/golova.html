@@ -3890,11 +3890,11 @@
                 <img src = "/media/works/golova/second_part/buy_but/white-border.png"  style = 'min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>                
             </div>
 
-            <div class="main-borda">
-                <form action = '{% url "golova" %}' method = "post">
+            <div class="main-borda" style = 'opacity:0%; cursor:pointer; z-index: 9; min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                <form action = '{% url "golova" %}' method = "post" style = 'opacity:0%; cursor:pointer; z-index: 9; min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
                    
                     {% csrf_token %}
-                        <button style = 'opacity:0%; cursor:pointer; z-index: 9; min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                        <button type = 'submit' style = 'opacity:0%; cursor:pointer; z-index: 9; min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
                             
                             <!-- НАКИНУТЬ БАТОН НА РАМКУ КНОПКИ И СДЕЛАТЬ ЕЕ САМЫМ ВЫСОКИМ z-шndex -->
                             <img name = 'golova' src = "/media/works/golova/second_part/buy_but/main-borda.png">
