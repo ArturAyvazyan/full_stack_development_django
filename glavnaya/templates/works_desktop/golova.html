@@ -1050,7 +1050,7 @@
                 grid-row-end: 84;
                 overflow: hidden;
                 z-index: 10;
-                transform:scale(1.04);
+                transform:scale(2);
             }
 
             .first-buy-border {
@@ -1059,7 +1059,7 @@
                 grid-row-start: 64;
                 grid-row-end: 82;
                 overflow: hidden;
-                z-index:9;
+                z-index:1;
                 transform:scale(1.04);
             }
 
@@ -3282,9 +3282,9 @@
              /* ИМЯ */
              .name_text {
                 font-size: 22px;
-                grid-column-start: 9;
+                grid-column-start: 8;
                 grid-column-end: 28;
-                grid-row-start: 10;
+                grid-row-start: 9;
                 grid-row-end: 18;
                 overflow: hidden;  
                 z-index:1;
@@ -3410,16 +3410,18 @@
             }
 
             #pochta_rossii {
-                font-size: 18px;
+                font-size: 18px; margin-left:1px;
             }
 
             #sdek {
                 font-size: 18px;
+                margin-left:1px;
                 transform: translateY(-2vh);
             }
 
             #drugoe {
                 font-size: 18px;
+                margin-left:1px;
                 transform: translateY(-4vh);
             }
 
@@ -3427,7 +3429,7 @@
                 grid-column-start: 7;
                 grid-column-end: 40;
                 grid-row-start: 44;
-                grid-row-end: 72;
+                grid-row-end: 77;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3478,7 +3480,7 @@
                 grid-column-start: 60;
                 grid-column-end: 70;
                 grid-row-start: 40;
-                grid-row-end: 88;
+                grid-row-end: 90;
                 overflow: hidden;
                 z-index:2;
             }
@@ -3514,7 +3516,7 @@
             .koment_more {
                 grid-column-start: 9;
                 grid-column-end: 28;
-                grid-row-start: 93;
+                grid-row-start: 92;
                 grid-row-end: 97;
                 overflow: hidden;
                 opacity: 50%;
@@ -3892,10 +3894,10 @@
                 <form action = '{% url "golova" %}' method = "post">
                    
                     {% csrf_token %}
-                        <button style = 'opacity:0%; cursor:pointer;'>
+                        <button style = 'opacity:0%; cursor:pointer; z-index: 9; min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
                             
                             <!-- НАКИНУТЬ БАТОН НА РАМКУ КНОПКИ И СДЕЛАТЬ ЕЕ САМЫМ ВЫСОКИМ z-шndex -->
-                            <img name = 'golova' src = "/media/works/golova/second_part/buy_but/main-borda.png" style = 'z-index: 9; min-width:100%; min-height:100%;max-width:100%; max-height:100%; overflow:hidden;'>
+                            <img name = 'golova' src = "/media/works/golova/second_part/buy_but/main-borda.png">
                         </button>
                     </form>
             </div>
