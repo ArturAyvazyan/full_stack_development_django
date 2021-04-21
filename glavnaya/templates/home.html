@@ -28,7 +28,6 @@
             min-height: 100vh;
             max-width: 100vw;
             max-height: 100vh;
-
         }
 
         .animated_logo {
@@ -42,12 +41,11 @@
         }
 
         .art {
-            display: none;
-            /* grid-column-start: 89;
-            grid-column-end: 96;
-            grid-row-start: 88;
-            grid-row-end: 96;
-            overflow: hidden; */
+            grid-column-start: 82;
+            grid-column-end: 98;
+            grid-row-start: 83;
+            grid-row-end: 98;
+            overflow: hidden;
         }
         @media screen and (max-width: 1200px), (max-device-width: 1200px) {
 
@@ -85,6 +83,14 @@
                 transform: scale(2) translateY(17vh) translateX(8vh);
             }
 
+            .art {
+                grid-column-start: 75;
+                grid-column-end: 95;
+                grid-row-start: 90;
+                grid-row-end: 98;
+                overflow: hidden;
+            }
+
         }
 
         @media screen and (max-height: 450px), (max-device-height: 450px) {
@@ -102,10 +108,10 @@
         .slide_container {
             display: grid;
             grid-template-columns: repeat(100, 1fr);
-            grid-template-rows: repeat(85, 1fr);
+            grid-template-rows: repeat(100, 1fr);
             overflow: hidden;
             max-width: 100vw;
-            max-height: 85vh;
+            max-height: 100vh;
         }
 
 
@@ -115,8 +121,8 @@
             color: #451353;
             grid-column-start: 3;
             grid-column-end: 7;
-            grid-row-start: 40;
-            grid-row-end: 45;
+            grid-row-start: 50;
+            grid-row-end: 55;
             z-index:25;
             cursor: pointer;
         }
@@ -127,8 +133,8 @@
             color: #451353;
             grid-column-start: 94;
             grid-column-end: 97;
-            grid-row-start: 40;
-            grid-row-end: 45;
+            grid-row-start: 50;
+            grid-row-end: 55;
             z-index:25;
             cursor: pointer;
         }
@@ -137,8 +143,8 @@
             display: inline-block;
             grid-column-start: 10;
             grid-column-end: 32;
-            grid-row-start: 20;
-            grid-row-end: 85;
+            grid-row-start: 30;
+            grid-row-end: 95;
             z-index:9;
             transform: scale(1.1);
         }
@@ -157,8 +163,8 @@
             display: inline-block;
             grid-column-start: 68;
             grid-column-end: 96;
-            grid-row-start: 36;
-            grid-row-end: 85;
+            grid-row-start: 46;
+            grid-row-end: 95;
             z-index:9;
             transform: scale(1.1);
         }
@@ -372,16 +378,16 @@
         .third_slide_wrapper {
             display: grid;
             grid-template-columns: repeat(100, 1fr);
-            grid-template-rows: repeat(70, 1fr);
+            grid-template-rows: repeat(75, 1fr);
             overflow: hidden;
             max-width: 100vw;
-            max-height: 70vh;
+            max-height: 75vh;
         }
 
         .home_logo {
             display: inline-block;
             grid-column-start: 5;
-            grid-column-end: 20;
+            grid-column-end: 18;
             grid-row-start: 1;
             grid-row-end: 46;
 
@@ -395,8 +401,8 @@
             display:inline-block;
             grid-column-start: 90;
             grid-column-end: 97;
-            grid-row-start: 73;
-            grid-row-end: 80;
+            grid-row-start: 71;
+            grid-row-end: 78;
         }
 
         .margarita {
@@ -508,7 +514,7 @@
                 grid-column-start: 5;
                 grid-column-end: 25;
                 grid-row-start: 15;
-                grid-row-end: 50;
+                grid-row-end: 55;
 
             }
 
@@ -589,7 +595,7 @@
                 grid-column-start: 6;
                 grid-column-end: 36;
                 grid-row-start: 15;
-                grid-row-end: 44;
+                grid-row-end: 48;
             }
 
             .tg_logo {
@@ -746,7 +752,7 @@
                 grid-column-start: 5;
                 grid-column-end: 25;
                 grid-row-start: 10;
-                grid-row-end: 63;
+                grid-row-end: 67;
             }
 
             .tg_logo {
@@ -1083,7 +1089,7 @@
                     </div>
 
                     <div class="home_logo">
-                        <img src = "/media/homepage/third_slide/home.png" onclick = words_appears.play() style = 'cursor: pointer; min-width:100%; min-height:100%;max-width:100%; max-height:100%;'>
+                        <img src = "/media/homepage/third_slide/home.png" onclick = AutorSwitchToWords() style = 'cursor: pointer; min-width:100%; min-height:100%;max-width:100%; max-height:100%;'>
                     </div>
 
                     <div class="tg_logo"  style = 'outline: none; color: inherit; text-decoration: none;'>
@@ -1281,45 +1287,25 @@
                 });
             } Hands()
 
-            var words_appears = anime({
-                targets:'.third_words',
-                opacity: 1,
-                duration:9000,
-                autoplay:false,
-            }) 
+            
 
-            function NameSwitchToEnglish() {
-                var english_name_appears = anime({
-                    targets:'.english_name_text',
+            function AutorSwitchToWords() {
+                var words_appears = anime({
+                    targets:'.third_words',
                     opacity: 1,
                     duration:9000,
-                    autoplay:true,
-                })   
+                    autoplay: true,
+                }) 
 
-                var disappear_name = anime({
-                    targets:'.name_text',
+                var disappear_autor = anime({
+                    targets: ['.autor', '.margarita','.sogrina'],
                     opacity: 0,
                     duration:9000,
                     autoplay:true,
                 })
             }
 
-            function NameBackToRussian() {
 
-                var disappear_english_name = anime({
-                    targets:'.english_name_text',
-                    opacity: 0,
-                    duration:9000,
-                    autoplay:true,
-                })
-
-                var name_appears = anime({
-                    targets:'.name_text',
-                    opacity: 1,
-                    duration:9000,
-                    autoplay:true,
-                })
-            }
             
         </script>
     </body>
