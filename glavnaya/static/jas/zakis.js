@@ -1,5 +1,5 @@
     var slider_img = document.querySelector('.slider-img');
-    var images = ['1.png','2.png', '3.png', '4.png', '5.png'];
+    var images = ['1.png','2.png','3.png', '4.png' , '5.png', '6.png', '7.png'];
     var i =0; 
 
     function prev() {
@@ -17,16 +17,15 @@
     }
 
     function setImg(){
-        return slider_img.setAttribute('src', "/media/works/eye/second_part/main_slideshow/pics/" + images[i])
+        return slider_img.setAttribute('src', "/media/works/zakis/first_part/main_slideshow/pics/" + images[i])
     }
 
     function borderMove(){
-
         var border_forward_animation =  anime({
             targets: '#forward-svg',
             strokeDashoffset: [anime.setDashoffset,0],
-            easing: 'easeInOutSine',
-            duration: 20500,
+            easing: 'linear',
+            duration: 75000,
         
             direction:'alternate',
             delay: function(el, i) { return i * 250 },
@@ -37,8 +36,8 @@
         var border_backward_animation =  anime({
             targets: '#backward-svg',
             strokeDashoffset: [0, anime.setDashoffset],
-            easing: 'easeInOutSine',
-            duration: 20500,
+            easing: 'linear',
+            duration: 75000,
         
             direction:'alternate',
             delay: function(el, i) { return i * 250 },
@@ -74,59 +73,25 @@
         loop: true,
     });
 
-    function buySwitchToEnglish() {
-        var english_buy_appears = anime({
-            targets:'.glaz-buy-image',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })   
-
-        var disappear_buy = anime({
-            targets:'.text-buy-image',
-            opacity: 0,
-            duration:9000,
-            autoplay:true,
-        })
-    }
-
-    function buyBackToRussian() {
-        var disappear_english_buy = anime({
-            targets:'.glaz-buy-image',
-            opacity: 0,
-            duration:9000,
-            
-            autoplay:true,
-        })
-
-        var buy_appears = anime({
-            targets:'.text-buy-image',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })
-    }
-
     function razmerSwitchToEnglish() {
         var english_razmer_appears = anime({
-            targets:'.razmer-english-image',
+            targets:'.razmer-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_razmer = anime({
-            targets:'.razmer-image',
+            targets:'.razmer',
             opacity: 0,
             duration:9000,
             autoplay:true,
         })
-
     }
 
     function razmerBackToRussian() {
         var disappear_english_razmer = anime({
-            targets:'.razmer-english-image',
+            targets:'.razmer-english',
             opacity: 0,
             duration:9000,
             
@@ -134,107 +99,40 @@
         })
 
         var razmer_appears = anime({
-            targets:'.razmer-image',
+            targets:'.razmer',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })
-
     }
 
-    function materialsSwitchToEnglish() {
-        var english_materials_appears = anime({
-            targets:'.materials-english-image',
+    function cifriSwitchToEnglish() {
+        var english_cifri_appears = anime({
+            targets:'.cifri-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
-        var disappear_materials = anime({
-            targets:'.materials-image',
+        var disappear_cifri = anime({
+            targets:'.cifri',
             opacity: 0,
             duration:9000,
             autoplay:true,
         })
     }
 
-    function materialsBackToRussian() {
-        var disappear_english_materials = anime({
-            targets:'.materials-english-image',
+    function cifriBackToRussian() {
+        var disappear_english_cifri = anime({
+            targets:'.cifri-english',
             opacity: 0,
             duration:9000,
             
             autoplay:true,
         })
 
-        var materials_appears = anime({
-            targets:'.materials-image',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })
-    }
-
-    function farforSwitchToEnglish() {
-        var english_farfor_appears = anime({
-            targets:'.farfor-english-image',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })   
-
-        var disappear_farfor = anime({
-            targets:'.farfor-image',
-            opacity: 0,
-            duration:9000,
-            autoplay:true,
-        })
-    }
-
-    function farforBackToRussian() {
-        var disappear_english_farfor = anime({
-            targets:'.farfor-english-image',
-            opacity: 0,
-            duration:9000,
-            
-            autoplay:true,
-        })
-
-        var farfor_appears = anime({
-            targets:'.farfor-image',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })
-    }
-
-    function akrilSwitchToEnglish() {
-        var english_akril_appears = anime({
-            targets:'.akril-english-image',
-            opacity: 1,
-            duration:9000,
-            autoplay:true,
-        })   
-
-        var disappear_akril = anime({
-            targets:'.akril-image',
-            opacity: 0,
-            duration:9000,
-            autoplay:true,
-        })
-    }
-
-    function akrilBackToRussian() {
-        var disappear_english_akril = anime({
-            targets:'.akril-english-image',
-            opacity: 0,
-            duration:9000,
-            
-            autoplay:true,
-        })
-
-        var akril_appears = anime({
-            targets:'.akril-image',
+        var cifri_appears = anime({
+            targets:'.cifri',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -243,14 +141,14 @@
 
     function cenaSwitchToEnglish() {
         var english_cena_appears = anime({
-            targets:'.cena-english-image',
+            targets:'.cena-english',
             opacity: 1,
             duration:9000,
             autoplay:true,
         })   
 
         var disappear_cena = anime({
-            targets:'.cena-image',
+            targets:'.cena',
             opacity: 0,
             duration:9000,
             autoplay:true,
@@ -259,14 +157,244 @@
 
     function cenaBackToRussian() {
         var disappear_english_cena = anime({
-            targets:'.cena-english-image',
+            targets:'.cena-english',
             opacity: 0,
             duration:9000,
             autoplay:true,
         })
 
         var cena_appears = anime({
-            targets:'.cena-image',
+            targets:'.cena',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function priceSwitchToEnglish() {
+        var english_price_appears = anime({
+            targets:'.price-english',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_price = anime({
+            targets:'.price',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function priceBackToRussian() {
+        var disappear_english_price = anime({
+            targets:'.price-english',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var price_appears = anime({
+            targets:'.price',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function materialsSwitchToEnglish() {
+        var english_materials_appears = anime({
+            targets:'.materials-english',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_materials = anime({
+            targets:'.materials',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function materialsBackToRussian() {
+        var disappear_english_materials = anime({
+            targets:'.materials-english',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var materials_appears = anime({
+            targets:'.materials',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+
+    function farforSwitchToEnglish() {
+        var english_farfor_appears = anime({
+            targets:'.farfor-english',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_farfor = anime({
+            targets:'.farfor',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function farforBackToRussian() {
+        var disappear_english_farfor = anime({
+            targets:'.farfor-english',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var farfor_appears = anime({
+            targets:'.farfor',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function aluminiumSwitchToEnglish() {
+        var english_aluminium_appears = anime({
+            targets:'.aluminium-english',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_aluminium = anime({
+            targets:'.aluminium',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function aluminiumBackToRussian() {
+        var disappear_english_aluminium = anime({
+            targets:'.aluminium-english',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+
+        var aluminium_appears = anime({
+            targets:'.aluminium',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function woodSwitchToEnglish() {
+        var english_wood_appears = anime({
+            targets:'.wood-english',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_wood = anime({
+            targets:'.wood',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function woodBackToRussian() {
+        var disappear_english_wood = anime({
+            targets:'.wood-english',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var wood_appears = anime({
+            targets:'.wood',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilSwitchToEnglish() {
+        var english_akril_appears = anime({
+            targets:'.akril-english',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_akril = anime({
+            targets:'.akril',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function akrilBackToRussian() {
+        var disappear_english_akril = anime({
+            targets:'.akril-english',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var akril_appears = anime({
+            targets:'.akril',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function buySwitchToEnglish() {
+        var english_buy_appears = anime({
+            targets:'.zakis-buy',
+            opacity: 1,
+            duration:9000,
+            autoplay:true,
+        })   
+
+        var disappear_buy = anime({
+            targets:'.text-buy',
+            opacity: 0,
+            duration:9000,
+            autoplay:true,
+        })
+    }
+
+    function buyBackToRussian() {
+        var disappear_english_buy = anime({
+            targets:'.zakis-buy',
+            opacity: 0,
+            duration:9000,
+            
+            autoplay:true,
+        })
+
+        var buy_appears = anime({
+            targets:'.text-buy',
             opacity: 1,
             duration:9000,
             autoplay:true,
@@ -562,11 +690,11 @@
             autoplay:true,
         })
     }
-    
+
 
     // LOGO PAGE STARTS HERE
 
-    var minis = ['#mini_zakis', '#mini_glaz', '#mini_put', '#mini_kosmos', "#mini_maski", '#mini_vibe']
+    var minis = ['#mini_zakis', '#mini_glaz', '#mini_put', '#mini_kosmos', "#mini_maski", '#mini_vibe', '#mini_krolik', '#mini_panno']
     var minis_set = anime.set(minis,{
         opacity:0,
     })
@@ -635,7 +763,28 @@
         targets: '#mini_vibe',
         opacity:1,
         autoplay:false,
-    })    
+    })
+    var panno_set = anime({
+        targets:'#mini_panno',
+        opacity:0,
+        autoplay:false,
+    })
+    var panno_onmove = anime({
+        targets: '#mini_panno',
+        opacity:1,
+        autoplay:false,
+    }) 
+
+    var krolik_set = anime({
+        targets:'#mini_krolik',
+        opacity:0,
+        autoplay:false,
+    })
+    var krolik_onmove = anime({
+        targets: '#mini_krolik',
+        opacity:1,
+        autoplay:false,
+    })
 
     // ЭФФЕКТ ГЛАВНОГО МЕНЮ ИЗ ЛОГОТИПА
     // Step 1: Create jQuery plugin
