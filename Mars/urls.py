@@ -25,13 +25,12 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
     url(r'^who', views.who, name='who'),
-
     url(r'^demo', views.demo, name='demo'),
-    url(r'^limb', views.demo2, name='demo2'),
-    url(r'^demmon', views.demo3, name='demo3'),
     url(r'^leeemo', views.demo4, name='demo4'),
     url(r'^qet', views.demo5, name='demo5'),
 
+    url(r'^krolik', views.krolik, name='krolik'),
+    url(r'^panno', views.panno, name='panno'),
     url(r'^put/', views.golova, name='golova'),
     url(r'^eye/', views.eye, name='eye'),
     url(r'^kosmos/', views.kosmos, name='kosmos'),

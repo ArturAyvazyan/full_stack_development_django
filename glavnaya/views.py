@@ -1,23 +1,9 @@
 from django.shortcuts import render
 from django.contrib import messages
-
 from django.core.mail import send_mail
-
 from glavnaya import models
 from glavnaya.models import Work
 
-#Exampple of what view with mobile must looks like
-# def home(request):
-#     Workas = Work.objects.all()
-#     AGENTS = request.user_agent.is_mobile
-#     if AGENTS:
-#         print('count')
-#         return render(request, 'home.html')
-#     else:
-#         print('conch')
-#         return render(request, 'works/golova.html', {
-#         'Workas': Workas
-#     })
 
 def home(request):
     if request.method == 'POST':
@@ -55,51 +41,7 @@ def who(request):
         return render(request, 'checker/who.html')
 
 def demo(request):
-    
     return render(request, 'checker/demo.html')
-
-def demo2(request):
-    if request.method == 'POST':
-        eye = 'ГЛАЗ'
-        zayavka_name = request.POST.get('zayavka-name', False)
-        zayavka_email = request.POST.get('zayavka-email', False)
-        zayavka_city = request.POST.get('zayavka-city', False)
-        
-        otpravka = request.POST.get('otpravka')
-        
-        payment = request.POST.get('payment')
-        
-        better = request.POST.get('better', False)
-        better_more = request.POST.get('better_more', False)
-  
-        koment = request.POST.get('koment', False)
-
-        message = f"""Заявка на покупку работы: {eye},
-        ИМЯ: {zayavka_name}, 
-        e-mail: {zayavka_email}, 
-        Город: {zayavka_city}, 
-        Отправка через: {otpravka},
-        Оплата следующим способом: {payment},
-        Дополнительный способ связи: {better} : {better_more},
-        Комментарий к заказу: {koment}."""
-
-        
-        if zayavka_name == False:
-            return render(request, 'checker/demo2.html', {'eye':eye})
-        else:        
-            send_mail (
-                eye, #subject
-                message, #message
-                zayavka_email, #from Email
-                ['archiforeverything@gmail.com'], #To Email
-                fail_silently=False,
-                )
-            return render(request, 'home.html')
-    else:
-        return render(request, 'checker/demo2.html')
-
-def demo3(request):
-    return render(request, 'checker/demo3.html')
 
 def demo4(request):
     if request.method == 'POST':
@@ -141,7 +83,6 @@ def demo4(request):
     else:
         return render(request, 'checker/demo4.html')
 
-
 def demo5(request):
     if request.method == 'POST':    
         message_name = request.POST['message-name']
@@ -158,8 +99,6 @@ def demo5(request):
         return render(request, 'checker/demo5.html', {'message_name': message_name})
     else:
         return render(request, 'checker/demo5.html', {})
-
-
 
 def golova(request):
     if request.method == 'POST':
@@ -200,6 +139,51 @@ def golova(request):
                 return render(request, 'home.html')
     else:
         return render(request, 'works_desktop/golova.html')
+
+
+def krolik(request):
+    return render(request, 'works_desktop/krolik.html')
+
+def panno(request):
+    if request.method == 'POST':
+            panno = 'ПАННО'
+            zayavka_name = request.POST.get('zayavka-name', False)
+            zayavka_email = request.POST.get('zayavka-email', False)
+            zayavka_city = request.POST.get('zayavka-city', False)
+            
+            otpravka = request.POST.get('otpravka')
+            
+            payment = request.POST.get('payment')
+            
+            better = request.POST.get('better', False)
+            better_more = request.POST.get('better_more', False)
+    
+            koment = request.POST.get('koment', False)
+
+            message = f"""Заявка на покупку работы: {panno},
+            ИМЯ: {zayavka_name}, 
+            e-mail: {zayavka_email}, 
+            Город: {zayavka_city}, 
+            Отправка через: {otpravka},
+            Оплата следующим способом: {payment},
+            Дополнительный способ связи: {better} : {better_more},
+            Комментарий к заказу: {koment}."""
+
+            
+            if zayavka_name == False:
+                return render(request, 'works_desktop/panno.html', {'panno':panno})
+            else:        
+                send_mail (
+                    panno, #subject
+                    message, #message
+                    zayavka_email, #from Email
+                    ['archiforeverything@gmail.com'], #To Email
+                    fail_silently=False,
+                    )
+                return render(request, 'home.html')
+    else:
+        return render(request, 'works_desktop/panno.html')
+
 
 def eye(request):
     if request.method == 'POST':

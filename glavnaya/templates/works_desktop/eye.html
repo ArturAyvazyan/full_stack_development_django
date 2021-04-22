@@ -297,7 +297,7 @@
         }
 
         .nazvanie {
-            cursor: pointer;
+            cursor: default;
             color: #FFFFFF;
             text-align: center;
             font-family: LSDFont;
@@ -1629,6 +1629,17 @@
             left: 5vw;
         }
 
+        #krolik {
+            cursor: pointer;
+            color: #270E47;
+            font-family: LSDFont;
+            font-size: 60px;
+            text-align: center;
+            position:absolute;
+            top: 60vh;
+            left: 5vw;
+        }
+
         #kosmos {
             cursor: pointer;
             color: #270E47;
@@ -1659,6 +1670,17 @@
             text-align: center;
             position:absolute;
             top: 50vh;
+            right: 5vw;
+        }
+
+        #panno {
+            cursor: pointer;
+            color: #270E47;
+            font-family: LSDFont;
+            font-size: 60px;
+            text-align: center;
+            position:absolute;
+            top: 60vh;
             right: 5vw;
         }
 
@@ -1698,6 +1720,18 @@
             left: 37%;
         }
 
+        #mini_krolik {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+
+        #mini_panno {
+            position:absolute;
+            top: 37%;
+            left: 37%;
+        }
+
         @media screen and (max-width: 1200px),(max-device-width: 1200px) {
             
             #home {
@@ -1722,6 +1756,10 @@
                 font-size: 50px;
             }
 
+            #krolik {
+                font-size: 50px;
+            }
+
             #kosmos {
                 font-size: 50px;
             }
@@ -1734,22 +1772,9 @@
                 font-size: 50px;
             }
 
-            /* #inst {
-            
-                bottom: 2vh;
-                left: 45vw;
-            
+            #panno {
+                font-size: 50px;
             }
-
-            #tg {
-                position:absolute;
-                bottom: 2vh;
-                left: 50vw;
-                min-height: 5vh;
-                min-width: 4vw;
-                max-height: 5vh;
-                max-width: 4vw;
-            } */
 
             #mini_zakis {
                 display:none;
@@ -1774,6 +1799,15 @@
             #mini_vibe {
                 display:none;
             }
+
+            #mini_krolik {
+                display:none;
+            }
+
+            #mini_panno {
+                display:none;
+            }
+
         }
 
         @media screen and (max-width: 900px),(max-device-width:900px) {
@@ -1811,7 +1845,15 @@
             #mini_vibe {
                 display:none;
             }
-        }
+            
+            #mini_krolik {
+                display:none;
+            }
+
+            #mini_panno {
+                display:none;
+            }
+        }   
 
         @media screen and (max-width: 600px),(max-device-width:600px) {
             #home { 
@@ -1842,6 +1884,12 @@
                 left: 41%;
             }
 
+            #krolik {
+                font-size: 30px;
+                top: 83vh;
+                left: 25%;
+            }
+
             #kosmos {
                 font-size: 35px;
                 top: 55vh;
@@ -1857,6 +1905,12 @@
             #ohboy {
                 font-size: 35px;
                 top: 75vh;
+                left: 9%;
+            }
+
+            #panno {
+                font-size: 35px;
+                top: 90vh;
                 left: 9%;
             }
 
@@ -1883,6 +1937,15 @@
             #mini_vibe {
                 display:none;
             }
+
+            #mini_krolik {
+                display:none;
+            }
+
+            #mini_panno {
+                display:none;
+            }
+
         }
 
         @media screen and (max-height: 450px), (max-device-height: 450px) {
@@ -1917,6 +1980,13 @@
                 top: 60vh;
             }
 
+            #krolik {
+                position:absolute;
+                font-size: 30px; 
+                left:5vw;
+                top: 70vh;
+            }
+
             #kosmos {
                 position:absolute;
                 font-size: 30px;
@@ -1938,6 +2008,12 @@
                 top: 60vh;                
             }
 
+            #panno {
+                position:absolute;
+                font-size: 30px;
+                left: 65vw;
+                top: 70vh;                
+            }
 
             #mini_zakis {
                 display:none;
@@ -1962,6 +2038,15 @@
             #mini_vibe {
                 display:none;
             }
+
+            #mini_krolik {
+                display:none;
+            }
+
+            #mini_panno {
+                display:none;
+            }
+
         }
 
         /* ФОРМА */
@@ -3878,10 +3963,6 @@
                            data-width="1600" data-height="900"
                            data-thumb="/media/works/eye/second_part/big_slideshow/minis/3.png"></a>
                       
-                        <!-- <a href="/media/works/eye/second_part/big_slideshow/4.png" data-fancybox="images-preview" 
-                           data-width="900" data-height="900"
-                           data-thumb="/media/works/eye/second_part/big_slideshow/minis/4.png"></a> -->
-                      
                         <a href="/media/works/eye/second_part/big_slideshow/5.PNG" data-fancybox="images-preview" 
                            data-width="1600" data-height="900"
                            data-thumb="/media/works/eye/second_part/big_slideshow/minis/5.png"></a>
@@ -3946,6 +4027,18 @@
                         </a>
                     </div>
 
+                    <div class = 'krolik' onmouseenter = krolik_onmove.play() onmouseleave = krolik_set.play()>
+                        <a href = "{% url 'krolik' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <div id = 'krolik'>БЕЛЫЙ КРОЛИК</div>
+                        </a>
+                    </div>
+
+                    <div class = 'panno' onmouseenter = panno_onmove.play() onmouseleave = panno_set.play()>
+                        <a href = "{% url 'panno' %}" style = 'outline: none; color: inherit; text-decoration: none;'>
+                            <div id = 'panno'>ПАННО</div>
+                        </a>
+                    </div>
+
                     <!-- POP-UP IMAGES -->
                     <img src = "/media/every_hidden_page/works/photoes/zakis.png" id = 'mini_zakis'>
                     <img src = "/media/every_hidden_page/works/photoes/eye.png" id = 'mini_glaz'>
@@ -3953,6 +4046,8 @@
                     <img src = "/media/every_hidden_page/works/photoes/kosmos.PNG" id = 'mini_kosmos'>
                     <img src = "/media/every_hidden_page/works/photoes/maski.png" id = 'mini_maski'>
                     <img src = "/media/every_hidden_page/works/photoes/vibe.png" id = 'mini_vibe'>
+                    <img src = "/media/every_hidden_page/works/photoes/krolik.png" id = 'mini_krolik'>
+                    <img src = "/media/every_hidden_page/works/photoes/panno.png" id = 'mini_panno'>
 
                 </div>  
             </div>
@@ -4472,7 +4567,7 @@
 
     // LOGO PAGE STARTS HERE
 
-    var minis = ['#mini_zakis', '#mini_glaz', '#mini_put', '#mini_kosmos', "#mini_maski", '#mini_vibe']
+    var minis = ['#mini_zakis', '#mini_glaz', '#mini_put', '#mini_kosmos', "#mini_maski", '#mini_vibe', '#mini_krolik', '#mini_panno']
     var minis_set = anime.set(minis,{
         opacity:0,
     })
@@ -4542,6 +4637,28 @@
         opacity:1,
         autoplay:false,
     })    
+
+    var panno_set = anime({
+        targets:'#mini_panno',
+        opacity:0,
+        autoplay:false,
+    })
+    var panno_onmove = anime({
+        targets: '#mini_panno',
+        opacity:1,
+        autoplay:false,
+    }) 
+
+    var krolik_set = anime({
+        targets:'#mini_krolik',
+        opacity:0,
+        autoplay:false,
+    })
+    var krolik_onmove = anime({
+        targets: '#mini_krolik',
+        opacity:1,
+        autoplay:false,
+    })
 
     // ЭФФЕКТ ГЛАВНОГО МЕНЮ ИЗ ЛОГОТИПА
     // Step 1: Create jQuery plugin
