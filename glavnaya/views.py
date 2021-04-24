@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib import messages
 from django.core.mail import send_mail
 from glavnaya import models
-from glavnaya.models import Work
+from glavnaya.models import Zakaz
 
 
 def home(request):
@@ -140,7 +140,6 @@ def golova(request):
     else:
         return render(request, 'works_desktop/golova.html')
 
-
 def krolik(request):
     return render(request, 'works_desktop/krolik.html')
 
@@ -183,7 +182,6 @@ def panno(request):
                 return render(request, 'home.html')
     else:
         return render(request, 'works_desktop/panno.html')
-
 
 def eye(request):
     if request.method == 'POST':
@@ -228,7 +226,6 @@ def eye(request):
 def kosmos(request):
     return render(request, 'works_desktop/kosmos.html')
 
-
 def zakis(request):
     if request.method == 'POST':
         zakis = 'ЗАКИС'
@@ -269,7 +266,6 @@ def zakis(request):
     else:
         return render(request, 'works_desktop/zakis.html')
 
-
 def maski(request):
     if request.method == 'POST':
         maski = 'МАСКИ'
@@ -309,7 +305,6 @@ def maski(request):
             return render(request, 'home.html')
     else:
         return render(request, 'works_desktop/maski.html')
-
 
 def vibe(request):
     return render(request, 'works_desktop/vibe.html')
