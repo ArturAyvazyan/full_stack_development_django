@@ -19,3 +19,4 @@ fake-useragent==0.1.11
 python-memcached==1.59
 Pillow
 praw==7.1.0
+django-environ==0.4.5
