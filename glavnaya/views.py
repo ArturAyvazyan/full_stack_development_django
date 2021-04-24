@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from glavnaya import models
 from glavnaya.models import Zakaz
-
+from .forms import ZakazForm
 
 def home(request):
     if request.method == 'POST':
@@ -106,14 +106,8 @@ def golova(request):
             zayavka_name = request.POST.get('zayavka-name', False)
             zayavka_email = request.POST.get('zayavka-email', False)
             zayavka_city = request.POST.get('zayavka-city', False)
-            
             otpravka = request.POST.get('otpravka')
-            
             payment = request.POST.get('payment')
-            
-            better = request.POST.get('better', False)
-            better_more = request.POST.get('better_more', False)
-    
             koment = request.POST.get('koment', False)
 
             message = f"""Заявка на покупку работы: {golova},
@@ -122,7 +116,6 @@ def golova(request):
             Город: {zayavka_city}, 
             Отправка через: {otpravka},
             Оплата следующим способом: {payment},
-            Дополнительный способ связи: {better} : {better_more},
             Комментарий к заказу: {koment}."""
 
             
@@ -149,14 +142,8 @@ def panno(request):
             zayavka_name = request.POST.get('zayavka-name', False)
             zayavka_email = request.POST.get('zayavka-email', False)
             zayavka_city = request.POST.get('zayavka-city', False)
-            
             otpravka = request.POST.get('otpravka')
-            
             payment = request.POST.get('payment')
-            
-            better = request.POST.get('better', False)
-            better_more = request.POST.get('better_more', False)
-    
             koment = request.POST.get('koment', False)
 
             message = f"""Заявка на покупку работы: {panno},
@@ -165,7 +152,6 @@ def panno(request):
             Город: {zayavka_city}, 
             Отправка через: {otpravka},
             Оплата следующим способом: {payment},
-            Дополнительный способ связи: {better} : {better_more},
             Комментарий к заказу: {koment}."""
 
             
@@ -189,14 +175,8 @@ def eye(request):
         zayavka_name = request.POST.get('zayavka-name', False)
         zayavka_email = request.POST.get('zayavka-email', False)
         zayavka_city = request.POST.get('zayavka-city', False)
-        
         otpravka = request.POST.get('otpravka')
-        
         payment = request.POST.get('payment')
-        
-        better = request.POST.get('better', False)
-        better_more = request.POST.get('better_more', False)
-  
         koment = request.POST.get('koment', False)
 
         message = f"""Заявка на покупку работы: {eye},
@@ -205,7 +185,6 @@ def eye(request):
         Город: {zayavka_city}, 
         Отправка через: {otpravka},
         Оплата следующим способом: {payment},
-        Дополнительный способ связи: {better} : {better_more},
         Комментарий к заказу: {koment}."""
 
         
@@ -232,14 +211,8 @@ def zakis(request):
         zayavka_name = request.POST.get('zayavka-name', False)
         zayavka_email = request.POST.get('zayavka-email', False)
         zayavka_city = request.POST.get('zayavka-city', False)
-        
         otpravka = request.POST.get('otpravka')
-        
         payment = request.POST.get('payment')
-        
-        better = request.POST.get('better', False)
-        better_more = request.POST.get('better_more', False)
-  
         koment = request.POST.get('koment', False)
 
         message = f"""Заявка на покупку работы: {zakis},
@@ -248,7 +221,6 @@ def zakis(request):
         Город: {zayavka_city}, 
         Отправка через: {otpravka},
         Оплата следующим способом: {payment},
-        Дополнительный способ связи: {better} : {better_more},
         Комментарий к заказу: {koment}."""
 
         
@@ -272,14 +244,8 @@ def maski(request):
         zayavka_name = request.POST.get('zayavka-name', False)
         zayavka_email = request.POST.get('zayavka-email', False)
         zayavka_city = request.POST.get('zayavka-city', False)
-        
         otpravka = request.POST.get('otpravka')
-        
         payment = request.POST.get('payment')
-        
-        better = request.POST.get('better', False)
-        better_more = request.POST.get('better_more', False)
-  
         koment = request.POST.get('koment', False)
 
         message = f"""Заявка на покупку работы: {maski},
@@ -288,7 +254,6 @@ def maski(request):
         Город: {zayavka_city}, 
         Отправка через: {otpravka},
         Оплата следующим способом: {payment},
-        Дополнительный способ связи: {better} : {better_more},
         Комментарий к заказу: {koment}."""
 
         
