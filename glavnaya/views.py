@@ -131,6 +131,7 @@ def golova(request):
                     ['archiforeverything@gmail.com'], #To Email
                     fail_silently=False,
                     )
+                    
                 return render(request, 'home.html')
     else:
         return render(request, 'works_desktop/golova.html')
