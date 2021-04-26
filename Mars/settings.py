@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'Mars',
         'USER': 'postgres',
         'PASSWORD': 'Faqser95',
-        'HOST': 'localhost',
+        'HOST': 'ec2-54-74-35-87.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
