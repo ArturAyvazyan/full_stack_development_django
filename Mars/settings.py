@@ -85,9 +85,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Mars',
-        'USER': 'gdbaaogvpgmxxu',
-        'PASSWORD': '5bfb2143756d7a40c4732b2b2c099eebae32610f7666f9eaa0ebe46a0c3a6013',
-        'HOST': 'ec2-52-209-134-160.eu-west-1.compute.amazonaws.com',
+        'USER': 'aokvxzithtwkjw',
+        'PASSWORD': '46216aa421194e49a541d94167ff5573a8092ea5e32413c19d73d1708bc97b7b',
+        'HOST': 'ec2-54-75-231-215.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
