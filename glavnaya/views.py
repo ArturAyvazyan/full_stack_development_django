@@ -109,7 +109,7 @@ def golova(request):
             otpravka = request.POST.get('otpravka')
             payment = request.POST.get('payment')
             koment = request.POST.get('koment', False)
-            db_entry = Zakaz(work= {golova}, name = {zayavka_name}, email = {zayavka_email}, city = {zayavka_city}, otpravka = {otpravka}, payment = {payment}, koment = {koment})
+            # db_entry = Zakaz(work= {golova}, name = {zayavka_name}, email = {zayavka_email}, city = {zayavka_city}, otpravka = {otpravka}, payment = {payment}, koment = {koment})
             message = f"""Заявка на покупку работы: {golova},
             ИМЯ: {zayavka_name}, 
             e-mail: {zayavka_email}, 
@@ -123,7 +123,7 @@ def golova(request):
             if zayavka_name == False:
                 return render(request, 'works_desktop/golova.html', {'golova':golova})
             else:
-                db_entry.save()        
+                # db_entry.save()        
                 send_mail (
                     golova, #subject
                     message, #message
